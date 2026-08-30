@@ -2,8 +2,8 @@
   "passed": true,
   "failed_files": [],
   "checks": {
-    "python_version": "3.9.6",
-    "python_major_minor": "3.9",
+    "python_version": "3.12.14",
+    "python_major_minor": "3.12",
     "config": {
       "SID4": "0036",
       "PORT_BASE": 8036,
@@ -36,6 +36,6 @@
     "localhost_port_open": true,
     "ollama_reachable": true,
     "ollama_models": "qwen3:4b",
-    "timestamp_utc": "2026-08-26T21:30:23.934627+00:00"
+    "timestamp_utc": "2026-08-30T17:11:32.421624+00:00"
   }
 }

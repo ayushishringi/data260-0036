@@ -1,9 +1,13 @@
-# AI use — HW1
+# AI Use — HW1
 
-1. **What an AI assistant was used for vs. what I did.** Cursor (Grok) drafted the HTML/JS form, Docker files, Ollama adapter, Planner/Reviewer/Finalizer script, and report scaffolding from `260_HW_1.pdf`. I supplied SID4 `0036`, confirmed the domain mapping, and ran (or will run) Ollama, the browser form, Docker/ECS screenshots, and the 40-run experiment on this machine.
+1. **What AI assistants were used for versus what I did.**  
+   I used ChatGPT/Codex to help draft and review the Ollama model adapter, Planner–Reviewer–Finalizer pipeline, verification scripts, and report structure. I reviewed the generated code, executed every command, tested the form, ran Docker and Ollama locally, completed the 40-run nondeterminism experiment, and collected the report evidence.
 
-2. **One AI-produced output that was wrong/unsuitable, or independently verified.** The first model-client sketch assumed LangChain `ChatOllama` on Python 3.13/3.9. This Mac only has system Python 3.9.6, and the handout warns 3.13 + LangChain/numpy. I independently verified `python3 --version` and `ollama list` (`qwen3:4b` present, no Docker/AWS CLI).
+2. **AI-produced output that was wrong or unsuitable.**  
+   The Qwen3 Reviewer sometimes incorrectly changed the valid version range `3.21-3.25` to forms such as `3.21-3:25`. Additionally, Ollama sometimes returned internal reasoning text even though the request specified `think: false`.
 
-3. **How the problem was detected / verified.** `which docker` and `aws` failed; `python3` reported 3.9.6; a LangChain install would have been both unnecessary and fragile. A one-shot `agents_demo.py` run against Ollama is the check that tags/summary JSON actually parse.
+3. **How the problems were detected and verified.**  
+   I detected the version-range error by comparing the Planner, Reviewer, and Finalizer console outputs. I detected the reasoning-text problem through a direct Ollama API test and unusually large output-token counts. I reran the agent pipeline and five-turn client after making corrections and verified the saved machine-readable results.
 
-4. **What changed and why it works now.** All model calls go through `src/model_client.py` using Ollama’s HTTP `/api/chat` (stdlib `urllib`), with `format=json` / JSON schema and `think: false` so Qwen3 does not wrap answers in reasoning text. No LangChain dependency, so Python 3.9 can still run the homework while remaining compatible with 3.11/3.12.
+4. **What changed and why it works now.**  
+   I added deterministic validation that preserves a valid Planner summary when it is already within the 25-word limit and accurately calculates the Reviewer’s `changed` value. I also updated `src/model_client.py` to remove reasoning text ending in `</think>` before returning model content. The project now runs in a Python `3.12.14` virtual environment, produces clean bullet-only responses, records per-turn and cumulative token counts, and passes `scripts/verify_hw01.py`.
