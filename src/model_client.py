@@ -13,7 +13,10 @@ from typing import Any, Optional
 
 DEFAULT_MODEL = os.environ.get("OLLAMA_MODEL", "qwen3:4b")
 DEFAULT_HOST = os.environ.get("OLLAMA_HOST", "http://127.0.0.1:11434")
-THINK_RE = re.compile(r"<think>.*?</think>", re.DOTALL | re.IGNORECASE)
+THINK_RE = re.compile(
+    r"^\s*(?:<think>)?.*?</think>\s*",
+    re.DOTALL | re.IGNORECASE,
+)
 
 
 @dataclass

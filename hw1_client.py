@@ -40,6 +40,8 @@ def run_scripted() -> None:
     client = ModelClient()
     history = [{"role": "system", "content": load_system_prompt()}]
     in_tok = out_tok = 0
+    turn_records = []
+    stats_records = []
     turns = [
         "Review this function: def add(a,b): return a+b",
         "The function does not check types. What would you change?",
@@ -55,6 +57,17 @@ def run_scripted() -> None:
     for item in turns:
         if item == "/stats":
             print_stats(turn_count, in_tok, out_tok, history)
+            stats_records.append(
+                {
+                    "after_turn": turn_count,
+                    "cumulative_input_tokens": in_tok,
+                    "cumulative_output_tokens": out_tok,
+                    "cumulative_total_tokens": in_tok + out_tok,
+                    "serialized_conversation_history_length": len(
+                        json.dumps(history)
+                    ),
+                }
+            )
             continue
         turn_count += 1
         history.append({"role": "user", "content": item})
@@ -64,6 +77,16 @@ def run_scripted() -> None:
         history.append({"role": "assistant", "content": result.text})
         in_tok += result.input_tokens
         out_tok += result.output_tokens
+        turn_records.append(
+            {
+                "turn": turn_count,
+                "user": item,
+                "assistant": result.text,
+                "input_tokens": result.input_tokens,
+                "output_tokens": result.output_tokens,
+                "total_tokens": result.total_tokens,
+            }
+        )
         print(f"=== turn {turn_count} assistant ===")
         print(result.text)
         print_turn_tokens(result)
@@ -71,7 +94,31 @@ def run_scripted() -> None:
     print("\n=== exit totals ===")
     print(f"cumulative_input_tokens: {in_tok}")
     print(f"cumulative_output_tokens: {out_tok}")
+    print(f"cumulative_total_tokens: {in_tok + out_tok}")
     print(f"turn_count: {turn_count}")
+
+    output_path = ROOT / "reports" / "hw01" / "raw" / "hw1_client_tokens.json"
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    payload = {
+        "python_version": sys.version.split()[0],
+        "model": client.model,
+        "system_prompt_file": "AGENT.md",
+        "turns": turn_records,
+        "stats": stats_records,
+        "totals": {
+            "turn_count": turn_count,
+            "cumulative_input_tokens": in_tok,
+            "cumulative_output_tokens": out_tok,
+            "cumulative_total_tokens": in_tok + out_tok,
+        },
+    }
+
+    output_path.write_text(
+        json.dumps(payload, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    print(f"machine_readable_tokens: {output_path.relative_to(ROOT)}")
 
 
 def run_interactive() -> None:

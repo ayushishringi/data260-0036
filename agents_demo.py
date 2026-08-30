@@ -70,9 +70,14 @@ JSON keys: tags, summary, notes."""
 REVIEWER_SYSTEM = """You are Reviewer.
 You receive the original title/body plus the planner's tags and summary.
 Keep a tag only if it appears as a concept in the title or body.
-Replace weak tags (too generic like "security" alone, or copied sentences).
-If the summary is over 25 words, shorten it.
-Set changed=true if you edited tags or summary, else false.
+Replace weak tags that are too generic or copied sentences.
+Preserve all factual details exactly, especially package names, numbers, and version ranges.
+Never alter punctuation inside a version or version range such as 3.21-3.25.
+Count the summary words before editing.
+If the summary is factually accurate and already at most 25 words, leave it unchanged.
+Set changed=true only if the returned tags or summary differ from the planner's values.
+The notes must accurately describe only changes that were actually made.
+If changed=false, set notes exactly to "No changes required; tags and summary are valid."
 JSON keys: tags, summary, changed, notes."""
 
 FINALIZER_SYSTEM = """You are Finalizer.
@@ -162,6 +167,25 @@ def run_pipeline(title: str, content: str, temperature: float, client: ModelClie
             "changed": False,
             "notes": "Reviewer JSON missing tags; kept planner output.",
         }
+    planner_tags = planner_json.get("tags", [])
+    planner_summary = str(planner_json.get("summary", ""))
+    reviewer_summary = str(reviewer_json.get("summary", ""))
+
+    # Preserve a valid Planner summary exactly when it is already within
+    # the assignment's 25-word limit.
+    if len(planner_summary.split()) <= 25:
+        reviewer_json["summary"] = planner_summary
+
+    actual_changed = (
+        reviewer_json.get("tags", []) != planner_tags
+        or reviewer_json.get("summary", "") != planner_summary
+    )
+    reviewer_json["changed"] = actual_changed
+
+    if not actual_changed:
+        reviewer_json["notes"] = (
+        "No changes required; tags and summary are valid."
+        )    
 
     finalizer = client.complete(
         [
