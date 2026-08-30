@@ -30,24 +30,18 @@ Two users sending that same protobuf/gRPC report at temperature **0.7** could ge
 
 ## Part 4 — token accounting
 
-From `python3 hw1_client.py` (scripted 5 turns; `/stats` does not append to history).
-
 After turn 3 `/stats`:
-
 - turn_count: 3
-- cumulative_input_tokens: 5084
-- cumulative_output_tokens: 5869
-- cumulative_total_tokens: 10953
-- serialized_conversation_history_length: 29464
+- cumulative_input_tokens: 476
+- cumulative_output_tokens: 9070
+- cumulative_total_tokens: 9546
+- serialized_conversation_history_length: 1272
 
 After turn 5 `/stats`:
-
 - turn_count: 5
-- cumulative_input_tokens: 10313
-- cumulative_output_tokens: 7187
-- cumulative_total_tokens: 17500
-- serialized_conversation_history_length: 36187
+- cumulative_input_tokens: 1059
+- cumulative_output_tokens: 13319
+- cumulative_total_tokens: 14378
+- serialized_conversation_history_length: 1917
 
-Exit totals: input 10313, output 7187, turns 5.
-
-Qwen3 still emits an internal `<think>` trace; `model_client.py` strips it before display so the visible reply can be scored against `AGENT.md`.
+Exit totals: input 1059, output 13319, turns 5.

@@ -23,6 +23,10 @@ Host: MacBook Pro, Apple M5 Pro, 24 GB
   5-turn scripted review + /stats after turn 3 and turn 5
   after turn 3: turns=3 in=5084 out=5869 hist_len=29464
   after turn 5: turns=5 in=10313 out=7187 hist_len=36187
+  [timestamp] python3 -u hw1_client.py
+  5-turn scripted review + /stats after turn 3 and turn 5
+  after turn 3: turns=3 in=476 out=9070 hist_len=1272
+  after turn 5: turns=5 in=1059 out=13319 hist_len=1917
   See reports/hw01/raw/hw1_client_console.txt
 
 [2026-08-26T21:30:00Z] make verify-hw01

@@ -33,9 +33,9 @@
     "html_title": true,
     "h1_entity": true,
     "schema_matches_domain": true,
-    "localhost_port_open": true,
+    "localhost_port_open": false,
     "ollama_reachable": true,
     "ollama_models": "qwen3:4b",
-    "timestamp_utc": "2026-08-30T17:11:32.421624+00:00"
+    "timestamp_utc": "2026-08-30T23:58:04.605887+00:00"
   }
 }
