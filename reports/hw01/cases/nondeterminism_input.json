@@ -1,0 +1,4 @@
+{
+  "title": "protobuf-java gRPC reflection leaks field names across package versions",
+  "content": "A crafted gRPC reflection request against protobuf-java 3.21 through 3.25 returns nested field names and enum values from private message types. Downstream services that expose reflection in staging copy those names into public error payloads, which helps attackers map internal authorization flags. Patch by disabling reflection outside trusted networks and upgrading to 4.28.2."
+}

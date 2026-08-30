@@ -1,0 +1,442 @@
+[
+  {
+    "run": 1,
+    "temperature": 0.7,
+    "latency_ms": 3613.24,
+    "tags": [
+      "grpc-security",
+      "protobuf-versions",
+      "reflection-leaks"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks field names across package versions, enabling attackers to map internal authorization flags."
+  },
+  {
+    "run": 2,
+    "temperature": 0.7,
+    "latency_ms": 3502.56,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "network-configuration"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks private fields, enabling attackers to map authorization flags via error payloads."
+  },
+  {
+    "run": 3,
+    "temperature": 0.7,
+    "latency_ms": 3607.58,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerabilities",
+      "network-privilege-escalation"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks field names across package versions, enabling attackers to map internal authorization flags via error payloads."
+  },
+  {
+    "run": 4,
+    "temperature": 0.7,
+    "latency_ms": 3540.32,
+    "tags": [
+      "gRPC security",
+      "protobuf-java vulnerabilities",
+      "network security"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks field names across package versions, enabling attackers to map internal authorization flags via error payloads."
+  },
+  {
+    "run": 5,
+    "temperature": 0.7,
+    "latency_ms": 3283.94,
+    "tags": [
+      "gRPC",
+      "protobuf-java",
+      "security-vulnerability"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks private field names across versions, aiding attackers in mapping internal authorization flags."
+  },
+  {
+    "run": 6,
+    "temperature": 0.7,
+    "latency_ms": 3688.1,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "network-privilege-escalation"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks field names across package versions, enabling attackers to map internal authorization flags via downstream services."
+  },
+  {
+    "run": 7,
+    "temperature": 0.7,
+    "latency_ms": 3398.73,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "network-privacy"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks private field names across package versions, enabling attackers to map internal authorization flags via error payloads."
+  },
+  {
+    "run": 8,
+    "temperature": 0.7,
+    "latency_ms": 3189.07,
+    "tags": [
+      "grpc",
+      "protobuf",
+      "security-vulnerability"
+    ],
+    "summary": "gRPC reflection leaks field names across package versions enabling attacker mapping of internal authorization flags."
+  },
+  {
+    "run": 9,
+    "temperature": 0.7,
+    "latency_ms": 4031.2,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "network-privacy"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks private field names, enabling attackers to map authorization flags via error payloads."
+  },
+  {
+    "run": 10,
+    "temperature": 0.7,
+    "latency_ms": 3856.43,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerabilities",
+      "network-reflective-leaks"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks field names across versions, enabling attackers to map internal authorization flags via error payloads."
+  },
+  {
+    "run": 11,
+    "temperature": 0.7,
+    "latency_ms": 3955.2,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "network-privilege-escalation"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks field names across package versions, enabling attackers to map internal authorization flags via public error payloads."
+  },
+  {
+    "run": 12,
+    "temperature": 0.7,
+    "latency_ms": 3566.07,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "network-privacy"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks field names across package versions, enabling attackers to map internal authorization flags via public error payloads."
+  },
+  {
+    "run": 13,
+    "temperature": 0.7,
+    "latency_ms": 4090.26,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "network-privilege-escalation"
+    ],
+    "summary": "Protobuf-java 3:21-3:25 reflection leak exposes private fields to attackers via gRPC, leading to authorization flag mapping."
+  },
+  {
+    "run": 14,
+    "temperature": 0.7,
+    "latency_ms": 3722.84,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "reflection-leak"
+    ],
+    "summary": "Protobuf-java 3.21-3.25 allows field name leaks via gRPC reflection, enabling attackers to map internal authorization flags."
+  },
+  {
+    "run": 15,
+    "temperature": 0.7,
+    "latency_ms": 3568.75,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "network-privilege-escalation"
+    ],
+    "summary": "Protobuf-java 3:21-3:25 leaks field names via gRPC reflection, enabling attackers to map authorization flags through downstream error payloads."
+  },
+  {
+    "run": 16,
+    "temperature": 0.7,
+    "latency_ms": 3012.91,
+    "tags": [
+      "gRPC",
+      "protobuf-java",
+      "security vulnerability"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks field names across package versions, enabling attackers to map internal authorization flags."
+  },
+  {
+    "run": 17,
+    "temperature": 0.7,
+    "latency_ms": 2887.37,
+    "tags": [
+      "gRPC security",
+      "protobuf vulnerabilities",
+      "reflection attacks"
+    ],
+    "summary": "gRPC reflection leaks field names across protobuf versions enabling attacker mapping of internal authorization flags."
+  },
+  {
+    "run": 18,
+    "temperature": 0.7,
+    "latency_ms": 3494.72,
+    "tags": [
+      "grpc-security",
+      "protobuf-using",
+      "network-vulnerability"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks private field names, allowing attackers to map authorization flags via error payloads."
+  },
+  {
+    "run": 19,
+    "temperature": 0.7,
+    "latency_ms": 3272.93,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "network-exposure"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks private field names, enabling attackers to map internal authorization flags via staging services."
+  },
+  {
+    "run": 20,
+    "temperature": 0.7,
+    "latency_ms": 3435.79,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "network-reflect:leak"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks field names across package versions, enabling attackers to map internal authorization flags."
+  },
+  {
+    "run": 1,
+    "temperature": 0.0,
+    "latency_ms": 3684.25,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "network-using-privilege-escalation"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks field names across package versions, enabling attackers to map internal authorization flags via error payloads."
+  },
+  {
+    "run": 2,
+    "temperature": 0.0,
+    "latency_ms": 3524.24,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "network-using-privilege-escalation"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks field names across package versions, enabling attackers to map internal authorization flags via error payloads."
+  },
+  {
+    "run": 3,
+    "temperature": 0.0,
+    "latency_ms": 3512.44,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "network-using-privilege-escalation"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks field names across package versions, enabling attackers to map internal authorization flags via error payloads."
+  },
+  {
+    "run": 4,
+    "temperature": 0.0,
+    "latency_ms": 3516.64,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "network-using-privilege-escalation"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks field names across package versions, enabling attackers to map internal authorization flags via error payloads."
+  },
+  {
+    "run": 5,
+    "temperature": 0.0,
+    "latency_ms": 3519.16,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "network-using-privilege-escalation"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks field names across package versions, enabling attackers to map internal authorization flags via error payloads."
+  },
+  {
+    "run": 6,
+    "temperature": 0.0,
+    "latency_ms": 3519.45,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "network-using-privilege-escalation"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks field names across package versions, enabling attackers to map internal authorization flags via error payloads."
+  },
+  {
+    "run": 7,
+    "temperature": 0.0,
+    "latency_ms": 3523.45,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "network-using-privilege-escalation"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks field names across package versions, enabling attackers to map internal authorization flags via error payloads."
+  },
+  {
+    "run": 8,
+    "temperature": 0.0,
+    "latency_ms": 3531.81,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "network-using-privilege-escalation"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks field names across package versions, enabling attackers to map internal authorization flags via error payloads."
+  },
+  {
+    "run": 9,
+    "temperature": 0.0,
+    "latency_ms": 3534.56,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "network-using-privilege-escalation"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks field names across package versions, enabling attackers to map internal authorization flags via error payloads."
+  },
+  {
+    "run": 10,
+    "temperature": 0.0,
+    "latency_ms": 3562.17,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "network-using-privilege-escalation"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks field names across package versions, enabling attackers to map internal authorization flags via error payloads."
+  },
+  {
+    "run": 11,
+    "temperature": 0.0,
+    "latency_ms": 3785.2,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "network-using-privilege-escalation"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks field names across package versions, enabling attackers to map internal authorization flags via error payloads."
+  },
+  {
+    "run": 12,
+    "temperature": 0.0,
+    "latency_ms": 3655.69,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "network-using-privilege-escalation"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks field names across package versions, enabling attackers to map internal authorization flags via error payloads."
+  },
+  {
+    "run": 13,
+    "temperature": 0.0,
+    "latency_ms": 3550.29,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "network-using-privilege-escalation"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks field names across package versions, enabling attackers to map internal authorization flags via error payloads."
+  },
+  {
+    "run": 14,
+    "temperature": 0.0,
+    "latency_ms": 3557.08,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "network-using-privilege-escalation"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks field names across package versions, enabling attackers to map internal authorization flags via error payloads."
+  },
+  {
+    "run": 15,
+    "temperature": 0.0,
+    "latency_ms": 3543.96,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "network-using-privilege-escalation"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks field names across package versions, enabling attackers to map internal authorization flags via error payloads."
+  },
+  {
+    "run": 16,
+    "temperature": 0.0,
+    "latency_ms": 3567.66,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "network-using-privilege-escalation"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks field names across package versions, enabling attackers to map internal authorization flags via error payloads."
+  },
+  {
+    "run": 17,
+    "temperature": 0.0,
+    "latency_ms": 3602.47,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "network-using-privilege-escalation"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks field names across package versions, enabling attackers to map internal authorization flags via error payloads."
+  },
+  {
+    "run": 18,
+    "temperature": 0.0,
+    "latency_ms": 3600.61,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "network-using-privilege-escalation"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks field names across package versions, enabling attackers to map internal authorization flags via error payloads."
+  },
+  {
+    "run": 19,
+    "temperature": 0.0,
+    "latency_ms": 3529.42,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "network-using-privilege-escalation"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks field names across package versions, enabling attackers to map internal authorization flags via error payloads."
+  },
+  {
+    "run": 20,
+    "temperature": 0.0,
+    "latency_ms": 3546.2,
+    "tags": [
+      "grpc-security",
+      "protobuf-vulnerability",
+      "network-using-privilege-escalation"
+    ],
+    "summary": "gRPC reflection in protobuf-java 3.21-3.25 leaks field names across package versions, enabling attackers to map internal authorization flags via error payloads."
+  }
+]

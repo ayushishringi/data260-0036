@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.python-version
+reports/hw01/raw/*.tmp

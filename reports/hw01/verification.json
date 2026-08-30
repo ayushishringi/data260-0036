@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "failed_files": [],
+  "checks": {
+    "python_version": "3.9.6",
+    "python_major_minor": "3.9",
+    "config": {
+      "SID4": "0036",
+      "PORT_BASE": 8036,
+      "PREFIX": "s0036",
+      "SEED": "0036",
+      "VERIFY_SEED": 260036,
+      "DOMAIN_ID": 4,
+      "assigned_domain": "Open-source package vulnerabilities"
+    },
+    "files": {
+      "index.html": true,
+      "app.js": true,
+      "styles.css": true,
+      "DOMAIN_SCHEMA.md": true,
+      "AGENT.md": true,
+      "agents_demo.py": true,
+      "hw1_client.py": true,
+      "src/model_client.py": true,
+      "Dockerfile": true,
+      "docker-compose.yml": true,
+      "Makefile": true,
+      "README.md": true,
+      "reports/hw01/cases/nondeterminism_input.json": true,
+      "reports/hw01/AI_USE.md": true,
+      "reports/hw01/METRICS.md": true
+    },
+    "html_title": true,
+    "h1_entity": true,
+    "schema_matches_domain": true,
+    "localhost_port_open": true,
+    "ollama_reachable": true,
+    "ollama_models": "qwen3:4b",
+    "timestamp_utc": "2026-08-26T21:30:23.934627+00:00"
+  }
+}

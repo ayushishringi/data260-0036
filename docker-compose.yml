@@ -1,0 +1,7 @@
+services:
+  vuln-form:
+    build: .
+    image: data260-0036-hw1:latest
+    ports:
+      - "8036:8036"
+    restart: unless-stopped

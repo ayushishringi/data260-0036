@@ -1,0 +1,96 @@
+---
+pid: 14273
+cwd: "/Users/ayushishringi/Projects/data260-0036"
+command: "mkdir -p reports/hw01/raw reports/hw01/screenshots && python3 scripts/run_nondeterminism.py"
+title: "Run 40 agent trials at two temperatures"
+status: succeeded
+started_at: 2026-08-26T21:24:26.085Z
+running_for_ms: 142235   
+---
+temp=0.7 run=1/20 3613ms tags=['grpc-security', 'protobuf-versions', 'reflection-leaks']
+temp=0.7 run=2/20 3503ms tags=['grpc-security', 'protobuf-vulnerability', 'network-configuration']
+temp=0.7 run=3/20 3608ms tags=['grpc-security', 'protobuf-vulnerabilities', 'network-privilege-escalation']
+temp=0.7 run=4/20 3540ms tags=['gRPC security', 'protobuf-java vulnerabilities', 'network security']
+temp=0.7 run=5/20 3284ms tags=['gRPC', 'protobuf-java', 'security-vulnerability']
+temp=0.7 run=6/20 3688ms tags=['grpc-security', 'protobuf-vulnerability', 'network-privilege-escalation']
+temp=0.7 run=7/20 3399ms tags=['grpc-security', 'protobuf-vulnerability', 'network-privacy']
+temp=0.7 run=8/20 3189ms tags=['grpc', 'protobuf', 'security-vulnerability']
+temp=0.7 run=9/20 4031ms tags=['grpc-security', 'protobuf-vulnerability', 'network-privacy']
+temp=0.7 run=10/20 3856ms tags=['grpc-security', 'protobuf-vulnerabilities', 'network-reflective-leaks']
+temp=0.7 run=11/20 3955ms tags=['grpc-security', 'protobuf-vulnerability', 'network-privilege-escalation']
+temp=0.7 run=12/20 3566ms tags=['grpc-security', 'protobuf-vulnerability', 'network-privacy']
+temp=0.7 run=13/20 4090ms tags=['grpc-security', 'protobuf-vulnerability', 'network-privilege-escalation']
+temp=0.7 run=14/20 3723ms tags=['grpc-security', 'protobuf-vulnerability', 'reflection-leak']
+temp=0.7 run=15/20 3569ms tags=['grpc-security', 'protobuf-vulnerability', 'network-privilege-escalation']
+temp=0.7 run=16/20 3013ms tags=['gRPC', 'protobuf-java', 'security vulnerability']
+temp=0.7 run=17/20 2887ms tags=['gRPC security', 'protobuf vulnerabilities', 'reflection attacks']
+temp=0.7 run=18/20 3495ms tags=['grpc-security', 'protobuf-using', 'network-vulnerability']
+temp=0.7 run=19/20 3273ms tags=['grpc-security', 'protobuf-vulnerability', 'network-exposure']
+temp=0.7 run=20/20 3436ms tags=['grpc-security', 'protobuf-vulnerability', 'network-reflect:leak']
+temp=0.0 run=1/20 3684ms tags=['grpc-security', 'protobuf-vulnerability', 'network-using-privilege-escalation']
+temp=0.0 run=2/20 3524ms tags=['grpc-security', 'protobuf-vulnerability', 'network-using-privilege-escalation']
+temp=0.0 run=3/20 3512ms tags=['grpc-security', 'protobuf-vulnerability', 'network-using-privilege-escalation']
+temp=0.0 run=4/20 3517ms tags=['grpc-security', 'protobuf-vulnerability', 'network-using-privilege-escalation']
+temp=0.0 run=5/20 3519ms tags=['grpc-security', 'protobuf-vulnerability', 'network-using-privilege-escalation']
+temp=0.0 run=6/20 3519ms tags=['grpc-security', 'protobuf-vulnerability', 'network-using-privilege-escalation']
+temp=0.0 run=7/20 3523ms tags=['grpc-security', 'protobuf-vulnerability', 'network-using-privilege-escalation']
+temp=0.0 run=8/20 3532ms tags=['grpc-security', 'protobuf-vulnerability', 'network-using-privilege-escalation']
+temp=0.0 run=9/20 3535ms tags=['grpc-security', 'protobuf-vulnerability', 'network-using-privilege-escalation']
+temp=0.0 run=10/20 3562ms tags=['grpc-security', 'protobuf-vulnerability', 'network-using-privilege-escalation']
+temp=0.0 run=11/20 3785ms tags=['grpc-security', 'protobuf-vulnerability', 'network-using-privilege-escalation']
+temp=0.0 run=12/20 3656ms tags=['grpc-security', 'protobuf-vulnerability', 'network-using-privilege-escalation']
+temp=0.0 run=13/20 3550ms tags=['grpc-security', 'protobuf-vulnerability', 'network-using-privilege-escalation']
+temp=0.0 run=14/20 3557ms tags=['grpc-security', 'protobuf-vulnerability', 'network-using-privilege-escalation']
+temp=0.0 run=15/20 3544ms tags=['grpc-security', 'protobuf-vulnerability', 'network-using-privilege-escalation']
+temp=0.0 run=16/20 3568ms tags=['grpc-security', 'protobuf-vulnerability', 'network-using-privilege-escalation']
+temp=0.0 run=17/20 3602ms tags=['grpc-security', 'protobuf-vulnerability', 'network-using-privilege-escalation']
+temp=0.0 run=18/20 3601ms tags=['grpc-security', 'protobuf-vulnerability', 'network-using-privilege-escalation']
+temp=0.0 run=19/20 3529ms tags=['grpc-security', 'protobuf-vulnerability', 'network-using-privilege-escalation']
+temp=0.0 run=20/20 3546ms tags=['grpc-security', 'protobuf-vulnerability', 'network-using-privilege-escalation']
+{
+  "0.7": {
+    "distinct_tag_sets": 15,
+    "tags_in_all_runs": [],
+    "tags_in_exactly_one_run": [
+      "grpc",
+      "network security",
+      "network-configuration",
+      "network-exposure",
+      "network-reflect:leak",
+      "network-reflective-leaks",
+      "network-vulnerability",
+      "protobuf",
+      "protobuf vulnerabilities",
+      "protobuf-java vulnerabilities",
+      "protobuf-using",
+      "protobuf-versions",
+      "reflection attacks",
+      "reflection-leak",
+      "reflection-leaks",
+      "security vulnerability"
+    ],
+    "latency_p50_ms": 3553.2,
+    "latency_p95_ms": 4034.2,
+    "latency_p99_ms": 4079.0,
+    "latency_mean_ms": 3535.9
+  },
+  "0.0": {
+    "distinct_tag_sets": 1,
+    "tags_in_all_runs": [
+      "grpc-security",
+      "network-using-privilege-escalation",
+      "protobuf-vulnerability"
+    ],
+    "tags_in_exactly_one_run": [],
+    "latency_p50_ms": 3545.1,
+    "latency_p95_ms": 3689.3,
+    "latency_p99_ms": 3766.0,
+    "latency_mean_ms": 3568.3
+  }
+}
+
+---
+exit_code: 0
+elapsed_ms: 142234
+ended_at: 2026-08-26T21:26:48.319Z
+---

@@ -1,0 +1,20 @@
+{
+  "family": "data260-0036-hw1",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512",
+  "containerDefinitions": [
+    {
+      "name": "vuln-form",
+      "image": "REPLACE_WITH_ECR_IMAGE_URI",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 8036,
+          "protocol": "tcp"
+        }
+      ]
+    }
+  ]
+}

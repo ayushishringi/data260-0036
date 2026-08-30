@@ -1,0 +1,41 @@
+{
+  "0.7": {
+    "distinct_tag_sets": 15,
+    "tags_in_all_runs": [],
+    "tags_in_exactly_one_run": [
+      "grpc",
+      "network security",
+      "network-configuration",
+      "network-exposure",
+      "network-reflect:leak",
+      "network-reflective-leaks",
+      "network-vulnerability",
+      "protobuf",
+      "protobuf vulnerabilities",
+      "protobuf-java vulnerabilities",
+      "protobuf-using",
+      "protobuf-versions",
+      "reflection attacks",
+      "reflection-leak",
+      "reflection-leaks",
+      "security vulnerability"
+    ],
+    "latency_p50_ms": 3553.2,
+    "latency_p95_ms": 4034.2,
+    "latency_p99_ms": 4079.0,
+    "latency_mean_ms": 3535.9
+  },
+  "0.0": {
+    "distinct_tag_sets": 1,
+    "tags_in_all_runs": [
+      "grpc-security",
+      "network-using-privilege-escalation",
+      "protobuf-vulnerability"
+    ],
+    "tags_in_exactly_one_run": [],
+    "latency_p50_ms": 3545.1,
+    "latency_p95_ms": 3689.3,
+    "latency_p99_ms": 3766.0,
+    "latency_mean_ms": 3568.3
+  }
+}
