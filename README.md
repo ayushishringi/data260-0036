@@ -63,7 +63,11 @@ make verify-hw01
 
 ## AWS ECS
 
-This repo includes `deploy/ecs-task-definition.json`. Push `data260-0036-hw1:latest` to ECR, replace `REPLACE_WITH_ECR_IMAGE_URI`, then create **one** Fargate task/service with an assigned public IP and security group allowing TCP 8036. AWS CLI is not installed on the authoring machine, so the live public-IP screenshot is taken after you deploy from an account you control.
+Docker image used for deployment:
+
+`docker.io/ayushishringii/data260-0036-hw1:latest`
+
+The application was deployed in `us-west-2` as one AWS ECS Fargate task using Linux/ARM64, a public IP, and TCP port `8036`. The deployment was verified in the browser and captured in `reports/hw01/report.pdf`. The ECS service and cluster were deleted after collecting evidence.
 
 ## Why conversation context is resent (Part 4)
 

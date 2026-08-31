@@ -9,12 +9,12 @@ Host: MacBook Pro, Apple M5 Pro, 24 GB
   first attempt echoed title/content (weak JSON schema)
   after schema + prose prompts: latency_ms≈4176
   Publish tags: grpc-security, protobuf-vulnerability, network-privilege-escalation
-  See reports/hw01/raw/agents_demo_console.txt
+  Evidence captured in reports/hw01/report.pdf
 
-[2026-08-26T21:24:26Z] python3 scripts/run_nondeterminism.py
-  20 runs temp=0.7 then 20 runs temp=0.0, ~142s wall
-  temp 0.7: 15 distinct tag sets, 0 tags in all runs, p50=3553ms p95=4034ms p99=4079ms
-  temp 0.0: 1 distinct tag set, tags in all runs = grpc-security / protobuf-vulnerability / network-using-privilege-escalation, p50=3545ms p95=3689ms p99=3766ms
+[2026-08-30T10:26:17-07:00] python3 scripts/run_nondeterminism.py
+  20 runs at temperature 0.7 and 20 runs at temperature 0.0
+  temp 0.7: 18 distinct tag sets, 0 tags in all runs, p50=3269.9ms p95=4337.7ms p99=4449.2ms
+  temp 0.0: 1 distinct tag set, tags in all runs = grpc-security / network-using-privilege-escalation / protobuf-vulnerability, p50=3716.2ms p95=3934.1ms p99=3947.6ms
   wrote reports/hw01/raw/nondeterminism_40_runs.json
   wrote reports/hw01/raw/nondeterminism_40_runs.csv
   wrote reports/hw01/raw/nondeterminism_metrics.json

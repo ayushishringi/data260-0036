@@ -15,18 +15,19 @@
 
 Fixed input: `reports/hw01/cases/nondeterminism_input.json`  
 Model: `qwen3:4b`  
-Raw: `reports/hw01/raw/nondeterminism_40_runs.json`, `nondeterminism_40_runs.csv`
+Raw results: `reports/hw01/raw/nondeterminism_40_runs.json` and `nondeterminism_40_runs.csv`
 
 | Metric | Temp 0.0 | Temp 0.7 |
 | --- | --- | --- |
-| Distinct tag sets | 1 | 15 |
-| Tags in all 20 runs | grpc-security; protobuf-vulnerability; network-using-privilege-escalation | *(none)* |
-| Tags in exactly 1 run | *(none)* | grpc; network security; network-configuration; network-exposure; network-reflect:leak; network-reflective-leaks; network-vulnerability; protobuf; protobuf vulnerabilities; protobuf-java vulnerabilities; protobuf-using; protobuf-versions; reflection attacks; reflection-leak; reflection-leaks; security vulnerability |
-| Latency p50 / p95 / p99 (ms) | 3545.1 / 3689.3 / 3766.0 | 3553.2 / 4034.2 / 4079.0 |
+| Distinct tag sets | 1 | 18 |
+| Tags in all 20 runs | grpc-security; network-using-privilege-escalation; protobuf-vulnerability | *(none)* |
+| Tags in exactly 1 run | *(none)* | gRPC; grpc; grpc-security-vulnerabilities; network reflection; network reflection leaks; network vulnerability; network-exposure; network-isolation; network-privilege; network-privilege-escalation; network-reflect:leak; network-reflectabke-leaks; network-reflective-attack; network-reflective-leak; network-reflective-leaks; network-using; network-vulnerability; protobuf; protobuf reflection; protobuf vulnerabilities; protobuf-java; protobuf-java vulnerabilities; protobuf-reflect; protobuf-reflect-uses; protobuf-upgrades; reflection-leaks; security-vulnerability; security_vulnerability |
+| Latency p50 / p95 / p99 (ms) | 3716.2 / 3934.1 / 3947.6 | 3269.9 / 4337.7 / 4449.2 |
 
-Two users sending that same protobuf/gRPC report at temperature **0.7** could get 15 different tag trios (no tag appeared in all 20 runs). At **0.0** they would get the same trio every time.
+Two users submitting the identical input at temperature **0.7** could receive 18 different tag combinations across 20 runs. At temperature **0.0**, all 20 runs produced the same tag set.
 
-**Acceptable variation:** a “related topics” chip cloud on a public advisory page. **Unacceptable variation:** using the tags as the CVE severity or ticket routing key, because `network-using-privilege-escalation` vs `reflection-leak` would send the same bug to different queues.
+**Acceptable variation:** suggested related-topic tags on an advisory page.  
+**Unacceptable variation:** using generated tags as a vulnerability-severity or ticket-routing decision because identical reports could be classified differently.
 
 ## Part 4 — token accounting
 

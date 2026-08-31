@@ -4,10 +4,14 @@
   "requiresCompatibilities": ["FARGATE"],
   "cpu": "256",
   "memory": "512",
+  "runtimePlatform": {
+  "cpuArchitecture": "ARM64",
+  "operatingSystemFamily": "LINUX"
+},
   "containerDefinitions": [
     {
       "name": "vuln-form",
-      "image": "REPLACE_WITH_ECR_IMAGE_URI",
+      "image": "docker.io/ayushishringii/data260-0036-hw1:latest",
       "essential": true,
       "portMappings": [
         {
