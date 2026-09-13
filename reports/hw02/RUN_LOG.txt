@@ -1,0 +1,494 @@
+=== Schema experiment started: 2026-09-13T19:54:04Z ===
+Running 30 schema-validation experiments...
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Run 1/30: Valid first attempt | attempts=1 | latency=1048.37 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Run 2/30: Valid first attempt | attempts=1 | latency=888.07 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Run 3/30: Valid first attempt | attempts=1 | latency=844.62 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Run 4/30: Valid first attempt | attempts=1 | latency=847.25 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Run 5/30: Valid first attempt | attempts=1 | latency=888.88 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Run 6/30: Valid first attempt | attempts=1 | latency=881.74 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Run 7/30: Valid first attempt | attempts=1 | latency=860.07 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Run 8/30: Valid first attempt | attempts=1 | latency=833.52 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Run 9/30: Valid first attempt | attempts=1 | latency=908.44 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Run 10/30: Valid first attempt | attempts=1 | latency=846.37 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Run 11/30: Valid first attempt | attempts=1 | latency=866.25 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Run 12/30: Valid first attempt | attempts=1 | latency=861.87 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Run 13/30: Valid first attempt | attempts=1 | latency=796.24 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Run 14/30: Valid first attempt | attempts=1 | latency=850.74 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Run 15/30: Valid first attempt | attempts=1 | latency=844.3 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Run 16/30: Valid first attempt | attempts=1 | latency=847.4 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Run 17/30: Valid first attempt | attempts=1 | latency=845.24 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Run 18/30: Valid first attempt | attempts=1 | latency=790.05 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Run 19/30: Valid first attempt | attempts=1 | latency=795.64 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Run 20/30: Valid first attempt | attempts=1 | latency=795.33 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Run 21/30: Valid first attempt | attempts=1 | latency=786.18 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Run 22/30: Valid first attempt | attempts=1 | latency=852.97 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Run 23/30: Valid first attempt | attempts=1 | latency=865.68 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Run 24/30: Valid first attempt | attempts=1 | latency=861.05 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Run 25/30: Valid first attempt | attempts=1 | latency=802.66 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Run 26/30: Valid first attempt | attempts=1 | latency=812.34 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Run 27/30: Valid first attempt | attempts=1 | latency=801.73 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Run 28/30: Valid first attempt | attempts=1 | latency=864.83 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Run 29/30: Valid first attempt | attempts=1 | latency=859.37 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Run 30/30: Valid first attempt | attempts=1 | latency=805.49 ms
+
+Saved: /Users/ayushishringi/Desktop/DATA 260/HW1/data260-0036/reports/hw02/raw/schema_30_runs.json
+Saved: /Users/ayushishringi/Desktop/DATA 260/HW1/data260-0036/reports/hw02/raw/schema_30_runs.csv
+Saved: /Users/ayushishringi/Desktop/DATA 260/HW1/data260-0036/reports/hw02/raw/schema_30_runs_metrics.json
+{
+  "runs": 30,
+  "completed": 30,
+  "completion_rate": 1.0,
+  "mean_latency_ms": 848.42,
+  "classification_counts": {
+    "Valid first attempt": 30
+  }
+}
+=== Ceiling experiment started: 2026-09-13T19:54:32Z ===
+Running 20 experiments with ceiling 2...
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 2, run 1/20: Valid first attempt | latency=889.57 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 2, run 2/20: Valid first attempt | latency=837.32 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 2, run 3/20: Valid first attempt | latency=874.82 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 2, run 4/20: Valid first attempt | latency=885.96 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 2, run 5/20: Valid first attempt | latency=916.54 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 2, run 6/20: Valid first attempt | latency=859.69 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 2, run 7/20: Valid first attempt | latency=856.26 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 2, run 8/20: Valid first attempt | latency=815.4 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 2, run 9/20: Valid first attempt | latency=871.13 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 2, run 10/20: Valid first attempt | latency=854.26 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 2, run 11/20: Valid first attempt | latency=858.09 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 2, run 12/20: Valid first attempt | latency=851.56 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 2, run 13/20: Valid first attempt | latency=862.06 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 2, run 14/20: Valid first attempt | latency=857.87 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 2, run 15/20: Valid first attempt | latency=848.86 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 2, run 16/20: Valid first attempt | latency=856.71 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 2, run 17/20: Valid first attempt | latency=845.91 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 2, run 18/20: Valid first attempt | latency=798.51 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 2, run 19/20: Valid first attempt | latency=794.91 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 2, run 20/20: Valid first attempt | latency=866.79 ms
+
+Saved: /Users/ayushishringi/Desktop/DATA 260/HW1/data260-0036/reports/hw02/raw/ceiling_2_20_runs.json
+Saved: /Users/ayushishringi/Desktop/DATA 260/HW1/data260-0036/reports/hw02/raw/ceiling_2_20_runs.csv
+Saved: /Users/ayushishringi/Desktop/DATA 260/HW1/data260-0036/reports/hw02/raw/ceiling_2_20_runs_metrics.json
+{
+  "runs": 20,
+  "completed": 20,
+  "completion_rate": 1.0,
+  "mean_latency_ms": 855.11,
+  "classification_counts": {
+    "Valid first attempt": 20
+  }
+}
+Running 20 experiments with ceiling 10...
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 10, run 1/20: Valid first attempt | latency=846.73 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 10, run 2/20: Valid first attempt | latency=870.18 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 10, run 3/20: Valid first attempt | latency=856.38 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 10, run 4/20: Valid first attempt | latency=855.03 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 10, run 5/20: Valid first attempt | latency=806.23 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 10, run 6/20: Valid first attempt | latency=805.69 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 10, run 7/20: Valid first attempt | latency=841.86 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 10, run 8/20: Valid first attempt | latency=794.27 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 10, run 9/20: Valid first attempt | latency=795.04 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 10, run 10/20: Valid first attempt | latency=866.0 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 10, run 11/20: Valid first attempt | latency=852.56 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 10, run 12/20: Valid first attempt | latency=851.55 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 10, run 13/20: Valid first attempt | latency=848.83 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 10, run 14/20: Valid first attempt | latency=866.29 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 10, run 15/20: Valid first attempt | latency=859.68 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 10, run 16/20: Valid first attempt | latency=852.0 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 10, run 17/20: Valid first attempt | latency=843.62 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 10, run 18/20: Valid first attempt | latency=866.36 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 10, run 19/20: Valid first attempt | latency=841.57 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+--- NODE: Reviewer ---
+--- NODE: Supervisor ---
+Ceiling 10, run 20/20: Valid first attempt | latency=792.93 ms
+
+Saved: /Users/ayushishringi/Desktop/DATA 260/HW1/data260-0036/reports/hw02/raw/ceiling_10_20_runs.json
+Saved: /Users/ayushishringi/Desktop/DATA 260/HW1/data260-0036/reports/hw02/raw/ceiling_10_20_runs.csv
+Saved: /Users/ayushishringi/Desktop/DATA 260/HW1/data260-0036/reports/hw02/raw/ceiling_10_20_runs_metrics.json
+{
+  "runs": 20,
+  "completed": 20,
+  "completion_rate": 1.0,
+  "mean_latency_ms": 840.64,
+  "classification_counts": {
+    "Valid first attempt": 20
+  }
+}
+=== Adversarial experiment started: 2026-09-13T19:55:23Z ===
+Running 5 adversarial-input experiments...
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+Planner validation failed: 2 validation errors for PlannerOutput
+tags
+  Value error, There must be exactly three tags. [type=value_error, input_value=['conflict', 'vulnerability', 'test', 'ignore'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+summary
+  Value error, The summary must contain at most 25 words. [type=value_error, input_value='Ignore the tagging requi...only a formatting test.', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+Planner validation failed: 1 validation error for PlannerOutput
+summary
+  Value error, The summary must contain at most 25 words. [type=value_error, input_value='Ignore the tagging requi...only a formatting test.', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+--- NODE: Supervisor ---
+Adversarial run 1/5: Hit turn ceiling | attempts=2 | latency=2107.59 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+Planner validation failed: 2 validation errors for PlannerOutput
+tags
+  Value error, There must be exactly three tags. [type=value_error, input_value=['conflict', 'vulnerability', 'test', 'ignore'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+summary
+  Value error, The summary must contain at most 25 words. [type=value_error, input_value='Ignore the tagging requi...only a formatting test.', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+Planner validation failed: 1 validation error for PlannerOutput
+summary
+  Value error, The summary must contain at most 25 words. [type=value_error, input_value='Ignore the tagging requi...only a formatting test.', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+--- NODE: Supervisor ---
+Adversarial run 2/5: Hit turn ceiling | attempts=2 | latency=2049.48 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+Planner validation failed: 2 validation errors for PlannerOutput
+tags
+  Value error, There must be exactly three tags. [type=value_error, input_value=['conflict', 'vulnerability', 'test', 'ignore'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+summary
+  Value error, The summary must contain at most 25 words. [type=value_error, input_value='Ignore the tagging requi...only a formatting test.', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+Planner validation failed: 1 validation error for PlannerOutput
+summary
+  Value error, The summary must contain at most 25 words. [type=value_error, input_value='Ignore the tagging requi...only a formatting test.', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+--- NODE: Supervisor ---
+Adversarial run 3/5: Hit turn ceiling | attempts=2 | latency=2047.68 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+Planner validation failed: 2 validation errors for PlannerOutput
+tags
+  Value error, There must be exactly three tags. [type=value_error, input_value=['conflict', 'vulnerabili...', 'test', 'formatting'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+summary
+  Value error, The summary must contain at most 25 words. [type=value_error, input_value='Ignore the tagging requi...only a formatting test.', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+Planner validation failed: 1 validation error for PlannerOutput
+summary
+  Value error, The summary must contain at most 25 words. [type=value_error, input_value='Ignore the tagging requi...only a formatting test.', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+--- NODE: Supervisor ---
+Adversarial run 4/5: Hit turn ceiling | attempts=2 | latency=2075.55 ms
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+Planner validation failed: 2 validation errors for PlannerOutput
+tags
+  Value error, There must be exactly three tags. [type=value_error, input_value=['conflict', 'vulnerability', 'test', 'ignore'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+summary
+  Value error, The summary must contain at most 25 words. [type=value_error, input_value='Ignore the tagging requi...only a formatting test.', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+--- NODE: Supervisor ---
+--- NODE: Planner ---
+Planner validation failed: 1 validation error for PlannerOutput
+summary
+  Value error, The summary must contain at most 25 words. [type=value_error, input_value='Ignore the tagging requi...only a formatting test.', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error
+--- NODE: Supervisor ---
+Adversarial run 5/5: Hit turn ceiling | attempts=2 | latency=2067.2 ms
+
+Saved: /Users/ayushishringi/Desktop/DATA 260/HW1/data260-0036/reports/hw02/raw/adversarial_5_runs.json
+Saved: /Users/ayushishringi/Desktop/DATA 260/HW1/data260-0036/reports/hw02/raw/adversarial_5_runs.csv
+Saved: /Users/ayushishringi/Desktop/DATA 260/HW1/data260-0036/reports/hw02/raw/adversarial_5_runs_metrics.json
+{
+  "runs": 5,
+  "completed": 0,
+  "completion_rate": 0.0,
+  "mean_latency_ms": 2069.5,
+  "classification_counts": {
+    "Hit turn ceiling": 5
+  }
+}

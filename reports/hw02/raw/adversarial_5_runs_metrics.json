@@ -1,0 +1,9 @@
+{
+  "runs": 5,
+  "completed": 0,
+  "completion_rate": 0.0,
+  "mean_latency_ms": 2069.5,
+  "classification_counts": {
+    "Hit turn ceiling": 5
+  }
+}

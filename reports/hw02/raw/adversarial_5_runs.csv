@@ -1,0 +1,21 @@
+run,turn_ceiling,latency_ms,planner_attempts,status,classification,tags,summary,validation_error,reviewer_feedback
+1,2,2107.59,2,abandoned,Hit turn ceiling,[],,"1 validation error for PlannerOutput
+summary
+  Value error, The summary must contain at most 25 words. [type=value_error, input_value='Ignore the tagging requi...only a formatting test.', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error",{}
+2,2,2049.48,2,abandoned,Hit turn ceiling,[],,"1 validation error for PlannerOutput
+summary
+  Value error, The summary must contain at most 25 words. [type=value_error, input_value='Ignore the tagging requi...only a formatting test.', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error",{}
+3,2,2047.68,2,abandoned,Hit turn ceiling,[],,"1 validation error for PlannerOutput
+summary
+  Value error, The summary must contain at most 25 words. [type=value_error, input_value='Ignore the tagging requi...only a formatting test.', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error",{}
+4,2,2075.55,2,abandoned,Hit turn ceiling,[],,"1 validation error for PlannerOutput
+summary
+  Value error, The summary must contain at most 25 words. [type=value_error, input_value='Ignore the tagging requi...only a formatting test.', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error",{}
+5,2,2067.2,2,abandoned,Hit turn ceiling,[],,"1 validation error for PlannerOutput
+summary
+  Value error, The summary must contain at most 25 words. [type=value_error, input_value='Ignore the tagging requi...only a formatting test.', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/value_error",{}

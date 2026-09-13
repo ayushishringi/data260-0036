@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "homework": "DATA-260 HW2",
+  "SID4": "0036",
+  "PORT_BASE": 8036,
+  "PREFIX": "s0036",
+  "SEED": 36,
+  "VERIFY_SEED": 260036,
+  "DOMAIN_ID": 4,
+  "model": "qwen3:4b",
+  "commit_hash": "8db6f676ef035d5c5f58151a22aec8a48be05f39",
+  "checks": {
+    "required_files": {
+      "index.html": true,
+      "app.js": true,
+      "styles.css": true,
+      "requirements.txt": true,
+      "backend/main.py": true,
+      "agents_graph.py": true,
+      "scripts/run_hw02_experiments.py": true,
+      "scripts/verify_hw02.py": true,
+      "reports/hw02/RUN_LOG.txt": true,
+      "reports/hw02/METRICS.md": true,
+      "reports/hw02/AI_USE.md": true,
+      "reports/hw02/cases/schema_input.json": true,
+      "reports/hw02/cases/adversarial_input.json": true,
+      "reports/hw02/raw/schema_30_runs_metrics.json": true,
+      "reports/hw02/raw/ceiling_2_20_runs_metrics.json": true,
+      "reports/hw02/raw/ceiling_10_20_runs_metrics.json": true,
+      "reports/hw02/raw/adversarial_5_runs_metrics.json": true
+    },
+    "port_open": true,
+    "api_health": {
+      "passed": true,
+      "details": "{\"status\": \"ok\", \"port\": 8036}"
+    },
+    "langgraph_smoke_test": {
+      "passed": true,
+      "details": {
+        "status": "completed",
+        "turn_count": 2,
+        "planner_attempts": 1,
+        "tag_count": 3,
+        "summary_word_count": 9
+      }
+    }
+  },
+  "timestamp_utc": "2026-09-13T20:10:48.956364+00:00"
+}

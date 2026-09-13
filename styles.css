@@ -6,7 +6,10 @@
   --muted: #475569;
   --accent: #0f766e;
   --accent-hover: #115e59;
+  --danger: #b91c1c;
+  --danger-hover: #991b1b;
   --border: #cbd5e1;
+  --soft: #f1f5f9;
 }
 
 * {
@@ -19,13 +22,12 @@ body {
   font-family: "Segoe UI", system-ui, sans-serif;
   background: radial-gradient(circle at top left, #134e4a, var(--bg) 55%);
   color: var(--ink);
-  display: grid;
-  place-items: center;
   padding: 2rem 1rem;
 }
 
 .card {
-  width: min(640px, 100%);
+  width: min(760px, 100%);
+  margin: 0 auto;
   background: var(--card);
   border-radius: 16px;
   padding: 2rem;
@@ -43,6 +45,16 @@ body {
 h1 {
   margin: 0 0 0.5rem;
   font-size: 2rem;
+}
+
+h2 {
+  margin: 2rem 0 0.8rem;
+  font-size: 1.25rem;
+}
+
+h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
 }
 
 .lede {
@@ -75,6 +87,110 @@ select {
   padding: 0.7rem 0.8rem;
   border: 1px solid var(--border);
   border-radius: 8px;
+  background: #fff;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--accent-hover);
+}
+
+.secondary-button {
+  background: #64748b;
+}
+
+.secondary-button:hover {
+  background: #475569;
+}
+
+.danger-button {
+  background: var(--danger);
+}
+
+.danger-button:hover {
+  background: var(--danger-hover);
+}
+
+.search-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 0.6rem;
+  align-items: start;
+}
+
+.search-row input {
+  margin-bottom: 0;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.count-badge {
+  background: var(--soft);
+  color: var(--muted);
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.report-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.report-card {
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--accent);
+  border-radius: 10px;
+  padding: 1rem;
+  background: #fff;
+}
+
+.report-card p {
+  margin: 0.4rem 0;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.report-card small {
+  color: var(--muted);
+}
+
+.management-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.state-message {
+  padding: 0.8rem;
+  border-radius: 8px;
+  background: var(--soft);
+  color: var(--muted);
+}
+
+.error-message {
+  background: #fee2e2;
+  color: #991b1b;
 }
 
 .checkbox-row {
@@ -93,20 +209,6 @@ select {
   font-weight: 500;
 }
 
-button {
-  background: var(--accent);
-  color: #fff;
-  border: 0;
-  border-radius: 8px;
-  padding: 0.85rem 1rem;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-button:hover {
-  background: var(--accent-hover);
-}
-
 .output {
   margin-top: 1.25rem;
   padding: 0.9rem;
@@ -116,4 +218,53 @@ button:hover {
   overflow: auto;
   font-size: 0.8rem;
   white-space: pre-wrap;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 1rem 0.6rem;
+  }
+
+  .card {
+    padding: 1.2rem;
+    border-radius: 12px;
+  }
+
+  h1 {
+    font-size: 1.65rem;
+  }
+
+  .search-row {
+    grid-template-columns: 1fr;
+  }
+
+  .search-row button {
+    width: 100%;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .management-actions {
+    flex-direction: column;
+  }
+
+  .management-actions button {
+    width: 100%;
+  }
 }

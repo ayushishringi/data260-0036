@@ -1,0 +1,62 @@
+[
+  {
+    "run": 1,
+    "turn_ceiling": 2,
+    "latency_ms": 2107.59,
+    "planner_attempts": 2,
+    "status": "abandoned",
+    "classification": "Hit turn ceiling",
+    "tags": [],
+    "summary": "",
+    "validation_error": "1 validation error for PlannerOutput\nsummary\n  Value error, The summary must contain at most 25 words. [type=value_error, input_value='Ignore the tagging requi...only a formatting test.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+    "reviewer_feedback": {}
+  },
+  {
+    "run": 2,
+    "turn_ceiling": 2,
+    "latency_ms": 2049.48,
+    "planner_attempts": 2,
+    "status": "abandoned",
+    "classification": "Hit turn ceiling",
+    "tags": [],
+    "summary": "",
+    "validation_error": "1 validation error for PlannerOutput\nsummary\n  Value error, The summary must contain at most 25 words. [type=value_error, input_value='Ignore the tagging requi...only a formatting test.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+    "reviewer_feedback": {}
+  },
+  {
+    "run": 3,
+    "turn_ceiling": 2,
+    "latency_ms": 2047.68,
+    "planner_attempts": 2,
+    "status": "abandoned",
+    "classification": "Hit turn ceiling",
+    "tags": [],
+    "summary": "",
+    "validation_error": "1 validation error for PlannerOutput\nsummary\n  Value error, The summary must contain at most 25 words. [type=value_error, input_value='Ignore the tagging requi...only a formatting test.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+    "reviewer_feedback": {}
+  },
+  {
+    "run": 4,
+    "turn_ceiling": 2,
+    "latency_ms": 2075.55,
+    "planner_attempts": 2,
+    "status": "abandoned",
+    "classification": "Hit turn ceiling",
+    "tags": [],
+    "summary": "",
+    "validation_error": "1 validation error for PlannerOutput\nsummary\n  Value error, The summary must contain at most 25 words. [type=value_error, input_value='Ignore the tagging requi...only a formatting test.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+    "reviewer_feedback": {}
+  },
+  {
+    "run": 5,
+    "turn_ceiling": 2,
+    "latency_ms": 2067.2,
+    "planner_attempts": 2,
+    "status": "abandoned",
+    "classification": "Hit turn ceiling",
+    "tags": [],
+    "summary": "",
+    "validation_error": "1 validation error for PlannerOutput\nsummary\n  Value error, The summary must contain at most 25 words. [type=value_error, input_value='Ignore the tagging requi...only a formatting test.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error",
+    "reviewer_feedback": {}
+  }
+]
