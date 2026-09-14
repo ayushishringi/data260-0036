@@ -85,6 +85,7 @@ async function getErrorMessage(response) {
 async function loadReports(search = "") {
   showState({ loading: true });
   reportList.replaceChildren();
+  
 
   try {
     const url = new URL(`${API_BASE}/api/reports`);

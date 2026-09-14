@@ -33,6 +33,7 @@
           />
 
           <button type="submit">Search</button>
+
           <button type="button" id="clear-search" class="secondary-button">
             Clear
           </button>
@@ -70,11 +71,15 @@
         </div>
       </section>
 
+      <!-- Success and error messages appear before the add form. -->
+      <pre id="output" class="output" hidden></pre>
+
       <section aria-labelledby="form-heading">
         <h2 id="form-heading">Add a vulnerability report</h2>
 
         <form id="report-form">
           <label for="packageName">Package name</label>
+
           <input
             id="packageName"
             name="packageName"
@@ -84,15 +89,17 @@
           />
 
           <label for="affectedVersion">Affected version</label>
+
           <input
             id="affectedVersion"
             name="affectedVersion"
             type="text"
             required
-            placeholder="Example: < 4.17.21"
+            placeholder="Example: &lt; 4.17.21"
           />
 
           <label for="submitterEmail">Submitter email</label>
+
           <input
             id="submitterEmail"
             name="submitterEmail"
@@ -102,6 +109,7 @@
           />
 
           <label for="description">Vulnerability description</label>
+
           <textarea
             id="description"
             name="description"
@@ -112,6 +120,7 @@
           ></textarea>
 
           <label for="severity">Severity</label>
+
           <select id="severity" name="severity" required>
             <option value="" disabled selected>Select a severity</option>
             <option value="critical">Critical</option>
@@ -122,6 +131,7 @@
 
           <div class="checkbox-row">
             <input id="agreedToTerms" name="agreedToTerms" type="checkbox" />
+
             <label for="agreedToTerms">
               I agree to the terms and conditions.
             </label>
@@ -130,8 +140,6 @@
           <button type="submit">Add vulnerability report</button>
         </form>
       </section>
-
-      <pre id="output" class="output" hidden></pre>
     </main>
 
     <script src="app.js"></script>

@@ -8,5 +8,15 @@
     "severity": "high",
     "agreedToTerms": true,
     "submissionDate": "2026-09-01T12:00:00+00:00"
+  },
+  {
+    "id": 2,
+    "packageName": "Loadlash",
+    "affectedVersion": "3.2.3",
+    "submitterEmail": "teste@gmail.com",
+    "description": "This is wiser issuer which needs attention  right now because server is down and alll.",
+    "severity": "high",
+    "agreedToTerms": true,
+    "submissionDate": "2026-09-14T02:50:33.180506+00:00"
   }
 ]
