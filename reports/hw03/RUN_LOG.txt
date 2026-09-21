@@ -1,0 +1,61 @@
+HW3 retrieval run
+timestamp_utc: 2026-09-21T17:47:38.983651+00:00
+model: sentence-transformers/all-MiniLM-L6-v2
+top_k: 3
+
+Building the three retrieval indexes...
+Question q1: Which packages are affected by prototype pollution vulnerabilities?
+token: 3 chunks, latency=17.7298 ms
+semantic: 3 chunks, latency=4.168 ms
+sentence_window: 3 chunks, latency=16.2058 ms
+Question q2: What versions of Apache Pulsar are affected by security vulnerabilities?
+token: 3 chunks, latency=15.5722 ms
+semantic: 3 chunks, latency=4.3969 ms
+sentence_window: 3 chunks, latency=14.9872 ms
+Question q3: What are common mitigation steps described in the advisories?
+token: 3 chunks, latency=17.0872 ms
+semantic: 3 chunks, latency=4.0102 ms
+sentence_window: 3 chunks, latency=15.1424 ms
+Question q4: Which vulnerabilities allow remote code execution?
+token: 3 chunks, latency=17.8003 ms
+semantic: 3 chunks, latency=3.8301 ms
+sentence_window: 3 chunks, latency=14.5835 ms
+Question q5: Which advisories mention denial of service?
+token: 3 chunks, latency=14.7436 ms
+semantic: 3 chunks, latency=4.3557 ms
+sentence_window: 3 chunks, latency=14.8562 ms
+
+Summary metrics:
+{
+  "token": {
+    "questions_evaluated": 5,
+    "chunks_produced": 1737,
+    "average_chunk_length": 1091.45,
+    "top_1_cosine_mean": 0.484747,
+    "mean_at_k_cosine": 0.427933,
+    "recall_at_k": 0.6,
+    "mean_retrieval_latency_ms": 16.58662
+  },
+  "semantic": {
+    "questions_evaluated": 5,
+    "chunks_produced": 93,
+    "average_chunk_length": 18464.8,
+    "top_1_cosine_mean": 0.405813,
+    "mean_at_k_cosine": 0.333585,
+    "recall_at_k": 0.2,
+    "mean_retrieval_latency_ms": 4.15218
+  },
+  "sentence_window": {
+    "questions_evaluated": 5,
+    "chunks_produced": 1834,
+    "average_chunk_length": 936.33,
+    "top_1_cosine_mean": 0.534835,
+    "mean_at_k_cosine": 0.479562,
+    "recall_at_k": 0.4,
+    "mean_retrieval_latency_ms": 15.15502
+  }
+}
+
+Saved: /Users/ayushishringi/Desktop/DATA 260/HW1/data260-0036/reports/hw03/raw/retrieval_outputs.json
+Saved: /Users/ayushishringi/Desktop/DATA 260/HW1/data260-0036/reports/hw03/raw/metrics.json
+Saved: /Users/ayushishringi/Desktop/DATA 260/HW1/data260-0036/outputs/hw3_retrieval_outputs.json

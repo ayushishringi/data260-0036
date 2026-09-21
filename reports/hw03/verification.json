@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "homework": "DATA-260 HW3",
+  "SID4": "0036",
+  "PORT_BASE": 8036,
+  "DOMAIN_ID": 4,
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "checks": {
+    "required_files": {
+      "backend/auth.py": true,
+      "backend/main.py": true,
+      "questions.yaml": true,
+      "src/retrieval.py": true,
+      "scripts/run_hw3_retrieval.py": true,
+      "corpus/SOURCES.md": true,
+      "corpus/CORPUS_MANIFEST.json": true,
+      "corpus/github_reviewed_advisories_snapshot.txt": true,
+      "reports/hw03/RUN_LOG.txt": true,
+      "reports/hw03/METRICS.md": true,
+      "reports/hw03/AI_USE.md": true,
+      "reports/hw03/raw/retrieval_outputs.json": true,
+      "reports/hw03/raw/metrics.json": true
+    },
+    "all_required_files_present": true,
+    "corpus": {
+      "size_bytes": 1717675,
+      "minimum_required_bytes": 200000,
+      "passed": true
+    },
+    "questions": {
+      "count": 5,
+      "expected_count": 5,
+      "passed": true
+    },
+    "retrieval_outputs": {
+      "questions_in_output": 5,
+      "required_techniques": [
+        "semantic",
+        "sentence_window",
+        "token"
+      ],
+      "output_techniques": [
+        "semantic",
+        "sentence_window",
+        "token"
+      ],
+      "metrics_techniques": [
+        "semantic",
+        "sentence_window",
+        "token"
+      ],
+      "passed": true
+    },
+    "authentication": {
+      "router_paths": [
+        "/",
+        "/login",
+        "/login",
+        "/dashboard",
+        "/logout"
+      ],
+      "session_middleware_present": true,
+      "required_router_paths_present": true,
+      "passed": true
+    }
+  }
+}

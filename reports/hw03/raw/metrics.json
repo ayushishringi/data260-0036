@@ -1,0 +1,29 @@
+{
+  "token": {
+    "questions_evaluated": 5,
+    "chunks_produced": 1737,
+    "average_chunk_length": 1091.45,
+    "top_1_cosine_mean": 0.484747,
+    "mean_at_k_cosine": 0.427933,
+    "recall_at_k": 0.6,
+    "mean_retrieval_latency_ms": 16.58662
+  },
+  "semantic": {
+    "questions_evaluated": 5,
+    "chunks_produced": 93,
+    "average_chunk_length": 18464.8,
+    "top_1_cosine_mean": 0.405813,
+    "mean_at_k_cosine": 0.333585,
+    "recall_at_k": 0.2,
+    "mean_retrieval_latency_ms": 4.15218
+  },
+  "sentence_window": {
+    "questions_evaluated": 5,
+    "chunks_produced": 1834,
+    "average_chunk_length": 936.33,
+    "top_1_cosine_mean": 0.534835,
+    "mean_at_k_cosine": 0.479562,
+    "recall_at_k": 0.4,
+    "mean_retrieval_latency_ms": 15.15502
+  }
+}
