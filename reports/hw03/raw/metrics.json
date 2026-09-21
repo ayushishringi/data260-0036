@@ -6,7 +6,7 @@
     "top_1_cosine_mean": 0.484747,
     "mean_at_k_cosine": 0.427933,
     "recall_at_k": 0.6,
-    "mean_retrieval_latency_ms": 16.58662
+    "mean_retrieval_latency_ms": 15.27902
   },
   "semantic": {
     "questions_evaluated": 5,
@@ -15,7 +15,7 @@
     "top_1_cosine_mean": 0.405813,
     "mean_at_k_cosine": 0.333585,
     "recall_at_k": 0.2,
-    "mean_retrieval_latency_ms": 4.15218
+    "mean_retrieval_latency_ms": 4.50552
   },
   "sentence_window": {
     "questions_evaluated": 5,
@@ -24,6 +24,6 @@
     "top_1_cosine_mean": 0.534835,
     "mean_at_k_cosine": 0.479562,
     "recall_at_k": 0.4,
-    "mean_retrieval_latency_ms": 15.15502
+    "mean_retrieval_latency_ms": 14.69472
   }
 }
