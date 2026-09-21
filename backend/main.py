@@ -1,12 +1,34 @@
+import os
+from starlette.middleware.sessions import SessionMiddleware
+from backend.auth import router as auth_router
 from datetime import datetime, timezone
 import json
 from pathlib import Path
 from typing import Literal
-
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field, field_validator
+
+
+app = FastAPI(title="DATA-260 HW2 Vulnerability Reports")
+
+
+app.add_middleware(
+    SessionMiddleware,
+    secret_key=os.getenv(
+        "SESSION_SECRET",
+        "3fad0e3a09a35a4bef25d951adfc1ed979441c5214532c0a9bbcb589ff6ef7af",
+    ),
+    max_age=900,
+    same_site="lax",
+    https_only=os.getenv(
+        "SESSION_HTTPS_ONLY",
+        "true",
+    ).lower() == "true",
+)
+
+
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -52,7 +74,6 @@ class VulnerabilityReport(VulnerabilityReportInput):
     submissionDate: str
 
 
-app = FastAPI(title="DATA-260 HW2 Vulnerability Reports")
 
 
 app.add_middleware(
@@ -192,6 +213,7 @@ def delete_highest_report() -> dict:
 
     return highest_record
 
+app.include_router(auth_router)
 
 app.mount(
     "/",

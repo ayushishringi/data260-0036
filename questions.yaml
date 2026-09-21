@@ -1,0 +1,19 @@
+domain:
+  id: 4
+  name: "Open-source package vulnerabilities"
+
+questions:
+  - id: q1
+    text: "Which packages are affected by prototype pollution vulnerabilities?"
+
+  - id: q2
+    text: "What versions of Apache Pulsar are affected by security vulnerabilities?"
+
+  - id: q3
+    text: "What are common mitigation steps described in the advisories?"
+
+  - id: q4
+    text: "Which vulnerabilities allow remote code execution?"
+
+  - id: q5
+    text: "Which advisories mention denial of service?"

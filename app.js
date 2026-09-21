@@ -184,8 +184,9 @@ updateFirstButton.addEventListener("click", async () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(updatedReport),
-    });
+    body: JSON.stringify(updatedReport),
+     });
+
 
     if (!response.ok) {
       throw new Error(await getErrorMessage(response));

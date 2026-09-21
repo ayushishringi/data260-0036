@@ -2,3 +2,13 @@ fastapi
 uvicorn[standard]
 pydantic
 langgraph
+jinja2
+python-multipart
+itsdangerous
+llama-index
+llama-index-embeddings-huggingface
+sentence-transformers
+faiss-cpu
+numpy
+pandas
+pyyaml

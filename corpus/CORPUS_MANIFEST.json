@@ -1,0 +1,15 @@
+{
+  "domain_id": 4,
+  "domain": "Open-source package vulnerabilities",
+  "source_name": "GitHub Advisory Database",
+  "source_repository": "https://github.com/github/advisory-database",
+  "source_section": "advisories/github-reviewed",
+  "local_snapshot": "corpus/github_reviewed_advisories_snapshot.txt",
+  "records_in_snapshot": 500,
+  "records_available_in_checkout": 938,
+  "snapshot_size_bytes": 1717675,
+  "minimum_required_size_bytes": 200000,
+  "retrieval_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "selection_method": "First 500 JSON advisory files discovered from the local GitHub-reviewed advisory checkout",
+  "generated_date": "2026-09-21"
+}
