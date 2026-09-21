@@ -5,15 +5,30 @@ domain:
 questions:
   - id: q1
     text: "Which packages are affected by prototype pollution vulnerabilities?"
+    expected_answer: "The web3-utils package is vulnerable before version 4.2.1 because of insecure recursive merge behavior."
+    expected_source_file: "corpus/github_reviewed_advisories_snapshot.txt"
+    expected_source_match: "web3-utils"
 
   - id: q2
     text: "What versions of Apache Pulsar are affected by security vulnerabilities?"
+    expected_answer: "The advisory identifies affected Apache Pulsar versions in the 2.4.x through 2.10.5, 2.11.x through 2.11.3, 3.0.x through 3.0.2, 3.1.x through 3.1.2, and 3.2.0 ranges."
+    expected_source_file: "corpus/github_reviewed_advisories_snapshot.txt"
+    expected_source_match: "Apache Pulsar"
 
   - id: q3
     text: "What are common mitigation steps described in the advisories?"
+    expected_answer: "Common mitigations include upgrading to a patched version, applying the vendor-recommended patch, and using documented workarounds when an upgrade is not immediately possible."
+    expected_source_file: "corpus/github_reviewed_advisories_snapshot.txt"
+    expected_source_match: "Patches"
 
   - id: q4
     text: "Which vulnerabilities allow remote code execution?"
+    expected_answer: "The Symfony 1 advisory describes a deserialization vulnerability that can enable remote code execution when untrusted input is unserialized."
+    expected_source_file: "corpus/github_reviewed_advisories_snapshot.txt"
+    expected_source_match: "Symfony 1"
 
   - id: q5
     text: "Which advisories mention denial of service?"
+    expected_answer: "The Apache Tomcat advisory describes denial of service caused by improper validation of HTTP/2 request headers and recommends upgrading to fixed versions."
+    expected_source_file: "corpus/github_reviewed_advisories_snapshot.txt"
+    expected_source_match: "Apache Tomcat"
