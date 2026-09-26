@@ -1,6 +1,6 @@
 import os
 from starlette.middleware.sessions import SessionMiddleware
-from backend.auth import router as auth_router
+from backend.auth_api import router as auth_router
 from datetime import datetime, timezone
 import json
 from pathlib import Path
@@ -9,9 +9,11 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field, field_validator
+from backend.report_api import router as report_router
 
 
 app = FastAPI(title="DATA-260 HW2 Vulnerability Reports")
+app.include_router(report_router)
 
 
 app.add_middleware(
@@ -76,13 +78,11 @@ class VulnerabilityReport(VulnerabilityReportInput):
 
 
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=False,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+allow_origins=[
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+],
+allow_credentials=True,
 
 
 def default_records() -> list[dict]:

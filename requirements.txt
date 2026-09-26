@@ -12,3 +12,6 @@ faiss-cpu
 numpy
 pandas
 pyyaml
+sqlalchemy
+pymysql
+email-validator
