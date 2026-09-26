@@ -17,17 +17,14 @@ app.include_router(report_router)
 
 
 app.add_middleware(
-    SessionMiddleware,
-    secret_key=os.getenv(
-        "SESSION_SECRET",
-        "3fad0e3a09a35a4bef25d951adfc1ed979441c5214532c0a9bbcb589ff6ef7af",
-    ),
-    max_age=900,
-    same_site="lax",
-    https_only=os.getenv(
-        "SESSION_HTTPS_ONLY",
-        "true",
-    ).lower() == "true",
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 
