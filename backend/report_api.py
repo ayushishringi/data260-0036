@@ -2,7 +2,7 @@ from datetime import datetime, timezone
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session , selectinload
 
 from backend.database import get_db
 from backend.models import User, VulnerabilityReport
@@ -42,10 +42,13 @@ def list_reports(
     current_user: User = Depends(get_current_user),
 ) -> list[dict]:
     reports = db.scalars(
-        select(VulnerabilityReport).order_by(
-            VulnerabilityReport.id
+        select(VulnerabilityReport)
+        .options(
+            selectinload(VulnerabilityReport.advisories)
         )
+    .order_by(VulnerabilityReport.id)
     ).all()
+    
 
     return [report_to_dict(report) for report in reports]
 
