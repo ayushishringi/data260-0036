@@ -1,0 +1,29 @@
+- id: q1
+  document_id: doc_01
+  question: "Which package is affected by the stored cross-site scripting vulnerability, and what version fixes it?"
+  reference_answer: "The affected package is phpmyfaq/phpmyfaq, and version 3.2.6 fixes the vulnerability."
+
+- id: q2
+  document_id: doc_01
+  question: "What type of vulnerability affects phpMyFAQ, and what can an attacker execute?"
+  reference_answer: "It is a stored cross-site scripting vulnerability. An attacker can execute arbitrary client-side JavaScript in another user's phpMyFAQ session."
+
+- id: q3
+  document_id: doc_02
+  question: "Which package has the improper HTML sanitization vulnerability, and what version fixes the 2.47.x branch?"
+  reference_answer: "The affected package is github.com/zitadel/zitadel, and version 2.47.4 fixes the 2.47.x branch."
+
+- id: q4
+  document_id: doc_03
+  question: "What problem affects parse-server, and what version fixes the stable affected branch?"
+  reference_answer: "parse-server can crash when given an invalid Cloud Function or Cloud Job name. Version 6.5.5 fixes the stable affected branch."
+
+- id: q5
+  document_id: doc_04
+  question: "Which package is affected by the NetFraming connection vulnerability, and what versions fix the affected branches?"
+  reference_answer: "The affected package is CoreWCF.NetFramingBase. Versions 1.4.2 and 1.5.2 fix the affected branches."
+
+- id: q6
+  document_id: doc_05
+  question: "What authentication-related vulnerability affects CasaOS UserService, and what version fixes it?"
+  reference_answer: "CasaOS UserService has an improper restriction of excessive authentication attempts vulnerability. Version 0.4.7 fixes it."

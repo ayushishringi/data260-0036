@@ -1,0 +1,1064 @@
+[
+  {
+    "question_id": "q1",
+    "strategy": "no_context",
+    "k": 1,
+    "retrieved_documents": [
+      "doc_02"
+    ],
+    "retrieval_hit": 0,
+    "answer_overlap": 0.0,
+    "context_chars": 0,
+    "latency_ms": 0.0002,
+    "answer": "I cannot answer because no context was provided."
+  },
+  {
+    "question_id": "q1",
+    "strategy": "basic_context",
+    "k": 1,
+    "retrieved_documents": [
+      "doc_02"
+    ],
+    "retrieval_hit": 0,
+    "answer_overlap": 0.3,
+    "context_chars": 6839,
+    "latency_ms": 0.0155,
+    "answer": "Improper HTML sanitization in ZITADEL Affected package: github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel. Fixed versions: 2.41.15, 2.42.15, 2.43.9, 2.44.3, 2.45.1, 2.46.1, 2.47.4, 0.0.0-20240311065202-07ec2efa9dc6, 1.80.0-v2.20.0.20240311065202-07ec2efa9dc6. Details: ### Impact\n\nZITADEL uses Go templates to render the login UI.\n\nDue to a improper use of the `text/template` instead of the `html/template` package, the Login UI did not sanitize input parameters. An attacker could create a malicious link, where he injected code which would be rendered as part of the login screen.\nWhile it was possible to inject HTML including javascript, the execution of such scripts would be prevented by the Content Security Policy.\n\n### Patches\n\n2.x versions are fixed on >= [2"
+  },
+  {
+    "question_id": "q1",
+    "strategy": "engineered_context",
+    "k": 1,
+    "retrieved_documents": [
+      "doc_02"
+    ],
+    "retrieval_hit": 0,
+    "answer_overlap": 0.3,
+    "context_chars": 968,
+    "latency_ms": 0.0062,
+    "answer": "Improper HTML sanitization in ZITADEL Affected package: github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel. Fixed versions: 2.41.15, 2.42.15, 2.43.9, 2.44.3, 2.45.1, 2.46.1, 2.47.4, 0.0.0-20240311065202-07ec2efa9dc6, 1.80.0-v2.20.0.20240311065202-07ec2efa9dc6. Details: ### Impact\n\nZITADEL uses Go templates to render the login UI.\n\nDue to a improper use of the `text/template` instead of the `html/template` package, the Login UI did not sanitize input parameters. An attacker could create a malicious link, where he injected code which would be rendered as part of the login screen.\nWhile it was possible to inject HTML including javascript, the execution of such scripts would be prevented by the Content Security Policy.\n\n### Patches\n\n2.x versions are fixed on >= [2"
+  },
+  {
+    "question_id": "q1",
+    "strategy": "no_context",
+    "k": 2,
+    "retrieved_documents": [
+      "doc_02",
+      "doc_03"
+    ],
+    "retrieval_hit": 0,
+    "answer_overlap": 0.0,
+    "context_chars": 0,
+    "latency_ms": 0.0001,
+    "answer": "I cannot answer because no context was provided."
+  },
+  {
+    "question_id": "q1",
+    "strategy": "basic_context",
+    "k": 2,
+    "retrieved_documents": [
+      "doc_02",
+      "doc_03"
+    ],
+    "retrieval_hit": 0,
+    "answer_overlap": 0.3,
+    "context_chars": 9839,
+    "latency_ms": 0.0039,
+    "answer": "Improper HTML sanitization in ZITADEL Affected package: github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel. Fixed versions: 2.41.15, 2.42.15, 2.43.9, 2.44.3, 2.45.1, 2.46.1, 2.47.4, 0.0.0-20240311065202-07ec2efa9dc6, 1.80.0-v2.20.0.20240311065202-07ec2efa9dc6. Details: ### Impact\n\nZITADEL uses Go templates to render the login UI.\n\nDue to a improper use of the `text/template` instead of the `html/template` package, the Login UI did not sanitize input parameters. An attacker could create a malicious link, where he injected code which would be rendered as part of the login screen.\nWhile it was possible to inject HTML including javascript, the execution of such scripts would be prevented by the Content Security Policy.\n\n### Patches\n\n2.x versions are fixed on >= [2"
+  },
+  {
+    "question_id": "q1",
+    "strategy": "engineered_context",
+    "k": 2,
+    "retrieved_documents": [
+      "doc_02",
+      "doc_03"
+    ],
+    "retrieval_hit": 0,
+    "answer_overlap": 0.3,
+    "context_chars": 1621,
+    "latency_ms": 0.0066,
+    "answer": "Improper HTML sanitization in ZITADEL Affected package: github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel. Fixed versions: 2.41.15, 2.42.15, 2.43.9, 2.44.3, 2.45.1, 2.46.1, 2.47.4, 0.0.0-20240311065202-07ec2efa9dc6, 1.80.0-v2.20.0.20240311065202-07ec2efa9dc6. Details: ### Impact\n\nZITADEL uses Go templates to render the login UI.\n\nDue to a improper use of the `text/template` instead of the `html/template` package, the Login UI did not sanitize input parameters. An attacker could create a malicious link, where he injected code which would be rendered as part of the login screen.\nWhile it was possible to inject HTML including javascript, the execution of such scripts would be prevented by the Content Security Policy.\n\n### Patches\n\n2.x versions are fixed on >= [2"
+  },
+  {
+    "question_id": "q1",
+    "strategy": "no_context",
+    "k": 3,
+    "retrieved_documents": [
+      "doc_02",
+      "doc_03",
+      "doc_01"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.0,
+    "context_chars": 0,
+    "latency_ms": 0.0001,
+    "answer": "I cannot answer because no context was provided."
+  },
+  {
+    "question_id": "q1",
+    "strategy": "basic_context",
+    "k": 3,
+    "retrieved_documents": [
+      "doc_02",
+      "doc_03",
+      "doc_01"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.3,
+    "context_chars": 13295,
+    "latency_ms": 0.0046,
+    "answer": "Improper HTML sanitization in ZITADEL Affected package: github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel. Fixed versions: 2.41.15, 2.42.15, 2.43.9, 2.44.3, 2.45.1, 2.46.1, 2.47.4, 0.0.0-20240311065202-07ec2efa9dc6, 1.80.0-v2.20.0.20240311065202-07ec2efa9dc6. Details: ### Impact\n\nZITADEL uses Go templates to render the login UI.\n\nDue to a improper use of the `text/template` instead of the `html/template` package, the Login UI did not sanitize input parameters. An attacker could create a malicious link, where he injected code which would be rendered as part of the login screen.\nWhile it was possible to inject HTML including javascript, the execution of such scripts would be prevented by the Content Security Policy.\n\n### Patches\n\n2.x versions are fixed on >= [2"
+  },
+  {
+    "question_id": "q1",
+    "strategy": "engineered_context",
+    "k": 3,
+    "retrieved_documents": [
+      "doc_02",
+      "doc_03",
+      "doc_01"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.3,
+    "context_chars": 2241,
+    "latency_ms": 0.0078,
+    "answer": "Improper HTML sanitization in ZITADEL Affected package: github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel. Fixed versions: 2.41.15, 2.42.15, 2.43.9, 2.44.3, 2.45.1, 2.46.1, 2.47.4, 0.0.0-20240311065202-07ec2efa9dc6, 1.80.0-v2.20.0.20240311065202-07ec2efa9dc6. Details: ### Impact\n\nZITADEL uses Go templates to render the login UI.\n\nDue to a improper use of the `text/template` instead of the `html/template` package, the Login UI did not sanitize input parameters. An attacker could create a malicious link, where he injected code which would be rendered as part of the login screen.\nWhile it was possible to inject HTML including javascript, the execution of such scripts would be prevented by the Content Security Policy.\n\n### Patches\n\n2.x versions are fixed on >= [2"
+  },
+  {
+    "question_id": "q1",
+    "strategy": "no_context",
+    "k": 5,
+    "retrieved_documents": [
+      "doc_02",
+      "doc_03",
+      "doc_01",
+      "doc_05",
+      "doc_04"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.0,
+    "context_chars": 0,
+    "latency_ms": 0.0001,
+    "answer": "I cannot answer because no context was provided."
+  },
+  {
+    "question_id": "q1",
+    "strategy": "basic_context",
+    "k": 5,
+    "retrieved_documents": [
+      "doc_02",
+      "doc_03",
+      "doc_01",
+      "doc_05",
+      "doc_04"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.3,
+    "context_chars": 20099,
+    "latency_ms": 0.0051,
+    "answer": "Improper HTML sanitization in ZITADEL Affected package: github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel. Fixed versions: 2.41.15, 2.42.15, 2.43.9, 2.44.3, 2.45.1, 2.46.1, 2.47.4, 0.0.0-20240311065202-07ec2efa9dc6, 1.80.0-v2.20.0.20240311065202-07ec2efa9dc6. Details: ### Impact\n\nZITADEL uses Go templates to render the login UI.\n\nDue to a improper use of the `text/template` instead of the `html/template` package, the Login UI did not sanitize input parameters. An attacker could create a malicious link, where he injected code which would be rendered as part of the login screen.\nWhile it was possible to inject HTML including javascript, the execution of such scripts would be prevented by the Content Security Policy.\n\n### Patches\n\n2.x versions are fixed on >= [2"
+  },
+  {
+    "question_id": "q1",
+    "strategy": "engineered_context",
+    "k": 5,
+    "retrieved_documents": [
+      "doc_02",
+      "doc_03",
+      "doc_01",
+      "doc_05",
+      "doc_04"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.3,
+    "context_chars": 3607,
+    "latency_ms": 0.0091,
+    "answer": "Improper HTML sanitization in ZITADEL Affected package: github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel. Fixed versions: 2.41.15, 2.42.15, 2.43.9, 2.44.3, 2.45.1, 2.46.1, 2.47.4, 0.0.0-20240311065202-07ec2efa9dc6, 1.80.0-v2.20.0.20240311065202-07ec2efa9dc6. Details: ### Impact\n\nZITADEL uses Go templates to render the login UI.\n\nDue to a improper use of the `text/template` instead of the `html/template` package, the Login UI did not sanitize input parameters. An attacker could create a malicious link, where he injected code which would be rendered as part of the login screen.\nWhile it was possible to inject HTML including javascript, the execution of such scripts would be prevented by the Content Security Policy.\n\n### Patches\n\n2.x versions are fixed on >= [2"
+  },
+  {
+    "question_id": "q2",
+    "strategy": "no_context",
+    "k": 1,
+    "retrieved_documents": [
+      "doc_01"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.0,
+    "context_chars": 0,
+    "latency_ms": 0.0001,
+    "answer": "I cannot answer because no context was provided."
+  },
+  {
+    "question_id": "q2",
+    "strategy": "basic_context",
+    "k": 1,
+    "retrieved_documents": [
+      "doc_01"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.8182,
+    "context_chars": 3454,
+    "latency_ms": 0.003,
+    "answer": "phpMyFAQ stored Cross-site Scripting at user email Affected package: phpmyfaq/phpmyfaq. Fixed versions: 3.2.6. Details: ### Summary\nThe `email` field in phpMyFAQ's user control panel page is vulnerable to stored XSS attacks due to the inadequacy of PHP's `FILTER_VALIDATE_EMAIL` function, which only validates the email format, not its content. This vulnerability enables an attacker to execute arbitrary client-side JavaScript within the context of another user's phpMyFAQ session.\n\n### Details\nDespite using PHP's `FILTER_VALIDATE_EMAIL` function, the email field does not adequately validate the content of the email "
+  },
+  {
+    "question_id": "q2",
+    "strategy": "engineered_context",
+    "k": 1,
+    "retrieved_documents": [
+      "doc_01"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.8182,
+    "context_chars": 618,
+    "latency_ms": 0.0029,
+    "answer": "phpMyFAQ stored Cross-site Scripting at user email Affected package: phpmyfaq/phpmyfaq. Fixed versions: 3.2.6. Details: ### Summary\nThe `email` field in phpMyFAQ's user control panel page is vulnerable to stored XSS attacks due to the inadequacy of PHP's `FILTER_VALIDATE_EMAIL` function, which only validates the email format, not its content. This vulnerability enables an attacker to execute arbitrary client-side JavaScript within the context of another user's phpMyFAQ session.\n\n### Details\nDespite using PHP's `FILTER_VALIDATE_EMAIL` function, the email field does not adequately validate the content of the email "
+  },
+  {
+    "question_id": "q2",
+    "strategy": "no_context",
+    "k": 2,
+    "retrieved_documents": [
+      "doc_01",
+      "doc_05"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.0,
+    "context_chars": 0,
+    "latency_ms": 0.0,
+    "answer": "I cannot answer because no context was provided."
+  },
+  {
+    "question_id": "q2",
+    "strategy": "basic_context",
+    "k": 2,
+    "retrieved_documents": [
+      "doc_01",
+      "doc_05"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.8182,
+    "context_chars": 7275,
+    "latency_ms": 0.0059,
+    "answer": "phpMyFAQ stored Cross-site Scripting at user email Affected package: phpmyfaq/phpmyfaq. Fixed versions: 3.2.6. Details: ### Summary\nThe `email` field in phpMyFAQ's user control panel page is vulnerable to stored XSS attacks due to the inadequacy of PHP's `FILTER_VALIDATE_EMAIL` function, which only validates the email format, not its content. This vulnerability enables an attacker to execute arbitrary client-side JavaScript within the context of another user's phpMyFAQ session.\n\n### Details\nDespite using PHP's `FILTER_VALIDATE_EMAIL` function, the email field does not adequately validate the content of the email "
+  },
+  {
+    "question_id": "q2",
+    "strategy": "engineered_context",
+    "k": 2,
+    "retrieved_documents": [
+      "doc_01",
+      "doc_05"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.8182,
+    "context_chars": 1291,
+    "latency_ms": 0.0035,
+    "answer": "phpMyFAQ stored Cross-site Scripting at user email Affected package: phpmyfaq/phpmyfaq. Fixed versions: 3.2.6. Details: ### Summary\nThe `email` field in phpMyFAQ's user control panel page is vulnerable to stored XSS attacks due to the inadequacy of PHP's `FILTER_VALIDATE_EMAIL` function, which only validates the email format, not its content. This vulnerability enables an attacker to execute arbitrary client-side JavaScript within the context of another user's phpMyFAQ session.\n\n### Details\nDespite using PHP's `FILTER_VALIDATE_EMAIL` function, the email field does not adequately validate the content of the email "
+  },
+  {
+    "question_id": "q2",
+    "strategy": "no_context",
+    "k": 3,
+    "retrieved_documents": [
+      "doc_01",
+      "doc_05",
+      "doc_02"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.0,
+    "context_chars": 0,
+    "latency_ms": 0.0,
+    "answer": "I cannot answer because no context was provided."
+  },
+  {
+    "question_id": "q2",
+    "strategy": "basic_context",
+    "k": 3,
+    "retrieved_documents": [
+      "doc_01",
+      "doc_05",
+      "doc_02"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.8182,
+    "context_chars": 14116,
+    "latency_ms": 0.0028,
+    "answer": "phpMyFAQ stored Cross-site Scripting at user email Affected package: phpmyfaq/phpmyfaq. Fixed versions: 3.2.6. Details: ### Summary\nThe `email` field in phpMyFAQ's user control panel page is vulnerable to stored XSS attacks due to the inadequacy of PHP's `FILTER_VALIDATE_EMAIL` function, which only validates the email format, not its content. This vulnerability enables an attacker to execute arbitrary client-side JavaScript within the context of another user's phpMyFAQ session.\n\n### Details\nDespite using PHP's `FILTER_VALIDATE_EMAIL` function, the email field does not adequately validate the content of the email "
+  },
+  {
+    "question_id": "q2",
+    "strategy": "engineered_context",
+    "k": 3,
+    "retrieved_documents": [
+      "doc_01",
+      "doc_05",
+      "doc_02"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.8182,
+    "context_chars": 2261,
+    "latency_ms": 0.0057,
+    "answer": "phpMyFAQ stored Cross-site Scripting at user email Affected package: phpmyfaq/phpmyfaq. Fixed versions: 3.2.6. Details: ### Summary\nThe `email` field in phpMyFAQ's user control panel page is vulnerable to stored XSS attacks due to the inadequacy of PHP's `FILTER_VALIDATE_EMAIL` function, which only validates the email format, not its content. This vulnerability enables an attacker to execute arbitrary client-side JavaScript within the context of another user's phpMyFAQ session.\n\n### Details\nDespite using PHP's `FILTER_VALIDATE_EMAIL` function, the email field does not adequately validate the content of the email "
+  },
+  {
+    "question_id": "q2",
+    "strategy": "no_context",
+    "k": 5,
+    "retrieved_documents": [
+      "doc_01",
+      "doc_05",
+      "doc_02",
+      "doc_04",
+      "doc_03"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.0,
+    "context_chars": 0,
+    "latency_ms": 0.0,
+    "answer": "I cannot answer because no context was provided."
+  },
+  {
+    "question_id": "q2",
+    "strategy": "basic_context",
+    "k": 5,
+    "retrieved_documents": [
+      "doc_01",
+      "doc_05",
+      "doc_02",
+      "doc_04",
+      "doc_03"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.8182,
+    "context_chars": 20099,
+    "latency_ms": 0.0039,
+    "answer": "phpMyFAQ stored Cross-site Scripting at user email Affected package: phpmyfaq/phpmyfaq. Fixed versions: 3.2.6. Details: ### Summary\nThe `email` field in phpMyFAQ's user control panel page is vulnerable to stored XSS attacks due to the inadequacy of PHP's `FILTER_VALIDATE_EMAIL` function, which only validates the email format, not its content. This vulnerability enables an attacker to execute arbitrary client-side JavaScript within the context of another user's phpMyFAQ session.\n\n### Details\nDespite using PHP's `FILTER_VALIDATE_EMAIL` function, the email field does not adequately validate the content of the email "
+  },
+  {
+    "question_id": "q2",
+    "strategy": "engineered_context",
+    "k": 5,
+    "retrieved_documents": [
+      "doc_01",
+      "doc_05",
+      "doc_02",
+      "doc_04",
+      "doc_03"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.8182,
+    "context_chars": 3607,
+    "latency_ms": 0.0067,
+    "answer": "phpMyFAQ stored Cross-site Scripting at user email Affected package: phpmyfaq/phpmyfaq. Fixed versions: 3.2.6. Details: ### Summary\nThe `email` field in phpMyFAQ's user control panel page is vulnerable to stored XSS attacks due to the inadequacy of PHP's `FILTER_VALIDATE_EMAIL` function, which only validates the email format, not its content. This vulnerability enables an attacker to execute arbitrary client-side JavaScript within the context of another user's phpMyFAQ session.\n\n### Details\nDespite using PHP's `FILTER_VALIDATE_EMAIL` function, the email field does not adequately validate the content of the email "
+  },
+  {
+    "question_id": "q3",
+    "strategy": "no_context",
+    "k": 1,
+    "retrieved_documents": [
+      "doc_02"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.0,
+    "context_chars": 0,
+    "latency_ms": 0.0002,
+    "answer": "I cannot answer because no context was provided."
+  },
+  {
+    "question_id": "q3",
+    "strategy": "basic_context",
+    "k": 1,
+    "retrieved_documents": [
+      "doc_02"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.5,
+    "context_chars": 6839,
+    "latency_ms": 0.0057,
+    "answer": "Improper HTML sanitization in ZITADEL Affected package: github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel. Fixed versions: 2.41.15, 2.42.15, 2.43.9, 2.44.3, 2.45.1, 2.46.1, 2.47.4, 0.0.0-20240311065202-07ec2efa9dc6, 1.80.0-v2.20.0.20240311065202-07ec2efa9dc6. Details: ### Impact\n\nZITADEL uses Go templates to render the login UI.\n\nDue to a improper use of the `text/template` instead of the `html/template` package, the Login UI did not sanitize input parameters. An attacker could create a malicious link, where he injected code which would be rendered as part of the login screen.\nWhile it was possible to inject HTML including javascript, the execution of such scripts would be prevented by the Content Security Policy.\n\n### Patches\n\n2.x versions are fixed on >= [2"
+  },
+  {
+    "question_id": "q3",
+    "strategy": "engineered_context",
+    "k": 1,
+    "retrieved_documents": [
+      "doc_02"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.5,
+    "context_chars": 968,
+    "latency_ms": 0.0052,
+    "answer": "Improper HTML sanitization in ZITADEL Affected package: github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel. Fixed versions: 2.41.15, 2.42.15, 2.43.9, 2.44.3, 2.45.1, 2.46.1, 2.47.4, 0.0.0-20240311065202-07ec2efa9dc6, 1.80.0-v2.20.0.20240311065202-07ec2efa9dc6. Details: ### Impact\n\nZITADEL uses Go templates to render the login UI.\n\nDue to a improper use of the `text/template` instead of the `html/template` package, the Login UI did not sanitize input parameters. An attacker could create a malicious link, where he injected code which would be rendered as part of the login screen.\nWhile it was possible to inject HTML including javascript, the execution of such scripts would be prevented by the Content Security Policy.\n\n### Patches\n\n2.x versions are fixed on >= [2"
+  },
+  {
+    "question_id": "q3",
+    "strategy": "no_context",
+    "k": 2,
+    "retrieved_documents": [
+      "doc_02",
+      "doc_05"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.0,
+    "context_chars": 0,
+    "latency_ms": 0.0,
+    "answer": "I cannot answer because no context was provided."
+  },
+  {
+    "question_id": "q3",
+    "strategy": "basic_context",
+    "k": 2,
+    "retrieved_documents": [
+      "doc_02",
+      "doc_05"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.5,
+    "context_chars": 10660,
+    "latency_ms": 0.0031,
+    "answer": "Improper HTML sanitization in ZITADEL Affected package: github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel. Fixed versions: 2.41.15, 2.42.15, 2.43.9, 2.44.3, 2.45.1, 2.46.1, 2.47.4, 0.0.0-20240311065202-07ec2efa9dc6, 1.80.0-v2.20.0.20240311065202-07ec2efa9dc6. Details: ### Impact\n\nZITADEL uses Go templates to render the login UI.\n\nDue to a improper use of the `text/template` instead of the `html/template` package, the Login UI did not sanitize input parameters. An attacker could create a malicious link, where he injected code which would be rendered as part of the login screen.\nWhile it was possible to inject HTML including javascript, the execution of such scripts would be prevented by the Content Security Policy.\n\n### Patches\n\n2.x versions are fixed on >= [2"
+  },
+  {
+    "question_id": "q3",
+    "strategy": "engineered_context",
+    "k": 2,
+    "retrieved_documents": [
+      "doc_02",
+      "doc_05"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.5,
+    "context_chars": 1641,
+    "latency_ms": 0.0058,
+    "answer": "Improper HTML sanitization in ZITADEL Affected package: github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel. Fixed versions: 2.41.15, 2.42.15, 2.43.9, 2.44.3, 2.45.1, 2.46.1, 2.47.4, 0.0.0-20240311065202-07ec2efa9dc6, 1.80.0-v2.20.0.20240311065202-07ec2efa9dc6. Details: ### Impact\n\nZITADEL uses Go templates to render the login UI.\n\nDue to a improper use of the `text/template` instead of the `html/template` package, the Login UI did not sanitize input parameters. An attacker could create a malicious link, where he injected code which would be rendered as part of the login screen.\nWhile it was possible to inject HTML including javascript, the execution of such scripts would be prevented by the Content Security Policy.\n\n### Patches\n\n2.x versions are fixed on >= [2"
+  },
+  {
+    "question_id": "q3",
+    "strategy": "no_context",
+    "k": 3,
+    "retrieved_documents": [
+      "doc_02",
+      "doc_05",
+      "doc_03"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.0,
+    "context_chars": 0,
+    "latency_ms": 0.0001,
+    "answer": "I cannot answer because no context was provided."
+  },
+  {
+    "question_id": "q3",
+    "strategy": "basic_context",
+    "k": 3,
+    "retrieved_documents": [
+      "doc_02",
+      "doc_05",
+      "doc_03"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.5,
+    "context_chars": 13660,
+    "latency_ms": 0.0033,
+    "answer": "Improper HTML sanitization in ZITADEL Affected package: github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel. Fixed versions: 2.41.15, 2.42.15, 2.43.9, 2.44.3, 2.45.1, 2.46.1, 2.47.4, 0.0.0-20240311065202-07ec2efa9dc6, 1.80.0-v2.20.0.20240311065202-07ec2efa9dc6. Details: ### Impact\n\nZITADEL uses Go templates to render the login UI.\n\nDue to a improper use of the `text/template` instead of the `html/template` package, the Login UI did not sanitize input parameters. An attacker could create a malicious link, where he injected code which would be rendered as part of the login screen.\nWhile it was possible to inject HTML including javascript, the execution of such scripts would be prevented by the Content Security Policy.\n\n### Patches\n\n2.x versions are fixed on >= [2"
+  },
+  {
+    "question_id": "q3",
+    "strategy": "engineered_context",
+    "k": 3,
+    "retrieved_documents": [
+      "doc_02",
+      "doc_05",
+      "doc_03"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.5,
+    "context_chars": 2294,
+    "latency_ms": 0.0059,
+    "answer": "Improper HTML sanitization in ZITADEL Affected package: github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel. Fixed versions: 2.41.15, 2.42.15, 2.43.9, 2.44.3, 2.45.1, 2.46.1, 2.47.4, 0.0.0-20240311065202-07ec2efa9dc6, 1.80.0-v2.20.0.20240311065202-07ec2efa9dc6. Details: ### Impact\n\nZITADEL uses Go templates to render the login UI.\n\nDue to a improper use of the `text/template` instead of the `html/template` package, the Login UI did not sanitize input parameters. An attacker could create a malicious link, where he injected code which would be rendered as part of the login screen.\nWhile it was possible to inject HTML including javascript, the execution of such scripts would be prevented by the Content Security Policy.\n\n### Patches\n\n2.x versions are fixed on >= [2"
+  },
+  {
+    "question_id": "q3",
+    "strategy": "no_context",
+    "k": 5,
+    "retrieved_documents": [
+      "doc_02",
+      "doc_05",
+      "doc_03",
+      "doc_01",
+      "doc_04"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.0,
+    "context_chars": 0,
+    "latency_ms": 0.0,
+    "answer": "I cannot answer because no context was provided."
+  },
+  {
+    "question_id": "q3",
+    "strategy": "basic_context",
+    "k": 5,
+    "retrieved_documents": [
+      "doc_02",
+      "doc_05",
+      "doc_03",
+      "doc_01",
+      "doc_04"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.5,
+    "context_chars": 20099,
+    "latency_ms": 0.0053,
+    "answer": "Improper HTML sanitization in ZITADEL Affected package: github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel. Fixed versions: 2.41.15, 2.42.15, 2.43.9, 2.44.3, 2.45.1, 2.46.1, 2.47.4, 0.0.0-20240311065202-07ec2efa9dc6, 1.80.0-v2.20.0.20240311065202-07ec2efa9dc6. Details: ### Impact\n\nZITADEL uses Go templates to render the login UI.\n\nDue to a improper use of the `text/template` instead of the `html/template` package, the Login UI did not sanitize input parameters. An attacker could create a malicious link, where he injected code which would be rendered as part of the login screen.\nWhile it was possible to inject HTML including javascript, the execution of such scripts would be prevented by the Content Security Policy.\n\n### Patches\n\n2.x versions are fixed on >= [2"
+  },
+  {
+    "question_id": "q3",
+    "strategy": "engineered_context",
+    "k": 5,
+    "retrieved_documents": [
+      "doc_02",
+      "doc_05",
+      "doc_03",
+      "doc_01",
+      "doc_04"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.5,
+    "context_chars": 3607,
+    "latency_ms": 0.0081,
+    "answer": "Improper HTML sanitization in ZITADEL Affected package: github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel. Fixed versions: 2.41.15, 2.42.15, 2.43.9, 2.44.3, 2.45.1, 2.46.1, 2.47.4, 0.0.0-20240311065202-07ec2efa9dc6, 1.80.0-v2.20.0.20240311065202-07ec2efa9dc6. Details: ### Impact\n\nZITADEL uses Go templates to render the login UI.\n\nDue to a improper use of the `text/template` instead of the `html/template` package, the Login UI did not sanitize input parameters. An attacker could create a malicious link, where he injected code which would be rendered as part of the login screen.\nWhile it was possible to inject HTML including javascript, the execution of such scripts would be prevented by the Content Security Policy.\n\n### Patches\n\n2.x versions are fixed on >= [2"
+  },
+  {
+    "question_id": "q4",
+    "strategy": "no_context",
+    "k": 1,
+    "retrieved_documents": [
+      "doc_02"
+    ],
+    "retrieval_hit": 0,
+    "answer_overlap": 0.0,
+    "context_chars": 0,
+    "latency_ms": 0.0,
+    "answer": "I cannot answer because no context was provided."
+  },
+  {
+    "question_id": "q4",
+    "strategy": "basic_context",
+    "k": 1,
+    "retrieved_documents": [
+      "doc_02"
+    ],
+    "retrieval_hit": 0,
+    "answer_overlap": 0.15,
+    "context_chars": 6839,
+    "latency_ms": 0.0048,
+    "answer": "Improper HTML sanitization in ZITADEL Affected package: github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel. Fixed versions: 2.41.15, 2.42.15, 2.43.9, 2.44.3, 2.45.1, 2.46.1, 2.47.4, 0.0.0-20240311065202-07ec2efa9dc6, 1.80.0-v2.20.0.20240311065202-07ec2efa9dc6. Details: ### Impact\n\nZITADEL uses Go templates to render the login UI.\n\nDue to a improper use of the `text/template` instead of the `html/template` package, the Login UI did not sanitize input parameters. An attacker could create a malicious link, where he injected code which would be rendered as part of the login screen.\nWhile it was possible to inject HTML including javascript, the execution of such scripts would be prevented by the Content Security Policy.\n\n### Patches\n\n2.x versions are fixed on >= [2"
+  },
+  {
+    "question_id": "q4",
+    "strategy": "engineered_context",
+    "k": 1,
+    "retrieved_documents": [
+      "doc_02"
+    ],
+    "retrieval_hit": 0,
+    "answer_overlap": 0.15,
+    "context_chars": 968,
+    "latency_ms": 0.0052,
+    "answer": "Improper HTML sanitization in ZITADEL Affected package: github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel. Fixed versions: 2.41.15, 2.42.15, 2.43.9, 2.44.3, 2.45.1, 2.46.1, 2.47.4, 0.0.0-20240311065202-07ec2efa9dc6, 1.80.0-v2.20.0.20240311065202-07ec2efa9dc6. Details: ### Impact\n\nZITADEL uses Go templates to render the login UI.\n\nDue to a improper use of the `text/template` instead of the `html/template` package, the Login UI did not sanitize input parameters. An attacker could create a malicious link, where he injected code which would be rendered as part of the login screen.\nWhile it was possible to inject HTML including javascript, the execution of such scripts would be prevented by the Content Security Policy.\n\n### Patches\n\n2.x versions are fixed on >= [2"
+  },
+  {
+    "question_id": "q4",
+    "strategy": "no_context",
+    "k": 2,
+    "retrieved_documents": [
+      "doc_02",
+      "doc_03"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.0,
+    "context_chars": 0,
+    "latency_ms": 0.0,
+    "answer": "I cannot answer because no context was provided."
+  },
+  {
+    "question_id": "q4",
+    "strategy": "basic_context",
+    "k": 2,
+    "retrieved_documents": [
+      "doc_02",
+      "doc_03"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.15,
+    "context_chars": 9839,
+    "latency_ms": 0.0032,
+    "answer": "Improper HTML sanitization in ZITADEL Affected package: github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel. Fixed versions: 2.41.15, 2.42.15, 2.43.9, 2.44.3, 2.45.1, 2.46.1, 2.47.4, 0.0.0-20240311065202-07ec2efa9dc6, 1.80.0-v2.20.0.20240311065202-07ec2efa9dc6. Details: ### Impact\n\nZITADEL uses Go templates to render the login UI.\n\nDue to a improper use of the `text/template` instead of the `html/template` package, the Login UI did not sanitize input parameters. An attacker could create a malicious link, where he injected code which would be rendered as part of the login screen.\nWhile it was possible to inject HTML including javascript, the execution of such scripts would be prevented by the Content Security Policy.\n\n### Patches\n\n2.x versions are fixed on >= [2"
+  },
+  {
+    "question_id": "q4",
+    "strategy": "engineered_context",
+    "k": 2,
+    "retrieved_documents": [
+      "doc_02",
+      "doc_03"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.15,
+    "context_chars": 1621,
+    "latency_ms": 0.0055,
+    "answer": "Improper HTML sanitization in ZITADEL Affected package: github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel. Fixed versions: 2.41.15, 2.42.15, 2.43.9, 2.44.3, 2.45.1, 2.46.1, 2.47.4, 0.0.0-20240311065202-07ec2efa9dc6, 1.80.0-v2.20.0.20240311065202-07ec2efa9dc6. Details: ### Impact\n\nZITADEL uses Go templates to render the login UI.\n\nDue to a improper use of the `text/template` instead of the `html/template` package, the Login UI did not sanitize input parameters. An attacker could create a malicious link, where he injected code which would be rendered as part of the login screen.\nWhile it was possible to inject HTML including javascript, the execution of such scripts would be prevented by the Content Security Policy.\n\n### Patches\n\n2.x versions are fixed on >= [2"
+  },
+  {
+    "question_id": "q4",
+    "strategy": "no_context",
+    "k": 3,
+    "retrieved_documents": [
+      "doc_02",
+      "doc_03",
+      "doc_04"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.0,
+    "context_chars": 0,
+    "latency_ms": 0.0001,
+    "answer": "I cannot answer because no context was provided."
+  },
+  {
+    "question_id": "q4",
+    "strategy": "basic_context",
+    "k": 3,
+    "retrieved_documents": [
+      "doc_02",
+      "doc_03",
+      "doc_04"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.15,
+    "context_chars": 12822,
+    "latency_ms": 0.0023,
+    "answer": "Improper HTML sanitization in ZITADEL Affected package: github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel. Fixed versions: 2.41.15, 2.42.15, 2.43.9, 2.44.3, 2.45.1, 2.46.1, 2.47.4, 0.0.0-20240311065202-07ec2efa9dc6, 1.80.0-v2.20.0.20240311065202-07ec2efa9dc6. Details: ### Impact\n\nZITADEL uses Go templates to render the login UI.\n\nDue to a improper use of the `text/template` instead of the `html/template` package, the Login UI did not sanitize input parameters. An attacker could create a malicious link, where he injected code which would be rendered as part of the login screen.\nWhile it was possible to inject HTML including javascript, the execution of such scripts would be prevented by the Content Security Policy.\n\n### Patches\n\n2.x versions are fixed on >= [2"
+  },
+  {
+    "question_id": "q4",
+    "strategy": "engineered_context",
+    "k": 3,
+    "retrieved_documents": [
+      "doc_02",
+      "doc_03",
+      "doc_04"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.15,
+    "context_chars": 2314,
+    "latency_ms": 0.0057,
+    "answer": "Improper HTML sanitization in ZITADEL Affected package: github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel. Fixed versions: 2.41.15, 2.42.15, 2.43.9, 2.44.3, 2.45.1, 2.46.1, 2.47.4, 0.0.0-20240311065202-07ec2efa9dc6, 1.80.0-v2.20.0.20240311065202-07ec2efa9dc6. Details: ### Impact\n\nZITADEL uses Go templates to render the login UI.\n\nDue to a improper use of the `text/template` instead of the `html/template` package, the Login UI did not sanitize input parameters. An attacker could create a malicious link, where he injected code which would be rendered as part of the login screen.\nWhile it was possible to inject HTML including javascript, the execution of such scripts would be prevented by the Content Security Policy.\n\n### Patches\n\n2.x versions are fixed on >= [2"
+  },
+  {
+    "question_id": "q4",
+    "strategy": "no_context",
+    "k": 5,
+    "retrieved_documents": [
+      "doc_02",
+      "doc_03",
+      "doc_04",
+      "doc_05",
+      "doc_01"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.0,
+    "context_chars": 0,
+    "latency_ms": 0.0001,
+    "answer": "I cannot answer because no context was provided."
+  },
+  {
+    "question_id": "q4",
+    "strategy": "basic_context",
+    "k": 5,
+    "retrieved_documents": [
+      "doc_02",
+      "doc_03",
+      "doc_04",
+      "doc_05",
+      "doc_01"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.15,
+    "context_chars": 20099,
+    "latency_ms": 0.0065,
+    "answer": "Improper HTML sanitization in ZITADEL Affected package: github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel. Fixed versions: 2.41.15, 2.42.15, 2.43.9, 2.44.3, 2.45.1, 2.46.1, 2.47.4, 0.0.0-20240311065202-07ec2efa9dc6, 1.80.0-v2.20.0.20240311065202-07ec2efa9dc6. Details: ### Impact\n\nZITADEL uses Go templates to render the login UI.\n\nDue to a improper use of the `text/template` instead of the `html/template` package, the Login UI did not sanitize input parameters. An attacker could create a malicious link, where he injected code which would be rendered as part of the login screen.\nWhile it was possible to inject HTML including javascript, the execution of such scripts would be prevented by the Content Security Policy.\n\n### Patches\n\n2.x versions are fixed on >= [2"
+  },
+  {
+    "question_id": "q4",
+    "strategy": "engineered_context",
+    "k": 5,
+    "retrieved_documents": [
+      "doc_02",
+      "doc_03",
+      "doc_04",
+      "doc_05",
+      "doc_01"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.15,
+    "context_chars": 3607,
+    "latency_ms": 0.0078,
+    "answer": "Improper HTML sanitization in ZITADEL Affected package: github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel, github.com/zitadel/zitadel. Fixed versions: 2.41.15, 2.42.15, 2.43.9, 2.44.3, 2.45.1, 2.46.1, 2.47.4, 0.0.0-20240311065202-07ec2efa9dc6, 1.80.0-v2.20.0.20240311065202-07ec2efa9dc6. Details: ### Impact\n\nZITADEL uses Go templates to render the login UI.\n\nDue to a improper use of the `text/template` instead of the `html/template` package, the Login UI did not sanitize input parameters. An attacker could create a malicious link, where he injected code which would be rendered as part of the login screen.\nWhile it was possible to inject HTML including javascript, the execution of such scripts would be prevented by the Content Security Policy.\n\n### Patches\n\n2.x versions are fixed on >= [2"
+  },
+  {
+    "question_id": "q5",
+    "strategy": "no_context",
+    "k": 1,
+    "retrieved_documents": [
+      "doc_04"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.0,
+    "context_chars": 0,
+    "latency_ms": 0.0001,
+    "answer": "I cannot answer because no context was provided."
+  },
+  {
+    "question_id": "q5",
+    "strategy": "basic_context",
+    "k": 1,
+    "retrieved_documents": [
+      "doc_04"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.6364,
+    "context_chars": 2981,
+    "latency_ms": 0.0032,
+    "answer": "CoreWCF NetFraming based services can leave connections open when they should be closed Affected package: CoreWCF.NetFramingBase, CoreWCF.NetFramingBase. Fixed versions: 1.4.2, 1.5.2. Details: ### Impact\nIf you have a NetFraming based CoreWCF service, extra system resources could be consumed by connections being left established instead of closing or aborting them. There are two scenarios when this can happen. When a client established a connection to the service and sends no data, the service will wait indefinitely for the client to initiate the NetFraming session handshake. Additionally, once a client has established a session, if the client doesn't send any requests for the period "
+  },
+  {
+    "question_id": "q5",
+    "strategy": "engineered_context",
+    "k": 1,
+    "retrieved_documents": [
+      "doc_04"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.6364,
+    "context_chars": 691,
+    "latency_ms": 0.0025,
+    "answer": "CoreWCF NetFraming based services can leave connections open when they should be closed Affected package: CoreWCF.NetFramingBase, CoreWCF.NetFramingBase. Fixed versions: 1.4.2, 1.5.2. Details: ### Impact\nIf you have a NetFraming based CoreWCF service, extra system resources could be consumed by connections being left established instead of closing or aborting them. There are two scenarios when this can happen. When a client established a connection to the service and sends no data, the service will wait indefinitely for the client to initiate the NetFraming session handshake. Additionally, once a client has established a session, if the client doesn't send any requests for the period "
+  },
+  {
+    "question_id": "q5",
+    "strategy": "no_context",
+    "k": 2,
+    "retrieved_documents": [
+      "doc_04",
+      "doc_02"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.0,
+    "context_chars": 0,
+    "latency_ms": 0.0,
+    "answer": "I cannot answer because no context was provided."
+  },
+  {
+    "question_id": "q5",
+    "strategy": "basic_context",
+    "k": 2,
+    "retrieved_documents": [
+      "doc_04",
+      "doc_02"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.6364,
+    "context_chars": 9822,
+    "latency_ms": 0.0019,
+    "answer": "CoreWCF NetFraming based services can leave connections open when they should be closed Affected package: CoreWCF.NetFramingBase, CoreWCF.NetFramingBase. Fixed versions: 1.4.2, 1.5.2. Details: ### Impact\nIf you have a NetFraming based CoreWCF service, extra system resources could be consumed by connections being left established instead of closing or aborting them. There are two scenarios when this can happen. When a client established a connection to the service and sends no data, the service will wait indefinitely for the client to initiate the NetFraming session handshake. Additionally, once a client has established a session, if the client doesn't send any requests for the period "
+  },
+  {
+    "question_id": "q5",
+    "strategy": "engineered_context",
+    "k": 2,
+    "retrieved_documents": [
+      "doc_04",
+      "doc_02"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.6364,
+    "context_chars": 1661,
+    "latency_ms": 0.0055,
+    "answer": "CoreWCF NetFraming based services can leave connections open when they should be closed Affected package: CoreWCF.NetFramingBase, CoreWCF.NetFramingBase. Fixed versions: 1.4.2, 1.5.2. Details: ### Impact\nIf you have a NetFraming based CoreWCF service, extra system resources could be consumed by connections being left established instead of closing or aborting them. There are two scenarios when this can happen. When a client established a connection to the service and sends no data, the service will wait indefinitely for the client to initiate the NetFraming session handshake. Additionally, once a client has established a session, if the client doesn't send any requests for the period "
+  },
+  {
+    "question_id": "q5",
+    "strategy": "no_context",
+    "k": 3,
+    "retrieved_documents": [
+      "doc_04",
+      "doc_02",
+      "doc_05"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.0,
+    "context_chars": 0,
+    "latency_ms": 0.0,
+    "answer": "I cannot answer because no context was provided."
+  },
+  {
+    "question_id": "q5",
+    "strategy": "basic_context",
+    "k": 3,
+    "retrieved_documents": [
+      "doc_04",
+      "doc_02",
+      "doc_05"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.6364,
+    "context_chars": 13643,
+    "latency_ms": 0.0016,
+    "answer": "CoreWCF NetFraming based services can leave connections open when they should be closed Affected package: CoreWCF.NetFramingBase, CoreWCF.NetFramingBase. Fixed versions: 1.4.2, 1.5.2. Details: ### Impact\nIf you have a NetFraming based CoreWCF service, extra system resources could be consumed by connections being left established instead of closing or aborting them. There are two scenarios when this can happen. When a client established a connection to the service and sends no data, the service will wait indefinitely for the client to initiate the NetFraming session handshake. Additionally, once a client has established a session, if the client doesn't send any requests for the period "
+  },
+  {
+    "question_id": "q5",
+    "strategy": "engineered_context",
+    "k": 3,
+    "retrieved_documents": [
+      "doc_04",
+      "doc_02",
+      "doc_05"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.6364,
+    "context_chars": 2334,
+    "latency_ms": 0.0048,
+    "answer": "CoreWCF NetFraming based services can leave connections open when they should be closed Affected package: CoreWCF.NetFramingBase, CoreWCF.NetFramingBase. Fixed versions: 1.4.2, 1.5.2. Details: ### Impact\nIf you have a NetFraming based CoreWCF service, extra system resources could be consumed by connections being left established instead of closing or aborting them. There are two scenarios when this can happen. When a client established a connection to the service and sends no data, the service will wait indefinitely for the client to initiate the NetFraming session handshake. Additionally, once a client has established a session, if the client doesn't send any requests for the period "
+  },
+  {
+    "question_id": "q5",
+    "strategy": "no_context",
+    "k": 5,
+    "retrieved_documents": [
+      "doc_04",
+      "doc_02",
+      "doc_05",
+      "doc_03",
+      "doc_01"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.0,
+    "context_chars": 0,
+    "latency_ms": 0.0,
+    "answer": "I cannot answer because no context was provided."
+  },
+  {
+    "question_id": "q5",
+    "strategy": "basic_context",
+    "k": 5,
+    "retrieved_documents": [
+      "doc_04",
+      "doc_02",
+      "doc_05",
+      "doc_03",
+      "doc_01"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.6364,
+    "context_chars": 20099,
+    "latency_ms": 0.0039,
+    "answer": "CoreWCF NetFraming based services can leave connections open when they should be closed Affected package: CoreWCF.NetFramingBase, CoreWCF.NetFramingBase. Fixed versions: 1.4.2, 1.5.2. Details: ### Impact\nIf you have a NetFraming based CoreWCF service, extra system resources could be consumed by connections being left established instead of closing or aborting them. There are two scenarios when this can happen. When a client established a connection to the service and sends no data, the service will wait indefinitely for the client to initiate the NetFraming session handshake. Additionally, once a client has established a session, if the client doesn't send any requests for the period "
+  },
+  {
+    "question_id": "q5",
+    "strategy": "engineered_context",
+    "k": 5,
+    "retrieved_documents": [
+      "doc_04",
+      "doc_02",
+      "doc_05",
+      "doc_03",
+      "doc_01"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.6364,
+    "context_chars": 3607,
+    "latency_ms": 0.0099,
+    "answer": "CoreWCF NetFraming based services can leave connections open when they should be closed Affected package: CoreWCF.NetFramingBase, CoreWCF.NetFramingBase. Fixed versions: 1.4.2, 1.5.2. Details: ### Impact\nIf you have a NetFraming based CoreWCF service, extra system resources could be consumed by connections being left established instead of closing or aborting them. There are two scenarios when this can happen. When a client established a connection to the service and sends no data, the service will wait indefinitely for the client to initiate the NetFraming session handshake. Additionally, once a client has established a session, if the client doesn't send any requests for the period "
+  },
+  {
+    "question_id": "q6",
+    "strategy": "no_context",
+    "k": 1,
+    "retrieved_documents": [
+      "doc_05"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.0,
+    "context_chars": 0,
+    "latency_ms": 0.0001,
+    "answer": "I cannot answer because no context was provided."
+  },
+  {
+    "question_id": "q6",
+    "strategy": "basic_context",
+    "k": 1,
+    "retrieved_documents": [
+      "doc_05"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.4667,
+    "context_chars": 3819,
+    "latency_ms": 0.0021,
+    "answer": "CasaOS Improper Restriction of Excessive Authentication Attempts vulnerability Affected package: github.com/IceWhaleTech/CasaOS-UserService. Fixed versions: 0.4.7. Details: ### Summary\nHere it is observed that the CasaOS doesn't defend against password brute force attacks, which leads to having full access to the server.\n\n### Details\nThe web application lacks control over the login attempts i.e. why attacker can use a password brute force attack to find and get full access over the.\n\n### PoC\n1. Capture login request in proxy tool like Burp Suite and select password field.\n\n![1](https://user-images.githubusercontent.com/63414468/297156515-0272bfd7-f386-4c22-b3bd-c4d"
+  },
+  {
+    "question_id": "q6",
+    "strategy": "engineered_context",
+    "k": 1,
+    "retrieved_documents": [
+      "doc_05"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.4667,
+    "context_chars": 671,
+    "latency_ms": 0.002,
+    "answer": "CasaOS Improper Restriction of Excessive Authentication Attempts vulnerability Affected package: github.com/IceWhaleTech/CasaOS-UserService. Fixed versions: 0.4.7. Details: ### Summary\nHere it is observed that the CasaOS doesn't defend against password brute force attacks, which leads to having full access to the server.\n\n### Details\nThe web application lacks control over the login attempts i.e. why attacker can use a password brute force attack to find and get full access over the.\n\n### PoC\n1. Capture login request in proxy tool like Burp Suite and select password field.\n\n![1](https://user-images.githubusercontent.com/63414468/297156515-0272bfd7-f386-4c22-b3bd-c4d"
+  },
+  {
+    "question_id": "q6",
+    "strategy": "no_context",
+    "k": 2,
+    "retrieved_documents": [
+      "doc_05",
+      "doc_02"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.0,
+    "context_chars": 0,
+    "latency_ms": 0.0,
+    "answer": "I cannot answer because no context was provided."
+  },
+  {
+    "question_id": "q6",
+    "strategy": "basic_context",
+    "k": 2,
+    "retrieved_documents": [
+      "doc_05",
+      "doc_02"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.4667,
+    "context_chars": 10660,
+    "latency_ms": 0.0017,
+    "answer": "CasaOS Improper Restriction of Excessive Authentication Attempts vulnerability Affected package: github.com/IceWhaleTech/CasaOS-UserService. Fixed versions: 0.4.7. Details: ### Summary\nHere it is observed that the CasaOS doesn't defend against password brute force attacks, which leads to having full access to the server.\n\n### Details\nThe web application lacks control over the login attempts i.e. why attacker can use a password brute force attack to find and get full access over the.\n\n### PoC\n1. Capture login request in proxy tool like Burp Suite and select password field.\n\n![1](https://user-images.githubusercontent.com/63414468/297156515-0272bfd7-f386-4c22-b3bd-c4d"
+  },
+  {
+    "question_id": "q6",
+    "strategy": "engineered_context",
+    "k": 2,
+    "retrieved_documents": [
+      "doc_05",
+      "doc_02"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.4667,
+    "context_chars": 1641,
+    "latency_ms": 0.008,
+    "answer": "CasaOS Improper Restriction of Excessive Authentication Attempts vulnerability Affected package: github.com/IceWhaleTech/CasaOS-UserService. Fixed versions: 0.4.7. Details: ### Summary\nHere it is observed that the CasaOS doesn't defend against password brute force attacks, which leads to having full access to the server.\n\n### Details\nThe web application lacks control over the login attempts i.e. why attacker can use a password brute force attack to find and get full access over the.\n\n### PoC\n1. Capture login request in proxy tool like Burp Suite and select password field.\n\n![1](https://user-images.githubusercontent.com/63414468/297156515-0272bfd7-f386-4c22-b3bd-c4d"
+  },
+  {
+    "question_id": "q6",
+    "strategy": "no_context",
+    "k": 3,
+    "retrieved_documents": [
+      "doc_05",
+      "doc_02",
+      "doc_01"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.0,
+    "context_chars": 0,
+    "latency_ms": 0.0,
+    "answer": "I cannot answer because no context was provided."
+  },
+  {
+    "question_id": "q6",
+    "strategy": "basic_context",
+    "k": 3,
+    "retrieved_documents": [
+      "doc_05",
+      "doc_02",
+      "doc_01"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.4667,
+    "context_chars": 14116,
+    "latency_ms": 0.003,
+    "answer": "CasaOS Improper Restriction of Excessive Authentication Attempts vulnerability Affected package: github.com/IceWhaleTech/CasaOS-UserService. Fixed versions: 0.4.7. Details: ### Summary\nHere it is observed that the CasaOS doesn't defend against password brute force attacks, which leads to having full access to the server.\n\n### Details\nThe web application lacks control over the login attempts i.e. why attacker can use a password brute force attack to find and get full access over the.\n\n### PoC\n1. Capture login request in proxy tool like Burp Suite and select password field.\n\n![1](https://user-images.githubusercontent.com/63414468/297156515-0272bfd7-f386-4c22-b3bd-c4d"
+  },
+  {
+    "question_id": "q6",
+    "strategy": "engineered_context",
+    "k": 3,
+    "retrieved_documents": [
+      "doc_05",
+      "doc_02",
+      "doc_01"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.4667,
+    "context_chars": 2261,
+    "latency_ms": 0.0046,
+    "answer": "CasaOS Improper Restriction of Excessive Authentication Attempts vulnerability Affected package: github.com/IceWhaleTech/CasaOS-UserService. Fixed versions: 0.4.7. Details: ### Summary\nHere it is observed that the CasaOS doesn't defend against password brute force attacks, which leads to having full access to the server.\n\n### Details\nThe web application lacks control over the login attempts i.e. why attacker can use a password brute force attack to find and get full access over the.\n\n### PoC\n1. Capture login request in proxy tool like Burp Suite and select password field.\n\n![1](https://user-images.githubusercontent.com/63414468/297156515-0272bfd7-f386-4c22-b3bd-c4d"
+  },
+  {
+    "question_id": "q6",
+    "strategy": "no_context",
+    "k": 5,
+    "retrieved_documents": [
+      "doc_05",
+      "doc_02",
+      "doc_01",
+      "doc_04",
+      "doc_03"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.0,
+    "context_chars": 0,
+    "latency_ms": 0.0,
+    "answer": "I cannot answer because no context was provided."
+  },
+  {
+    "question_id": "q6",
+    "strategy": "basic_context",
+    "k": 5,
+    "retrieved_documents": [
+      "doc_05",
+      "doc_02",
+      "doc_01",
+      "doc_04",
+      "doc_03"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.4667,
+    "context_chars": 20099,
+    "latency_ms": 0.0035,
+    "answer": "CasaOS Improper Restriction of Excessive Authentication Attempts vulnerability Affected package: github.com/IceWhaleTech/CasaOS-UserService. Fixed versions: 0.4.7. Details: ### Summary\nHere it is observed that the CasaOS doesn't defend against password brute force attacks, which leads to having full access to the server.\n\n### Details\nThe web application lacks control over the login attempts i.e. why attacker can use a password brute force attack to find and get full access over the.\n\n### PoC\n1. Capture login request in proxy tool like Burp Suite and select password field.\n\n![1](https://user-images.githubusercontent.com/63414468/297156515-0272bfd7-f386-4c22-b3bd-c4d"
+  },
+  {
+    "question_id": "q6",
+    "strategy": "engineered_context",
+    "k": 5,
+    "retrieved_documents": [
+      "doc_05",
+      "doc_02",
+      "doc_01",
+      "doc_04",
+      "doc_03"
+    ],
+    "retrieval_hit": 1,
+    "answer_overlap": 0.4667,
+    "context_chars": 3607,
+    "latency_ms": 0.0065,
+    "answer": "CasaOS Improper Restriction of Excessive Authentication Attempts vulnerability Affected package: github.com/IceWhaleTech/CasaOS-UserService. Fixed versions: 0.4.7. Details: ### Summary\nHere it is observed that the CasaOS doesn't defend against password brute force attacks, which leads to having full access to the server.\n\n### Details\nThe web application lacks control over the login attempts i.e. why attacker can use a password brute force attack to find and get full access over the.\n\n### PoC\n1. Capture login request in proxy tool like Burp Suite and select password field.\n\n![1](https://user-images.githubusercontent.com/63414468/297156515-0272bfd7-f386-4c22-b3bd-c4d"
+  }
+]

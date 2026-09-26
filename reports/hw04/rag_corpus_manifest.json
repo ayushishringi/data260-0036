@@ -1,0 +1,36 @@
+{
+  "source_file": "corpus/github_reviewed_advisories_snapshot.txt",
+  "document_count": 5,
+  "documents": [
+    {
+      "document_id": "doc_01",
+      "filename": "rag_docs/doc_01.txt",
+      "bytes": 3456,
+      "sha256": "1ca9688d856b90dcc11583501c58771a0374e2503a7d3e1891c3ca12dffdab3a"
+    },
+    {
+      "document_id": "doc_02",
+      "filename": "rag_docs/doc_02.txt",
+      "bytes": 6839,
+      "sha256": "9002b99776a6fcea3f9ff276d0af5cbb3f8a4804257d515889ea102488aa2d43"
+    },
+    {
+      "document_id": "doc_03",
+      "filename": "rag_docs/doc_03.txt",
+      "bytes": 2998,
+      "sha256": "2c1663bc171d8762b93ab3d55bdbc013a169572efb5cc1a00fa3f22eb545c89a"
+    },
+    {
+      "document_id": "doc_04",
+      "filename": "rag_docs/doc_04.txt",
+      "bytes": 2981,
+      "sha256": "ee07aadb619b0f55a99ef3251c0ac753e1c5b671ae3b26dfab7fec1716718472"
+    },
+    {
+      "document_id": "doc_05",
+      "filename": "rag_docs/doc_05.txt",
+      "bytes": 3819,
+      "sha256": "c94ae9970f00da900c899b1249c47d620b020211b36a35e601e059e412af08de"
+    }
+  ]
+}
