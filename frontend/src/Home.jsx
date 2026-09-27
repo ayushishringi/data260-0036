@@ -18,7 +18,9 @@ function Home({ user, onLogout }) {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.detail || "Could not load reports.");
+        throw new Error(
+          data.detail || "Could not load reports."
+        );
       }
 
       setReports(data);
@@ -39,42 +41,6 @@ function Home({ user, onLogout }) {
 
     onLogout();
     navigate("/login");
-  }
-
-  async function handleDelete(reportId) {
-    const confirmed = window.confirm(
-      "Are you sure you want to delete this report?"
-    );
-
-    if (!confirmed) {
-      return;
-    }
-
-    try {
-      const response = await fetch(
-        `${API_BASE}/api/reports/${reportId}`,
-        {
-          method: "DELETE",
-          credentials: "include",
-        }
-      );
-
-      if (!response.ok) {
-        const data = await response.json().catch(() => ({}));
-
-        throw new Error(
-          data.detail || "Could not delete report."
-        );
-      }
-
-      setReports((previousReports) =>
-        previousReports.filter(
-          (report) => report.id !== reportId
-        )
-      );
-    } catch (err) {
-      setError(err.message);
-    }
   }
 
   const visibleReports = reports.filter(
@@ -99,20 +65,30 @@ function Home({ user, onLogout }) {
 
       <hr />
 
-      <Link className="add-report-button" to="/create">
+      <Link
+        className="add-report-button"
+        to="/create"
+      >
         Add vulnerability report
       </Link>
 
       <h2>Current reports</h2>
 
-      {error && <p className="error">{error}</p>}
+      {error && (
+        <p className="error">
+          {error}
+        </p>
+      )}
 
       {visibleReports.length === 0 && !error && (
         <p>No vulnerability reports found.</p>
       )}
 
       {visibleReports.map((report) => (
-        <article className="report-card" key={report.id}>
+        <article
+          className="report-card"
+          key={report.id}
+        >
           <h3>
             {report.packageName} — ID {report.id}
           </h3>
@@ -135,13 +111,12 @@ function Home({ user, onLogout }) {
               Update
             </Link>
 
-            <button
+            <Link
               className="action-button delete-button"
-              type="button"
-              onClick={() => handleDelete(report.id)}
+              to={`/delete/${report.id}`}
             >
               Delete
-            </button>
+            </Link>
           </div>
         </article>
       ))}

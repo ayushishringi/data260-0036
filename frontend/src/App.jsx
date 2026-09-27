@@ -10,6 +10,7 @@ import CreateRecord from "./CreateRecord";
 import Home from "./Home";
 import Login from "./Login";
 import UpdateRecord from "./UpdateRecord";
+import DeleteRecord from "./DeleteRecord";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -59,6 +60,17 @@ function App() {
           element={
             user ? (
               <UpdateRecord />
+            ) : (
+              <Navigate to="/login" replace />
+            )
+          }
+        />
+
+        <Route
+          path="/delete/:id"
+          element={
+            user ? (
+              <DeleteRecord />
             ) : (
               <Navigate to="/login" replace />
             )
