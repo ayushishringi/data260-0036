@@ -5,6 +5,7 @@ const API_BASE = "http://127.0.0.1:8036";
 
 function Home({ user, onLogout }) {
   const navigate = useNavigate();
+
   const [reports, setReports] = useState([]);
   const [error, setError] = useState("");
 
@@ -41,47 +42,57 @@ function Home({ user, onLogout }) {
   }
 
   async function handleDelete(reportId) {
-  const confirmed = window.confirm(
-    "Are you sure you want to delete this report?"
-  );
-
-  if (!confirmed) {
-    return;
-  }
-
-  try {
-    const response = await fetch(
-      `${API_BASE}/api/reports/${reportId}`,
-      {
-        method: "DELETE",
-        credentials: "include",
-      }
+    const confirmed = window.confirm(
+      "Are you sure you want to delete this report?"
     );
 
-    if (!response.ok) {
-      const data = await response.json().catch(() => ({}));
-
-      throw new Error(
-        data.detail || "Could not delete report."
-      );
+    if (!confirmed) {
+      return;
     }
 
-    setReports((previousReports) =>
-      previousReports.filter(
-        (report) => report.id !== reportId
-      )
-    );
-  } catch (err) {
-    setError(err.message);
+    try {
+      const response = await fetch(
+        `${API_BASE}/api/reports/${reportId}`,
+        {
+          method: "DELETE",
+          credentials: "include",
+        }
+      );
+
+      if (!response.ok) {
+        const data = await response.json().catch(() => ({}));
+
+        throw new Error(
+          data.detail || "Could not delete report."
+        );
+      }
+
+      setReports((previousReports) =>
+        previousReports.filter(
+          (report) => report.id !== reportId
+        )
+      );
+    } catch (err) {
+      setError(err.message);
+    }
   }
-}
+
+  const visibleReports = reports.filter(
+    (report) =>
+      !report.packageName.startsWith("hw4-n1-package-")
+  );
+
   return (
     <main className="card">
       <header>
         <h1>Vulnerability Reports</h1>
+
         <p>Logged in as {user.email}</p>
 
-        <button type="button" onClick={handleLogout}>
+        <button
+          type="button"
+          onClick={handleLogout}
+        >
           Log out
         </button>
       </header>
@@ -96,18 +107,24 @@ function Home({ user, onLogout }) {
 
       {error && <p className="error">{error}</p>}
 
-      {reports.length === 0 && !error && (
+      {visibleReports.length === 0 && !error && (
         <p>No vulnerability reports found.</p>
       )}
 
-      {reports.map((report) => (
+      {visibleReports.map((report) => (
         <article className="report-card" key={report.id}>
           <h3>
             {report.packageName} — ID {report.id}
           </h3>
 
-          <p>Affected version: {report.affectedVersion}</p>
-          <p>Severity: {report.severity}</p>
+          <p>
+            Affected version: {report.affectedVersion}
+          </p>
+
+          <p>
+            Severity: {report.severity}
+          </p>
+
           <p>{report.description}</p>
 
           <div className="report-actions">
