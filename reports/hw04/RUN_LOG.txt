@@ -1,0 +1,26 @@
+HW4 run log
+
+N+1 experiment:
+- Seeded 5,000 vulnerability reports.
+- Seeded 200 related advisories.
+- Measured page sizes 10, 50, and 200.
+- Ran 30 measurements per condition.
+- Used 2 warm-up runs per condition.
+- Compared naive lazy loading with selectinload eager loading.
+- Saved results to reports/hw04/raw/n1_benchmark.csv.
+- Saved summary to reports/hw04/raw/n1_benchmark.json.
+
+RAG experiment:
+- Created five advisory documents from the HW3 corpus.
+- Created six evaluation questions.
+- Evaluated k values 1, 2, 3, and 5.
+- Compared no-context, basic-context, and engineered-context strategies.
+- Saved results to reports/hw04/raw/rag_results.csv.
+- Saved raw results to reports/hw04/raw/rag_results.json.
+- Saved summary to reports/hw04/raw/rag_summary.json.
+
+Validation:
+- Frontend production build passed.
+- React CRUD interface tested.
+- MySQL persistence tested.
+- N+1 query-count reduction verified.
