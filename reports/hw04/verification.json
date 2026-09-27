@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "homework": "DATA-260 HW4",
+  "SID4": "0036",
+  "PORT_BASE": 8036,
+  "DOMAIN_ID": 4,
+  "checks": {
+    "required_files": {
+      "backend/database.py": true,
+      "backend/models.py": true,
+      "backend/auth_api.py": true,
+      "backend/report_api.py": true,
+      "frontend/src/App.jsx": true,
+      "frontend/src/Login.jsx": true,
+      "frontend/src/Home.jsx": true,
+      "frontend/src/CreateRecord.jsx": true,
+      "frontend/src/UpdateRecord.jsx": true,
+      "scripts/seed_hw4_n1.py": true,
+      "scripts/run_hw4_n1.py": true,
+      "scripts/prepare_hw4_rag.py": true,
+      "scripts/run_hw4_rag.py": true,
+      "reports/hw04/METRICS.md": true,
+      "reports/hw04/RUN_LOG.txt": true,
+      "reports/hw04/AI_USE.md": true,
+      "reports/hw04/rag_questions.yaml": true,
+      "reports/hw04/raw/n1_benchmark.csv": true,
+      "reports/hw04/raw/n1_benchmark.json": true,
+      "reports/hw04/raw/rag_results.csv": true,
+      "reports/hw04/raw/rag_results.json": true,
+      "reports/hw04/raw/rag_summary.json": true
+    },
+    "all_required_files_present": true,
+    "rag_documents": {
+      "count": 5,
+      "expected": 5,
+      "passed": true
+    },
+    "rag_questions": {
+      "count": 6,
+      "expected": 6,
+      "passed": true
+    },
+    "n1_benchmark": {
+      "raw_rows": 180,
+      "expected_rows": 180,
+      "passed": true,
+      "benchmark_reports": 5000,
+      "benchmark_advisories": 200,
+      "database_counts_pass": true
+    },
+    "rag_benchmark": {
+      "raw_rows": 72,
+      "expected_rows": 72,
+      "passed": true
+    },
+    "frontend_build": {
+      "passed": true,
+      "note": "npm --prefix frontend run build passed"
+    }
+  }
+}
