@@ -1,0 +1,206 @@
+{
+  "no_context_k_1": {
+    "questions": 6,
+    "chunk_size": 500,
+    "chunk_overlap": 50,
+    "retrieval_recall": 1,
+    "answer_accuracy": 0.5,
+    "faithfulness": 0.5,
+    "format_compliance": 1,
+    "refusal_accuracy": 1,
+    "answer_overlap_mean": 0.0611,
+    "latency": {
+      "mean": 369.9552,
+      "p50": 82.7322,
+      "min": 56.011,
+      "max": 1845.6753
+    }
+  },
+  "no_context_k_2": {
+    "questions": 6,
+    "chunk_size": 500,
+    "chunk_overlap": 50,
+    "retrieval_recall": 1,
+    "answer_accuracy": 0.5,
+    "faithfulness": 0.5,
+    "format_compliance": 1,
+    "refusal_accuracy": 1,
+    "answer_overlap_mean": 0.0611,
+    "latency": {
+      "mean": 73.8669,
+      "p50": 78.4819,
+      "min": 52.9107,
+      "max": 94.4611
+    }
+  },
+  "no_context_k_3": {
+    "questions": 6,
+    "chunk_size": 500,
+    "chunk_overlap": 50,
+    "retrieval_recall": 1,
+    "answer_accuracy": 0.5,
+    "faithfulness": 0.5,
+    "format_compliance": 1,
+    "refusal_accuracy": 1,
+    "answer_overlap_mean": 0.0611,
+    "latency": {
+      "mean": 73.097,
+      "p50": 77.6329,
+      "min": 52.7104,
+      "max": 97.2885
+    }
+  },
+  "no_context_k_5": {
+    "questions": 6,
+    "chunk_size": 500,
+    "chunk_overlap": 50,
+    "retrieval_recall": 1,
+    "answer_accuracy": 0.5,
+    "faithfulness": 0.5,
+    "format_compliance": 1,
+    "refusal_accuracy": 1,
+    "answer_overlap_mean": 0.0611,
+    "latency": {
+      "mean": 74.7973,
+      "p50": 77.464,
+      "min": 52.6608,
+      "max": 93.8843
+    }
+  },
+  "basic_context_k_1": {
+    "questions": 6,
+    "chunk_size": 500,
+    "chunk_overlap": 50,
+    "retrieval_recall": 1,
+    "answer_accuracy": 1,
+    "faithfulness": 1,
+    "format_compliance": 1,
+    "refusal_accuracy": 1,
+    "answer_overlap_mean": 0.4535,
+    "latency": {
+      "mean": 229.7829,
+      "p50": 225.2816,
+      "min": 102.4557,
+      "max": 305.8642
+    }
+  },
+  "basic_context_k_2": {
+    "questions": 6,
+    "chunk_size": 500,
+    "chunk_overlap": 50,
+    "retrieval_recall": 1,
+    "answer_accuracy": 1,
+    "faithfulness": 1,
+    "format_compliance": 1,
+    "refusal_accuracy": 1,
+    "answer_overlap_mean": 0.4535,
+    "latency": {
+      "mean": 770.3788,
+      "p50": 737.7227,
+      "min": 464.541,
+      "max": 1107.2257
+    }
+  },
+  "basic_context_k_3": {
+    "questions": 6,
+    "chunk_size": 500,
+    "chunk_overlap": 50,
+    "retrieval_recall": 1,
+    "answer_accuracy": 1,
+    "faithfulness": 1,
+    "format_compliance": 1,
+    "refusal_accuracy": 1,
+    "answer_overlap_mean": 0.4535,
+    "latency": {
+      "mean": 816.9063,
+      "p50": 807.0261,
+      "min": 448.8044,
+      "max": 1240.3416
+    }
+  },
+  "basic_context_k_5": {
+    "questions": 6,
+    "chunk_size": 500,
+    "chunk_overlap": 50,
+    "retrieval_recall": 1,
+    "answer_accuracy": 1,
+    "faithfulness": 1,
+    "format_compliance": 1,
+    "refusal_accuracy": 1,
+    "answer_overlap_mean": 0.4535,
+    "latency": {
+      "mean": 842.6937,
+      "p50": 822.1456,
+      "min": 449.2452,
+      "max": 1259.7861
+    }
+  },
+  "engineered_context_k_1": {
+    "questions": 6,
+    "chunk_size": 500,
+    "chunk_overlap": 50,
+    "retrieval_recall": 1,
+    "answer_accuracy": 1,
+    "faithfulness": 1,
+    "format_compliance": 1,
+    "refusal_accuracy": 1,
+    "answer_overlap_mean": 0.4535,
+    "latency": {
+      "mean": 264.6927,
+      "p50": 264.169,
+      "min": 228.3857,
+      "max": 305.8213
+    }
+  },
+  "engineered_context_k_2": {
+    "questions": 6,
+    "chunk_size": 500,
+    "chunk_overlap": 50,
+    "retrieval_recall": 1,
+    "answer_accuracy": 1,
+    "faithfulness": 1,
+    "format_compliance": 1,
+    "refusal_accuracy": 1,
+    "answer_overlap_mean": 0.4535,
+    "latency": {
+      "mean": 663.6335,
+      "p50": 466.1197,
+      "min": 300.431,
+      "max": 1170.9527
+    }
+  },
+  "engineered_context_k_3": {
+    "questions": 6,
+    "chunk_size": 500,
+    "chunk_overlap": 50,
+    "retrieval_recall": 1,
+    "answer_accuracy": 1,
+    "faithfulness": 1,
+    "format_compliance": 1,
+    "refusal_accuracy": 1,
+    "answer_overlap_mean": 0.4535,
+    "latency": {
+      "mean": 807.6688,
+      "p50": 810.4412,
+      "min": 448.0909,
+      "max": 1175.8616
+    }
+  },
+  "engineered_context_k_5": {
+    "questions": 6,
+    "chunk_size": 500,
+    "chunk_overlap": 50,
+    "retrieval_recall": 1,
+    "answer_accuracy": 1,
+    "faithfulness": 1,
+    "format_compliance": 1,
+    "refusal_accuracy": 1,
+    "answer_overlap_mean": 0.4535,
+    "latency": {
+      "mean": 802.8339,
+      "p50": 808.6037,
+      "min": 451.3844,
+      "max": 1138.5003
+    }
+  }
+}

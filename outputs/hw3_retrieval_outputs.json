@@ -1,0 +1,767 @@
+[
+  {
+    "question_id": "q1",
+    "question": "Which packages are affected by prototype pollution vulnerabilities?",
+    "expected_answer": "The web3-utils package is vulnerable before version 4.2.1 because of insecure recursive merge behavior.",
+    "expected_source_file": "corpus/github_reviewed_advisories_snapshot.txt",
+    "expected_source_match": "web3-utils",
+    "results": {
+      "token": {
+        "technique": "token",
+        "question": "Which packages are affected by prototype pollution vulnerabilities?",
+        "chunk_count": 1737,
+        "avg_chunk_length": 1091.45,
+        "query_embedding_dimension": 384,
+        "query_embedding_first_8": [
+          -0.06461962,
+          0.04836296,
+          0.09498411,
+          -0.06370848,
+          0.09666511,
+          -0.00856569,
+          0.01431219,
+          0.03795227
+        ],
+        "query_vector_shape": [
+          384
+        ],
+        "document_vectors_shape": [
+          3,
+          384
+        ],
+        "retrieval_latency_ms": 17.7206,
+        "source_nodes": [
+          {
+            "rank": 1,
+            "store_score": 0.5635228042109589,
+            "cosine_similarity": 0.502413,
+            "chunk_length": 1096,
+            "preview": "This link is maintained to preserve external references.\\n\\n## Original Description\\nVersions of the package web3-utils before 4.2.1 are vulnerable to Prototype"
+          },
+          {
+            "rank": 2,
+            "store_score": 0.4015562437466903,
+            "cosine_similarity": 0.394947,
+            "chunk_length": 1039,
+            "preview": "and `0.10.4` we've been unable to easily assess if these heavily outdated versions are vulnerable or not to this exploit.\\n\\n### Sponsorship\\n\\nThe work involve"
+          },
+          {
+            "rank": 3,
+            "store_score": 0.39343514328723544,
+            "cosine_similarity": 0.383106,
+            "chunk_length": 1511,
+            "preview": "Mitigation factors\\n\\nMicrosoft has not identified any mitigating factors for this vulnerability.\\n\\n## Affected software\\n\\n* Any .NET 6.0 application running "
+          }
+        ]
+      },
+      "semantic": {
+        "technique": "semantic",
+        "question": "Which packages are affected by prototype pollution vulnerabilities?",
+        "chunk_count": 93,
+        "avg_chunk_length": 18464.8,
+        "query_embedding_dimension": 384,
+        "query_embedding_first_8": [
+          -0.06461962,
+          0.04836296,
+          0.09498411,
+          -0.06370848,
+          0.09666511,
+          -0.00856569,
+          0.01431219,
+          0.03795227
+        ],
+        "query_vector_shape": [
+          384
+        ],
+        "document_vectors_shape": [
+          3,
+          384
+        ],
+        "retrieval_latency_ms": 3.8859,
+        "source_nodes": [
+          {
+            "rank": 1,
+            "store_score": 0.3664111535218756,
+            "cosine_similarity": 0.35252,
+            "chunk_length": 7143,
+            "preview": "This vulnerability also applies to the Pulsar Broker when it is configured with \\\"functionsWorkerEnabled=true\\\".\\n\\nThis issue affects Apache Pulsar versions fr"
+          },
+          {
+            "rank": 2,
+            "store_score": 0.3607522753550862,
+            "cosine_similarity": 0.294423,
+            "chunk_length": 4559,
+            "preview": "Being able to call some of these methods can have security implications.\\n\\n#### Details\\nCommands verify that the class must be a `Command` and that the method"
+          },
+          {
+            "rank": 3,
+            "store_score": 0.3391151835674793,
+            "cosine_similarity": 0.296239,
+            "chunk_length": 10478,
+            "preview": "For some applications, invalid tokens may be ignored or cause a warning or a crash. On the other hand, for applications that store pointers in the tokens, this "
+          }
+        ]
+      },
+      "sentence_window": {
+        "technique": "sentence_window",
+        "question": "Which packages are affected by prototype pollution vulnerabilities?",
+        "chunk_count": 1834,
+        "avg_chunk_length": 936.33,
+        "query_embedding_dimension": 384,
+        "query_embedding_first_8": [
+          -0.06461962,
+          0.04836296,
+          0.09498411,
+          -0.06370848,
+          0.09666511,
+          -0.00856569,
+          0.01431219,
+          0.03795227
+        ],
+        "query_vector_shape": [
+          384
+        ],
+        "document_vectors_shape": [
+          3,
+          384
+        ],
+        "retrieval_latency_ms": 15.2064,
+        "source_nodes": [
+          {
+            "rank": 1,
+            "store_score": 0.6269334882292794,
+            "cosine_similarity": 0.630736,
+            "chunk_length": 465,
+            "preview": "This link is maintained to preserve external references.\\n\\n## Original Description\\nVersions of the package web3-utils before 4.2.1 are vulnerable to Prototype"
+          },
+          {
+            "rank": 2,
+            "store_score": 0.42291045926147436,
+            "cosine_similarity": 0.405839,
+            "chunk_length": 215,
+            "preview": "**SDK Users:** Developers integrating Nuclei into their platforms, particularly if they permit the execution of custom workflows by end-users.\\n\\n### Security P"
+          },
+          {
+            "rank": 3,
+            "store_score": 0.40579703272261236,
+            "cosine_similarity": 0.39694,
+            "chunk_length": 2280,
+            "preview": "An attacker has the ability to modify an object's prototype, which could result in changing the behavior of all objects that inherit from the impacted prototype"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "question_id": "q2",
+    "question": "What versions of Apache Pulsar are affected by security vulnerabilities?",
+    "expected_answer": "The advisory identifies affected Apache Pulsar versions in the 2.4.x through 2.10.5, 2.11.x through 2.11.3, 3.0.x through 3.0.2, 3.1.x through 3.1.2, and 3.2.0 ranges.",
+    "expected_source_file": "corpus/github_reviewed_advisories_snapshot.txt",
+    "expected_source_match": "Apache Pulsar",
+    "results": {
+      "token": {
+        "technique": "token",
+        "question": "What versions of Apache Pulsar are affected by security vulnerabilities?",
+        "chunk_count": 1737,
+        "avg_chunk_length": 1091.45,
+        "query_embedding_dimension": 384,
+        "query_embedding_first_8": [
+          -0.03338564,
+          0.00635826,
+          -0.06962258,
+          -0.02525094,
+          -0.02151422,
+          0.01895467,
+          -0.1171358,
+          -0.06283795
+        ],
+        "query_vector_shape": [
+          384
+        ],
+        "document_vectors_shape": [
+          3,
+          384
+        ],
+        "retrieval_latency_ms": 14.3197,
+        "source_nodes": [
+          {
+            "rank": 1,
+            "store_score": 0.7002984683840533,
+            "cosine_similarity": 0.750521,
+            "chunk_length": 2018,
+            "preview": "\"2024-03-12T21:30:59Z\",   \"aliases\": [     \"CVE-2022-34321\"   ],   \"summary\": \"Apache Pulsar: Improper Authentication for Pulsar Proxy Statistics Endpoint\",   \""
+          },
+          {
+            "rank": 2,
+            "store_score": 0.6368280283332248,
+            "cosine_similarity": 0.697033,
+            "chunk_length": 909,
+            "preview": "to at least 3.1.3.\\n3.2 Apache Pulsar users should upgrade to at least 3.2.1.\\n\\nUsers operating versions prior to those listed above should upgrade to the afor"
+          },
+          {
+            "rank": 3,
+            "store_score": 0.6234507070832818,
+            "cosine_similarity": 0.596898,
+            "chunk_length": 1463,
+            "preview": "users should upgrade to at least 2.11.4.\\n3.0 Pulsar Function Worker users should upgrade to at least 3.0.3.\\n3.1 Pulsar Function Worker users should upgrade to"
+          }
+        ]
+      },
+      "semantic": {
+        "technique": "semantic",
+        "question": "What versions of Apache Pulsar are affected by security vulnerabilities?",
+        "chunk_count": 93,
+        "avg_chunk_length": 18464.8,
+        "query_embedding_dimension": 384,
+        "query_embedding_first_8": [
+          -0.03338564,
+          0.00635826,
+          -0.06962258,
+          -0.02525094,
+          -0.02151422,
+          0.01895467,
+          -0.1171358,
+          -0.06283795
+        ],
+        "query_vector_shape": [
+          384
+        ],
+        "document_vectors_shape": [
+          3,
+          384
+        ],
+        "retrieval_latency_ms": 3.754,
+        "source_nodes": [
+          {
+            "rank": 1,
+            "store_score": 0.7329022432476995,
+            "cosine_similarity": 0.738109,
+            "chunk_length": 7143,
+            "preview": "This vulnerability also applies to the Pulsar Broker when it is configured with \\\"functionsWorkerEnabled=true\\\".\\n\\nThis issue affects Apache Pulsar versions fr"
+          },
+          {
+            "rank": 2,
+            "store_score": 0.574035330240364,
+            "cosine_similarity": 0.683417,
+            "chunk_length": 22827,
+            "preview": "However, if a malicious file is uploaded, it could exploit a directory traversal vulnerability. This occurs when the filenames in the zip files, which aren't pr"
+          },
+          {
+            "rank": 3,
+            "store_score": 0.34591035122637626,
+            "cosine_similarity": 0.309589,
+            "chunk_length": 4213,
+            "preview": "The library is not directly exploitable: the exploit requires that some client of the library calls the vulnerable method with user input. However, if unsafe in"
+          }
+        ]
+      },
+      "sentence_window": {
+        "technique": "sentence_window",
+        "question": "What versions of Apache Pulsar are affected by security vulnerabilities?",
+        "chunk_count": 1834,
+        "avg_chunk_length": 936.33,
+        "query_embedding_dimension": 384,
+        "query_embedding_first_8": [
+          -0.03338564,
+          0.00635826,
+          -0.06962258,
+          -0.02525094,
+          -0.02151422,
+          0.01895467,
+          -0.1171358,
+          -0.06283795
+        ],
+        "query_vector_shape": [
+          384
+        ],
+        "document_vectors_shape": [
+          3,
+          384
+        ],
+        "retrieval_latency_ms": 14.6171,
+        "source_nodes": [
+          {
+            "rank": 1,
+            "store_score": 0.7426031474748779,
+            "cosine_similarity": 0.704785,
+            "chunk_length": 256,
+            "preview": "This vulnerability also applies to the Pulsar Broker when it is configured with \\\"functionsWorkerEnabled=true\\\".\\n\\nThis issue affects Apache Pulsar versions fr"
+          },
+          {
+            "rank": 2,
+            "store_score": 0.7426031474748779,
+            "cosine_similarity": 0.704785,
+            "chunk_length": 256,
+            "preview": "This vulnerability also applies to the Pulsar Broker when it is configured with \\\"functionsWorkerEnabled=true\\\".\\n\\nThis issue affects Apache Pulsar versions fr"
+          },
+          {
+            "rank": 3,
+            "store_score": 0.7286878377545888,
+            "cosine_similarity": 0.680382,
+            "chunk_length": 321,
+            "preview": "This could also be used to carry out denial of service attacks.\\nThis vulnerability also applies to the Pulsar Broker when it is configured with \\\"functionsWork"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "question_id": "q3",
+    "question": "What are common mitigation steps described in the advisories?",
+    "expected_answer": "Common mitigations include upgrading to a patched version, applying the vendor-recommended patch, and using documented workarounds when an upgrade is not immediately possible.",
+    "expected_source_file": "corpus/github_reviewed_advisories_snapshot.txt",
+    "expected_source_match": "Patches",
+    "results": {
+      "token": {
+        "technique": "token",
+        "question": "What are common mitigation steps described in the advisories?",
+        "chunk_count": 1737,
+        "avg_chunk_length": 1091.45,
+        "query_embedding_dimension": 384,
+        "query_embedding_first_8": [
+          -0.02891316,
+          0.08639824,
+          0.02030891,
+          0.01074788,
+          0.06719463,
+          0.03048606,
+          -0.03334595,
+          0.03689221
+        ],
+        "query_vector_shape": [
+          384
+        ],
+        "document_vectors_shape": [
+          3,
+          384
+        ],
+        "retrieval_latency_ms": 14.489,
+        "source_nodes": [
+          {
+            "rank": 1,
+            "store_score": 0.3764185168482469,
+            "cosine_similarity": 0.319491,
+            "chunk_length": 1149,
+            "preview": "events enabled, as this allows users to change pipeline configurations and pull in secrets to steps not typically part of the CI process.\\n- Make use of the bui"
+          },
+          {
+            "rank": 2,
+            "store_score": 0.36677919173018664,
+            "cosine_similarity": 0.344947,
+            "chunk_length": 2167,
+            "preview": "users**: Validators, Chain Builders + Maintainers\\n\\n## Summary\\n\\nA default configuration in CometBFT has been found to be small for common use cases, and may "
+          },
+          {
+            "rank": 3,
+            "store_score": 0.35743127877280423,
+            "cosine_similarity": 0.176383,
+            "chunk_length": 1100,
+            "preview": "that user. Amongst other things, the attacker can:\\n\\n1 .Perform any action within the application that the user can perform.\\n2. View any information that the "
+          }
+        ]
+      },
+      "semantic": {
+        "technique": "semantic",
+        "question": "What are common mitigation steps described in the advisories?",
+        "chunk_count": 93,
+        "avg_chunk_length": 18464.8,
+        "query_embedding_dimension": 384,
+        "query_embedding_first_8": [
+          -0.02891316,
+          0.08639824,
+          0.02030891,
+          0.01074788,
+          0.06719463,
+          0.03048606,
+          -0.03334595,
+          0.03689221
+        ],
+        "query_vector_shape": [
+          384
+        ],
+        "document_vectors_shape": [
+          3,
+          384
+        ],
+        "retrieval_latency_ms": 4.126,
+        "source_nodes": [
+          {
+            "rank": 1,
+            "store_score": 0.36830259918773706,
+            "cosine_similarity": 0.265448,
+            "chunk_length": 4559,
+            "preview": "Being able to call some of these methods can have security implications.\\n\\n#### Details\\nCommands verify that the class must be a `Command` and that the method"
+          },
+          {
+            "rank": 2,
+            "store_score": 0.3586685244192902,
+            "cosine_similarity": 0.210442,
+            "chunk_length": 14432,
+            "preview": "Amongst other things, the attacker can:\\n\\n1 .Perform any action within the application that the user can perform.\\n2. View any information that the user is abl"
+          },
+          {
+            "rank": 3,
+            "store_score": 0.3480888626314329,
+            "cosine_similarity": 0.181981,
+            "chunk_length": 5247,
+            "preview": "Amongst other things, the attacker can:\\n\\n1 .Perform any action within the application that the user can perform.\\n2. View any information that the user is abl"
+          }
+        ]
+      },
+      "sentence_window": {
+        "technique": "sentence_window",
+        "question": "What are common mitigation steps described in the advisories?",
+        "chunk_count": 1834,
+        "avg_chunk_length": 936.33,
+        "query_embedding_dimension": 384,
+        "query_embedding_first_8": [
+          -0.02891316,
+          0.08639824,
+          0.02030891,
+          0.01074788,
+          0.06719463,
+          0.03048606,
+          -0.03334595,
+          0.03689221
+        ],
+        "query_vector_shape": [
+          384
+        ],
+        "document_vectors_shape": [
+          3,
+          384
+        ],
+        "retrieval_latency_ms": 14.3825,
+        "source_nodes": [
+          {
+            "rank": 1,
+            "store_score": 0.4625264874679279,
+            "cosine_similarity": 0.392672,
+            "chunk_length": 105,
+            "preview": "Users are asked to take proactive measures mentioned below in Workarounds:Users to protect their assets. "
+          },
+          {
+            "rank": 2,
+            "store_score": 0.4518212657805813,
+            "cosine_similarity": 0.353911,
+            "chunk_length": 248,
+            "preview": ")\\n\\n### Credits\\n\\nStatamic thanks Niklas Schilling (discovery, analysis, coordination) from the SEC Consult Vulnerability Lab (https://www.sec-consult.com/) f"
+          },
+          {
+            "rank": 3,
+            "store_score": 0.450781008283793,
+            "cosine_similarity": 0.451695,
+            "chunk_length": 145,
+            "preview": "This advisory outlines the impacted users, provides details on the security patch, and suggests mitigation strategies.\\n\\n### Affected Users\\n1. "
+          }
+        ]
+      }
+    }
+  },
+  {
+    "question_id": "q4",
+    "question": "Which vulnerabilities allow remote code execution?",
+    "expected_answer": "The Symfony 1 advisory describes a deserialization vulnerability that can enable remote code execution when untrusted input is unserialized.",
+    "expected_source_file": "corpus/github_reviewed_advisories_snapshot.txt",
+    "expected_source_match": "Symfony 1",
+    "results": {
+      "token": {
+        "technique": "token",
+        "question": "Which vulnerabilities allow remote code execution?",
+        "chunk_count": 1737,
+        "avg_chunk_length": 1091.45,
+        "query_embedding_dimension": 384,
+        "query_embedding_first_8": [
+          -0.00770713,
+          -0.03282459,
+          -0.08693677,
+          -0.01738891,
+          -0.04263265,
+          0.00950662,
+          -0.12881866,
+          0.01201002
+        ],
+        "query_vector_shape": [
+          384
+        ],
+        "document_vectors_shape": [
+          3,
+          384
+        ],
+        "retrieval_latency_ms": 14.2372,
+        "source_nodes": [
+          {
+            "rank": 1,
+            "store_score": 0.4383254868780527,
+            "cosine_similarity": 0.425788,
+            "chunk_length": 1845,
+            "preview": "1 due to uncontrolled unserialized input in sfNamespacedParameterHolder\",   \"details\": \"### Summary\\nSymfony 1 has a gadget chain due to dangerous unserialize i"
+          },
+          {
+            "rank": 2,
+            "store_score": 0.42891780346171743,
+            "cosine_similarity": 0.39127,
+            "chunk_length": 1437,
+            "preview": "security may limit users' ability to trigger the XSS.\\n\\n### Details\\n_Give all details on the vulnerability. Pointing to the incriminated source code is very h"
+          },
+          {
+            "rank": 3,
+            "store_score": 0.4276879405159413,
+            "cosine_similarity": 0.402123,
+            "chunk_length": 1792,
+            "preview": "\"published\": \"2024-02-08T18:45:49Z\",   \"aliases\": [     \"CVE-2023-32193\"   ],   \"summary\": \"Norman API Cross-site Scripting Vulnerability\",   \"details\": \"### Im"
+          }
+        ]
+      },
+      "semantic": {
+        "technique": "semantic",
+        "question": "Which vulnerabilities allow remote code execution?",
+        "chunk_count": 93,
+        "avg_chunk_length": 18464.8,
+        "query_embedding_dimension": 384,
+        "query_embedding_first_8": [
+          -0.00770713,
+          -0.03282459,
+          -0.08693677,
+          -0.01738891,
+          -0.04263265,
+          0.00950662,
+          -0.12881866,
+          0.01201002
+        ],
+        "query_vector_shape": [
+          384
+        ],
+        "document_vectors_shape": [
+          3,
+          384
+        ],
+        "retrieval_latency_ms": 4.3259,
+        "source_nodes": [
+          {
+            "rank": 1,
+            "store_score": 0.4007951160563053,
+            "cosine_similarity": 0.323516,
+            "chunk_length": 4559,
+            "preview": "Being able to call some of these methods can have security implications.\\n\\n#### Details\\nCommands verify that the class must be a `Command` and that the method"
+          },
+          {
+            "rank": 2,
+            "store_score": 0.39696300692348135,
+            "cosine_similarity": 0.371813,
+            "chunk_length": 20000,
+            "preview": "The full scope of impact is exactly unknown, but reading files outside of a server's base directory (sandbox root) is possible.\\n\\nIn order to use this exploit,"
+          },
+          {
+            "rank": 3,
+            "store_score": 0.377324828340166,
+            "cosine_similarity": 0.34615,
+            "chunk_length": 14386,
+            "preview": "This device happily accepts TTY ioctls and pipes anything written into it back to the reader. \\n  - This has been presented in a hacking competition (WACON 2023"
+          }
+        ]
+      },
+      "sentence_window": {
+        "technique": "sentence_window",
+        "question": "Which vulnerabilities allow remote code execution?",
+        "chunk_count": 1834,
+        "avg_chunk_length": 936.33,
+        "query_embedding_dimension": 384,
+        "query_embedding_first_8": [
+          -0.00770713,
+          -0.03282459,
+          -0.08693677,
+          -0.01738891,
+          -0.04263265,
+          0.00950662,
+          -0.12881866,
+          0.01201002
+        ],
+        "query_vector_shape": [
+          384
+        ],
+        "document_vectors_shape": [
+          3,
+          384
+        ],
+        "retrieval_latency_ms": 14.4325,
+        "source_nodes": [
+          {
+            "rank": 1,
+            "store_score": 0.4946991454100277,
+            "cosine_similarity": 0.474136,
+            "chunk_length": 309,
+            "preview": "It's recommended by the authors of `vm2` themselves that you should move to another solution for remote JS execution due to this vulnerability.\\n\\n### Patches\\n"
+          },
+          {
+            "rank": 2,
+            "store_score": 0.4647967889993502,
+            "cosine_similarity": 0.436089,
+            "chunk_length": 338,
+            "preview": "The attack *cannot* be automated.\\n\\nThe vulnerability is also limited to self-XSS and *cannot* directly affect other users or visitors of the site.\\n\\n----\\n\\n"
+          },
+          {
+            "rank": 3,
+            "store_score": 0.459716862779002,
+            "cosine_similarity": 0.505504,
+            "chunk_length": 360,
+            "preview": "In many cases (such as when exposing RStudio via [`jupyter-rsession-proxy`](https://github.com/jupyterhub/jupyter-rsession-proxy) or a remote Linux Desktop / VN"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "question_id": "q5",
+    "question": "Which advisories mention denial of service?",
+    "expected_answer": "The Apache Tomcat advisory describes denial of service caused by improper validation of HTTP/2 request headers and recommends upgrading to fixed versions.",
+    "expected_source_file": "corpus/github_reviewed_advisories_snapshot.txt",
+    "expected_source_match": "Apache Tomcat",
+    "results": {
+      "token": {
+        "technique": "token",
+        "question": "Which advisories mention denial of service?",
+        "chunk_count": 1737,
+        "avg_chunk_length": 1091.45,
+        "query_embedding_dimension": 384,
+        "query_embedding_first_8": [
+          -0.01986683,
+          -0.02624742,
+          0.01467327,
+          -0.00057671,
+          0.02662283,
+          0.02544775,
+          0.10070232,
+          -0.03293943
+        ],
+        "query_vector_shape": [
+          384
+        ],
+        "document_vectors_shape": [
+          3,
+          384
+        ],
+        "retrieval_latency_ms": 15.3071,
+        "source_nodes": [
+          {
+            "rank": 1,
+            "store_score": 0.3822419198878635,
+            "cosine_similarity": 0.400068,
+            "chunk_length": 1686,
+            "preview": "\"aliases\": [     \"CVE-2024-21392\"   ],   \"summary\": \"Microsoft Security Advisory CVE-2024-21392: .NET Denial of Service Vulnerability\",   \"details\": \"# Microsof"
+          },
+          {
+            "rank": 2,
+            "store_score": 0.3485796133576935,
+            "cosine_similarity": 0.333237,
+            "chunk_length": 888,
+            "preview": "\"RaspAP (aka raspap-webgui) through 3.0.9 allows remote attackers to cause a persistent denial of service (bricking) via a crafted request.\",   \"severity\": [   "
+          },
+          {
+            "rank": 3,
+            "store_score": 0.34379201648360674,
+            "cosine_similarity": 0.300769,
+            "chunk_length": 1016,
+            "preview": "to implement a proper rate-limiting mechanism on the server side where the configuration might be like:\\nIf a specific IP address fails to login more than 5 tim"
+          }
+        ]
+      },
+      "semantic": {
+        "technique": "semantic",
+        "question": "Which advisories mention denial of service?",
+        "chunk_count": 93,
+        "avg_chunk_length": 18464.8,
+        "query_embedding_dimension": 384,
+        "query_embedding_first_8": [
+          -0.01986683,
+          -0.02624742,
+          0.01467327,
+          -0.00057671,
+          0.02662283,
+          0.02544775,
+          0.10070232,
+          -0.03293943
+        ],
+        "query_vector_shape": [
+          384
+        ],
+        "document_vectors_shape": [
+          3,
+          384
+        ],
+        "retrieval_latency_ms": 4.1845,
+        "source_nodes": [
+          {
+            "rank": 1,
+            "store_score": 0.33938338606846485,
+            "cosine_similarity": 0.301176,
+            "chunk_length": 9195,
+            "preview": "Leak the server IP address, which could be hidden behind a CDN.\\n2. Retrieve information in the internal network. e.g. which addresses/ports are accessible, the"
+          },
+          {
+            "rank": 2,
+            "store_score": 0.28386132969791716,
+            "cosine_similarity": 0.174923,
+            "chunk_length": 20578,
+            "preview": "Amongst other things, the attacker can:\\n\\n1 .Perform any action within the application that the user can perform.\\n2. View any information that the user is abl"
+          },
+          {
+            "rank": 3,
+            "store_score": 0.28267281889565515,
+            "cosine_similarity": 0.154035,
+            "chunk_length": 5247,
+            "preview": "Amongst other things, the attacker can:\\n\\n1 .Perform any action within the application that the user can perform.\\n2. View any information that the user is abl"
+          }
+        ]
+      },
+      "sentence_window": {
+        "technique": "sentence_window",
+        "question": "Which advisories mention denial of service?",
+        "chunk_count": 1834,
+        "avg_chunk_length": 936.33,
+        "query_embedding_dimension": 384,
+        "query_embedding_first_8": [
+          -0.01986683,
+          -0.02624742,
+          0.01467327,
+          -0.00057671,
+          0.02662283,
+          0.02544775,
+          0.10070232,
+          -0.03293943
+        ],
+        "query_vector_shape": [
+          384
+        ],
+        "document_vectors_shape": [
+          3,
+          384
+        ],
+        "retrieval_latency_ms": 14.5641,
+        "source_nodes": [
+          {
+            "rank": 1,
+            "store_score": 0.42407549981236303,
+            "cosine_similarity": 0.381455,
+            "chunk_length": 7247,
+            "preview": "This advisory also provides guidance on what developers can do to update their applications to address this vulnerability.\\n\\nA vulnerability exists in ASP.NET "
+          },
+          {
+            "rank": 2,
+            "store_score": 0.41114391452414845,
+            "cosine_similarity": 0.308492,
+            "chunk_length": 310,
+            "preview": "If the payload is large enough, recipient who is decompressing the data will have to allocate a large amount of memory, which then can lead to a denial of servi"
+          },
+          {
+            "rank": 3,
+            "store_score": 0.3839442055088645,
+            "cosine_similarity": 0.366016,
+            "chunk_length": 5136,
+            "preview": "This advisory also provides guidance on what developers can do to update their applications to address this vulnerability.\\n\\nA vulnerability exists in .NET whe"
+          }
+        ]
+      }
+    }
+  }
+]

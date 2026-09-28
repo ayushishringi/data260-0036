@@ -1,0 +1,144 @@
+{
+  "generated_at_utc": "2026-09-26T23:12:25.377298+00:00",
+  "runs_per_condition": 30,
+  "warmups_per_condition": 2,
+  "page_sizes": [
+    10,
+    50,
+    200
+  ],
+  "conditions": {
+    "naive_page_10": {
+      "variant": "naive",
+      "page_size": 10,
+      "latency": {
+        "count": 30,
+        "mean_ms": 1.7311,
+        "p50_ms": 1.6666,
+        "p95_ms": 2.1878,
+        "p99_ms": 2.3425,
+        "min_ms": 1.4266,
+        "max_ms": 2.3425
+      },
+      "query_count": {
+        "min": 11,
+        "max": 11,
+        "mean": 11
+      },
+      "advisory_count": {
+        "min": 10,
+        "max": 10
+      }
+    },
+    "fixed_page_10": {
+      "variant": "fixed",
+      "page_size": 10,
+      "latency": {
+        "count": 30,
+        "mean_ms": 0.5106,
+        "p50_ms": 0.5055,
+        "p95_ms": 0.5466,
+        "p99_ms": 0.5773,
+        "min_ms": 0.4678,
+        "max_ms": 0.5773
+      },
+      "query_count": {
+        "min": 2,
+        "max": 2,
+        "mean": 2
+      },
+      "advisory_count": {
+        "min": 10,
+        "max": 10
+      }
+    },
+    "naive_page_50": {
+      "variant": "naive",
+      "page_size": 50,
+      "latency": {
+        "count": 30,
+        "mean_ms": 6.7507,
+        "p50_ms": 6.4875,
+        "p95_ms": 7.3788,
+        "p99_ms": 11.0407,
+        "min_ms": 5.9845,
+        "max_ms": 11.0407
+      },
+      "query_count": {
+        "min": 51,
+        "max": 51,
+        "mean": 51
+      },
+      "advisory_count": {
+        "min": 50,
+        "max": 50
+      }
+    },
+    "fixed_page_50": {
+      "variant": "fixed",
+      "page_size": 50,
+      "latency": {
+        "count": 30,
+        "mean_ms": 0.9906,
+        "p50_ms": 0.9624,
+        "p95_ms": 1.0918,
+        "p99_ms": 1.4295,
+        "min_ms": 0.9036,
+        "max_ms": 1.4295
+      },
+      "query_count": {
+        "min": 2,
+        "max": 2,
+        "mean": 2
+      },
+      "advisory_count": {
+        "min": 50,
+        "max": 50
+      }
+    },
+    "naive_page_200": {
+      "variant": "naive",
+      "page_size": 200,
+      "latency": {
+        "count": 30,
+        "mean_ms": 25.9659,
+        "p50_ms": 25.5755,
+        "p95_ms": 28.3768,
+        "p99_ms": 31.1851,
+        "min_ms": 24.1729,
+        "max_ms": 31.1851
+      },
+      "query_count": {
+        "min": 201,
+        "max": 201,
+        "mean": 201
+      },
+      "advisory_count": {
+        "min": 200,
+        "max": 200
+      }
+    },
+    "fixed_page_200": {
+      "variant": "fixed",
+      "page_size": 200,
+      "latency": {
+        "count": 30,
+        "mean_ms": 2.5988,
+        "p50_ms": 2.4388,
+        "p95_ms": 2.5665,
+        "p99_ms": 7.139,
+        "min_ms": 2.2776,
+        "max_ms": 7.139
+      },
+      "query_count": {
+        "min": 2,
+        "max": 2,
+        "mean": 2
+      },
+      "advisory_count": {
+        "min": 200,
+        "max": 200
+      }
+    }
+  }
+}

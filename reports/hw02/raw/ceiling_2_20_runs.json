@@ -1,0 +1,382 @@
+[
+  {
+    "run": 1,
+    "turn_ceiling": 2,
+    "latency_ms": 889.57,
+    "planner_attempts": 1,
+    "status": "completed",
+    "classification": "Valid first attempt",
+    "tags": [
+      "openssl vulnerability",
+      "certificate validation",
+      "network traffic interception"
+    ],
+    "summary": "OpenSSL version vulnerability enables bypassing certificate validation to intercept encrypted traffic.",
+    "validation_error": "",
+    "reviewer_feedback": {
+      "approved": true,
+      "feedback": "Tags are relevant and summary is factual and concise."
+    }
+  },
+  {
+    "run": 2,
+    "turn_ceiling": 2,
+    "latency_ms": 837.32,
+    "planner_attempts": 1,
+    "status": "completed",
+    "classification": "Valid first attempt",
+    "tags": [
+      "openssl vulnerability",
+      "certificate validation",
+      "network traffic interception"
+    ],
+    "summary": "OpenSSL version vulnerability enables bypassing certificate validation to intercept encrypted traffic.",
+    "validation_error": "",
+    "reviewer_feedback": {
+      "approved": true,
+      "feedback": "Tags are relevant and summary is factual and concise."
+    }
+  },
+  {
+    "run": 3,
+    "turn_ceiling": 2,
+    "latency_ms": 874.82,
+    "planner_attempts": 1,
+    "status": "completed",
+    "classification": "Valid first attempt",
+    "tags": [
+      "openssl vulnerability",
+      "certificate validation",
+      "network traffic interception"
+    ],
+    "summary": "OpenSSL version flaw enables bypassing certificate checks, risking encrypted traffic interception.",
+    "validation_error": "",
+    "reviewer_feedback": {
+      "approved": true,
+      "feedback": "Tags are relevant and summary is factual and concise."
+    }
+  },
+  {
+    "run": 4,
+    "turn_ceiling": 2,
+    "latency_ms": 885.96,
+    "planner_attempts": 1,
+    "status": "completed",
+    "classification": "Valid first attempt",
+    "tags": [
+      "openssl vulnerability",
+      "certificate validation",
+      "network traffic interception"
+    ],
+    "summary": "OpenSSL vulnerability enables bypassing certificate validation to intercept encrypted traffic.",
+    "validation_error": "",
+    "reviewer_feedback": {
+      "approved": true,
+      "feedback": "Tags are relevant and summary is factual and concise."
+    }
+  },
+  {
+    "run": 5,
+    "turn_ceiling": 2,
+    "latency_ms": 916.54,
+    "planner_attempts": 1,
+    "status": "completed",
+    "classification": "Valid first attempt",
+    "tags": [
+      "openssl vulnerability",
+      "certificate validation",
+      "network traffic interception"
+    ],
+    "summary": "OpenSSL version vulnerability enables bypassing certificate validation to intercept encrypted traffic.",
+    "validation_error": "",
+    "reviewer_feedback": {
+      "approved": true,
+      "feedback": "Tags are relevant and summary is factual and concise."
+    }
+  },
+  {
+    "run": 6,
+    "turn_ceiling": 2,
+    "latency_ms": 859.69,
+    "planner_attempts": 1,
+    "status": "completed",
+    "classification": "Valid first attempt",
+    "tags": [
+      "openssl vulnerability",
+      "certificate validation",
+      "network traffic interception"
+    ],
+    "summary": "OpenSSL version vulnerability enables bypassing certificate validation to intercept encrypted traffic.",
+    "validation_error": "",
+    "reviewer_feedback": {
+      "approved": true,
+      "feedback": "Tags are relevant and summary is factual and concise."
+    }
+  },
+  {
+    "run": 7,
+    "turn_ceiling": 2,
+    "latency_ms": 856.26,
+    "planner_attempts": 1,
+    "status": "completed",
+    "classification": "Valid first attempt",
+    "tags": [
+      "openssl vulnerability",
+      "certificate validation",
+      "network traffic interception"
+    ],
+    "summary": "OpenSSL vulnerability enables bypassing certificate validation to intercept encrypted traffic.",
+    "validation_error": "",
+    "reviewer_feedback": {
+      "approved": true,
+      "feedback": "Tags are relevant and summary is factual and concise."
+    }
+  },
+  {
+    "run": 8,
+    "turn_ceiling": 2,
+    "latency_ms": 815.4,
+    "planner_attempts": 1,
+    "status": "completed",
+    "classification": "Valid first attempt",
+    "tags": [
+      "openssl vulnerability",
+      "certificate validation",
+      "network traffic interception"
+    ],
+    "summary": "OpenSSL vulnerability enables bypassing certificate validation to intercept encrypted traffic.",
+    "validation_error": "",
+    "reviewer_feedback": {
+      "approved": true,
+      "feedback": "Tags are relevant and summary is factual and concise."
+    }
+  },
+  {
+    "run": 9,
+    "turn_ceiling": 2,
+    "latency_ms": 871.13,
+    "planner_attempts": 1,
+    "status": "completed",
+    "classification": "Valid first attempt",
+    "tags": [
+      "openssl vulnerability",
+      "certificate validation",
+      "network traffic interception"
+    ],
+    "summary": "OpenSSL version flaw enables attackers to bypass certificate checks and intercept encrypted traffic.",
+    "validation_error": "",
+    "reviewer_feedback": {
+      "approved": true,
+      "feedback": "Tags are relevant and summary is factual and concise."
+    }
+  },
+  {
+    "run": 10,
+    "turn_ceiling": 2,
+    "latency_ms": 854.26,
+    "planner_attempts": 1,
+    "status": "completed",
+    "classification": "Valid first attempt",
+    "tags": [
+      "openssl vulnerability",
+      "certificate validation",
+      "network traffic interception"
+    ],
+    "summary": "OpenSSL vulnerability enables bypassing certificate validation to intercept encrypted traffic.",
+    "validation_error": "",
+    "reviewer_feedback": {
+      "approved": true,
+      "feedback": "Tags are relevant and summary is factual and concise."
+    }
+  },
+  {
+    "run": 11,
+    "turn_ceiling": 2,
+    "latency_ms": 858.09,
+    "planner_attempts": 1,
+    "status": "completed",
+    "classification": "Valid first attempt",
+    "tags": [
+      "openssl vulnerability",
+      "certificate validation",
+      "network traffic interception"
+    ],
+    "summary": "OpenSSL version vulnerability enables bypassing certificate validation to intercept encrypted traffic.",
+    "validation_error": "",
+    "reviewer_feedback": {
+      "approved": true,
+      "feedback": "Tags are relevant and summary is factual and concise."
+    }
+  },
+  {
+    "run": 12,
+    "turn_ceiling": 2,
+    "latency_ms": 851.56,
+    "planner_attempts": 1,
+    "status": "completed",
+    "classification": "Valid first attempt",
+    "tags": [
+      "openssl vulnerability",
+      "certificate validation",
+      "network traffic interception"
+    ],
+    "summary": "OpenSSL vulnerability enables bypassing certificate validation to intercept encrypted traffic.",
+    "validation_error": "",
+    "reviewer_feedback": {
+      "approved": true,
+      "feedback": "Tags are relevant and summary is factual and concise."
+    }
+  },
+  {
+    "run": 13,
+    "turn_ceiling": 2,
+    "latency_ms": 862.06,
+    "planner_attempts": 1,
+    "status": "completed",
+    "classification": "Valid first attempt",
+    "tags": [
+      "openssl vulnerability",
+      "certificate validation",
+      "network traffic interception"
+    ],
+    "summary": "OpenSSL version vulnerability enables bypassing certificate validation to intercept encrypted traffic.",
+    "validation_error": "",
+    "reviewer_feedback": {
+      "approved": true,
+      "feedback": "Tags are relevant and summary is factual and concise."
+    }
+  },
+  {
+    "run": 14,
+    "turn_ceiling": 2,
+    "latency_ms": 857.87,
+    "planner_attempts": 1,
+    "status": "completed",
+    "classification": "Valid first attempt",
+    "tags": [
+      "openssl vulnerability",
+      "certificate validation",
+      "network traffic interception"
+    ],
+    "summary": "OpenSSL vulnerability enables bypassing certificate validation, risking encrypted traffic interception.",
+    "validation_error": "",
+    "reviewer_feedback": {
+      "approved": true,
+      "feedback": "Tags are relevant and summary is factual and concise."
+    }
+  },
+  {
+    "run": 15,
+    "turn_ceiling": 2,
+    "latency_ms": 848.86,
+    "planner_attempts": 1,
+    "status": "completed",
+    "classification": "Valid first attempt",
+    "tags": [
+      "openssl vulnerability",
+      "certificate validation",
+      "network traffic interception"
+    ],
+    "summary": "OpenSSL vulnerability enables bypassing certificate validation to intercept encrypted traffic.",
+    "validation_error": "",
+    "reviewer_feedback": {
+      "approved": true,
+      "feedback": "Tags are relevant and summary is factual and concise."
+    }
+  },
+  {
+    "run": 16,
+    "turn_ceiling": 2,
+    "latency_ms": 856.71,
+    "planner_attempts": 1,
+    "status": "completed",
+    "classification": "Valid first attempt",
+    "tags": [
+      "openssl vulnerability",
+      "certificate validation",
+      "network traffic interception"
+    ],
+    "summary": "OpenSSL vulnerability enables bypassing certificate validation, risking encrypted traffic interception.",
+    "validation_error": "",
+    "reviewer_feedback": {
+      "approved": true,
+      "feedback": "Tags are relevant and summary is factual and concise."
+    }
+  },
+  {
+    "run": 17,
+    "turn_ceiling": 2,
+    "latency_ms": 845.91,
+    "planner_attempts": 1,
+    "status": "completed",
+    "classification": "Valid first attempt",
+    "tags": [
+      "openssl vulnerability",
+      "certificate validation",
+      "network traffic interception"
+    ],
+    "summary": "OpenSSL vulnerability enables bypassing certificate validation to intercept encrypted traffic.",
+    "validation_error": "",
+    "reviewer_feedback": {
+      "approved": true,
+      "feedback": "Tags are relevant and summary is factual and concise."
+    }
+  },
+  {
+    "run": 18,
+    "turn_ceiling": 2,
+    "latency_ms": 798.51,
+    "planner_attempts": 1,
+    "status": "completed",
+    "classification": "Valid first attempt",
+    "tags": [
+      "openssl vulnerability",
+      "certificate validation",
+      "network traffic interception"
+    ],
+    "summary": "OpenSSL vulnerability enables bypassing certificate validation to intercept encrypted traffic.",
+    "validation_error": "",
+    "reviewer_feedback": {
+      "approved": true,
+      "feedback": "Tags are relevant and summary is factual and concise."
+    }
+  },
+  {
+    "run": 19,
+    "turn_ceiling": 2,
+    "latency_ms": 794.91,
+    "planner_attempts": 1,
+    "status": "completed",
+    "classification": "Valid first attempt",
+    "tags": [
+      "openssl vulnerability",
+      "certificate validation",
+      "network traffic interception"
+    ],
+    "summary": "OpenSSL vulnerability enables bypassing certificate validation to intercept encrypted traffic.",
+    "validation_error": "",
+    "reviewer_feedback": {
+      "approved": true,
+      "feedback": "Tags are relevant and summary is factual and concise."
+    }
+  },
+  {
+    "run": 20,
+    "turn_ceiling": 2,
+    "latency_ms": 866.79,
+    "planner_attempts": 1,
+    "status": "completed",
+    "classification": "Valid first attempt",
+    "tags": [
+      "openssl vulnerability",
+      "certificate validation",
+      "network traffic interception"
+    ],
+    "summary": "OpenSSL version flaw enables bypassing certificate checks, risking encrypted traffic interception.",
+    "validation_error": "",
+    "reviewer_feedback": {
+      "approved": true,
+      "feedback": "Tags are relevant and summary is factual and concise."
+    }
+  }
+]

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card shadow-sm border-0">
+    <div class="card-body p-5">
+
+        <span class="badge bg-success mb-3">
+            Authenticated
+        </span>
+
+        <h1>
+            Welcome, {{ user.name }}!
+        </h1>
+
+        <p class="text-secondary">
+            You are viewing the protected vulnerability dashboard.
+        </p>
+
+        <a href="/logout" class="btn btn-danger">
+            Logout
+        </a>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{
+  "domain_id": 4,
+  "domain": "Open-source package vulnerabilities",
+  "source_name": "GitHub Advisory Database",
+  "source_repository": "https://github.com/github/advisory-database",
+  "source_section": "advisories/github-reviewed",
+  "access_date": "2026-09-21",
+  "retrieval_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "records_in_snapshot": 500,
+  "records_available_in_checkout": 938,
+  "minimum_required_size_bytes": 200000,
+  "files": [
+    {
+      "filename": "corpus/github_reviewed_advisories_snapshot.txt",
+      "byte_size": 1717675,
+      "sha256": "66bb0619c9754ee7d3084a5622a883d8f1db7fd8de1ad67c0873dbe46e377f3f"
+    },
+    {
+      "filename": "corpus/SOURCES.md",
+      "byte_size": 355,
+      "sha256": "6f2211d6ddb5543a3f178d402fef28189a6eb12245b8bf086552ca67b8aece10"
+    }
+  ]
+}

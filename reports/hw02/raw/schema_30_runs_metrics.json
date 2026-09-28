@@ -1,0 +1,9 @@
+{
+  "runs": 30,
+  "completed": 30,
+  "completion_rate": 1.0,
+  "mean_latency_ms": 848.42,
+  "classification_counts": {
+    "Valid first attempt": 30
+  }
+}

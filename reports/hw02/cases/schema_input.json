@@ -1,0 +1,4 @@
+{
+  "title": "OpenSSL certificate validation vulnerability",
+  "content": "A vulnerable OpenSSL version may allow an attacker to bypass certificate validation and intercept encrypted network traffic."
+}

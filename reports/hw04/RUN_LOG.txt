@@ -1,0 +1,156 @@
+DATA-260 HW4 Run Log
+
+Run timestamp UTC: 2026-09-28T02:51:46Z
+SID4: 0036
+DOMAIN_ID: 4
+PORT_BASE: 8036
+Branch: hw4
+Git tag: hw4
+
+Commands executed:
+
+1. Frontend build
+
+Command:
+npm --prefix frontend run build
+
+Result:
+- Vite production build completed successfully.
+- Frontend bundle generated successfully.
+
+2. HW4 verification
+
+Command:
+PYTHONPATH=. .venv/bin/python3 scripts/verify_hw4.py
+
+Result:
+- passed: true
+- all required files present: true
+- RAG documents: 5
+- RAG questions: 6
+- N+1 benchmark rows: 180
+- RAG benchmark rows: 72
+- benchmark reports: 5,000
+- benchmark advisories: 200
+- frontend build check: passed
+
+3. Database index
+
+Command:
+.venv/bin/python3 scripts/add_hw4_index.py
+
+Result:
+- Added index:
+  idx_vulnerability_reports_package_name
+- Before-index EXPLAIN showed a full table scan.
+- After-index EXPLAIN showed an index lookup using:
+  idx_vulnerability_reports_package_name
+
+4. N+1 benchmark
+
+Command:
+PYTHONPATH=. .venv/bin/python3 scripts/run_hw4_n1.py
+
+Configuration:
+- 5,000 vulnerability reports
+- 200 related advisories
+- 30 measured runs per condition
+- 2 warm-up runs
+- Page sizes: 10, 50, and 200
+
+Results:
+
+Page size 10:
+- Naive implementation: 11 queries
+- Fixed implementation: 2 queries
+- Naive p50 latency: 1.6666 ms
+- Fixed p50 latency: 0.5055 ms
+
+Page size 50:
+- Naive implementation: 51 queries
+- Fixed implementation: 2 queries
+- Naive p50 latency: 6.4875 ms
+- Fixed p50 latency: 0.9624 ms
+
+Page size 200:
+- Naive implementation: 201 queries
+- Fixed implementation: 2 queries
+- Naive p50 latency: 25.5755 ms
+- Fixed p50 latency: 2.4388 ms
+
+The naive implementation executed one query for the reports and one
+additional query for each report's related advisories. The fixed
+implementation used SQLAlchemy selectinload and remained at two queries
+for every page size.
+
+5. RAG experiment
+
+Command:
+OMP_NUM_THREADS=1
+MKL_NUM_THREADS=1
+VECLIB_MAXIMUM_THREADS=1
+TOKENIZERS_PARALLELISM=false
+PYTHONPATH=.
+.venv/bin/python3 scripts/run_hw4_rag.py
+
+Configuration:
+- Documents: 5
+- Questions: 6
+- Chunks: 21
+- Chunk size: 500 tokens
+- Chunk overlap: 50 tokens
+- Embedding model: sentence-transformers/all-MiniLM-L6-v2
+- Vector store: FAISS
+- Generation model: google/flan-t5-base
+- k values: 1, 2, 3, and 5
+
+Results:
+
+No-context strategy:
+- Retrieval recall: 1.0000
+- Answer accuracy: 0.5000
+- Faithfulness: 0.5000
+- Format compliance: 1.0000
+- Refusal accuracy: 1.0000
+
+Basic-context strategy:
+- Retrieval recall: 1.0000
+- Answer accuracy: 1.0000
+- Faithfulness: 1.0000
+- Format compliance: 1.0000
+- Refusal accuracy: 1.0000
+
+Engineered-context strategy:
+- Retrieval recall: 1.0000
+- Answer accuracy: 1.0000
+- Faithfulness: 1.0000
+- Format compliance: 1.0000
+- Refusal accuracy: 1.0000
+
+The evaluation included three answerable questions, one ambiguous
+question, one unsupported question, and one unrelated question. The
+system answered supported questions and returned REFUSAL responses for
+the ambiguous, unsupported, and unrelated questions.
+
+6. Output files
+
+The experiments wrote the following files:
+
+- reports/hw04/raw/n1_benchmark.csv
+- reports/hw04/raw/n1_benchmark.json
+- reports/hw04/raw/rag_results.csv
+- reports/hw04/raw/rag_results.json
+- reports/hw04/raw/rag_summary.json
+
+Final implementation notes:
+
+- React login, home, create, update, and delete operations were tested.
+- DeleteRecord.jsx was added.
+- A separate delete route was added at /delete/:id.
+- MySQL tables verified:
+  users
+  sessions
+  vulnerability_reports
+  related_advisories
+- A grounded fallback was used when the local language-model response
+  was incomplete.
