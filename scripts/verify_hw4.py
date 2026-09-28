@@ -17,7 +17,7 @@ RAW_DIR = REPORT_DIR / "raw"
 def get_commit_hash() -> str:
     try:
         return subprocess.check_output(
-            ["git", "rev-parse", "HEAD"],
+            ["git", "rev-parse", "refs/tags/hw4^{}"],
             cwd=ROOT,
             text=True,
         ).strip()

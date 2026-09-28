@@ -6,7 +6,7 @@
   "DOMAIN_ID": 4,
   "SEED": "0036",
   "VERIFY_SEED": 260036,
-  "commit_hash": "9c6a0fd46578b9536f8869929ed383a4c27f8e68",
+  "commit_hash": "f7ac59ba5cd6608cf34e61950b735c9b79025c02",
   "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
   "generation_model": "google/flan-t5-base",
   "checks": {
