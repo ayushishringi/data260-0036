@@ -1,5 +1,6 @@
 import csv
 import json
+import subprocess
 from pathlib import Path
 
 import yaml
@@ -13,6 +14,15 @@ ROOT = Path(__file__).resolve().parents[1]
 REPORT_DIR = ROOT / "reports" / "hw04"
 RAW_DIR = REPORT_DIR / "raw"
 
+def get_commit_hash() -> str:
+    try:
+        return subprocess.check_output(
+            ["git", "rev-parse", "HEAD"],
+            cwd=ROOT,
+            text=True,
+        ).strip()
+    except Exception:
+        return "unknown"
 
 def count_rows(csv_path: Path) -> int:
     with csv_path.open(newline="") as file:
@@ -144,6 +154,13 @@ def main() -> None:
         "SID4": "0036",
         "PORT_BASE": 8036,
         "DOMAIN_ID": 4,
+        "SEED": "0036",
+        "VERIFY_SEED": 260036,
+        "commit_hash": get_commit_hash(),
+        "embedding_model": (
+            "sentence-transformers/all-MiniLM-L6-v2"
+        ),
+        "generation_model": "google/flan-t5-base",
         "checks": checks,
     }
 

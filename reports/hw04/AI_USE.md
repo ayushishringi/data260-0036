@@ -1,62 +1,68 @@
-# HW4 Metrics
+# AI Use Disclosure
 
-## N+1 Experiment
+## 1. What I Used an AI Assistant For
 
-The experiment used 5,000 vulnerability reports and 200 related advisories. Each condition was measured using 30 runs after 2 warm-up runs.
+I used an AI assistant for:
 
-| Page size | Variant | Query count | p50 latency | p95 latency | p99 latency |
-|---:|---|---:|---:|---:|---:|
-| 10 | Naive | 11 | 1.6666 ms | 2.1878 ms | 2.3425 ms |
-| 10 | Fixed | 2 | 0.5055 ms | 0.5466 ms | 0.5773 ms |
-| 50 | Naive | 51 | 6.4875 ms | 7.3788 ms | 11.0407 ms |
-| 50 | Fixed | 2 | 0.9624 ms | 1.0918 ms | 1.4295 ms |
-| 200 | Naive | 201 | 25.5755 ms | 28.3768 ms | 31.1851 ms |
-| 200 | Fixed | 2 | 2.4388 ms | 2.5665 ms | 7.1390 ms |
+- Understanding the HW4 requirements and organizing the implementation steps.
+- Learning how to connect the React frontend to the FastAPI backend.
+- Debugging Vite, React Router, CORS, cookies, and session issues.
+- Understanding MySQL persistence and server-side authentication.
+- Learning how SQLAlchemy relationships can create the N+1 query problem.
+- Planning the naive and optimized database benchmark.
+- Learning how to add a database index and interpret EXPLAIN output.
+- Organizing the RAG corpus, documents, and evaluation questions.
+- Learning how chunking and FAISS vector retrieval work.
+- Reviewing benchmark results, RAG metrics, and verification outputs.
+- Receiving step-by-step explanations of the code and debugging process.
 
-The naive implementation performs one query for the reports and one additional query for each report's related advisories. The optimized implementation uses SQLAlchemy `selectinload`, reducing the operation to two queries regardless of page size.
+## 2. What I Did Myself
 
-## Database Index and EXPLAIN
+I personally:
 
-An index was added to the `package_name` column:
+- Created and edited the project files.
+- Installed the required Python and JavaScript dependencies.
+- Created the MySQL database and tables.
+- Implemented and tested authentication and CRUD operations.
+- Added and verified the package-name database index.
+- Ran the N+1 benchmark.
+- Prepared the RAG documents and evaluation questions.
+- Ran the chunked FAISS retrieval experiment.
+- Ran the local FLAN-T5 generation experiment.
+- Checked generated answers and refusal behavior.
+- Captured screenshots for the report.
+- Ran the verification script and frontend build.
+- Committed and pushed the final repository changes.
 
-    CREATE INDEX idx_vulnerability_reports_package_name
-    ON vulnerability_reports(package_name);
+## 3. AI-Generated Output That Required Revision
 
-The index was verified with:
+The first RAG implementation embedded entire documents and used manual cosine similarity. It did not satisfy the required chunk-level retrieval design.
 
-    SHOW INDEX FROM vulnerability_reports;
+The initial RAG evaluation also used only answerable questions and did not test ambiguity, unsupported questions, or unrelated questions.
 
-Before the index was added, the database used a full table scan for package-name lookup. After the index was added, the EXPLAIN output showed an index lookup using `idx_vulnerability_reports_package_name`.
+I revised the implementation to use:
 
-The reproducible index script is:
+- 500-token chunks
+- 50-token overlap
+- FAISS vector retrieval
+- Retrieved document and chunk identifiers
+- Similarity scores
+- A local `google/flan-t5-base` generation model
+- Ambiguous, unsupported, and unrelated evaluation questions
+- Refusal, faithfulness, accuracy, and format-compliance metrics
 
-    scripts/add_hw4_index.py
+## 4. How I Verified the Final Result
 
-## RAG Experiment
+I verified the final implementation by:
 
-The RAG experiment used five advisory documents and six evaluation questions. The documents were divided into 21 chunks using a chunk size of 500 tokens and an overlap of 50 tokens.
+- Running the FastAPI health check.
+- Testing registration and login.
+- Testing protected API requests with HTTP-only session cookies.
+- Testing GET, POST, PUT, and DELETE report operations.
+- Confirming the MySQL tables and stored records.
+- Running the N+1 benchmark with 5,000 reports and 200 advisories.
+- Running the RAG experiment with 21 chunks and 72 evaluation rows.
+- Running the HW4 verification script successfully.
+- Running the React frontend production build successfully.
 
-Chunk embeddings were generated using `sentence-transformers/all-MiniLM-L6-v2` and stored in a FAISS vector index. Answers were generated locally using `google/flan-t5-base`.
-
-| Strategy | k | Retrieval recall | Answer accuracy | Faithfulness | Format compliance | Refusal accuracy | p50 latency |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| No context | 1 | 1.0000 | 0.5000 | 0.5000 | 1.0000 | 1.0000 | 82.7329 ms |
-| No context | 2 | 1.0000 | 0.5000 | 0.5000 | 1.0000 | 1.0000 | 78.4819 ms |
-| No context | 3 | 1.0000 | 0.5000 | 0.5000 | 1.0000 | 1.0000 | 77.6329 ms |
-| No context | 5 | 1.0000 | 0.5000 | 0.5000 | 1.0000 | 1.0000 | 77.4640 ms |
-| Basic context | 1 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 225.2816 ms |
-| Basic context | 2 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 737.7227 ms |
-| Basic context | 3 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 807.0261 ms |
-| Basic context | 5 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 822.1456 ms |
-| Engineered context | 1 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 264.1690 ms |
-| Engineered context | 2 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 466.1197 ms |
-| Engineered context | 3 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 810.4412 ms |
-| Engineered context | 5 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 808.6037 ms |
-
-The questions included three normal answerable questions, one ambiguous question, one question whose answer was absent from the corpus, and one unrelated question.
-
-The system correctly answered the supported questions and returned `REFUSAL:` for the ambiguous, unsupported, and unrelated questions. This tested both grounded answering and refusal behavior.
-
-The no-context baseline retrieved the correct document but did not provide supporting context to the generator. As a result, its answer accuracy and faithfulness were lower. Both context-based strategies achieved perfect answer accuracy, faithfulness, format compliance, and refusal accuracy for this dataset.
-
-Increasing `k` increased latency because more chunks were passed to the generation model. The experiment used a grounded fallback when the language-model response was incomplete. The fallback extracted supported package, vulnerability, and fixed-version fields from the retrieved advisory documents while preserving a local language-model generation step.
+The local language model occasionally produced incomplete answers. Therefore, I added a grounded fallback that extracts supported package, vulnerability, and fixed-version fields from the retrieved advisory documents. The final system still includes an actual local language-model generation step, while the fallback prevents unsupported or incomplete answers from being reported as final answers.
