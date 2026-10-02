@@ -1,0 +1,9 @@
+HW5 run log
+Configuration: SID4=0036 PORT_BASE=8036 PREFIX=s0036 SEED=36 VERIFY_SEED=260036
+
+Run commands:
+PYTHONPATH=. python3 scripts/run_hw5_tests.py
+PYTHONPATH=. python3 scripts/run_hw5_faults.py
+PYTHONPATH=. python3 scripts/verify_hw5.py
+
+The commands produce the raw fault-injection CSV/JSON and verification.json in this directory.

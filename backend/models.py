@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from sqlalchemy import Boolean, DateTime, ForeignKey, Integer, String, Text
+from sqlalchemy import Boolean, DateTime, ForeignKey, Integer, String, Text, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from backend.database import Base
@@ -109,6 +109,22 @@ class VulnerabilityReport(Base):
         nullable=False,
     )
 
+    advisory_id: Mapped[int | None] = mapped_column(
+        ForeignKey("advisories.id", ondelete="RESTRICT"),
+        nullable=True,
+    )
+
+    available_count: Mapped[int] = mapped_column(
+        Integer,
+        nullable=False,
+        default=1,
+        server_default="1",
+    )
+
+    advisory: Mapped["Advisory | None"] = relationship(
+        back_populates="reports",
+    )
+
     advisories: Mapped[list["RelatedAdvisory"]] = relationship(
         back_populates="report",
         cascade="all, delete-orphan",
@@ -136,4 +152,28 @@ class RelatedAdvisory(Base):
 
     report: Mapped[VulnerabilityReport] = relationship(
         back_populates="advisories",
+    )
+
+
+class Advisory(Base):
+    """The HW5 related entity for vulnerability reports."""
+
+    __tablename__ = "advisories"
+    __table_args__ = (
+        UniqueConstraint("advisory_code", name="uq_advisories_code"),
+    )
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    name: Mapped[str] = mapped_column(String(255), nullable=False)
+    publisher: Mapped[str] = mapped_column(String(255), nullable=False)
+    advisory_code: Mapped[str] = mapped_column(String(80), nullable=False)
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime, nullable=False, default=datetime.utcnow
+    )
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime, nullable=False, default=datetime.utcnow, onupdate=datetime.utcnow
+    )
+
+    reports: Mapped[list[VulnerabilityReport]] = relationship(
+        back_populates="advisory",
     )

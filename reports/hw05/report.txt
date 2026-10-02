@@ -1,0 +1,25 @@
+DATA-260 HOMEWORK 5 — s0036
+
+Repository: data260-0036
+SID4: 0036    PORT_BASE: 8036    PREFIX: s0036    SEED: 36
+VERIFY_SEED: 260036    DOMAIN_ID: 4
+Hardware: MacBook Pro, Apple M5 Pro, 24 GB
+Local model: qwen3:4b through Ollama
+
+PART 1 — API AND REDUX
+VulnerabilityReport is the primary entity and Advisory is the related entity. The SQLAlchemy schema includes identifiers, unique advisory codes, timestamps, a report advisory foreign key, available_count defaulting to one, and restricted related-record deletion. FastAPI exposes paginated advisory CRUD, report CRUD, and reports-for-advisory. The React data layer uses Redux Toolkit thunks for fetch/create/update/delete and a Redux slice for state updates.
+
+PART 2 — MCP SERVERS
+meals_server.py provides search_meals_by_name, meals_by_ingredient, random_meal, and meal_details over TheMealDB with timeout/retry handling. domain_mcp_server.py provides search, detail, and aggregate with the shared {ok, data, error} envelope. Both servers use STDIO and Python logging for diagnostics.
+
+PART 3 — CONTRACTS AND FAULTS
+The domain tools validate invalid query, id, limit, and severity inputs. Fault injection uses VERIFY_SEED 260036, three attempts, a five-second timeout, and bounded exponential backoff. Raw records for 0%, 20%, and 50% rates are in reports/hw05/raw/fault_injection.csv and .json; the generated summary is fault_summary.json.
+
+PART 4 — SAFE ENTRY POINT
+execute_tool is the only agent-facing entry point and always returns a JSON string with the shared envelope. The offline runner has eight assert-based tests, including valid and invalid calls for all three tools.
+
+PART 5 — SAFETY AND AGENT
+The safety rule blocks aggregate requests for restricted unavailable inventory. run_agent enforces max_steps and writes each tool call and final stop reason to raw/agent_runs.jsonl. Four scenario summaries are in raw/agent_scenarios.json. Reflection and AI-use disclosure are included in REFLECTION.md and AI_USE.md.
+
+VERIFICATION
+Offline tests: 8/8 passed. Frontend production build: passed. Run PYTHONPATH=. python3 scripts/verify_hw5.py to regenerate verification.json.

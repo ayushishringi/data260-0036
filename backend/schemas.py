@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import Literal
 
 from pydantic import BaseModel, EmailStr, Field, field_validator
@@ -18,6 +19,8 @@ class ReportInput(BaseModel):
     description: str = Field(min_length=26)
     severity: Severity
     agreedToTerms: bool
+    advisoryId: int | None = Field(default=None, ge=1)
+    availableCount: int = Field(default=1, ge=0)
 
     @field_validator(
         "packageName",
@@ -42,3 +45,23 @@ class ReportInput(BaseModel):
         return value
 class RegisterRequest(LoginRequest):
     name: str = Field(min_length=1)
+
+
+class AdvisoryInput(BaseModel):
+    name: str = Field(min_length=1, max_length=255)
+    publisher: str = Field(min_length=1, max_length=255)
+    advisoryCode: str = Field(min_length=2, max_length=80, pattern=r"^[A-Za-z0-9._:-]+$")
+
+    @field_validator("name", "publisher", "advisoryCode")
+    @classmethod
+    def trim_text(cls, value: str) -> str:
+        value = value.strip()
+        if not value:
+            raise ValueError("This field cannot be blank.")
+        return value
+
+
+class AdvisoryResponse(AdvisoryInput):
+    id: int
+    createdAt: datetime
+    updatedAt: datetime

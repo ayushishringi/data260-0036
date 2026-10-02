@@ -12,6 +12,9 @@
   "dependencies": {
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
+    "@reduxjs/toolkit": "^2.9.0",
+    "axios": "^1.12.2",
+    "react-redux": "^9.2.0",
     "react-router-dom": "^7.18.4"
   },
   "devDependencies": {

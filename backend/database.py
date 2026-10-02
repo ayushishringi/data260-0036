@@ -14,6 +14,7 @@ DATABASE_URL = os.getenv(
 engine = create_engine(
     DATABASE_URL,
     pool_pre_ping=True,
+    connect_args={"connect_timeout": 5} if DATABASE_URL.startswith("mysql") else {},
 )
 
 

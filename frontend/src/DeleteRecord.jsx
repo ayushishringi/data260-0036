@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-
-const API_BASE = "http://127.0.0.1:8036";
+import { useDispatch } from "react-redux";
+import { deleteReport } from "./store";
 
 function DeleteRecord() {
   const { id } = useParams();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const [error, setError] = useState("");
   const [deleting, setDeleting] = useState(false);
@@ -15,21 +16,7 @@ function DeleteRecord() {
     setDeleting(true);
 
     try {
-      const response = await fetch(
-        `${API_BASE}/api/reports/${id}`,
-        {
-          method: "DELETE",
-          credentials: "include",
-        }
-      );
-
-      if (!response.ok) {
-        const data = await response.json().catch(() => ({}));
-
-        throw new Error(
-          data.detail || "Could not delete report."
-        );
-      }
+      await dispatch(deleteReport(Number(id))).unwrap();
 
       navigate("/");
     } catch (err) {

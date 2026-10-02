@@ -17,3 +17,4 @@ pymysql
 email-validator
 transformers
 torch
+mcp[cli]<2

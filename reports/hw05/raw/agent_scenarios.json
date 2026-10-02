@@ -1,0 +1,26 @@
+[
+  {
+    "scenario": "normal_completion",
+    "steps": 1,
+    "stop_reason": "normal_completion",
+    "tool_call_count": 1
+  },
+  {
+    "scenario": "max_steps",
+    "steps": 2,
+    "stop_reason": "max_steps",
+    "tool_call_count": 2
+  },
+  {
+    "scenario": "safety_rule_block",
+    "steps": 1,
+    "stop_reason": "safety_rule_block",
+    "tool_call_count": 1
+  },
+  {
+    "scenario": "invalid_tool_input",
+    "steps": 1,
+    "stop_reason": "normal_completion",
+    "tool_call_count": 1
+  }
+]

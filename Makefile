@@ -2,7 +2,7 @@ PYTHON ?= .venv/bin/python3
 PORT ?= 8036
 IMAGE ?= data260-0036-hw2:latest
 
-.PHONY: run run-api run-web agents client verify-hw01 verify-hw02
+.PHONY: run run-api run-web agents client verify-hw01 verify-hw02 verify-hw05 test-hw05 faults-hw05
 
 run: run-api
 
@@ -23,6 +23,15 @@ verify-hw01:
 
 verify-hw02:
 	$(PYTHON) scripts/verify_hw02.py
+
+test-hw05:
+	PYTHONPATH=. $(PYTHON) scripts/run_hw5_tests.py
+
+faults-hw05:
+	PYTHONPATH=. $(PYTHON) scripts/run_hw5_faults.py
+
+verify-hw05:
+	PYTHONPATH=. $(PYTHON) scripts/verify_hw5.py
 
 docker-build:
 	docker build -t $(IMAGE) .

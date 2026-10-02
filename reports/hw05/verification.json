@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "homework": "DATA-260 HW5",
+  "SID4": "0036",
+  "PORT_BASE": 8036,
+  "PREFIX": "s0036",
+  "SEED": 36,
+  "VERIFY_SEED": 260036,
+  "DOMAIN_ID": 4,
+  "commit_hash": "f29fc8822b848844e91bfd45fbab43a1a1c8a7dc",
+  "model": "qwen3:4b (Ollama; offline tests use MockModel)",
+  "checks": {
+    "offline_tool_tests": {
+      "passed": true,
+      "output": "PASS search valid\nPASS search invalid query\nPASS detail valid\nPASS detail invalid id\nPASS aggregate valid\nPASS aggregate invalid severity\nPASS safety rule blocked\nPASS agent max_steps\n8/8 tests passed\n"
+    },
+    "required_files": {
+      "backend/models.py": true,
+      "backend/report_api.py": true,
+      "frontend/src/store.js": true,
+      "domain_mcp_server.py": true,
+      "meals_server.py": true,
+      "scripts/run_hw5_tests.py": true,
+      "scripts/run_hw5_faults.py": true,
+      "reports/hw05/METRICS.md": true
+    },
+    "all_required_files_present": true
+  }
+}

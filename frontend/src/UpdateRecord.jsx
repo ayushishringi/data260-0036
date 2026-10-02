@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-
-const API_BASE = "http://127.0.0.1:8036";
+import { useDispatch } from "react-redux";
+import { updateReport } from "./store";
+import { API_BASE } from "./api";
 
 function UpdateRecord() {
   const { id } = useParams();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const [form, setForm] = useState(null);
   const [error, setError] = useState("");
@@ -34,6 +36,8 @@ function UpdateRecord() {
           description: data.description,
           severity: data.severity,
           agreedToTerms: data.agreedToTerms,
+          advisoryId: data.advisoryId ?? null,
+          availableCount: data.availableCount ?? 1,
         });
       } catch (err) {
         setError(err.message);
@@ -58,27 +62,11 @@ function UpdateRecord() {
     setSaving(true);
 
     try {
-      const response = await fetch(
-        `${API_BASE}/api/reports/${id}`,
-        {
-          method: "PUT",
-          credentials: "include",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(form),
-        }
-      );
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.detail || "Could not update report.");
-      }
+      await dispatch(updateReport({ id, payload: form })).unwrap();
 
       navigate("/");
     } catch (err) {
-      setError(err.message);
+      setError(err?.message || String(err));
     } finally {
       setSaving(false);
     }

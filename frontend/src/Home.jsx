@@ -1,37 +1,23 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
-const API_BASE = "http://127.0.0.1:8036";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchReports } from "./store";
+import { API_BASE } from "./api";
 
 function Home({ user, onLogout }) {
   const navigate = useNavigate();
 
-  const [reports, setReports] = useState([]);
-  const [error, setError] = useState("");
-
-  async function loadReports() {
-    try {
-      const response = await fetch(`${API_BASE}/api/reports`, {
-        credentials: "include",
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(
-          data.detail || "Could not load reports."
-        );
-      }
-
-      setReports(data);
-    } catch (err) {
-      setError(err.message);
-    }
-  }
+  const dispatch = useDispatch();
+  const { items: reports, error, loading } = useSelector((state) => state.reports);
 
   useEffect(() => {
-    loadReports();
-  }, []);
+    dispatch(fetchReports()).unwrap().catch((message) => {
+      if (String(message).toLowerCase().includes("login")) {
+        onLogout();
+        navigate("/login", { replace: true });
+      }
+    });
+  }, [dispatch, navigate, onLogout]);
 
   async function handleLogout() {
     await fetch(`${API_BASE}/api/auth/logout`, {
@@ -79,6 +65,8 @@ function Home({ user, onLogout }) {
           {error}
         </p>
       )}
+
+      {loading && <p>Loading reports...</p>}
 
       {visibleReports.length === 0 && !error && (
         <p>No vulnerability reports found.</p>

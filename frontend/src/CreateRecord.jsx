@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
-const API_BASE = "http://127.0.0.1:8036";
+import { useDispatch } from "react-redux";
+import { createReport } from "./store";
 
 function CreateRecord() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const [form, setForm] = useState({
     packageName: "",
@@ -33,20 +34,7 @@ function CreateRecord() {
     setSaving(true);
 
     try {
-      const response = await fetch(`${API_BASE}/api/reports`, {
-        method: "POST",
-        credentials: "include",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(form),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.detail || "Could not create report.");
-      }
+      await dispatch(createReport(form)).unwrap();
 
       navigate("/");
     } catch (err) {

@@ -1,0 +1,58 @@
+{
+  "domain": {
+    "search_valid": {
+      "data": [
+        {
+          "advisory_code": "CVE-2024-9999",
+          "available_count": 1,
+          "id": 1,
+          "package": "openssl",
+          "severity": "critical"
+        }
+      ],
+      "error": null,
+      "ok": true
+    },
+    "search_invalid": {
+      "data": null,
+      "error": "query must be a non-empty string",
+      "ok": false
+    },
+    "detail_valid": {
+      "data": {
+        "advisory_code": "CVE-2024-9999",
+        "available_count": 1,
+        "id": 1,
+        "package": "openssl",
+        "severity": "critical"
+      },
+      "error": null,
+      "ok": true
+    },
+    "detail_invalid": {
+      "data": null,
+      "error": "id must be an integer",
+      "ok": false
+    },
+    "aggregate_valid": {
+      "data": {
+        "available_count_total": 4,
+        "by_severity": {
+          "critical": 1,
+          "high": 1,
+          "low": 0,
+          "medium": 0
+        },
+        "count": 2
+      },
+      "error": null,
+      "ok": true
+    },
+    "aggregate_invalid": {
+      "data": null,
+      "error": "severity must be critical, high, medium, or low",
+      "ok": false
+    }
+  },
+  "meals": "Run mcp dev meals_server.py and capture four Inspector calls when network is available."
+}
