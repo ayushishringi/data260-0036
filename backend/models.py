@@ -109,6 +109,19 @@ class VulnerabilityReport(Base):
         nullable=False,
     )
 
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime,
+        nullable=False,
+        default=datetime.utcnow,
+    )
+
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime,
+        nullable=False,
+        default=datetime.utcnow,
+        onupdate=datetime.utcnow,
+    )
+
     advisory_id: Mapped[int | None] = mapped_column(
         ForeignKey("advisories.id", ondelete="RESTRICT"),
         nullable=True,

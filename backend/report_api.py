@@ -26,6 +26,8 @@ def report_to_dict(report: VulnerabilityReport) -> dict:
         "severity": report.severity,
         "agreedToTerms": report.agreed_to_terms,
         "submissionDate": report.submission_date.isoformat(),
+        "createdAt": report.created_at.isoformat(),
+        "updatedAt": report.updated_at.isoformat(),
         "advisoryId": report.advisory_id,
         "availableCount": report.available_count,
         "advisory": (

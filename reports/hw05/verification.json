@@ -7,7 +7,7 @@
   "SEED": 36,
   "VERIFY_SEED": 260036,
   "DOMAIN_ID": 4,
-  "commit_hash": "f29fc8822b848844e91bfd45fbab43a1a1c8a7dc",
+  "commit_hash": "dcb7d6b38d4842cbc1265194787805c48971f915",
   "model": "qwen3:4b (Ollama; offline tests use MockModel)",
   "checks": {
     "offline_tool_tests": {
@@ -24,6 +24,27 @@
       "scripts/run_hw5_faults.py": true,
       "reports/hw05/METRICS.md": true
     },
-    "all_required_files_present": true
+    "all_required_files_present": true,
+    "runtime_entrypoints": {
+      "fastapi_app_import": true,
+      "fastapi_health_route": true,
+      "fastapi_reports_route": true,
+      "domain_mcp_import": true,
+      "domain_mcp_tools": [
+        "aggregate",
+        "detail",
+        "search"
+      ],
+      "domain_mcp_tools_complete": true,
+      "meals_mcp_import": true,
+      "meals_mcp_tools": [
+        "meal_details",
+        "meals_by_ingredient",
+        "random_meal",
+        "search_meals_by_name"
+      ],
+      "meals_mcp_tools_complete": true,
+      "runtime_entrypoints_ready": true
+    }
   }
 }
