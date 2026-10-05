@@ -4,20 +4,20 @@
     {
       "rate": 0.0,
       "success_rate": 1.0,
-      "mean_latency_ms": 0.0007,
-      "p99_latency_ms": 0.0027
+      "mean_latency_ms": 0.0005,
+      "p99_latency_ms": 0.0018
     },
     {
       "rate": 0.2,
       "success_rate": 1.0,
-      "mean_latency_ms": 3.2134,
-      "p99_latency_ms": 37.561
+      "mean_latency_ms": 3.5059,
+      "p99_latency_ms": 37.5471
     },
     {
       "rate": 0.5,
       "success_rate": 0.92,
-      "mean_latency_ms": 10.9915,
-      "p99_latency_ms": 37.5854
+      "mean_latency_ms": 10.9042,
+      "p99_latency_ms": 37.6196
     }
   ]
 }
