@@ -7,7 +7,6 @@
   "SEED": 36,
   "VERIFY_SEED": 260036,
   "DOMAIN_ID": 4,
-  "commit_hash": "ca5fd159274466a451d9fe5aabc5ed22658c53dc",
   "model": "qwen3:4b (Ollama; offline tests use MockModel)",
   "checks": {
     "offline_tool_tests": {
@@ -22,6 +21,7 @@
       "meals_server.py": true,
       "scripts/run_hw5_tests.py": true,
       "scripts/run_hw5_faults.py": true,
+      "scripts/run_retry_cases.py": true,
       "reports/hw05/METRICS.md": true
     },
     "all_required_files_present": true,
