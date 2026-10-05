@@ -5,7 +5,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0021,
+    "latency_ms": 0.0018,
     "result": "ok",
     "error": null
   },
@@ -65,7 +65,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0004,
+    "latency_ms": 0.0005,
     "result": "ok",
     "error": null
   },
@@ -95,7 +95,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0004,
+    "latency_ms": 0.0005,
     "result": "ok",
     "error": null
   },
@@ -105,7 +105,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0004,
+    "latency_ms": 0.0005,
     "result": "ok",
     "error": null
   },
@@ -115,7 +115,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0005,
+    "latency_ms": 0.0004,
     "result": "ok",
     "error": null
   },
@@ -195,7 +195,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0005,
+    "latency_ms": 0.0004,
     "result": "ok",
     "error": null
   },
@@ -235,7 +235,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0005,
+    "latency_ms": 0.0004,
     "result": "ok",
     "error": null
   },
@@ -255,7 +255,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0005,
+    "latency_ms": 0.0004,
     "result": "ok",
     "error": null
   },
@@ -265,7 +265,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0005,
+    "latency_ms": 0.0004,
     "result": "ok",
     "error": null
   },
@@ -285,7 +285,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0005,
+    "latency_ms": 0.0004,
     "result": "ok",
     "error": null
   },
@@ -295,7 +295,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0005,
+    "latency_ms": 0.0004,
     "result": "ok",
     "error": null
   },
@@ -335,7 +335,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0005,
+    "latency_ms": 0.0004,
     "result": "ok",
     "error": null
   },
@@ -365,7 +365,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0005,
+    "latency_ms": 0.0004,
     "result": "ok",
     "error": null
   },
@@ -405,7 +405,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0005,
+    "latency_ms": 0.0004,
     "result": "ok",
     "error": null
   },
@@ -425,7 +425,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0005,
+    "latency_ms": 0.0004,
     "result": "ok",
     "error": null
   },
@@ -455,7 +455,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0005,
+    "latency_ms": 0.0004,
     "result": "ok",
     "error": null
   },
@@ -485,7 +485,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0005,
+    "latency_ms": 0.0004,
     "result": "ok",
     "error": null
   },
@@ -565,7 +565,7 @@
     "status": "success",
     "attempts": 2,
     "injected_failures": 1,
-    "latency_ms": 10.1297,
+    "latency_ms": 12.5373,
     "result": "ok",
     "error": null
   },
@@ -575,7 +575,7 @@
     "status": "success",
     "attempts": 2,
     "injected_failures": 1,
-    "latency_ms": 11.577,
+    "latency_ms": 10.7215,
     "result": "ok",
     "error": null
   },
@@ -585,7 +585,7 @@
     "status": "success",
     "attempts": 2,
     "injected_failures": 1,
-    "latency_ms": 12.5485,
+    "latency_ms": 11.091,
     "result": "ok",
     "error": null
   },
@@ -595,7 +595,7 @@
     "status": "success",
     "attempts": 2,
     "injected_failures": 1,
-    "latency_ms": 12.5247,
+    "latency_ms": 12.528,
     "result": "ok",
     "error": null
   },
@@ -605,7 +605,7 @@
     "status": "success",
     "attempts": 3,
     "injected_failures": 2,
-    "latency_ms": 37.5661,
+    "latency_ms": 37.5361,
     "result": "ok",
     "error": null
   },
@@ -615,7 +615,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0035,
+    "latency_ms": 0.002,
     "result": "ok",
     "error": null
   },
@@ -625,7 +625,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0025,
+    "latency_ms": 0.0017,
     "result": "ok",
     "error": null
   },
@@ -635,7 +635,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0007,
+    "latency_ms": 0.0006,
     "result": "ok",
     "error": null
   },
@@ -685,7 +685,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0005,
+    "latency_ms": 0.0006,
     "result": "ok",
     "error": null
   },
@@ -695,7 +695,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0005,
+    "latency_ms": 0.0006,
     "result": "ok",
     "error": null
   },
@@ -735,7 +735,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0005,
+    "latency_ms": 0.0006,
     "result": "ok",
     "error": null
   },
@@ -745,7 +745,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0005,
+    "latency_ms": 0.0006,
     "result": "ok",
     "error": null
   },
@@ -755,7 +755,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0005,
+    "latency_ms": 0.0006,
     "result": "ok",
     "error": null
   },
@@ -765,7 +765,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0005,
+    "latency_ms": 0.0006,
     "result": "ok",
     "error": null
   },
@@ -815,7 +815,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0005,
+    "latency_ms": 0.0006,
     "result": "ok",
     "error": null
   },
@@ -835,7 +835,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0005,
+    "latency_ms": 0.0006,
     "result": "ok",
     "error": null
   },
@@ -845,7 +845,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0005,
+    "latency_ms": 0.0006,
     "result": "ok",
     "error": null
   },
@@ -855,7 +855,7 @@
     "status": "success",
     "attempts": 3,
     "injected_failures": 2,
-    "latency_ms": 32.8608,
+    "latency_ms": 37.1523,
     "result": "ok",
     "error": null
   },
@@ -865,13 +865,83 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0039,
+    "latency_ms": 0.0061,
     "result": "ok",
     "error": null
   },
   {
     "rate": 0.2,
     "call": 38,
+    "status": "success",
+    "attempts": 1,
+    "injected_failures": 0,
+    "latency_ms": 0.0018,
+    "result": "ok",
+    "error": null
+  },
+  {
+    "rate": 0.2,
+    "call": 39,
+    "status": "success",
+    "attempts": 1,
+    "injected_failures": 0,
+    "latency_ms": 0.0012,
+    "result": "ok",
+    "error": null
+  },
+  {
+    "rate": 0.2,
+    "call": 40,
+    "status": "success",
+    "attempts": 3,
+    "injected_failures": 2,
+    "latency_ms": 37.614,
+    "result": "ok",
+    "error": null
+  },
+  {
+    "rate": 0.2,
+    "call": 41,
+    "status": "success",
+    "attempts": 1,
+    "injected_failures": 0,
+    "latency_ms": 0.0213,
+    "result": "ok",
+    "error": null
+  },
+  {
+    "rate": 0.2,
+    "call": 42,
+    "status": "success",
+    "attempts": 1,
+    "injected_failures": 0,
+    "latency_ms": 0.0072,
+    "result": "ok",
+    "error": null
+  },
+  {
+    "rate": 0.2,
+    "call": 43,
+    "status": "success",
+    "attempts": 2,
+    "injected_failures": 1,
+    "latency_ms": 12.5483,
+    "result": "ok",
+    "error": null
+  },
+  {
+    "rate": 0.2,
+    "call": 44,
+    "status": "success",
+    "attempts": 1,
+    "injected_failures": 0,
+    "latency_ms": 0.0119,
+    "result": "ok",
+    "error": null
+  },
+  {
+    "rate": 0.2,
+    "call": 45,
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
@@ -881,81 +951,11 @@
   },
   {
     "rate": 0.2,
-    "call": 39,
-    "status": "success",
-    "attempts": 1,
-    "injected_failures": 0,
-    "latency_ms": 0.0008,
-    "result": "ok",
-    "error": null
-  },
-  {
-    "rate": 0.2,
-    "call": 40,
-    "status": "success",
-    "attempts": 3,
-    "injected_failures": 2,
-    "latency_ms": 34.1346,
-    "result": "ok",
-    "error": null
-  },
-  {
-    "rate": 0.2,
-    "call": 41,
-    "status": "success",
-    "attempts": 1,
-    "injected_failures": 0,
-    "latency_ms": 0.0042,
-    "result": "ok",
-    "error": null
-  },
-  {
-    "rate": 0.2,
-    "call": 42,
-    "status": "success",
-    "attempts": 1,
-    "injected_failures": 0,
-    "latency_ms": 0.0008,
-    "result": "ok",
-    "error": null
-  },
-  {
-    "rate": 0.2,
-    "call": 43,
-    "status": "success",
-    "attempts": 2,
-    "injected_failures": 1,
-    "latency_ms": 12.5278,
-    "result": "ok",
-    "error": null
-  },
-  {
-    "rate": 0.2,
-    "call": 44,
-    "status": "success",
-    "attempts": 1,
-    "injected_failures": 0,
-    "latency_ms": 0.0023,
-    "result": "ok",
-    "error": null
-  },
-  {
-    "rate": 0.2,
-    "call": 45,
-    "status": "success",
-    "attempts": 1,
-    "injected_failures": 0,
-    "latency_ms": 0.0008,
-    "result": "ok",
-    "error": null
-  },
-  {
-    "rate": 0.2,
     "call": 46,
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0005,
+    "latency_ms": 0.0006,
     "result": "ok",
     "error": null
   },
@@ -965,7 +965,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0005,
+    "latency_ms": 0.0018,
     "result": "ok",
     "error": null
   },
@@ -985,7 +985,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0006,
+    "latency_ms": 0.0005,
     "result": "ok",
     "error": null
   },
@@ -1015,7 +1015,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0005,
+    "latency_ms": 0.0008,
     "result": "ok",
     "error": null
   },
@@ -1025,7 +1025,7 @@
     "status": "success",
     "attempts": 2,
     "injected_failures": 1,
-    "latency_ms": 12.4196,
+    "latency_ms": 10.0615,
     "result": "ok",
     "error": null
   },
@@ -1035,7 +1035,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0067,
+    "latency_ms": 0.0021,
     "result": "ok",
     "error": null
   },
@@ -1045,7 +1045,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0107,
+    "latency_ms": 0.0007,
     "result": "ok",
     "error": null
   },
@@ -1055,7 +1055,7 @@
     "status": "success",
     "attempts": 3,
     "injected_failures": 2,
-    "latency_ms": 37.6434,
+    "latency_ms": 30.3595,
     "result": "ok",
     "error": null
   },
@@ -1065,7 +1065,7 @@
     "status": "success",
     "attempts": 2,
     "injected_failures": 1,
-    "latency_ms": 12.5298,
+    "latency_ms": 12.5272,
     "result": "ok",
     "error": null
   },
@@ -1075,7 +1075,7 @@
     "status": "success",
     "attempts": 2,
     "injected_failures": 1,
-    "latency_ms": 11.2339,
+    "latency_ms": 12.1642,
     "result": "ok",
     "error": null
   },
@@ -1085,7 +1085,7 @@
     "status": "success",
     "attempts": 2,
     "injected_failures": 1,
-    "latency_ms": 11.3369,
+    "latency_ms": 12.5556,
     "result": "ok",
     "error": null
   },
@@ -1095,7 +1095,7 @@
     "status": "failure",
     "attempts": 3,
     "injected_failures": 3,
-    "latency_ms": 35.3762,
+    "latency_ms": 37.5761,
     "result": null,
     "error": "operation failed after 3 attempts: injected transient failure"
   },
@@ -1105,7 +1105,7 @@
     "status": "success",
     "attempts": 3,
     "injected_failures": 2,
-    "latency_ms": 33.2349,
+    "latency_ms": 37.5544,
     "result": "ok",
     "error": null
   },
@@ -1115,7 +1115,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0038,
+    "latency_ms": 0.0032,
     "result": "ok",
     "error": null
   },
@@ -1125,7 +1125,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0008,
+    "latency_ms": 0.0023,
     "result": "ok",
     "error": null
   },
@@ -1135,7 +1135,7 @@
     "status": "success",
     "attempts": 3,
     "injected_failures": 2,
-    "latency_ms": 37.5354,
+    "latency_ms": 37.5432,
     "result": "ok",
     "error": null
   },
@@ -1145,83 +1145,13 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0015,
+    "latency_ms": 0.0018,
     "result": "ok",
     "error": null
   },
   {
     "rate": 0.5,
     "call": 16,
-    "status": "success",
-    "attempts": 1,
-    "injected_failures": 0,
-    "latency_ms": 0.0007,
-    "result": "ok",
-    "error": null
-  },
-  {
-    "rate": 0.5,
-    "call": 17,
-    "status": "success",
-    "attempts": 1,
-    "injected_failures": 0,
-    "latency_ms": 0.0007,
-    "result": "ok",
-    "error": null
-  },
-  {
-    "rate": 0.5,
-    "call": 18,
-    "status": "success",
-    "attempts": 2,
-    "injected_failures": 1,
-    "latency_ms": 12.5087,
-    "result": "ok",
-    "error": null
-  },
-  {
-    "rate": 0.5,
-    "call": 19,
-    "status": "success",
-    "attempts": 2,
-    "injected_failures": 1,
-    "latency_ms": 12.5327,
-    "result": "ok",
-    "error": null
-  },
-  {
-    "rate": 0.5,
-    "call": 20,
-    "status": "success",
-    "attempts": 1,
-    "injected_failures": 0,
-    "latency_ms": 0.0036,
-    "result": "ok",
-    "error": null
-  },
-  {
-    "rate": 0.5,
-    "call": 21,
-    "status": "success",
-    "attempts": 2,
-    "injected_failures": 1,
-    "latency_ms": 12.5122,
-    "result": "ok",
-    "error": null
-  },
-  {
-    "rate": 0.5,
-    "call": 22,
-    "status": "success",
-    "attempts": 1,
-    "injected_failures": 0,
-    "latency_ms": 0.0014,
-    "result": "ok",
-    "error": null
-  },
-  {
-    "rate": 0.5,
-    "call": 23,
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
@@ -1231,11 +1161,81 @@
   },
   {
     "rate": 0.5,
+    "call": 17,
+    "status": "success",
+    "attempts": 1,
+    "injected_failures": 0,
+    "latency_ms": 0.0007,
+    "result": "ok",
+    "error": null
+  },
+  {
+    "rate": 0.5,
+    "call": 18,
+    "status": "success",
+    "attempts": 2,
+    "injected_failures": 1,
+    "latency_ms": 10.5175,
+    "result": "ok",
+    "error": null
+  },
+  {
+    "rate": 0.5,
+    "call": 19,
+    "status": "success",
+    "attempts": 2,
+    "injected_failures": 1,
+    "latency_ms": 10.766,
+    "result": "ok",
+    "error": null
+  },
+  {
+    "rate": 0.5,
+    "call": 20,
+    "status": "success",
+    "attempts": 1,
+    "injected_failures": 0,
+    "latency_ms": 0.0025,
+    "result": "ok",
+    "error": null
+  },
+  {
+    "rate": 0.5,
+    "call": 21,
+    "status": "success",
+    "attempts": 2,
+    "injected_failures": 1,
+    "latency_ms": 12.1129,
+    "result": "ok",
+    "error": null
+  },
+  {
+    "rate": 0.5,
+    "call": 22,
+    "status": "success",
+    "attempts": 1,
+    "injected_failures": 0,
+    "latency_ms": 0.0032,
+    "result": "ok",
+    "error": null
+  },
+  {
+    "rate": 0.5,
+    "call": 23,
+    "status": "success",
+    "attempts": 1,
+    "injected_failures": 0,
+    "latency_ms": 0.0008,
+    "result": "ok",
+    "error": null
+  },
+  {
+    "rate": 0.5,
     "call": 24,
     "status": "success",
     "attempts": 2,
     "injected_failures": 1,
-    "latency_ms": 12.5325,
+    "latency_ms": 12.4207,
     "result": "ok",
     "error": null
   },
@@ -1245,7 +1245,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0023,
+    "latency_ms": 0.002,
     "result": "ok",
     "error": null
   },
@@ -1255,7 +1255,7 @@
     "status": "failure",
     "attempts": 3,
     "injected_failures": 3,
-    "latency_ms": 37.1556,
+    "latency_ms": 37.4986,
     "result": null,
     "error": "operation failed after 3 attempts: injected transient failure"
   },
@@ -1265,7 +1265,7 @@
     "status": "success",
     "attempts": 3,
     "injected_failures": 2,
-    "latency_ms": 33.27,
+    "latency_ms": 37.5509,
     "result": "ok",
     "error": null
   },
@@ -1275,7 +1275,7 @@
     "status": "success",
     "attempts": 2,
     "injected_failures": 1,
-    "latency_ms": 11.5815,
+    "latency_ms": 12.5258,
     "result": "ok",
     "error": null
   },
@@ -1285,7 +1285,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0083,
+    "latency_ms": 0.002,
     "result": "ok",
     "error": null
   },
@@ -1295,7 +1295,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0015,
+    "latency_ms": 0.0018,
     "result": "ok",
     "error": null
   },
@@ -1315,7 +1315,7 @@
     "status": "success",
     "attempts": 2,
     "injected_failures": 1,
-    "latency_ms": 12.5332,
+    "latency_ms": 12.5217,
     "result": "ok",
     "error": null
   },
@@ -1325,7 +1325,7 @@
     "status": "success",
     "attempts": 2,
     "injected_failures": 1,
-    "latency_ms": 10.6912,
+    "latency_ms": 12.7645,
     "result": "ok",
     "error": null
   },
@@ -1335,7 +1335,7 @@
     "status": "failure",
     "attempts": 3,
     "injected_failures": 3,
-    "latency_ms": 35.0815,
+    "latency_ms": 34.6257,
     "result": null,
     "error": "operation failed after 3 attempts: injected transient failure"
   },
@@ -1345,7 +1345,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0097,
+    "latency_ms": 0.0061,
     "result": "ok",
     "error": null
   },
@@ -1355,7 +1355,7 @@
     "status": "success",
     "attempts": 3,
     "injected_failures": 2,
-    "latency_ms": 35.8021,
+    "latency_ms": 35.8359,
     "result": "ok",
     "error": null
   },
@@ -1365,7 +1365,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0028,
+    "latency_ms": 0.0045,
     "result": "ok",
     "error": null
   },
@@ -1375,7 +1375,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.001,
+    "latency_ms": 0.0014,
     "result": "ok",
     "error": null
   },
@@ -1385,7 +1385,7 @@
     "status": "success",
     "attempts": 2,
     "injected_failures": 1,
-    "latency_ms": 12.5233,
+    "latency_ms": 12.5453,
     "result": "ok",
     "error": null
   },
@@ -1395,7 +1395,7 @@
     "status": "success",
     "attempts": 3,
     "injected_failures": 2,
-    "latency_ms": 34.3591,
+    "latency_ms": 33.85,
     "result": "ok",
     "error": null
   },
@@ -1405,7 +1405,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0073,
+    "latency_ms": 0.0065,
     "result": "ok",
     "error": null
   },
@@ -1415,7 +1415,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.001,
+    "latency_ms": 0.0028,
     "result": "ok",
     "error": null
   },
@@ -1425,7 +1425,7 @@
     "status": "failure",
     "attempts": 3,
     "injected_failures": 3,
-    "latency_ms": 33.2606,
+    "latency_ms": 37.3298,
     "result": null,
     "error": "operation failed after 3 attempts: injected transient failure"
   },
@@ -1435,7 +1435,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.003,
+    "latency_ms": 0.0082,
     "result": "ok",
     "error": null
   },
@@ -1445,7 +1445,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0008,
+    "latency_ms": 0.003,
     "result": "ok",
     "error": null
   },
@@ -1455,7 +1455,7 @@
     "status": "success",
     "attempts": 3,
     "injected_failures": 2,
-    "latency_ms": 30.1878,
+    "latency_ms": 34.175,
     "result": "ok",
     "error": null
   },
@@ -1465,7 +1465,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.004,
+    "latency_ms": 0.0048,
     "result": "ok",
     "error": null
   },
@@ -1475,7 +1475,7 @@
     "status": "success",
     "attempts": 2,
     "injected_failures": 1,
-    "latency_ms": 10.6695,
+    "latency_ms": 12.393,
     "result": "ok",
     "error": null
   },
@@ -1495,7 +1495,7 @@
     "status": "success",
     "attempts": 1,
     "injected_failures": 0,
-    "latency_ms": 0.0007,
+    "latency_ms": 0.0015,
     "result": "ok",
     "error": null
   }
