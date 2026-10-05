@@ -11,9 +11,11 @@ The commands produce the raw fault-injection CSV/JSON and verification.json in t
 Final synchronized benchmark run:
 2026-10-05 09:28:33 - Running fault benchmark
 PYTHONPATH=. .venv/bin/python3 scripts/run_hw5_faults.py
-0% failure rate: 100% success, mean latency 0.0005 ms, p99 latency 0.0018 ms
-20% failure rate: 100% success, mean latency 3.5059 ms, p99 latency 37.5471 ms
-50% failure rate: 92% success, mean latency 10.9042 ms, p99 latency 37.6196 ms
+| Failure rate | Success rate | Mean latency (ms) | p99 latency (ms) |
+|---:|---:|---:|---:|
+| 0% | 100% | 0.0005 | 0.0021 |
+| 20% | 100% | 3.2781 | 37.5661 |
+| 50% | 92% | 10.7718 | 37.6434 |
 
 Final commit and tag:
 b127408458a83f19422e976a7df2d460743361dc
