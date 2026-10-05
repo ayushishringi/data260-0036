@@ -14,8 +14,9 @@ def main() -> None:
                 "ALTER TABLE vulnerability_reports ADD COLUMN created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP",
                 "ALTER TABLE vulnerability_reports ADD COLUMN updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP",
                 "ALTER TABLE vulnerability_reports ADD COLUMN report_code VARCHAR(80) NULL",
-                "UPDATE vulnerability_reports SET report_code = CONCAT('VULN-0036-', LPAD(id, 4, '0')) WHERE report_code IS NULL",
+                "UPDATE vulnerability_reports SET report_code = CONCAT('VULN-0036-', LPAD(id, 8, '0')) WHERE report_code IS NULL",
                 "ALTER TABLE vulnerability_reports MODIFY COLUMN report_code VARCHAR(80) NOT NULL",
+                "UPDATE vulnerability_reports SET report_code = CONCAT('VULN-0036-', LPAD(id, 8, '0'))",
                 "ALTER TABLE vulnerability_reports ADD CONSTRAINT uq_vulnerability_reports_report_code UNIQUE (report_code)",
                 "ALTER TABLE vulnerability_reports ADD CONSTRAINT fk_reports_advisory "
                 "FOREIGN KEY (advisory_id) REFERENCES advisories(id) ON DELETE RESTRICT",

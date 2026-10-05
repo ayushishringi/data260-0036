@@ -116,7 +116,7 @@ def create_report(
     db.add(report)
     db.flush()
     if payload.reportCode is None:
-        report.report_code = f"VULN-0036-{report.id:04d}"
+        report.report_code = f"VULN-0036-{report.id:08d}"
     db.commit()
     db.refresh(report)
 
