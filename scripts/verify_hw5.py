@@ -61,7 +61,8 @@ def runtime_entrypoint_checks() -> dict[str, object]:
 def main() -> int:
     test = subprocess.run([sys.executable, str(ROOT / "scripts" / "run_hw5_tests.py")], cwd=ROOT, capture_output=True, text=True)
     files = ["backend/models.py", "backend/report_api.py", "frontend/src/store.js", "domain_mcp_server.py",
-             "meals_server.py", "scripts/run_hw5_tests.py", "scripts/run_hw5_faults.py", "reports/hw05/METRICS.md"]
+             "meals_server.py", "scripts/run_hw5_tests.py", "scripts/run_hw5_faults.py",
+             "scripts/run_retry_cases.py", "reports/hw05/METRICS.md"]
     checks = {"offline_tool_tests": {"passed": test.returncode == 0, "output": test.stdout},
               "required_files": {name: (ROOT / name).exists() for name in files}}
     checks["all_required_files_present"] = all(checks["required_files"].values())

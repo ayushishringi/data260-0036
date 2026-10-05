@@ -67,11 +67,19 @@ class LoginSession(Base):
 
 class VulnerabilityReport(Base):
     __tablename__ = "vulnerability_reports"
+    __table_args__ = (
+        UniqueConstraint("report_code", name="uq_vulnerability_reports_report_code"),
+    )
 
     id: Mapped[int] = mapped_column(
         Integer,
         primary_key=True,
         autoincrement=True,
+    )
+
+    report_code: Mapped[str] = mapped_column(
+        String(80),
+        nullable=False,
     )
 
     package_name: Mapped[str] = mapped_column(

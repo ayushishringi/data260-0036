@@ -13,6 +13,7 @@ class LoginRequest(BaseModel):
 
 
 class ReportInput(BaseModel):
+    reportCode: str | None = Field(default=None, min_length=3, max_length=80)
     packageName: str = Field(min_length=1)
     affectedVersion: str = Field(min_length=1)
     submitterEmail: EmailStr
@@ -34,6 +35,16 @@ class ReportInput(BaseModel):
         if not value:
             raise ValueError("This field cannot be blank.")
 
+        return value
+
+    @field_validator("reportCode")
+    @classmethod
+    def validate_report_code(cls, value: str | None) -> str | None:
+        if value is None:
+            return None
+        value = value.strip()
+        if not value:
+            raise ValueError("Report code cannot be blank.")
         return value
 
     @field_validator("agreedToTerms")

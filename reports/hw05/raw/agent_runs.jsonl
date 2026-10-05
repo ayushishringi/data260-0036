@@ -17,3 +17,12 @@
 {"final": {"steps": 1, "stop_reason": "safety_rule_block", "tool_call_count": 1}}
 {"inputs": {"id": "bad"}, "result": {"data": null, "error": "id must be an integer", "ok": false}, "step": 1, "tool": "detail", "user_input": "invalid_tool_input"}
 {"final": {"steps": 1, "stop_reason": "normal_completion", "tool_call_count": 1}}
+{"inputs": {"limit": 1, "query": "openssl"}, "result": {"data": [{"advisory_code": "CVE-2024-9999", "available_count": 1, "id": 1, "package": "openssl", "severity": "critical"}], "error": null, "ok": true}, "step": 1, "tool": "search", "user_input": "normal_completion"}
+{"final": {"steps": 1, "stop_reason": "normal_completion", "tool_call_count": 1}}
+{"inputs": {"query": "open"}, "result": {"data": [{"advisory_code": "CVE-2024-9999", "available_count": 1, "id": 1, "package": "openssl", "severity": "critical"}], "error": null, "ok": true}, "step": 1, "tool": "search", "user_input": "max_steps"}
+{"inputs": {"query": "open"}, "result": {"data": [{"advisory_code": "CVE-2024-9999", "available_count": 1, "id": 1, "package": "openssl", "severity": "critical"}], "error": null, "ok": true}, "step": 2, "tool": "search", "user_input": "max_steps"}
+{"final": {"steps": 2, "stop_reason": "max_steps", "tool_call_count": 2}}
+{"inputs": {"include_unavailable": true}, "result": {"data": null, "error": "safety rule: unavailable inventory is restricted", "ok": false}, "step": 1, "tool": "aggregate", "user_input": "safety_rule_block"}
+{"final": {"steps": 1, "stop_reason": "safety_rule_block", "tool_call_count": 1}}
+{"inputs": {"id": "bad"}, "result": {"data": null, "error": "id must be an integer", "ok": false}, "step": 1, "tool": "detail", "user_input": "invalid_tool_input"}
+{"final": {"steps": 1, "stop_reason": "normal_completion", "tool_call_count": 1}}

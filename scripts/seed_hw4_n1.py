@@ -35,6 +35,7 @@ def main() -> None:
         for index in range(REPORT_COUNT):
             reports.append(
                 VulnerabilityReport(
+                    report_code=f"VULN-0036-BENCH-{index:04d}",
                     package_name=f"{BENCHMARK_PREFIX}{index}",
                     affected_version="< 1.0.0",
                     submitter_email="benchmark@example.com",

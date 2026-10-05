@@ -19,6 +19,7 @@ router = APIRouter(
 def report_to_dict(report: VulnerabilityReport) -> dict:
     return {
         "id": report.id,
+        "reportCode": report.report_code,
         "packageName": report.package_name,
         "affectedVersion": report.affected_version,
         "submitterEmail": report.submitter_email,
@@ -98,6 +99,7 @@ def create_report(
     current_user: User = Depends(get_current_user),
 ) -> dict:
     report = VulnerabilityReport(
+        report_code=payload.reportCode or "pending",
         package_name=payload.packageName,
         affected_version=payload.affectedVersion,
         submitter_email=str(payload.submitterEmail),
@@ -112,6 +114,9 @@ def create_report(
     )
 
     db.add(report)
+    db.flush()
+    if payload.reportCode is None:
+        report.report_code = f"VULN-0036-{report.id:04d}"
     db.commit()
     db.refresh(report)
 
@@ -134,6 +139,14 @@ def update_report(
         )
 
     report.package_name = payload.packageName
+    if payload.reportCode is not None:
+        duplicate = db.scalar(select(VulnerabilityReport).where(
+            VulnerabilityReport.report_code == payload.reportCode,
+            VulnerabilityReport.id != report_id,
+        ))
+        if duplicate:
+            raise HTTPException(status_code=409, detail="Report code already exists")
+        report.report_code = payload.reportCode
     report.affected_version = payload.affectedVersion
     report.submitter_email = str(payload.submitterEmail)
     report.description = payload.description
