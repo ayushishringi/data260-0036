@@ -10,10 +10,12 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field, field_validator
 from backend.report_api import router as report_router
+from backend.hw6_document_api import router as document_router
 
 
 app = FastAPI(title="DATA-260 HW2 Vulnerability Reports")
 app.include_router(report_router)
+app.include_router(document_router)
 
 
 app.add_middleware(
