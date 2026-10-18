@@ -19,6 +19,10 @@ from backend.hw6_mongo_database import (
     get_messages_collection,
     get_summaries_collection,
 )
+from backend.hw6_file_memory import (
+    file_memory_context,
+    handle_file_memory_command,
+)
 from src.model_client import ModelClient
 
 
@@ -226,7 +230,10 @@ def assemble_prompt(
         f"Lifetime/session summaries:\n{long_term}\n\n"
         f"Relevant episodic facts:\n{episode_text}"
     )
-    messages = [{"role": "system", "content": SYSTEM_PRIMER + "\n\n" + context}]
+    messages = [{
+        "role": "system",
+        "content": SYSTEM_PRIMER + "\n\nFile-based memory:\n" + file_memory_context() + "\n\n" + context,
+    }]
     messages.extend({"role": item["role"], "content": item["content"]} for item in short_term)
     messages.append({"role": "user", "content": user_message})
     return messages
@@ -248,6 +255,29 @@ def make_chat_turn(
     model_client: ModelClient,
 ) -> dict[str, Any]:
     started = time.perf_counter()
+    command_result = handle_file_memory_command(
+        user_message,
+        user_id,
+        session_id,
+        model_client,
+    )
+    if command_result is not None:
+        save_message(user_id, session_id, "user", user_message)
+        reply = command_result.get("message", "")
+        save_message(user_id, session_id, "assistant", reply)
+        latency_ms = round((time.perf_counter() - started) * 1000, 3)
+        return {
+            "reply": reply,
+            "file_memory": command_result,
+            "used": {"short_term_messages": [], "long_term_summary": None, "episodic_facts": []},
+            "usage": {
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "latency_ms": latency_ms,
+                "component_token_estimates": {},
+            },
+        }
     save_message(user_id, session_id, "user", user_message)
     short_term = load_short_term_messages(user_id, session_id)
     summaries = load_latest_summaries(user_id, session_id)
