@@ -3,9 +3,12 @@
 from __future__ import annotations
 
 import hashlib
+import json
 import os
 import re
+import time
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import Any
 
 import numpy as np
@@ -25,6 +28,9 @@ LIFETIME_SUMMARIZE_EVERY_SESSION_SUMMARIES = int(
     os.getenv("LIFETIME_SUMMARIZE_EVERY_SESSION_SUMMARIES", "2")
 )
 EPISODIC_TOP_K = int(os.getenv("EPISODIC_TOP_K", "3"))
+MEMORY_POLICY = os.getenv("MEMORY_POLICY", "window")
+REPORTS_DIR = Path(__file__).resolve().parents[1] / "reports" / "hw06" / "raw"
+CHAT_COSTS_PATH = REPORTS_DIR / "chat_costs.jsonl"
 SYSTEM_PRIMER = (
     "You are a helpful assistant. Use the supplied memory as context, "
     "but do not claim to remember anything that is not present."
@@ -33,6 +39,16 @@ SYSTEM_PRIMER = (
 
 def now_utc() -> datetime:
     return datetime.now(timezone.utc)
+
+
+def estimate_tokens(text: str) -> int:
+    return max(1, (len(text) + 3) // 4) if text else 0
+
+
+def log_chat_cost(record: dict[str, Any]) -> None:
+    REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+    with CHAT_COSTS_PATH.open("a", encoding="utf-8") as stream:
+        stream.write(json.dumps(record, default=str) + "\n")
 
 
 def save_message(
@@ -55,11 +71,14 @@ def save_message(
 
 def load_short_term_messages(user_id: str, session_id: str | None) -> list[dict[str, Any]]:
     query = {"user_id": user_id, "session_id": session_id}
+    limit = SHORT_TERM_N
+    if MEMORY_POLICY == "summary_compression":
+        limit = max(2, SHORT_TERM_N // 2)
     rows = list(
         get_messages_collection()
         .find(query)
         .sort("created_at", -1)
-        .limit(SHORT_TERM_N)
+        .limit(limit)
     )
     return list(reversed(rows))
 
@@ -228,6 +247,7 @@ def make_chat_turn(
     user_message: str,
     model_client: ModelClient,
 ) -> dict[str, Any]:
+    started = time.perf_counter()
     save_message(user_id, session_id, "user", user_message)
     short_term = load_short_term_messages(user_id, session_id)
     summaries = load_latest_summaries(user_id, session_id)
@@ -238,6 +258,33 @@ def make_chat_turn(
     save_message(user_id, session_id, "assistant", result.text)
     extract_episodes(user_id, session_id, user_message)
     maybe_summarize(user_id, session_id, model_client)
+    system_text = prompt[0]["content"]
+    summary_text = "\n".join(
+        item["text"]
+        for item in (summaries.get("user"), summaries.get("session"))
+        if item
+    )
+    short_term_text = "\n".join(
+        item["content"] for item in prior_messages
+    )
+    episodic_text = "\n".join(item["fact"] for item in episodes)
+    latency_ms = round((time.perf_counter() - started) * 1000, 3)
+    cost_record = {
+        "timestamp": now_utc().isoformat(),
+        "user_id": user_id,
+        "session_id": session_id,
+        "prompt_tokens": result.input_tokens,
+        "completion_tokens": result.output_tokens,
+        "total_tokens": result.total_tokens,
+        "component_token_estimates": {
+            "system_primer": estimate_tokens(SYSTEM_PRIMER),
+            "long_term_summary": estimate_tokens(summary_text),
+            "short_term_window": estimate_tokens(short_term_text),
+            "episodic_facts": estimate_tokens(episodic_text),
+        },
+        "latency_ms": latency_ms,
+    }
+    log_chat_cost(cost_record)
     return {
         "reply": result.text,
         "used": {
@@ -256,6 +303,8 @@ def make_chat_turn(
             "prompt_tokens": result.input_tokens,
             "completion_tokens": result.output_tokens,
             "total_tokens": result.total_tokens,
+            "latency_ms": latency_ms,
+            "component_token_estimates": cost_record["component_token_estimates"],
         },
     }
 

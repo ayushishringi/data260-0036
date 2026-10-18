@@ -1,0 +1,45 @@
+probes:
+  - id: probe_1
+    question: "What topic am I studying?"
+    expected_criteria:
+      - mentions DATA-260
+      - mentions open-source package vulnerabilities
+    rubric:
+      1: "No relevant answer"
+      3: "Partially identifies the topic"
+      5: "Correctly identifies both the course and topic"
+  - id: probe_2
+    question: "What is a CVE?"
+    expected_criteria:
+      - explains that CVE is a standardized vulnerability identifier
+    rubric:
+      1: "Incorrect or missing"
+      3: "General security-related answer"
+      5: "Accurately explains the standardized identifier"
+  - id: probe_3
+    question: "How do dependency scanners find vulnerable packages?"
+    expected_criteria:
+      - mentions dependency trees
+      - mentions matching versions against vulnerability databases
+    rubric:
+      1: "Incorrect or missing"
+      3: "Mentions scanning but misses a key step"
+      5: "Explains both dependency traversal and database matching"
+  - id: probe_4
+    question: "What is an SBOM useful for?"
+    expected_criteria:
+      - describes an inventory of software components
+      - connects the inventory to vulnerability response
+    rubric:
+      1: "Incorrect or missing"
+      3: "Defines an inventory without response context"
+      5: "Connects component inventory to vulnerability response"
+  - id: probe_5
+    question: "How should vulnerabilities be prioritized?"
+    expected_criteria:
+      - mentions severity or exploitability
+      - mentions affected scope or urgency
+    rubric:
+      1: "Incorrect or missing"
+      3: "Mentions severity only"
+      5: "Uses severity, exploitability, scope, and urgency"
