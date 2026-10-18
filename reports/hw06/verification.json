@@ -1,0 +1,64 @@
+{
+  "passed": true,
+  "homework": "DATA-260 HW6",
+  "SID4": "0036",
+  "PORT_BASE": 8036,
+  "PREFIX": "s0036",
+  "SEED": 36,
+  "VERIFY_SEED": 260036,
+  "DOMAIN_ID": 4,
+  "commit": "7171e9c4ab25f2986e204ad7ec577ec9086b5b64",
+  "model": "qwen3:4b (Ollama)",
+  "checks": {
+    "required_files": {
+      "AGENT.md": true,
+      "MEMORY.md": true,
+      "backend/hw6_file_memory.py": true,
+      "backend/hw6_memory_service.py": true,
+      "backend/hw6_memory_api.py": true,
+      "memory_probes.yaml": true,
+      "reports/hw06/METRICS.md": true,
+      "reports/hw06/raw/chat_costs.jsonl": true,
+      "reports/hw06/raw/memory_cost_comparison.json": true
+    },
+    "required_files_present": true,
+    "fastapi_app_import": true,
+    "chat_route": true,
+    "memory_route": true,
+    "aggregate_route": true,
+    "agent_instructions": {
+      "passed": true,
+      "checks": {
+        "project_description": true,
+        "technology_stack": true,
+        "coding_conventions": true,
+        "testing_approach": true,
+        "prohibited_actions": true
+      },
+      "instruction_count": 6
+    },
+    "memory_probe_count": 5,
+    "five_memory_probes": true,
+    "comparison_settings": [
+      [
+        4,
+        "summary_compression"
+      ],
+      [
+        4,
+        "window"
+      ],
+      [
+        12,
+        "window"
+      ],
+      [
+        30,
+        "window"
+      ]
+    ],
+    "four_comparison_settings": true,
+    "python_compile": true,
+    "passed": true
+  }
+}

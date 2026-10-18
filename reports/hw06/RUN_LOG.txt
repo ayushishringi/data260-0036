@@ -1,0 +1,36 @@
+DATA-260 HW6 RUN LOG
+SID4=0036 PORT_BASE=8036 PREFIX=s0036 DOMAIN_ID=4
+Hardware: MacBook Pro, Apple M5 Pro, 24 GB
+Model: Ollama qwen3:4b
+
+Part 3 benchmark commands and results
+--------------------------------------
+The following commands were run against FastAPI at http://127.0.0.1:8036.
+
+.venv/bin/python3.12 scripts/run_hw6_memory_cost.py --settings 4 --policy window
+Result: mean prompt 2483.53 tokens/turn; mean latency 47488.25 ms; probe quality 3.4.
+
+.venv/bin/python3.12 scripts/run_hw6_memory_cost.py --settings 12 --policy window
+Result: mean prompt 3250.87 tokens/turn; mean latency 40400.42 ms; probe quality 3.0.
+
+.venv/bin/python3.12 scripts/run_hw6_memory_cost.py --settings 30 --policy window
+Result: mean prompt 3134.20 tokens/turn; mean latency 42096.02 ms; probe quality 3.4.
+
+SHORT_TERM_N=4 MEMORY_POLICY=summary_compression \
+.venv/bin/python3.12 scripts/run_hw6_memory_cost.py --settings 4 --policy summary_compression
+Result: mean prompt 888.50 tokens/turn; mean latency 27374.00 ms; probe quality 2.2.
+
+Part 4 file-memory checks
+-------------------------
+POST /api/chat with /help: returned all four supported commands.
+POST /api/chat with /memory: returned AGENT.md and MEMORY.md contents.
+POST /api/chat with /compact: returned counts before and after consolidation.
+POST /api/chat with /dream: added a durable fact to MEMORY.md.
+verify_agent_instructions(): passed all five instruction-category checks.
+
+Repository checks
+-----------------
+.venv/bin/python3.12 -m compileall -q backend scripts/run_hw6_memory_cost.py
+Result: passed.
+
+Detailed timestamped request records are stored in raw/chat_costs.jsonl.
