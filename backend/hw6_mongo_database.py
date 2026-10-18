@@ -15,6 +15,9 @@ MONGO_DB_NAME = os.getenv("MONGO_DB_NAME", "s0036_doc")
 MONGO_COLLECTION_NAME = os.getenv(
     "MONGO_COLLECTION_NAME", "vulnerability_documents"
 )
+MESSAGES_COLLECTION_NAME = "messages"
+SUMMARIES_COLLECTION_NAME = "summaries"
+EPISODES_COLLECTION_NAME = "episodes"
 
 
 @lru_cache(maxsize=1)
@@ -39,11 +42,33 @@ def ping_mongo() -> None:
     get_mongo_client().admin.command("ping")
 
 
-def _ensure_collection_validation(collection: Collection) -> None:
+def get_messages_collection() -> Collection:
+    collection = get_mongo_database()[MESSAGES_COLLECTION_NAME]
+    _ensure_collection_validation(collection, "messages")
+    collection.create_index([("user_id", ASCENDING), ("session_id", ASCENDING), ("created_at", ASCENDING)])
+    return collection
+
+
+def get_summaries_collection() -> Collection:
+    collection = get_mongo_database()[SUMMARIES_COLLECTION_NAME]
+    _ensure_collection_validation(collection, "summaries")
+    collection.create_index([("user_id", ASCENDING), ("scope", ASCENDING), ("created_at", ASCENDING)])
+    return collection
+
+
+def get_episodes_collection() -> Collection:
+    collection = get_mongo_database()[EPISODES_COLLECTION_NAME]
+    _ensure_collection_validation(collection, "episodes")
+    collection.create_index([("user_id", ASCENDING), ("created_at", ASCENDING)])
+    return collection
+
+
+def _ensure_collection_validation(collection: Collection, kind: str = "documents") -> None:
     """Create the collection validator once, or refresh it for an existing one."""
 
     database = collection.database
-    validator = {
+    validators = {
+        "documents": {
         "$jsonSchema": {
             "bsonType": "object",
             "required": [
@@ -59,8 +84,49 @@ def _ensure_collection_validation(collection: Collection) -> None:
                 "created_at": {"bsonType": "date"},
                 "updated_at": {"bsonType": "date"},
             },
-        }
+        }},
+        "messages": {
+            "$jsonSchema": {
+                "bsonType": "object",
+                "required": ["user_id", "role", "content", "created_at"],
+                "properties": {
+                    "user_id": {"bsonType": "string", "minLength": 1},
+                    "session_id": {"bsonType": ["string", "null"]},
+                    "role": {"enum": ["user", "assistant"]},
+                    "content": {"bsonType": "string", "minLength": 1},
+                    "created_at": {"bsonType": "date"},
+                },
+            }
+        },
+        "summaries": {
+            "$jsonSchema": {
+                "bsonType": "object",
+                "required": ["user_id", "scope", "text", "created_at"],
+                "properties": {
+                    "user_id": {"bsonType": "string", "minLength": 1},
+                    "session_id": {"bsonType": ["string", "null"]},
+                    "scope": {"enum": ["session", "user"]},
+                    "text": {"bsonType": "string", "minLength": 1},
+                    "created_at": {"bsonType": "date"},
+                },
+            }
+        },
+        "episodes": {
+            "$jsonSchema": {
+                "bsonType": "object",
+                "required": ["user_id", "fact", "importance", "embedding", "created_at"],
+                "properties": {
+                    "user_id": {"bsonType": "string", "minLength": 1},
+                    "session_id": {"bsonType": ["string", "null"]},
+                    "fact": {"bsonType": "string", "minLength": 1, "maxLength": 500},
+                    "importance": {"bsonType": "double", "minimum": 0, "maximum": 1},
+                    "embedding": {"bsonType": "array", "items": {"bsonType": "double"}},
+                    "created_at": {"bsonType": "date"},
+                },
+            }
+        },
     }
+    validator = validators[kind]
     try:
         database.command({
             "collMod": collection.name,
