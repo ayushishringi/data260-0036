@@ -1,64 +1,174 @@
 {
-  "passed": true,
-  "homework": "DATA-260 HW6",
+  "homework": 6,
   "SID4": "0036",
   "PORT_BASE": 8036,
   "PREFIX": "s0036",
   "SEED": 36,
   "VERIFY_SEED": 260036,
   "DOMAIN_ID": 4,
-  "commit": "7171e9c4ab25f2986e204ad7ec577ec9086b5b64",
-  "model": "qwen3:4b (Ollama)",
-  "checks": {
-    "required_files": {
-      "AGENT.md": true,
-      "MEMORY.md": true,
-      "backend/hw6_file_memory.py": true,
-      "backend/hw6_memory_service.py": true,
-      "backend/hw6_memory_api.py": true,
-      "memory_probes.yaml": true,
-      "reports/hw06/METRICS.md": true,
-      "reports/hw06/raw/chat_costs.jsonl": true,
-      "reports/hw06/raw/memory_cost_comparison.json": true
-    },
-    "required_files_present": true,
-    "fastapi_app_import": true,
-    "chat_route": true,
-    "memory_route": true,
-    "aggregate_route": true,
-    "agent_instructions": {
+  "commit": "ce6d85494274131eb46762eee5b08639bd882a38",
+  "tag_hw6_commit": "ce6d85494274131eb46762eee5b08639bd882a38",
+  "working_tree_clean": true,
+  "model": "qwen3:4b via local Ollama",
+  "configuration": {
+    "OLLAMA_NUM_CTX": 16384,
+    "OLLAMA_SEED": 36,
+    "SHORT_TERM_N": 12,
+    "MEMORY_POLICY": "window"
+  },
+  "verified_user_id": "verify-hw06-260036-904837-1792397103",
+  "checks": [
+    {
+      "check": "backend responds on PORT_BASE 8036",
       "passed": true,
-      "checks": {
-        "project_description": true,
-        "technology_stack": true,
-        "coding_conventions": true,
-        "testing_approach": true,
-        "prohibited_actions": true
-      },
-      "instruction_count": 6
+      "detail": {
+        "status": "ok",
+        "port": 8036
+      }
     },
-    "memory_probe_count": 5,
-    "five_memory_probes": true,
-    "comparison_settings": [
-      [
-        4,
-        "summary_compression"
-      ],
-      [
-        4,
-        "window"
-      ],
-      [
-        12,
-        "window"
-      ],
-      [
-        30,
-        "window"
+    {
+      "check": "POST /api/documents creates a record (201)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "GET /api/documents/{id} returns it (200)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "GET /api/documents lists records (200)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "PUT /api/documents/{id} updates it (200)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "DELETE /api/documents/{id} removes it (204)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "deleted record returns 404",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "missing required field rejected (422)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "invalid enum rejected (422)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "wrong data types rejected (422)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "POST /api/chat returns a non-empty reply",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "chat response shows memory used",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "chat response logs token usage",
+      "passed": true,
+      "detail": {
+        "short_term_n": 12,
+        "memory_policy": "window",
+        "summarize_every_user_msgs": 5,
+        "episodic_top_k": 3
+      }
+    },
+    {
+      "check": "episodic fact from turn 1 retrieved on turn 2",
+      "passed": true,
+      "detail": [
+        "My verification package is left-pad-plus 3.4.1"
       ]
-    ],
-    "four_comparison_settings": true,
-    "python_compile": true,
-    "passed": true
-  }
+    },
+    {
+      "check": "GET /api/memory/{user_id} returns messages and episodes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "GET /api/aggregate/{user_id} returns daily counts",
+      "passed": true,
+      "detail": [
+        {
+          "date": "2026-10-19",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "check": "/help lists all four commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/memory returns AGENT.md, MEMORY.md and consolidation status",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "55-line fixture consolidates to < 40 lines",
+      "passed": true,
+      "detail": [
+        55,
+        39
+      ]
+    },
+    {
+      "check": ">= 3 duplicates merged and >= 3 contradictions resolved",
+      "passed": true,
+      "detail": [
+        19,
+        4
+      ]
+    },
+    {
+      "check": "superseded values are kept, not silently deleted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "audit identifies the incorrectly resolved contradiction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "generated function follows AGENT.md (check_agent_rules.py)",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "memory_probes.yaml has 5 probes with criteria and a 1-5 rubric",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Part 3 results cover N=4/12/30 and the compression policy",
+      "passed": true,
+      "detail": [
+        "N=12,compressed_window",
+        "N=12,window",
+        "N=30,window",
+        "N=4,window"
+      ]
+    }
+  ],
+  "passed": true
 }
