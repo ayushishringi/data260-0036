@@ -13,6 +13,8 @@ from typing import Any, Optional
 
 DEFAULT_MODEL = os.environ.get("OLLAMA_MODEL", "qwen3:4b")
 DEFAULT_HOST = os.environ.get("OLLAMA_HOST", "http://127.0.0.1:11434")
+DEFAULT_NUM_CTX = int(os.environ.get("OLLAMA_NUM_CTX", "16384"))
+DEFAULT_SEED = int(os.environ.get("OLLAMA_SEED", "36"))
 THINK_RE = re.compile(
     r"^\s*(?:<think>)?.*?</think>\s*",
     re.DOTALL | re.IGNORECASE,
@@ -45,7 +47,7 @@ class ModelClient:
             "messages": messages,
             "stream": False,
             "think": False,
-            "options": {"temperature": temperature},
+            "options": {"temperature": temperature, "num_ctx": DEFAULT_NUM_CTX, "seed": DEFAULT_SEED},
         }
         if tools:
             payload["tools"] = tools

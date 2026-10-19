@@ -2,21 +2,28 @@
 
 ## Project description
 
-- This project implements DATA-260 homework APIs for open-source package vulnerability analysis.
+- This repository (data260-0036) implements DATA-260 homework APIs for open-source package vulnerability tracking (DOMAIN_ID 4).
+- HW6 adds a MongoDB document API (`s0036_doc`), MongoDB-backed chat memory (messages, summaries, episodes), and file-based memory (AGENT.md, MEMORY.md).
 
 ## Technology stack
 
-- Use Python 3.12, FastAPI, Pydantic, PyMongo, MongoDB, and the local Ollama model.
+- Use Python 3.12, FastAPI, Pydantic v2, PyMongo, MongoDB, and the local Ollama `qwen3:4b` model.
+- All model calls go through `src/model_client.ModelClient`; the API runs on PORT_BASE 8036.
 
 ## Coding conventions
 
 - Keep route handlers thin and place business logic in separate service modules.
+- Every public function has full type hints (all parameters and the return value) and a docstring.
 - Validate external input with Pydantic and return clear HTTP errors.
+- Do not use `print()` in `backend/` modules; return data or raise an exception instead.
 
 ## Testing approach
 
+- Every new pure function gets a `unittest` test in `tests/` (pytest is not installed).
 - Test successful behavior, validation failures, persistence, and deterministic file operations before committing.
 
 ## Prohibited actions
 
+- Do not call paid hosted model APIs; use only the local Ollama adapter.
 - Do not expose secrets, delete unrelated user data, or modify unrelated homework evidence.
+- Do not silently delete facts from MEMORY.md; superseded facts must be recorded.

@@ -22,7 +22,7 @@ EPISODES_COLLECTION_NAME = "episodes"
 
 @lru_cache(maxsize=1)
 def get_mongo_client() -> MongoClient:
-    return MongoClient(MONGO_URI, serverSelectionTimeoutMS=2000)
+    return MongoClient(MONGO_URI, tz_aware=True, serverSelectionTimeoutMS=2000)
 
 
 def get_mongo_database() -> Database:
