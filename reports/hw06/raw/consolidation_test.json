@@ -1,0 +1,68 @@
+{
+  "original_file_lines": 55,
+  "consolidated_file_lines": 39,
+  "memory_lines_before": 53,
+  "memory_lines_after": 34,
+  "duplicates_merged": 19,
+  "contradictions_resolved": 4,
+  "resolutions": [
+    {
+      "key": "port",
+      "kept": "8000",
+      "kept_date": "2026-10-14",
+      "superseded": [
+        {
+          "value": "8036",
+          "date": "2026-09-01"
+        }
+      ],
+      "rule": "newest dated fact wins"
+    },
+    {
+      "key": "ollama_model",
+      "kept": "qwen3:4b",
+      "kept_date": "2026-10-17",
+      "superseded": [
+        {
+          "value": "llama3.2:3b",
+          "date": "2026-09-05"
+        }
+      ],
+      "rule": "newest dated fact wins"
+    },
+    {
+      "key": "short_term_n_default",
+      "kept": "12",
+      "kept_date": "2026-10-15",
+      "superseded": [
+        {
+          "value": "8",
+          "date": "2026-10-03"
+        }
+      ],
+      "rule": "newest dated fact wins"
+    },
+    {
+      "key": "summarize_every_user_msgs",
+      "kept": "5",
+      "kept_date": "2026-10-15",
+      "superseded": [
+        {
+          "value": "3",
+          "date": "2026-10-04"
+        }
+      ],
+      "rule": "newest dated fact wins"
+    }
+  ],
+  "incorrectly_resolved": [
+    {
+      "key": "port",
+      "kept": "8000",
+      "expected": "8036"
+    }
+  ],
+  "values_missing_after_consolidation": [],
+  "no_silent_drop": true,
+  "under_40_lines": true
+}

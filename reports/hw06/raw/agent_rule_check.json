@@ -1,0 +1,58 @@
+{
+  "target": "backend/hw6_file_memory.py::audit_resolutions",
+  "passed": true,
+  "checks": {
+    "full_type_hints": {
+      "rule": "Every public function has full type hints",
+      "passed": true,
+      "rule_in_agent_md": true
+    },
+    "has_docstring": {
+      "rule": "and a docstring",
+      "passed": true,
+      "rule_in_agent_md": true
+    },
+    "no_print_in_backend_module": {
+      "rule": "Do not use `print()` in `backend/` modules",
+      "passed": true,
+      "rule_in_agent_md": true
+    },
+    "pure_function_no_file_writes": {
+      "rule": "Do not silently delete facts from MEMORY.md",
+      "passed": true,
+      "rule_in_agent_md": true
+    },
+    "no_hosted_model_api": {
+      "rule": "Do not call paid hosted model APIs",
+      "passed": true,
+      "rule_in_agent_md": true
+    },
+    "no_hard_coded_port": {
+      "rule": "the API runs on PORT_BASE 8036",
+      "passed": true,
+      "rule_in_agent_md": true
+    },
+    "unittest_exists": {
+      "rule": "Every new pure function gets a `unittest` test in `tests/`",
+      "passed": true,
+      "rule_in_agent_md": true
+    },
+    "unittests_pass": {
+      "rule": "before committing",
+      "passed": true,
+      "rule_in_agent_md": true
+    }
+  },
+  "unittest_output": [
+    "test_correct_or_unknown_keys_are_not_flagged (tests.test_hw6_file_memory.AuditResolutionsTests.test_correct_or_unknown_keys_are_not_flagged) ... ok",
+    "test_flags_resolution_that_disagrees_with_ground_truth (tests.test_hw6_file_memory.AuditResolutionsTests.test_flags_resolution_that_disagrees_with_ground_truth) ... ok",
+    "test_contradiction_resolved_and_superseded_value_kept (tests.test_hw6_file_memory.ConsolidateMemoryTextTests.test_contradiction_resolved_and_superseded_value_kept) ... ok",
+    "test_merges_duplicates_case_insensitively (tests.test_hw6_file_memory.ConsolidateMemoryTextTests.test_merges_duplicates_case_insensitively) ... ok",
+    "test_reconsolidation_is_stable (tests.test_hw6_file_memory.ConsolidateMemoryTextTests.test_reconsolidation_is_stable) ... ok",
+    "",
+    "----------------------------------------------------------------------",
+    "Ran 5 tests in 0.000s",
+    "",
+    "OK"
+  ]
+}

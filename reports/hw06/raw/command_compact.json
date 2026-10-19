@@ -1,0 +1,75 @@
+{
+    "reply": "MEMORY.md consolidated: 53 -> 34 memory lines (55 -> 39 file lines)",
+    "file_memory": {
+        "message": "MEMORY.md consolidated: 53 -> 34 memory lines (55 -> 39 file lines)",
+        "message_count_before": 53,
+        "message_count_after": 34,
+        "file_lines_before": 55,
+        "file_lines_after": 39,
+        "duplicates_merged": 19,
+        "contradictions_resolved": 4,
+        "resolutions": [
+            {
+                "key": "port",
+                "kept": "8000",
+                "kept_date": "2026-10-14",
+                "superseded": [
+                    {
+                        "value": "8036",
+                        "date": "2026-09-01"
+                    }
+                ],
+                "rule": "newest dated fact wins"
+            },
+            {
+                "key": "ollama_model",
+                "kept": "qwen3:4b",
+                "kept_date": "2026-10-17",
+                "superseded": [
+                    {
+                        "value": "llama3.2:3b",
+                        "date": "2026-09-05"
+                    }
+                ],
+                "rule": "newest dated fact wins"
+            },
+            {
+                "key": "short_term_n_default",
+                "kept": "12",
+                "kept_date": "2026-10-15",
+                "superseded": [
+                    {
+                        "value": "8",
+                        "date": "2026-10-03"
+                    }
+                ],
+                "rule": "newest dated fact wins"
+            },
+            {
+                "key": "summarize_every_user_msgs",
+                "kept": "5",
+                "kept_date": "2026-10-15",
+                "superseded": [
+                    {
+                        "value": "3",
+                        "date": "2026-10-04"
+                    }
+                ],
+                "rule": "newest dated fact wins"
+            }
+        ],
+        "consolidation_required": false
+    },
+    "used": {
+        "short_term_messages": [],
+        "long_term_summary": null,
+        "episodic_facts": []
+    },
+    "usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "latency_ms": 3.927,
+        "component_token_estimates": {}
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "reply": "Current file-based memory",
+    "file_memory": {
+        "message": "Current file-based memory",
+        "agent": "# Durable Agent Instructions\n\n## Project description\n\n- This repository (data260-0036) implements DATA-260 homework APIs for open-source package vulnerability tracking (DOMAIN_ID 4).\n- HW6 adds a MongoDB document API (`s0036_doc`), MongoDB-backed chat memory (messages, summaries, episodes), and file-based memory (AGENT.md, MEMORY.md).\n\n## Technology stack\n\n- Use Python 3.12, FastAPI, Pydantic v2, PyMongo, MongoDB, and the local Ollama `qwen3:4b` model.\n- All model calls go through `src/model_client.ModelClient`; the API runs on PORT_BASE 8036.\n\n## Coding conventions\n\n- Keep route handlers thin and place business logic in separate service modules.\n- Every public function has full type hints (all parameters and the return value) and a docstring.\n- Validate external input with Pydantic and return clear HTTP errors.\n- Do not use `print()` in `backend/` modules; return data or raise an exception instead.\n\n## Testing approach\n\n- Every new pure function gets a `unittest` test in `tests/` (pytest is not installed).\n- Test successful behavior, validation failures, persistence, and deterministic file operations before committing.\n\n## Prohibited actions\n\n- Do not call paid hosted model APIs; use only the local Ollama adapter.\n- Do not expose secrets, delete unrelated user data, or modify unrelated homework evidence.\n- Do not silently delete facts from MEMORY.md; superseded facts must be recorded.\n",
+        "memory": "# Durable Memory\n<!-- consolidated_at: 2026-10-10T09:00:00+00:00 -->\n- [2026-08-25] course: DATA-260\n- [2026-08-25] sid4: 0036\n- [2026-09-01] port: 8036\n- [2026-08-25] domain: open-source package vulnerability tracking (DOMAIN_ID 4)\n- [2026-09-02] api_framework: FastAPI\n- [2026-09-02] validation: Pydantic v2 models for every request body\n- [2026-09-05] ollama_model: llama3.2:3b\n- [2026-09-10] python_version: 3.12\n- [2026-09-10] hardware: MacBook Pro, Apple M5 Pro, 24 GB\n- [2026-10-01] mongo_database: s0036_doc\n- [2026-10-01] documents_collection: vulnerability_documents\n- [2026-10-01] memory_collections: messages, summaries, episodes\n- [2026-10-01] ollama_model: qwen3:4b\n- [2026-10-02] severity_values: critical, high, medium, low\n- [2026-10-02] status_values: open, triaged, resolved, ignored\n- [2026-10-03] short_term_n_default: 8\n- [2026-10-04] summarize_every_user_msgs: 3\n- [2026-10-05] episodic_top_k: 3\n- [2026-10-05] embedding_model: all-MiniLM-L6-v2 with a hash-vector fallback\n- [2026-10-06] ollama_num_ctx: 16384\n- [2026-10-06] ollama_seed: 36\n- [2026-10-07] input_price: $1 per million tokens\n- [2026-10-07] output_price: $5 per million tokens\n- [2026-10-08] collaborators: Sbnikitha, supriyaselvanganesan\n- [2026-10-08] submission_tag: hw6\n- [2026-10-08] report_file: Shringi_HW6.pdf\n- [2026-10-09] test_runner: unittest (pytest is not installed in .venv)\n- [2026-10-09] lifetime_summary_every: 2 session summaries\n- [2026-10-10] The user prefers short, numbered answers in reports.\n- [2026-10-10] Raw experiment output always goes under reports/hw06/raw/.\n- [2026-10-14] port: 8000\n- [2026-10-15] short_term_n_default: 12\n- [2026-10-15] summarize_every_user_msgs: 5\n- [2026-10-16] memory_policy_options: window, compressed_window\n- [2026-10-16] api_framework: fastapi\n- [2026-10-16] course: DATA-260\n- [2026-10-16] mongo_database: s0036_doc\n- [2026-10-17] The user prefers short, numbered answers in reports.\n- [2026-10-17] ollama_model: qwen3:4b\n- [2026-10-17] episodic_top_k: 3\n- [2026-10-17] course: data-260\n- [2026-10-17] Raw experiment output always goes under reports/hw06/raw/\n- [2026-10-17] api_framework: FastAPI\n- [2026-10-17] sid4: 0036\n- [2026-10-17] input_price: $1 per million tokens\n- [2026-10-17] output_price: $5 per million tokens\n- [2026-10-17] collaborators: Sbnikitha, supriyaselvanganesan\n- [2026-10-17] memory_collections: messages, summaries, episodes\n- [2026-10-18] severity_values: critical, high, medium, low\n- [2026-10-18] status_values: open, triaged, resolved, ignored\n- [2026-10-18] ollama_num_ctx: 16384\n- [2026-10-18] hardware: MacBook Pro, Apple M5 Pro, 24 GB\n- [2026-10-18] submission_tag: hw6\n",
+        "memory_line_count": 53,
+        "last_consolidated_at": "2026-10-10 09:00:00+00:00",
+        "consolidation_required": true
+    },
+    "used": {
+        "short_term_messages": [],
+        "long_term_summary": null,
+        "episodic_facts": []
+    },
+    "usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "latency_ms": 18.462,
+        "component_token_estimates": {}
+    }
+}
