@@ -34,6 +34,8 @@ def _to_response(document: dict) -> dict:
 
 @router.post("", response_model=DocumentResponse, status_code=status.HTTP_201_CREATED)
 def create_document(payload: DocumentInput) -> dict:
+    """POST /api/documents: create a vulnerability document (201)."""
+
     collection = _collection_or_503()
     now = datetime.now(timezone.utc)
     document = {**payload.model_dump(), "created_at": now, "updated_at": now}
@@ -47,6 +49,8 @@ def create_document(payload: DocumentInput) -> dict:
 
 @router.get("", response_model=list[DocumentResponse])
 def list_documents() -> list[dict]:
+    """GET /api/documents: list all documents, newest first."""
+
     collection = _collection_or_503()
     try:
         return [_to_response(item) for item in collection.find().sort("created_at", -1)]
@@ -56,6 +60,8 @@ def list_documents() -> list[dict]:
 
 @router.get("/{document_id}", response_model=DocumentResponse)
 def get_document(document_id: str) -> dict:
+    """GET /api/documents/{id}: return one document or 404."""
+
     collection = _collection_or_503()
     try:
         document = collection.find_one({"_id": _object_id(document_id)})
@@ -68,6 +74,8 @@ def get_document(document_id: str) -> dict:
 
 @router.put("/{document_id}", response_model=DocumentResponse)
 def update_document(document_id: str, payload: DocumentInput) -> dict:
+    """PUT /api/documents/{id}: replace a document's fields and update updated_at."""
+
     collection = _collection_or_503()
     object_id = _object_id(document_id)
     now = datetime.now(timezone.utc)
@@ -88,6 +96,8 @@ def update_document(document_id: str, payload: DocumentInput) -> dict:
 
 @router.delete("/{document_id}", status_code=status.HTTP_204_NO_CONTENT)
 def delete_document(document_id: str) -> None:
+    """DELETE /api/documents/{id}: delete a document (204) or return 404."""
+
     collection = _collection_or_503()
     try:
         result = collection.delete_one({"_id": _object_id(document_id)})

@@ -22,14 +22,18 @@ EPISODES_COLLECTION_NAME = "episodes"
 
 @lru_cache(maxsize=1)
 def get_mongo_client() -> MongoClient:
+    """Return the shared, cached MongoClient."""
     return MongoClient(MONGO_URI, tz_aware=True, serverSelectionTimeoutMS=2000)
 
 
 def get_mongo_database() -> Database:
+    """Return the s0036_doc database."""
     return get_mongo_client()[MONGO_DB_NAME]
 
 
 def get_document_collection() -> Collection:
+    """Return the validated vulnerability_documents collection."""
+
     collection = get_mongo_database()[MONGO_COLLECTION_NAME]
     _ensure_collection_validation(collection)
     collection.create_index([("created_at", ASCENDING)])
@@ -43,6 +47,8 @@ def ping_mongo() -> None:
 
 
 def get_messages_collection() -> Collection:
+    """Return the validated messages collection."""
+
     collection = get_mongo_database()[MESSAGES_COLLECTION_NAME]
     _ensure_collection_validation(collection, "messages")
     collection.create_index([("user_id", ASCENDING), ("session_id", ASCENDING), ("created_at", ASCENDING)])
@@ -50,6 +56,8 @@ def get_messages_collection() -> Collection:
 
 
 def get_summaries_collection() -> Collection:
+    """Return the validated summaries collection."""
+
     collection = get_mongo_database()[SUMMARIES_COLLECTION_NAME]
     _ensure_collection_validation(collection, "summaries")
     collection.create_index([("user_id", ASCENDING), ("scope", ASCENDING), ("created_at", ASCENDING)])
@@ -57,6 +65,8 @@ def get_summaries_collection() -> Collection:
 
 
 def get_episodes_collection() -> Collection:
+    """Return the validated episodes collection."""
+
     collection = get_mongo_database()[EPISODES_COLLECTION_NAME]
     _ensure_collection_validation(collection, "episodes")
     collection.create_index([("user_id", ASCENDING), ("created_at", ASCENDING)])
@@ -77,7 +87,7 @@ def _ensure_collection_validation(collection: Collection, kind: str = "documents
             ],
             "properties": {
                 "title": {"bsonType": "string", "minLength": 1, "maxLength": 100},
-                "description": {"bsonType": ["string", "null"]},
+                "description": {"bsonType": ["string", "null"], "maxLength": 5000},
                 "severity": {"enum": ["critical", "high", "medium", "low"]},
                 "status": {"enum": ["open", "triaged", "resolved", "ignored"]},
                 "discovered_at": {"bsonType": "date"},

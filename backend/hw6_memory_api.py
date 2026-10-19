@@ -19,6 +19,7 @@ class ChatRequest(BaseModel):
 
 @router.post("/chat")
 def chat(payload: ChatRequest) -> dict:
+    """POST /api/chat: answer a message using short-term, long-term and episodic memory."""
     try:
         return make_chat_turn(
             payload.user_id.strip(),
@@ -32,6 +33,7 @@ def chat(payload: ChatRequest) -> dict:
 
 @router.get("/memory/{user_id}")
 def memory(user_id: str) -> dict:
+    """GET /api/memory/{user_id}: return the user's stored memory."""
     try:
         return get_memory(user_id.strip())
     except PyMongoError as exc:
@@ -40,6 +42,7 @@ def memory(user_id: str) -> dict:
 
 @router.get("/aggregate/{user_id}")
 def aggregate(user_id: str) -> dict:
+    """GET /api/aggregate/{user_id}: return daily message counts and recent summaries."""
     try:
         return get_aggregate(user_id.strip())
     except PyMongoError as exc:

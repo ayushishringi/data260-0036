@@ -54,6 +54,8 @@ def _timestamp() -> str:
 
 
 def ensure_memory_files() -> None:
+    """Create AGENT.md and MEMORY.md with defaults if they do not exist."""
+
     if not AGENT_PATH.exists():
         AGENT_PATH.write_text(DEFAULT_AGENT, encoding="utf-8")
     if not MEMORY_PATH.exists():
@@ -61,6 +63,8 @@ def ensure_memory_files() -> None:
 
 
 def load_memory_files() -> dict[str, str]:
+    """Return the text of AGENT.md and MEMORY.md."""
+
     ensure_memory_files()
     return {
         "agent": AGENT_PATH.read_text(encoding="utf-8"),
@@ -77,10 +81,13 @@ def _content_lines(text: str) -> list[str]:
 
 
 def memory_line_count() -> int:
+    """Return the number of non-empty, non-comment lines in MEMORY.md."""
     return len(_content_lines(load_memory_files()["memory"]))
 
 
 def last_consolidated_at() -> datetime | None:
+    """Return the consolidation timestamp recorded in MEMORY.md, or None."""
+
     match = CONSOLIDATED_RE.search(load_memory_files()["memory"])
     if not match:
         return None
@@ -92,11 +99,15 @@ def last_consolidated_at() -> datetime | None:
 
 
 def consolidation_required() -> bool:
+    """Return True if MEMORY.md has over 40 lines or was not consolidated in 24 hours."""
+
     timestamp = last_consolidated_at()
     return memory_line_count() > 40 or timestamp is None or _utc_now() - timestamp > timedelta(hours=24)
 
 
 def file_memory_context() -> str:
+    """Return AGENT.md and MEMORY.md formatted for the system prompt."""
+
     files = load_memory_files()
     return f"AGENT.md instructions:\n{files['agent']}\n\nMEMORY.md durable facts:\n{files['memory']}"
 
@@ -267,6 +278,8 @@ def dream_memory(
     session_id: str | None,
     model_client: ModelClient,
 ) -> dict[str, Any]:
+    """Ask the model for up to three new durable facts and append them to MEMORY.md."""
+
     files = load_memory_files()
     rows = list(
         get_messages_collection()
@@ -304,6 +317,7 @@ def dream_memory(
 
 
 def help_text() -> str:
+    """Return the help text listing the file-memory commands."""
     return (
         "/memory — display AGENT.md and MEMORY.md\n"
         "/compact — merge duplicates, resolve contradictions, report memory-line counts before and after\n"
@@ -352,6 +366,8 @@ def handle_file_memory_command(
     session_id: str | None,
     model_client: ModelClient,
 ) -> dict[str, Any] | None:
+    """Run /memory, /compact, /dream or /help; return None for other messages."""
+
     normalized = command.strip().casefold()
     if normalized == "/memory":
         files = load_memory_files()

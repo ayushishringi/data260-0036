@@ -64,14 +64,18 @@ def memory_config() -> dict[str, Any]:
 
 
 def now_utc() -> datetime:
+    """Return the current time as a timezone-aware UTC datetime."""
     return datetime.now(timezone.utc)
 
 
 def estimate_tokens(text: str) -> int:
+    """Estimate the token count of text as characters / 4."""
     return max(1, (len(text) + 3) // 4) if text else 0
 
 
 def log_chat_cost(record: dict[str, Any]) -> None:
+    """Append one per-request cost record to chat_costs.jsonl."""
+
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     with CHAT_COSTS_PATH.open("a", encoding="utf-8") as stream:
         stream.write(json.dumps(record, default=str) + "\n")
@@ -83,6 +87,8 @@ def save_message(
     role: str,
     content: str,
 ) -> dict[str, Any]:
+    """Insert one chat message into the messages collection and return it."""
+
     document = {
         "user_id": user_id,
         "session_id": session_id,
@@ -96,6 +102,8 @@ def save_message(
 
 
 def load_short_term_messages(user_id: str, session_id: str | None) -> list[dict[str, Any]]:
+    """Return the last SHORT_TERM_N session messages, oldest first."""
+
     query = {"user_id": user_id, "session_id": session_id}
     rows = list(
         get_messages_collection()
@@ -124,6 +132,8 @@ def compress_window(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
 
 
 def load_latest_summaries(user_id: str, session_id: str | None) -> dict[str, Any]:
+    """Return the latest session summary and lifetime summary for the user."""
+
     collection = get_summaries_collection()
     session = collection.find_one(
         {"user_id": user_id, "scope": "session", "session_id": session_id},
@@ -176,6 +186,8 @@ def embed_text(text: str) -> list[float]:
 
 
 def cosine_similarity(left: list[float], right: list[float]) -> float:
+    """Return the cosine similarity of two vectors (0.0 if either is zero)."""
+
     left_array = np.asarray(left, dtype=float)
     right_array = np.asarray(right, dtype=float)
     denominator = np.linalg.norm(left_array) * np.linalg.norm(right_array)
@@ -183,6 +195,8 @@ def cosine_similarity(left: list[float], right: list[float]) -> float:
 
 
 def retrieve_episodes(user_id: str, query: str) -> list[dict[str, Any]]:
+    """Return the EPISODIC_TOP_K episodes most similar to the query."""
+
     query_embedding = embed_text(query)
     scored: list[tuple[float, dict[str, Any]]] = []
     for episode in get_episodes_collection().find({"user_id": user_id}):
@@ -268,6 +282,8 @@ def maybe_summarize(
     session_id: str | None,
     model_client: ModelClient,
 ) -> None:
+    """Write a session summary every N user messages and a lifetime summary every M session summaries."""
+
     user_count = get_messages_collection().count_documents({
         "user_id": user_id,
         "session_id": session_id,
@@ -317,6 +333,8 @@ def assemble_prompt(
     summaries: dict[str, Any],
     episodes: list[dict[str, Any]],
 ) -> list[dict[str, str]]:
+    """Build the model prompt from file memory, summaries, episodes and the short-term window."""
+
     long_term = "\n".join(
         item["text"] for item in (summaries.get("user"), summaries.get("session")) if item
     ) or "(none)"
@@ -335,6 +353,8 @@ def assemble_prompt(
 
 
 def public_summary(summary: dict[str, Any] | None) -> dict[str, Any] | None:
+    """Return a summary document with a JSON-safe id, or None."""
+
     if summary is None:
         return None
     result = dict(summary)
@@ -349,6 +369,8 @@ def make_chat_turn(
     user_message: str,
     model_client: ModelClient,
 ) -> dict[str, Any]:
+    """Handle one chat message: run a file-memory command or answer with memory, then log cost."""
+
     started = time.perf_counter()
     command_result = handle_file_memory_command(
         user_message,
@@ -441,6 +463,8 @@ def make_chat_turn(
 
 
 def public_document(document: dict[str, Any]) -> dict[str, Any]:
+    """Return a copy of a MongoDB document with its ObjectId as a string."""
+
     result = dict(document)
     if "_id" in result:
         result["_id"] = str(result["_id"])
@@ -448,12 +472,16 @@ def public_document(document: dict[str, Any]) -> dict[str, Any]:
 
 
 def public_episode(document: dict[str, Any]) -> dict[str, Any]:
+    """Return an episode for API output, without its embedding vector."""
+
     result = public_document(document)
     result.pop("embedding", None)
     return result
 
 
 def get_memory(user_id: str) -> dict[str, Any]:
+    """Return recent messages, latest summaries and recent episodes for a user."""
+
     messages = list(
         get_messages_collection()
         .find({"user_id": user_id})
@@ -486,6 +514,8 @@ def get_memory(user_id: str) -> dict[str, Any]:
 
 
 def get_aggregate(user_id: str) -> dict[str, Any]:
+    """Return daily message counts and the most recent summaries for a user."""
+
     grouped = get_messages_collection().aggregate([
         {"$match": {"user_id": user_id}},
         {
