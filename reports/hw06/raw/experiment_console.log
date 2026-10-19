@@ -1,0 +1,230 @@
+.venv/bin/python3 scripts/run_hw6_memory_cost.py --configs 4:window 12:window 30:window 12:compressed_window
+[18:21:47] N=4,window turn  1: prompt=1476 completion=696 latency_ms=15440
+[18:21:56] N=4,window turn  2: prompt=1703 completion=678 latency_ms=8853
+[18:22:02] N=4,window turn  3: prompt=1847 completion=478 latency_ms=6286
+[18:22:13] N=4,window turn  4: prompt=1807 completion=825 latency_ms=10604
+[18:23:04] N=4,window turn  5: prompt=1791 completion=676 latency_ms=51369
+[18:23:17] N=4,window turn  6: prompt=1782 completion=954 latency_ms=12975
+[18:23:26] N=4,window turn  7: prompt=1781 completion=656 latency_ms=8894
+[18:23:38] N=4,window turn  8: prompt=1783 completion=879 latency_ms=11908
+[18:23:49] N=4,window turn  9: prompt=1812 completion=804 latency_ms=11310
+[18:25:38] N=4,window turn 10: prompt=1846 completion=1058 latency_ms=108735
+[18:25:47] N=4,window turn 11: prompt=1927 completion=540 latency_ms=9099
+[18:25:56] N=4,window turn 12: prompt=1916 completion=615 latency_ms=8752
+[18:26:04] N=4,window turn 13: prompt=1957 completion=539 latency_ms=7743
+[18:26:13] N=4,window turn 14: prompt=1984 completion=651 latency_ms=9410
+[18:28:07] N=4,window turn 15: prompt=1961 completion=1194 latency_ms=114366
+[18:28:24] N=4,window turn 16: prompt=1947 completion=640 latency_ms=17159
+[18:28:47] N=4,window turn 17: prompt=1959 completion=694 latency_ms=22483
+[18:29:01] N=4,window turn 18: prompt=1983 completion=518 latency_ms=13693
+[18:29:18] N=4,window turn 19: prompt=1983 completion=811 latency_ms=17233
+[18:32:06] N=4,window turn 20: prompt=1950 completion=717 latency_ms=168355
+[18:32:54] N=4,window turn 21: prompt=1900 completion=1054 latency_ms=48216
+[18:33:59] N=4,window turn 22: prompt=1885 completion=530 latency_ms=64587
+[18:34:57] N=4,window turn 23: prompt=1899 completion=1094 latency_ms=57918
+[18:35:15] N=4,window turn 24: prompt=1921 completion=584 latency_ms=18276
+[18:37:37] N=4,window turn 25: prompt=1924 completion=819 latency_ms=141726
+[18:38:01] N=4,window turn 26: prompt=1964 completion=911 latency_ms=24274
+[18:38:49] N=4,window turn 27: prompt=1973 completion=719 latency_ms=47868
+[18:39:38] N=4,window turn 28: prompt=1869 completion=611 latency_ms=49176
+[18:40:29] N=4,window turn 29: prompt=1785 completion=892 latency_ms=50711
+[18:42:04] N=4,window turn 30: prompt=1780 completion=364 latency_ms=95267
+[18:42:17] N=4,window probe_1: score=5
+[18:42:30] N=4,window probe_2: score=5
+[18:42:38] N=4,window probe_3: score=5
+[18:42:59] N=4,window probe_4: score=5
+[18:44:30] N=4,window probe_5: score=5
+[18:44:56] N=12,window turn  1: prompt=1476 completion=696 latency_ms=25388
+[18:45:27] N=12,window turn  2: prompt=1703 completion=678 latency_ms=30600
+[18:46:03] N=12,window turn  3: prompt=1868 completion=754 latency_ms=35872
+[18:46:35] N=12,window turn  4: prompt=2014 completion=793 latency_ms=31968
+[18:48:32] N=12,window turn  5: prompt=2170 completion=548 latency_ms=117387
+[18:49:10] N=12,window turn  6: prompt=2373 completion=748 latency_ms=38158
+[18:49:27] N=12,window turn  7: prompt=2510 completion=497 latency_ms=16310
+[18:49:48] N=12,window turn  8: prompt=2447 completion=943 latency_ms=21563
+[18:50:07] N=12,window turn  9: prompt=2458 completion=740 latency_ms=18880
+[18:53:25] N=12,window turn 10: prompt=2463 completion=966 latency_ms=197952
+[18:53:50] N=12,window turn 11: prompt=2529 completion=612 latency_ms=24534
+[18:54:32] N=12,window turn 12: prompt=2510 completion=818 latency_ms=41822
+[18:55:05] N=12,window turn 13: prompt=2501 completion=499 latency_ms=33525
+[18:55:48] N=12,window turn 14: prompt=2509 completion=650 latency_ms=42766
+[18:58:19] N=12,window turn 15: prompt=2519 completion=531 latency_ms=151437
+[18:58:54] N=12,window turn 16: prompt=2751 completion=796 latency_ms=34413
+[18:59:14] N=12,window turn 17: prompt=2758 completion=698 latency_ms=19802
+[18:59:35] N=12,window turn 18: prompt=2827 completion=731 latency_ms=20902
+[19:00:09] N=12,window turn 19: prompt=2893 completion=1017 latency_ms=34159
+[19:02:31] N=12,window turn 20: prompt=2874 completion=1089 latency_ms=142535
+[19:03:12] N=12,window turn 21: prompt=2892 completion=748 latency_ms=40512
+[19:04:04] N=12,window turn 22: prompt=2877 completion=937 latency_ms=51829
+[19:04:57] N=12,window turn 23: prompt=2877 completion=909 latency_ms=53188
+[19:05:48] N=12,window turn 24: prompt=2822 completion=798 latency_ms=50807
+[19:08:13] N=12,window turn 25: prompt=2774 completion=832 latency_ms=145107
+[19:08:34] N=12,window turn 26: prompt=2687 completion=770 latency_ms=21576
+[19:08:51] N=12,window turn 27: prompt=2714 completion=422 latency_ms=17095
+[19:09:34] N=12,window turn 28: prompt=2686 completion=826 latency_ms=42392
+[19:10:23] N=12,window turn 29: prompt=2672 completion=754 latency_ms=49542
+[19:14:46] N=12,window turn 30: prompt=2668 completion=586 latency_ms=262975
+[19:15:16] N=12,window probe_1: score=5
+[19:16:18] N=12,window probe_2: score=5
+[19:16:43] N=12,window probe_3: score=5
+[19:16:59] N=12,window probe_4: score=5
+[19:19:04] N=12,window probe_5: score=5
+[19:19:36] N=30,window turn  1: prompt=1476 completion=696 latency_ms=30406
+[19:20:28] N=30,window turn  2: prompt=1703 completion=678 latency_ms=52780
+[19:20:52] N=30,window turn  3: prompt=1868 completion=754 latency_ms=23406
+[19:21:48] N=30,window turn  4: prompt=2014 completion=793 latency_ms=56429
+[19:23:24] N=30,window turn  5: prompt=2170 completion=548 latency_ms=95902
+[19:23:50] N=30,window turn  6: prompt=2373 completion=748 latency_ms=26171
+[19:24:41] N=30,window turn  7: prompt=2531 completion=538 latency_ms=50872
+[19:25:14] N=30,window turn  8: prompt=2720 completion=777 latency_ms=32645
+[19:25:48] N=30,window turn  9: prompt=2907 completion=727 latency_ms=34241
+[19:29:18] N=30,window turn 10: prompt=3060 completion=663 latency_ms=209983
+[19:29:40] N=30,window turn 11: prompt=3304 completion=501 latency_ms=22082
+[19:30:21] N=30,window turn 12: prompt=3471 completion=665 latency_ms=40633
+[19:30:56] N=30,window turn 13: prompt=3638 completion=503 latency_ms=34872
+[19:31:25] N=30,window turn 14: prompt=3790 completion=708 latency_ms=29658
+[19:32:36] N=30,window turn 15: prompt=3961 completion=553 latency_ms=70034
+[19:33:08] N=30,window turn 16: prompt=4080 completion=748 latency_ms=32207
+[19:33:37] N=30,window turn 17: prompt=4020 completion=740 latency_ms=29407
+[19:34:14] N=30,window turn 18: prompt=3986 completion=844 latency_ms=36764
+[19:34:53] N=30,window turn 19: prompt=3999 completion=819 latency_ms=39336
+[19:38:54] N=30,window turn 20: prompt=3974 completion=763 latency_ms=240713
+[19:39:25] N=30,window turn 21: prompt=4059 completion=794 latency_ms=31015
+[19:40:09] N=30,window turn 22: prompt=4071 completion=992 latency_ms=43785
+[19:40:29] N=30,window turn 23: prompt=4032 completion=456 latency_ms=20053
+[19:40:49] N=30,window turn 24: prompt=3990 completion=501 latency_ms=19992
+[19:43:19] N=30,window turn 25: prompt=4022 completion=991 latency_ms=149695
+[19:43:59] N=30,window turn 26: prompt=4010 completion=577 latency_ms=40238
+[19:44:31] N=30,window turn 27: prompt=4016 completion=1005 latency_ms=32616
+[19:45:02] N=30,window turn 28: prompt=3980 completion=923 latency_ms=30024
+[19:45:33] N=30,window turn 29: prompt=3972 completion=621 latency_ms=31385
+[19:49:02] N=30,window turn 30: prompt=3986 completion=795 latency_ms=208823
+[19:49:42] N=30,window probe_1: score=5
+[19:50:22] N=30,window probe_2: score=5
+[19:51:44] N=30,window probe_3: score=5
+[19:52:36] N=30,window probe_4: score=5
+[19:55:17] N=30,window probe_5: score=5
+[19:55:45] N=12,compressed_window turn  1: prompt=1476 completion=696 latency_ms=27058
+[19:56:03] N=12,compressed_window turn  2: prompt=1703 completion=678 latency_ms=17563
+[19:56:41] N=12,compressed_window turn  3: prompt=1741 completion=724 latency_ms=38123
+[19:57:17] N=12,compressed_window turn  4: prompt=1826 completion=789 latency_ms=35811
+[19:58:56] N=12,compressed_window turn  5: prompt=1865 completion=674 latency_ms=99465
+[19:59:59] N=12,compressed_window turn  6: prompt=1971 completion=759 latency_ms=62467
+[20:00:56] N=12,compressed_window turn  7: prompt=2006 completion=457 latency_ms=57170
+[20:01:25] N=12,compressed_window turn  8: prompt=2016 completion=984 latency_ms=29222
+[20:02:18] N=12,compressed_window turn  9: prompt=1998 completion=597 latency_ms=52790
+[20:06:09] N=12,compressed_window turn 10: prompt=2043 completion=598 latency_ms=230469
+[20:06:47] N=12,compressed_window turn 11: prompt=2164 completion=466 latency_ms=38505
+[20:07:43] N=12,compressed_window turn 12: prompt=2159 completion=739 latency_ms=55613
+[20:08:06] N=12,compressed_window turn 13: prompt=2139 completion=312 latency_ms=23075
+[20:08:27] N=12,compressed_window turn 14: prompt=2121 completion=607 latency_ms=20565
+[20:10:01] N=12,compressed_window turn 15: prompt=2112 completion=456 latency_ms=94803
+[20:10:39] N=12,compressed_window turn 16: prompt=2098 completion=1065 latency_ms=37668
+[20:11:17] N=12,compressed_window turn 17: prompt=2084 completion=568 latency_ms=38363
+[20:11:45] N=12,compressed_window turn 18: prompt=2102 completion=775 latency_ms=27244
+[20:12:06] N=12,compressed_window turn 19: prompt=2134 completion=842 latency_ms=21582
+[20:16:07] N=12,compressed_window turn 20: prompt=2143 completion=494 latency_ms=240527
+[20:16:33] N=12,compressed_window turn 21: prompt=2116 completion=927 latency_ms=26224
+[20:17:11] N=12,compressed_window turn 22: prompt=2094 completion=916 latency_ms=38374
+[20:17:40] N=12,compressed_window turn 23: prompt=2081 completion=493 latency_ms=28409
+[20:18:18] N=12,compressed_window turn 24: prompt=2072 completion=573 latency_ms=38127
+[20:20:15] N=12,compressed_window turn 25: prompt=2103 completion=586 latency_ms=116794
+[20:20:38] N=12,compressed_window turn 26: prompt=2141 completion=863 latency_ms=22975
+[20:20:56] N=12,compressed_window turn 27: prompt=2149 completion=571 latency_ms=18017
+[20:21:18] N=12,compressed_window turn 28: prompt=2084 completion=579 latency_ms=21895
+[20:21:55] N=12,compressed_window turn 29: prompt=2102 completion=530 latency_ms=36834
+[20:24:19] N=12,compressed_window turn 30: prompt=2101 completion=546 latency_ms=144628
+[20:25:08] N=12,compressed_window probe_1: score=5
+[20:25:42] N=12,compressed_window probe_2: score=5
+[20:26:10] N=12,compressed_window probe_3: score=5
+[20:26:37] N=12,compressed_window probe_4: score=5
+[20:29:19] N=12,compressed_window probe_5: score=5
+{
+  "output": "/Users/ayushishringi/Desktop/DATA 260/HW1/data260-0036/reports/hw06/raw/memory_cost_comparison.json",
+  "settings": [
+    {
+      "setting": "N=4,window",
+      "short_term_n": 4,
+      "policy": "window",
+      "user_id": "hw6-cost-4-window-26b0de46",
+      "session_id": "session-69b88756",
+      "started_at": "2026-10-19T01:21:31.963895+00:00",
+      "conversation_turns": 30,
+      "mean_prompt_tokens_per_turn": 1869.83,
+      "mean_short_term_window_tokens": 288.2,
+      "mean_completion_tokens_per_turn": 740.03,
+      "mean_latency_ms": 41089.57,
+      "conversation_input_tokens": 56095,
+      "conversation_output_tokens": 22201,
+      "cost_10k_conversations": {
+        "input_cost_usd": 560.95,
+        "output_cost_usd": 1110.05,
+        "total_cost_usd": 1671.0
+      },
+      "probe_quality_mean": 5
+    },
+    {
+      "setting": "N=12,window",
+      "short_term_n": 12,
+      "policy": "window",
+      "user_id": "hw6-cost-12-window-d98cd498",
+      "session_id": "session-2fffe6ce",
+      "started_at": "2026-10-19T01:44:31.572834+00:00",
+      "conversation_turns": 30,
+      "mean_prompt_tokens_per_turn": 2527.4,
+      "mean_short_term_window_tokens": 898.4,
+      "mean_completion_tokens_per_turn": 746.2,
+      "mean_latency_ms": 60499.88,
+      "conversation_input_tokens": 75822,
+      "conversation_output_tokens": 22386,
+      "cost_10k_conversations": {
+        "input_cost_usd": 758.22,
+        "output_cost_usd": 1119.3,
+        "total_cost_usd": 1877.52
+      },
+      "probe_quality_mean": 5
+    },
+    {
+      "setting": "N=30,window",
+      "short_term_n": 30,
+      "policy": "window",
+      "user_id": "hw6-cost-30-window-12184701",
+      "session_id": "session-ed1a0270",
+      "started_at": "2026-10-19T02:19:05.711725+00:00",
+      "conversation_turns": 30,
+      "mean_prompt_tokens_per_turn": 3372.77,
+      "mean_short_term_window_tokens": 1908.87,
+      "mean_completion_tokens_per_turn": 714.03,
+      "mean_latency_ms": 59872.11,
+      "conversation_input_tokens": 101183,
+      "conversation_output_tokens": 21421,
+      "cost_10k_conversations": {
+        "input_cost_usd": 1011.83,
+        "output_cost_usd": 1071.05,
+        "total_cost_usd": 2082.88
+      },
+      "probe_quality_mean": 5
+    },
+    {
+      "setting": "N=12,compressed_window",
+      "short_term_n": 12,
+      "policy": "compressed_window",
+      "user_id": "hw6-cost-12-compressed_window-bb6fc737",
+      "session_id": "session-3e7aaabf",
+      "started_at": "2026-10-19T02:55:18.892534+00:00",
+      "conversation_turns": 30,
+      "mean_prompt_tokens_per_turn": 2031.47,
+      "mean_short_term_window_tokens": 439.47,
+      "mean_completion_tokens_per_turn": 662.13,
+      "mean_latency_ms": 58012.01,
+      "conversation_input_tokens": 60944,
+      "conversation_output_tokens": 19864,
+      "cost_10k_conversations": {
+        "input_cost_usd": 609.44,
+        "output_cost_usd": 993.2,
+        "total_cost_usd": 1602.64
+      },
+      "probe_quality_mean": 5
+    }
+  ]
+}

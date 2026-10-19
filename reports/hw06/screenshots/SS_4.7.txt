@@ -1,0 +1,6 @@
+[2026-10-18 23:08:24 PDT] $ curl -s -X POST http://127.0.0.1:8036/api/chat -H 'Content-Type: application/json' -d '{"user_id":"part4_test","session_id":"part4_session","message":"/memory"}' | jq '.file_memory | {memory_line_count, last_consolidated_at, consolidation_required}'
+{
+  "memory_line_count": 53,
+  "last_consolidated_at": "2026-10-10 09:00:00+00:00",
+  "consolidation_required": true
+}

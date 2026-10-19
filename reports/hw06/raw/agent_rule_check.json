@@ -47,11 +47,12 @@
     "test_correct_or_unknown_keys_are_not_flagged (tests.test_hw6_file_memory.AuditResolutionsTests.test_correct_or_unknown_keys_are_not_flagged) ... ok",
     "test_flags_resolution_that_disagrees_with_ground_truth (tests.test_hw6_file_memory.AuditResolutionsTests.test_flags_resolution_that_disagrees_with_ground_truth) ... ok",
     "test_contradiction_resolved_and_superseded_value_kept (tests.test_hw6_file_memory.ConsolidateMemoryTextTests.test_contradiction_resolved_and_superseded_value_kept) ... ok",
+    "test_fact_appended_after_resolutions_is_still_a_fact (tests.test_hw6_file_memory.ConsolidateMemoryTextTests.test_fact_appended_after_resolutions_is_still_a_fact) ... ok",
     "test_merges_duplicates_case_insensitively (tests.test_hw6_file_memory.ConsolidateMemoryTextTests.test_merges_duplicates_case_insensitively) ... ok",
     "test_reconsolidation_is_stable (tests.test_hw6_file_memory.ConsolidateMemoryTextTests.test_reconsolidation_is_stable) ... ok",
     "",
     "----------------------------------------------------------------------",
-    "Ran 5 tests in 0.000s",
+    "Ran 6 tests in 0.000s",
     "",
     "OK"
   ]

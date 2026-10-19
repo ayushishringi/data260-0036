@@ -1,0 +1,23 @@
+[2026-10-18 23:03:46 PDT] $ grep compressed_window reports/hw06/raw/chat_costs.jsonl | tail -1 | jq .
+{
+  "timestamp": "2026-10-19T03:29:19.158531+00:00",
+  "user_id": "hw6-cost-12-compressed_window-bb6fc737",
+  "session_id": "session-3e7aaabf",
+  "prompt_tokens": 2043,
+  "completion_tokens": 1160,
+  "total_tokens": 3203,
+  "component_token_estimates": {
+    "system_primer": 41,
+    "file_memory": 912,
+    "long_term_summary": 145,
+    "short_term_window": 301,
+    "episodic_facts": 58
+  },
+  "latency_ms": 161491.039,
+  "config": {
+    "short_term_n": 12,
+    "memory_policy": "compressed_window",
+    "summarize_every_user_msgs": 5,
+    "episodic_top_k": 3
+  }
+}

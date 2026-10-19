@@ -1,0 +1,5 @@
+[2026-10-18 23:08:24 PDT] $ curl -s -X POST http://127.0.0.1:8036/api/chat -H 'Content-Type: application/json' -d '{"user_id":"part4_test","session_id":"part4_session","message":"/help"}' | jq -r .reply
+/memory — display AGENT.md and MEMORY.md
+/compact — merge duplicates, resolve contradictions, report memory-line counts before and after
+/dream — identify durable facts from recent conversation and add them to MEMORY.md
+/help — display these commands

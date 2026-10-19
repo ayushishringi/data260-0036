@@ -1,5 +1,5 @@
 # Durable Memory
-<!-- consolidated_at: 2026-10-19T01:07:09.072523+00:00 -->
+<!-- consolidated_at: 2026-10-19T06:08:26.757664+00:00 -->
 ## Facts
 - [2026-10-17] course: DATA-260 (seen 3x)
 - [2026-10-17] sid4: 0036 (seen 2x)
@@ -38,3 +38,7 @@
 - short_term_n_default: kept "12" [2026-10-15]; superseded "8" [2026-10-03]
 - summarize_every_user_msgs: kept "5" [2026-10-15]; superseded "3" [2026-10-04]
 - port: kept "8036" [2026-10-18]; superseded "8000" [2026-10-14]
+
+- [2026-10-19] Remediation demo on Thursday
+- [2026-10-19] Room ENG-189
+- [2026-10-19] Dr. Okafor reviews every finding

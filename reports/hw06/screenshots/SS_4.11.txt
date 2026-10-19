@@ -1,0 +1,13 @@
+[2026-10-18 23:08:38 PDT] $ curl -s -X POST http://127.0.0.1:8036/api/chat -H 'Content-Type: application/json' -d '{"user_id":"part4_test","session_id":"part4_session","message":"/dream"}' | jq .file_memory && tail -4 MEMORY.md
+{
+  "message": "Durable facts added to MEMORY.md",
+  "facts_added": [
+    "- [2026-10-19] Remediation demo on Thursday",
+    "- [2026-10-19] Room ENG-189",
+    "- [2026-10-19] Dr. Okafor reviews every finding"
+  ]
+}
+
+- [2026-10-19] Remediation demo on Thursday
+- [2026-10-19] Room ENG-189
+- [2026-10-19] Dr. Okafor reviews every finding

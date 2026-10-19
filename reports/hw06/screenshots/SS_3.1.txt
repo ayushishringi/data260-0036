@@ -1,0 +1,13 @@
+[2026-10-18 23:03:44 PDT] $ grep -E 'turn 30|probe_5' reports/hw06/raw/experiment_console.log && jq -c '.settings[] | {setting, mean_prompt_tokens_per_turn, mean_short_term_window_tokens, mean_latency_ms, probe_quality_mean, scores: [.probe_results[].score], cost_10k_usd: .cost_10k_conversations.total_cost_usd}' reports/hw06/raw/memory_cost_comparison.json
+[18:42:04] N=4,window turn 30: prompt=1780 completion=364 latency_ms=95267
+[18:44:30] N=4,window probe_5: score=5
+[19:14:46] N=12,window turn 30: prompt=2668 completion=586 latency_ms=262975
+[19:19:04] N=12,window probe_5: score=5
+[19:49:02] N=30,window turn 30: prompt=3986 completion=795 latency_ms=208823
+[19:55:17] N=30,window probe_5: score=5
+[20:24:19] N=12,compressed_window turn 30: prompt=2101 completion=546 latency_ms=144628
+[20:29:19] N=12,compressed_window probe_5: score=5
+{"setting":"N=4,window","mean_prompt_tokens_per_turn":1869.83,"mean_short_term_window_tokens":288.2,"mean_latency_ms":41089.57,"probe_quality_mean":5,"scores":[5,5,5,5,5],"cost_10k_usd":1671.0}
+{"setting":"N=12,window","mean_prompt_tokens_per_turn":2527.4,"mean_short_term_window_tokens":898.4,"mean_latency_ms":60499.88,"probe_quality_mean":5,"scores":[5,5,5,5,5],"cost_10k_usd":1877.52}
+{"setting":"N=30,window","mean_prompt_tokens_per_turn":3372.77,"mean_short_term_window_tokens":1908.87,"mean_latency_ms":59872.11,"probe_quality_mean":5,"scores":[5,5,5,5,5],"cost_10k_usd":2082.88}
+{"setting":"N=12,compressed_window","mean_prompt_tokens_per_turn":2031.47,"mean_short_term_window_tokens":439.47,"mean_latency_ms":58012.01,"probe_quality_mean":5,"scores":[5,5,5,5,5],"cost_10k_usd":1602.64}

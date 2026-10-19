@@ -2,9 +2,11 @@
 
 from __future__ import annotations
 
+import http.client
 import json
 import os
 import re
+import time
 import urllib.error
 import urllib.request
 from dataclasses import dataclass, field
@@ -61,13 +63,19 @@ class ModelClient:
             headers={"Content-Type": "application/json"},
             method="POST",
         )
-        try:
-            with urllib.request.urlopen(req, timeout=180) as resp:
-                body = json.loads(resp.read().decode("utf-8"))
-        except urllib.error.URLError as exc:
-            raise RuntimeError(
-                f"Ollama request failed at {self.host}. Is `ollama serve` running? {exc}"
-            ) from exc
+        # Retry transient connection drops (Ollama occasionally closes the
+        # socket while reloading a model); give up after three attempts.
+        for attempt in range(3):
+            try:
+                with urllib.request.urlopen(req, timeout=180) as resp:
+                    body = json.loads(resp.read().decode("utf-8"))
+                break
+            except (urllib.error.URLError, http.client.HTTPException, ConnectionError) as exc:
+                if attempt == 2:
+                    raise RuntimeError(
+                        f"Ollama request failed at {self.host}. Is `ollama serve` running? {exc}"
+                    ) from exc
+                time.sleep(2)
 
         message = body.get("message") or {}
         text = THINK_RE.sub("", message.get("content") or "").strip()

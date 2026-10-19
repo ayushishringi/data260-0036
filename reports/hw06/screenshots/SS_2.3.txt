@@ -1,0 +1,29 @@
+[2026-10-18 23:08:15 PDT] $ curl -s http://127.0.0.1:8036/api/aggregate/ayushi_demo | jq '{daily_message_counts, recent_summaries: [.recent_summaries[] | {scope, session_id, created_at, text: .text[:150]}]}'
+{
+  "daily_message_counts": [
+    {
+      "date": "2026-10-19",
+      "count": 24
+    }
+  ],
+  "recent_summaries": [
+    {
+      "scope": "user",
+      "session_id": null,
+      "created_at": "2026-10-19T06:08:03.934000Z",
+      "text": "- Reviewer: Dr. Okafor  \n- Required SBOM format: CycloneDX  \n- Vulnerable transitive dependency: urllib-lite 0.9.2 (pulled by fetchkit)  \n- Package un"
+    },
+    {
+      "scope": "session",
+      "session_id": "demo_session_1",
+      "created_at": "2026-10-19T06:07:05.638000Z",
+      "text": "- Reviewer: Dr. Okafor  \n- Required SBOM format: CycloneDX  \n- Vulnerable transitive dependency: urllib-lite 0.9.2 (pulled by fetchkit)  \n- Topics dis"
+    },
+    {
+      "scope": "session",
+      "session_id": "demo_session_1",
+      "created_at": "2026-10-19T06:05:23.441000Z",
+      "text": "- Ayushi is auditing open-source packages for the DATA-260 project.  \n- Package under audit: left-pad-plus version 3.4.1.  \n- Critical CVE fix deadlin"
+    }
+  ]
+}

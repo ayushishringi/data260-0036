@@ -1,0 +1,33 @@
+[2026-10-18 23:08:14 PDT] $ curl -s http://127.0.0.1:8036/api/memory/ayushi_demo | jq '{message_count: (.messages|length), latest_session_summary: .latest_session_summary.text, latest_lifetime_summary: .latest_lifetime_summary.text, episode_count: (.episodes|length), episodes: [.episodes[:8][] | {fact, importance}]}'
+{
+  "message_count": 16,
+  "latest_session_summary": "- Reviewer: Dr. Okafor  \n- Required SBOM format: CycloneDX  \n- Vulnerable transitive dependency: urllib-lite 0.9.2 (pulled by fetchkit)  \n- Topics discussed: transitive dependencies, vulnerability prioritization, lockfiles",
+  "latest_lifetime_summary": "- Reviewer: Dr. Okafor  \n- Required SBOM format: CycloneDX  \n- Vulnerable transitive dependency: urllib-lite 0.9.2 (pulled by fetchkit)  \n- Package under audit: left-pad-plus 3.4.1  \n- Critical CVE fix deadline: 9 days  \n- Ayushi auditing open-source packages for DATA-260 project  \n- Topics discussed: transitive dependencies, vulnerability prioritization, lockfiles  \n- Topics discussed: open-source vulnerability tracking, CVE definitions, critical vulnerability deadlines, dependency scanner operations",
+  "episode_count": 6,
+  "episodes": [
+    {
+      "fact": "We found that urllib-lite 0.9.2 is vulnerable and fetchkit pulls it in",
+      "importance": 0.8
+    },
+    {
+      "fact": "Okafor and she wants findings in CycloneDX format",
+      "importance": 0.3
+    },
+    {
+      "fact": "My reviewer is Dr",
+      "importance": 0.8
+    },
+    {
+      "fact": "Our deadline for fixing critical CVEs is 9 days",
+      "importance": 1.0
+    },
+    {
+      "fact": "The package I am auditing is left-pad-plus version 3.4.1",
+      "importance": 1.0
+    },
+    {
+      "fact": "Hi, I am Ayushi and I am auditing open-source packages for my DATA-260 project",
+      "importance": 0.8
+    }
+  ]
+}

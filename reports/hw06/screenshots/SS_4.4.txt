@@ -1,0 +1,24 @@
+[2026-10-18 23:08:22 PDT] $ .venv/bin/python scripts/run_hw6_consolidation_test.py --apply | jq '{original_file_lines, consolidated_file_lines, memory_lines_before, memory_lines_after, duplicates_merged, contradictions_resolved, resolutions: [.resolutions[] | "\(.key): kept \(.kept) [\(.kept_date)] over \([.superseded[].value] | join(", "))"], incorrectly_resolved, no_silent_drop, under_40_lines}'
+{
+  "original_file_lines": 55,
+  "consolidated_file_lines": 39,
+  "memory_lines_before": 53,
+  "memory_lines_after": 34,
+  "duplicates_merged": 19,
+  "contradictions_resolved": 4,
+  "resolutions": [
+    "port: kept 8000 [2026-10-14] over 8036",
+    "ollama_model: kept qwen3:4b [2026-10-17] over llama3.2:3b",
+    "short_term_n_default: kept 12 [2026-10-15] over 8",
+    "summarize_every_user_msgs: kept 5 [2026-10-15] over 3"
+  ],
+  "incorrectly_resolved": [
+    {
+      "key": "port",
+      "kept": "8000",
+      "expected": "8036"
+    }
+  ],
+  "no_silent_drop": true,
+  "under_40_lines": true
+}

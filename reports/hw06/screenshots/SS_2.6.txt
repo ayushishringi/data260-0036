@@ -1,0 +1,29 @@
+[2026-10-18 23:08:18 PDT] $ .venv/bin/python scripts/hw6_show_collections.py ayushi_demo --collection episodes --limit 3
+database: s0036_doc
+  episodes: 372 documents
+  messages: 1040 documents
+  summaries: 141 documents
+  vulnerability_documents: 1 documents
+
+s0036_doc> db.episodes.find({'user_id': 'ayushi_demo'}).sort({created_at: -1}).limit(3)   // 6 matching
+{'_id': ObjectId('6ad5b345ec3338e140cf8abf'),
+ 'user_id': 'ayushi_demo',
+ 'session_id': 'demo_session_1',
+ 'fact': 'We found that urllib-lite 0.9.2 is vulnerable and fetchkit pulls it in',
+ 'importance': 0.8,
+ 'embedding': [-0.0311, 0.0089, -0.0099, 0.0273, '... 384 floats total'],
+ 'created_at': datetime.datetime(2026, 10, 19, 6, 5, 57, 957000, tzinfo=FixedOffset(datetime.timedelta(0), 'UTC'))}
+{'_id': ObjectId('6ad5b330ec3338e140cf8aba'),
+ 'user_id': 'ayushi_demo',
+ 'session_id': 'demo_session_1',
+ 'fact': 'Okafor and she wants findings in CycloneDX format',
+ 'importance': 0.3,
+ 'embedding': [-0.0928, 0.015, 0.0484, -0.0021, '... 384 floats total'],
+ 'created_at': datetime.datetime(2026, 10, 19, 6, 5, 36, 120000, tzinfo=FixedOffset(datetime.timedelta(0), 'UTC'))}
+{'_id': ObjectId('6ad5b330ec3338e140cf8ab9'),
+ 'user_id': 'ayushi_demo',
+ 'session_id': 'demo_session_1',
+ 'fact': 'My reviewer is Dr',
+ 'importance': 0.8,
+ 'embedding': [-0.0763, 0.0496, 0.0148, 0.0728, '... 384 floats total'],
+ 'created_at': datetime.datetime(2026, 10, 19, 6, 5, 36, 110000, tzinfo=FixedOffset(datetime.timedelta(0), 'UTC'))}

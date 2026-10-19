@@ -1,0 +1,11 @@
+[2026-10-18 23:08:25 PDT] $ curl -s -X POST http://127.0.0.1:8036/api/chat -H 'Content-Type: application/json' -d '{"user_id":"part4_test","session_id":"part4_session","message":"/compact"}' | jq '.file_memory | del(.resolutions)'
+{
+  "message": "MEMORY.md consolidated: 53 -> 34 memory lines (55 -> 39 file lines)",
+  "message_count_before": 53,
+  "message_count_after": 34,
+  "file_lines_before": 55,
+  "file_lines_after": 39,
+  "duplicates_merged": 19,
+  "contradictions_resolved": 4,
+  "consolidation_required": false
+}

@@ -1,0 +1,8 @@
+[2026-10-18 23:09:08 PDT] $ git log --format='%h %ad %s' --date=format:'%Y-%m-%d %H:%M' -4 -- MEMORY.md && echo && echo "lines in 2808f60:MEMORY.md = $(git show 2808f60:MEMORY.md | wc -l)" && echo "lines in 4e35837:MEMORY.md = $(git show 4e35837:MEMORY.md | wc -l)"
+c785e6c 2026-10-18 18:07 HW6 Part 4: correct incorrectly resolved port contradiction
+4e35837 2026-10-18 18:06 HW6 Part 4: consolidated MEMORY.md via /compact (55 -> 39 lines)
+2808f60 2026-10-18 18:06 HW6 fixes: per-config experiment servers, memory probes, consolidation, AGENT.md checks
+7171e9c 2026-10-18 14:42 Implement HW6 Part 4 file-based memory
+
+lines in 2808f60:MEMORY.md =       55
+lines in 4e35837:MEMORY.md =       39

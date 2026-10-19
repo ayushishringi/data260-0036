@@ -1,0 +1,8 @@
+[2026-10-18 23:08:26 PDT] $ echo '- [2026-10-18] port: 8036' >> MEMORY.md && curl -s -X POST http://127.0.0.1:8036/api/chat -H 'Content-Type: application/json' -d '{"user_id":"part4_test","session_id":"part4_session","message":"/compact"}' | jq -r .reply && grep -n port MEMORY.md
+MEMORY.md consolidated: 35 -> 35 memory lines (40 -> 40 file lines)
+25:- [2026-10-08] report_file: Shringi_HW6.pdf
+28:- [2026-10-17] The user prefers short, numbered answers in reports. (seen 2x)
+29:- [2026-10-17] Raw experiment output always goes under reports/hw06/raw/. (seen 2x)
+33:- [2026-10-18] port: 8036
+36:- port: kept "8000" [2026-10-14]; superseded "8036" [2026-09-01]
+40:- port: kept "8036" [2026-10-18]; superseded "8000" [2026-10-14]

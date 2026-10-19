@@ -1,0 +1,48 @@
+INFO:     Started server process [6883]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8036 (Press CTRL+C to quit)
+INFO:     127.0.0.1:53079 - "GET /api/health HTTP/1.1" 200 OK
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 4852.34it/s]
+INFO:     127.0.0.1:53080 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53112 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53178 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53210 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53240 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53297 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53337 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53385 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53423 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53455 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53581 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53669 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53747 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53780 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53844 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53962 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54031 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54099 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54175 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54266 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54637 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54674 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54725 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54756 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54789 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54924 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55036 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55131 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55169 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55201 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55505 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55581 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55663 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55738 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55770 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [6883]
+/opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/resource_tracker.py:279: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

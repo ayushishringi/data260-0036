@@ -1,0 +1,3 @@
+[2026-10-18 23:03:47 PDT] $ curl -s -w '\nHTTP %{http_code}\n' -X POST http://127.0.0.1:8036/api/documents -H 'Content-Type: application/json' -d '{"title": 123, "severity": "high", "discovered_at": "not-a-date"}'
+{"detail":[{"type":"string_type","loc":["body","title"],"msg":"Input should be a valid string","input":123},{"type":"datetime_from_date_parsing","loc":["body","discovered_at"],"msg":"Input should be a valid datetime or date, invalid character in year","input":"not-a-date","ctx":{"error":"invalid character in year"}}]}
+HTTP 422

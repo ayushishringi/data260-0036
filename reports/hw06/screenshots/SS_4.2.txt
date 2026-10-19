@@ -1,0 +1,13 @@
+[2026-10-18 23:08:20 PDT] $ make test-hw06 2>&1 | sed 's/ (tests[^)]*)//'
+.venv/bin/python3 -m unittest -v tests.test_hw6_file_memory
+test_correct_or_unknown_keys_are_not_flagged ... ok
+test_flags_resolution_that_disagrees_with_ground_truth ... ok
+test_contradiction_resolved_and_superseded_value_kept ... ok
+test_fact_appended_after_resolutions_is_still_a_fact ... ok
+test_merges_duplicates_case_insensitively ... ok
+test_reconsolidation_is_stable ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.000s
+
+OK

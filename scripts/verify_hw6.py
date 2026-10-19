@@ -58,6 +58,7 @@ def request(method: str, path: str, body: dict | None = None, timeout: int = 300
 def ensure_server() -> subprocess.Popen | None:
     # Bind test: if 127.0.0.1:PORT_BASE is taken, the API is already running.
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+        sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)  # same as uvicorn
         try:
             sock.bind(("127.0.0.1", PORT_BASE))
         except OSError:
@@ -67,11 +68,14 @@ def ensure_server() -> subprocess.Popen | None:
         cwd=ROOT, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
     )
     for _ in range(60):
+        # Require our JSON body: Docker's nginx on *:8036 answers 200 with HTML.
         try:
-            if request("GET", "/api/health", timeout=2)[0] == 200:
+            status, body = request("GET", "/api/health", timeout=2)
+            if status == 200 and isinstance(body, dict) and body.get("status") == "ok":
                 return process
-        except OSError:
-            time.sleep(1)
+        except (OSError, ValueError):
+            pass
+        time.sleep(1)
     process.terminate()
     raise SystemExit(f"API did not start on port {PORT_BASE}")
 

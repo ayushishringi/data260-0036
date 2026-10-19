@@ -1,0 +1,27 @@
+[2026-10-18 23:09:09 PDT] $ make verify-hw06 2>&1 | grep -E 'PASS|FAIL|checks passed'
+PASS  backend responds on PORT_BASE 8036
+PASS  POST /api/documents creates a record (201)
+PASS  GET /api/documents/{id} returns it (200)
+PASS  GET /api/documents lists records (200)
+PASS  PUT /api/documents/{id} updates it (200)
+PASS  DELETE /api/documents/{id} removes it (204)
+PASS  deleted record returns 404
+PASS  missing required field rejected (422)
+PASS  invalid enum rejected (422)
+PASS  wrong data types rejected (422)
+PASS  POST /api/chat returns a non-empty reply
+PASS  chat response shows memory used
+PASS  chat response logs token usage
+PASS  episodic fact from turn 1 retrieved on turn 2
+PASS  GET /api/memory/{user_id} returns messages and episodes
+PASS  GET /api/aggregate/{user_id} returns daily counts
+PASS  /help lists all four commands
+PASS  /memory returns AGENT.md, MEMORY.md and consolidation status
+PASS  55-line fixture consolidates to < 40 lines
+PASS  >= 3 duplicates merged and >= 3 contradictions resolved
+PASS  superseded values are kept, not silently deleted
+PASS  audit identifies the incorrectly resolved contradiction
+PASS  generated function follows AGENT.md (check_agent_rules.py)
+PASS  memory_probes.yaml has 5 probes with criteria and a 1-5 rubric
+PASS  Part 3 results cover N=4/12/30 and the compression policy
+25/25 checks passed -> /Users/ayushishringi/Desktop/DATA 260/HW1/data260-0036/reports/hw06/verification.json

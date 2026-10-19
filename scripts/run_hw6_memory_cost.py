@@ -85,6 +85,7 @@ def port_is_free(port: int) -> bool:
     # Bind test rather than connect: the HW2 Docker stack listens on *:8036, but
     # uvicorn can still bind 127.0.0.1:8036, which then takes precedence locally.
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+        sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)  # same as uvicorn
         try:
             sock.bind(("127.0.0.1", port))
         except OSError:
@@ -103,11 +104,15 @@ def start_server(port: int, short_term_n: int, policy: str, log_path: Path) -> s
     )
     deadline = time.time() + 90
     while time.time() < deadline:
+        # Require our JSON health body: Docker's nginx on *:8036 answers 200 with HTML
+        # until uvicorn has bound 127.0.0.1.
         try:
-            with urllib.request.urlopen(f"http://127.0.0.1:{port}/api/health", timeout=2):
-                return process
-        except OSError:
-            time.sleep(1)
+            with urllib.request.urlopen(f"http://127.0.0.1:{port}/api/health", timeout=2) as response:
+                if json.loads(response.read().decode()).get("status") == "ok":
+                    return process
+        except (OSError, ValueError):
+            pass
+        time.sleep(1)
     process.terminate()
     raise SystemExit(f"Server did not start; see {log_path}")
 

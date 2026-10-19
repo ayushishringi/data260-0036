@@ -1,0 +1,15 @@
+{
+  "experiment": {
+    "conversation_turns": 30,
+    "probe_count": 5,
+    "input_price_per_million": 1.0,
+    "output_price_per_million": 5.0,
+    "context": "OLLAMA_NUM_CTX=16384"
+  },
+  "settings": [
+    {"short_term_n": 4, "policy": "window", "user_id": "hw6-cost-4-window-d8548c81", "session_id": "session-d5c05660", "conversation_turns": 30, "mean_prompt_tokens_per_turn": 4822.866666666667, "mean_latency_ms": 36070.33206666667, "conversation_input_tokens": 144686, "conversation_output_tokens": 35967, "probe_quality_mean": 5.0, "probe_scores": [5, 5, 5, 5, 5]},
+    {"short_term_n": 12, "policy": "window", "user_id": "hw6-cost-12-window-e0335869", "session_id": "session-d4c1e3de", "conversation_turns": 30, "mean_prompt_tokens_per_turn": 4515.966666666666, "mean_latency_ms": 33060.243833333334, "conversation_input_tokens": 135479, "conversation_output_tokens": 34611, "probe_quality_mean": 5.0, "probe_scores": [5, 5, 5, 5, 5]},
+    {"short_term_n": 30, "policy": "window", "user_id": "hw6-cost-30-window-5de80cca", "session_id": "session-3ff0b3dd", "conversation_turns": 30, "mean_prompt_tokens_per_turn": 4796.966666666666, "mean_latency_ms": 36502.111, "conversation_input_tokens": 143909, "conversation_output_tokens": 37400, "probe_quality_mean": 5.0, "probe_scores": [5, 5, 5, 5, 5]},
+    {"short_term_n": 4, "policy": "summary_compression", "user_id": "hw6-cost-4-summary_compression-729c28b0", "session_id": "session-681e2e7f", "conversation_turns": 30, "mean_prompt_tokens_per_turn": 4517.233333333334, "mean_latency_ms": 32743.1458, "conversation_input_tokens": 135517, "conversation_output_tokens": 33338, "probe_quality_mean": 5.0, "probe_scores": [5, 5, 5, 5, 5]}
+  ]
+}

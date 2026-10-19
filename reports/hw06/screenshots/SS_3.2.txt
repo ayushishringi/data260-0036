@@ -1,0 +1,59 @@
+[2026-10-18 23:03:46 PDT] $ cat memory_probes.yaml
+# HW6 Part 3 memory probes. Each probe asks about a fact the user stated at a
+# known turn of the 30-message conversation in scripts/run_hw6_memory_cost.py.
+# None of these facts appear in AGENT.md or MEMORY.md, so a correct answer
+# must come from conversation memory (short-term window, summaries, or episodes).
+#
+# Scoring rubric (applied automatically by score_probe):
+#   5 = both expected details present, no hedging
+#   4 = both details present, but the answer hedges ("not sure", "I think", "may")
+#   3 = exactly one of the two details present
+#   2 = neither detail, but the answer honestly says it does not know
+#   1 = neither detail and no admission (wrong or invented answer)
+rubric:
+  5: "Both expected details correct and stated confidently"
+  4: "Both expected details correct but hedged"
+  3: "One of the two expected details correct"
+  2: "No expected detail, but honestly says it does not know"
+  1: "No expected detail and no admission of uncertainty (wrong or invented)"
+probes:
+  - id: probe_1
+    planted_at_turn: 2
+    question: "Which package and exact version am I auditing?"
+    expected_criteria:
+      - description: names the package left-pad-plus
+        any_of: ["left-pad-plus"]
+      - description: gives version 3.4.1
+        any_of: ["3.4.1"]
+  - id: probe_2
+    planted_at_turn: 9
+    question: "What is our deadline for fixing critical CVEs, and what is our ticket queue called?"
+    expected_criteria:
+      - description: deadline is 9 days
+        any_of: ["9 days", "nine days", "9-day", "nine-day"]
+      - description: queue is SEC-ORCHID
+        any_of: ["sec-orchid", "orchid"]
+  - id: probe_3
+    planted_at_turn: 17
+    question: "Who reviews my findings, and what format does she want them in?"
+    expected_criteria:
+      - description: reviewer is Dr. Okafor
+        any_of: ["okafor"]
+      - description: format is CycloneDX
+        any_of: ["cyclonedx", "cyclone dx"]
+  - id: probe_4
+    planted_at_turn: 23
+    question: "Which vulnerable transitive dependency did we find, and which package pulls it in?"
+    expected_criteria:
+      - description: dependency is urllib-lite
+        any_of: ["urllib-lite"]
+      - description: pulled in by fetchkit
+        any_of: ["fetchkit"]
+  - id: probe_5
+    planted_at_turn: 27
+    question: "When and where is my remediation demo?"
+    expected_criteria:
+      - description: day is Thursday
+        any_of: ["thursday"]
+      - description: room is ENG-189
+        any_of: ["eng-189", "eng 189", "eng189"]

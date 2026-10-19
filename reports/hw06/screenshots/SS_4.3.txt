@@ -1,0 +1,15 @@
+[2026-10-18 23:08:21 PDT] $ .venv/bin/python scripts/check_agent_rules.py | jq '{target, passed, checks: (.checks | map_values(.passed))}'
+{
+  "target": "backend/hw6_file_memory.py::audit_resolutions",
+  "passed": true,
+  "checks": {
+    "full_type_hints": true,
+    "has_docstring": true,
+    "no_print_in_backend_module": true,
+    "pure_function_no_file_writes": true,
+    "no_hosted_model_api": true,
+    "no_hard_coded_port": true,
+    "unittest_exists": true,
+    "unittests_pass": true
+  }
+}

@@ -1,0 +1,27 @@
+[2026-10-18 23:08:17 PDT] $ .venv/bin/python scripts/hw6_show_collections.py ayushi_demo --collection summaries --limit 2
+database: s0036_doc
+  episodes: 372 documents
+  messages: 1040 documents
+  summaries: 141 documents
+  vulnerability_documents: 1 documents
+
+s0036_doc> db.summaries.find({'user_id': 'ayushi_demo'}).sort({created_at: -1}).limit(2)   // 3 matching
+{'_id': ObjectId('6ad5b3c3ec3338e140cf8ac5'),
+ 'user_id': 'ayushi_demo',
+ 'session_id': None,
+ 'scope': 'user',
+ 'text': '- Reviewer: Dr. Okafor  \n'
+         '- Required SBOM format: CycloneDX  \n'
+         '- Vulnerable transitive dependency: urllib-lite 0.9.2 (pulled by fetchkit)  \n'
+         '- Package under audit: left-pad-plus 3.4.1  \n'
+         '- Critical CVE fix deadline: 9 days   ...',
+ 'created_at': datetime.datetime(2026, 10, 19, 6, 8, 3, 934000, tzinfo=FixedOffset(datetime.timedelta(0), 'UTC'))}
+{'_id': ObjectId('6ad5b389ec3338e140cf8ac4'),
+ 'user_id': 'ayushi_demo',
+ 'session_id': 'demo_session_1',
+ 'scope': 'session',
+ 'text': '- Reviewer: Dr. Okafor  \n'
+         '- Required SBOM format: CycloneDX  \n'
+         '- Vulnerable transitive dependency: urllib-lite 0.9.2 (pulled by fetchkit)  \n'
+         '- Topics discussed: transitive dependencies, vulnerability prioritization, lockfil ...',
+ 'created_at': datetime.datetime(2026, 10, 19, 6, 7, 5, 638000, tzinfo=FixedOffset(datetime.timedelta(0), 'UTC'))}

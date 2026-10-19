@@ -1,36 +1,826 @@
 DATA-260 HW6 RUN LOG
-SID4=0036 PORT_BASE=8036 PREFIX=s0036 DOMAIN_ID=4
+SID4=0036  PORT_BASE=8036  PREFIX=s0036  SEED=36  VERIFY_SEED=260036  DOMAIN_ID=4
 Hardware: MacBook Pro, Apple M5 Pro, 24 GB
-Model: Ollama qwen3:4b
+Model: Ollama qwen3:4b (OLLAMA_NUM_CTX=16384, OLLAMA_SEED=36, temperature 0.2)
+User: ayushishringi@Ayushis-MacBook-Pro
 
-Part 3 benchmark commands and results
---------------------------------------
-The following commands were run against FastAPI at http://127.0.0.1:8036.
+Note: an earlier Part 3 run (2026-10-18, before 22:25 UTC) was invalid: every setting ran on one
+server started without SHORT_TERM_N/MEMORY_POLICY, i.e. all were N=12/window. Its data is kept in
+raw/superseded/ and is not used. The run below starts a fresh server per setting and aborts if
+/api/chat reports a different config.
 
-.venv/bin/python3.12 scripts/run_hw6_memory_cost.py --settings 4 --policy window
-Result: mean prompt 2483.53 tokens/turn; mean latency 47488.25 ms; probe quality 3.4.
+============================================================================
+Part 3: make experiments-hw06  (started 2026-10-18 18:21 PDT / 2026-10-19 01:21 UTC)
+Full console output, unedited (also in raw/experiment_console.log):
+============================================================================
+.venv/bin/python3 scripts/run_hw6_memory_cost.py --configs 4:window 12:window 30:window 12:compressed_window
+[18:21:47] N=4,window turn  1: prompt=1476 completion=696 latency_ms=15440
+[18:21:56] N=4,window turn  2: prompt=1703 completion=678 latency_ms=8853
+[18:22:02] N=4,window turn  3: prompt=1847 completion=478 latency_ms=6286
+[18:22:13] N=4,window turn  4: prompt=1807 completion=825 latency_ms=10604
+[18:23:04] N=4,window turn  5: prompt=1791 completion=676 latency_ms=51369
+[18:23:17] N=4,window turn  6: prompt=1782 completion=954 latency_ms=12975
+[18:23:26] N=4,window turn  7: prompt=1781 completion=656 latency_ms=8894
+[18:23:38] N=4,window turn  8: prompt=1783 completion=879 latency_ms=11908
+[18:23:49] N=4,window turn  9: prompt=1812 completion=804 latency_ms=11310
+[18:25:38] N=4,window turn 10: prompt=1846 completion=1058 latency_ms=108735
+[18:25:47] N=4,window turn 11: prompt=1927 completion=540 latency_ms=9099
+[18:25:56] N=4,window turn 12: prompt=1916 completion=615 latency_ms=8752
+[18:26:04] N=4,window turn 13: prompt=1957 completion=539 latency_ms=7743
+[18:26:13] N=4,window turn 14: prompt=1984 completion=651 latency_ms=9410
+[18:28:07] N=4,window turn 15: prompt=1961 completion=1194 latency_ms=114366
+[18:28:24] N=4,window turn 16: prompt=1947 completion=640 latency_ms=17159
+[18:28:47] N=4,window turn 17: prompt=1959 completion=694 latency_ms=22483
+[18:29:01] N=4,window turn 18: prompt=1983 completion=518 latency_ms=13693
+[18:29:18] N=4,window turn 19: prompt=1983 completion=811 latency_ms=17233
+[18:32:06] N=4,window turn 20: prompt=1950 completion=717 latency_ms=168355
+[18:32:54] N=4,window turn 21: prompt=1900 completion=1054 latency_ms=48216
+[18:33:59] N=4,window turn 22: prompt=1885 completion=530 latency_ms=64587
+[18:34:57] N=4,window turn 23: prompt=1899 completion=1094 latency_ms=57918
+[18:35:15] N=4,window turn 24: prompt=1921 completion=584 latency_ms=18276
+[18:37:37] N=4,window turn 25: prompt=1924 completion=819 latency_ms=141726
+[18:38:01] N=4,window turn 26: prompt=1964 completion=911 latency_ms=24274
+[18:38:49] N=4,window turn 27: prompt=1973 completion=719 latency_ms=47868
+[18:39:38] N=4,window turn 28: prompt=1869 completion=611 latency_ms=49176
+[18:40:29] N=4,window turn 29: prompt=1785 completion=892 latency_ms=50711
+[18:42:04] N=4,window turn 30: prompt=1780 completion=364 latency_ms=95267
+[18:42:17] N=4,window probe_1: score=5
+[18:42:30] N=4,window probe_2: score=5
+[18:42:38] N=4,window probe_3: score=5
+[18:42:59] N=4,window probe_4: score=5
+[18:44:30] N=4,window probe_5: score=5
+[18:44:56] N=12,window turn  1: prompt=1476 completion=696 latency_ms=25388
+[18:45:27] N=12,window turn  2: prompt=1703 completion=678 latency_ms=30600
+[18:46:03] N=12,window turn  3: prompt=1868 completion=754 latency_ms=35872
+[18:46:35] N=12,window turn  4: prompt=2014 completion=793 latency_ms=31968
+[18:48:32] N=12,window turn  5: prompt=2170 completion=548 latency_ms=117387
+[18:49:10] N=12,window turn  6: prompt=2373 completion=748 latency_ms=38158
+[18:49:27] N=12,window turn  7: prompt=2510 completion=497 latency_ms=16310
+[18:49:48] N=12,window turn  8: prompt=2447 completion=943 latency_ms=21563
+[18:50:07] N=12,window turn  9: prompt=2458 completion=740 latency_ms=18880
+[18:53:25] N=12,window turn 10: prompt=2463 completion=966 latency_ms=197952
+[18:53:50] N=12,window turn 11: prompt=2529 completion=612 latency_ms=24534
+[18:54:32] N=12,window turn 12: prompt=2510 completion=818 latency_ms=41822
+[18:55:05] N=12,window turn 13: prompt=2501 completion=499 latency_ms=33525
+[18:55:48] N=12,window turn 14: prompt=2509 completion=650 latency_ms=42766
+[18:58:19] N=12,window turn 15: prompt=2519 completion=531 latency_ms=151437
+[18:58:54] N=12,window turn 16: prompt=2751 completion=796 latency_ms=34413
+[18:59:14] N=12,window turn 17: prompt=2758 completion=698 latency_ms=19802
+[18:59:35] N=12,window turn 18: prompt=2827 completion=731 latency_ms=20902
+[19:00:09] N=12,window turn 19: prompt=2893 completion=1017 latency_ms=34159
+[19:02:31] N=12,window turn 20: prompt=2874 completion=1089 latency_ms=142535
+[19:03:12] N=12,window turn 21: prompt=2892 completion=748 latency_ms=40512
+[19:04:04] N=12,window turn 22: prompt=2877 completion=937 latency_ms=51829
+[19:04:57] N=12,window turn 23: prompt=2877 completion=909 latency_ms=53188
+[19:05:48] N=12,window turn 24: prompt=2822 completion=798 latency_ms=50807
+[19:08:13] N=12,window turn 25: prompt=2774 completion=832 latency_ms=145107
+[19:08:34] N=12,window turn 26: prompt=2687 completion=770 latency_ms=21576
+[19:08:51] N=12,window turn 27: prompt=2714 completion=422 latency_ms=17095
+[19:09:34] N=12,window turn 28: prompt=2686 completion=826 latency_ms=42392
+[19:10:23] N=12,window turn 29: prompt=2672 completion=754 latency_ms=49542
+[19:14:46] N=12,window turn 30: prompt=2668 completion=586 latency_ms=262975
+[19:15:16] N=12,window probe_1: score=5
+[19:16:18] N=12,window probe_2: score=5
+[19:16:43] N=12,window probe_3: score=5
+[19:16:59] N=12,window probe_4: score=5
+[19:19:04] N=12,window probe_5: score=5
+[19:19:36] N=30,window turn  1: prompt=1476 completion=696 latency_ms=30406
+[19:20:28] N=30,window turn  2: prompt=1703 completion=678 latency_ms=52780
+[19:20:52] N=30,window turn  3: prompt=1868 completion=754 latency_ms=23406
+[19:21:48] N=30,window turn  4: prompt=2014 completion=793 latency_ms=56429
+[19:23:24] N=30,window turn  5: prompt=2170 completion=548 latency_ms=95902
+[19:23:50] N=30,window turn  6: prompt=2373 completion=748 latency_ms=26171
+[19:24:41] N=30,window turn  7: prompt=2531 completion=538 latency_ms=50872
+[19:25:14] N=30,window turn  8: prompt=2720 completion=777 latency_ms=32645
+[19:25:48] N=30,window turn  9: prompt=2907 completion=727 latency_ms=34241
+[19:29:18] N=30,window turn 10: prompt=3060 completion=663 latency_ms=209983
+[19:29:40] N=30,window turn 11: prompt=3304 completion=501 latency_ms=22082
+[19:30:21] N=30,window turn 12: prompt=3471 completion=665 latency_ms=40633
+[19:30:56] N=30,window turn 13: prompt=3638 completion=503 latency_ms=34872
+[19:31:25] N=30,window turn 14: prompt=3790 completion=708 latency_ms=29658
+[19:32:36] N=30,window turn 15: prompt=3961 completion=553 latency_ms=70034
+[19:33:08] N=30,window turn 16: prompt=4080 completion=748 latency_ms=32207
+[19:33:37] N=30,window turn 17: prompt=4020 completion=740 latency_ms=29407
+[19:34:14] N=30,window turn 18: prompt=3986 completion=844 latency_ms=36764
+[19:34:53] N=30,window turn 19: prompt=3999 completion=819 latency_ms=39336
+[19:38:54] N=30,window turn 20: prompt=3974 completion=763 latency_ms=240713
+[19:39:25] N=30,window turn 21: prompt=4059 completion=794 latency_ms=31015
+[19:40:09] N=30,window turn 22: prompt=4071 completion=992 latency_ms=43785
+[19:40:29] N=30,window turn 23: prompt=4032 completion=456 latency_ms=20053
+[19:40:49] N=30,window turn 24: prompt=3990 completion=501 latency_ms=19992
+[19:43:19] N=30,window turn 25: prompt=4022 completion=991 latency_ms=149695
+[19:43:59] N=30,window turn 26: prompt=4010 completion=577 latency_ms=40238
+[19:44:31] N=30,window turn 27: prompt=4016 completion=1005 latency_ms=32616
+[19:45:02] N=30,window turn 28: prompt=3980 completion=923 latency_ms=30024
+[19:45:33] N=30,window turn 29: prompt=3972 completion=621 latency_ms=31385
+[19:49:02] N=30,window turn 30: prompt=3986 completion=795 latency_ms=208823
+[19:49:42] N=30,window probe_1: score=5
+[19:50:22] N=30,window probe_2: score=5
+[19:51:44] N=30,window probe_3: score=5
+[19:52:36] N=30,window probe_4: score=5
+[19:55:17] N=30,window probe_5: score=5
+[19:55:45] N=12,compressed_window turn  1: prompt=1476 completion=696 latency_ms=27058
+[19:56:03] N=12,compressed_window turn  2: prompt=1703 completion=678 latency_ms=17563
+[19:56:41] N=12,compressed_window turn  3: prompt=1741 completion=724 latency_ms=38123
+[19:57:17] N=12,compressed_window turn  4: prompt=1826 completion=789 latency_ms=35811
+[19:58:56] N=12,compressed_window turn  5: prompt=1865 completion=674 latency_ms=99465
+[19:59:59] N=12,compressed_window turn  6: prompt=1971 completion=759 latency_ms=62467
+[20:00:56] N=12,compressed_window turn  7: prompt=2006 completion=457 latency_ms=57170
+[20:01:25] N=12,compressed_window turn  8: prompt=2016 completion=984 latency_ms=29222
+[20:02:18] N=12,compressed_window turn  9: prompt=1998 completion=597 latency_ms=52790
+[20:06:09] N=12,compressed_window turn 10: prompt=2043 completion=598 latency_ms=230469
+[20:06:47] N=12,compressed_window turn 11: prompt=2164 completion=466 latency_ms=38505
+[20:07:43] N=12,compressed_window turn 12: prompt=2159 completion=739 latency_ms=55613
+[20:08:06] N=12,compressed_window turn 13: prompt=2139 completion=312 latency_ms=23075
+[20:08:27] N=12,compressed_window turn 14: prompt=2121 completion=607 latency_ms=20565
+[20:10:01] N=12,compressed_window turn 15: prompt=2112 completion=456 latency_ms=94803
+[20:10:39] N=12,compressed_window turn 16: prompt=2098 completion=1065 latency_ms=37668
+[20:11:17] N=12,compressed_window turn 17: prompt=2084 completion=568 latency_ms=38363
+[20:11:45] N=12,compressed_window turn 18: prompt=2102 completion=775 latency_ms=27244
+[20:12:06] N=12,compressed_window turn 19: prompt=2134 completion=842 latency_ms=21582
+[20:16:07] N=12,compressed_window turn 20: prompt=2143 completion=494 latency_ms=240527
+[20:16:33] N=12,compressed_window turn 21: prompt=2116 completion=927 latency_ms=26224
+[20:17:11] N=12,compressed_window turn 22: prompt=2094 completion=916 latency_ms=38374
+[20:17:40] N=12,compressed_window turn 23: prompt=2081 completion=493 latency_ms=28409
+[20:18:18] N=12,compressed_window turn 24: prompt=2072 completion=573 latency_ms=38127
+[20:20:15] N=12,compressed_window turn 25: prompt=2103 completion=586 latency_ms=116794
+[20:20:38] N=12,compressed_window turn 26: prompt=2141 completion=863 latency_ms=22975
+[20:20:56] N=12,compressed_window turn 27: prompt=2149 completion=571 latency_ms=18017
+[20:21:18] N=12,compressed_window turn 28: prompt=2084 completion=579 latency_ms=21895
+[20:21:55] N=12,compressed_window turn 29: prompt=2102 completion=530 latency_ms=36834
+[20:24:19] N=12,compressed_window turn 30: prompt=2101 completion=546 latency_ms=144628
+[20:25:08] N=12,compressed_window probe_1: score=5
+[20:25:42] N=12,compressed_window probe_2: score=5
+[20:26:10] N=12,compressed_window probe_3: score=5
+[20:26:37] N=12,compressed_window probe_4: score=5
+[20:29:19] N=12,compressed_window probe_5: score=5
+{
+  "output": "/Users/ayushishringi/Desktop/DATA 260/HW1/data260-0036/reports/hw06/raw/memory_cost_comparison.json",
+  "settings": [
+    {
+      "setting": "N=4,window",
+      "short_term_n": 4,
+      "policy": "window",
+      "user_id": "hw6-cost-4-window-26b0de46",
+      "session_id": "session-69b88756",
+      "started_at": "2026-10-19T01:21:31.963895+00:00",
+      "conversation_turns": 30,
+      "mean_prompt_tokens_per_turn": 1869.83,
+      "mean_short_term_window_tokens": 288.2,
+      "mean_completion_tokens_per_turn": 740.03,
+      "mean_latency_ms": 41089.57,
+      "conversation_input_tokens": 56095,
+      "conversation_output_tokens": 22201,
+      "cost_10k_conversations": {
+        "input_cost_usd": 560.95,
+        "output_cost_usd": 1110.05,
+        "total_cost_usd": 1671.0
+      },
+      "probe_quality_mean": 5
+    },
+    {
+      "setting": "N=12,window",
+      "short_term_n": 12,
+      "policy": "window",
+      "user_id": "hw6-cost-12-window-d98cd498",
+      "session_id": "session-2fffe6ce",
+      "started_at": "2026-10-19T01:44:31.572834+00:00",
+      "conversation_turns": 30,
+      "mean_prompt_tokens_per_turn": 2527.4,
+      "mean_short_term_window_tokens": 898.4,
+      "mean_completion_tokens_per_turn": 746.2,
+      "mean_latency_ms": 60499.88,
+      "conversation_input_tokens": 75822,
+      "conversation_output_tokens": 22386,
+      "cost_10k_conversations": {
+        "input_cost_usd": 758.22,
+        "output_cost_usd": 1119.3,
+        "total_cost_usd": 1877.52
+      },
+      "probe_quality_mean": 5
+    },
+    {
+      "setting": "N=30,window",
+      "short_term_n": 30,
+      "policy": "window",
+      "user_id": "hw6-cost-30-window-12184701",
+      "session_id": "session-ed1a0270",
+      "started_at": "2026-10-19T02:19:05.711725+00:00",
+      "conversation_turns": 30,
+      "mean_prompt_tokens_per_turn": 3372.77,
+      "mean_short_term_window_tokens": 1908.87,
+      "mean_completion_tokens_per_turn": 714.03,
+      "mean_latency_ms": 59872.11,
+      "conversation_input_tokens": 101183,
+      "conversation_output_tokens": 21421,
+      "cost_10k_conversations": {
+        "input_cost_usd": 1011.83,
+        "output_cost_usd": 1071.05,
+        "total_cost_usd": 2082.88
+      },
+      "probe_quality_mean": 5
+    },
+    {
+      "setting": "N=12,compressed_window",
+      "short_term_n": 12,
+      "policy": "compressed_window",
+      "user_id": "hw6-cost-12-compressed_window-bb6fc737",
+      "session_id": "session-3e7aaabf",
+      "started_at": "2026-10-19T02:55:18.892534+00:00",
+      "conversation_turns": 30,
+      "mean_prompt_tokens_per_turn": 2031.47,
+      "mean_short_term_window_tokens": 439.47,
+      "mean_completion_tokens_per_turn": 662.13,
+      "mean_latency_ms": 58012.01,
+      "conversation_input_tokens": 60944,
+      "conversation_output_tokens": 19864,
+      "cost_10k_conversations": {
+        "input_cost_usd": 609.44,
+        "output_cost_usd": 993.2,
+        "total_cost_usd": 1602.64
+      },
+      "probe_quality_mean": 5
+    }
+  ]
+}
 
-.venv/bin/python3.12 scripts/run_hw6_memory_cost.py --settings 12 --policy window
-Result: mean prompt 3250.87 tokens/turn; mean latency 40400.42 ms; probe quality 3.0.
+============================================================================
+Part 3 summary: .venv/bin/python scripts/build_hw6_metrics.py -> reports/hw06/METRICS.md
+============================================================================
+N=4,window: prompt/turn=1869.83 window_tokens/turn=288.2 latency_ms=41089.57 quality=5 cost_10k=$1671.0
+N=12,window: prompt/turn=2527.4 window_tokens/turn=898.4 latency_ms=60499.88 quality=5 cost_10k=$1877.52
+N=30,window: prompt/turn=3372.77 window_tokens/turn=1908.87 latency_ms=59872.11 quality=5 cost_10k=$2082.88
+N=12,compressed_window: prompt/turn=2031.47 window_tokens/turn=439.47 latency_ms=58012.01 quality=5 cost_10k=$1602.64
 
-.venv/bin/python3.12 scripts/run_hw6_memory_cost.py --settings 30 --policy window
-Result: mean prompt 3134.20 tokens/turn; mean latency 42096.02 ms; probe quality 3.4.
+============================================================================
+Parts 1, 2, 4 and verification
+Append each command's output when you run it, e.g.:
+  <command> 2>&1 | tee -a reports/hw06/RUN_LOG.txt
+============================================================================
 
-SHORT_TERM_N=4 MEMORY_POLICY=summary_compression \
-.venv/bin/python3.12 scripts/run_hw6_memory_cost.py --settings 4 --policy summary_compression
-Result: mean prompt 888.50 tokens/turn; mean latency 27374.00 ms; probe quality 2.2.
+[2026-10-18 23:03:44 PDT] (SS_3.1) $ grep -E 'turn 30|probe_5' reports/hw06/raw/experiment_console.log && jq -c '.settings[] | {setting, mean_prompt_tokens_per_turn, mean_short_term_window_tokens, mean_latency_ms, probe_quality_mean, scores: [.probe_results[].score], cost_10k_usd: .cost_10k_conversations.total_cost_usd}' reports/hw06/raw/memory_cost_comparison.json
+[18:42:04] N=4,window turn 30: prompt=1780 completion=364 latency_ms=95267
+[18:44:30] N=4,window probe_5: score=5
+[19:14:46] N=12,window turn 30: prompt=2668 completion=586 latency_ms=262975
+[19:19:04] N=12,window probe_5: score=5
+[19:49:02] N=30,window turn 30: prompt=3986 completion=795 latency_ms=208823
+[19:55:17] N=30,window probe_5: score=5
+[20:24:19] N=12,compressed_window turn 30: prompt=2101 completion=546 latency_ms=144628
+[20:29:19] N=12,compressed_window probe_5: score=5
+{"setting":"N=4,window","mean_prompt_tokens_per_turn":1869.83,"mean_short_term_window_tokens":288.2,"mean_latency_ms":41089.57,"probe_quality_mean":5,"scores":[5,5,5,5,5],"cost_10k_usd":1671.0}
+{"setting":"N=12,window","mean_prompt_tokens_per_turn":2527.4,"mean_short_term_window_tokens":898.4,"mean_latency_ms":60499.88,"probe_quality_mean":5,"scores":[5,5,5,5,5],"cost_10k_usd":1877.52}
+{"setting":"N=30,window","mean_prompt_tokens_per_turn":3372.77,"mean_short_term_window_tokens":1908.87,"mean_latency_ms":59872.11,"probe_quality_mean":5,"scores":[5,5,5,5,5],"cost_10k_usd":2082.88}
+{"setting":"N=12,compressed_window","mean_prompt_tokens_per_turn":2031.47,"mean_short_term_window_tokens":439.47,"mean_latency_ms":58012.01,"probe_quality_mean":5,"scores":[5,5,5,5,5],"cost_10k_usd":1602.64}
 
-Part 4 file-memory checks
--------------------------
-POST /api/chat with /help: returned all four supported commands.
-POST /api/chat with /memory: returned AGENT.md and MEMORY.md contents.
-POST /api/chat with /compact: returned counts before and after consolidation.
-POST /api/chat with /dream: added a durable fact to MEMORY.md.
-verify_agent_instructions(): passed all five instruction-category checks.
+[2026-10-18 23:03:46 PDT] (SS_3.2) $ cat memory_probes.yaml
+# HW6 Part 3 memory probes. Each probe asks about a fact the user stated at a
+# known turn of the 30-message conversation in scripts/run_hw6_memory_cost.py.
+# None of these facts appear in AGENT.md or MEMORY.md, so a correct answer
+# must come from conversation memory (short-term window, summaries, or episodes).
+#
+# Scoring rubric (applied automatically by score_probe):
+#   5 = both expected details present, no hedging
+#   4 = both details present, but the answer hedges ("not sure", "I think", "may")
+#   3 = exactly one of the two details present
+#   2 = neither detail, but the answer honestly says it does not know
+#   1 = neither detail and no admission (wrong or invented answer)
+rubric:
+  5: "Both expected details correct and stated confidently"
+  4: "Both expected details correct but hedged"
+  3: "One of the two expected details correct"
+  2: "No expected detail, but honestly says it does not know"
+  1: "No expected detail and no admission of uncertainty (wrong or invented)"
+probes:
+  - id: probe_1
+    planted_at_turn: 2
+    question: "Which package and exact version am I auditing?"
+    expected_criteria:
+      - description: names the package left-pad-plus
+        any_of: ["left-pad-plus"]
+      - description: gives version 3.4.1
+        any_of: ["3.4.1"]
+  - id: probe_2
+    planted_at_turn: 9
+    question: "What is our deadline for fixing critical CVEs, and what is our ticket queue called?"
+    expected_criteria:
+      - description: deadline is 9 days
+        any_of: ["9 days", "nine days", "9-day", "nine-day"]
+      - description: queue is SEC-ORCHID
+        any_of: ["sec-orchid", "orchid"]
+  - id: probe_3
+    planted_at_turn: 17
+    question: "Who reviews my findings, and what format does she want them in?"
+    expected_criteria:
+      - description: reviewer is Dr. Okafor
+        any_of: ["okafor"]
+      - description: format is CycloneDX
+        any_of: ["cyclonedx", "cyclone dx"]
+  - id: probe_4
+    planted_at_turn: 23
+    question: "Which vulnerable transitive dependency did we find, and which package pulls it in?"
+    expected_criteria:
+      - description: dependency is urllib-lite
+        any_of: ["urllib-lite"]
+      - description: pulled in by fetchkit
+        any_of: ["fetchkit"]
+  - id: probe_5
+    planted_at_turn: 27
+    question: "When and where is my remediation demo?"
+    expected_criteria:
+      - description: day is Thursday
+        any_of: ["thursday"]
+      - description: room is ENG-189
+        any_of: ["eng-189", "eng 189", "eng189"]
 
-Repository checks
------------------
-.venv/bin/python3.12 -m compileall -q backend scripts/run_hw6_memory_cost.py
-Result: passed.
+[2026-10-18 23:03:46 PDT] (SS_3.3) $ grep compressed_window reports/hw06/raw/chat_costs.jsonl | tail -1 | jq .
+{
+  "timestamp": "2026-10-19T03:29:19.158531+00:00",
+  "user_id": "hw6-cost-12-compressed_window-bb6fc737",
+  "session_id": "session-3e7aaabf",
+  "prompt_tokens": 2043,
+  "completion_tokens": 1160,
+  "total_tokens": 3203,
+  "component_token_estimates": {
+    "system_primer": 41,
+    "file_memory": 912,
+    "long_term_summary": 145,
+    "short_term_window": 301,
+    "episodic_facts": 58
+  },
+  "latency_ms": 161491.039,
+  "config": {
+    "short_term_n": 12,
+    "memory_policy": "compressed_window",
+    "summarize_every_user_msgs": 5,
+    "episodic_top_k": 3
+  }
+}
 
-Detailed timestamped request records are stored in raw/chat_costs.jsonl.
+[2026-10-18 23:03:47 PDT] (SS_1.1) $ curl -s -w '\nHTTP %{http_code}\n' -X POST http://127.0.0.1:8036/api/documents -H 'Content-Type: application/json' -d '{"title": 123, "severity": "high", "discovered_at": "not-a-date"}'
+{"detail":[{"type":"string_type","loc":["body","title"],"msg":"Input should be a valid string","input":123},{"type":"datetime_from_date_parsing","loc":["body","discovered_at"],"msg":"Input should be a valid datetime or date, invalid character in year","input":"not-a-date","ctx":{"error":"invalid character in year"}}]}
+HTTP 422
+
+[2026-10-18 23:03:48 PDT] (SS_2.1) $ .venv/bin/python scripts/run_hw6_part2_demo.py ayushi_demo demo_session_1
+[ 1] USER: Hi, I am Ayushi and I am auditing open-source packages for my DATA-260 project.
+     ASSISTANT: Hello Ayushi! I see you're auditing open-source packages for your DATA-260 project (sid4: 0036). Your work aligns with our domain of open-source package vulnerability tracking (DOMAIN_ID 4) using FastAPI on port 8036. I'm ready to assist with your vulnerabilit...
+     used: short_term=1 msgs | summary=none | prompt_tokens=1482
+     episodic: (none)
+[ 2] USER: The package I am auditing is left-pad-plus version 3.4.1.
+     ASSISTANT: Left-pad-plus v3.4.1 is now tracked. I'll query the vulnerability database (`s0036_doc.vulnerability_documents`) for issues. Options: 1. Check severity (critical/high/medium/low) 2. Generate a report 3. Add a new vulnerability Which would you prefer?
+     used: short_term=3 msgs | summary=none | prompt_tokens=1656
+     episodic: Hi, I am Ayushi and I am auditing open-source packages for my DATA-260 project (imp 0.8, sim 0.45)
+[ 3] USER: What is a CVE in one sentence?
+     ASSISTANT: A CVE (Common Vulnerabilities and Exposures) is a standardized identifier for publicly disclosed software vulnerabilities managed by the CVE Numbering Authority.
+     used: short_term=5 msgs | summary=none | prompt_tokens=1760
+     episodic: The package I am auditing is left-pad-plus version 3.4.1 (imp 1.0, sim 0.18); Hi, I am Ayushi and I am auditing open-source packages for my DATA-260 project (imp 0.8, sim 0.11)
+[ 4] USER: Our deadline for fixing critical CVEs is 9 days.
+     ASSISTANT: Acknowledged: Critical CVEs must be fixed within 9 days per your project's requirements. I'll monitor the vulnerability database (`s0036_doc.vulnerability_documents`) for critical issues and alert you if any are overdue. Let me know if you'd like to check spec...
+     used: short_term=7 msgs | summary=none | prompt_tokens=1810
+     episodic: The package I am auditing is left-pad-plus version 3.4.1 (imp 1.0, sim 0.20); Hi, I am Ayushi and I am auditing open-source packages for my DATA-260 project (imp 0.8, sim 0.12)
+[ 5] USER: How do dependency scanners find vulnerable packages?
+     ASSISTANT: Dependency scanners find vulnerable packages by comparing project dependencies against databases of known vulnerabilities (e.g., NVD), checking for outdated versions with security flaws. In your DATA-260 project, this process uses the `s0036_doc.vulnerability_...
+     used: short_term=9 msgs | summary=none | prompt_tokens=1902
+     episodic: Hi, I am Ayushi and I am auditing open-source packages for my DATA-260 project (imp 0.8, sim 0.31); The package I am auditing is left-pad-plus version 3.4.1 (imp 1.0, sim 0.31); Our deadline for fixing critical CVEs is 9 days (imp 1.0, sim 0.17)
+[ 6] USER: My reviewer is Dr. Okafor and she wants findings in CycloneDX format.
+     ASSISTANT: I'll generate a CycloneDX SBOM report for left-pad-plus v3.4.1 using `s0036_doc.vulnerability_documents` and save it to `reports/hw06/raw/CycloneDX_report.json`. Critical vulnerabilities will be highlighted per your 9-day deadline. The report will be validated...
+     used: short_term=11 msgs | summary=yes (session) | prompt_tokens=2077
+     episodic: Hi, I am Ayushi and I am auditing open-source packages for my DATA-260 project (imp 0.8, sim 0.37); The package I am auditing is left-pad-plus version 3.4.1 (imp 1.0, sim 0.21); Our deadline for fixing critical CVEs is 9 days (imp 1.0, sim 0.17)
+[ 7] USER: What is a transitive dependency?
+     ASSISTANT: A transitive dependency is a package indirectly required by a project through another dependency (e.g., Project A → Library B → Library C), which dependency scanners like yours track to ensure all vulnerable packages—including those in the chain—are identified...
+     used: short_term=12 msgs | summary=yes (session) | prompt_tokens=2157
+     episodic: Hi, I am Ayushi and I am auditing open-source packages for my DATA-260 project (imp 0.8, sim 0.03); Okafor and she wants findings in CycloneDX format (imp 0.3, sim 0.02); The package I am auditing is left-pad-plus version 3.4.1 (imp 1.0, sim -0.00)
+[ 8] USER: We found that urllib-lite 0.9.2 is vulnerable and fetchkit pulls it in.
+     ASSISTANT: Confirmed: urllib-lite 0.9.2 is a transitive dependency pulled by fetchkit. This vulnerability is tracked in `s0036_doc.vulnerability_documents` and will be included in your CycloneDX report. If critical, it must be resolved within your 9-day deadline. I'll pr...
+     used: short_term=12 msgs | summary=yes (session) | prompt_tokens=2088
+     episodic: Hi, I am Ayushi and I am auditing open-source packages for my DATA-260 project (imp 0.8, sim 0.20); Okafor and she wants findings in CycloneDX format (imp 0.3, sim 0.14); The package I am auditing is left-pad-plus version 3.4.1 (imp 1.0, sim 0.13)
+[ 9] USER: How should I prioritize that finding?
+     ASSISTANT: Critical vulnerabilities like urllib-lite 0.9.2 (transitive dependency) require immediate action within your 9-day deadline. Prioritize by: 1. Confirming severity (critical = highest priority), 2. Verifying impact on your project’s dependencies, 3. Resolving w...
+     used: short_term=12 msgs | summary=yes (session) | prompt_tokens=2067
+     episodic: Okafor and she wants findings in CycloneDX format (imp 0.3, sim 0.12); Our deadline for fixing critical CVEs is 9 days (imp 1.0, sim 0.12); My reviewer is Dr (imp 0.8, sim 0.04)
+[10] USER: What does a lockfile do?
+     ASSISTANT: A lockfile records exact dependency versions to prevent version conflicts and ensure consistent installations. In your DATA-260 audit, it helps track transitive dependencies (like urllib-lite 0.9.2 pulled by fetchkit) and ensures vulnerabilities are resolved b...
+     used: short_term=12 msgs | summary=yes (session) | prompt_tokens=2167
+     episodic: The package I am auditing is left-pad-plus version 3.4.1 (imp 1.0, sim 0.10); Okafor and she wants findings in CycloneDX format (imp 0.3, sim 0.10); Hi, I am Ayushi and I am auditing open-source packages for my DATA-260 project (imp 0.8, sim 0.08)
+[11] USER: Which package and version am I auditing?
+     ASSISTANT: You are auditing **left-pad-plus v3.4.1** (as confirmed in your session summaries and episodic facts). This package is vulnerable and pulls transitive dependencies like urllib-lite 0.9.2 via fetchkit. Critical fixes must be applied within your 9-day deadline t...
+     used: short_term=12 msgs | summary=yes (session) | prompt_tokens=2298
+     episodic: The package I am auditing is left-pad-plus version 3.4.1 (imp 1.0, sim 0.68); Hi, I am Ayushi and I am auditing open-source packages for my DATA-260 project (imp 0.8, sim 0.60); My reviewer is Dr (imp 0.8, sim 0.27)
+[12] USER: Who is my reviewer and what format does she want?
+     ASSISTANT: Your reviewer is **Dr. Okafor**, and she requires findings in **CycloneDX SBOM format** for your DATA-260 audit. This ensures standardized vulnerability reporting and compliance with the project’s critical deadlines. I’ll generate the report immediately using ...
+     used: short_term=12 msgs | summary=yes (session) | prompt_tokens=2277
+     episodic: My reviewer is Dr (imp 0.8, sim 0.55); Okafor and she wants findings in CycloneDX format (imp 0.3, sim 0.43); Hi, I am Ayushi and I am auditing open-source packages for my DATA-260 project (imp 0.8, sim 0.34)
+
+[2026-10-18 23:08:14 PDT] (SS_2.2) $ curl -s http://127.0.0.1:8036/api/memory/ayushi_demo | jq '{message_count: (.messages|length), latest_session_summary: .latest_session_summary.text, latest_lifetime_summary: .latest_lifetime_summary.text, episode_count: (.episodes|length), episodes: [.episodes[:8][] | {fact, importance}]}'
+{
+  "message_count": 16,
+  "latest_session_summary": "- Reviewer: Dr. Okafor  \n- Required SBOM format: CycloneDX  \n- Vulnerable transitive dependency: urllib-lite 0.9.2 (pulled by fetchkit)  \n- Topics discussed: transitive dependencies, vulnerability prioritization, lockfiles",
+  "latest_lifetime_summary": "- Reviewer: Dr. Okafor  \n- Required SBOM format: CycloneDX  \n- Vulnerable transitive dependency: urllib-lite 0.9.2 (pulled by fetchkit)  \n- Package under audit: left-pad-plus 3.4.1  \n- Critical CVE fix deadline: 9 days  \n- Ayushi auditing open-source packages for DATA-260 project  \n- Topics discussed: transitive dependencies, vulnerability prioritization, lockfiles  \n- Topics discussed: open-source vulnerability tracking, CVE definitions, critical vulnerability deadlines, dependency scanner operations",
+  "episode_count": 6,
+  "episodes": [
+    {
+      "fact": "We found that urllib-lite 0.9.2 is vulnerable and fetchkit pulls it in",
+      "importance": 0.8
+    },
+    {
+      "fact": "Okafor and she wants findings in CycloneDX format",
+      "importance": 0.3
+    },
+    {
+      "fact": "My reviewer is Dr",
+      "importance": 0.8
+    },
+    {
+      "fact": "Our deadline for fixing critical CVEs is 9 days",
+      "importance": 1.0
+    },
+    {
+      "fact": "The package I am auditing is left-pad-plus version 3.4.1",
+      "importance": 1.0
+    },
+    {
+      "fact": "Hi, I am Ayushi and I am auditing open-source packages for my DATA-260 project",
+      "importance": 0.8
+    }
+  ]
+}
+
+[2026-10-18 23:08:15 PDT] (SS_2.3) $ curl -s http://127.0.0.1:8036/api/aggregate/ayushi_demo | jq '{daily_message_counts, recent_summaries: [.recent_summaries[] | {scope, session_id, created_at, text: .text[:150]}]}'
+{
+  "daily_message_counts": [
+    {
+      "date": "2026-10-19",
+      "count": 24
+    }
+  ],
+  "recent_summaries": [
+    {
+      "scope": "user",
+      "session_id": null,
+      "created_at": "2026-10-19T06:08:03.934000Z",
+      "text": "- Reviewer: Dr. Okafor  \n- Required SBOM format: CycloneDX  \n- Vulnerable transitive dependency: urllib-lite 0.9.2 (pulled by fetchkit)  \n- Package un"
+    },
+    {
+      "scope": "session",
+      "session_id": "demo_session_1",
+      "created_at": "2026-10-19T06:07:05.638000Z",
+      "text": "- Reviewer: Dr. Okafor  \n- Required SBOM format: CycloneDX  \n- Vulnerable transitive dependency: urllib-lite 0.9.2 (pulled by fetchkit)  \n- Topics dis"
+    },
+    {
+      "scope": "session",
+      "session_id": "demo_session_1",
+      "created_at": "2026-10-19T06:05:23.441000Z",
+      "text": "- Ayushi is auditing open-source packages for the DATA-260 project.  \n- Package under audit: left-pad-plus version 3.4.1.  \n- Critical CVE fix deadlin"
+    }
+  ]
+}
+
+[2026-10-18 23:08:16 PDT] (SS_2.4) $ .venv/bin/python scripts/hw6_show_collections.py ayushi_demo --collection messages --limit 2
+database: s0036_doc
+  episodes: 372 documents
+  messages: 1040 documents
+  summaries: 141 documents
+  vulnerability_documents: 1 documents
+
+s0036_doc> db.messages.find({'user_id': 'ayushi_demo'}).sort({created_at: -1}).limit(2)   // 24 matching
+{'_id': ObjectId('6ad5b3ccec3338e140cf8ac9'),
+ 'user_id': 'ayushi_demo',
+ 'session_id': 'demo_session_1',
+ 'role': 'assistant',
+ 'content': 'Your reviewer is **Dr. Okafor**, and she requires findings in **CycloneDX SBOM format** for your DATA-260 audit. '
+            'This ensures standardized vulnerability reporting and compliance with the project’s critical deadlines. I’l ...',
+ 'created_at': datetime.datetime(2026, 10, 19, 6, 8, 12, 909000, tzinfo=FixedOffset(datetime.timedelta(0), 'UTC'))}
+{'_id': ObjectId('6ad5b3c9ec3338e140cf8ac8'),
+ 'user_id': 'ayushi_demo',
+ 'session_id': 'demo_session_1',
+ 'role': 'user',
+ 'content': 'Who is my reviewer and what format does she want?',
+ 'created_at': datetime.datetime(2026, 10, 19, 6, 8, 9, 21000, tzinfo=FixedOffset(datetime.timedelta(0), 'UTC'))}
+
+[2026-10-18 23:08:17 PDT] (SS_2.5) $ .venv/bin/python scripts/hw6_show_collections.py ayushi_demo --collection summaries --limit 2
+database: s0036_doc
+  episodes: 372 documents
+  messages: 1040 documents
+  summaries: 141 documents
+  vulnerability_documents: 1 documents
+
+s0036_doc> db.summaries.find({'user_id': 'ayushi_demo'}).sort({created_at: -1}).limit(2)   // 3 matching
+{'_id': ObjectId('6ad5b3c3ec3338e140cf8ac5'),
+ 'user_id': 'ayushi_demo',
+ 'session_id': None,
+ 'scope': 'user',
+ 'text': '- Reviewer: Dr. Okafor  \n'
+         '- Required SBOM format: CycloneDX  \n'
+         '- Vulnerable transitive dependency: urllib-lite 0.9.2 (pulled by fetchkit)  \n'
+         '- Package under audit: left-pad-plus 3.4.1  \n'
+         '- Critical CVE fix deadline: 9 days   ...',
+ 'created_at': datetime.datetime(2026, 10, 19, 6, 8, 3, 934000, tzinfo=FixedOffset(datetime.timedelta(0), 'UTC'))}
+{'_id': ObjectId('6ad5b389ec3338e140cf8ac4'),
+ 'user_id': 'ayushi_demo',
+ 'session_id': 'demo_session_1',
+ 'scope': 'session',
+ 'text': '- Reviewer: Dr. Okafor  \n'
+         '- Required SBOM format: CycloneDX  \n'
+         '- Vulnerable transitive dependency: urllib-lite 0.9.2 (pulled by fetchkit)  \n'
+         '- Topics discussed: transitive dependencies, vulnerability prioritization, lockfil ...',
+ 'created_at': datetime.datetime(2026, 10, 19, 6, 7, 5, 638000, tzinfo=FixedOffset(datetime.timedelta(0), 'UTC'))}
+
+[2026-10-18 23:08:18 PDT] (SS_2.6) $ .venv/bin/python scripts/hw6_show_collections.py ayushi_demo --collection episodes --limit 3
+database: s0036_doc
+  episodes: 372 documents
+  messages: 1040 documents
+  summaries: 141 documents
+  vulnerability_documents: 1 documents
+
+s0036_doc> db.episodes.find({'user_id': 'ayushi_demo'}).sort({created_at: -1}).limit(3)   // 6 matching
+{'_id': ObjectId('6ad5b345ec3338e140cf8abf'),
+ 'user_id': 'ayushi_demo',
+ 'session_id': 'demo_session_1',
+ 'fact': 'We found that urllib-lite 0.9.2 is vulnerable and fetchkit pulls it in',
+ 'importance': 0.8,
+ 'embedding': [-0.0311, 0.0089, -0.0099, 0.0273, '... 384 floats total'],
+ 'created_at': datetime.datetime(2026, 10, 19, 6, 5, 57, 957000, tzinfo=FixedOffset(datetime.timedelta(0), 'UTC'))}
+{'_id': ObjectId('6ad5b330ec3338e140cf8aba'),
+ 'user_id': 'ayushi_demo',
+ 'session_id': 'demo_session_1',
+ 'fact': 'Okafor and she wants findings in CycloneDX format',
+ 'importance': 0.3,
+ 'embedding': [-0.0928, 0.015, 0.0484, -0.0021, '... 384 floats total'],
+ 'created_at': datetime.datetime(2026, 10, 19, 6, 5, 36, 120000, tzinfo=FixedOffset(datetime.timedelta(0), 'UTC'))}
+{'_id': ObjectId('6ad5b330ec3338e140cf8ab9'),
+ 'user_id': 'ayushi_demo',
+ 'session_id': 'demo_session_1',
+ 'fact': 'My reviewer is Dr',
+ 'importance': 0.8,
+ 'embedding': [-0.0763, 0.0496, 0.0148, 0.0728, '... 384 floats total'],
+ 'created_at': datetime.datetime(2026, 10, 19, 6, 5, 36, 110000, tzinfo=FixedOffset(datetime.timedelta(0), 'UTC'))}
+
+[2026-10-18 23:08:20 PDT] (SS_4.1) $ cat AGENT.md
+# Durable Agent Instructions
+
+## Project description
+
+- This repository (data260-0036) implements DATA-260 homework APIs for open-source package vulnerability tracking (DOMAIN_ID 4).
+- HW6 adds a MongoDB document API (`s0036_doc`), MongoDB-backed chat memory (messages, summaries, episodes), and file-based memory (AGENT.md, MEMORY.md).
+
+## Technology stack
+
+- Use Python 3.12, FastAPI, Pydantic v2, PyMongo, MongoDB, and the local Ollama `qwen3:4b` model.
+- All model calls go through `src/model_client.ModelClient`; the API runs on PORT_BASE 8036.
+
+## Coding conventions
+
+- Keep route handlers thin and place business logic in separate service modules.
+- Every public function has full type hints (all parameters and the return value) and a docstring.
+- Validate external input with Pydantic and return clear HTTP errors.
+- Do not use `print()` in `backend/` modules; return data or raise an exception instead.
+
+## Testing approach
+
+- Every new pure function gets a `unittest` test in `tests/` (pytest is not installed).
+- Test successful behavior, validation failures, persistence, and deterministic file operations before committing.
+
+## Prohibited actions
+
+- Do not call paid hosted model APIs; use only the local Ollama adapter.
+- Do not expose secrets, delete unrelated user data, or modify unrelated homework evidence.
+- Do not silently delete facts from MEMORY.md; superseded facts must be recorded.
+
+[2026-10-18 23:08:20 PDT] (SS_4.2) $ make test-hw06 2>&1 | sed 's/ (tests[^)]*)//'
+.venv/bin/python3 -m unittest -v tests.test_hw6_file_memory
+test_correct_or_unknown_keys_are_not_flagged ... ok
+test_flags_resolution_that_disagrees_with_ground_truth ... ok
+test_contradiction_resolved_and_superseded_value_kept ... ok
+test_fact_appended_after_resolutions_is_still_a_fact ... ok
+test_merges_duplicates_case_insensitively ... ok
+test_reconsolidation_is_stable ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.000s
+
+OK
+
+[2026-10-18 23:08:21 PDT] (SS_4.3) $ .venv/bin/python scripts/check_agent_rules.py | jq '{target, passed, checks: (.checks | map_values(.passed))}'
+{
+  "target": "backend/hw6_file_memory.py::audit_resolutions",
+  "passed": true,
+  "checks": {
+    "full_type_hints": true,
+    "has_docstring": true,
+    "no_print_in_backend_module": true,
+    "pure_function_no_file_writes": true,
+    "no_hosted_model_api": true,
+    "no_hard_coded_port": true,
+    "unittest_exists": true,
+    "unittests_pass": true
+  }
+}
+
+[2026-10-18 23:08:22 PDT] (SS_4.4) $ .venv/bin/python scripts/run_hw6_consolidation_test.py --apply | jq '{original_file_lines, consolidated_file_lines, memory_lines_before, memory_lines_after, duplicates_merged, contradictions_resolved, resolutions: [.resolutions[] | "\(.key): kept \(.kept) [\(.kept_date)] over \([.superseded[].value] | join(", "))"], incorrectly_resolved, no_silent_drop, under_40_lines}'
+{
+  "original_file_lines": 55,
+  "consolidated_file_lines": 39,
+  "memory_lines_before": 53,
+  "memory_lines_after": 34,
+  "duplicates_merged": 19,
+  "contradictions_resolved": 4,
+  "resolutions": [
+    "port: kept 8000 [2026-10-14] over 8036",
+    "ollama_model: kept qwen3:4b [2026-10-17] over llama3.2:3b",
+    "short_term_n_default: kept 12 [2026-10-15] over 8",
+    "summarize_every_user_msgs: kept 5 [2026-10-15] over 3"
+  ],
+  "incorrectly_resolved": [
+    {
+      "key": "port",
+      "kept": "8000",
+      "expected": "8036"
+    }
+  ],
+  "no_silent_drop": true,
+  "under_40_lines": true
+}
+
+[2026-10-18 23:08:23 PDT] (SS_4.5) $ wc -l MEMORY.md && cat MEMORY.md
+      55 MEMORY.md
+# Durable Memory
+<!-- consolidated_at: 2026-10-10T09:00:00+00:00 -->
+- [2026-08-25] course: DATA-260
+- [2026-08-25] sid4: 0036
+- [2026-09-01] port: 8036
+- [2026-08-25] domain: open-source package vulnerability tracking (DOMAIN_ID 4)
+- [2026-09-02] api_framework: FastAPI
+- [2026-09-02] validation: Pydantic v2 models for every request body
+- [2026-09-05] ollama_model: llama3.2:3b
+- [2026-09-10] python_version: 3.12
+- [2026-09-10] hardware: MacBook Pro, Apple M5 Pro, 24 GB
+- [2026-10-01] mongo_database: s0036_doc
+- [2026-10-01] documents_collection: vulnerability_documents
+- [2026-10-01] memory_collections: messages, summaries, episodes
+- [2026-10-01] ollama_model: qwen3:4b
+- [2026-10-02] severity_values: critical, high, medium, low
+- [2026-10-02] status_values: open, triaged, resolved, ignored
+- [2026-10-03] short_term_n_default: 8
+- [2026-10-04] summarize_every_user_msgs: 3
+- [2026-10-05] episodic_top_k: 3
+- [2026-10-05] embedding_model: all-MiniLM-L6-v2 with a hash-vector fallback
+- [2026-10-06] ollama_num_ctx: 16384
+- [2026-10-06] ollama_seed: 36
+- [2026-10-07] input_price: $1 per million tokens
+- [2026-10-07] output_price: $5 per million tokens
+- [2026-10-08] collaborators: Sbnikitha, supriyaselvanganesan
+- [2026-10-08] submission_tag: hw6
+- [2026-10-08] report_file: Shringi_HW6.pdf
+- [2026-10-09] test_runner: unittest (pytest is not installed in .venv)
+- [2026-10-09] lifetime_summary_every: 2 session summaries
+- [2026-10-10] The user prefers short, numbered answers in reports.
+- [2026-10-10] Raw experiment output always goes under reports/hw06/raw/.
+- [2026-10-14] port: 8000
+- [2026-10-15] short_term_n_default: 12
+- [2026-10-15] summarize_every_user_msgs: 5
+- [2026-10-16] memory_policy_options: window, compressed_window
+- [2026-10-16] api_framework: fastapi
+- [2026-10-16] course: DATA-260
+- [2026-10-16] mongo_database: s0036_doc
+- [2026-10-17] The user prefers short, numbered answers in reports.
+- [2026-10-17] ollama_model: qwen3:4b
+- [2026-10-17] episodic_top_k: 3
+- [2026-10-17] course: data-260
+- [2026-10-17] Raw experiment output always goes under reports/hw06/raw/
+- [2026-10-17] api_framework: FastAPI
+- [2026-10-17] sid4: 0036
+- [2026-10-17] input_price: $1 per million tokens
+- [2026-10-17] output_price: $5 per million tokens
+- [2026-10-17] collaborators: Sbnikitha, supriyaselvanganesan
+- [2026-10-17] memory_collections: messages, summaries, episodes
+- [2026-10-18] severity_values: critical, high, medium, low
+- [2026-10-18] status_values: open, triaged, resolved, ignored
+- [2026-10-18] ollama_num_ctx: 16384
+- [2026-10-18] hardware: MacBook Pro, Apple M5 Pro, 24 GB
+- [2026-10-18] submission_tag: hw6
+
+[2026-10-18 23:08:24 PDT] (SS_4.6) $ curl -s -X POST http://127.0.0.1:8036/api/chat -H 'Content-Type: application/json' -d '{"user_id":"part4_test","session_id":"part4_session","message":"/help"}' | jq -r .reply
+/memory — display AGENT.md and MEMORY.md
+/compact — merge duplicates, resolve contradictions, report memory-line counts before and after
+/dream — identify durable facts from recent conversation and add them to MEMORY.md
+/help — display these commands
+
+[2026-10-18 23:08:24 PDT] (SS_4.7) $ curl -s -X POST http://127.0.0.1:8036/api/chat -H 'Content-Type: application/json' -d '{"user_id":"part4_test","session_id":"part4_session","message":"/memory"}' | jq '.file_memory | {memory_line_count, last_consolidated_at, consolidation_required}'
+{
+  "memory_line_count": 53,
+  "last_consolidated_at": "2026-10-10 09:00:00+00:00",
+  "consolidation_required": true
+}
+
+[2026-10-18 23:08:25 PDT] (SS_4.8) $ curl -s -X POST http://127.0.0.1:8036/api/chat -H 'Content-Type: application/json' -d '{"user_id":"part4_test","session_id":"part4_session","message":"/compact"}' | jq '.file_memory | del(.resolutions)'
+{
+  "message": "MEMORY.md consolidated: 53 -> 34 memory lines (55 -> 39 file lines)",
+  "message_count_before": 53,
+  "message_count_after": 34,
+  "file_lines_before": 55,
+  "file_lines_after": 39,
+  "duplicates_merged": 19,
+  "contradictions_resolved": 4,
+  "consolidation_required": false
+}
+
+[2026-10-18 23:08:26 PDT] (SS_4.9) $ wc -l MEMORY.md && cat MEMORY.md
+      39 MEMORY.md
+# Durable Memory
+<!-- consolidated_at: 2026-10-19T06:08:25.389912+00:00 -->
+## Facts
+- [2026-10-17] course: DATA-260 (seen 3x)
+- [2026-10-17] sid4: 0036 (seen 2x)
+- [2026-08-25] domain: open-source package vulnerability tracking (DOMAIN_ID 4)
+- [2026-10-17] api_framework: FastAPI (seen 3x)
+- [2026-09-02] validation: Pydantic v2 models for every request body
+- [2026-09-10] python_version: 3.12
+- [2026-10-18] hardware: MacBook Pro, Apple M5 Pro, 24 GB (seen 2x)
+- [2026-10-16] mongo_database: s0036_doc (seen 2x)
+- [2026-10-01] documents_collection: vulnerability_documents
+- [2026-10-17] memory_collections: messages, summaries, episodes (seen 2x)
+- [2026-10-17] ollama_model: qwen3:4b (seen 2x)
+- [2026-10-18] severity_values: critical, high, medium, low (seen 2x)
+- [2026-10-18] status_values: open, triaged, resolved, ignored (seen 2x)
+- [2026-10-17] episodic_top_k: 3 (seen 2x)
+- [2026-10-05] embedding_model: all-MiniLM-L6-v2 with a hash-vector fallback
+- [2026-10-18] ollama_num_ctx: 16384 (seen 2x)
+- [2026-10-06] ollama_seed: 36
+- [2026-10-17] input_price: $1 per million tokens (seen 2x)
+- [2026-10-17] output_price: $5 per million tokens (seen 2x)
+- [2026-10-17] collaborators: Sbnikitha, supriyaselvanganesan (seen 2x)
+- [2026-10-18] submission_tag: hw6 (seen 2x)
+- [2026-10-08] report_file: Shringi_HW6.pdf
+- [2026-10-09] test_runner: unittest (pytest is not installed in .venv)
+- [2026-10-09] lifetime_summary_every: 2 session summaries
+- [2026-10-17] The user prefers short, numbered answers in reports. (seen 2x)
+- [2026-10-17] Raw experiment output always goes under reports/hw06/raw/. (seen 2x)
+- [2026-10-14] port: 8000
+- [2026-10-15] short_term_n_default: 12
+- [2026-10-15] summarize_every_user_msgs: 5
+- [2026-10-16] memory_policy_options: window, compressed_window
+
+## Resolved contradictions
+- port: kept "8000" [2026-10-14]; superseded "8036" [2026-09-01]
+- ollama_model: kept "qwen3:4b" [2026-10-17]; superseded "llama3.2:3b" [2026-09-05]
+- short_term_n_default: kept "12" [2026-10-15]; superseded "8" [2026-10-03]
+- summarize_every_user_msgs: kept "5" [2026-10-15]; superseded "3" [2026-10-04]
+
+[2026-10-18 23:08:26 PDT] (SS_4.10) $ echo '- [2026-10-18] port: 8036' >> MEMORY.md && curl -s -X POST http://127.0.0.1:8036/api/chat -H 'Content-Type: application/json' -d '{"user_id":"part4_test","session_id":"part4_session","message":"/compact"}' | jq -r .reply && grep -n port MEMORY.md
+MEMORY.md consolidated: 35 -> 35 memory lines (40 -> 40 file lines)
+25:- [2026-10-08] report_file: Shringi_HW6.pdf
+28:- [2026-10-17] The user prefers short, numbered answers in reports. (seen 2x)
+29:- [2026-10-17] Raw experiment output always goes under reports/hw06/raw/. (seen 2x)
+33:- [2026-10-18] port: 8036
+36:- port: kept "8000" [2026-10-14]; superseded "8036" [2026-09-01]
+40:- port: kept "8036" [2026-10-18]; superseded "8000" [2026-10-14]
+
+[2026-10-18 23:08:38 PDT] (SS_4.11) $ curl -s -X POST http://127.0.0.1:8036/api/chat -H 'Content-Type: application/json' -d '{"user_id":"part4_test","session_id":"part4_session","message":"/dream"}' | jq .file_memory && tail -4 MEMORY.md
+{
+  "message": "Durable facts added to MEMORY.md",
+  "facts_added": [
+    "- [2026-10-19] Remediation demo on Thursday",
+    "- [2026-10-19] Room ENG-189",
+    "- [2026-10-19] Dr. Okafor reviews every finding"
+  ]
+}
+
+- [2026-10-19] Remediation demo on Thursday
+- [2026-10-19] Room ENG-189
+- [2026-10-19] Dr. Okafor reviews every finding
+
+[2026-10-18 23:09:08 PDT] (SS_4.12) $ git log --format='%h %ad %s' --date=format:'%Y-%m-%d %H:%M' -4 -- MEMORY.md && echo && echo "lines in 2808f60:MEMORY.md = $(git show 2808f60:MEMORY.md | wc -l)" && echo "lines in 4e35837:MEMORY.md = $(git show 4e35837:MEMORY.md | wc -l)"
+c785e6c 2026-10-18 18:07 HW6 Part 4: correct incorrectly resolved port contradiction
+4e35837 2026-10-18 18:06 HW6 Part 4: consolidated MEMORY.md via /compact (55 -> 39 lines)
+2808f60 2026-10-18 18:06 HW6 fixes: per-config experiment servers, memory probes, consolidation, AGENT.md checks
+7171e9c 2026-10-18 14:42 Implement HW6 Part 4 file-based memory
+
+lines in 2808f60:MEMORY.md =       55
+lines in 4e35837:MEMORY.md =       39
+
+[2026-10-18 23:09:09 PDT] (SS_6.1) $ make verify-hw06 2>&1 | grep -E 'PASS|FAIL|checks passed'
+PASS  backend responds on PORT_BASE 8036
+PASS  POST /api/documents creates a record (201)
+PASS  GET /api/documents/{id} returns it (200)
+PASS  GET /api/documents lists records (200)
+PASS  PUT /api/documents/{id} updates it (200)
+PASS  DELETE /api/documents/{id} removes it (204)
+PASS  deleted record returns 404
+PASS  missing required field rejected (422)
+PASS  invalid enum rejected (422)
+PASS  wrong data types rejected (422)
+PASS  POST /api/chat returns a non-empty reply
+PASS  chat response shows memory used
+PASS  chat response logs token usage
+PASS  episodic fact from turn 1 retrieved on turn 2
+PASS  GET /api/memory/{user_id} returns messages and episodes
+PASS  GET /api/aggregate/{user_id} returns daily counts
+PASS  /help lists all four commands
+PASS  /memory returns AGENT.md, MEMORY.md and consolidation status
+PASS  55-line fixture consolidates to < 40 lines
+PASS  >= 3 duplicates merged and >= 3 contradictions resolved
+PASS  superseded values are kept, not silently deleted
+PASS  audit identifies the incorrectly resolved contradiction
+PASS  generated function follows AGENT.md (check_agent_rules.py)
+PASS  memory_probes.yaml has 5 probes with criteria and a 1-5 rubric
+PASS  Part 3 results cover N=4/12/30 and the compression policy
+25/25 checks passed -> /Users/ayushishringi/Desktop/DATA 260/HW1/data260-0036/reports/hw06/verification.json

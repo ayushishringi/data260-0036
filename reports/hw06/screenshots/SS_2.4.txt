@@ -1,0 +1,21 @@
+[2026-10-18 23:08:16 PDT] $ .venv/bin/python scripts/hw6_show_collections.py ayushi_demo --collection messages --limit 2
+database: s0036_doc
+  episodes: 372 documents
+  messages: 1040 documents
+  summaries: 141 documents
+  vulnerability_documents: 1 documents
+
+s0036_doc> db.messages.find({'user_id': 'ayushi_demo'}).sort({created_at: -1}).limit(2)   // 24 matching
+{'_id': ObjectId('6ad5b3ccec3338e140cf8ac9'),
+ 'user_id': 'ayushi_demo',
+ 'session_id': 'demo_session_1',
+ 'role': 'assistant',
+ 'content': 'Your reviewer is **Dr. Okafor**, and she requires findings in **CycloneDX SBOM format** for your DATA-260 audit. '
+            'This ensures standardized vulnerability reporting and compliance with the project’s critical deadlines. I’l ...',
+ 'created_at': datetime.datetime(2026, 10, 19, 6, 8, 12, 909000, tzinfo=FixedOffset(datetime.timedelta(0), 'UTC'))}
+{'_id': ObjectId('6ad5b3c9ec3338e140cf8ac8'),
+ 'user_id': 'ayushi_demo',
+ 'session_id': 'demo_session_1',
+ 'role': 'user',
+ 'content': 'Who is my reviewer and what format does she want?',
+ 'created_at': datetime.datetime(2026, 10, 19, 6, 8, 9, 21000, tzinfo=FixedOffset(datetime.timedelta(0), 'UTC'))}
