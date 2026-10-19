@@ -1,5 +1,5 @@
 # Durable Memory
-<!-- consolidated_at: 2026-10-19T01:06:35.140184+00:00 -->
+<!-- consolidated_at: 2026-10-19T01:07:09.072523+00:00 -->
 ## Facts
 - [2026-10-17] course: DATA-260 (seen 3x)
 - [2026-10-17] sid4: 0036 (seen 2x)
@@ -27,13 +27,14 @@
 - [2026-10-09] lifetime_summary_every: 2 session summaries
 - [2026-10-17] The user prefers short, numbered answers in reports. (seen 2x)
 - [2026-10-17] Raw experiment output always goes under reports/hw06/raw/. (seen 2x)
-- [2026-10-14] port: 8000
 - [2026-10-15] short_term_n_default: 12
 - [2026-10-15] summarize_every_user_msgs: 5
 - [2026-10-16] memory_policy_options: window, compressed_window
+- [2026-10-18] port: 8036
 
 ## Resolved contradictions
 - port: kept "8000" [2026-10-14]; superseded "8036" [2026-09-01]
 - ollama_model: kept "qwen3:4b" [2026-10-17]; superseded "llama3.2:3b" [2026-09-05]
 - short_term_n_default: kept "12" [2026-10-15]; superseded "8" [2026-10-03]
 - summarize_every_user_msgs: kept "5" [2026-10-15]; superseded "3" [2026-10-04]
+- port: kept "8036" [2026-10-18]; superseded "8000" [2026-10-14]

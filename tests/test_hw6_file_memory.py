@@ -37,6 +37,12 @@ class ConsolidateMemoryTextTests(unittest.TestCase):
         self.assertEqual(stats["contradictions_resolved"], 0)
         self.assertEqual(once.split("-->", 1)[1], twice.split("-->", 1)[1])
 
+    def test_fact_appended_after_resolutions_is_still_a_fact(self) -> None:
+        once, _ = consolidate_memory_text(SAMPLE)
+        text, stats = consolidate_memory_text(once + "- [2026-10-18] port: 8036\n")
+        self.assertEqual(stats["contradictions_resolved"], 1)
+        self.assertIn('port: kept "8036" [2026-10-18]; superseded "8000"', text)
+
 
 class AuditResolutionsTests(unittest.TestCase):
     def test_flags_resolution_that_disagrees_with_ground_truth(self) -> None:

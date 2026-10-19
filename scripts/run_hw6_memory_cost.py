@@ -82,8 +82,14 @@ UNKNOWN_WORDS = (
 
 
 def port_is_free(port: int) -> bool:
+    # Bind test rather than connect: the HW2 Docker stack listens on *:8036, but
+    # uvicorn can still bind 127.0.0.1:8036, which then takes precedence locally.
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
-        return sock.connect_ex(("127.0.0.1", port)) != 0
+        try:
+            sock.bind(("127.0.0.1", port))
+        except OSError:
+            return False
+        return True
 
 
 def start_server(port: int, short_term_n: int, policy: str, log_path: Path) -> subprocess.Popen:

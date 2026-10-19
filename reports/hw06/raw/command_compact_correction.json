@@ -1,0 +1,39 @@
+{
+    "reply": "MEMORY.md consolidated: 35 -> 35 memory lines (40 -> 40 file lines)",
+    "file_memory": {
+        "message": "MEMORY.md consolidated: 35 -> 35 memory lines (40 -> 40 file lines)",
+        "message_count_before": 35,
+        "message_count_after": 35,
+        "file_lines_before": 40,
+        "file_lines_after": 40,
+        "duplicates_merged": 0,
+        "contradictions_resolved": 1,
+        "resolutions": [
+            {
+                "key": "port",
+                "kept": "8036",
+                "kept_date": "2026-10-18",
+                "superseded": [
+                    {
+                        "value": "8000",
+                        "date": "2026-10-14"
+                    }
+                ],
+                "rule": "newest dated fact wins"
+            }
+        ],
+        "consolidation_required": false
+    },
+    "used": {
+        "short_term_messages": [],
+        "long_term_summary": null,
+        "episodic_facts": []
+    },
+    "usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "latency_ms": 19.259,
+        "component_token_estimates": {}
+    }
+}

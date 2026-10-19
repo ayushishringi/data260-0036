@@ -56,8 +56,11 @@ def request(method: str, path: str, body: dict | None = None, timeout: int = 300
 
 
 def ensure_server() -> subprocess.Popen | None:
+    # Bind test: if 127.0.0.1:PORT_BASE is taken, the API is already running.
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
-        if sock.connect_ex(("127.0.0.1", PORT_BASE)) == 0:
+        try:
+            sock.bind(("127.0.0.1", PORT_BASE))
+        except OSError:
             return None
     process = subprocess.Popen(
         [sys.executable, "-m", "uvicorn", "backend.main:app", "--host", "127.0.0.1", "--port", str(PORT_BASE)],

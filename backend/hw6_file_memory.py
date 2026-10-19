@@ -106,6 +106,7 @@ FACT_RE = re.compile(
     r"(?:(?P<key>[a-z][a-z0-9_]*):\s+)?(?P<value>.+?)\s*(?:\(seen (?P<seen>\d+)x\))?$"
 )
 RESOLVED_HEADING = "## Resolved contradictions"
+RESOLUTION_LINE_RE = re.compile(r'^-\s*[a-z][a-z0-9_]*: kept "')
 
 
 def _normalize(text: str) -> str:
@@ -125,7 +126,9 @@ def parse_memory_facts(memory_text: str) -> tuple[list[dict[str, Any]], list[str
             continue
         if not line or line.startswith("<!--"):
             continue
-        if in_resolved:
+        # Facts appended later (e.g. by /dream) land after this section, so only
+        # lines in the resolution format belong to it.
+        if in_resolved and RESOLUTION_LINE_RE.match(line):
             resolved.append(line)
             continue
         match = FACT_RE.match(line if line.startswith("-") else f"- {line}")
