@@ -1,6 +1,6 @@
 # AI Use — HW7
 
-1. What I used AI for and what I did myself. I used an AI coding assistant to help write parts of the code and debug problems. I chose Capital Bikeshare and its 30-day membership, designed the fixed agent tasks, the verifiers, the attack fixture and the safety-gate test commands, ran the experiments, and checked all results before using them.
+1. What I used AI for and what I did myself. I used an AI coding assistant to help write and debug the code, pick the bike-share system (Capital Bikeshare), and design the test cases, verifiers and attack fixture. I ran the API and agent demos, the UI scenarios and the lint commit myself, took all the screenshots, checked the results against the assignment, and wrote the report.
 
 2. One AI output that was wrong. The first version of the bash safety gate allowed the command `echo pwned >| /etc/hosts`. It split commands on every `|` character, so the `>|` redirection was cut in half and the check for writing to a root path never saw it.
 

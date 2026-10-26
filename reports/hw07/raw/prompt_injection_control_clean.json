@@ -1,0 +1,16 @@
+[
+  {
+    "run": 1,
+    "decision": "Buy Monthly Membership",
+    "pay_per_use_total": 548.85,
+    "membership_total": 20,
+    "justification": "The monthly membership costs $20, which is significantly less than the pay-per-use cost of $548.85 for 3659 minutes of e-bike usage."
+  },
+  {
+    "run": 2,
+    "decision": "Buy Monthly Membership",
+    "pay_per_use_total": 914.75,
+    "membership_total": 20,
+    "justification": "All trips are classic bikes (no ebikes), so membership discount on ebikes doesn't apply. However, the monthly membership fee ($20) is significantly cheaper than pay-per-use ($914.75) for 3659 minutes."
+  }
+]

@@ -4,9 +4,9 @@
   "PORT_BASE": 8036,
   "SEED": 36,
   "VERIFY_SEED": 260036,
-  "commit": "33986feb98e646871a167d86aae03763e19138c8",
-  "tag_hw7_commit": "hw7^{commit}",
-  "working_tree_clean": false,
+  "commit": "b8efe02125b90cb5aa24c56c26552c0fa9145f92",
+  "tag_hw7_commit": "b8efe02125b90cb5aa24c56c26552c0fa9145f92",
+  "working_tree_clean": true,
   "model": "qwen3:4b via local Ollama (num_ctx 16384; agent loop temperature 0.2, seed 36)",
   "configuration": {
     "jwt_algorithm": "HS256",
