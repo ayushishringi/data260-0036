@@ -7,9 +7,11 @@ from sqlalchemy.orm import Session, selectinload
 from backend.database import get_db
 from backend.models import Advisory, User, VulnerabilityReport
 from backend.schemas import AdvisoryInput, ReportInput
-from backend.security import get_current_user
+from backend.jwt_auth import any_authenticated, moderator_only, writer_or_moderator
 
 
+# HW7 role rules: read = any authenticated role, create/update = writer or moderator,
+# delete = moderator only.
 router = APIRouter(
     prefix="/api/reports",
     tags=["reports"],
@@ -53,7 +55,7 @@ def report_to_dict(report: VulnerabilityReport) -> dict:
 @router.get("")
 def list_reports(
     db: Session = Depends(get_db),
-    current_user: User = Depends(get_current_user),
+    current_user: User = Depends(any_authenticated),
 ) -> list[dict]:
     reports = db.scalars(
         select(VulnerabilityReport)
@@ -72,7 +74,7 @@ def list_reports(
 def get_report(
     report_id: int,
     db: Session = Depends(get_db),
-    current_user: User = Depends(get_current_user),
+    current_user: User = Depends(any_authenticated),
 ) -> dict:
     report = db.scalar(
         select(VulnerabilityReport)
@@ -96,7 +98,7 @@ def get_report(
 def create_report(
     payload: ReportInput,
     db: Session = Depends(get_db),
-    current_user: User = Depends(get_current_user),
+    current_user: User = Depends(writer_or_moderator),
 ) -> dict:
     report = VulnerabilityReport(
         report_code=payload.reportCode or "pending",
@@ -128,7 +130,7 @@ def update_report(
     report_id: int,
     payload: ReportInput,
     db: Session = Depends(get_db),
-    current_user: User = Depends(get_current_user),
+    current_user: User = Depends(writer_or_moderator),
 ) -> dict:
     report = db.get(VulnerabilityReport, report_id)
 
@@ -183,7 +185,7 @@ def list_advisories(
     offset: int = 0,
     limit: int = 20,
     db: Session = Depends(get_db),
-    current_user: User = Depends(get_current_user),
+    current_user: User = Depends(any_authenticated),
 ) -> list[dict]:
     limit = min(max(limit, 1), 100)
     advisories = db.scalars(
@@ -196,7 +198,7 @@ def list_advisories(
 def get_advisory(
     advisory_id: int,
     db: Session = Depends(get_db),
-    current_user: User = Depends(get_current_user),
+    current_user: User = Depends(any_authenticated),
 ) -> dict:
     advisory = db.get(Advisory, advisory_id)
     if advisory is None:
@@ -208,7 +210,7 @@ def get_advisory(
 def create_advisory(
     payload: AdvisoryInput,
     db: Session = Depends(get_db),
-    current_user: User = Depends(get_current_user),
+    current_user: User = Depends(writer_or_moderator),
 ) -> dict:
     if db.scalar(select(Advisory).where(Advisory.advisory_code == payload.advisoryCode)):
         raise HTTPException(status_code=409, detail="Advisory code already exists")
@@ -225,7 +227,7 @@ def create_advisory(
 @router.put("/advisories/{advisory_id}")
 def update_advisory(
     advisory_id: int, payload: AdvisoryInput,
-    db: Session = Depends(get_db), current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db), current_user: User = Depends(writer_or_moderator),
 ) -> dict:
     advisory = db.get(Advisory, advisory_id)
     if advisory is None:
@@ -246,7 +248,7 @@ def update_advisory(
 @router.delete("/advisories/{advisory_id}", status_code=204)
 def delete_advisory(
     advisory_id: int, db: Session = Depends(get_db),
-    current_user: User = Depends(get_current_user),
+    current_user: User = Depends(moderator_only),
 ) -> None:
     advisory = db.get(Advisory, advisory_id)
     if advisory is None:
@@ -260,7 +262,7 @@ def delete_advisory(
 @router.get("/advisories/{advisory_id}/reports")
 def reports_for_advisory(
     advisory_id: int, db: Session = Depends(get_db),
-    current_user: User = Depends(get_current_user),
+    current_user: User = Depends(any_authenticated),
 ) -> list[dict]:
     if db.get(Advisory, advisory_id) is None:
         raise HTTPException(status_code=404, detail="Advisory not found")
@@ -274,7 +276,7 @@ def reports_for_advisory(
 def delete_report(
     report_id: int,
     db: Session = Depends(get_db),
-    current_user: User = Depends(get_current_user),
+    current_user: User = Depends(moderator_only),
 ) -> None:
     report = db.get(VulnerabilityReport, report_id)
 

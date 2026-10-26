@@ -1,0 +1,45 @@
+{
+  "temperature": 0.7,
+  "runs_per_case": 3,
+  "condition": "detail outage during first 1 attempt(s)",
+  "original_loop": {
+    "runs": 9,
+    "task_success": 0.0,
+    "unsupported_claims_total": 1,
+    "retry_rate": 0.0,
+    "mean_tool_calls": 2.78,
+    "mean_tokens": 7522.8,
+    "mean_latency_ms": 53509.8,
+    "verifier_false_rejection_candidates": 3
+  },
+  "reflexion_loop": {
+    "runs": 9,
+    "task_success": 1.0,
+    "unsupported_claims_total": 0,
+    "retry_rate": 1.0,
+    "mean_tool_calls": 5.44,
+    "mean_tokens": 16116.8,
+    "mean_latency_ms": 108543.2,
+    "verifier_false_rejection_candidates": 3
+  },
+  "reflexion_stop_reasons": {
+    "success": 9
+  },
+  "by_case": {
+    "A": {
+      "original_success": 0,
+      "reflexion_success": 3,
+      "runs": 3
+    },
+    "B": {
+      "original_success": 0,
+      "reflexion_success": 3,
+      "runs": 3
+    },
+    "C": {
+      "original_success": 0,
+      "reflexion_success": 3,
+      "runs": 3
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{"run_id": "demo-A", "step": 1, "tool": "search", "inputs": {"query": "openssl"}, "ok": true, "latency_ms": 0.07}
+{"run_id": "demo-A", "step": 2, "tool": "detail", "inputs": {"id": 1}, "ok": true, "latency_ms": 0.05}
+{"run_id": "demo-A", "final": {"stop_reason": "final_answer", "total_tool_calls": 2, "latency_ms": 44045.4}}
+{"run_id": "demo-B", "step": 1, "tool": "aggregate", "inputs": {"severity": "critical"}, "ok": true, "latency_ms": 0.15}
+{"run_id": "demo-B", "step": 2, "tool": "search", "inputs": {"query": "openssl", "severity": "critical"}, "ok": true, "latency_ms": 0.04}
+{"run_id": "demo-B", "step": 3, "tool": "detail", "inputs": {"id": 1}, "ok": true, "latency_ms": 0.13}
+{"run_id": "demo-B", "final": {"stop_reason": "final_answer", "total_tool_calls": 3, "latency_ms": 54886.9}}
+{"run_id": "demo-C", "step": 1, "tool": "search", "inputs": {"query": "lo"}, "ok": true, "latency_ms": 0.13}
+{"run_id": "demo-C", "final": {"stop_reason": "final_answer", "total_tool_calls": 1, "latency_ms": 33718.1}}
+{"run_id": "demo-E", "step": 1, "tool": "detail", "inputs": {"id": 4242}, "ok": false, "latency_ms": 0.06}
+{"run_id": "demo-E", "final": {"stop_reason": "final_answer", "total_tool_calls": 1, "latency_ms": 6913.9}}
+{"run_id": "rel-01-A", "step": 1, "tool": "search", "inputs": {"query": "openssl"}, "ok": true, "latency_ms": 0.14}
+{"run_id": "rel-01-A", "step": 2, "tool": "detail", "inputs": {"id": 1}, "ok": true, "latency_ms": 0.04}
+{"run_id": "rel-01-A", "final": {"stop_reason": "final_answer", "total_tool_calls": 2, "latency_ms": 32092.0}}
+{"run_id": "rel-02-B", "step": 1, "tool": "aggregate", "inputs": {"severity": "critical"}, "ok": true, "latency_ms": 0.62}
+{"run_id": "rel-02-B", "step": 2, "tool": "search", "inputs": {"query": "x", "severity": "critical", "limit": 1}, "ok": true, "latency_ms": 0.11}
+{"run_id": "rel-02-B", "step": 3, "tool": "search", "inputs": {"limit": 1, "query": "apache", "severity": "critical"}, "ok": true, "latency_ms": 0.03}

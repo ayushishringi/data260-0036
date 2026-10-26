@@ -5,7 +5,6 @@ import logging
 import random
 import time
 from dataclasses import dataclass
-from pathlib import Path
 from typing import Any, Callable
 
 LOGGER = logging.getLogger("s0036_domain_mcp")
@@ -30,13 +29,41 @@ class DomainStore:
              "advisory_code": "GHSA-demo-1234"},
         ])
 
-    def search(self, query: str, limit: int = 5) -> dict[str, Any]:
-        if not isinstance(query, str) or not query.strip():
-            return envelope(False, error="query must be a non-empty string")
+    @classmethod
+    def hw7_fixture(cls) -> "DomainStore":
+        """Fixed 10-record inventory used by the HW7 agent verification cases."""
+        rows = [
+            (1, "openssl", "critical", 1, "CVE-2024-9999"),
+            (2, "lodash", "high", 3, "GHSA-demo-1234"),
+            (3, "log4j-core", "critical", 2, "CVE-2021-44228"),
+            (4, "requests", "medium", 1, "CVE-2023-32681"),
+            (5, "urllib3", "high", 4, "CVE-2023-43804"),
+            (6, "pyyaml", "critical", 1, "CVE-2020-14343"),
+            (7, "jinja2", "medium", 2, "CVE-2024-22195"),
+            (8, "minimist", "low", 5, "CVE-2021-44906"),
+            (9, "openssl-src", "high", 1, "RUSTSEC-2023-0044"),
+            (10, "express", "medium", 2, "CVE-2024-29041"),
+        ]
+        return cls([
+            {"id": i, "package": p, "severity": sev, "available_count": n, "advisory_code": code}
+            for i, p, sev, n, code in rows
+        ])
+
+    def search(self, query: str = "", limit: int = 5, severity: str | None = None) -> dict[str, Any]:
+        has_query = isinstance(query, str) and bool(query.strip())
+        if not has_query and severity is None:
+            return envelope(False, error="query must be a non-empty string (or pass severity)")
+        if not isinstance(query, str):
+            return envelope(False, error="query must be a string")
+        if severity is not None and severity not in {"critical", "high", "medium", "low"}:
+            return envelope(False, error="severity must be critical, high, medium, or low")
         if not isinstance(limit, int) or isinstance(limit, bool) or not 1 <= limit <= 25:
             return envelope(False, error="limit must be an integer from 1 to 25")
         needle = query.strip().lower()
-        return envelope(True, [r for r in self.records if needle in r["package"].lower()][:limit])
+        rows = [r for r in self.records
+                if needle in r["package"].lower() and (severity is None or r["severity"] == severity)]
+        # Search returns summaries only; severity, availability and advisory code need detail(id).
+        return envelope(True, [{"id": r["id"], "package": r["package"]} for r in rows[:limit]])
 
     def detail(self, id: int | str) -> dict[str, Any]:
         try:
@@ -44,7 +71,13 @@ class DomainStore:
         except (TypeError, ValueError):
             return envelope(False, error="id must be an integer")
         record = next((r for r in self.records if r["id"] == record_id), None)
-        return envelope(True, record) if record else envelope(False, error="record not found")
+        if record:
+            return envelope(True, record)
+        ids = sorted(r["id"] for r in self.records)
+        return envelope(False, error=(
+            f"record not found: no vulnerability record has id {record_id}; "
+            f"valid ids are {ids[0]}-{ids[-1]}. Use search to find a record id."
+        ))
 
     def aggregate(self, severity: str | None = None) -> dict[str, Any]:
         if severity is not None and severity not in {"critical", "high", "medium", "low"}:

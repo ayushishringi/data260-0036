@@ -1,0 +1,908 @@
+[
+  {
+    "case_id": "A",
+    "result": {
+      "run_id": "demo-A",
+      "final_answer": "",
+      "stop_reason": "repair_limit",
+      "total_tool_calls": 5,
+      "iterations": 2,
+      "trace": [
+        {
+          "step": 1,
+          "iteration": 1,
+          "tool": "search",
+          "inputs": {
+            "limit": 1,
+            "query": "openssl"
+          },
+          "observation": {
+            "data": [
+              {
+                "advisory_code": "CVE-2024-9999",
+                "available_count": 1,
+                "id": 1,
+                "package": "openssl",
+                "severity": "critical"
+              }
+            ],
+            "error": null,
+            "ok": true
+          },
+          "latency_ms": 0.08
+        },
+        {
+          "step": 2,
+          "iteration": 1,
+          "tool": "search",
+          "inputs": {
+            "query": "openssl",
+            "limit": 1
+          },
+          "observation": {
+            "data": [
+              {
+                "advisory_code": "CVE-2024-9999",
+                "available_count": 1,
+                "id": 1,
+                "package": "openssl",
+                "severity": "critical"
+              }
+            ],
+            "error": null,
+            "ok": true
+          },
+          "latency_ms": 0.02
+        },
+        {
+          "step": 3,
+          "iteration": 2,
+          "tool": "detail",
+          "inputs": {
+            "id": 1
+          },
+          "observation": {
+            "data": {
+              "advisory_code": "CVE-2024-9999",
+              "available_count": 1,
+              "id": 1,
+              "package": "openssl",
+              "severity": "critical"
+            },
+            "error": null,
+            "ok": true
+          },
+          "latency_ms": 0.06
+        },
+        {
+          "step": 4,
+          "iteration": 2,
+          "tool": "detail",
+          "inputs": {
+            "id": 1
+          },
+          "observation": {
+            "data": {
+              "advisory_code": "CVE-2024-9999",
+              "available_count": 1,
+              "id": 1,
+              "package": "openssl",
+              "severity": "critical"
+            },
+            "error": null,
+            "ok": true
+          },
+          "latency_ms": 0.01
+        },
+        {
+          "step": 5,
+          "iteration": 2,
+          "tool": "detail",
+          "inputs": {
+            "id": 1
+          },
+          "observation": {
+            "data": {
+              "advisory_code": "CVE-2024-9999",
+              "available_count": 1,
+              "id": 1,
+              "package": "openssl",
+              "severity": "critical"
+            },
+            "error": null,
+            "ok": true
+          },
+          "latency_ms": 0.01
+        }
+      ],
+      "emitted_calls": [
+        {
+          "iteration": 1,
+          "name": "search",
+          "arguments": {
+            "limit": 1,
+            "query": "openssl"
+          },
+          "ok": true,
+          "category": null,
+          "problem": null
+        },
+        {
+          "iteration": 1,
+          "name": "detail",
+          "arguments": {
+            "query": "openssl",
+            "limit": 1
+          },
+          "ok": false,
+          "category": "malformed_arguments",
+          "problem": "missing required argument 'id'"
+        },
+        {
+          "iteration": 1,
+          "name": "search",
+          "arguments": {
+            "id": 123
+          },
+          "ok": false,
+          "category": "malformed_arguments",
+          "problem": "unknown argument(s) ['id']; allowed: ['limit', 'query', 'severity']"
+        },
+        {
+          "iteration": 1,
+          "name": "search",
+          "arguments": {
+            "query": "openssl",
+            "limit": 1
+          },
+          "ok": true,
+          "category": null,
+          "problem": null
+        },
+        {
+          "iteration": 2,
+          "name": "search",
+          "arguments": {
+            "data": [
+              {
+                "advisory_code": "CVE-2024-9999",
+                "available_count": 1,
+                "id": 1,
+                "package": "openssl",
+                "severity": "critical"
+              }
+            ],
+            "error": null,
+            "ok": true
+          },
+          "ok": false,
+          "category": "malformed_arguments",
+          "problem": "unknown argument(s) ['data', 'error', 'ok']; allowed: ['limit', 'query', 'severity']"
+        },
+        {
+          "iteration": 2,
+          "name": "search",
+          "arguments": {
+            "id": 1
+          },
+          "ok": false,
+          "category": "malformed_arguments",
+          "problem": "unknown argument(s) ['id']; allowed: ['limit', 'query', 'severity']"
+        },
+        {
+          "iteration": 2,
+          "name": "detail",
+          "arguments": {
+            "id": 1
+          },
+          "ok": true,
+          "category": null,
+          "problem": null
+        },
+        {
+          "iteration": 2,
+          "name": "detail",
+          "arguments": {
+            "id": 1
+          },
+          "ok": true,
+          "category": null,
+          "problem": null
+        },
+        {
+          "iteration": 2,
+          "name": "detail",
+          "arguments": {},
+          "ok": false,
+          "category": "malformed_arguments",
+          "problem": "missing required argument 'id'"
+        },
+        {
+          "iteration": 2,
+          "name": "detail",
+          "arguments": {
+            "ok": false,
+            "error": "REPAIR NEEDED: missing required argument 'id'. Correct the call."
+          },
+          "ok": false,
+          "category": "malformed_arguments",
+          "problem": "missing required argument 'id'"
+        },
+        {
+          "iteration": 2,
+          "name": "detail",
+          "arguments": {
+            "id": 1
+          },
+          "ok": true,
+          "category": null,
+          "problem": null
+        },
+        {
+          "iteration": 2,
+          "name": "search",
+          "arguments": {
+            "id": 1
+          },
+          "ok": false,
+          "category": "malformed_arguments",
+          "problem": "unknown argument(s) ['id']; allowed: ['limit', 'query', 'severity']"
+        },
+        {
+          "iteration": 2,
+          "name": "search",
+          "arguments": {
+            "data": [
+              {
+                "advisory_code": "CVE-2024-9999",
+                "available_count": 1,
+                "id": 1,
+                "package": "openssl",
+                "severity": "critical"
+              }
+            ],
+            "error": null,
+            "ok": true
+          },
+          "ok": false,
+          "category": "malformed_arguments",
+          "problem": "unknown argument(s) ['data', 'error', 'ok']; allowed: ['limit', 'query', 'severity']"
+        },
+        {
+          "iteration": 2,
+          "name": "search",
+          "arguments": {
+            "data": [
+              {
+                "advisory_code": "CVE-2024-9999",
+                "available_count": 1,
+                "id": 1,
+                "package": "openssl",
+                "severity": "critical"
+              }
+            ],
+            "error": null,
+            "ok": true
+          },
+          "ok": false,
+          "category": "malformed_arguments",
+          "problem": "unknown argument(s) ['data', 'error', 'ok']; allowed: ['limit', 'query', 'severity']"
+        },
+        {
+          "iteration": 2,
+          "name": "search",
+          "arguments": {
+            "id": 1
+          },
+          "ok": false,
+          "category": "malformed_arguments",
+          "problem": "unknown argument(s) ['id']; allowed: ['limit', 'query', 'severity']"
+        }
+      ],
+      "repairs": [
+        {
+          "iteration": 1,
+          "category": "malformed_arguments",
+          "problem": "missing required argument 'id'",
+          "name": "detail"
+        },
+        {
+          "iteration": 1,
+          "category": "malformed_arguments",
+          "problem": "unknown argument(s) ['id']; allowed: ['limit', 'query', 'severity']",
+          "name": "search"
+        },
+        {
+          "iteration": 2,
+          "category": "malformed_arguments",
+          "problem": "unknown argument(s) ['data', 'error', 'ok']; allowed: ['limit', 'query', 'severity']",
+          "name": "search"
+        },
+        {
+          "iteration": 2,
+          "category": "malformed_arguments",
+          "problem": "unknown argument(s) ['id']; allowed: ['limit', 'query', 'severity']",
+          "name": "search"
+        },
+        {
+          "iteration": 2,
+          "category": "malformed_arguments",
+          "problem": "missing required argument 'id'",
+          "name": "detail"
+        },
+        {
+          "iteration": 2,
+          "category": "malformed_arguments",
+          "problem": "missing required argument 'id'",
+          "name": "detail"
+        },
+        {
+          "iteration": 2,
+          "category": "malformed_arguments",
+          "problem": "unknown argument(s) ['id']; allowed: ['limit', 'query', 'severity']",
+          "name": "search"
+        },
+        {
+          "iteration": 2,
+          "category": "malformed_arguments",
+          "problem": "unknown argument(s) ['data', 'error', 'ok']; allowed: ['limit', 'query', 'severity']",
+          "name": "search"
+        },
+        {
+          "iteration": 2,
+          "category": "malformed_arguments",
+          "problem": "unknown argument(s) ['data', 'error', 'ok']; allowed: ['limit', 'query', 'severity']",
+          "name": "search"
+        },
+        {
+          "iteration": 2,
+          "category": "malformed_arguments",
+          "problem": "unknown argument(s) ['id']; allowed: ['limit', 'query', 'severity']",
+          "name": "search"
+        }
+      ],
+      "tokens": {
+        "input": 7058,
+        "output": 11089
+      },
+      "latency_ms": 171501.0
+    },
+    "verdict": {
+      "passed": false,
+      "failed_checks": [
+        "answered",
+        "answer_mentions_critical",
+        "answer_mentions_CVE-2024-9999"
+      ],
+      "checks": {
+        "answered": false,
+        "searched_openssl": true,
+        "detail_on_first_result": true,
+        "first_result_is_expected_id": true,
+        "answer_mentions_critical": false,
+        "answer_mentions_CVE-2024-9999": false,
+        "no_unsupported_claims": true
+      },
+      "unsupported_claims": [],
+      "lost_chain": false,
+      "failure_category": null,
+      "tools_called": [
+        "search",
+        "search",
+        "detail",
+        "detail",
+        "detail"
+      ]
+    }
+  },
+  {
+    "case_id": "B",
+    "result": {
+      "run_id": "demo-B",
+      "final_answer": "There are 3 critical vulnerabilities in the inventory. For example, the openssl package (record ID 1) has a critical vulnerability with advisory code CVE-2024-9999 and available_count 1.",
+      "stop_reason": "final_answer",
+      "total_tool_calls": 7,
+      "iterations": 2,
+      "trace": [
+        {
+          "step": 1,
+          "iteration": 1,
+          "tool": "aggregate",
+          "inputs": {
+            "severity": "critical"
+          },
+          "observation": {
+            "data": {
+              "available_count_total": 4,
+              "by_severity": {
+                "critical": 3,
+                "high": 0,
+                "low": 0,
+                "medium": 0
+              },
+              "count": 3
+            },
+            "error": null,
+            "ok": true
+          },
+          "latency_ms": 1.47
+        },
+        {
+          "step": 2,
+          "iteration": 1,
+          "tool": "search",
+          "inputs": {
+            "query": "openssl",
+            "severity": "critical"
+          },
+          "observation": {
+            "data": [
+              {
+                "advisory_code": "CVE-2024-9999",
+                "available_count": 1,
+                "id": 1,
+                "package": "openssl",
+                "severity": "critical"
+              }
+            ],
+            "error": null,
+            "ok": true
+          },
+          "latency_ms": 0.32
+        },
+        {
+          "step": 3,
+          "iteration": 1,
+          "tool": "search",
+          "inputs": {
+            "severity": "critical"
+          },
+          "observation": {
+            "data": [
+              {
+                "advisory_code": "CVE-2024-9999",
+                "available_count": 1,
+                "id": 1,
+                "package": "openssl",
+                "severity": "critical"
+              },
+              {
+                "advisory_code": "CVE-2021-44228",
+                "available_count": 2,
+                "id": 3,
+                "package": "log4j-core",
+                "severity": "critical"
+              },
+              {
+                "advisory_code": "CVE-2020-14343",
+                "available_count": 1,
+                "id": 6,
+                "package": "pyyaml",
+                "severity": "critical"
+              }
+            ],
+            "error": null,
+            "ok": true
+          },
+          "latency_ms": 0.04
+        },
+        {
+          "step": 4,
+          "iteration": 1,
+          "tool": "search",
+          "inputs": {
+            "query": "openssl",
+            "severity": "critical"
+          },
+          "observation": {
+            "data": [
+              {
+                "advisory_code": "CVE-2024-9999",
+                "available_count": 1,
+                "id": 1,
+                "package": "openssl",
+                "severity": "critical"
+              }
+            ],
+            "error": null,
+            "ok": true
+          },
+          "latency_ms": 0.01
+        },
+        {
+          "step": 5,
+          "iteration": 1,
+          "tool": "detail",
+          "inputs": {
+            "id": 1
+          },
+          "observation": {
+            "data": {
+              "advisory_code": "CVE-2024-9999",
+              "available_count": 1,
+              "id": 1,
+              "package": "openssl",
+              "severity": "critical"
+            },
+            "error": null,
+            "ok": true
+          },
+          "latency_ms": 0.02
+        },
+        {
+          "step": 6,
+          "iteration": 1,
+          "tool": "search",
+          "inputs": {
+            "query": "openssl",
+            "severity": "critical"
+          },
+          "observation": {
+            "data": [
+              {
+                "advisory_code": "CVE-2024-9999",
+                "available_count": 1,
+                "id": 1,
+                "package": "openssl",
+                "severity": "critical"
+              }
+            ],
+            "error": null,
+            "ok": true
+          },
+          "latency_ms": 0.01
+        },
+        {
+          "step": 7,
+          "iteration": 1,
+          "tool": "detail",
+          "inputs": {
+            "id": 1
+          },
+          "observation": {
+            "data": {
+              "advisory_code": "CVE-2024-9999",
+              "available_count": 1,
+              "id": 1,
+              "package": "openssl",
+              "severity": "critical"
+            },
+            "error": null,
+            "ok": true
+          },
+          "latency_ms": 0.04
+        }
+      ],
+      "emitted_calls": [
+        {
+          "iteration": 1,
+          "name": "aggregate",
+          "arguments": {
+            "severity": "critical"
+          },
+          "ok": true,
+          "category": null,
+          "problem": null
+        },
+        {
+          "iteration": 1,
+          "name": "search",
+          "arguments": {
+            "query": "openssl",
+            "severity": "critical"
+          },
+          "ok": true,
+          "category": null,
+          "problem": null
+        },
+        {
+          "iteration": 1,
+          "name": "search",
+          "arguments": {
+            "severity": "critical"
+          },
+          "ok": true,
+          "category": null,
+          "problem": null
+        },
+        {
+          "iteration": 1,
+          "name": "search",
+          "arguments": {
+            "query": "openssl",
+            "severity": "critical"
+          },
+          "ok": true,
+          "category": null,
+          "problem": null
+        },
+        {
+          "iteration": 1,
+          "name": "detail",
+          "arguments": {
+            "id": 1
+          },
+          "ok": true,
+          "category": null,
+          "problem": null
+        },
+        {
+          "iteration": 1,
+          "name": "detail",
+          "arguments": {
+            "severity": "critical"
+          },
+          "ok": false,
+          "category": "malformed_arguments",
+          "problem": "missing required argument 'id'"
+        },
+        {
+          "iteration": 1,
+          "name": "search",
+          "arguments": {
+            "query": "openssl",
+            "severity": "critical"
+          },
+          "ok": true,
+          "category": null,
+          "problem": null
+        },
+        {
+          "iteration": 1,
+          "name": "detail",
+          "arguments": {
+            "id": 1
+          },
+          "ok": true,
+          "category": null,
+          "problem": null
+        }
+      ],
+      "repairs": [
+        {
+          "iteration": 1,
+          "category": "malformed_arguments",
+          "problem": "missing required argument 'id'",
+          "name": "detail"
+        }
+      ],
+      "tokens": {
+        "input": 6600,
+        "output": 7338
+      },
+      "latency_ms": 117417.2
+    },
+    "verdict": {
+      "passed": true,
+      "failed_checks": [],
+      "checks": {
+        "answered": true,
+        "called_aggregate": true,
+        "answer_has_critical_count": true,
+        "looked_up_a_critical_record": true,
+        "answer_names_that_example": true,
+        "no_unsupported_claims": true
+      },
+      "unsupported_claims": [],
+      "lost_chain": false,
+      "failure_category": null,
+      "tools_called": [
+        "aggregate",
+        "search",
+        "search",
+        "search",
+        "detail",
+        "search",
+        "detail"
+      ]
+    }
+  },
+  {
+    "case_id": "C",
+    "result": {
+      "run_id": "demo-C",
+      "final_answer": "log4j-core (id 3) is more severe (critical) than lodash (id 2) (high). Lodash (id 2) has more available copies (3) than log4j-core (id 3) (2). Both records were identified via the search query \"lo\" with record IDs 2 and 3.",
+      "stop_reason": "final_answer",
+      "total_tool_calls": 3,
+      "iterations": 2,
+      "trace": [
+        {
+          "step": 1,
+          "iteration": 1,
+          "tool": "search",
+          "inputs": {
+            "query": "lo"
+          },
+          "observation": {
+            "data": [
+              {
+                "advisory_code": "GHSA-demo-1234",
+                "available_count": 3,
+                "id": 2,
+                "package": "lodash",
+                "severity": "high"
+              },
+              {
+                "advisory_code": "CVE-2021-44228",
+                "available_count": 2,
+                "id": 3,
+                "package": "log4j-core",
+                "severity": "critical"
+              }
+            ],
+            "error": null,
+            "ok": true
+          },
+          "latency_ms": 0.12
+        },
+        {
+          "step": 2,
+          "iteration": 1,
+          "tool": "search",
+          "inputs": {
+            "query": "lo"
+          },
+          "observation": {
+            "data": [
+              {
+                "advisory_code": "GHSA-demo-1234",
+                "available_count": 3,
+                "id": 2,
+                "package": "lodash",
+                "severity": "high"
+              },
+              {
+                "advisory_code": "CVE-2021-44228",
+                "available_count": 2,
+                "id": 3,
+                "package": "log4j-core",
+                "severity": "critical"
+              }
+            ],
+            "error": null,
+            "ok": true
+          },
+          "latency_ms": 0.03
+        },
+        {
+          "step": 3,
+          "iteration": 1,
+          "tool": "search",
+          "inputs": {
+            "query": "lo"
+          },
+          "observation": {
+            "data": [
+              {
+                "advisory_code": "GHSA-demo-1234",
+                "available_count": 3,
+                "id": 2,
+                "package": "lodash",
+                "severity": "high"
+              },
+              {
+                "advisory_code": "CVE-2021-44228",
+                "available_count": 2,
+                "id": 3,
+                "package": "log4j-core",
+                "severity": "critical"
+              }
+            ],
+            "error": null,
+            "ok": true
+          },
+          "latency_ms": 0.01
+        }
+      ],
+      "emitted_calls": [
+        {
+          "iteration": 1,
+          "name": "search",
+          "arguments": {
+            "query": "lo"
+          },
+          "ok": true,
+          "category": null,
+          "problem": null
+        },
+        {
+          "iteration": 1,
+          "name": "search",
+          "arguments": {
+            "query": "lo"
+          },
+          "ok": true,
+          "category": null,
+          "problem": null
+        },
+        {
+          "iteration": 1,
+          "name": "search",
+          "arguments": {
+            "query": "lo"
+          },
+          "ok": true,
+          "category": null,
+          "problem": null
+        }
+      ],
+      "repairs": [],
+      "tokens": {
+        "input": 2943,
+        "output": 3777
+      },
+      "latency_ms": 56076.2
+    },
+    "verdict": {
+      "passed": false,
+      "failed_checks": [
+        "detail_both_records"
+      ],
+      "checks": {
+        "answered": true,
+        "searched": true,
+        "detail_both_records": false,
+        "answer_mentions_lodash": true,
+        "answer_has_lodash_high": true,
+        "answer_has_lodash_3": true,
+        "answer_mentions_log4j-core": true,
+        "answer_has_log4j-core_critical": true,
+        "answer_has_log4j-core_2": true,
+        "no_unsupported_claims": true
+      },
+      "unsupported_claims": [],
+      "lost_chain": true,
+      "failure_category": "lost_multi_step_chain",
+      "tools_called": [
+        "search",
+        "search",
+        "search"
+      ]
+    }
+  },
+  {
+    "case_id": "E",
+    "result": {
+      "run_id": "demo-E",
+      "final_answer": "The vulnerability record with ID 4242 was not found in the inventory. Valid record IDs range from 1 to 10. Please verify the ID or use the search function to find the correct record. (Record ID used: 4242)",
+      "stop_reason": "final_answer",
+      "total_tool_calls": 1,
+      "iterations": 2,
+      "trace": [
+        {
+          "step": 1,
+          "iteration": 1,
+          "tool": "detail",
+          "inputs": {
+            "id": 4242
+          },
+          "observation": {
+            "data": null,
+            "error": "record not found: no vulnerability record has id 4242; valid ids are 1-10. Use search to find a record id.",
+            "ok": false
+          },
+          "latency_ms": 2.68
+        }
+      ],
+      "emitted_calls": [
+        {
+          "iteration": 1,
+          "name": "detail",
+          "arguments": {
+            "id": 4242
+          },
+          "ok": true,
+          "category": null,
+          "problem": null
+        }
+      ],
+      "repairs": [],
+      "tokens": {
+        "input": 915,
+        "output": 1335
+      },
+      "latency_ms": 17701.5
+    },
+    "handled_without_crash": true
+  }
+]

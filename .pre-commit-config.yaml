@@ -1,0 +1,8 @@
+# HW7 Part 1: lint staged Python files with Ruff on every commit.
+# Install once with: .venv/bin/pre-commit install
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.8.4
+    hooks:
+      - id: ruff
+        name: ruff (lint)

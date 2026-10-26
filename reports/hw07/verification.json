@@ -1,0 +1,157 @@
+{
+  "homework": 7,
+  "SID4": "0036",
+  "PORT_BASE": 8036,
+  "SEED": 36,
+  "VERIFY_SEED": 260036,
+  "commit": "33986feb98e646871a167d86aae03763e19138c8",
+  "tag_hw7_commit": "hw7^{commit}",
+  "working_tree_clean": false,
+  "model": "qwen3:4b via local Ollama (num_ctx 16384; agent loop temperature 0.2, seed 36)",
+  "configuration": {
+    "jwt_algorithm": "HS256",
+    "access_token_minutes": 30,
+    "database": "MySQL s0036_rel"
+  },
+  "checks": [
+    {
+      "check": "POST /auth/login valid credentials -> 200 + JWT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "POST /auth/login invalid credentials -> 401",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "GET /auth/me without token -> 401",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "GET /auth/me invalid token -> 401",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "GET /auth/me valid token -> identity + role",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "GET /api/reports as reader -> 200",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "POST /api/reports as reader -> 403",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "POST /api/reports as writer -> 201",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "DELETE /api/reports/{id} as writer -> 403",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "DELETE /api/reports/{id} as moderator -> 204",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "GET /bikeshare UI page -> 200",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "MySQL users store only salted hashes",
+      "passed": true,
+      "detail": "4 users"
+    },
+    {
+      "check": "run_agent completes verification task A with >= 2 tool calls",
+      "passed": true,
+      "detail": {
+        "tools": [
+          "search",
+          "detail"
+        ],
+        "verifier_passed": true
+      }
+    },
+    {
+      "check": "execute_tool on nonexistent id returns a useful error",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "csv_sql rejects non-SELECT and leaves data unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calculator evaluates arithmetic and rejects code",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "policy_retriever labels retrieved text as untrusted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "safety gate: 5 commands allowed, 5 destructive blocked",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "file tools work in the sandbox and refuse paths outside it",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Part 2 reliability: >= 20 attempts saved in raw/",
+      "passed": true,
+      "detail": 21
+    },
+    {
+      "check": "Part 3 original-vs-Reflexion comparison saved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Part 3 stored reflections include evidence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Part 4 scenarios: results + pricing snapshots with matching SHA-256, >= 500 rows",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Part 5 before/after attack results saved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Part 6 safety-gate results saved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "ruff passes on HW7 code",
+      "passed": true,
+      "detail": [
+        "All checks passed!"
+      ]
+    }
+  ],
+  "passed": true
+}

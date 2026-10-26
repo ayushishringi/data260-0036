@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchReports } from "./store";
-import { API_BASE } from "./api";
+import { setToken } from "./api";
 
 function Home({ user, onLogout }) {
   const navigate = useNavigate();
@@ -12,19 +12,17 @@ function Home({ user, onLogout }) {
 
   useEffect(() => {
     dispatch(fetchReports()).unwrap().catch((message) => {
-      if (String(message).toLowerCase().includes("login")) {
+      if (/not authenticated|invalid token|token expired/i.test(String(message))) {
+        setToken(null);
         onLogout();
         navigate("/login", { replace: true });
       }
     });
   }, [dispatch, navigate, onLogout]);
 
-  async function handleLogout() {
-    await fetch(`${API_BASE}/api/auth/logout`, {
-      method: "POST",
-      credentials: "include",
-    });
-
+  function handleLogout() {
+    // JWTs are stateless: logging out discards the token on the client.
+    setToken(null);
     onLogout();
     navigate("/login");
   }
@@ -39,7 +37,7 @@ function Home({ user, onLogout }) {
       <header>
         <h1>Vulnerability Reports</h1>
 
-        <p>Logged in as {user.email}</p>
+        <p>Logged in as {user.username} ({user.role})</p>
 
         <button
           type="button"

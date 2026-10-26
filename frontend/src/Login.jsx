@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { API_BASE } from "./api";
+import { API_BASE, authHeaders, setToken } from "./api";
 
 function Login({ onLogin }) {
   const navigate = useNavigate();
 
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
@@ -14,13 +14,12 @@ function Login({ onLogin }) {
     setError("");
 
     try {
-      const response = await fetch(`${API_BASE}/api/auth/login`, {
+      const response = await fetch(`${API_BASE}/auth/login`, {
         method: "POST",
-        credentials: "include",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ username, password }),
       });
 
       const data = await response.json();
@@ -29,7 +28,9 @@ function Login({ onLogin }) {
         throw new Error(data.detail || "Login failed");
       }
 
-      onLogin(data);
+      setToken(data.access_token);
+      const me = await fetch(`${API_BASE}/auth/me`, { headers: authHeaders() });
+      onLogin(await me.json());
       navigate("/");
     } catch (error) {
       setError(error.message);
@@ -43,13 +44,14 @@ function Login({ onLogin }) {
       {error && <p className="error">{error}</p>}
 
       <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Email</label>
+        <label htmlFor="username">Username</label>
 
         <input
-          id="email"
-          type="email"
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
+          id="username"
+          type="text"
+          autoComplete="username"
+          value={username}
+          onChange={(event) => setUsername(event.target.value)}
           required
         />
 

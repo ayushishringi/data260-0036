@@ -1,0 +1,91 @@
+{
+  "scenario": "membership_wins",
+  "description": "Frequent rider: about 56 rides per 30 days, 8-75 minutes, classic and ebike.",
+  "csv": "tests/fixtures/hw7/bikeshare_membership_wins.csv",
+  "csv_sha256": "336ddf072dd3904f3e8e950c3efae9d3b3fad85b07c6c95ac4a5dc1bf2f33443",
+  "rows": 504,
+  "first_trip": "2026-01-01 11:51:11.747",
+  "last_trip": "2026-09-30 21:44:15.196",
+  "rideable_types": {
+    "electric_bike": 339,
+    "classic_bike": 165
+  },
+  "duration_minutes": {
+    "mean": 17.35,
+    "min": 8.03,
+    "max": 74.82,
+    "over_45": 21
+  },
+  "sampling": {
+    "seed": "36-membership_wins",
+    "range_bytes_per_month": 400000,
+    "per_month": 56,
+    "months": 9
+  },
+  "source_files": [
+    {
+      "month": "202601",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202601-capitalbikeshare-tripdata.zip",
+      "rows_read": 9288,
+      "candidates": 4291,
+      "picked": 56
+    },
+    {
+      "month": "202602",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202602-capitalbikeshare-tripdata.zip",
+      "rows_read": 10509,
+      "candidates": 4986,
+      "picked": 56
+    },
+    {
+      "month": "202603",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202603-capitalbikeshare-tripdata.zip",
+      "rows_read": 10261,
+      "candidates": 6117,
+      "picked": 56
+    },
+    {
+      "month": "202604",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202604-capitalbikeshare-tripdata.zip",
+      "rows_read": 10078,
+      "candidates": 5439,
+      "picked": 56
+    },
+    {
+      "month": "202605",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202605-capitalbikeshare-tripdata.zip",
+      "rows_read": 9522,
+      "candidates": 5396,
+      "picked": 56
+    },
+    {
+      "month": "202606",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202606-capitalbikeshare-tripdata.zip",
+      "rows_read": 8464,
+      "candidates": 4907,
+      "picked": 56
+    },
+    {
+      "month": "202607",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202607-capitalbikeshare-tripdata.zip",
+      "rows_read": 11808,
+      "candidates": 5023,
+      "picked": 56
+    },
+    {
+      "month": "202608",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202608-capitalbikeshare-tripdata.zip",
+      "rows_read": 9793,
+      "candidates": 5872,
+      "picked": 56
+    },
+    {
+      "month": "202609",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202609-capitalbikeshare-tripdata.zip",
+      "rows_read": 8555,
+      "candidates": 4927,
+      "picked": 56
+    }
+  ],
+  "built_at": "2026-10-20T10:29:46"
+}

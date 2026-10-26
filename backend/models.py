@@ -1,68 +1,27 @@
 from datetime import datetime
 
-from sqlalchemy import Boolean, DateTime, ForeignKey, Integer, String, Text, UniqueConstraint
+from sqlalchemy import Boolean, CheckConstraint, DateTime, ForeignKey, Integer, String, Text, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from backend.database import Base
 
 
 class User(Base):
+    """Login account; HW7 authenticates by username and authorizes by role."""
+
     __tablename__ = "users"
-
-    id: Mapped[int] = mapped_column(
-        Integer,
-        primary_key=True,
-        autoincrement=True,
+    __table_args__ = (
+        UniqueConstraint("username", name="uq_users_username"),
+        CheckConstraint("role IN ('reader', 'writer', 'moderator')", name="ck_users_role"),
     )
 
-    name: Mapped[str] = mapped_column(
-        String(120),
-        nullable=False,
-    )
-
-    email: Mapped[str] = mapped_column(
-        String(255),
-        unique=True,
-        nullable=False,
-    )
-
-    password_hash: Mapped[str] = mapped_column(
-        String(255),
-        nullable=False,
-    )
-
-    sessions: Mapped[list["LoginSession"]] = relationship(
-        back_populates="user",
-        cascade="all, delete-orphan",
-    )
-
-
-class LoginSession(Base):
-    __tablename__ = "sessions"
-
-    id: Mapped[str] = mapped_column(
-        String(128),
-        primary_key=True,
-    )
-
-    user_id: Mapped[int] = mapped_column(
-        ForeignKey("users.id"),
-        nullable=False,
-    )
-
-    created_at: Mapped[datetime] = mapped_column(
-        DateTime,
-        nullable=False,
-    )
-
-    expires_at: Mapped[datetime] = mapped_column(
-        DateTime,
-        nullable=False,
-    )
-
-    user: Mapped[User] = relationship(
-        back_populates="sessions",
-    )
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    username: Mapped[str] = mapped_column(String(80), nullable=False)
+    password_hash: Mapped[str] = mapped_column(String(255), nullable=False)
+    role: Mapped[str] = mapped_column(String(20), nullable=False, default="reader")
+    # Kept from the HW4 schema; optional now that login uses username.
+    name: Mapped[str | None] = mapped_column(String(120), nullable=True)
+    email: Mapped[str | None] = mapped_column(String(255), unique=True, nullable=True)
 
 
 class VulnerabilityReport(Base):

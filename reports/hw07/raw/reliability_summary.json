@@ -1,0 +1,44 @@
+{
+  "attempts": 21,
+  "model": "qwen3:4b (Ollama)",
+  "temperature": 0.7,
+  "num_ctx": 16384,
+  "seed_rule": "36*1000 + attempt index",
+  "call_level": {
+    "emitted_calls": 58,
+    "well_formed_before_repair": 1.0,
+    "well_formed_after_repair": 1.0
+  },
+  "attempt_level": {
+    "clean_before_repair": 1.0,
+    "completed_after_repair": 1.0,
+    "verifier_pass_rate": 1.0
+  },
+  "failures_by_type": {
+    "malformed_arguments": 0,
+    "unknown_tool": 0,
+    "text_when_tool_required": 0,
+    "lost_multi_step_chain": 0
+  },
+  "by_case": {
+    "A": {
+      "attempts": 7,
+      "verifier_passed": 7
+    },
+    "B": {
+      "attempts": 7,
+      "verifier_passed": 7
+    },
+    "C": {
+      "attempts": 7,
+      "verifier_passed": 7
+    }
+  },
+  "mean_tool_calls": 2.76,
+  "mean_latency_ms": 70583.9,
+  "parallel_calls": {
+    "attempts_with_extra_parallel_calls": 9,
+    "extra_calls_not_executed": 11,
+    "note": "one tool call is executed per turn; extra calls in the same turn are not executed or validated (counted from RUN_LOG.txt)"
+  }
+}

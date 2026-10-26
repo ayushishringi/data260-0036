@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { updateReport } from "./store";
-import { API_BASE } from "./api";
+import { API_BASE, authHeaders } from "./api";
 
 function UpdateRecord() {
   const { id } = useParams();
@@ -19,7 +19,7 @@ function UpdateRecord() {
         const response = await fetch(
           `${API_BASE}/api/reports/${id}`,
           {
-            credentials: "include",
+            headers: authHeaders(),
           }
         );
 

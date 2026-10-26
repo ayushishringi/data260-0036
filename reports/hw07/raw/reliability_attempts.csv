@@ -1,0 +1,22 @@
+attempt,case_id,seed,stop_reason,tool_calls,emitted_calls,well_formed_calls,failed_calls,unrecovered_calls,repairs,malformed_arguments,unknown_tool,text_when_tool_required,lost_multi_step_chain,first_try_clean,completed_after_repair,verifier_passed,failed_checks,tokens,latency_ms,tools_called,repair_problems,skipped_parallel_calls
+1,A,36000,final_answer,2,2,2,0,0,0,0,0,0,0,True,True,True,,3190,24719.8,search > detail,,0
+2,B,36001,final_answer,3,3,3,0,0,0,0,0,0,0,True,True,True,,8827,116062.8,aggregate > search > detail,,1
+3,C,36002,final_answer,3,3,3,0,0,0,0,0,0,0,True,True,True,,6901,57065.6,search > detail > detail,,1
+4,A,36003,final_answer,2,2,2,0,0,0,0,0,0,0,True,True,True,,2979,42258.3,search > detail,,0
+5,B,36004,final_answer,4,4,4,0,0,0,0,0,0,0,True,True,True,,11607,234980.2,aggregate > search > search > detail,,1
+6,C,36005,final_answer,3,3,3,0,0,0,0,0,0,0,True,True,True,,3958,46866.7,search > detail > detail,,0
+7,A,36006,final_answer,2,2,2,0,0,0,0,0,0,0,True,True,True,,3382,55510.9,search > detail,,0
+8,B,36007,final_answer,3,3,3,0,0,0,0,0,0,0,True,True,True,,12213,180682.1,aggregate > search > detail,,1
+9,C,36008,final_answer,3,3,3,0,0,0,0,0,0,0,True,True,True,,3902,49637.4,search > detail > detail,,0
+10,A,36009,final_answer,2,2,2,0,0,0,0,0,0,0,True,True,True,,3558,61241.6,search > detail,,0
+11,B,36010,final_answer,3,3,3,0,0,0,0,0,0,0,True,True,True,,5841,111144.2,aggregate > search > detail,,0
+12,C,36011,final_answer,3,3,3,0,0,0,0,0,0,0,True,True,True,,7511,59605.5,search > detail > detail,,1
+13,A,36012,final_answer,2,2,2,0,0,0,0,0,0,0,True,True,True,,3420,24786.7,search > detail,,0
+14,B,36013,final_answer,3,3,3,0,0,0,0,0,0,0,True,True,True,,10142,92374.5,aggregate > search > detail,,1
+15,C,36014,final_answer,3,3,3,0,0,0,0,0,0,0,True,True,True,,4104,22215.2,search > detail > detail,,0
+16,A,36015,final_answer,2,2,2,0,0,0,0,0,0,0,True,True,True,,2850,15720.7,search > detail,,0
+17,B,36016,final_answer,4,4,4,0,0,0,0,0,0,0,True,True,True,,13112,121545.4,aggregate > search > search > detail,,1
+18,C,36017,final_answer,3,3,3,0,0,0,0,0,0,0,True,True,True,,3707,18067.4,search > detail > detail,,0
+19,A,36018,final_answer,2,2,2,0,0,0,0,0,0,0,True,True,True,,2790,16064.2,search > detail,,0
+20,B,36019,final_answer,3,3,3,0,0,0,0,0,0,0,True,True,True,,17544,78645.8,aggregate > search > detail,,3
+21,C,36020,final_answer,3,3,3,0,0,0,0,0,0,0,True,True,True,,10263,53066.5,search > detail > detail,,1

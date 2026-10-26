@@ -1,0 +1,44 @@
+{
+  "temperature": 1.0,
+  "runs_per_case": 6,
+  "original_loop": {
+    "runs": 18,
+    "task_success": 1.0,
+    "unsupported_claims_total": 0,
+    "retry_rate": 0.0,
+    "mean_tool_calls": 2.67,
+    "mean_tokens": 6644.4,
+    "mean_latency_ms": 38478.7,
+    "verifier_false_rejection_candidates": 0
+  },
+  "reflexion_loop": {
+    "runs": 18,
+    "task_success": 1.0,
+    "unsupported_claims_total": 0,
+    "retry_rate": 0.0,
+    "mean_tool_calls": 2.67,
+    "mean_tokens": 6644.4,
+    "mean_latency_ms": 38479.7,
+    "verifier_false_rejection_candidates": 0
+  },
+  "reflexion_stop_reasons": {
+    "success": 18
+  },
+  "by_case": {
+    "A": {
+      "original_success": 6,
+      "reflexion_success": 6,
+      "runs": 6
+    },
+    "B": {
+      "original_success": 6,
+      "reflexion_success": 6,
+      "runs": 6
+    },
+    "C": {
+      "original_success": 6,
+      "reflexion_success": 6,
+      "runs": 6
+    }
+  }
+}

@@ -1,0 +1,511 @@
+{
+  "scenario": "payperuse_wins",
+  "description": "Occasional rider: about 8 short classic rides per 30 days (3-10 minutes).",
+  "csv": "tests/fixtures/hw7/bikeshare_payperuse_wins.csv",
+  "csv_sha256": "e7ad2c8dd4263adaa203385ffcbe7d4d9be062d025ad37d9d2551e753ab6bf3d",
+  "rows": 519,
+  "first_trip": "2021-01-14 17:10:17",
+  "last_trip": "2026-09-29 09:14:46.137",
+  "rideable_types": {
+    "classic_bike": 516,
+    "docked_bike": 3
+  },
+  "duration_minutes": {
+    "mean": 6.57,
+    "min": 3.05,
+    "max": 10.0,
+    "over_45": 0
+  },
+  "sampling": {
+    "seed": "36-payperuse_wins",
+    "range_bytes_per_month": 400000,
+    "per_month": 8,
+    "months": 69
+  },
+  "source_files": [
+    {
+      "month": "202101",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202101-capitalbikeshare-tripdata.zip",
+      "rows_read": 10396,
+      "candidates": 3397,
+      "picked": 8
+    },
+    {
+      "month": "202102",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202102-capitalbikeshare-tripdata.zip",
+      "rows_read": 11097,
+      "candidates": 3803,
+      "picked": 8
+    },
+    {
+      "month": "202103",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202103-capitalbikeshare-tripdata.zip",
+      "rows_read": 11286,
+      "candidates": 2732,
+      "picked": 8
+    },
+    {
+      "month": "202104",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202104-capitalbikeshare-tripdata.zip",
+      "rows_read": 10732,
+      "candidates": 1950,
+      "picked": 8
+    },
+    {
+      "month": "202105",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202105-capitalbikeshare-tripdata.zip",
+      "rows_read": 10794,
+      "candidates": 3276,
+      "picked": 8
+    },
+    {
+      "month": "202106",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202106-capitalbikeshare-tripdata.zip",
+      "rows_read": 10133,
+      "candidates": 2746,
+      "picked": 8
+    },
+    {
+      "month": "202107",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202107-capitalbikeshare-tripdata.zip",
+      "rows_read": 12084,
+      "candidates": 3423,
+      "picked": 8
+    },
+    {
+      "month": "202108",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202108-capitalbikeshare-tripdata.zip",
+      "rows_read": 11069,
+      "candidates": 3703,
+      "picked": 8
+    },
+    {
+      "month": "202109",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202109-capitalbikeshare-tripdata.zip",
+      "rows_read": 11793,
+      "candidates": 3608,
+      "picked": 8
+    },
+    {
+      "month": "202110",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202110-capitalbikeshare-tripdata.zip",
+      "rows_read": 11140,
+      "candidates": 3101,
+      "picked": 8
+    },
+    {
+      "month": "202111",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202111-capitalbikeshare-tripdata.zip",
+      "rows_read": 9762,
+      "candidates": 2959,
+      "picked": 8
+    },
+    {
+      "month": "202112",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202112-capitalbikeshare-tripdata.zip",
+      "rows_read": 9635,
+      "candidates": 3181,
+      "picked": 8
+    },
+    {
+      "month": "202201",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202201-capitalbikeshare-tripdata.zip",
+      "rows_read": 10157,
+      "candidates": 3631,
+      "picked": 8
+    },
+    {
+      "month": "202202",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202202-capitalbikeshare-tripdata.zip",
+      "rows_read": 10052,
+      "candidates": 3550,
+      "picked": 8
+    },
+    {
+      "month": "202203",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202203-capitalbikeshare-tripdata.zip",
+      "rows_read": 10858,
+      "candidates": 3447,
+      "picked": 8
+    },
+    {
+      "month": "202204",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202204-capitalbikeshare-tripdata.zip",
+      "rows_read": 10006,
+      "candidates": 2808,
+      "picked": 8
+    },
+    {
+      "month": "202205",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202205-capitalbikeshare-tripdata.zip",
+      "rows_read": 10194,
+      "candidates": 2948,
+      "picked": 8
+    },
+    {
+      "month": "202206",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202206-capitalbikeshare-tripdata.zip",
+      "rows_read": 10188,
+      "candidates": 3008,
+      "picked": 8
+    },
+    {
+      "month": "202207",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202207-capitalbikeshare-tripdata.zip",
+      "rows_read": 11968,
+      "candidates": 4122,
+      "picked": 8
+    },
+    {
+      "month": "202208",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202208-capitalbikeshare-tripdata.zip",
+      "rows_read": 11842,
+      "candidates": 3279,
+      "picked": 8
+    },
+    {
+      "month": "202209",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202209-capitalbikeshare-tripdata.zip",
+      "rows_read": 9713,
+      "candidates": 3159,
+      "picked": 8
+    },
+    {
+      "month": "202210",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202210-capitalbikeshare-tripdata.zip",
+      "rows_read": 10349,
+      "candidates": 3590,
+      "picked": 8
+    },
+    {
+      "month": "202211",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202211-capitalbikeshare-tripdata.zip",
+      "rows_read": 11435,
+      "candidates": 4085,
+      "picked": 8
+    },
+    {
+      "month": "202212",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202212-capitalbikeshare-tripdata.zip",
+      "rows_read": 10897,
+      "candidates": 3767,
+      "picked": 8
+    },
+    {
+      "month": "202301",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202301-capitalbikeshare-tripdata.zip",
+      "rows_read": 9739,
+      "candidates": 3548,
+      "picked": 8
+    },
+    {
+      "month": "202302",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202302-capitalbikeshare-tripdata.zip",
+      "rows_read": 11982,
+      "candidates": 4992,
+      "picked": 8
+    },
+    {
+      "month": "202303",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202303-capitalbikeshare-tripdata.zip",
+      "rows_read": 10333,
+      "candidates": 2852,
+      "picked": 8
+    },
+    {
+      "month": "202304",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202304-capitalbikeshare-tripdata.zip",
+      "rows_read": 9197,
+      "candidates": 2458,
+      "picked": 8
+    },
+    {
+      "month": "202305",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202305-capitalbikeshare-tripdata.zip",
+      "rows_read": 9483,
+      "candidates": 2578,
+      "picked": 8
+    },
+    {
+      "month": "202306",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202306-capitalbikeshare-tripdata.zip",
+      "rows_read": 9246,
+      "candidates": 2373,
+      "picked": 8
+    },
+    {
+      "month": "202307",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202307-capitalbikeshare-tripdata.zip",
+      "rows_read": 11293,
+      "candidates": 3646,
+      "picked": 8
+    },
+    {
+      "month": "202308",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202308-capitalbikeshare-tripdata.zip",
+      "rows_read": 9166,
+      "candidates": 2450,
+      "picked": 8
+    },
+    {
+      "month": "202309",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202309-capitalbikeshare-tripdata.zip",
+      "rows_read": 14690,
+      "candidates": 142,
+      "picked": 8
+    },
+    {
+      "month": "202310",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202310-capitalbikeshare-tripdata.zip",
+      "rows_read": 10898,
+      "candidates": 2995,
+      "picked": 8
+    },
+    {
+      "month": "202311",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202311-capitalbikeshare-tripdata.zip",
+      "rows_read": 10678,
+      "candidates": 3446,
+      "picked": 8
+    },
+    {
+      "month": "202312",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202312-capitalbikeshare-tripdata.zip",
+      "rows_read": 9513,
+      "candidates": 2058,
+      "picked": 8
+    },
+    {
+      "month": "202401",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202401-capitalbikeshare-tripdata.zip",
+      "rows_read": 10123,
+      "candidates": 2388,
+      "picked": 8
+    },
+    {
+      "month": "202402",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202402-capitalbikeshare-tripdata.zip",
+      "rows_read": 9436,
+      "candidates": 2073,
+      "picked": 8
+    },
+    {
+      "month": "202403",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202403-capitalbikeshare-tripdata.zip",
+      "rows_read": 8955,
+      "candidates": 1963,
+      "picked": 8
+    },
+    {
+      "month": "202404",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202404-capitalbikeshare-tripdata.zip",
+      "rows_read": 9977,
+      "candidates": 2573,
+      "picked": 8
+    },
+    {
+      "month": "202405",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202405-capitalbikeshare-tripdata.zip",
+      "rows_read": 10036,
+      "candidates": 2413,
+      "picked": 8
+    },
+    {
+      "month": "202406",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202406-capitalbikeshare-tripdata.zip",
+      "rows_read": 7958,
+      "candidates": 1855,
+      "picked": 8
+    },
+    {
+      "month": "202407",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202407-capitalbikeshare-tripdata.zip",
+      "rows_read": 8342,
+      "candidates": 1692,
+      "picked": 8
+    },
+    {
+      "month": "202408",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202408-capitalbikeshare-tripdata.zip",
+      "rows_read": 8841,
+      "candidates": 1560,
+      "picked": 8
+    },
+    {
+      "month": "202409",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202409-capitalbikeshare-tripdata.zip",
+      "rows_read": 8516,
+      "candidates": 1610,
+      "picked": 8
+    },
+    {
+      "month": "202410",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202410-capitalbikeshare-tripdata.zip",
+      "rows_read": 12557,
+      "candidates": 2,
+      "picked": 2
+    },
+    {
+      "month": "202411",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202411-capitalbikeshare-tripdata.zip",
+      "rows_read": 10392,
+      "candidates": 794,
+      "picked": 8
+    },
+    {
+      "month": "202412",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202412-capitalbikeshare-tripdata.zip",
+      "rows_read": 10332,
+      "candidates": 880,
+      "picked": 8
+    },
+    {
+      "month": "202501",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202501-capitalbikeshare-tripdata.zip",
+      "rows_read": 8630,
+      "candidates": 1591,
+      "picked": 8
+    },
+    {
+      "month": "202502",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202502-capitalbikeshare-tripdata.zip",
+      "rows_read": 12695,
+      "candidates": 0,
+      "picked": 0
+    },
+    {
+      "month": "202503",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202503-capitalbikeshare-tripdata.zip",
+      "rows_read": 8418,
+      "candidates": 1646,
+      "picked": 8
+    },
+    {
+      "month": "202504",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202504-capitalbikeshare-tripdata.zip",
+      "rows_read": 12583,
+      "candidates": 0,
+      "picked": 0
+    },
+    {
+      "month": "202505",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202505-capitalbikeshare-tripdata.zip",
+      "rows_read": 12615,
+      "candidates": 1,
+      "picked": 1
+    },
+    {
+      "month": "202506",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202506-capitalbikeshare-tripdata.zip",
+      "rows_read": 8534,
+      "candidates": 2021,
+      "picked": 8
+    },
+    {
+      "month": "202507",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202507-capitalbikeshare-tripdata.zip",
+      "rows_read": 8197,
+      "candidates": 1970,
+      "picked": 8
+    },
+    {
+      "month": "202508",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202508-capitalbikeshare-tripdata.zip",
+      "rows_read": 12259,
+      "candidates": 4,
+      "picked": 4
+    },
+    {
+      "month": "202509",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202509-capitalbikeshare-tripdata.zip",
+      "rows_read": 8822,
+      "candidates": 1294,
+      "picked": 8
+    },
+    {
+      "month": "202510",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202510-capitalbikeshare-tripdata.zip",
+      "rows_read": 8493,
+      "candidates": 1521,
+      "picked": 8
+    },
+    {
+      "month": "202511",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202511-capitalbikeshare-tripdata.zip",
+      "rows_read": 10119,
+      "candidates": 1348,
+      "picked": 8
+    },
+    {
+      "month": "202512",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202512-capitalbikeshare-tripdata.zip",
+      "rows_read": 9044,
+      "candidates": 1387,
+      "picked": 8
+    },
+    {
+      "month": "202601",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202601-capitalbikeshare-tripdata.zip",
+      "rows_read": 9288,
+      "candidates": 1713,
+      "picked": 8
+    },
+    {
+      "month": "202602",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202602-capitalbikeshare-tripdata.zip",
+      "rows_read": 10509,
+      "candidates": 816,
+      "picked": 8
+    },
+    {
+      "month": "202603",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202603-capitalbikeshare-tripdata.zip",
+      "rows_read": 10261,
+      "candidates": 1429,
+      "picked": 8
+    },
+    {
+      "month": "202604",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202604-capitalbikeshare-tripdata.zip",
+      "rows_read": 10078,
+      "candidates": 1942,
+      "picked": 8
+    },
+    {
+      "month": "202605",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202605-capitalbikeshare-tripdata.zip",
+      "rows_read": 9522,
+      "candidates": 1466,
+      "picked": 8
+    },
+    {
+      "month": "202606",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202606-capitalbikeshare-tripdata.zip",
+      "rows_read": 8464,
+      "candidates": 1614,
+      "picked": 8
+    },
+    {
+      "month": "202607",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202607-capitalbikeshare-tripdata.zip",
+      "rows_read": 11808,
+      "candidates": 382,
+      "picked": 8
+    },
+    {
+      "month": "202608",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202608-capitalbikeshare-tripdata.zip",
+      "rows_read": 9793,
+      "candidates": 1382,
+      "picked": 8
+    },
+    {
+      "month": "202609",
+      "url": "https://s3.amazonaws.com/capitalbikeshare-data/202609-capitalbikeshare-tripdata.zip",
+      "rows_read": 8555,
+      "candidates": 1386,
+      "picked": 8
+    }
+  ],
+  "built_at": "2026-10-20T10:30:43"
+}

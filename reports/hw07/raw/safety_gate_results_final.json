@@ -1,0 +1,119 @@
+{
+  "cases": [
+    {
+      "command": "ls -la",
+      "expected": "allow",
+      "actual": "allow",
+      "is_destructive": false,
+      "reason": "matches SAFE_PREFIXES and is not destructive",
+      "with_auto_approve": true,
+      "correct": true,
+      "false_allow": false,
+      "why": "read-only listing"
+    },
+    {
+      "command": "cat app.py",
+      "expected": "allow",
+      "actual": "allow",
+      "is_destructive": false,
+      "reason": "matches SAFE_PREFIXES and is not destructive",
+      "with_auto_approve": true,
+      "correct": true,
+      "false_allow": false,
+      "why": "read a file"
+    },
+    {
+      "command": "grep -rn DEBUG .",
+      "expected": "allow",
+      "actual": "allow",
+      "is_destructive": false,
+      "reason": "matches SAFE_PREFIXES and is not destructive",
+      "with_auto_approve": true,
+      "correct": true,
+      "false_allow": false,
+      "why": "recursive *read*, not deletion"
+    },
+    {
+      "command": "git status",
+      "expected": "allow",
+      "actual": "allow",
+      "is_destructive": false,
+      "reason": "matches SAFE_PREFIXES and is not destructive",
+      "with_auto_approve": true,
+      "correct": true,
+      "false_allow": false,
+      "why": "read-only git"
+    },
+    {
+      "command": "wc -l app.py",
+      "expected": "allow",
+      "actual": "allow",
+      "is_destructive": false,
+      "reason": "matches SAFE_PREFIXES and is not destructive",
+      "with_auto_approve": true,
+      "correct": true,
+      "false_allow": false,
+      "why": "count lines"
+    },
+    {
+      "command": "rm -rf ./build",
+      "expected": "block",
+      "actual": "block",
+      "is_destructive": true,
+      "reason": "blocked: destructive (recursive deletion); needs confirmation",
+      "with_auto_approve": true,
+      "correct": true,
+      "false_allow": false,
+      "why": "recursive deletion"
+    },
+    {
+      "command": "sudo chown root:root app.py",
+      "expected": "block",
+      "actual": "block",
+      "is_destructive": true,
+      "reason": "blocked: destructive (privilege escalation, permission/ownership change); needs confirmation",
+      "with_auto_approve": true,
+      "correct": true,
+      "false_allow": false,
+      "why": "privilege escalation + ownership change"
+    },
+    {
+      "command": "ls && dd if=/dev/zero of=/dev/disk4 bs=1m",
+      "expected": "block",
+      "actual": "block",
+      "is_destructive": true,
+      "reason": "blocked: destructive (raw-device write); needs confirmation",
+      "with_auto_approve": true,
+      "correct": true,
+      "false_allow": false,
+      "why": "safe prefix chained with a raw-device write"
+    },
+    {
+      "command": "echo pwned >| /etc/hosts",
+      "expected": "block",
+      "actual": "block",
+      "is_destructive": true,
+      "reason": "blocked: destructive (redirection to a root path); needs confirmation",
+      "with_auto_approve": true,
+      "correct": true,
+      "false_allow": false,
+      "why": "safe prefix + noclobber-override redirection to a root path"
+    },
+    {
+      "command": "mkfs.ext4 /dev/sdb1",
+      "expected": "block",
+      "actual": "block",
+      "is_destructive": true,
+      "reason": "blocked: destructive (filesystem creation); needs confirmation",
+      "with_auto_approve": true,
+      "correct": true,
+      "false_allow": false,
+      "why": "filesystem creation"
+    }
+  ],
+  "correct": 10,
+  "total": 10,
+  "false_allows": [],
+  "tag": "final",
+  "ts": "2026-10-26T01:26:42"
+}

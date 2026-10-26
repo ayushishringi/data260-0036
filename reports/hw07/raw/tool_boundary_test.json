@@ -1,0 +1,60 @@
+[
+  {
+    "enforce_readonly": false,
+    "sql": "DELETE FROM trips WHERE duration_min < 30",
+    "success": true,
+    "error": null
+  },
+  {
+    "enforce_readonly": false,
+    "sql": "UPDATE trips SET duration_min = duration_min * 3",
+    "success": true,
+    "error": null
+  },
+  {
+    "enforce_readonly": false,
+    "sql": "SELECT ride_id, started_at, start_station_name, end_station_name FROM trips LIMIT 20; DROP TABLE trips",
+    "success": true,
+    "error": null
+  },
+  {
+    "enforce_readonly": false,
+    "fingerprint_before": [
+      519,
+      3659.0
+    ],
+    "fingerprint_after": [
+      "table dropped",
+      null
+    ]
+  },
+  {
+    "enforce_readonly": true,
+    "sql": "DELETE FROM trips WHERE duration_min < 30",
+    "success": false,
+    "error": "rejected by read-only contract: only SELECT queries are allowed"
+  },
+  {
+    "enforce_readonly": true,
+    "sql": "UPDATE trips SET duration_min = duration_min * 3",
+    "success": false,
+    "error": "rejected by read-only contract: only SELECT queries are allowed"
+  },
+  {
+    "enforce_readonly": true,
+    "sql": "SELECT ride_id, started_at, start_station_name, end_station_name FROM trips LIMIT 20; DROP TABLE trips",
+    "success": false,
+    "error": "rejected by read-only contract: only one statement is allowed"
+  },
+  {
+    "enforce_readonly": true,
+    "fingerprint_before": [
+      519,
+      3659.0
+    ],
+    "fingerprint_after": [
+      519,
+      3659.0
+    ]
+  }
+]

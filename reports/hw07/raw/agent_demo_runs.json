@@ -1,0 +1,423 @@
+[
+  {
+    "case_id": "A",
+    "result": {
+      "run_id": "demo-A",
+      "final_answer": "The vulnerability record for package 'openssl' has record id 1 with severity critical and advisory code CVE-2024-9999. This was found using search id 1 and detail id 1.",
+      "stop_reason": "final_answer",
+      "total_tool_calls": 2,
+      "iterations": 3,
+      "trace": [
+        {
+          "step": 1,
+          "iteration": 1,
+          "tool": "search",
+          "inputs": {
+            "query": "openssl",
+            "limit": 1
+          },
+          "observation": {
+            "data": [
+              {
+                "id": 1,
+                "package": "openssl"
+              }
+            ],
+            "error": null,
+            "ok": true
+          },
+          "latency_ms": 0.11
+        },
+        {
+          "step": 2,
+          "iteration": 2,
+          "tool": "detail",
+          "inputs": {
+            "id": 1
+          },
+          "observation": {
+            "data": {
+              "advisory_code": "CVE-2024-9999",
+              "available_count": 1,
+              "id": 1,
+              "package": "openssl",
+              "severity": "critical"
+            },
+            "error": null,
+            "ok": true
+          },
+          "latency_ms": 0.06
+        }
+      ],
+      "emitted_calls": [
+        {
+          "iteration": 1,
+          "name": "search",
+          "arguments": {
+            "query": "openssl",
+            "limit": 1
+          },
+          "ok": true,
+          "category": null,
+          "problem": null
+        },
+        {
+          "iteration": 2,
+          "name": "detail",
+          "arguments": {
+            "id": 1
+          },
+          "ok": true,
+          "category": null,
+          "problem": null
+        }
+      ],
+      "repairs": [],
+      "skipped_parallel_calls": 0,
+      "tokens": {
+        "input": 1575,
+        "output": 2125
+      },
+      "latency_ms": 26723.6
+    },
+    "verdict": {
+      "passed": true,
+      "failed_checks": [],
+      "checks": {
+        "answered": true,
+        "searched_openssl": true,
+        "detail_on_first_result": true,
+        "first_result_is_expected_id": true,
+        "answer_mentions_critical": true,
+        "answer_mentions_CVE-2024-9999": true,
+        "no_unsupported_claims": true
+      },
+      "unsupported_claims": [],
+      "lost_chain": false,
+      "failure_category": null,
+      "tools_called": [
+        "search",
+        "detail"
+      ]
+    }
+  },
+  {
+    "case_id": "B",
+    "result": {
+      "run_id": "demo-B",
+      "final_answer": "There are 3 critical vulnerabilities in the inventory. One example is the OpenSSL vulnerability (record ID 1) with advisory code CVE-2024-9999. The count was retrieved using the aggregate tool. The record ID 1 was obtained via the detail tool.",
+      "stop_reason": "final_answer",
+      "total_tool_calls": 3,
+      "iterations": 4,
+      "trace": [
+        {
+          "step": 1,
+          "iteration": 1,
+          "tool": "aggregate",
+          "inputs": {
+            "severity": "critical"
+          },
+          "observation": {
+            "data": {
+              "available_count_total": 4,
+              "by_severity": {
+                "critical": 3,
+                "high": 0,
+                "low": 0,
+                "medium": 0
+              },
+              "count": 3
+            },
+            "error": null,
+            "ok": true
+          },
+          "latency_ms": 0.08
+        },
+        {
+          "step": 2,
+          "iteration": 2,
+          "tool": "search",
+          "inputs": {
+            "query": "openssl",
+            "severity": "critical"
+          },
+          "observation": {
+            "data": [
+              {
+                "id": 1,
+                "package": "openssl"
+              }
+            ],
+            "error": null,
+            "ok": true
+          },
+          "latency_ms": 0.04
+        },
+        {
+          "step": 3,
+          "iteration": 3,
+          "tool": "detail",
+          "inputs": {
+            "id": 1
+          },
+          "observation": {
+            "data": {
+              "advisory_code": "CVE-2024-9999",
+              "available_count": 1,
+              "id": 1,
+              "package": "openssl",
+              "severity": "critical"
+            },
+            "error": null,
+            "ok": true
+          },
+          "latency_ms": 0.05
+        }
+      ],
+      "emitted_calls": [
+        {
+          "iteration": 1,
+          "name": "aggregate",
+          "arguments": {
+            "severity": "critical"
+          },
+          "ok": true,
+          "category": null,
+          "problem": null
+        },
+        {
+          "iteration": 2,
+          "name": "search",
+          "arguments": {
+            "query": "openssl",
+            "severity": "critical"
+          },
+          "ok": true,
+          "category": null,
+          "problem": null
+        },
+        {
+          "iteration": 3,
+          "name": "detail",
+          "arguments": {
+            "id": 1
+          },
+          "ok": true,
+          "category": null,
+          "problem": null
+        }
+      ],
+      "repairs": [],
+      "skipped_parallel_calls": 0,
+      "tokens": {
+        "input": 2285,
+        "output": 5681
+      },
+      "latency_ms": 68692.7
+    },
+    "verdict": {
+      "passed": true,
+      "failed_checks": [],
+      "checks": {
+        "answered": true,
+        "called_aggregate": true,
+        "answer_has_critical_count": true,
+        "looked_up_a_critical_record": true,
+        "answer_names_that_example": true,
+        "no_unsupported_claims": true
+      },
+      "unsupported_claims": [],
+      "lost_chain": false,
+      "failure_category": null,
+      "tools_called": [
+        "aggregate",
+        "search",
+        "detail"
+      ]
+    }
+  },
+  {
+    "case_id": "C",
+    "result": {
+      "run_id": "demo-C",
+      "final_answer": "log4j-core (id 3) has a critical severity, making it more severe than lodash (id 2) with high severity. lodash has 3 available copies, which is more than log4j-core's 2 available copies. The comparison used record IDs 2 and 3 from the search results.",
+      "stop_reason": "final_answer",
+      "total_tool_calls": 3,
+      "iterations": 4,
+      "trace": [
+        {
+          "step": 1,
+          "iteration": 1,
+          "tool": "search",
+          "inputs": {
+            "query": "lo"
+          },
+          "observation": {
+            "data": [
+              {
+                "id": 2,
+                "package": "lodash"
+              },
+              {
+                "id": 3,
+                "package": "log4j-core"
+              }
+            ],
+            "error": null,
+            "ok": true
+          },
+          "latency_ms": 0.05
+        },
+        {
+          "step": 2,
+          "iteration": 2,
+          "tool": "detail",
+          "inputs": {
+            "id": 2
+          },
+          "observation": {
+            "data": {
+              "advisory_code": "GHSA-demo-1234",
+              "available_count": 3,
+              "id": 2,
+              "package": "lodash",
+              "severity": "high"
+            },
+            "error": null,
+            "ok": true
+          },
+          "latency_ms": 0.05
+        },
+        {
+          "step": 3,
+          "iteration": 3,
+          "tool": "detail",
+          "inputs": {
+            "id": 3
+          },
+          "observation": {
+            "data": {
+              "advisory_code": "CVE-2021-44228",
+              "available_count": 2,
+              "id": 3,
+              "package": "log4j-core",
+              "severity": "critical"
+            },
+            "error": null,
+            "ok": true
+          },
+          "latency_ms": 0.05
+        }
+      ],
+      "emitted_calls": [
+        {
+          "iteration": 1,
+          "name": "search",
+          "arguments": {
+            "query": "lo"
+          },
+          "ok": true,
+          "category": null,
+          "problem": null
+        },
+        {
+          "iteration": 2,
+          "name": "detail",
+          "arguments": {
+            "id": 2
+          },
+          "ok": true,
+          "category": null,
+          "problem": null
+        },
+        {
+          "iteration": 3,
+          "name": "detail",
+          "arguments": {
+            "id": 3
+          },
+          "ok": true,
+          "category": null,
+          "problem": null
+        }
+      ],
+      "repairs": [],
+      "skipped_parallel_calls": 0,
+      "tokens": {
+        "input": 2332,
+        "output": 3549
+      },
+      "latency_ms": 41706.4
+    },
+    "verdict": {
+      "passed": true,
+      "failed_checks": [],
+      "checks": {
+        "answered": true,
+        "searched": true,
+        "detail_both_records": true,
+        "answer_mentions_lodash": true,
+        "answer_has_lodash_high": true,
+        "answer_has_lodash_3": true,
+        "answer_mentions_log4j-core": true,
+        "answer_has_log4j-core_critical": true,
+        "answer_has_log4j-core_2": true,
+        "no_unsupported_claims": true
+      },
+      "unsupported_claims": [],
+      "lost_chain": false,
+      "failure_category": null,
+      "tools_called": [
+        "search",
+        "detail",
+        "detail"
+      ]
+    }
+  },
+  {
+    "case_id": "E",
+    "result": {
+      "run_id": "demo-E",
+      "final_answer": "The vulnerability record with ID 4242 does not exist in the inventory. Valid record IDs range from 1 to 10. I used the `detail` tool with ID 4242 but received an error confirming the record is not found. To find valid records, you can use the `search` tool with a package name substring.",
+      "stop_reason": "final_answer",
+      "total_tool_calls": 1,
+      "iterations": 2,
+      "trace": [
+        {
+          "step": 1,
+          "iteration": 1,
+          "tool": "detail",
+          "inputs": {
+            "id": 4242
+          },
+          "observation": {
+            "data": null,
+            "error": "record not found: no vulnerability record has id 4242; valid ids are 1-10. Use search to find a record id.",
+            "ok": false
+          },
+          "latency_ms": 0.05
+        }
+      ],
+      "emitted_calls": [
+        {
+          "iteration": 1,
+          "name": "detail",
+          "arguments": {
+            "id": 4242
+          },
+          "ok": true,
+          "category": null,
+          "problem": null
+        }
+      ],
+      "repairs": [],
+      "skipped_parallel_calls": 0,
+      "tokens": {
+        "input": 947,
+        "output": 750
+      },
+      "latency_ms": 8640.0
+    },
+    "handled_without_crash": true
+  }
+]

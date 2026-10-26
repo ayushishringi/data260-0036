@@ -19,3 +19,7 @@ email-validator
 transformers
 torch
 mcp[cli]<2
+PyJWT
+langchain-ollama
+ruff
+pre-commit

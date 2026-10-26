@@ -43,13 +43,21 @@ class ModelClient:
         tools: Optional[list[dict[str, Any]]] = None,
         temperature: float = 0.2,
         format: Optional[str | dict[str, Any]] = None,
+        seed: Optional[int] = None,
+        think: bool = False,
     ) -> CompletionResult:
+        # think=True makes Ollama return reasoning in a separate field; with Ollama >= 0.40,
+        # think=False can leave qwen3's reasoning (untagged) inside the reply text.
         payload: dict[str, Any] = {
             "model": self.model,
             "messages": messages,
             "stream": False,
-            "think": False,
-            "options": {"temperature": temperature, "num_ctx": DEFAULT_NUM_CTX, "seed": DEFAULT_SEED},
+            "think": think,
+            "options": {
+                "temperature": temperature,
+                "num_ctx": DEFAULT_NUM_CTX,
+                "seed": DEFAULT_SEED if seed is None else seed,
+            },
         }
         if tools:
             payload["tools"] = tools

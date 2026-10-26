@@ -1,8 +1,8 @@
 import { configureStore, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-import { API_BASE } from "./api";
+import { API_BASE, authHeaders } from "./api";
 const API = API_BASE;
-const request = (config) => axios({ ...config, baseURL: API, withCredentials: true });
+const request = (config) => axios({ ...config, baseURL: API, headers: { ...authHeaders(), ...config.headers } });
 const failure = (error) => error.response?.data?.detail || error.message;
 export const fetchReports = createAsyncThunk("reports/fetch", async (_, { rejectWithValue }) => { try { return (await request({ url: "/api/reports" })).data; } catch (e) { return rejectWithValue(failure(e)); } });
 export const createReport = createAsyncThunk("reports/create", async (payload, { rejectWithValue }) => { try { return (await request({ method: "post", url: "/api/reports", data: payload })).data; } catch (e) { return rejectWithValue(failure(e)); } });

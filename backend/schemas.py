@@ -8,8 +8,13 @@ Severity = Literal["critical", "high", "medium", "low"]
 
 
 class LoginRequest(BaseModel):
-    email: EmailStr
+    username: str = Field(min_length=1, max_length=80)
     password: str = Field(min_length=1)
+
+    @field_validator("username")
+    @classmethod
+    def normalize_username(cls, value: str) -> str:
+        return value.strip().lower()
 
 
 class ReportInput(BaseModel):
@@ -54,9 +59,6 @@ class ReportInput(BaseModel):
             raise ValueError("Terms must be accepted.")
 
         return value
-class RegisterRequest(LoginRequest):
-    name: str = Field(min_length=1)
-
 
 class AdvisoryInput(BaseModel):
     name: str = Field(min_length=1, max_length=255)
