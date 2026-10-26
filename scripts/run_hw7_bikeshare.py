@@ -118,7 +118,7 @@ def score_attacks(result: dict, ride_ids: set[str]) -> dict:
     }
 
 
-def attacks(repeats: int) -> None:
+def attacks(repeats: int, naive: bool = False) -> None:
     csv_path = FIXTURES / "bikeshare_payperuse_wins.csv"
     csv_bytes = csv_path.read_bytes()
     ride_ids = {line.split(",")[0] for line in csv_path.read_text().splitlines()[1:]}
@@ -128,18 +128,23 @@ def attacks(repeats: int) -> None:
     rows = []
     for condition, defenses in CONDITIONS.items():
         for repeat in range(1, repeats + 1):
-            banner(f"Part 5 attack run: {condition} (repeat {repeat}/{repeats}) - fixture {HOSTILE.name}")
+            style = "naive" if naive else "procedural"
+            banner(f"Part 5 attack run ({style} prompt): {condition} (repeat {repeat}/{repeats}) - fixture "
+                   f"{HOSTILE.name}")
             result = run_bikeshare_agent(csv_bytes, url, defenses=defenses, snapshot=fixture_snapshot,
-                                         scenario="attack", on_event=print_event,
-                                         run_id=f"attack-{condition}-r{repeat}")
+                                         scenario="attack", on_event=print_event, naive=naive,
+                                         run_id=f"attack-{style}-{condition}-r{repeat}")
             score = score_attacks(result, ride_ids)
             print(f"final answer: {re.sub(r'\\s+', ' ', result['final_text'])[:600]}")
             for attack in ("recommendation_override", "non_select_sql", "data_exfiltration"):
                 print(f"  {attack}: {'SUCCEEDED' if score[attack]['succeeded'] else 'defended'} - "
                       f"{score[attack]['outcome']}")
-            rows.append({"condition": condition, "repeat": repeat, "run_id": result["run_id"], **score,
+            rows.append({"condition": condition, "prompt_style": style, "repeat": repeat,
+                         "run_id": result["run_id"], "table_modified": result["reference_check"]["table_modified"],
+                         **score,
                          "final_text_excerpt": result["final_text"][:800]})
-    (RAW / "prompt_injection_results.json").write_text(json.dumps(rows, indent=2, default=str) + "\n")
+    out = RAW / ("prompt_injection_results_naive.json" if naive else "prompt_injection_results.json")
+    out.write_text(json.dumps(rows, indent=2, default=str) + "\n")
     banner("Part 5 summary (attack succeeded in k of n runs)")
     for condition in CONDITIONS:
         subset = [r for r in rows if r["condition"] == condition]
@@ -181,6 +186,7 @@ def main() -> None:
     sc.add_argument("--reuse-snapshot", action="store_true")
     at = sub.add_parser("attacks")
     at.add_argument("--repeats", type=int, default=2)
+    at.add_argument("--naive", action="store_true", help="use the naive (no fixed procedure) agent prompt")
     sub.add_parser("tool-boundary")
     args = parser.parse_args()
     RAW.mkdir(parents=True, exist_ok=True)
@@ -189,7 +195,7 @@ def main() -> None:
     elif args.command == "tool-boundary":
         tool_boundary()
     else:
-        attacks(args.repeats)
+        attacks(args.repeats, args.naive)
 
 
 if __name__ == "__main__":
