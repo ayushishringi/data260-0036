@@ -1,0 +1,130 @@
+{
+  "run1_no_key": {
+    "processed": 20,
+    "per_entity": {
+      "openssl": {
+        "processed_seq_order": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "partitions": [
+          0,
+          1
+        ]
+      },
+      "lodash": {
+        "processed_seq_order": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "partitions": [
+          0,
+          1
+        ]
+      },
+      "log4j-core": {
+        "processed_seq_order": [
+          1,
+          2,
+          4,
+          3
+        ],
+        "partitions": [
+          0,
+          1
+        ]
+      },
+      "urllib3": {
+        "processed_seq_order": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "partitions": [
+          0,
+          1
+        ]
+      }
+    },
+    "violations": [
+      {
+        "entity": "log4j-core",
+        "processed_seq_order": [
+          1,
+          2,
+          4,
+          3
+        ],
+        "partitions": [
+          0,
+          1
+        ]
+      }
+    ],
+    "csv": "reports/hw08/raw/ordering_run1_no_key.csv"
+  },
+  "run2_key_entity": {
+    "processed": 20,
+    "per_entity": {
+      "openssl": {
+        "processed_seq_order": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "partitions": [
+          1
+        ]
+      },
+      "lodash": {
+        "processed_seq_order": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "partitions": [
+          0
+        ]
+      },
+      "log4j-core": {
+        "processed_seq_order": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "partitions": [
+          0
+        ]
+      },
+      "urllib3": {
+        "processed_seq_order": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "partitions": [
+          1
+        ]
+      }
+    },
+    "violations": [],
+    "csv": "reports/hw08/raw/ordering_run2_key_entity.csv"
+  }
+}

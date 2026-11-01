@@ -1,0 +1,263 @@
+DATA-260 HW8 RUN LOG
+SID4=0036 PORT_BASE=8036 PREFIX=s0036 SEED=36 VERIFY_SEED=260036 DOMAIN_ID=4
+Hardware: MacBook Pro, Apple M5 Pro, 24 GB | Kafka: apache/kafka:3.9.0 (KRaft) in Docker | Model: Ollama qwen3:4b
+
+=== 2026-10-30 07:40:07 PDT $ make kafka-topics
+Topic: s0036_final	TopicId: hspXL4MtRAqKP55wiV2eiQ	PartitionCount: 1	ReplicationFactor: 1	Configs: 
+Topic: s0036_report_responses	TopicId: 3FGwD5s2SAmHT85_ypiyCw	PartitionCount: 1	ReplicationFactor: 1	Configs: 
+Topic: s0036_drafts	TopicId: t-RZKRc4TrKoMwyxm64Wyw	PartitionCount: 1	ReplicationFactor: 1	Configs: 
+Topic: s0036_dead_letter	TopicId: XWu6IeeRRWm1LDsE2q5Fag	PartitionCount: 1	ReplicationFactor: 1	Configs: 
+Topic: s0036_inbox	TopicId: 9tZ_M_HIQ6G5fRsNrsE9Mw	PartitionCount: 1	ReplicationFactor: 1	Configs: 
+Topic: s0036_tasks	TopicId: WhT1iS53S_644EL4FDMHJA	PartitionCount: 2	ReplicationFactor: 1	Configs: 
+Topic: s0036_report_requests	TopicId: NtoMCtY-R-6bBJDI_XbpXg	PartitionCount: 1	ReplicationFactor: 1	Configs: 
+
+=== 2026-10-30 07:40:08 PDT $ .venv/bin/python homework_demo.py
+HW8 demo - request topic s0036_report_requests, response topic s0036_report_responses
+
+====================================================================================================
+STEP A: CREATE_REPORT
+====================================================================================================
+[step] created correlation_id = e89f1246-07d1-4e5c-baab-ae4d00f02bed
+2026-10-30T07:40:08.165-07:00 [client] SENT request topic="s0036_report_requests" correlation_id="e89f1246-07d1-4e5c-baab-ae4d00f02bed" message={"correlation_id": "e89f1246-07d1-4e5c-baab-ae4d00f02bed", "reply_to": "s0036_report_responses", "operation": "CREATE_REPORT", "data": {"package_name": "lodash", "affected_version": "< 4.17.21", "severity": "high", "description": "Prototype pollution through crafted object keys in merge and set helpers.", "submitter_email": "ayushi.shringi@sjsu.edu"}}
+2026-10-30T07:40:09.162-07:00 [client] request acknowledged by broker topic="s0036_report_requests" correlation_id="e89f1246-07d1-4e5c-baab-ae4d00f02bed" partition=0 offset=16
+2026-10-30T07:40:09.167-07:00 [client] RECEIVED response topic="s0036_report_responses" correlation_id="e89f1246-07d1-4e5c-baab-ae4d00f02bed" correlation_id_preserved=true response={"correlation_id": "e89f1246-07d1-4e5c-baab-ae4d00f02bed", "operation": "CREATE_REPORT", "success": true, "report_id": "81be9634-7827-4ddd-8af2-c27f9ca85eee", "message": "Report created"} partition=0 offset=16
+
+--- full sequence for correlation_id e89f1246-07d1-4e5c-baab-ae4d00f02bed (client + worker, time-ordered) ---
+1 SEND    | 2026-10-30T07:40:08.165-07:00 [client] SENT request topic="s0036_report_requests" correlation_id="e89f1246-07d1-4e5c-baab-ae4d00f02bed" message={"correlation_id": "e89f1246-07d1-4e5c-baab-ae4d00f02bed", "reply_to": "s0036_report_responses", "operation": "CREATE_REPORT", "data": {"package_name": "lodash", "affected_version": "< 4.17.21", "severity": "high", "description": "Prototype pollution throu
+          | 2026-10-30T07:40:09.162-07:00 [client] request acknowledged by broker topic="s0036_report_requests" correlation_id="e89f1246-07d1-4e5c-baab-ae4d00f02bed" partition=0 offset=16
+2 RECEIVE | 2026-10-30T07:40:09.163-07:00 [worker] RECEIVED request topic="s0036_report_requests" partition=0 offset=16 correlation_id="e89f1246-07d1-4e5c-baab-ae4d00f02bed" operation="CREATE_REPORT" data={"package_name": "lodash", "affected_version": "< 4.17.21", "severity": "high", "description": "Prototype pollution through crafted object keys in merge and set helpers.", "submitter_email": "ayushi.shringi@
+3 PROCESS | 2026-10-30T07:40:09.164-07:00 [worker] PROCESSED request correlation_id="e89f1246-07d1-4e5c-baab-ae4d00f02bed" success=true result="81be9634-7827-4ddd-8af2-c27f9ca85eee"
+4 REPLY   | 2026-10-30T07:40:09.164-07:00 [worker] SENT response topic="s0036_report_responses" correlation_id="e89f1246-07d1-4e5c-baab-ae4d00f02bed" response={"correlation_id": "e89f1246-07d1-4e5c-baab-ae4d00f02bed", "operation": "CREATE_REPORT", "success": true, "report_id": "81be9634-7827-4ddd-8af2-c27f9ca85eee", "message": "Report created"}
+          | 2026-10-30T07:40:09.165-07:00 [worker] response acknowledged by broker topic="s0036_report_responses" correlation_id="e89f1246-07d1-4e5c-baab-ae4d00f02bed" partition=0 offset=16
+5 CLIENT  | 2026-10-30T07:40:09.167-07:00 [client] RECEIVED response topic="s0036_report_responses" correlation_id="e89f1246-07d1-4e5c-baab-ae4d00f02bed" correlation_id_preserved=true response={"correlation_id": "e89f1246-07d1-4e5c-baab-ae4d00f02bed", "operation": "CREATE_REPORT", "success": true, "report_id": "81be9634-7827-4ddd-8af2-c27f9ca85eee", "message": "Report created"} partition=0 offset=16
+
+response: {
+  "correlation_id": "e89f1246-07d1-4e5c-baab-ae4d00f02bed",
+  "operation": "CREATE_REPORT",
+  "success": true,
+  "report_id": "81be9634-7827-4ddd-8af2-c27f9ca85eee",
+  "message": "Report created"
+}
+correlation_id preserved end to end: True
+
+[step] extracted report_id from the CREATE_REPORT response: 81be9634-7827-4ddd-8af2-c27f9ca85eee
+
+====================================================================================================
+STEP B: GET_REPORT report_id=81be9634-7827-4ddd-8af2-c27f9ca85eee
+====================================================================================================
+[step] created correlation_id = 6c76fed3-b96c-42be-a457-c64a4c3bfe93
+2026-10-30T07:40:09.705-07:00 [client] SENT request topic="s0036_report_requests" correlation_id="6c76fed3-b96c-42be-a457-c64a4c3bfe93" message={"correlation_id": "6c76fed3-b96c-42be-a457-c64a4c3bfe93", "reply_to": "s0036_report_responses", "operation": "GET_REPORT", "data": {"report_id": "81be9634-7827-4ddd-8af2-c27f9ca85eee"}}
+2026-10-30T07:40:09.708-07:00 [client] request acknowledged by broker topic="s0036_report_requests" correlation_id="6c76fed3-b96c-42be-a457-c64a4c3bfe93" partition=0 offset=17
+2026-10-30T07:40:09.712-07:00 [client] RECEIVED response topic="s0036_report_responses" correlation_id="6c76fed3-b96c-42be-a457-c64a4c3bfe93" correlation_id_preserved=true response={"correlation_id": "6c76fed3-b96c-42be-a457-c64a4c3bfe93", "operation": "GET_REPORT", "success": true, "report": {"report_id": "81be9634-7827-4ddd-8af2-c27f9ca85eee", "package_name": "lodash", "affected_version": "< 4.17.21", "severity": "high", "description": "Prototype pollution through crafted object keys in merge and set helpers.", "submitter_email": "ayushi.shringi@sjsu.edu"}} partition=0 offset=17
+
+--- full sequence for correlation_id 6c76fed3-b96c-42be-a457-c64a4c3bfe93 (client + worker, time-ordered) ---
+1 SEND    | 2026-10-30T07:40:09.705-07:00 [client] SENT request topic="s0036_report_requests" correlation_id="6c76fed3-b96c-42be-a457-c64a4c3bfe93" message={"correlation_id": "6c76fed3-b96c-42be-a457-c64a4c3bfe93", "reply_to": "s0036_report_responses", "operation": "GET_REPORT", "data": {"report_id": "81be9634-7827-4ddd-8af2-c27f9ca85eee"}}
+2 RECEIVE | 2026-10-30T07:40:09.708-07:00 [worker] RECEIVED request topic="s0036_report_requests" partition=0 offset=17 correlation_id="6c76fed3-b96c-42be-a457-c64a4c3bfe93" operation="GET_REPORT" data={"report_id": "81be9634-7827-4ddd-8af2-c27f9ca85eee"}
+          | 2026-10-30T07:40:09.708-07:00 [client] request acknowledged by broker topic="s0036_report_requests" correlation_id="6c76fed3-b96c-42be-a457-c64a4c3bfe93" partition=0 offset=17
+3 PROCESS | 2026-10-30T07:40:09.709-07:00 [worker] PROCESSED request correlation_id="6c76fed3-b96c-42be-a457-c64a4c3bfe93" success=true result="report returned"
+4 REPLY   | 2026-10-30T07:40:09.709-07:00 [worker] SENT response topic="s0036_report_responses" correlation_id="6c76fed3-b96c-42be-a457-c64a4c3bfe93" response={"correlation_id": "6c76fed3-b96c-42be-a457-c64a4c3bfe93", "operation": "GET_REPORT", "success": true, "report": {"report_id": "81be9634-7827-4ddd-8af2-c27f9ca85eee", "package_name": "lodash", "affected_version": "< 4.17.21", "severity": "high", "descri
+          | 2026-10-30T07:40:09.710-07:00 [worker] response acknowledged by broker topic="s0036_report_responses" correlation_id="6c76fed3-b96c-42be-a457-c64a4c3bfe93" partition=0 offset=17
+5 CLIENT  | 2026-10-30T07:40:09.712-07:00 [client] RECEIVED response topic="s0036_report_responses" correlation_id="6c76fed3-b96c-42be-a457-c64a4c3bfe93" correlation_id_preserved=true response={"correlation_id": "6c76fed3-b96c-42be-a457-c64a4c3bfe93", "operation": "GET_REPORT", "success": true, "report": {"report_id": "81be9634-7827-4ddd-8af2-c27f9ca85eee", "package_name": "lodash", "affected_version": "< 4.1
+
+response: {
+  "correlation_id": "6c76fed3-b96c-42be-a457-c64a4c3bfe93",
+  "operation": "GET_REPORT",
+  "success": true,
+  "report": {
+    "report_id": "81be9634-7827-4ddd-8af2-c27f9ca85eee",
+    "package_name": "lodash",
+    "affected_version": "< 4.17.21",
+    "severity": "high",
+    "description": "Prototype pollution through crafted object keys in merge and set helpers.",
+    "submitter_email": "ayushi.shringi@sjsu.edu"
+  }
+}
+correlation_id preserved end to end: True
+
+====================================================================================================
+RETRIEVED REPORT
+====================================================================================================
+{
+  "report_id": "81be9634-7827-4ddd-8af2-c27f9ca85eee",
+  "package_name": "lodash",
+  "affected_version": "< 4.17.21",
+  "severity": "high",
+  "description": "Prototype pollution through crafted object keys in merge and set helpers.",
+  "submitter_email": "ayushi.shringi@sjsu.edu"
+}
+report_id matches the created one: True
+
+=== 2026-10-30 07:40:18 PDT $ make experiments-hw08   (scripts/run_hw8_failures.py all)
+
+====================================================================================================
+Part 2: one complete message journey inbox -> planner -> writer -> reviewer -> final (local model)  (2026-10-30T07:40:18)
+====================================================================================================
+2026-10-30T07:40:18.323-07:00 [orchestrator] started planner (pid 79452) env={'HW8_LLM': '1', 'HW8_GROUP_SUFFIX': '_journey_7024'}
+2026-10-30T07:40:18.325-07:00 [orchestrator] started writer (pid 79453) env={'HW8_LLM': '1', 'HW8_GROUP_SUFFIX': '_journey_7024'}
+2026-10-30T07:40:18.331-07:00 [orchestrator] started reviewer (pid 79454) env={'HW8_LLM': '1', 'HW8_GROUP_SUFFIX': '_journey_7024'}
+2026-10-30T07:40:18.658-07:00 [orchestrator] SENT question to s0036_inbox correlation_id=b074e644-966e-4f3d-a7bf-dc3d00b19496
+
+--- journey log lines (all stages, time-ordered) ---
+2026-10-30T07:40:18.661-07:00 [planner] RECEIVED topic="s0036_inbox" correlation_id="b074e644-966e-4f3d-a7bf-dc3d00b19496" partition=0 offset=6 kind="question"
+2026-10-30T07:40:46.046-07:00 [planner] SENT topic="s0036_tasks" correlation_id="b074e644-966e-4f3d-a7bf-dc3d00b19496" plan=["Identify vulnerable transitive dependency version.", "Determine fix from CVE details.", "Update direct dependency and re-scan."]
+2026-10-30T07:40:46.496-07:00 [writer] RECEIVED topic="s0036_tasks" correlation_id="b074e644-966e-4f3d-a7bf-dc3d00b19496" partition=1 offset=23 kind="task"
+2026-10-30T07:40:46.499-07:00 [planner] COMMITTED offset after processing correlation_id="b074e644-966e-4f3d-a7bf-dc3d00b19496" partition=0 offset=6
+2026-10-30T07:40:51.564-07:00 [writer] SENT topic="s0036_drafts" correlation_id="b074e644-966e-4f3d-a7bf-dc3d00b19496" plan=["Identify vulnerable transitive dependency version.", "Determine fix from CVE details.", "Update direct dependency and re-scan."] draft="When a critical CVE affects a transiti
+2026-10-30T07:40:52.513-07:00 [reviewer] RECEIVED topic="s0036_drafts" correlation_id="b074e644-966e-4f3d-a7bf-dc3d00b19496" partition=0 offset=7 kind="draft"
+2026-10-30T07:40:52.515-07:00 [writer] COMMITTED offset after processing correlation_id="b074e644-966e-4f3d-a7bf-dc3d00b19496" partition=1 offset=23
+2026-10-30T07:40:52.517-07:00 [reviewer] SENT topic="s0036_final" correlation_id="b074e644-966e-4f3d-a7bf-dc3d00b19496" status="approved" answer="When a critical CVE affects a transitive dependency, teams must act urgently. First, **identify the vulnerable transitive dependency version** using tools
+2026-10-30T07:40:53.519-07:00 [reviewer] COMMITTED offset after processing correlation_id="b074e644-966e-4f3d-a7bf-dc3d00b19496" partition=0 offset=7
+
+--- final JSON message on s0036_final ---
+{
+  "correlation_id": "b074e644-966e-4f3d-a7bf-dc3d00b19496",
+  "status": "approved",
+  "answer": "When a critical CVE affects a transitive dependency, teams must act urgently. First, **identify the vulnerable transitive dependency version** using tools like `npm audit`, `mvn dependency:tree`, or `pip check` to pinpoint the exact package and its version in the dependency chain. Next, **determine the fix** by reviewing the CVE details (e.g., on NVD) to find the required patched version or security update. Crucially, **update the direct dependency** (not just the transitive one) to the fixed version\u2014this breaks the vulnerable chain. Finally, **re-scan the entire dependency graph** post-update to ensure no new critical vulnerabilities were introduced. This targeted approach minimizes risk while maintaining security integrity. (148 words)",
+  "question": "How should a team respond to a critical CVE found in a transitive dependency?",
+  "review": {
+    "checks": {
+      "non_empty": true,
+      "length_ok": true,
+      "on_topic": true
+    },
+    "words": 106
+  },
+  "reviewed_at": "2026-10-30T07:40:52.517-07:00"
+}
+2026-10-30T07:40:55.025-07:00 [orchestrator] wrote reports/hw08/raw/pipeline_journey.json
+
+====================================================================================================
+Part 3 duplicate delivery - before_fix: HW8_IDEMPOTENT=0, replay the same correlation_id  (2026-10-30T07:40:57)
+====================================================================================================
+2026-10-30T07:40:57.599-07:00 [orchestrator] started planner (pid 79656) env={'HW8_LLM': '0', 'HW8_IDEMPOTENT': '0', 'HW8_GROUP_SUFFIX': '_dup_before_fix_5d15'}
+2026-10-30T07:40:57.603-07:00 [orchestrator] started writer (pid 79657) env={'HW8_LLM': '0', 'HW8_IDEMPOTENT': '0', 'HW8_GROUP_SUFFIX': '_dup_before_fix_5d15'}
+2026-10-30T07:40:57.606-07:00 [orchestrator] started reviewer (pid 79658) env={'HW8_LLM': '0', 'HW8_IDEMPOTENT': '0', 'HW8_GROUP_SUFFIX': '_dup_before_fix_5d15'}
+2026-10-30T07:40:57.922-07:00 [orchestrator] SENT original to s0036_inbox correlation_id=773f4cfb-02fd-45ef-b923-fd6ea4042847
+2026-10-30T07:40:59.743-07:00 [orchestrator] REPLAY: same message, same correlation_id=773f4cfb-02fd-45ef-b923-fd6ea4042847
+2026-10-30T07:41:06.738-07:00 [orchestrator] before_fix: {'inbox_messages_sent': 2, 'tasks_produced': 2, 'final_messages': 2, 'duplicates_skipped': 0}
+
+====================================================================================================
+Part 3 duplicate delivery - after_fix: HW8_IDEMPOTENT=1, replay the same correlation_id  (2026-10-30T07:41:08)
+====================================================================================================
+2026-10-30T07:41:08.784-07:00 [orchestrator] started planner (pid 79720) env={'HW8_LLM': '0', 'HW8_IDEMPOTENT': '1', 'HW8_GROUP_SUFFIX': '_dup_after_fix_e5bf'}
+2026-10-30T07:41:08.788-07:00 [orchestrator] started writer (pid 79721) env={'HW8_LLM': '0', 'HW8_IDEMPOTENT': '1', 'HW8_GROUP_SUFFIX': '_dup_after_fix_e5bf'}
+2026-10-30T07:41:08.791-07:00 [orchestrator] started reviewer (pid 79722) env={'HW8_LLM': '0', 'HW8_IDEMPOTENT': '1', 'HW8_GROUP_SUFFIX': '_dup_after_fix_e5bf'}
+2026-10-30T07:41:09.106-07:00 [orchestrator] SENT original to s0036_inbox correlation_id=9f4da386-b09b-4afe-bd22-dbcb776514db
+2026-10-30T07:41:10.932-07:00 [orchestrator] REPLAY: same message, same correlation_id=9f4da386-b09b-4afe-bd22-dbcb776514db
+2026-10-30T07:41:17.908-07:00 [orchestrator] after_fix: {'inbox_messages_sent': 2, 'tasks_produced': 1, 'final_messages': 1, 'duplicates_skipped': 1}
+2026-10-30T07:41:19.944-07:00 [orchestrator] wrote reports/hw08/raw/failure_duplicate.json
+
+====================================================================================================
+Part 3 consumer death - before_fix: HW8_COMMIT=before; SIGKILL Writer mid-processing, restart it  (2026-10-30T07:41:19)
+====================================================================================================
+2026-10-30T07:41:19.947-07:00 [orchestrator] started writer-run1 (pid 79765) env={'HW8_LLM': '0', 'HW8_COMMIT': 'before', 'HW8_SLOW_SECONDS': '20', 'HW8_GROUP_SUFFIX': '_death_before_fix_1821'}
+2026-10-30T07:41:20.257-07:00 [orchestrator] SENT task correlation_id=84f0162a-9248-4541-b347-691f94f20328 to s0036_tasks partition=0 offset=28
+2026-10-30T07:41:22.567-07:00 [orchestrator] SIGKILL writer-run1 (pid 79765) -> exit code -9
+2026-10-30T07:41:22.573-07:00 [orchestrator] committed offsets for s0036_writers_death_before_fix_1821 after the kill: {0: 29, 1: 27} (task is at offset 28)
+2026-10-30T07:41:22.578-07:00 [orchestrator] started writer-run2 (pid 79777) env={'HW8_LLM': '0', 'HW8_COMMIT': 'before', 'HW8_GROUP_SUFFIX': '_death_before_fix_1821'}
+2026-10-30T07:42:04.552-07:00 [orchestrator] before_fix: redelivered=False drafts_produced=0 committed_after_kill={0: 29, 1: 27} committed_at_end={0: 29, 1: 27}
+
+====================================================================================================
+Part 3 consumer death - after_fix: HW8_COMMIT=after; SIGKILL Writer mid-processing, restart it  (2026-10-30T07:42:04)
+====================================================================================================
+2026-10-30T07:42:04.844-07:00 [orchestrator] started writer-run1 (pid 79917) env={'HW8_LLM': '0', 'HW8_COMMIT': 'after', 'HW8_SLOW_SECONDS': '20', 'HW8_GROUP_SUFFIX': '_death_after_fix_f1a2'}
+2026-10-30T07:42:05.161-07:00 [orchestrator] SENT task correlation_id=83bac9aa-c659-40eb-a781-ef7f91cad231 to s0036_tasks partition=0 offset=29
+2026-10-30T07:42:07.473-07:00 [orchestrator] SIGKILL writer-run1 (pid 79917) -> exit code -9
+2026-10-30T07:42:07.479-07:00 [orchestrator] committed offsets for s0036_writers_death_after_fix_f1a2 after the kill: {0: 29, 1: 27} (task is at offset 29)
+2026-10-30T07:42:07.483-07:00 [orchestrator] started writer-run2 (pid 79938) env={'HW8_LLM': '0', 'HW8_COMMIT': 'after', 'HW8_GROUP_SUFFIX': '_death_after_fix_f1a2'}
+2026-10-30T07:42:19.108-07:00 [orchestrator] after_fix: redelivered=True drafts_produced=1 committed_after_kill={0: 29, 1: 27} committed_at_end={0: 30, 1: 27}
+2026-10-30T07:42:19.665-07:00 [orchestrator] wrote reports/hw08/raw/failure_consumer_death.json
+
+====================================================================================================
+Part 3 poison message - before_fix: HW8_RETRY=unbounded; a bad task, then a good task, same partition  (2026-10-30T07:42:19)
+====================================================================================================
+2026-10-30T07:42:19.671-07:00 [orchestrator] started writer (pid 79986) env={'HW8_LLM': '0', 'HW8_RETRY': 'unbounded', 'HW8_MAX_RETRIES': '3', 'HW8_GROUP_SUFFIX': '_poison_before_fix_d6e7'}
+2026-10-30T07:42:19.992-07:00 [orchestrator] SENT bad task poison-fd6feef6 then good task 69ad183b-2758-4f5b-903e-97797b58f780 with key=poison-demo
+2026-10-30T07:42:47.658-07:00 [orchestrator] before_fix: attempts=28 dead_letter=0 good_processed=False
+
+====================================================================================================
+Part 3 poison message - after_fix: HW8_RETRY=bounded; a bad task, then a good task, same partition  (2026-10-30T07:42:55)
+====================================================================================================
+2026-10-30T07:42:55.668-07:00 [orchestrator] started writer (pid 80113) env={'HW8_LLM': '0', 'HW8_RETRY': 'bounded', 'HW8_MAX_RETRIES': '3', 'HW8_GROUP_SUFFIX': '_poison_after_fix_ee71'}
+2026-10-30T07:42:55.981-07:00 [orchestrator] SENT bad task poison-5c8bb933 then good task 4b1d39bc-c037-4ee1-8270-a38e3ee00266 with key=poison-demo
+2026-10-30T07:43:00.287-07:00 [orchestrator] after_fix: attempts=3 dead_letter=1 good_processed=True
+2026-10-30T07:43:00.841-07:00 [orchestrator] wrote reports/hw08/raw/failure_poison.json
+2026-10-30T07:43:00.843-07:00 [orchestrator] wrote reports/hw08/raw/ordering_messages_verify_seed.json
+
+====================================================================================================
+Part 3 ordering - run1_no_key: 20 messages, s0036_tasks has 2 partitions, 2 Writers in one group  (2026-10-30T07:43:00)
+====================================================================================================
+2026-10-30T07:43:00.847-07:00 [orchestrator] started writer-A (pid 80150) env={'HW8_LLM': '0', 'HW8_GROUP_SUFFIX': '_order_run1_no_key_b3be'}
+2026-10-30T07:43:00.851-07:00 [orchestrator] started writer-B (pid 80151) env={'HW8_LLM': '0', 'HW8_GROUP_SUFFIX': '_order_run1_no_key_b3be'}
+2026-10-30T07:43:05.160-07:00 [orchestrator] writer-A assignment: {"0":
+2026-10-30T07:43:05.160-07:00 [orchestrator] writer-B assignment: {"1":
+2026-10-30T07:43:05.184-07:00 [orchestrator] SENT 20 messages (no key)
+
+order writer    partition entity      seq sent_index
+    1 writer-B          1 log4j-core    1 2
+    2 writer-A          0 openssl       1 0
+    3 writer-A          0 lodash        1 1
+    4 writer-B          1 urllib3       1 3
+    5 writer-A          0 lodash        2 5
+    6 writer-B          1 urllib3       2 4
+    7 writer-A          0 lodash        3 6
+    8 writer-A          0 lodash        4 7
+    9 writer-B          1 lodash        5 9
+   10 writer-A          0 openssl       2 8
+   11 writer-B          1 log4j-core    2 10
+   12 writer-B          1 lodash        6 12
+   13 writer-A          0 openssl       3 11
+   14 writer-A          0 urllib3       3 15
+   15 writer-B          1 openssl       4 13
+   16 writer-A          0 urllib3       4 17
+   17 writer-A          0 openssl       5 18
+   18 writer-B          1 lodash        7 14
+   19 writer-A          0 log4j-core    4 19
+   20 writer-B          1 log4j-core    3 16
+
+per entity (processing order of seq, partitions used):
+  openssl     seq=[1, 2, 3, 4, 5] partitions=[0, 1] in order
+  lodash      seq=[1, 2, 3, 4, 5, 6, 7] partitions=[0, 1] in order
+  log4j-core  seq=[1, 2, 4, 3] partitions=[0, 1] OUT OF ORDER
+  urllib3     seq=[1, 2, 3, 4] partitions=[0, 1] in order
+2026-10-30T07:43:10.222-07:00 [orchestrator] run1_no_key: processed=20 entities_out_of_order=1 -> wrote ordering_run1_no_key.csv
+
+====================================================================================================
+Part 3 ordering - run2_key_entity: 20 messages, s0036_tasks has 2 partitions, 2 Writers in one group  (2026-10-30T07:43:10)
+====================================================================================================
+2026-10-30T07:43:10.978-07:00 [orchestrator] started writer-A (pid 80201) env={'HW8_LLM': '0', 'HW8_GROUP_SUFFIX': '_order_run2_key_entity_726c'}
+2026-10-30T07:43:10.980-07:00 [orchestrator] started writer-B (pid 80202) env={'HW8_LLM': '0', 'HW8_GROUP_SUFFIX': '_order_run2_key_entity_726c'}
+2026-10-30T07:43:15.288-07:00 [orchestrator] writer-A assignment: {"1":
+2026-10-30T07:43:15.288-07:00 [orchestrator] writer-B assignment: {"0":
+2026-10-30T07:43:15.311-07:00 [orchestrator] SENT 20 messages (key=entity)
+
+order writer    partition entity      seq sent_index
+    1 writer-B          0 lodash        1 1
+    2 writer-A          1 openssl       1 0
+    3 writer-B          0 log4j-core    1 2
+    4 writer-A          1 urllib3       1 3
+    5 writer-B          0 lodash        2 5
+    6 writer-A          1 urllib3       2 4
+    7 writer-B          0 lodash        3 6
+    8 writer-B          0 lodash        4 7
+    9 writer-A          1 openssl       2 8
+   10 writer-B          0 lodash        5 9
+   11 writer-A          1 openssl       3 11
+   12 writer-B          0 log4j-core    2 10
+   13 writer-A          1 openssl       4 13
+   14 writer-A          1 urllib3       3 15
+   15 writer-B          0 lodash        6 12
+   16 writer-A          1 urllib3       4 17
+   17 writer-B          0 lodash        7 14
+   18 writer-A          1 openssl       5 18
+   19 writer-B          0 log4j-core    3 16
+   20 writer-B          0 log4j-core    4 19
+
+per entity (processing order of seq, partitions used):
+  openssl     seq=[1, 2, 3, 4, 5] partitions=[1] in order
+  lodash      seq=[1, 2, 3, 4, 5, 6, 7] partitions=[0] in order
+  log4j-core  seq=[1, 2, 3, 4] partitions=[0] in order
+  urllib3     seq=[1, 2, 3, 4] partitions=[1] in order
+2026-10-30T07:43:20.843-07:00 [orchestrator] run2_key_entity: processed=20 entities_out_of_order=0 -> wrote ordering_run2_key_entity.csv
+2026-10-30T07:43:22.594-07:00 [orchestrator] wrote reports/hw08/raw/failure_ordering.json
+=== 2026-10-30 07:43:22 PDT experiments done

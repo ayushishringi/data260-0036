@@ -1,0 +1,34 @@
+2026-10-30T07:43:11.059-07:00 [writer#writer-B] Consumer is ready and listening... topic="s0036_tasks" group="s0036_writers_order_run2_key_entity_726c" partitions={"0": 41} idempotent=true commit="after" retry="bounded" max_retries=3
+2026-10-30T07:43:15.297-07:00 [writer#writer-B] RECEIVED topic="s0036_tasks" correlation_id="probe-260036-01" partition=0 offset=41 kind="ordering_probe"
+2026-10-30T07:43:15.418-07:00 [writer#writer-B] PROCESSED ordering probe probe_id="probe-260036-01" entity="lodash" seq=1 sent_index=1
+2026-10-30T07:43:15.422-07:00 [writer#writer-B] COMMITTED offset after processing correlation_id="probe-260036-01" partition=0 offset=41
+2026-10-30T07:43:15.422-07:00 [writer#writer-B] RECEIVED topic="s0036_tasks" correlation_id="probe-260036-02" partition=0 offset=42 kind="ordering_probe"
+2026-10-30T07:43:15.944-07:00 [writer#writer-B] PROCESSED ordering probe probe_id="probe-260036-02" entity="log4j-core" seq=1 sent_index=2
+2026-10-30T07:43:15.949-07:00 [writer#writer-B] COMMITTED offset after processing correlation_id="probe-260036-02" partition=0 offset=42
+2026-10-30T07:43:15.950-07:00 [writer#writer-B] RECEIVED topic="s0036_tasks" correlation_id="probe-260036-05" partition=0 offset=43 kind="ordering_probe"
+2026-10-30T07:43:16.331-07:00 [writer#writer-B] PROCESSED ordering probe probe_id="probe-260036-05" entity="lodash" seq=2 sent_index=5
+2026-10-30T07:43:16.335-07:00 [writer#writer-B] COMMITTED offset after processing correlation_id="probe-260036-05" partition=0 offset=43
+2026-10-30T07:43:16.336-07:00 [writer#writer-B] RECEIVED topic="s0036_tasks" correlation_id="probe-260036-06" partition=0 offset=44 kind="ordering_probe"
+2026-10-30T07:43:16.661-07:00 [writer#writer-B] PROCESSED ordering probe probe_id="probe-260036-06" entity="lodash" seq=3 sent_index=6
+2026-10-30T07:43:16.667-07:00 [writer#writer-B] COMMITTED offset after processing correlation_id="probe-260036-06" partition=0 offset=44
+2026-10-30T07:43:16.667-07:00 [writer#writer-B] RECEIVED topic="s0036_tasks" correlation_id="probe-260036-07" partition=0 offset=45 kind="ordering_probe"
+2026-10-30T07:43:16.777-07:00 [writer#writer-B] PROCESSED ordering probe probe_id="probe-260036-07" entity="lodash" seq=4 sent_index=7
+2026-10-30T07:43:16.781-07:00 [writer#writer-B] COMMITTED offset after processing correlation_id="probe-260036-07" partition=0 offset=45
+2026-10-30T07:43:16.781-07:00 [writer#writer-B] RECEIVED topic="s0036_tasks" correlation_id="probe-260036-09" partition=0 offset=46 kind="ordering_probe"
+2026-10-30T07:43:17.321-07:00 [writer#writer-B] PROCESSED ordering probe probe_id="probe-260036-09" entity="lodash" seq=5 sent_index=9
+2026-10-30T07:43:17.325-07:00 [writer#writer-B] COMMITTED offset after processing correlation_id="probe-260036-09" partition=0 offset=46
+2026-10-30T07:43:17.325-07:00 [writer#writer-B] RECEIVED topic="s0036_tasks" correlation_id="probe-260036-10" partition=0 offset=47 kind="ordering_probe"
+2026-10-30T07:43:17.743-07:00 [writer#writer-B] PROCESSED ordering probe probe_id="probe-260036-10" entity="log4j-core" seq=2 sent_index=10
+2026-10-30T07:43:17.749-07:00 [writer#writer-B] COMMITTED offset after processing correlation_id="probe-260036-10" partition=0 offset=47
+2026-10-30T07:43:17.750-07:00 [writer#writer-B] RECEIVED topic="s0036_tasks" correlation_id="probe-260036-12" partition=0 offset=48 kind="ordering_probe"
+2026-10-30T07:43:18.002-07:00 [writer#writer-B] PROCESSED ordering probe probe_id="probe-260036-12" entity="lodash" seq=6 sent_index=12
+2026-10-30T07:43:18.008-07:00 [writer#writer-B] COMMITTED offset after processing correlation_id="probe-260036-12" partition=0 offset=48
+2026-10-30T07:43:18.008-07:00 [writer#writer-B] RECEIVED topic="s0036_tasks" correlation_id="probe-260036-14" partition=0 offset=49 kind="ordering_probe"
+2026-10-30T07:43:18.494-07:00 [writer#writer-B] PROCESSED ordering probe probe_id="probe-260036-14" entity="lodash" seq=7 sent_index=14
+2026-10-30T07:43:18.499-07:00 [writer#writer-B] COMMITTED offset after processing correlation_id="probe-260036-14" partition=0 offset=49
+2026-10-30T07:43:18.499-07:00 [writer#writer-B] RECEIVED topic="s0036_tasks" correlation_id="probe-260036-16" partition=0 offset=50 kind="ordering_probe"
+2026-10-30T07:43:18.997-07:00 [writer#writer-B] PROCESSED ordering probe probe_id="probe-260036-16" entity="log4j-core" seq=3 sent_index=16
+2026-10-30T07:43:19.001-07:00 [writer#writer-B] COMMITTED offset after processing correlation_id="probe-260036-16" partition=0 offset=50
+2026-10-30T07:43:19.001-07:00 [writer#writer-B] RECEIVED topic="s0036_tasks" correlation_id="probe-260036-19" partition=0 offset=51 kind="ordering_probe"
+2026-10-30T07:43:19.523-07:00 [writer#writer-B] PROCESSED ordering probe probe_id="probe-260036-19" entity="log4j-core" seq=4 sent_index=19
+2026-10-30T07:43:19.526-07:00 [writer#writer-B] COMMITTED offset after processing correlation_id="probe-260036-19" partition=0 offset=51

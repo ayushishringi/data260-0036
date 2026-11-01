@@ -1,0 +1,1 @@
+2026-10-30T07:41:30.270-07:00 [writer#writer-run2] Consumer is ready and listening... topic="s0036_tasks" group="s0036_writers_death_before_fix_1821" partitions={"0": 29, "1": 27} idempotent=true commit="before" retry="bounded" max_retries=3

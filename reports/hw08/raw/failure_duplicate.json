@@ -1,0 +1,50 @@
+{
+  "before_fix": {
+    "correlation_id": "773f4cfb-02fd-45ef-b923-fd6ea4042847",
+    "inbox_messages_sent": 2,
+    "tasks_produced": 2,
+    "final_messages": 2,
+    "duplicates_skipped": 0,
+    "log": [
+      "2026-10-30T07:40:57.926-07:00 [planner] RECEIVED topic=\"s0036_inbox\" correlation_id=\"773f4cfb-02fd-45ef-b923-fd6ea4042847\" partition=0 offset=7 kind=\"question\"",
+      "2026-10-30T07:40:57.927-07:00 [planner] SENT topic=\"s0036_tasks\" correlation_id=\"773f4cfb-02fd-45ef-b923-fd6ea4042847\" plan=[\"Define the key terms in: What makes a transitive dependency vulnerability hard to patch?\", \"Explain the main risk with one concrete example\", \"Give two practical mitigation steps\"]",
+      "2026-10-30T07:40:58.688-07:00 [planner] COMMITTED offset after processing correlation_id=\"773f4cfb-02fd-45ef-b923-fd6ea4042847\" partition=0 offset=7",
+      "2026-10-30T07:40:59.745-07:00 [planner] RECEIVED topic=\"s0036_inbox\" correlation_id=\"773f4cfb-02fd-45ef-b923-fd6ea4042847\" partition=0 offset=8 kind=\"question\"",
+      "2026-10-30T07:40:59.745-07:00 [planner] SENT topic=\"s0036_tasks\" correlation_id=\"773f4cfb-02fd-45ef-b923-fd6ea4042847\" plan=[\"Define the key terms in: What makes a transitive dependency vulnerability hard to patch?\", \"Explain the main risk with one concrete example\", \"Give two practical mitigation steps\"]",
+      "2026-10-30T07:40:59.747-07:00 [planner] COMMITTED offset after processing correlation_id=\"773f4cfb-02fd-45ef-b923-fd6ea4042847\" partition=0 offset=8",
+      "2026-10-30T07:40:58.688-07:00 [writer] RECEIVED topic=\"s0036_tasks\" correlation_id=\"773f4cfb-02fd-45ef-b923-fd6ea4042847\" partition=1 offset=24 kind=\"task\"",
+      "2026-10-30T07:40:58.688-07:00 [writer] SENT topic=\"s0036_drafts\" correlation_id=\"773f4cfb-02fd-45ef-b923-fd6ea4042847\" plan=[\"Define the key terms in: What makes a transitive dependency vulnerability hard to patch?\", \"Explain the main risk with one concrete example\", \"Give two practical mitigation steps\"] draft=\"Answer to 'What makes a transitive dependency vulnerability hard to patch?': (1) Define the key terms in: What makes a transitive dependency vulnerability hard to patch?. (2) Explain the main risk with one concrete example. (3) Give two practical mitigation steps.\"",
+      "2026-10-30T07:40:59.694-07:00 [writer] COMMITTED offset after processing correlation_id=\"773f4cfb-02fd-45ef-b923-fd6ea4042847\" partition=1 offset=24",
+      "2026-10-30T07:40:59.747-07:00 [writer] RECEIVED topic=\"s0036_tasks\" correlation_id=\"773f4cfb-02fd-45ef-b923-fd6ea4042847\" partition=1 offset=25 kind=\"task\"",
+      "2026-10-30T07:40:59.747-07:00 [writer] SENT topic=\"s0036_drafts\" correlation_id=\"773f4cfb-02fd-45ef-b923-fd6ea4042847\" plan=[\"Define the key terms in: What makes a transitive dependency vulnerability hard to patch?\", \"Explain the main risk with one concrete example\", \"Give two practical mitigation steps\"] draft=\"Answer to 'What makes a transitive dependency vulnerability hard to patch?': (1) Define the key terms in: What makes a transitive dependency vulnerability hard to patch?. (2) Explain the main risk with one concrete example. (3) Give two practical mitigation steps.\"",
+      "2026-10-30T07:40:59.749-07:00 [writer] COMMITTED offset after processing correlation_id=\"773f4cfb-02fd-45ef-b923-fd6ea4042847\" partition=1 offset=25",
+      "2026-10-30T07:40:59.693-07:00 [reviewer] RECEIVED topic=\"s0036_drafts\" correlation_id=\"773f4cfb-02fd-45ef-b923-fd6ea4042847\" partition=0 offset=8 kind=\"draft\"",
+      "2026-10-30T07:40:59.693-07:00 [reviewer] SENT topic=\"s0036_final\" correlation_id=\"773f4cfb-02fd-45ef-b923-fd6ea4042847\" status=\"approved\" answer=\"Answer to 'What makes a transitive dependency vulnerability hard to patch?': (1) Define the key terms in: What makes a transitive dependency vulnerability hard to patch?. (2) Explain the main risk with one concrete example. (3) Give two practical mitigation steps.\"",
+      "2026-10-30T07:41:00.698-07:00 [reviewer] COMMITTED offset after processing correlation_id=\"773f4cfb-02fd-45ef-b923-fd6ea4042847\" partition=0 offset=8",
+      "2026-10-30T07:41:00.699-07:00 [reviewer] RECEIVED topic=\"s0036_drafts\" correlation_id=\"773f4cfb-02fd-45ef-b923-fd6ea4042847\" partition=0 offset=9 kind=\"draft\"",
+      "2026-10-30T07:41:00.699-07:00 [reviewer] SENT topic=\"s0036_final\" correlation_id=\"773f4cfb-02fd-45ef-b923-fd6ea4042847\" status=\"approved\" answer=\"Answer to 'What makes a transitive dependency vulnerability hard to patch?': (1) Define the key terms in: What makes a transitive dependency vulnerability hard to patch?. (2) Explain the main risk with one concrete example. (3) Give two practical mitigation steps.\"",
+      "2026-10-30T07:41:00.700-07:00 [reviewer] COMMITTED offset after processing correlation_id=\"773f4cfb-02fd-45ef-b923-fd6ea4042847\" partition=0 offset=9"
+    ]
+  },
+  "after_fix": {
+    "correlation_id": "9f4da386-b09b-4afe-bd22-dbcb776514db",
+    "inbox_messages_sent": 2,
+    "tasks_produced": 1,
+    "final_messages": 1,
+    "duplicates_skipped": 1,
+    "log": [
+      "2026-10-30T07:41:09.109-07:00 [planner] RECEIVED topic=\"s0036_inbox\" correlation_id=\"9f4da386-b09b-4afe-bd22-dbcb776514db\" partition=0 offset=9 kind=\"question\"",
+      "2026-10-30T07:41:09.109-07:00 [planner] SENT topic=\"s0036_tasks\" correlation_id=\"9f4da386-b09b-4afe-bd22-dbcb776514db\" plan=[\"Define the key terms in: What makes a transitive dependency vulnerability hard to patch?\", \"Explain the main risk with one concrete example\", \"Give two practical mitigation steps\"]",
+      "2026-10-30T07:41:09.873-07:00 [planner] COMMITTED offset after processing correlation_id=\"9f4da386-b09b-4afe-bd22-dbcb776514db\" partition=0 offset=9",
+      "2026-10-30T07:41:10.935-07:00 [planner] RECEIVED topic=\"s0036_inbox\" correlation_id=\"9f4da386-b09b-4afe-bd22-dbcb776514db\" partition=0 offset=10 kind=\"question\"",
+      "2026-10-30T07:41:10.936-07:00 [planner] DUPLICATE skipped (already processed) correlation_id=\"9f4da386-b09b-4afe-bd22-dbcb776514db\" partition=0 offset=10",
+      "2026-10-30T07:41:10.937-07:00 [planner] COMMITTED offset after processing correlation_id=\"9f4da386-b09b-4afe-bd22-dbcb776514db\" partition=0 offset=10",
+      "2026-10-30T07:41:09.872-07:00 [writer] RECEIVED topic=\"s0036_tasks\" correlation_id=\"9f4da386-b09b-4afe-bd22-dbcb776514db\" partition=1 offset=26 kind=\"task\"",
+      "2026-10-30T07:41:09.872-07:00 [writer] SENT topic=\"s0036_drafts\" correlation_id=\"9f4da386-b09b-4afe-bd22-dbcb776514db\" plan=[\"Define the key terms in: What makes a transitive dependency vulnerability hard to patch?\", \"Explain the main risk with one concrete example\", \"Give two practical mitigation steps\"] draft=\"Answer to 'What makes a transitive dependency vulnerability hard to patch?': (1) Define the key terms in: What makes a transitive dependency vulnerability hard to patch?. (2) Explain the main risk with one concrete example. (3) Give two practical mitigation steps.\"",
+      "2026-10-30T07:41:10.879-07:00 [writer] COMMITTED offset after processing correlation_id=\"9f4da386-b09b-4afe-bd22-dbcb776514db\" partition=1 offset=26",
+      "2026-10-30T07:41:10.876-07:00 [reviewer] RECEIVED topic=\"s0036_drafts\" correlation_id=\"9f4da386-b09b-4afe-bd22-dbcb776514db\" partition=0 offset=10 kind=\"draft\"",
+      "2026-10-30T07:41:10.877-07:00 [reviewer] SENT topic=\"s0036_final\" correlation_id=\"9f4da386-b09b-4afe-bd22-dbcb776514db\" status=\"approved\" answer=\"Answer to 'What makes a transitive dependency vulnerability hard to patch?': (1) Define the key terms in: What makes a transitive dependency vulnerability hard to patch?. (2) Explain the main risk with one concrete example. (3) Give two practical mitigation steps.\"",
+      "2026-10-30T07:41:11.881-07:00 [reviewer] COMMITTED offset after processing correlation_id=\"9f4da386-b09b-4afe-bd22-dbcb776514db\" partition=0 offset=10"
+    ]
+  }
+}

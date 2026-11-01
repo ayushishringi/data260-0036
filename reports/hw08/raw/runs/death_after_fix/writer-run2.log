@@ -1,0 +1,4 @@
+2026-10-30T07:42:14.952-07:00 [writer#writer-run2] Consumer is ready and listening... topic="s0036_tasks" group="s0036_writers_death_after_fix_f1a2" partitions={"0": 29, "1": 27} idempotent=true commit="after" retry="bounded" max_retries=3
+2026-10-30T07:42:14.956-07:00 [writer#writer-run2] RECEIVED topic="s0036_tasks" correlation_id="83bac9aa-c659-40eb-a781-ef7f91cad231" partition=0 offset=29 kind="task"
+2026-10-30T07:42:14.956-07:00 [writer#writer-run2] SENT topic="s0036_drafts" correlation_id="83bac9aa-c659-40eb-a781-ef7f91cad231" plan=["Explain the risk", "Give one example", "List two fixes"] draft="Answer to 'Why pin dependency versions?': (1) Explain the risk. (2) Give one example. (3) List two fixes."
+2026-10-30T07:42:15.580-07:00 [writer#writer-run2] COMMITTED offset after processing correlation_id="83bac9aa-c659-40eb-a781-ef7f91cad231" partition=0 offset=29

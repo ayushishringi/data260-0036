@@ -1,0 +1,50 @@
+{
+  "before_fix": {
+    "correlation_id": "84f0162a-9248-4541-b347-691f94f20328",
+    "task_partition": 0,
+    "task_offset": 28,
+    "committed_after_kill": {
+      "0": 29,
+      "1": 27
+    },
+    "committed_at_end": {
+      "0": 29,
+      "1": 27
+    },
+    "redelivered_after_restart": false,
+    "drafts_produced": 0,
+    "log_run1": [
+      "2026-10-30T07:41:20.259-07:00 [writer#writer-run1] COMMITTED offset on receipt (before processing) partition=0 offset=28",
+      "2026-10-30T07:41:20.259-07:00 [writer#writer-run1] RECEIVED topic=\"s0036_tasks\" correlation_id=\"84f0162a-9248-4541-b347-691f94f20328\" partition=0 offset=28 kind=\"task\"",
+      "2026-10-30T07:41:20.259-07:00 [writer#writer-run1] STARTED long processing correlation_id=\"84f0162a-9248-4541-b347-691f94f20328\" seconds=20.0 partition=0 offset=28"
+    ],
+    "log_run2": [
+      "2026-10-30T07:41:30.270-07:00 [writer#writer-run2] Consumer is ready and listening... topic=\"s0036_tasks\" group=\"s0036_writers_death_before_fix_1821\" partitions={\"0\": 29, \"1\": 27} idempotent=true commit=\"before\" retry=\"bounded\" max_retries=3"
+    ]
+  },
+  "after_fix": {
+    "correlation_id": "83bac9aa-c659-40eb-a781-ef7f91cad231",
+    "task_partition": 0,
+    "task_offset": 29,
+    "committed_after_kill": {
+      "0": 29,
+      "1": 27
+    },
+    "committed_at_end": {
+      "0": 30,
+      "1": 27
+    },
+    "redelivered_after_restart": true,
+    "drafts_produced": 1,
+    "log_run1": [
+      "2026-10-30T07:42:05.162-07:00 [writer#writer-run1] RECEIVED topic=\"s0036_tasks\" correlation_id=\"83bac9aa-c659-40eb-a781-ef7f91cad231\" partition=0 offset=29 kind=\"task\"",
+      "2026-10-30T07:42:05.162-07:00 [writer#writer-run1] STARTED long processing correlation_id=\"83bac9aa-c659-40eb-a781-ef7f91cad231\" seconds=20.0 partition=0 offset=29"
+    ],
+    "log_run2": [
+      "2026-10-30T07:42:14.952-07:00 [writer#writer-run2] Consumer is ready and listening... topic=\"s0036_tasks\" group=\"s0036_writers_death_after_fix_f1a2\" partitions={\"0\": 29, \"1\": 27} idempotent=true commit=\"after\" retry=\"bounded\" max_retries=3",
+      "2026-10-30T07:42:14.956-07:00 [writer#writer-run2] RECEIVED topic=\"s0036_tasks\" correlation_id=\"83bac9aa-c659-40eb-a781-ef7f91cad231\" partition=0 offset=29 kind=\"task\"",
+      "2026-10-30T07:42:14.956-07:00 [writer#writer-run2] SENT topic=\"s0036_drafts\" correlation_id=\"83bac9aa-c659-40eb-a781-ef7f91cad231\" plan=[\"Explain the risk\", \"Give one example\", \"List two fixes\"] draft=\"Answer to 'Why pin dependency versions?': (1) Explain the risk. (2) Give one example. (3) List two fixes.\"",
+      "2026-10-30T07:42:15.580-07:00 [writer#writer-run2] COMMITTED offset after processing correlation_id=\"83bac9aa-c659-40eb-a781-ef7f91cad231\" partition=0 offset=29"
+    ]
+  }
+}

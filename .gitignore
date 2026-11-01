@@ -4,3 +4,5 @@ __pycache__/
 .DS_Store
 .python-version
 reports/hw01/raw/*.tmp
+.hw8_state/
+reports/hw08/logs/

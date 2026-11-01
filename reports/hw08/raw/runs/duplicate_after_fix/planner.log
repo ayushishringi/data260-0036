@@ -1,0 +1,7 @@
+2026-10-30T07:41:08.874-07:00 [planner] Consumer is ready and listening... topic="s0036_inbox" group="s0036_planners_dup_after_fix_e5bf" partitions={"0": 9} idempotent=true commit="after" retry="bounded" max_retries=3
+2026-10-30T07:41:09.109-07:00 [planner] RECEIVED topic="s0036_inbox" correlation_id="9f4da386-b09b-4afe-bd22-dbcb776514db" partition=0 offset=9 kind="question"
+2026-10-30T07:41:09.109-07:00 [planner] SENT topic="s0036_tasks" correlation_id="9f4da386-b09b-4afe-bd22-dbcb776514db" plan=["Define the key terms in: What makes a transitive dependency vulnerability hard to patch?", "Explain the main risk with one concrete example", "Give two practical mitigation steps"]
+2026-10-30T07:41:09.873-07:00 [planner] COMMITTED offset after processing correlation_id="9f4da386-b09b-4afe-bd22-dbcb776514db" partition=0 offset=9
+2026-10-30T07:41:10.935-07:00 [planner] RECEIVED topic="s0036_inbox" correlation_id="9f4da386-b09b-4afe-bd22-dbcb776514db" partition=0 offset=10 kind="question"
+2026-10-30T07:41:10.936-07:00 [planner] DUPLICATE skipped (already processed) correlation_id="9f4da386-b09b-4afe-bd22-dbcb776514db" partition=0 offset=10
+2026-10-30T07:41:10.937-07:00 [planner] COMMITTED offset after processing correlation_id="9f4da386-b09b-4afe-bd22-dbcb776514db" partition=0 offset=10

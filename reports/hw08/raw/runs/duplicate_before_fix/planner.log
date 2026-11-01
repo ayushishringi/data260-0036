@@ -1,0 +1,7 @@
+2026-10-30T07:40:57.693-07:00 [planner] Consumer is ready and listening... topic="s0036_inbox" group="s0036_planners_dup_before_fix_5d15" partitions={"0": 7} idempotent=false commit="after" retry="bounded" max_retries=3
+2026-10-30T07:40:57.926-07:00 [planner] RECEIVED topic="s0036_inbox" correlation_id="773f4cfb-02fd-45ef-b923-fd6ea4042847" partition=0 offset=7 kind="question"
+2026-10-30T07:40:57.927-07:00 [planner] SENT topic="s0036_tasks" correlation_id="773f4cfb-02fd-45ef-b923-fd6ea4042847" plan=["Define the key terms in: What makes a transitive dependency vulnerability hard to patch?", "Explain the main risk with one concrete example", "Give two practical mitigation steps"]
+2026-10-30T07:40:58.688-07:00 [planner] COMMITTED offset after processing correlation_id="773f4cfb-02fd-45ef-b923-fd6ea4042847" partition=0 offset=7
+2026-10-30T07:40:59.745-07:00 [planner] RECEIVED topic="s0036_inbox" correlation_id="773f4cfb-02fd-45ef-b923-fd6ea4042847" partition=0 offset=8 kind="question"
+2026-10-30T07:40:59.745-07:00 [planner] SENT topic="s0036_tasks" correlation_id="773f4cfb-02fd-45ef-b923-fd6ea4042847" plan=["Define the key terms in: What makes a transitive dependency vulnerability hard to patch?", "Explain the main risk with one concrete example", "Give two practical mitigation steps"]
+2026-10-30T07:40:59.747-07:00 [planner] COMMITTED offset after processing correlation_id="773f4cfb-02fd-45ef-b923-fd6ea4042847" partition=0 offset=8

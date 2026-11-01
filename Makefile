@@ -2,7 +2,7 @@ PYTHON ?= .venv/bin/python3
 PORT ?= 8036
 IMAGE ?= data260-0036-hw2:latest
 
-.PHONY: run run-api run-web agents client verify-hw01 verify-hw02 verify-hw05 test-hw05 faults-hw05 verify-hw06 test-hw06 experiments-hw06 migrate-hw07 test-hw07 lint verify-hw07
+.PHONY: run run-api run-web agents client verify-hw01 verify-hw02 verify-hw05 test-hw05 faults-hw05 verify-hw06 test-hw06 experiments-hw06 migrate-hw07 test-hw07 lint verify-hw07 kafka-up kafka-down kafka-topics demo-hw08 test-hw08 experiments-hw08 verify-hw08
 
 run: run-api
 
@@ -59,3 +59,25 @@ docker-build:
 
 docker-run:
 	docker compose up --build
+
+# ---- HW8: Kafka request/response, three-agent pipeline, failure behavior
+kafka-up:
+	docker compose -f docker-compose.hw8.yml up -d --build
+
+kafka-down:
+	docker compose -f docker-compose.hw8.yml down
+
+kafka-topics:
+	docker exec s0036-kafka /opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --describe | grep -E '^Topic: s0036'
+
+demo-hw08:
+	$(PYTHON) homework_demo.py
+
+test-hw08:
+	$(PYTHON) -m unittest -v tests.test_hw8
+
+experiments-hw08:
+	$(PYTHON) -u scripts/run_hw8_failures.py all
+
+verify-hw08:
+	PYTHONPATH=. $(PYTHON) scripts/verify_hw8.py

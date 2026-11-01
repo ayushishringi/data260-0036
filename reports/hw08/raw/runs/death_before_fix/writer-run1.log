@@ -1,0 +1,4 @@
+2026-10-30T07:41:20.020-07:00 [writer#writer-run1] Consumer is ready and listening... topic="s0036_tasks" group="s0036_writers_death_before_fix_1821" partitions={"0": 28, "1": 27} idempotent=true commit="before" retry="bounded" max_retries=3
+2026-10-30T07:41:20.259-07:00 [writer#writer-run1] COMMITTED offset on receipt (before processing) partition=0 offset=28
+2026-10-30T07:41:20.259-07:00 [writer#writer-run1] RECEIVED topic="s0036_tasks" correlation_id="84f0162a-9248-4541-b347-691f94f20328" partition=0 offset=28 kind="task"
+2026-10-30T07:41:20.259-07:00 [writer#writer-run1] STARTED long processing correlation_id="84f0162a-9248-4541-b347-691f94f20328" seconds=20.0 partition=0 offset=28

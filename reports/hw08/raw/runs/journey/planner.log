@@ -1,0 +1,4 @@
+2026-10-30T07:40:18.417-07:00 [planner] Consumer is ready and listening... topic="s0036_inbox" group="s0036_planners_journey_7024" partitions={"0": 6} idempotent=true commit="after" retry="bounded" max_retries=3
+2026-10-30T07:40:18.661-07:00 [planner] RECEIVED topic="s0036_inbox" correlation_id="b074e644-966e-4f3d-a7bf-dc3d00b19496" partition=0 offset=6 kind="question"
+2026-10-30T07:40:46.046-07:00 [planner] SENT topic="s0036_tasks" correlation_id="b074e644-966e-4f3d-a7bf-dc3d00b19496" plan=["Identify vulnerable transitive dependency version.", "Determine fix from CVE details.", "Update direct dependency and re-scan."]
+2026-10-30T07:40:46.499-07:00 [planner] COMMITTED offset after processing correlation_id="b074e644-966e-4f3d-a7bf-dc3d00b19496" partition=0 offset=6

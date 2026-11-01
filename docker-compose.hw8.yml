@@ -1,0 +1,78 @@
+# HW8: Kafka (KRaft, single broker) + topic creation + report worker + FastAPI wrapper.
+# Usage: docker compose -f docker-compose.hw8.yml up -d --build
+name: s0036-hw8
+services:
+  kafka:
+    image: apache/kafka:3.9.0
+    container_name: s0036-kafka
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_LISTENERS: INTERNAL://0.0.0.0:29092,EXTERNAL://0.0.0.0:9092,CONTROLLER://0.0.0.0:9093
+      KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka:29092,EXTERNAL://localhost:9092,CONTROLLER://kafka:9093
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INTERNAL:PLAINTEXT,EXTERNAL:PLAINTEXT,CONTROLLER:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "false"
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --list >/dev/null 2>&1"]
+      interval: 5s
+      timeout: 10s
+      retries: 20
+
+  kafka-init:
+    image: apache/kafka:3.9.0
+    container_name: s0036-kafka-init
+    depends_on:
+      kafka:
+        condition: service_healthy
+    entrypoint: ["/bin/bash", "-c"]
+    command:
+      - |
+        set -e
+        create() { /opt/kafka/bin/kafka-topics.sh --bootstrap-server kafka:29092 --create --if-not-exists --topic "$$1" --partitions "$$2" --replication-factor 1; }
+        create s0036_report_requests 1
+        create s0036_report_responses 1
+        create s0036_inbox 1
+        create s0036_tasks 2
+        create s0036_drafts 1
+        create s0036_final 1
+        create s0036_dead_letter 1
+        /opt/kafka/bin/kafka-topics.sh --bootstrap-server kafka:29092 --describe | grep -E '^Topic: s0036' || true
+    restart: "no"
+
+  report-worker:
+    build:
+      context: .
+      dockerfile: Dockerfile.hw8
+    image: s0036-hw8:latest
+    container_name: s0036-report-worker
+    command: ["python", "report_worker.py"]
+    environment:
+      KAFKA_BOOTSTRAP: kafka:29092
+      TZ: America/Los_Angeles
+    depends_on:
+      kafka-init:
+        condition: service_completed_successfully
+    restart: unless-stopped
+
+  api:
+    image: s0036-hw8:latest
+    container_name: s0036-api
+    command: ["uvicorn", "backend.report_kafka_api:app", "--host", "0.0.0.0", "--port", "8036"]
+    environment:
+      KAFKA_BOOTSTRAP: kafka:29092
+      TZ: America/Los_Angeles
+    ports:
+      - "127.0.0.1:8036:8036"
+    depends_on:
+      report-worker:
+        condition: service_started
+    restart: unless-stopped

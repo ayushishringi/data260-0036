@@ -1,0 +1,10 @@
+2026-10-30T07:42:55.763-07:00 [writer] Consumer is ready and listening... topic="s0036_tasks" group="s0036_writers_poison_after_fix_ee71" partitions={"0": 30, "1": 29} idempotent=true commit="after" retry="bounded" max_retries=3
+2026-10-30T07:42:55.981-07:00 [writer] RECEIVED topic="s0036_tasks" correlation_id="poison-5c8bb933" partition=1 offset=29 kind="task"
+2026-10-30T07:42:55.981-07:00 [writer] PROCESSING FAILED correlation_id="poison-5c8bb933" attempt=1 error="plan must be a non-empty list of strings" partition=1 offset=29
+2026-10-30T07:42:56.483-07:00 [writer] PROCESSING FAILED correlation_id="poison-5c8bb933" attempt=2 error="plan must be a non-empty list of strings" partition=1 offset=29
+2026-10-30T07:42:57.488-07:00 [writer] PROCESSING FAILED correlation_id="poison-5c8bb933" attempt=3 error="plan must be a non-empty list of strings" partition=1 offset=29
+2026-10-30T07:42:57.766-07:00 [writer] MOVED to dead-letter topic topic="s0036_dead_letter" correlation_id="poison-5c8bb933" attempts=3 partition=1 offset=29
+2026-10-30T07:42:57.768-07:00 [writer] COMMITTED offset after processing correlation_id="poison-5c8bb933" partition=1 offset=29
+2026-10-30T07:42:57.769-07:00 [writer] RECEIVED topic="s0036_tasks" correlation_id="4b1d39bc-c037-4ee1-8270-a38e3ee00266" partition=1 offset=30 kind="task"
+2026-10-30T07:42:57.769-07:00 [writer] SENT topic="s0036_drafts" correlation_id="4b1d39bc-c037-4ee1-8270-a38e3ee00266" plan=["Explain the risk", "Give one example", "List two fixes"] draft="Answer to 'What is an SBOM?': (1) Explain the risk. (2) Give one example. (3) List two fixes."
+2026-10-30T07:42:58.771-07:00 [writer] COMMITTED offset after processing correlation_id="4b1d39bc-c037-4ee1-8270-a38e3ee00266" partition=1 offset=30

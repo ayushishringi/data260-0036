@@ -1,0 +1,78 @@
+{
+  "before_fix": {
+    "bad_correlation_id": "poison-fd6feef6",
+    "good_correlation_id": "69ad183b-2758-4f5b-903e-97797b58f780",
+    "attempts_on_bad_message": 28,
+    "moved_to_dead_letter": 0,
+    "dead_letter_record": null,
+    "good_message_processed_within_25s": false,
+    "good_drafts": 0,
+    "log": [
+      "2026-10-30T07:42:19.992-07:00 [writer] RECEIVED topic=\"s0036_tasks\" correlation_id=\"poison-fd6feef6\" partition=1 offset=27 kind=\"task\"",
+      "2026-10-30T07:42:19.993-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-fd6feef6\" attempt=1 error=\"plan must be a non-empty list of strings\" partition=1 offset=27",
+      "2026-10-30T07:42:20.998-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-fd6feef6\" attempt=2 error=\"plan must be a non-empty list of strings\" partition=1 offset=27",
+      "2026-10-30T07:42:21.999-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-fd6feef6\" attempt=3 error=\"plan must be a non-empty list of strings\" partition=1 offset=27",
+      "2026-10-30T07:42:23.003-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-fd6feef6\" attempt=4 error=\"plan must be a non-empty list of strings\" partition=1 offset=27",
+      "2026-10-30T07:42:24.005-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-fd6feef6\" attempt=5 error=\"plan must be a non-empty list of strings\" partition=1 offset=27",
+      "2026-10-30T07:42:25.006-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-fd6feef6\" attempt=6 error=\"plan must be a non-empty list of strings\" partition=1 offset=27",
+      "2026-10-30T07:42:26.009-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-fd6feef6\" attempt=7 error=\"plan must be a non-empty list of strings\" partition=1 offset=27",
+      "2026-10-30T07:42:27.015-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-fd6feef6\" attempt=8 error=\"plan must be a non-empty list of strings\" partition=1 offset=27",
+      "2026-10-30T07:42:28.018-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-fd6feef6\" attempt=9 error=\"plan must be a non-empty list of strings\" partition=1 offset=27",
+      "2026-10-30T07:42:29.023-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-fd6feef6\" attempt=10 error=\"plan must be a non-empty list of strings\" partition=1 offset=27",
+      "2026-10-30T07:42:30.025-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-fd6feef6\" attempt=11 error=\"plan must be a non-empty list of strings\" partition=1 offset=27",
+      "2026-10-30T07:42:31.031-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-fd6feef6\" attempt=12 error=\"plan must be a non-empty list of strings\" partition=1 offset=27",
+      "2026-10-30T07:42:32.033-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-fd6feef6\" attempt=13 error=\"plan must be a non-empty list of strings\" partition=1 offset=27",
+      "2026-10-30T07:42:33.036-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-fd6feef6\" attempt=14 error=\"plan must be a non-empty list of strings\" partition=1 offset=27",
+      "2026-10-30T07:42:34.038-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-fd6feef6\" attempt=15 error=\"plan must be a non-empty list of strings\" partition=1 offset=27",
+      "2026-10-30T07:42:35.041-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-fd6feef6\" attempt=16 error=\"plan must be a non-empty list of strings\" partition=1 offset=27",
+      "2026-10-30T07:42:36.044-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-fd6feef6\" attempt=17 error=\"plan must be a non-empty list of strings\" partition=1 offset=27",
+      "2026-10-30T07:42:37.049-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-fd6feef6\" attempt=18 error=\"plan must be a non-empty list of strings\" partition=1 offset=27",
+      "2026-10-30T07:42:38.055-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-fd6feef6\" attempt=19 error=\"plan must be a non-empty list of strings\" partition=1 offset=27",
+      "2026-10-30T07:42:39.060-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-fd6feef6\" attempt=20 error=\"plan must be a non-empty list of strings\" partition=1 offset=27",
+      "2026-10-30T07:42:40.062-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-fd6feef6\" attempt=21 error=\"plan must be a non-empty list of strings\" partition=1 offset=27",
+      "2026-10-30T07:42:41.064-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-fd6feef6\" attempt=22 error=\"plan must be a non-empty list of strings\" partition=1 offset=27",
+      "2026-10-30T07:42:42.070-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-fd6feef6\" attempt=23 error=\"plan must be a non-empty list of strings\" partition=1 offset=27",
+      "2026-10-30T07:42:43.075-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-fd6feef6\" attempt=24 error=\"plan must be a non-empty list of strings\" partition=1 offset=27",
+      "2026-10-30T07:42:44.080-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-fd6feef6\" attempt=25 error=\"plan must be a non-empty list of strings\" partition=1 offset=27",
+      "2026-10-30T07:42:45.083-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-fd6feef6\" attempt=26 error=\"plan must be a non-empty list of strings\" partition=1 offset=27",
+      "2026-10-30T07:42:46.087-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-fd6feef6\" attempt=27 error=\"plan must be a non-empty list of strings\" partition=1 offset=27",
+      "2026-10-30T07:42:47.093-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-fd6feef6\" attempt=28 error=\"plan must be a non-empty list of strings\" partition=1 offset=27"
+    ]
+  },
+  "after_fix": {
+    "bad_correlation_id": "poison-5c8bb933",
+    "good_correlation_id": "4b1d39bc-c037-4ee1-8270-a38e3ee00266",
+    "attempts_on_bad_message": 3,
+    "moved_to_dead_letter": 1,
+    "dead_letter_record": {
+      "correlation_id": "poison-5c8bb933",
+      "failed_agent": "writer",
+      "source_topic": "s0036_tasks",
+      "partition": 1,
+      "offset": 29,
+      "attempts": 3,
+      "error": "plan must be a non-empty list of strings",
+      "ts": "2026-10-30T07:42:57.489-07:00",
+      "original": {
+        "correlation_id": "poison-5c8bb933",
+        "kind": "task",
+        "question": "malformed task",
+        "plan": "this-is-not-a-list",
+        "planned_at": "2026-10-30T07:42:55.978-07:00"
+      }
+    },
+    "good_message_processed_within_25s": true,
+    "good_drafts": 1,
+    "log": [
+      "2026-10-30T07:42:55.981-07:00 [writer] RECEIVED topic=\"s0036_tasks\" correlation_id=\"poison-5c8bb933\" partition=1 offset=29 kind=\"task\"",
+      "2026-10-30T07:42:55.981-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-5c8bb933\" attempt=1 error=\"plan must be a non-empty list of strings\" partition=1 offset=29",
+      "2026-10-30T07:42:56.483-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-5c8bb933\" attempt=2 error=\"plan must be a non-empty list of strings\" partition=1 offset=29",
+      "2026-10-30T07:42:57.488-07:00 [writer] PROCESSING FAILED correlation_id=\"poison-5c8bb933\" attempt=3 error=\"plan must be a non-empty list of strings\" partition=1 offset=29",
+      "2026-10-30T07:42:57.766-07:00 [writer] MOVED to dead-letter topic topic=\"s0036_dead_letter\" correlation_id=\"poison-5c8bb933\" attempts=3 partition=1 offset=29",
+      "2026-10-30T07:42:57.768-07:00 [writer] COMMITTED offset after processing correlation_id=\"poison-5c8bb933\" partition=1 offset=29",
+      "2026-10-30T07:42:57.769-07:00 [writer] RECEIVED topic=\"s0036_tasks\" correlation_id=\"4b1d39bc-c037-4ee1-8270-a38e3ee00266\" partition=1 offset=30 kind=\"task\"",
+      "2026-10-30T07:42:57.769-07:00 [writer] SENT topic=\"s0036_drafts\" correlation_id=\"4b1d39bc-c037-4ee1-8270-a38e3ee00266\" plan=[\"Explain the risk\", \"Give one example\", \"List two fixes\"] draft=\"Answer to 'What is an SBOM?': (1) Explain the risk. (2) Give one example. (3) List two fixes.\"",
+      "2026-10-30T07:42:58.771-07:00 [writer] COMMITTED offset after processing correlation_id=\"4b1d39bc-c037-4ee1-8270-a38e3ee00266\" partition=1 offset=30"
+    ]
+  }
+}
