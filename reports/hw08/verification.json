@@ -1,0 +1,126 @@
+{
+  "homework": 8,
+  "SID4": "0036",
+  "PORT_BASE": 8036,
+  "PREFIX": "s0036",
+  "SEED": 36,
+  "VERIFY_SEED": 260036,
+  "commit": "6a17a98179fa0a00deed047557b91905ef9e7dbe",
+  "tag_hw8_commit": "6a17a98179fa0a00deed047557b91905ef9e7dbe",
+  "working_tree_clean": true,
+  "model": "qwen3:4b via local Ollama for Planner/Writer (verify uses HW8_LLM=0 template mode)",
+  "configuration": {
+    "kafka": "apache/kafka:3.9.0 KRaft single broker",
+    "topics": {
+      "s0036_report_requests": 1,
+      "s0036_report_responses": 1,
+      "s0036_inbox": 1,
+      "s0036_tasks": 2,
+      "s0036_drafts": 1,
+      "s0036_final": 1,
+      "s0036_dead_letter": 1
+    },
+    "max_retries": 3,
+    "commit": "after successful processing"
+  },
+  "checks": [
+    {
+      "check": "docker: Kafka, worker and FastAPI containers running",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "worker log contains 'Consumer is ready and listening...'",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "all 7 s0036_* topics exist with the expected partition counts",
+      "passed": true,
+      "detail": {
+        "s0036_report_responses": 1,
+        "s0036_final": 1,
+        "s0036_drafts": 1,
+        "s0036_inbox": 1,
+        "s0036_dead_letter": 1,
+        "s0036_tasks": 2,
+        "s0036_report_requests": 1
+      }
+    },
+    {
+      "check": "CREATE_REPORT over Kafka returns success + UUID report_id, correlation_id preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "GET_REPORT round-trips the created report, correlation_id preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "GET_REPORT unknown id -> success false + error, correlation_id preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unknown operation -> success false + error, correlation_id preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "CREATE_REPORT with invalid fields is rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "FastAPI on 127.0.0.1:8036: create + get through Kafka, X-Correlation-ID preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pipeline: inbox -> planner -> writer -> reviewer -> final, same correlation_id, status + answer",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pipeline: replaying the same correlation_id adds no second final message",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Part 3 evidence: duplicate replay 2 finals before fix, 1 after",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Part 3 evidence: killed Writer loses the task before fix, redelivers + completes after",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Part 3 evidence: poison blocks before fix; after fix 3 attempts -> dead letter, next message processed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Part 3 evidence: keyed run keeps every entity in one partition and in order",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "ruff passes on HW8 code",
+      "passed": true,
+      "detail": [
+        "All checks passed!"
+      ]
+    },
+    {
+      "check": "unit tests (tests/test_hw8.py) pass",
+      "passed": true,
+      "detail": [
+        "OK"
+      ]
+    }
+  ],
+  "passed": true
+}
