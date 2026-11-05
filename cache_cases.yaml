@@ -1,0 +1,73 @@
+# HW9 Part 3.1 - labeled semantic-cache test set (s0036, DOMAIN_ID 4: open-source package vulnerabilities).
+#
+# Labels were written BEFORE any threshold sweep and must not be edited after seeing results.
+# Labeling mistakes found later are recorded in reports/hw09/LABEL_NOTES.md instead.
+#
+# How the set is used (scripts/run_hw9_sweep.py):
+#   1. The cache is cleared and the 10 seed_queries are answered by the HW8 agents and cached.
+#   2. For each threshold, the 40 cases are asked against that same seeded cache
+#      (store_on_miss=false, so every threshold sees an identical cache).
+#   expected: hit  -> the correct answer is the cached answer of seed `target`
+#   expected: miss -> no cached answer is correct (`near` = the seed it superficially resembles)
+#   A false hit = a cache hit whose cached answer is not correct for the incoming query.
+
+seed_queries:
+  - {id: S01, query: "What is the severity of the Log4Shell vulnerability in log4j-core?"}
+  - {id: S02, query: "Which lodash version fixes the template command injection?"}
+  - {id: S03, query: "What versions of minimist are affected by the prototype pollution bug?"}
+  - {id: S04, query: "How should I fix the PyYAML full_load code execution vulnerability?"}
+  - {id: S05, query: "Which requests version stops leaking the Proxy-Authorization header?"}
+  - {id: S06, query: "Is Spring4Shell in spring-beans a critical vulnerability?"}
+  - {id: S07, query: "What is the CVE for the axios XSRF-TOKEN leak?"}
+  - {id: S08, query: "Which jackson-databind version fixes the deeply nested JSON denial of service?"}
+  - {id: S09, query: "What is the impact of the node-fetch cookie leak on redirect?"}
+  - {id: S10, query: "Which ws version fixes the header-count denial of service?"}
+
+cases:
+  # ---- 10 exact duplicates (should hit) ----
+  - {id: C01, category: exact_duplicate, expected: hit, target: S01, query: "What is the severity of the Log4Shell vulnerability in log4j-core?"}
+  - {id: C02, category: exact_duplicate, expected: hit, target: S02, query: "Which lodash version fixes the template command injection?"}
+  - {id: C03, category: exact_duplicate, expected: hit, target: S03, query: "What versions of minimist are affected by the prototype pollution bug?"}
+  - {id: C04, category: exact_duplicate, expected: hit, target: S04, query: "How should I fix the PyYAML full_load code execution vulnerability?"}
+  - {id: C05, category: exact_duplicate, expected: hit, target: S05, query: "Which requests version stops leaking the Proxy-Authorization header?"}
+  - {id: C06, category: exact_duplicate, expected: hit, target: S06, query: "Is Spring4Shell in spring-beans a critical vulnerability?"}
+  - {id: C07, category: exact_duplicate, expected: hit, target: S07, query: "What is the CVE for the axios XSRF-TOKEN leak?"}
+  - {id: C08, category: exact_duplicate, expected: hit, target: S08, query: "Which jackson-databind version fixes the deeply nested JSON denial of service?"}
+  - {id: C09, category: exact_duplicate, expected: hit, target: S09, query: "What is the impact of the node-fetch cookie leak on redirect?"}
+  - {id: C10, category: exact_duplicate, expected: hit, target: S10, query: "Which ws version fixes the header-count denial of service?"}
+
+  # ---- 10 paraphrases (should hit: same package, same question, same correct answer) ----
+  - {id: C11, category: paraphrase, expected: hit, target: S01, query: "How severe is the log4j-core Log4Shell issue?"}
+  - {id: C12, category: paraphrase, expected: hit, target: S02, query: "What lodash release patches the command injection in template?"}
+  - {id: C13, category: paraphrase, expected: hit, target: S03, query: "Which minimist versions are vulnerable to prototype pollution?"}
+  - {id: C14, category: paraphrase, expected: hit, target: S04, query: "How do I remediate the code execution flaw in PyYAML's full_load?"}
+  - {id: C15, category: paraphrase, expected: hit, target: S05, query: "What version of requests fixes the Proxy-Authorization header leak?"}
+  - {id: C16, category: paraphrase, expected: hit, target: S06, query: "How critical is the Spring4Shell vulnerability in spring-beans?"}
+  - {id: C17, category: paraphrase, expected: hit, target: S07, query: "Which CVE ID covers the axios XSRF-TOKEN disclosure?"}
+  - {id: C18, category: paraphrase, expected: hit, target: S08, query: "What jackson-databind release patches the DoS from deeply nested JSON?"}
+  - {id: C19, category: paraphrase, expected: hit, target: S09, query: "What can an attacker do with the node-fetch redirect cookie leak?"}
+  - {id: C20, category: paraphrase, expected: hit, target: S10, query: "What version of ws patches the denial of service from too many headers?"}
+
+  # ---- 10 superficially similar, different correct answer (should miss) ----
+  - {id: C21, category: similar_different, expected: miss, near: S01, query: "What is the CVE for the Log4Shell vulnerability in log4j-core?", why: "asks the CVE id (CVE-2021-44228), not the severity"}
+  - {id: C22, category: similar_different, expected: miss, near: S02, query: "Which pillow version fixes the ImageMath code execution?", why: "different package (pillow 10.2.0, not lodash 4.17.21)"}
+  - {id: C23, category: similar_different, expected: miss, near: S03, query: "What versions of protobufjs are affected by the prototype pollution bug?", why: "different package (protobufjs >= 7.0.0, < 7.2.4)"}
+  - {id: C24, category: similar_different, expected: miss, near: S04, query: "What is the severity of the PyYAML full_load code execution vulnerability?", why: "asks the severity (critical), not how to fix it"}
+  - {id: C25, category: similar_different, expected: miss, near: S05, query: "Which requests version first introduced the Proxy-Authorization header leak?", why: "first affected version (2.3.0), not the fixed version (2.31.0)"}
+  - {id: C26, category: similar_different, expected: miss, near: S06, query: "Is the Spring4Shell vulnerability in spring-beans 5.3.18 still exploitable?", why: "5.3.18 is the fixed release, so the answer is no"}
+  - {id: C27, category: similar_different, expected: miss, near: S07, query: "What is the CVE for the express open redirect?", why: "different package (CVE-2024-29041)"}
+  - {id: C28, category: similar_different, expected: miss, near: S08, query: "Which django version fixes the regular expression denial of service?", why: "different package (django 4.2.3)"}
+  - {id: C29, category: similar_different, expected: miss, near: S09, query: "What is the impact of the axios XSRF-TOKEN leak?", why: "different package and token (XSRF token to third-party hosts)"}
+  - {id: C30, category: similar_different, expected: miss, near: S10, query: "Which ws version introduced the header-count denial of service?", why: "first affected version (8.0.0), not the fix (8.17.1)"}
+
+  # ---- 10 unrelated domain questions (should miss) ----
+  - {id: C31, category: unrelated, expected: miss, query: "How do I generate an SBOM for a Python project?"}
+  - {id: C32, category: unrelated, expected: miss, query: "What is the difference between CVSS base and temporal scores?"}
+  - {id: C33, category: unrelated, expected: miss, query: "How often should we run npm audit in CI?"}
+  - {id: C34, category: unrelated, expected: miss, query: "What does a CWE identifier represent?"}
+  - {id: C35, category: unrelated, expected: miss, query: "How do I pin transitive dependencies with pip-tools?"}
+  - {id: C36, category: unrelated, expected: miss, query: "What is a GitHub Security Advisory (GHSA) ID?"}
+  - {id: C37, category: unrelated, expected: miss, query: "Should a reporter disclose a vulnerability publicly before a fix exists?"}
+  - {id: C38, category: unrelated, expected: miss, query: "How does Dependabot decide when to open a pull request?"}
+  - {id: C39, category: unrelated, expected: miss, query: "What is typosquatting in package registries?"}
+  - {id: C40, category: unrelated, expected: miss, query: "How do I verify the signature of a Maven artifact?"}
