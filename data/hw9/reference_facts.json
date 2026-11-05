@@ -1,0 +1,212 @@
+{
+  "description": "HW9 reference facts (ground truth) for open-source package vulnerabilities, compiled from public advisories (NVD / GitHub Security Advisories). The same rows are seeded into s0036_rel.vulnerability_reports by scripts/migrate_hw9.py. Severity uses the four DOMAIN_SCHEMA buckets; GitHub 'moderate' is stored as medium.",
+  "facts": [
+    {
+      "package": "log4j-core",
+      "cve": "CVE-2021-44228",
+      "severity": "critical",
+      "affected_versions": ">= 2.0-beta9, < 2.15.0",
+      "fixed_version": "2.15.0",
+      "summary": "Remote code execution through JNDI lookups in logged strings (Log4Shell).",
+      "report_code": "VULN-0036-HW9-01"
+    },
+    {
+      "package": "lodash",
+      "cve": "CVE-2021-23337",
+      "severity": "high",
+      "affected_versions": "< 4.17.21",
+      "fixed_version": "4.17.21",
+      "summary": "Command injection through the template function.",
+      "report_code": "VULN-0036-HW9-02"
+    },
+    {
+      "package": "minimist",
+      "cve": "CVE-2021-44906",
+      "severity": "critical",
+      "affected_versions": ">= 1.0.0, < 1.2.6",
+      "fixed_version": "1.2.6",
+      "summary": "Prototype pollution through crafted command-line arguments.",
+      "report_code": "VULN-0036-HW9-03"
+    },
+    {
+      "package": "pyyaml",
+      "cve": "CVE-2020-14343",
+      "severity": "critical",
+      "affected_versions": "< 5.4",
+      "fixed_version": "5.4",
+      "summary": "Arbitrary code execution when untrusted YAML is parsed with full_load or FullLoader.",
+      "report_code": "VULN-0036-HW9-04"
+    },
+    {
+      "package": "requests",
+      "cve": "CVE-2023-32681",
+      "severity": "medium",
+      "affected_versions": ">= 2.3.0, < 2.31.0",
+      "fixed_version": "2.31.0",
+      "summary": "Proxy-Authorization header leaked to the destination server on HTTPS redirects.",
+      "report_code": "VULN-0036-HW9-05"
+    },
+    {
+      "package": "spring-beans",
+      "cve": "CVE-2022-22965",
+      "severity": "critical",
+      "affected_versions": ">= 5.3.0, < 5.3.18",
+      "fixed_version": "5.3.18",
+      "summary": "Remote code execution through data binding on JDK 9+ (Spring4Shell).",
+      "report_code": "VULN-0036-HW9-06"
+    },
+    {
+      "package": "axios",
+      "cve": "CVE-2023-45857",
+      "severity": "medium",
+      "affected_versions": ">= 0.8.1, < 1.6.0",
+      "fixed_version": "1.6.0",
+      "summary": "XSRF-TOKEN cookie value disclosed to third-party hosts.",
+      "report_code": "VULN-0036-HW9-07"
+    },
+    {
+      "package": "jackson-databind",
+      "cve": "CVE-2020-36518",
+      "severity": "high",
+      "affected_versions": ">= 2.13.0, < 2.13.2.1",
+      "fixed_version": "2.13.2.1",
+      "summary": "Denial of service through deeply nested JSON (stack overflow).",
+      "report_code": "VULN-0036-HW9-08"
+    },
+    {
+      "package": "node-fetch",
+      "cve": "CVE-2022-0235",
+      "severity": "high",
+      "affected_versions": "< 2.6.7",
+      "fixed_version": "2.6.7",
+      "summary": "Cookie and Authorization headers forwarded to a third-party host on redirect.",
+      "report_code": "VULN-0036-HW9-09"
+    },
+    {
+      "package": "ws",
+      "cve": "CVE-2024-37890",
+      "severity": "high",
+      "affected_versions": ">= 8.0.0, < 8.17.1",
+      "fixed_version": "8.17.1",
+      "summary": "Denial of service from a request whose header count exceeds server.maxHeadersCount.",
+      "report_code": "VULN-0036-HW9-10"
+    },
+    {
+      "package": "express",
+      "cve": "CVE-2024-29041",
+      "severity": "medium",
+      "affected_versions": "< 4.19.2",
+      "fixed_version": "4.19.2",
+      "summary": "Open redirect through malformed URLs passed to res.location and res.redirect.",
+      "report_code": "VULN-0036-HW9-11"
+    },
+    {
+      "package": "pillow",
+      "cve": "CVE-2023-50447",
+      "severity": "high",
+      "affected_versions": "< 10.2.0",
+      "fixed_version": "10.2.0",
+      "summary": "Arbitrary code execution through the environment parameter of ImageMath.eval.",
+      "report_code": "VULN-0036-HW9-12"
+    },
+    {
+      "package": "django",
+      "cve": "CVE-2023-36053",
+      "severity": "high",
+      "affected_versions": ">= 4.2, < 4.2.3",
+      "fixed_version": "4.2.3",
+      "summary": "Regular expression denial of service in EmailValidator and URLValidator.",
+      "report_code": "VULN-0036-HW9-13"
+    },
+    {
+      "package": "jinja2",
+      "cve": "CVE-2024-22195",
+      "severity": "medium",
+      "affected_versions": "< 3.1.3",
+      "fixed_version": "3.1.3",
+      "summary": "Cross-site scripting through the xmlattr filter.",
+      "report_code": "VULN-0036-HW9-14"
+    },
+    {
+      "package": "tar",
+      "cve": "CVE-2021-32803",
+      "severity": "high",
+      "affected_versions": ">= 6.0.0, < 6.1.2",
+      "fixed_version": "6.1.2",
+      "summary": "Arbitrary file creation or overwrite through symbolic-link poisoning.",
+      "report_code": "VULN-0036-HW9-15"
+    },
+    {
+      "package": "protobufjs",
+      "cve": "CVE-2023-36665",
+      "severity": "critical",
+      "affected_versions": ">= 7.0.0, < 7.2.4",
+      "fixed_version": "7.2.4",
+      "summary": "Prototype pollution through crafted protobuf definitions.",
+      "report_code": "VULN-0036-HW9-16"
+    },
+    {
+      "package": "xml2js",
+      "cve": "CVE-2023-0842",
+      "severity": "medium",
+      "affected_versions": "< 0.5.0",
+      "fixed_version": "0.5.0",
+      "summary": "Prototype pollution through the __proto__ key in parsed XML.",
+      "report_code": "VULN-0036-HW9-17"
+    },
+    {
+      "package": "urllib3",
+      "cve": "CVE-2023-45803",
+      "severity": "medium",
+      "affected_versions": "< 1.26.18",
+      "fixed_version": "1.26.18",
+      "summary": "Request body not removed when a 303 redirect changes the method to GET.",
+      "report_code": "VULN-0036-HW9-18"
+    },
+    {
+      "package": "golang.org/x/net",
+      "cve": "CVE-2023-44487",
+      "severity": "high",
+      "affected_versions": "< 0.17.0",
+      "fixed_version": "0.17.0",
+      "summary": "HTTP/2 rapid reset denial of service.",
+      "report_code": "VULN-0036-HW9-19"
+    },
+    {
+      "package": "moment",
+      "cve": "CVE-2022-31129",
+      "severity": "high",
+      "affected_versions": ">= 2.18.0, < 2.29.4",
+      "fixed_version": "2.29.4",
+      "summary": "Regular expression denial of service when parsing RFC 2822 dates.",
+      "report_code": "VULN-0036-HW9-20"
+    },
+    {
+      "package": "follow-redirects",
+      "cve": "CVE-2024-28849",
+      "severity": "medium",
+      "affected_versions": "< 1.15.6",
+      "fixed_version": "1.15.6",
+      "summary": "Proxy-Authorization header kept across hosts on redirect.",
+      "report_code": "VULN-0036-HW9-21"
+    },
+    {
+      "package": "postcss",
+      "cve": "CVE-2023-44270",
+      "severity": "medium",
+      "affected_versions": "< 8.4.31",
+      "fixed_version": "8.4.31",
+      "summary": "Line-return parsing error that lets crafted CSS inject comments.",
+      "report_code": "VULN-0036-HW9-22"
+    },
+    {
+      "package": "word-wrap",
+      "cve": "CVE-2023-26115",
+      "severity": "medium",
+      "affected_versions": "< 1.2.4",
+      "fixed_version": "1.2.4",
+      "summary": "Regular expression denial of service in the wrap function.",
+      "report_code": "VULN-0036-HW9-23"
+    }
+  ]
+}

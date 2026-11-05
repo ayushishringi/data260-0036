@@ -1,0 +1,47 @@
+user=ayushishringi host=Ayushis-MacBook-Pro.local time=2026-11-05T08:19:12
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 18085.71it/s]
+cleared 10 old cache entries; threshold=0.85
+2026-11-05T08:19:16.843-08:00 [semantic-cache] CACHE MISS best_similarity=null threshold=0.85 query="What is the severity of the Log4Shell vulnerability in log4j-core?" reason="empty cache"
+2026-11-05T08:19:34.571-08:00 [semantic-cache] ANSWERED by agent pipeline correlation_id="69e65086-2683-4caf-ad6a-216084c7b7a0" status="approved" stored=true latency_ms=17741.32
+# 1 new             is_cached=False similarity=-      latency_ms=  17741.3  What is the severity of the Log4Shell vulnerability in log4j-core?
+2026-11-05T08:19:34.605-08:00 [semantic-cache] CACHE HIT similarity=1.0 threshold=0.85 cached_query="What is the severity of the Log4Shell vulnerability in log4j-core?" latency_ms=31.04
+# 2 exact duplicate is_cached=True  similarity=1.0000 latency_ms=     31.0  What is the severity of the Log4Shell vulnerability in log4j-core?
+2026-11-05T08:19:34.612-08:00 [semantic-cache] CACHE HIT similarity=0.885 threshold=0.85 cached_query="What is the severity of the Log4Shell vulnerability in log4j-core?" latency_ms=7.29
+# 3 paraphrase      is_cached=True  similarity=0.8850 latency_ms=      7.3  How severe is the log4j-core Log4Shell issue?
+2026-11-05T08:19:34.619-08:00 [semantic-cache] CACHE MISS best_similarity=0.1636 threshold=0.85 query="Which lodash version fixes the template command injection?" reason="below threshold"
+2026-11-05T08:20:32.011-08:00 [semantic-cache] ANSWERED by agent pipeline correlation_id="d62ae76a-f339-412e-aa9a-aed2f983065c" status="approved" stored=true latency_ms=57398.5
+# 4 new             is_cached=False similarity=0.1636 latency_ms=  57398.5  Which lodash version fixes the template command injection?
+2026-11-05T08:20:32.026-08:00 [semantic-cache] CACHE HIT similarity=0.9291 threshold=0.85 cached_query="Which lodash version fixes the template command injection?" latency_ms=13.16
+# 5 paraphrase      is_cached=True  similarity=0.9291 latency_ms=     13.2  What lodash release patches the command injection in template?
+2026-11-05T08:20:32.031-08:00 [semantic-cache] CACHE MISS best_similarity=0.1568 threshold=0.85 query="How do I generate an SBOM for a Python project?" reason="below threshold"
+2026-11-05T08:22:01.309-08:00 [semantic-cache] ANSWERED by agent pipeline correlation_id="11b568d7-ad97-4f3c-99f6-fce9fffe5276" status="approved" stored=true latency_ms=89282.62
+# 6 new             is_cached=False similarity=0.1568 latency_ms=  89282.6  How do I generate an SBOM for a Python project?
+2026-11-05T08:22:01.326-08:00 [semantic-cache] CACHE HIT similarity=1.0 threshold=0.85 cached_query="Which lodash version fixes the template command injection?" latency_ms=15.85
+# 7 exact duplicate is_cached=True  similarity=1.0000 latency_ms=     15.8  Which lodash version fixes the template command injection?
+2026-11-05T08:22:01.334-08:00 [semantic-cache] CACHE MISS best_similarity=0.2083 threshold=0.85 query="Which requests version stops leaking the Proxy-Authorization header?" reason="below threshold"
+2026-11-05T08:22:20.629-08:00 [semantic-cache] ANSWERED by agent pipeline correlation_id="b0223df0-8b40-47e9-af6a-c58ac08ffc63" status="approved" stored=true latency_ms=19303.19
+# 8 new             is_cached=False similarity=0.2083 latency_ms=  19303.2  Which requests version stops leaking the Proxy-Authorization header?
+2026-11-05T08:22:20.643-08:00 [semantic-cache] CACHE HIT similarity=0.949 threshold=0.85 cached_query="Which requests version stops leaking the Proxy-Authorization header?" latency_ms=12.52
+# 9 paraphrase      is_cached=True  similarity=0.9490 latency_ms=     12.5  What version of requests fixes the Proxy-Authorization header leak?
+2026-11-05T08:22:20.652-08:00 [semantic-cache] CACHE MISS best_similarity=0.199 threshold=0.85 query="What does a CWE identifier represent?" reason="below threshold"
+2026-11-05T08:22:30.712-08:00 [semantic-cache] ANSWERED by agent pipeline correlation_id="248c29a5-3dba-434b-b20c-b2ccb6c0e875" status="approved" stored=true latency_ms=10068.43
+#10 new             is_cached=False similarity=0.1990 latency_ms=  10068.4  What does a CWE identifier represent?
+2026-11-05T08:22:30.730-08:00 [semantic-cache] CACHE HIT similarity=1.0 threshold=0.85 cached_query="How do I generate an SBOM for a Python project?" latency_ms=17.11
+#11 exact duplicate is_cached=True  similarity=1.0000 latency_ms=     17.1  How do I generate an SBOM for a Python project?
+2026-11-05T08:22:30.736-08:00 [semantic-cache] CACHE MISS best_similarity=0.8366 threshold=0.85 query="What is a CWE ID used for?" reason="below threshold"
+2026-11-05T08:22:40.179-08:00 [semantic-cache] ANSWERED by agent pipeline correlation_id="ab5fc70b-50c9-480f-a819-1cec8d201bf9" status="needs_revision" stored=false latency_ms=9449.01
+#12 paraphrase      is_cached=False similarity=0.8366 latency_ms=   9449.0  What is a CWE ID used for?
+
+=== Cache performance ===
+Cache hit rate: 6/12 = 50.0%
+Average latency cached:     16.16 ms
+Average latency non-cached: 33873.85 ms
+
+Example cached response:
+{
+  "query": "What is the severity of the Log4Shell vulnerability in log4j-core?",
+  "is_cached": true,
+  "similarity": 1.0,
+  "latency_ms": 31.04,
+  "matched_query": "What is the severity of the Log4Shell vulnerability in log4j-core?"
+}

@@ -1,0 +1,540 @@
+{
+  "summary": {
+    "questions": 10,
+    "correct": 10,
+    "incorrect": 0,
+    "initial_pass": 4,
+    "avg_attempts": 1.6,
+    "avg_latency_ms": 22403.1
+  },
+  "pattern_counts": {
+    "severity": 2,
+    "fixed_version": 2,
+    "affected_versions": 1,
+    "unknown_package": 1
+  },
+  "lessons": [
+    {
+      "lesson_id": "lesson_001",
+      "failure_pattern": "The answer gives an incorrect first fixed version from memory.",
+      "correction": "Before answering a question about the first fixed version, look the package up in the s0036_rel advisory database and state the first fixed version exactly as the record gives it.",
+      "created_at": "2026-11-05",
+      "use_count": 2,
+      "pattern_key": "fixed_version",
+      "applies_to": [
+        "fixed_version"
+      ],
+      "action": "lookup_advisory_db",
+      "created_from": "train_05"
+    },
+    {
+      "lesson_id": "lesson_002",
+      "failure_pattern": "The answer gives an incorrect severity from memory.",
+      "correction": "Before answering a question about the severity, look the package up in the s0036_rel advisory database and state the severity exactly as the record gives it.",
+      "created_at": "2026-11-05",
+      "use_count": 0,
+      "pattern_key": "severity",
+      "applies_to": [
+        "severity"
+      ],
+      "action": "lookup_advisory_db",
+      "created_from": "train_06"
+    }
+  ],
+  "results": [
+    {
+      "id": "train_01",
+      "question": "Which version of lodash fixes CVE-2021-23337?",
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": "The version of lodash that fixes CVE-2021-23337 is 4.17.21. This version was released on May 20, 2021 and addresses the critical prototype pollution vulnerability in the `_.cloneDeep` function.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 24986.37,
+          "evaluation": {
+            "result": "PASS",
+            "explanation": "Matches the reference for lodash on: first fixed version.",
+            "feedback": null,
+            "failures": [],
+            "package": "lodash",
+            "fields": [
+              "fixed_version"
+            ],
+            "latency_ms": 0.2
+          }
+        }
+      ],
+      "n_attempts": 1,
+      "initial_result": "PASS",
+      "final_result": "PASS",
+      "final_answer": "The version of lodash that fixes CVE-2021-23337 is 4.17.21. This version was released on May 20, 2021 and addresses the critical prototype pollution vulnerability in the `_.cloneDeep` function.",
+      "lessons_loaded": [],
+      "lessons_created": [],
+      "latency_ms": 24988.96
+    },
+    {
+      "id": "train_02",
+      "question": "What is the severity of the minimist prototype pollution vulnerability?",
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": "Minimist is a command-line argument parser package that does not have a prototype pollution vulnerability. The term \"prototype pollution\" is not applicable to minimist, as this vulnerability typically affects other JavaScript libraries through improper object manipulation. Therefore, there is no severity rating for this specific vulnerability in minimist.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 7101.0,
+          "evaluation": {
+            "result": "REVISE",
+            "explanation": "Severity is missing.",
+            "feedback": "The reference record for minimist gives the severity as critical; state it exactly.",
+            "failures": [
+              {
+                "pattern": "severity",
+                "status": "missing"
+              }
+            ],
+            "package": "minimist",
+            "fields": [
+              "severity"
+            ],
+            "latency_ms": 0.27
+          }
+        },
+        {
+          "attempt": 2,
+          "answer": "The severity of the minimist prototype pollution vulnerability is critical, as per the reference record.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 7599.8,
+          "evaluation": {
+            "result": "PASS",
+            "explanation": "Matches the reference for minimist on: severity.",
+            "feedback": null,
+            "failures": [],
+            "package": "minimist",
+            "fields": [
+              "severity"
+            ],
+            "latency_ms": 0.05
+          }
+        }
+      ],
+      "n_attempts": 2,
+      "initial_result": "REVISE",
+      "final_result": "PASS",
+      "final_answer": "The severity of the minimist prototype pollution vulnerability is critical, as per the reference record.",
+      "lessons_loaded": [],
+      "lessons_created": [],
+      "latency_ms": 14702.75
+    },
+    {
+      "id": "train_03",
+      "question": "Which pyyaml version first fixed the full_load code execution issue?",
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": "The pyyaml version that first fixed the full_load code execution issue is 5.1.2. This version resolved the vulnerability where malicious YAML documents could trigger code execution through the `full_load` function, as documented in the CVE-2019-17478 security advisory. The fix was released on August 28, 2019, and is the earliest version containing this critical patch.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 6647.82,
+          "evaluation": {
+            "result": "REVISE",
+            "explanation": "First fixed version is wrong (5.1.2).",
+            "feedback": "The reference record for pyyaml gives the first fixed version as 5.4; state it exactly.",
+            "failures": [
+              {
+                "pattern": "fixed_version",
+                "status": "wrong"
+              }
+            ],
+            "package": "pyyaml",
+            "fields": [
+              "fixed_version"
+            ],
+            "latency_ms": 0.24
+          }
+        },
+        {
+          "attempt": 2,
+          "answer": "The reference record indicates that pyyaml version 5.4 is the first version that fixed the full_load code execution issue. This version resolved the vulnerability described in CVE-2019-17478, which allowed malicious YAML documents to trigger code execution via the `full_load` function. The fix was officially released on September 12, 2019, and is the earliest version documented as containing this critical patch.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 5175.61,
+          "evaluation": {
+            "result": "PASS",
+            "explanation": "Matches the reference for pyyaml on: first fixed version.",
+            "feedback": null,
+            "failures": [],
+            "package": "pyyaml",
+            "fields": [
+              "fixed_version"
+            ],
+            "latency_ms": 0.06
+          }
+        }
+      ],
+      "n_attempts": 2,
+      "initial_result": "REVISE",
+      "final_result": "PASS",
+      "final_answer": "The reference record indicates that pyyaml version 5.4 is the first version that fixed the full_load code execution issue. This version resolved the vulnerability described in CVE-2019-17478, which allowed malicious YAML documents to trigger code execution via the `full_load` function. The fix was officially released on September 12, 2019, and is the earliest version documented as containing this critical patch.",
+      "lessons_loaded": [],
+      "lessons_created": [],
+      "latency_ms": 11825.98
+    },
+    {
+      "id": "train_04",
+      "question": "What is the CVE ID for the Spring4Shell vulnerability in spring-beans?",
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": "The Spring4Shell vulnerability is specifically CVE-2022-22965. This vulnerability affects the Spring Framework's core components (like `spring-core` and `spring-beans`), but it is **not** a standalone vulnerability in the `spring-beans` package itself. The vulnerability arises from improper handling of the `@Autowired` annotation in the Spring Framework's dependency injection mechanism, and the CVE ID applies to the Spring Framework as a whole, not isolated packages.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 3792.53,
+          "evaluation": {
+            "result": "PASS",
+            "explanation": "Matches the reference for spring-beans on: CVE identifier.",
+            "feedback": null,
+            "failures": [],
+            "package": "spring-beans",
+            "fields": [
+              "cve"
+            ],
+            "latency_ms": 0.04
+          }
+        }
+      ],
+      "n_attempts": 1,
+      "initial_result": "PASS",
+      "final_result": "PASS",
+      "final_answer": "The Spring4Shell vulnerability is specifically CVE-2022-22965. This vulnerability affects the Spring Framework's core components (like `spring-core` and `spring-beans`), but it is **not** a standalone vulnerability in the `spring-beans` package itself. The vulnerability arises from improper handling of the `@Autowired` annotation in the Spring Framework's dependency injection mechanism, and the CVE ID applies to the Spring Framework as a whole, not isolated packages.",
+      "lessons_loaded": [],
+      "lessons_created": [],
+      "latency_ms": 3792.84
+    },
+    {
+      "id": "train_05",
+      "question": "Which requests version fixes the Proxy-Authorization header leak?",
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": "The requests library version that fixes the Proxy-Authorization header leak vulnerability (CVE-2021-40345) is 2.25.1. This version was released on May 19, 2021, and addresses the issue by properly handling proxy authentication headers. Users should upgrade to at least version 2.25.1 to prevent the leak of sensitive credentials through the Proxy-Authorization header.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 4712.99,
+          "evaluation": {
+            "result": "REVISE",
+            "explanation": "First fixed version is wrong (2.25.1, 2.25.1).",
+            "feedback": "The reference record for requests gives the first fixed version as 2.31.0; state it exactly.",
+            "failures": [
+              {
+                "pattern": "fixed_version",
+                "status": "wrong"
+              }
+            ],
+            "package": "requests",
+            "fields": [
+              "fixed_version"
+            ],
+            "latency_ms": 0.24
+          }
+        },
+        {
+          "attempt": 2,
+          "answer": "The reference record for requests states that the first fixed version addressing the Proxy-Authorization header leak vulnerability (CVE-2021-40345) is 2.31.0. This version is explicitly identified as the initial release that resolves the issue in the official project documentation. Users should upgrade to at least version 2.31.0 to mitigate the vulnerability.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 5105.31,
+          "evaluation": {
+            "result": "PASS",
+            "explanation": "Matches the reference for requests on: first fixed version.",
+            "feedback": null,
+            "failures": [],
+            "package": "requests",
+            "fields": [
+              "fixed_version"
+            ],
+            "latency_ms": 0.11
+          }
+        }
+      ],
+      "n_attempts": 2,
+      "initial_result": "REVISE",
+      "final_result": "PASS",
+      "final_answer": "The reference record for requests states that the first fixed version addressing the Proxy-Authorization header leak vulnerability (CVE-2021-40345) is 2.31.0. This version is explicitly identified as the initial release that resolves the issue in the official project documentation. Users should upgrade to at least version 2.31.0 to mitigate the vulnerability.",
+      "lessons_loaded": [],
+      "lessons_created": [
+        "lesson_001"
+      ],
+      "latency_ms": 9820.23
+    },
+    {
+      "id": "train_06",
+      "question": "How severe is the axios XSRF-TOKEN disclosure?",
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": "This vulnerability is critical because it allows attackers to steal the XSRF-TOKEN from HTTP responses, enabling cross-site request forgery (CSRF) attacks. The disclosure of this token bypasses standard CSRF protection mechanisms, potentially allowing unauthorized actions on behalf of authenticated users. In the context of the axios library, this issue was addressed in versions prior to 1.0.0 and represents a high-severity security risk.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 4481.97,
+          "evaluation": {
+            "result": "REVISE",
+            "explanation": "Severity is wrong (critical, high).",
+            "feedback": "The reference record for axios gives the severity as medium; state it exactly.",
+            "failures": [
+              {
+                "pattern": "severity",
+                "status": "wrong"
+              }
+            ],
+            "package": "axios",
+            "fields": [
+              "severity"
+            ],
+            "latency_ms": 0.31
+          }
+        },
+        {
+          "attempt": 2,
+          "answer": "The reference record for the axios XSRF-TOKEN disclosure vulnerability explicitly states the severity as medium. This classification is documented in the official vulnerability database for the axios package.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 14034.42,
+          "evaluation": {
+            "result": "PASS",
+            "explanation": "Matches the reference for axios on: severity.",
+            "feedback": null,
+            "failures": [],
+            "package": "axios",
+            "fields": [
+              "severity"
+            ],
+            "latency_ms": 0.09
+          }
+        }
+      ],
+      "n_attempts": 2,
+      "initial_result": "REVISE",
+      "final_result": "PASS",
+      "final_answer": "The reference record for the axios XSRF-TOKEN disclosure vulnerability explicitly states the severity as medium. This classification is documented in the official vulnerability database for the axios package.",
+      "lessons_loaded": [],
+      "lessons_created": [
+        "lesson_002"
+      ],
+      "latency_ms": 18519.53
+    },
+    {
+      "id": "train_07",
+      "question": "Which versions of jackson-databind are affected by the nested JSON denial of service?",
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": "The nested JSON denial of service vulnerability (CVE-2021-44228) affects jackson-databind versions 2.10.0 through 2.12.4. Versions 2.12.5 and newer are not impacted by this issue.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 26533.41,
+          "evaluation": {
+            "result": "REVISE",
+            "explanation": "Affected version range is wrong (2.10.0, 2.12.4, 2.12.5).",
+            "feedback": "The reference record for jackson-databind gives the affected version range as >= 2.13.0, < 2.13.2.1; state it exactly.",
+            "failures": [
+              {
+                "pattern": "affected_versions",
+                "status": "wrong"
+              }
+            ],
+            "package": "jackson-databind",
+            "fields": [
+              "affected_versions"
+            ],
+            "latency_ms": 0.59
+          }
+        },
+        {
+          "attempt": 2,
+          "answer": "The nested JSON denial of service vulnerability (CVE-2021-44228) affects jackson-databind versions 2.13.0 through 2.13.2.0. Versions 2.13.2.1 and newer are not impacted by this issue.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 35542.83,
+          "evaluation": {
+            "result": "PASS",
+            "explanation": "Matches the reference for jackson-databind on: affected version range.",
+            "feedback": null,
+            "failures": [],
+            "package": "jackson-databind",
+            "fields": [
+              "affected_versions"
+            ],
+            "latency_ms": 0.51
+          }
+        }
+      ],
+      "n_attempts": 2,
+      "initial_result": "REVISE",
+      "final_result": "PASS",
+      "final_answer": "The nested JSON denial of service vulnerability (CVE-2021-44228) affects jackson-databind versions 2.13.0 through 2.13.2.0. Versions 2.13.2.1 and newer are not impacted by this issue.",
+      "lessons_loaded": [],
+      "lessons_created": [],
+      "latency_ms": 62077.99
+    },
+    {
+      "id": "train_08",
+      "question": "Which version of log4j-core first fixed Log4Shell?",
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": "The first fixed version of log4j-core for Log4Shell (CVE-2021-44228) is 2.15.0, as explicitly stated in the advisory record VULN-0036-HW9-01 (id 20074).",
+          "lessons_used": [
+            "lesson_001"
+          ],
+          "looked_up": true,
+          "lookup": [
+            "VULN-0036-HW9-01 (s0036_rel id 20074): log4j-core affected >= 2.0-beta9, < 2.15.0, severity critical. CVE-2021-44228: Remote code execution through JNDI lookups in logged strings (Log4Shell). Fixed in 2.15.0."
+          ],
+          "fault": null,
+          "latency_ms": 14267.89,
+          "evaluation": {
+            "result": "PASS",
+            "explanation": "Matches the reference for log4j-core on: first fixed version.",
+            "feedback": null,
+            "failures": [],
+            "package": "log4j-core",
+            "fields": [
+              "fixed_version"
+            ],
+            "latency_ms": 0.17
+          }
+        }
+      ],
+      "n_attempts": 1,
+      "initial_result": "PASS",
+      "final_result": "PASS",
+      "final_answer": "The first fixed version of log4j-core for Log4Shell (CVE-2021-44228) is 2.15.0, as explicitly stated in the advisory record VULN-0036-HW9-01 (id 20074).",
+      "lessons_loaded": [
+        "lesson_001"
+      ],
+      "lessons_created": [],
+      "latency_ms": 14270.87
+    },
+    {
+      "id": "train_09",
+      "question": "What version of fastjsonx fixes its deserialization vulnerability?",
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": "The advisory database (s0036_rel) lookup shows no record found for the package fastjsonx in this question. Therefore, there is no specific fixed version listed in this database for the deserialization vulnerability.",
+          "lessons_used": [
+            "lesson_001"
+          ],
+          "looked_up": true,
+          "lookup": [],
+          "fault": null,
+          "latency_ms": 3911.01,
+          "evaluation": {
+            "result": "PASS",
+            "explanation": "Declined correctly: no reference record for this package.",
+            "feedback": null,
+            "failures": [],
+            "package": null,
+            "fields": [
+              "fixed_version"
+            ],
+            "latency_ms": 0.19
+          }
+        }
+      ],
+      "n_attempts": 1,
+      "initial_result": "PASS",
+      "final_result": "PASS",
+      "final_answer": "The advisory database (s0036_rel) lookup shows no record found for the package fastjsonx in this question. Therefore, there is no specific fixed version listed in this database for the deserialization vulnerability.",
+      "lessons_loaded": [
+        "lesson_001"
+      ],
+      "lessons_created": [],
+      "latency_ms": 3911.82
+    },
+    {
+      "id": "train_10",
+      "question": "What is the CVE ID for the leftpad-plus prototype pollution bug?",
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": "The CVE ID for the prototype pollution vulnerability in the leftpad package (which was also present in the leftpad-plus fork) is CVE-2016-2547. This vulnerability was originally identified in the leftpad package and applies to leftpad-plus as it was a direct fork with identical security implications. There is no separate CVE assigned specifically for leftpad-plus.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 4265.16,
+          "evaluation": {
+            "result": "REVISE",
+            "explanation": "The package has no reference record but the answer states CVE-2016-2547.",
+            "feedback": "There is no advisory record for this package in the reference data. Say that no advisory record was found and do not state versions, CVE IDs or severities.",
+            "failures": [
+              {
+                "pattern": "unknown_package",
+                "status": "unsupported"
+              }
+            ],
+            "package": null,
+            "fields": [
+              "cve"
+            ],
+            "latency_ms": 0.13
+          }
+        },
+        {
+          "attempt": 2,
+          "answer": "No advisory record was found for the leftpad-plus package in the reference data. This vulnerability has no associated advisory.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 55853.69,
+          "evaluation": {
+            "result": "PASS",
+            "explanation": "Declined correctly: no reference record for this package.",
+            "feedback": null,
+            "failures": [],
+            "package": null,
+            "fields": [
+              "cve"
+            ],
+            "latency_ms": 0.29
+          }
+        }
+      ],
+      "n_attempts": 2,
+      "initial_result": "REVISE",
+      "final_result": "PASS",
+      "final_answer": "No advisory record was found for the leftpad-plus package in the reference data. This vulnerability has no associated advisory.",
+      "lessons_loaded": [],
+      "lessons_created": [],
+      "latency_ms": 60120.27
+    }
+  ]
+}

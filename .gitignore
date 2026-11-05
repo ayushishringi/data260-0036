@@ -6,3 +6,5 @@ __pycache__/
 reports/hw01/raw/*.tmp
 .hw8_state/
 reports/hw08/logs/
+reports/hw09/logs/
+reports/hw09/raw/runs/*/jsonl/

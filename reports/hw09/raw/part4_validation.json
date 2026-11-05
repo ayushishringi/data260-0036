@@ -1,0 +1,1079 @@
+{
+  "baseline_results": {
+    "step": "no lessons",
+    "summary": {
+      "questions": 10,
+      "correct": 10,
+      "incorrect": 0,
+      "initial_pass": 1,
+      "avg_attempts": 1.9,
+      "avg_latency_ms": 31626.9
+    }
+  },
+  "history": [
+    {
+      "step": "no lessons",
+      "summary": {
+        "questions": 10,
+        "correct": 10,
+        "incorrect": 0,
+        "initial_pass": 1,
+        "avg_attempts": 1.9,
+        "avg_latency_ms": 31626.9
+      }
+    },
+    {
+      "step": "+lesson_001",
+      "summary": {
+        "questions": 10,
+        "correct": 10,
+        "incorrect": 0,
+        "initial_pass": 5,
+        "avg_attempts": 1.5,
+        "avg_latency_ms": 23481.0
+      },
+      "keep": true
+    },
+    {
+      "step": "+lesson_002",
+      "summary": {
+        "questions": 10,
+        "correct": 10,
+        "incorrect": 0,
+        "initial_pass": 7,
+        "avg_attempts": 1.3,
+        "avg_latency_ms": 21865.0
+      },
+      "keep": true
+    }
+  ],
+  "decisions": [
+    {
+      "lesson_id": "lesson_001",
+      "pattern_key": "fixed_version",
+      "summary_before": {
+        "questions": 10,
+        "correct": 10,
+        "incorrect": 0,
+        "initial_pass": 1,
+        "avg_attempts": 1.9,
+        "avg_latency_ms": 31626.9
+      },
+      "summary_after": {
+        "questions": 10,
+        "correct": 10,
+        "incorrect": 0,
+        "initial_pass": 5,
+        "avg_attempts": 1.5,
+        "avg_latency_ms": 23481.0
+      },
+      "checks": {
+        "failures_not_worse": true,
+        "previously_correct_stay_correct": true,
+        "no_new_unsupported_answers": true
+      },
+      "keep": true,
+      "regressed_ids": [],
+      "initial_fail_before": [
+        "val_01",
+        "val_02",
+        "val_03",
+        "val_04",
+        "val_05",
+        "val_06",
+        "val_07",
+        "val_09",
+        "val_10"
+      ],
+      "initial_fail_after": [
+        "val_02",
+        "val_04",
+        "val_05",
+        "val_07",
+        "val_10"
+      ],
+      "final_fail_before": [],
+      "final_fail_after": [],
+      "unsupported_after": [],
+      "results_after": [
+        {
+          "id": "val_01",
+          "question": "Which version of node-fetch fixes the cookie leak on redirect?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The advisory database (s0036_rel) states that the cookie leak on redirect (CVE-2022-0235) is fixed in node-fetch version 2.6.7. This version is the first to resolve the vulnerability as documented in the advisory record VULN-0036-HW9-09 (id 20082).",
+              "lessons_used": [
+                "lesson_001"
+              ],
+              "looked_up": true,
+              "lookup": [
+                "VULN-0036-HW9-09 (s0036_rel id 20082): node-fetch affected < 2.6.7, severity high. CVE-2022-0235: Cookie and Authorization headers forwarded to a third-party host on redirect. Fixed in 2.6.7."
+              ],
+              "fault": null,
+              "latency_ms": 23941.46,
+              "evaluation": {
+                "result": "PASS",
+                "explanation": "Matches the reference for node-fetch on: first fixed version.",
+                "feedback": null,
+                "failures": [],
+                "package": "node-fetch",
+                "fields": [
+                  "fixed_version"
+                ],
+                "latency_ms": 0.25
+              }
+            }
+          ],
+          "n_attempts": 1,
+          "initial_result": "PASS",
+          "final_result": "PASS",
+          "final_answer": "The advisory database (s0036_rel) states that the cookie leak on redirect (CVE-2022-0235) is fixed in node-fetch version 2.6.7. This version is the first to resolve the vulnerability as documented in the advisory record VULN-0036-HW9-09 (id 20082).",
+          "lessons_loaded": [
+            "lesson_001"
+          ],
+          "lessons_created": [],
+          "latency_ms": 23943.49
+        },
+        {
+          "id": "val_02",
+          "question": "What is the severity of the ws header-count denial of service?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The vulnerability is critical severity. It affects the ws npm package (version 7.0.0-7.1.0) and allows remote attackers to cause a denial of service by manipulating header counts in websocket communications. This critical rating comes from the CVE database (CVE-2020-15522).",
+              "lessons_used": [],
+              "looked_up": false,
+              "lookup": null,
+              "fault": null,
+              "latency_ms": 5206.65,
+              "evaluation": {
+                "result": "REVISE",
+                "explanation": "Severity is wrong (critical).",
+                "feedback": "The reference record for ws gives the severity as high; state it exactly.",
+                "failures": [
+                  {
+                    "pattern": "severity",
+                    "status": "wrong"
+                  }
+                ],
+                "package": "ws",
+                "fields": [
+                  "severity"
+                ],
+                "latency_ms": 0.14
+              }
+            },
+            {
+              "attempt": 2,
+              "answer": "The severity of the vulnerability (CVE-2020-15522) in the ws npm package (versions 7.0.0-7.1.0) is high. This high severity rating is explicitly recorded in the reference vulnerability database.",
+              "lessons_used": [],
+              "looked_up": false,
+              "lookup": null,
+              "fault": null,
+              "latency_ms": 20819.45,
+              "evaluation": {
+                "result": "PASS",
+                "explanation": "Matches the reference for ws on: severity.",
+                "feedback": null,
+                "failures": [],
+                "package": "ws",
+                "fields": [
+                  "severity"
+                ],
+                "latency_ms": 0.14
+              }
+            }
+          ],
+          "n_attempts": 2,
+          "initial_result": "REVISE",
+          "final_result": "PASS",
+          "final_answer": "The severity of the vulnerability (CVE-2020-15522) in the ws npm package (versions 7.0.0-7.1.0) is high. This high severity rating is explicitly recorded in the reference vulnerability database.",
+          "lessons_loaded": [],
+          "lessons_created": [],
+          "latency_ms": 26028.76
+        },
+        {
+          "id": "val_03",
+          "question": "Which express version fixes the open redirect vulnerability?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The first fixed version of express that resolves the open redirect vulnerability (CVE-2024-29041) is exactly 4.19.2, as stated in the advisory record VULN-0036-HW9-11 (s0036_rel id 20084). This version patch addresses the issue where malformed URLs passed to `res.location` and `res.redirect` could cause open redirects. The advisory specifies that all versions below 4.19.2 are affected by this vulnerability.",
+              "lessons_used": [
+                "lesson_001"
+              ],
+              "looked_up": true,
+              "lookup": [
+                "VULN-0036-HW9-11 (s0036_rel id 20084): express affected < 4.19.2, severity medium. CVE-2024-29041: Open redirect through malformed URLs passed to res.location and res.redirect. Fixed in 4.19.2."
+              ],
+              "fault": null,
+              "latency_ms": 3939.8,
+              "evaluation": {
+                "result": "PASS",
+                "explanation": "Matches the reference for express on: first fixed version.",
+                "feedback": null,
+                "failures": [],
+                "package": "express",
+                "fields": [
+                  "fixed_version"
+                ],
+                "latency_ms": 0.06
+              }
+            }
+          ],
+          "n_attempts": 1,
+          "initial_result": "PASS",
+          "final_result": "PASS",
+          "final_answer": "The first fixed version of express that resolves the open redirect vulnerability (CVE-2024-29041) is exactly 4.19.2, as stated in the advisory record VULN-0036-HW9-11 (s0036_rel id 20084). This version patch addresses the issue where malformed URLs passed to `res.location` and `res.redirect` could cause open redirects. The advisory specifies that all versions below 4.19.2 are affected by this vulnerability.",
+          "lessons_loaded": [
+            "lesson_001"
+          ],
+          "lessons_created": [],
+          "latency_ms": 3940.53
+        },
+        {
+          "id": "val_04",
+          "question": "What is the CVE ID for the pillow ImageMath.eval code execution?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The CVE ID for the Pillow ImageMath.eval code execution vulnerability is CVE-2021-34542. This vulnerability allows arbitrary code execution via malicious input in the ImageMath.eval function. It affects Pillow versions prior to 9.2.0. The fix involves sanitizing input expressions to prevent code injection.",
+              "lessons_used": [],
+              "looked_up": false,
+              "lookup": null,
+              "fault": null,
+              "latency_ms": 3103.69,
+              "evaluation": {
+                "result": "REVISE",
+                "explanation": "CVE identifier is wrong (CVE-2021-34542).",
+                "feedback": "The reference record for pillow gives the CVE identifier as CVE-2023-50447; state it exactly.",
+                "failures": [
+                  {
+                    "pattern": "cve",
+                    "status": "wrong"
+                  }
+                ],
+                "package": "pillow",
+                "fields": [
+                  "cve"
+                ],
+                "latency_ms": 0.08
+              }
+            },
+            {
+              "attempt": 2,
+              "answer": "The correct CVE ID for the Pillow ImageMath.eval code execution vulnerability is CVE-2023-50447. This reference record explicitly identifies this CVE as the valid identifier for the issue.",
+              "lessons_used": [],
+              "looked_up": false,
+              "lookup": null,
+              "fault": null,
+              "latency_ms": 3805.72,
+              "evaluation": {
+                "result": "PASS",
+                "explanation": "Matches the reference for pillow on: CVE identifier.",
+                "feedback": null,
+                "failures": [],
+                "package": "pillow",
+                "fields": [
+                  "cve"
+                ],
+                "latency_ms": 0.08
+              }
+            }
+          ],
+          "n_attempts": 2,
+          "initial_result": "REVISE",
+          "final_result": "PASS",
+          "final_answer": "The correct CVE ID for the Pillow ImageMath.eval code execution vulnerability is CVE-2023-50447. This reference record explicitly identifies this CVE as the valid identifier for the issue.",
+          "lessons_loaded": [],
+          "lessons_created": [],
+          "latency_ms": 6911.89
+        },
+        {
+          "id": "val_05",
+          "question": "How severe is the django EmailValidator ReDoS?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The django EmailValidator ReDoS vulnerability is critical. It allows attackers to cause a denial of service by crafting malicious email inputs that trigger an infinite loop in Django's email validation regex. This affects Django versions 1.11 through 4.2, with patches released in later versions to mitigate the risk.",
+              "lessons_used": [],
+              "looked_up": false,
+              "lookup": null,
+              "fault": null,
+              "latency_ms": 2813.72,
+              "evaluation": {
+                "result": "REVISE",
+                "explanation": "Severity is wrong (critical).",
+                "feedback": "The reference record for django gives the severity as high; state it exactly.",
+                "failures": [
+                  {
+                    "pattern": "severity",
+                    "status": "wrong"
+                  }
+                ],
+                "package": "django",
+                "fields": [
+                  "severity"
+                ],
+                "latency_ms": 0.1
+              }
+            },
+            {
+              "attempt": 2,
+              "answer": "The django EmailValidator ReDoS vulnerability is rated high in severity by the reference record. This vulnerability allows attackers to cause a denial of service by crafting malicious email inputs that trigger an infinite loop in Django's email validation regex, affecting Django versions 1.11 through 4.2 with patches released in later versions.",
+              "lessons_used": [],
+              "looked_up": false,
+              "lookup": null,
+              "fault": null,
+              "latency_ms": 11003.12,
+              "evaluation": {
+                "result": "PASS",
+                "explanation": "Matches the reference for django on: severity.",
+                "feedback": null,
+                "failures": [],
+                "package": "django",
+                "fields": [
+                  "severity"
+                ],
+                "latency_ms": 0.63
+              }
+            }
+          ],
+          "n_attempts": 2,
+          "initial_result": "REVISE",
+          "final_result": "PASS",
+          "final_answer": "The django EmailValidator ReDoS vulnerability is rated high in severity by the reference record. This vulnerability allows attackers to cause a denial of service by crafting malicious email inputs that trigger an infinite loop in Django's email validation regex, affecting Django versions 1.11 through 4.2 with patches released in later versions.",
+          "lessons_loaded": [],
+          "lessons_created": [],
+          "latency_ms": 13821.17
+        },
+        {
+          "id": "val_06",
+          "question": "Which version of jinja2 patches the xmlattr XSS?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The first fixed version of jinja2 that patches the xmlattr XSS vulnerability (CVE-2024-22195) is 3.1.3. This version is explicitly stated in the advisory record VULN-0036-HW9-14 (s0036_rel id 20087).",
+              "lessons_used": [
+                "lesson_001"
+              ],
+              "looked_up": true,
+              "lookup": [
+                "VULN-0036-HW9-14 (s0036_rel id 20087): jinja2 affected < 3.1.3, severity medium. CVE-2024-22195: Cross-site scripting through the xmlattr filter. Fixed in 3.1.3."
+              ],
+              "fault": null,
+              "latency_ms": 38066.85,
+              "evaluation": {
+                "result": "PASS",
+                "explanation": "Matches the reference for jinja2 on: first fixed version.",
+                "feedback": null,
+                "failures": [],
+                "package": "jinja2",
+                "fields": [
+                  "fixed_version"
+                ],
+                "latency_ms": 0.32
+              }
+            }
+          ],
+          "n_attempts": 1,
+          "initial_result": "PASS",
+          "final_result": "PASS",
+          "final_answer": "The first fixed version of jinja2 that patches the xmlattr XSS vulnerability (CVE-2024-22195) is 3.1.3. This version is explicitly stated in the advisory record VULN-0036-HW9-14 (s0036_rel id 20087).",
+          "lessons_loaded": [
+            "lesson_001"
+          ],
+          "lessons_created": [],
+          "latency_ms": 38070.36
+        },
+        {
+          "id": "val_07",
+          "question": "Which versions of tar are affected by the symlink file overwrite?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The symlink file overwrite vulnerability (CVE-2021-44634) affects all tar versions prior to 1.32, specifically versions 1.0 through 1.31 inclusive. This vulnerability allows an attacker to overwrite a file via a symlink in the archive. Versions 1.32 and later are not affected as they include the fix.",
+              "lessons_used": [],
+              "looked_up": false,
+              "lookup": null,
+              "fault": null,
+              "latency_ms": 40673.59,
+              "evaluation": {
+                "result": "REVISE",
+                "explanation": "Affected version range is wrong (1.32, 1.0, 1.31, 1.32).",
+                "feedback": "The reference record for tar gives the affected version range as >= 6.0.0, < 6.1.2; state it exactly.",
+                "failures": [
+                  {
+                    "pattern": "affected_versions",
+                    "status": "wrong"
+                  }
+                ],
+                "package": "tar",
+                "fields": [
+                  "affected_versions"
+                ],
+                "latency_ms": 0.36
+              }
+            },
+            {
+              "attempt": 2,
+              "answer": "The symlink file overwrite vulnerability (CVE-2021-44634) affects tar versions >= 6.0.0 and < 6.1.2. This vulnerability allows an attacker to overwrite a file via a symlink in the archive.",
+              "lessons_used": [],
+              "looked_up": false,
+              "lookup": null,
+              "fault": null,
+              "latency_ms": 31169.95,
+              "evaluation": {
+                "result": "PASS",
+                "explanation": "Matches the reference for tar on: affected version range.",
+                "feedback": null,
+                "failures": [],
+                "package": "tar",
+                "fields": [
+                  "affected_versions"
+                ],
+                "latency_ms": 0.29
+              }
+            }
+          ],
+          "n_attempts": 2,
+          "initial_result": "REVISE",
+          "final_result": "PASS",
+          "final_answer": "The symlink file overwrite vulnerability (CVE-2021-44634) affects tar versions >= 6.0.0 and < 6.1.2. This vulnerability allows an attacker to overwrite a file via a symlink in the archive.",
+          "lessons_loaded": [],
+          "lessons_created": [],
+          "latency_ms": 71845.14
+        },
+        {
+          "id": "val_08",
+          "question": "What is the severity of the protobufjs prototype pollution?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The severity of the protobufjs prototype pollution vulnerability is high. This issue allows attackers to pollute JavaScript prototypes, potentially leading to remote code execution if exploited. It was classified as high severity by the security community due to the critical impact on application security.",
+              "lessons_used": [],
+              "looked_up": false,
+              "lookup": null,
+              "fault": null,
+              "latency_ms": 4528.01,
+              "evaluation": {
+                "result": "PASS",
+                "explanation": "Matches the reference for protobufjs on: severity.",
+                "feedback": null,
+                "failures": [],
+                "package": "protobufjs",
+                "fields": [
+                  "severity"
+                ],
+                "latency_ms": 0.08
+              }
+            }
+          ],
+          "n_attempts": 1,
+          "initial_result": "PASS",
+          "final_result": "PASS",
+          "final_answer": "The severity of the protobufjs prototype pollution vulnerability is high. This issue allows attackers to pollute JavaScript prototypes, potentially leading to remote code execution if exploited. It was classified as high severity by the security community due to the critical impact on application security.",
+          "lessons_loaded": [],
+          "lessons_created": [],
+          "latency_ms": 4528.18
+        },
+        {
+          "id": "val_09",
+          "question": "Which version of yamlparse-lite fixes its code injection bug?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The advisory database (s0036_rel) lookup shows no record found for the package \"yamlparse-lite\". Therefore, there is no documented fixed version for this package that addresses a code injection bug in the specified database.",
+              "lessons_used": [
+                "lesson_001"
+              ],
+              "looked_up": true,
+              "lookup": [],
+              "fault": null,
+              "latency_ms": 3181.44,
+              "evaluation": {
+                "result": "PASS",
+                "explanation": "Declined correctly: no reference record for this package.",
+                "feedback": null,
+                "failures": [],
+                "package": null,
+                "fields": [
+                  "fixed_version"
+                ],
+                "latency_ms": 0.1
+              }
+            }
+          ],
+          "n_attempts": 1,
+          "initial_result": "PASS",
+          "final_result": "PASS",
+          "final_answer": "The advisory database (s0036_rel) lookup shows no record found for the package \"yamlparse-lite\". Therefore, there is no documented fixed version for this package that addresses a code injection bug in the specified database.",
+          "lessons_loaded": [
+            "lesson_001"
+          ],
+          "lessons_created": [],
+          "latency_ms": 3184.59
+        },
+        {
+          "id": "val_10",
+          "question": "What is the severity of the netconfig-js command injection?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The vulnerability name \"netconfig-js command injection\" does not correspond to any recognized vulnerability in major open-source security databases like CVE or NVD. There is no widely documented package named \"netconfig-js\" with this specific vulnerability type. Therefore, the severity cannot be assessed for this non-existent vulnerability.",
+              "lessons_used": [],
+              "looked_up": false,
+              "lookup": null,
+              "fault": null,
+              "latency_ms": 3696.83,
+              "evaluation": {
+                "result": "REVISE",
+                "explanation": "The package has no reference record and the answer does not say so.",
+                "feedback": "There is no advisory record for this package in the reference data. Say that no advisory record was found and do not state versions, CVE IDs or severities.",
+                "failures": [
+                  {
+                    "pattern": "unknown_package",
+                    "status": "missing"
+                  }
+                ],
+                "package": null,
+                "fields": [
+                  "severity"
+                ],
+                "latency_ms": 0.19
+              }
+            },
+            {
+              "attempt": 2,
+              "answer": "No advisory record for the package 'netconfig-js' was found in the reference data. Therefore, the severity of the 'netconfig-js command injection' vulnerability cannot be determined.",
+              "lessons_used": [],
+              "looked_up": false,
+              "lookup": null,
+              "fault": null,
+              "latency_ms": 38835.93,
+              "evaluation": {
+                "result": "PASS",
+                "explanation": "Declined correctly: no reference record for this package.",
+                "feedback": null,
+                "failures": [],
+                "package": null,
+                "fields": [
+                  "severity"
+                ],
+                "latency_ms": 0.18
+              }
+            }
+          ],
+          "n_attempts": 2,
+          "initial_result": "REVISE",
+          "final_result": "PASS",
+          "final_answer": "No advisory record for the package 'netconfig-js' was found in the reference data. Therefore, the severity of the 'netconfig-js command injection' vulnerability cannot be determined.",
+          "lessons_loaded": [],
+          "lessons_created": [],
+          "latency_ms": 42535.8
+        }
+      ]
+    },
+    {
+      "lesson_id": "lesson_002",
+      "pattern_key": "severity",
+      "summary_before": {
+        "questions": 10,
+        "correct": 10,
+        "incorrect": 0,
+        "initial_pass": 5,
+        "avg_attempts": 1.5,
+        "avg_latency_ms": 23481.0
+      },
+      "summary_after": {
+        "questions": 10,
+        "correct": 10,
+        "incorrect": 0,
+        "initial_pass": 7,
+        "avg_attempts": 1.3,
+        "avg_latency_ms": 21865.0
+      },
+      "checks": {
+        "failures_not_worse": true,
+        "previously_correct_stay_correct": true,
+        "no_new_unsupported_answers": true
+      },
+      "keep": true,
+      "regressed_ids": [],
+      "initial_fail_before": [
+        "val_02",
+        "val_04",
+        "val_05",
+        "val_07",
+        "val_10"
+      ],
+      "initial_fail_after": [
+        "val_04",
+        "val_07",
+        "val_10"
+      ],
+      "final_fail_before": [],
+      "final_fail_after": [],
+      "unsupported_after": [],
+      "results_after": [
+        {
+          "id": "val_01",
+          "question": "Which version of node-fetch fixes the cookie leak on redirect?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The advisory database (s0036_rel) states that the cookie leak on redirect (CVE-2022-0235) is fixed in node-fetch version 2.6.7. This version is the first to resolve the vulnerability as documented in the advisory record VULN-0036-HW9-09 (id 20082).",
+              "lessons_used": [
+                "lesson_001"
+              ],
+              "looked_up": true,
+              "lookup": [
+                "VULN-0036-HW9-09 (s0036_rel id 20082): node-fetch affected < 2.6.7, severity high. CVE-2022-0235: Cookie and Authorization headers forwarded to a third-party host on redirect. Fixed in 2.6.7."
+              ],
+              "fault": null,
+              "latency_ms": 23662.02,
+              "evaluation": {
+                "result": "PASS",
+                "explanation": "Matches the reference for node-fetch on: first fixed version.",
+                "feedback": null,
+                "failures": [],
+                "package": "node-fetch",
+                "fields": [
+                  "fixed_version"
+                ],
+                "latency_ms": 0.25
+              }
+            }
+          ],
+          "n_attempts": 1,
+          "initial_result": "PASS",
+          "final_result": "PASS",
+          "final_answer": "The advisory database (s0036_rel) states that the cookie leak on redirect (CVE-2022-0235) is fixed in node-fetch version 2.6.7. This version is the first to resolve the vulnerability as documented in the advisory record VULN-0036-HW9-09 (id 20082).",
+          "lessons_loaded": [
+            "lesson_001"
+          ],
+          "lessons_created": [],
+          "latency_ms": 23662.96
+        },
+        {
+          "id": "val_02",
+          "question": "What is the severity of the ws header-count denial of service?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The severity of the ws header-count denial of service vulnerability is high, as explicitly stated in the advisory record VULN-0036-HW9-10 (s0036_rel id 20083). This record specifies the severity exactly as \"high\" for the affected version range >= 8.0.0 < 8.17.1. The vulnerability (CVE-2024-37890) involves denial of service from requests exceeding server.maxHeadersCount.",
+              "lessons_used": [
+                "lesson_002"
+              ],
+              "looked_up": true,
+              "lookup": [
+                "VULN-0036-HW9-10 (s0036_rel id 20083): ws affected >= 8.0.0, < 8.17.1, severity high. CVE-2024-37890: Denial of service from a request whose header count exceeds server.maxHeadersCount. Fixed in 8.17.1."
+              ],
+              "fault": null,
+              "latency_ms": 4087.89,
+              "evaluation": {
+                "result": "PASS",
+                "explanation": "Matches the reference for ws on: severity.",
+                "feedback": null,
+                "failures": [],
+                "package": "ws",
+                "fields": [
+                  "severity"
+                ],
+                "latency_ms": 0.11
+              }
+            }
+          ],
+          "n_attempts": 1,
+          "initial_result": "PASS",
+          "final_result": "PASS",
+          "final_answer": "The severity of the ws header-count denial of service vulnerability is high, as explicitly stated in the advisory record VULN-0036-HW9-10 (s0036_rel id 20083). This record specifies the severity exactly as \"high\" for the affected version range >= 8.0.0 < 8.17.1. The vulnerability (CVE-2024-37890) involves denial of service from requests exceeding server.maxHeadersCount.",
+          "lessons_loaded": [
+            "lesson_002"
+          ],
+          "lessons_created": [],
+          "latency_ms": 4088.63
+        },
+        {
+          "id": "val_03",
+          "question": "Which express version fixes the open redirect vulnerability?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The first fixed version of express that resolves the open redirect vulnerability (CVE-2024-29041) is exactly 4.19.2, as stated in the advisory record VULN-0036-HW9-11 (s0036_rel id 20084). This version patch addresses the issue where malformed URLs passed to `res.location` and `res.redirect` could cause open redirects. The advisory specifies that all versions below 4.19.2 are affected by this vulnerability.",
+              "lessons_used": [
+                "lesson_001"
+              ],
+              "looked_up": true,
+              "lookup": [
+                "VULN-0036-HW9-11 (s0036_rel id 20084): express affected < 4.19.2, severity medium. CVE-2024-29041: Open redirect through malformed URLs passed to res.location and res.redirect. Fixed in 4.19.2."
+              ],
+              "fault": null,
+              "latency_ms": 3855.97,
+              "evaluation": {
+                "result": "PASS",
+                "explanation": "Matches the reference for express on: first fixed version.",
+                "feedback": null,
+                "failures": [],
+                "package": "express",
+                "fields": [
+                  "fixed_version"
+                ],
+                "latency_ms": 0.06
+              }
+            }
+          ],
+          "n_attempts": 1,
+          "initial_result": "PASS",
+          "final_result": "PASS",
+          "final_answer": "The first fixed version of express that resolves the open redirect vulnerability (CVE-2024-29041) is exactly 4.19.2, as stated in the advisory record VULN-0036-HW9-11 (s0036_rel id 20084). This version patch addresses the issue where malformed URLs passed to `res.location` and `res.redirect` could cause open redirects. The advisory specifies that all versions below 4.19.2 are affected by this vulnerability.",
+          "lessons_loaded": [
+            "lesson_001"
+          ],
+          "lessons_created": [],
+          "latency_ms": 3856.97
+        },
+        {
+          "id": "val_04",
+          "question": "What is the CVE ID for the pillow ImageMath.eval code execution?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The CVE ID for the Pillow ImageMath.eval code execution vulnerability is CVE-2021-34542. This vulnerability allows arbitrary code execution via malicious input in the ImageMath.eval function. It affects Pillow versions prior to 9.2.0. The fix involves sanitizing input expressions to prevent code injection.",
+              "lessons_used": [],
+              "looked_up": false,
+              "lookup": null,
+              "fault": null,
+              "latency_ms": 3084.44,
+              "evaluation": {
+                "result": "REVISE",
+                "explanation": "CVE identifier is wrong (CVE-2021-34542).",
+                "feedback": "The reference record for pillow gives the CVE identifier as CVE-2023-50447; state it exactly.",
+                "failures": [
+                  {
+                    "pattern": "cve",
+                    "status": "wrong"
+                  }
+                ],
+                "package": "pillow",
+                "fields": [
+                  "cve"
+                ],
+                "latency_ms": 0.07
+              }
+            },
+            {
+              "attempt": 2,
+              "answer": "The correct CVE ID for the Pillow ImageMath.eval code execution vulnerability is CVE-2023-50447. This reference record explicitly identifies this CVE as the valid identifier for the issue.",
+              "lessons_used": [],
+              "looked_up": false,
+              "lookup": null,
+              "fault": null,
+              "latency_ms": 3768.84,
+              "evaluation": {
+                "result": "PASS",
+                "explanation": "Matches the reference for pillow on: CVE identifier.",
+                "feedback": null,
+                "failures": [],
+                "package": "pillow",
+                "fields": [
+                  "cve"
+                ],
+                "latency_ms": 0.07
+              }
+            }
+          ],
+          "n_attempts": 2,
+          "initial_result": "REVISE",
+          "final_result": "PASS",
+          "final_answer": "The correct CVE ID for the Pillow ImageMath.eval code execution vulnerability is CVE-2023-50447. This reference record explicitly identifies this CVE as the valid identifier for the issue.",
+          "lessons_loaded": [],
+          "lessons_created": [],
+          "latency_ms": 6855.82
+        },
+        {
+          "id": "val_05",
+          "question": "How severe is the django EmailValidator ReDoS?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The severity of the django EmailValidator ReDoS vulnerability (CVE-2023-36053) is high. This severity level is exactly as stated in the advisory record VULN-0036-HW9-13 (s0036_rel id 20086).",
+              "lessons_used": [
+                "lesson_002"
+              ],
+              "looked_up": true,
+              "lookup": [
+                "VULN-0036-HW9-13 (s0036_rel id 20086): django affected >= 4.2, < 4.2.3, severity high. CVE-2023-36053: Regular expression denial of service in EmailValidator and URLValidator. Fixed in 4.2.3."
+              ],
+              "fault": null,
+              "latency_ms": 21738.64,
+              "evaluation": {
+                "result": "PASS",
+                "explanation": "Matches the reference for django on: severity.",
+                "feedback": null,
+                "failures": [],
+                "package": "django",
+                "fields": [
+                  "severity"
+                ],
+                "latency_ms": 0.4
+              }
+            }
+          ],
+          "n_attempts": 1,
+          "initial_result": "PASS",
+          "final_result": "PASS",
+          "final_answer": "The severity of the django EmailValidator ReDoS vulnerability (CVE-2023-36053) is high. This severity level is exactly as stated in the advisory record VULN-0036-HW9-13 (s0036_rel id 20086).",
+          "lessons_loaded": [
+            "lesson_002"
+          ],
+          "lessons_created": [],
+          "latency_ms": 21741.66
+        },
+        {
+          "id": "val_06",
+          "question": "Which version of jinja2 patches the xmlattr XSS?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The first fixed version of jinja2 that patches the xmlattr XSS vulnerability (CVE-2024-22195) is 3.1.3. This version is explicitly stated in the advisory record VULN-0036-HW9-14 (s0036_rel id 20087).",
+              "lessons_used": [
+                "lesson_001"
+              ],
+              "looked_up": true,
+              "lookup": [
+                "VULN-0036-HW9-14 (s0036_rel id 20087): jinja2 affected < 3.1.3, severity medium. CVE-2024-22195: Cross-site scripting through the xmlattr filter. Fixed in 3.1.3."
+              ],
+              "fault": null,
+              "latency_ms": 39330.73,
+              "evaluation": {
+                "result": "PASS",
+                "explanation": "Matches the reference for jinja2 on: first fixed version.",
+                "feedback": null,
+                "failures": [],
+                "package": "jinja2",
+                "fields": [
+                  "fixed_version"
+                ],
+                "latency_ms": 0.28
+              }
+            }
+          ],
+          "n_attempts": 1,
+          "initial_result": "PASS",
+          "final_result": "PASS",
+          "final_answer": "The first fixed version of jinja2 that patches the xmlattr XSS vulnerability (CVE-2024-22195) is 3.1.3. This version is explicitly stated in the advisory record VULN-0036-HW9-14 (s0036_rel id 20087).",
+          "lessons_loaded": [
+            "lesson_001"
+          ],
+          "lessons_created": [],
+          "latency_ms": 39332.26
+        },
+        {
+          "id": "val_07",
+          "question": "Which versions of tar are affected by the symlink file overwrite?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The symlink file overwrite vulnerability (CVE-2021-44634) affects all tar versions prior to 1.32, specifically versions 1.0 through 1.31 inclusive. This vulnerability allows an attacker to overwrite a file via a symlink in the archive. Versions 1.32 and later are not affected as they include the fix.",
+              "lessons_used": [],
+              "looked_up": false,
+              "lookup": null,
+              "fault": null,
+              "latency_ms": 40459.2,
+              "evaluation": {
+                "result": "REVISE",
+                "explanation": "Affected version range is wrong (1.32, 1.0, 1.31, 1.32).",
+                "feedback": "The reference record for tar gives the affected version range as >= 6.0.0, < 6.1.2; state it exactly.",
+                "failures": [
+                  {
+                    "pattern": "affected_versions",
+                    "status": "wrong"
+                  }
+                ],
+                "package": "tar",
+                "fields": [
+                  "affected_versions"
+                ],
+                "latency_ms": 0.36
+              }
+            },
+            {
+              "attempt": 2,
+              "answer": "The symlink file overwrite vulnerability (CVE-2021-44634) affects tar versions >= 6.0.0 and < 6.1.2. This vulnerability allows an attacker to overwrite a file via a symlink in the archive.",
+              "lessons_used": [],
+              "looked_up": false,
+              "lookup": null,
+              "fault": null,
+              "latency_ms": 30517.19,
+              "evaluation": {
+                "result": "PASS",
+                "explanation": "Matches the reference for tar on: affected version range.",
+                "feedback": null,
+                "failures": [],
+                "package": "tar",
+                "fields": [
+                  "affected_versions"
+                ],
+                "latency_ms": 0.25
+              }
+            }
+          ],
+          "n_attempts": 2,
+          "initial_result": "REVISE",
+          "final_result": "PASS",
+          "final_answer": "The symlink file overwrite vulnerability (CVE-2021-44634) affects tar versions >= 6.0.0 and < 6.1.2. This vulnerability allows an attacker to overwrite a file via a symlink in the archive.",
+          "lessons_loaded": [],
+          "lessons_created": [],
+          "latency_ms": 70977.78
+        },
+        {
+          "id": "val_08",
+          "question": "What is the severity of the protobufjs prototype pollution?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The severity of the protobufjs prototype pollution vulnerability is critical. This critical severity applies to protobufjs versions from 7.0.0 up to but not including 7.2.4, as documented in the advisory database record VULN-0036-HW9-16 (s0036_rel id 20089).",
+              "lessons_used": [
+                "lesson_002"
+              ],
+              "looked_up": true,
+              "lookup": [
+                "VULN-0036-HW9-16 (s0036_rel id 20089): protobufjs affected >= 7.0.0, < 7.2.4, severity critical. CVE-2023-36665: Prototype pollution through crafted protobuf definitions. Fixed in 7.2.4."
+              ],
+              "fault": null,
+              "latency_ms": 15411.04,
+              "evaluation": {
+                "result": "PASS",
+                "explanation": "Matches the reference for protobufjs on: severity.",
+                "feedback": null,
+                "failures": [],
+                "package": "protobufjs",
+                "fields": [
+                  "severity"
+                ],
+                "latency_ms": 0.28
+              }
+            }
+          ],
+          "n_attempts": 1,
+          "initial_result": "PASS",
+          "final_result": "PASS",
+          "final_answer": "The severity of the protobufjs prototype pollution vulnerability is critical. This critical severity applies to protobufjs versions from 7.0.0 up to but not including 7.2.4, as documented in the advisory database record VULN-0036-HW9-16 (s0036_rel id 20089).",
+          "lessons_loaded": [
+            "lesson_002"
+          ],
+          "lessons_created": [],
+          "latency_ms": 15412.27
+        },
+        {
+          "id": "val_09",
+          "question": "Which version of yamlparse-lite fixes its code injection bug?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The advisory database (s0036_rel) lookup shows no record found for the package \"yamlparse-lite\". Therefore, there is no documented fixed version for this package that addresses a code injection bug in the specified database.",
+              "lessons_used": [
+                "lesson_001"
+              ],
+              "looked_up": true,
+              "lookup": [],
+              "fault": null,
+              "latency_ms": 3066.7,
+              "evaluation": {
+                "result": "PASS",
+                "explanation": "Declined correctly: no reference record for this package.",
+                "feedback": null,
+                "failures": [],
+                "package": null,
+                "fields": [
+                  "fixed_version"
+                ],
+                "latency_ms": 0.09
+              }
+            }
+          ],
+          "n_attempts": 1,
+          "initial_result": "PASS",
+          "final_result": "PASS",
+          "final_answer": "The advisory database (s0036_rel) lookup shows no record found for the package \"yamlparse-lite\". Therefore, there is no documented fixed version for this package that addresses a code injection bug in the specified database.",
+          "lessons_loaded": [
+            "lesson_001"
+          ],
+          "lessons_created": [],
+          "latency_ms": 3067.39
+        },
+        {
+          "id": "val_10",
+          "question": "What is the severity of the netconfig-js command injection?",
+          "attempts": [
+            {
+              "attempt": 1,
+              "answer": "The s0036_rel advisory database does not have a record for the package 'netconfig-js'. Therefore, the severity is not defined in this database.",
+              "lessons_used": [
+                "lesson_002"
+              ],
+              "looked_up": true,
+              "lookup": [],
+              "fault": null,
+              "latency_ms": 14299.22,
+              "evaluation": {
+                "result": "REVISE",
+                "explanation": "The package has no reference record and the answer does not say so.",
+                "feedback": "There is no advisory record for this package in the reference data. Say that no advisory record was found and do not state versions, CVE IDs or severities.",
+                "failures": [
+                  {
+                    "pattern": "unknown_package",
+                    "status": "missing"
+                  }
+                ],
+                "package": null,
+                "fields": [
+                  "severity"
+                ],
+                "latency_ms": 0.38
+              }
+            },
+            {
+              "attempt": 2,
+              "answer": "The s0036_rel advisory database does not contain an advisory record for the package 'netconfig-js'. No advisory record was found for this package.",
+              "lessons_used": [
+                "lesson_002"
+              ],
+              "looked_up": true,
+              "lookup": [],
+              "fault": null,
+              "latency_ms": 15353.16,
+              "evaluation": {
+                "result": "PASS",
+                "explanation": "Declined correctly: no reference record for this package.",
+                "feedback": null,
+                "failures": [],
+                "package": null,
+                "fields": [
+                  "severity"
+                ],
+                "latency_ms": 0.3
+              }
+            }
+          ],
+          "n_attempts": 2,
+          "initial_result": "REVISE",
+          "final_result": "PASS",
+          "final_answer": "The s0036_rel advisory database does not contain an advisory record for the package 'netconfig-js'. No advisory record was found for this package.",
+          "lessons_loaded": [
+            "lesson_002"
+          ],
+          "lessons_created": [],
+          "latency_ms": 29654.5
+        }
+      ]
+    }
+  ],
+  "kept": [
+    "lesson_001",
+    "lesson_002"
+  ],
+  "rejected": []
+}

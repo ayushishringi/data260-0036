@@ -1,0 +1,42 @@
+[
+  {
+    "id": "val_01",
+    "question": "Which version of node-fetch fixes the cookie leak on redirect?"
+  },
+  {
+    "id": "val_02",
+    "question": "What is the severity of the ws header-count denial of service?"
+  },
+  {
+    "id": "val_03",
+    "question": "Which express version fixes the open redirect vulnerability?"
+  },
+  {
+    "id": "val_04",
+    "question": "What is the CVE ID for the pillow ImageMath.eval code execution?"
+  },
+  {
+    "id": "val_05",
+    "question": "How severe is the django EmailValidator ReDoS?"
+  },
+  {
+    "id": "val_06",
+    "question": "Which version of jinja2 patches the xmlattr XSS?"
+  },
+  {
+    "id": "val_07",
+    "question": "Which versions of tar are affected by the symlink file overwrite?"
+  },
+  {
+    "id": "val_08",
+    "question": "What is the severity of the protobufjs prototype pollution?"
+  },
+  {
+    "id": "val_09",
+    "question": "Which version of yamlparse-lite fixes its code injection bug?"
+  },
+  {
+    "id": "val_10",
+    "question": "What is the severity of the netconfig-js command injection?"
+  }
+]

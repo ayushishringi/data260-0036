@@ -1,0 +1,28 @@
+[
+  {
+    "lesson_id": "lesson_001",
+    "failure_pattern": "The answer gives an incorrect first fixed version from memory.",
+    "correction": "Before answering a question about the first fixed version, look the package up in the s0036_rel advisory database and state the first fixed version exactly as the record gives it.",
+    "created_at": "2026-11-05",
+    "use_count": 2,
+    "pattern_key": "fixed_version",
+    "applies_to": [
+      "fixed_version"
+    ],
+    "action": "lookup_advisory_db",
+    "created_from": "train_05"
+  },
+  {
+    "lesson_id": "lesson_002",
+    "failure_pattern": "The answer gives an incorrect severity from memory.",
+    "correction": "Before answering a question about the severity, look the package up in the s0036_rel advisory database and state the severity exactly as the record gives it.",
+    "created_at": "2026-11-05",
+    "use_count": 0,
+    "pattern_key": "severity",
+    "applies_to": [
+      "severity"
+    ],
+    "action": "lookup_advisory_db",
+    "created_from": "train_06"
+  }
+]

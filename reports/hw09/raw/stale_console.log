@@ -1,0 +1,38 @@
+user=ayushishringi host=Ayushis-MacBook-Pro.local time=2026-11-05T08:22:44
+column vulnerability_reports.view_count already exists
+HW9 advisory rows: inserted=0 restored=0 unchanged=23
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 15428.50it/s]
+
+record VULN-0036-HW9-05 before: package=requests severity=medium updated_at=2026-11-04 20:10:22 data_version=v-09e908a37503fbe4
+
+2026-11-05T08:22:48.287-08:00 [stale-demo] CACHE MISS best_similarity=null threshold=0.85 query="What is the severity of the requests Proxy-Authorization header leak?" reason="empty cache"
+2026-11-05T08:23:03.896-08:00 [stale-demo] ANSWERED by agent pipeline correlation_id="9a604333-406d-4f9b-bb74-d6d0810f01cd" status="approved" stored=true latency_ms=15619.48
+1. first ask (miss -> agents -> cached)
+   is_cached=False similarity=- latency_ms=15619.5 data_version=v-09e908a37503fbe4
+   answer says severity=medium; database says severity=medium -> fresh
+2026-11-05T08:23:03.909-08:00 [stale-demo] CACHE HIT similarity=0.9079 threshold=0.85 cached_query="What is the severity of the requests Proxy-Authorization header leak?" latency_ms=12.58
+2. paraphrase before the update (hit)
+   is_cached=True similarity=0.9079 latency_ms=12.6 data_version=v-09e908a37503fbe4
+   answer says severity=medium; database says severity=medium -> fresh
+
+UPDATE vulnerability_reports SET severity='high' WHERE report_code='VULN-0036-HW9-05'
+record after: severity=high updated_at=2026-11-05 08:23:03 data_version=v-da759bf61ba0f522
+
+2026-11-05T08:23:03.939-08:00 [stale-demo] CACHE HIT similarity=1.0 threshold=0.85 cached_query="What is the severity of the requests Proxy-Authorization header leak?" latency_ms=7.37
+3. invalidation=none -> STALE HIT (old answer returned)
+   is_cached=True similarity=1.0000 latency_ms=7.4 data_version=v-09e908a37503fbe4
+   answer says severity=medium; database says severity=high -> STALE
+2026-11-05T08:23:03.946-08:00 [stale-demo] STALE entry invalidated (data_version changed) similarity=1.0 cached_query="What is the severity of the requests Proxy-Authorization header leak?" stored_version="v-09e908a37503fbe4" current_version="v-da759bf61ba0f522"
+2026-11-05T08:23:03.946-08:00 [stale-demo] CACHE MISS best_similarity=1.0 threshold=0.85 query="What is the severity of the requests Proxy-Authorization header leak?" reason="stale"
+2026-11-05T08:23:16.312-08:00 [stale-demo] ANSWERED by agent pipeline correlation_id="1747616e-811a-4a53-8100-70ebe515811b" status="approved" stored=true latency_ms=12372.78
+4. invalidation=version -> marker mismatch, entry deleted, agents rerun
+   is_cached=False similarity=1.0000 latency_ms=12372.8 data_version=v-da759bf61ba0f522
+   answer says severity=high; database says severity=high -> fresh
+2026-11-05T08:23:16.321-08:00 [stale-demo] CACHE HIT similarity=1.0 threshold=0.85 cached_query="What is the severity of the requests Proxy-Authorization header leak?" latency_ms=8.62
+5. invalidation=version, ask again -> fresh hit
+   is_cached=True similarity=1.0000 latency_ms=8.6 data_version=v-da759bf61ba0f522
+   answer says severity=high; database says severity=high -> fresh
+
+restoring the record to the reference value
+column vulnerability_reports.view_count already exists
+HW9 advisory rows: inserted=0 restored=1 unchanged=22

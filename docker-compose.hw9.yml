@@ -1,0 +1,16 @@
+# HW9: Redis Stack (Redis + RediSearch vector index) for the view counter and the semantic cache.
+# Kafka and the HW8 agents still come from docker-compose.hw8.yml.
+# Usage: docker compose -f docker-compose.hw9.yml up -d
+name: s0036-hw9
+services:
+  redis:
+    image: redis/redis-stack-server:7.4.0-v1
+    container_name: s0036-redis
+    ports:
+      - "127.0.0.1:6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped

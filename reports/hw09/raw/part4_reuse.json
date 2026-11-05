@@ -1,0 +1,64 @@
+{
+  "lessons_loaded": [
+    {
+      "lesson_id": "lesson_001",
+      "failure_pattern": "The answer gives an incorrect first fixed version from memory.",
+      "correction": "Before answering a question about the first fixed version, look the package up in the s0036_rel advisory database and state the first fixed version exactly as the record gives it.",
+      "created_at": "2026-11-05",
+      "use_count": 3,
+      "pattern_key": "fixed_version",
+      "applies_to": [
+        "fixed_version"
+      ],
+      "action": "lookup_advisory_db",
+      "created_from": "train_05"
+    }
+  ],
+  "use_count_before": {
+    "lesson_001": 2,
+    "lesson_002": 0
+  },
+  "use_count_after": {
+    "lesson_001": 3,
+    "lesson_002": 0
+  },
+  "result": {
+    "id": "reuse_01",
+    "question": "Which version of ws fixes the header-count denial of service?",
+    "attempts": [
+      {
+        "attempt": 1,
+        "answer": "The first fixed version of `ws` that resolves the header-count denial of service vulnerability (CVE-2024-37890) is 8.17.1. This version is explicitly stated in the advisory record VULN-0036-HW9-10 (s0036_rel id 20083) as the fix for the vulnerability affecting versions from 8.0.0 up to but not including 8.17.1.",
+        "lessons_used": [
+          "lesson_001"
+        ],
+        "looked_up": true,
+        "lookup": [
+          "VULN-0036-HW9-10 (s0036_rel id 20083): ws affected >= 8.0.0, < 8.17.1, severity high. CVE-2024-37890: Denial of service from a request whose header count exceeds server.maxHeadersCount. Fixed in 8.17.1."
+        ],
+        "fault": null,
+        "latency_ms": 12589.17,
+        "evaluation": {
+          "result": "PASS",
+          "explanation": "Matches the reference for ws on: first fixed version.",
+          "feedback": null,
+          "failures": [],
+          "package": "ws",
+          "fields": [
+            "fixed_version"
+          ],
+          "latency_ms": 1.51
+        }
+      }
+    ],
+    "n_attempts": 1,
+    "initial_result": "PASS",
+    "final_result": "PASS",
+    "final_answer": "The first fixed version of `ws` that resolves the header-count denial of service vulnerability (CVE-2024-37890) is 8.17.1. This version is explicitly stated in the advisory record VULN-0036-HW9-10 (s0036_rel id 20083) as the fix for the vulnerability affecting versions from 8.0.0 up to but not including 8.17.1.",
+    "lessons_loaded": [
+      "lesson_001"
+    ],
+    "lessons_created": [],
+    "latency_ms": 12591.1
+  }
+}

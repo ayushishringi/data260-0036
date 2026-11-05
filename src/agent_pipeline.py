@@ -8,7 +8,8 @@ Failure handling (each switch reproduces the "before fix" behavior for Part 3):
   HW8_COMMIT=after   commit the offset only after the output is acknowledged by Kafka        [before = commit on receipt]
   HW8_RETRY=bounded  retry HW8_MAX_RETRIES times, then move the message to s0036_dead_letter  [unbounded = retry forever]
 Other knobs: HW8_LLM (1 = use the local model, 0 = deterministic template), HW8_SLOW_SECONDS (simulated long work),
-HW8_GROUP_SUFFIX (separate consumer groups per experiment), HW8_INSTANCE (name of this process in the logs).
+HW8_GROUP_SUFFIX (separate consumer groups per experiment), HW8_INSTANCE (name of this process in the logs),
+HW8_GROUNDED (HW9: 1 = the Writer reads the s0036_rel advisory rows for the packages in the question).
 """
 
 from __future__ import annotations
@@ -24,7 +25,7 @@ from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 
-from confluent_kafka import TopicPartition
+from confluent_kafka import KafkaException, TopicPartition
 
 from src.kafka_common import (
     DEAD_LETTER_TOPIC,
@@ -178,8 +179,14 @@ def run_agent(name: str, in_topic: str, out_topic: str | None,
                     attempts=attempt, **where)
                 break
         if commit_mode == "after":  # AFTER FIX: commit only once the output is safely in Kafka
-            consumer.commit(message=msg, asynchronous=False)
-            log(component, "COMMITTED offset after processing", correlation_id=cid, **where)
+            try:
+                consumer.commit(message=msg, asynchronous=False)
+                log(component, "COMMITTED offset after processing", correlation_id=cid, **where)
+            except KafkaException as exc:
+                # The group rebalanced (e.g. session timeout) while we worked: the partition may now belong to
+                # another member, which will redeliver this message; the idempotency store skips the repeat.
+                log(component, "COMMIT FAILED (group rebalanced); message will be redelivered",
+                    correlation_id=cid, error=str(exc), **where)
     consumer.close()
 
 
@@ -225,14 +232,30 @@ def writer_handle(message: dict[str, Any]) -> dict[str, Any] | None:
         raise PoisonMessage("plan must be a non-empty list of strings")
     if not isinstance(question, str):
         raise PoisonMessage("question must be a string")
+    facts = grounding_facts(question)
+    system = ("You write concise, accurate answers (120-180 words) about open-source package "
+              "vulnerabilities. Follow the plan.")
+    if facts:
+        system += (" Facts from the s0036_rel advisory database are given; use their affected versions, severity "
+                   "and CVE exactly and never contradict them.")
     if use_llm():
-        draft = ask_model("You write concise, accurate answers (120-180 words) about open-source package "
-                          "vulnerabilities. Follow the plan.",
-                          f"Question: {question}\nPlan:\n" + "\n".join(f"- {s}" for s in plan))
+        draft = ask_model(system, f"Question: {question}\nPlan:\n" + "\n".join(f"- {s}" for s in plan)
+                          + ("\nFacts:\n" + "\n".join(f"- {f}" for f in facts) if facts else ""))
     else:
         draft = f"Answer to '{question}': " + " ".join(f"({i}) {step}." for i, step in enumerate(plan, 1))
+    if facts:  # HW9: the answer cites the record it depends on
+        draft += "\n\nSource record: " + " | ".join(facts)
     return {"correlation_id": message["correlation_id"], "kind": "draft", "question": question, "plan": plan,
-            "draft": draft, "written_at": now_iso()}
+            "draft": draft, "facts": facts, "written_at": now_iso()}
+
+
+def grounding_facts(question: str) -> list[str]:
+    """HW9 (HW8_GROUNDED=1): s0036_rel advisory rows for the packages named in the question."""
+
+    if env("HW8_GROUNDED", "0") != "1":
+        return []
+    from src.advisory_lookup import fact_line, find_records
+    return [fact_line(record) for record in find_records(question)]
 
 
 def reviewer_handle(message: dict[str, Any]) -> dict[str, Any]:

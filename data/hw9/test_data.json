@@ -1,0 +1,50 @@
+[
+  {
+    "id": "test_01",
+    "question": "Which version of xml2js fixes the __proto__ prototype pollution?"
+  },
+  {
+    "id": "test_02",
+    "question": "What is the severity of the urllib3 303 redirect body leak?"
+  },
+  {
+    "id": "test_03",
+    "question": "Which golang.org/x/net version fixes the HTTP/2 rapid reset attack?"
+  },
+  {
+    "id": "test_04",
+    "question": "What is the CVE ID for the moment RFC 2822 ReDoS?"
+  },
+  {
+    "id": "test_05",
+    "question": "Which version of follow-redirects stops keeping the Proxy-Authorization header across hosts?"
+  },
+  {
+    "id": "test_06",
+    "question": "How severe is the postcss line-return parsing issue?"
+  },
+  {
+    "id": "test_07",
+    "question": "Which word-wrap version fixes the ReDoS in wrap?"
+  },
+  {
+    "id": "test_08",
+    "question": "Which versions of moment are affected by the RFC 2822 parsing ReDoS?"
+  },
+  {
+    "id": "test_09",
+    "question": "What is the severity of the lodash template command injection?"
+  },
+  {
+    "id": "test_10",
+    "question": "Which version of minimist fixes the prototype pollution?"
+  },
+  {
+    "id": "test_11",
+    "question": "Which version of pyquickhash fixes its buffer overflow?"
+  },
+  {
+    "id": "test_12",
+    "question": "What is the CVE ID for the tiny-xmlrpc deserialization flaw?"
+  }
+]

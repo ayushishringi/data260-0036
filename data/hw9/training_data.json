@@ -1,0 +1,42 @@
+[
+  {
+    "id": "train_01",
+    "question": "Which version of lodash fixes CVE-2021-23337?"
+  },
+  {
+    "id": "train_02",
+    "question": "What is the severity of the minimist prototype pollution vulnerability?"
+  },
+  {
+    "id": "train_03",
+    "question": "Which pyyaml version first fixed the full_load code execution issue?"
+  },
+  {
+    "id": "train_04",
+    "question": "What is the CVE ID for the Spring4Shell vulnerability in spring-beans?"
+  },
+  {
+    "id": "train_05",
+    "question": "Which requests version fixes the Proxy-Authorization header leak?"
+  },
+  {
+    "id": "train_06",
+    "question": "How severe is the axios XSRF-TOKEN disclosure?"
+  },
+  {
+    "id": "train_07",
+    "question": "Which versions of jackson-databind are affected by the nested JSON denial of service?"
+  },
+  {
+    "id": "train_08",
+    "question": "Which version of log4j-core first fixed Log4Shell?"
+  },
+  {
+    "id": "train_09",
+    "question": "What version of fastjsonx fixes its deserialization vulnerability?"
+  },
+  {
+    "id": "train_10",
+    "question": "What is the CVE ID for the leftpad-plus prototype pollution bug?"
+  }
+]

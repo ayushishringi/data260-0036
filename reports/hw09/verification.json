@@ -1,0 +1,234 @@
+{
+  "homework": "HW9",
+  "sid4": "0036",
+  "prefix": "s0036",
+  "ran_at": "2026-11-05T09:04:05",
+  "commit": "de51eaa",
+  "passed": 28,
+  "total": 28,
+  "checks": [
+    {
+      "check": "Redis Stack reachable with the search (vector) module",
+      "ok": true,
+      "detail": [
+        "ReJSON",
+        "RedisCompat",
+        "bf",
+        "redisgears_2",
+        "search",
+        "timeseries"
+      ]
+    },
+    {
+      "check": "every Redis key starts with PREFIX",
+      "ok": true,
+      "detail": "1 keys, prefix s0036"
+    },
+    {
+      "check": "view counter: INCR returns 1..12, MySQL synced at 10",
+      "ok": true,
+      "detail": {
+        "counts": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "db_view_count": 10,
+        "key": "s0036:views:report:20096"
+      }
+    },
+    {
+      "check": "saved Part 1 run: 25 accesses, Redis 25, MySQL 20",
+      "ok": true,
+      "detail": "s0036:views:report:20074"
+    },
+    {
+      "check": "vector index uses COSINE over FLOAT32 384-dim embeddings",
+      "ok": true,
+      "detail": "s0036:idx:qcache"
+    },
+    {
+      "check": "cache store -> KNN search returns the entry with similarity 1.0",
+      "ok": true,
+      "detail": 1.0
+    },
+    {
+      "check": "Part 2 demo: >= 10 queries with new, exact duplicate and paraphrase; hits and misses",
+      "ok": true,
+      "detail": {
+        "queries": 12,
+        "hits": 6,
+        "misses": 6,
+        "hit_rate": 0.5,
+        "avg_latency_cached_ms": 16.16,
+        "avg_latency_uncached_ms": 33873.85,
+        "threshold": 0.85,
+        "cache_entries_after": 5
+      }
+    },
+    {
+      "check": "Part 2 results carry is_cached, similarity and latency_ms",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "cache_cases.yaml: 40 cases, 10 per category",
+      "ok": true,
+      "detail": {
+        "exact_duplicate": 10,
+        "paraphrase": 10,
+        "similar_different": 10,
+        "unrelated": 10
+      }
+    },
+    {
+      "check": "cache_cases.yaml unchanged since the sweep ran (sha256)",
+      "ok": true,
+      "detail": "eb413fcb8db3f094"
+    },
+    {
+      "check": "cache_cases.yaml is committed",
+      "ok": true,
+      "detail": "de51eaa 2026-11-05T09:03:55-08:00"
+    },
+    {
+      "check": "sweep: 5 thresholds x 40 cases, summaries match rows, hit iff similarity >= threshold",
+      "ok": true,
+      "detail": [
+        "0.75",
+        "0.80",
+        "0.85",
+        "0.90",
+        "0.95"
+      ]
+    },
+    {
+      "check": "3.5 stale hit: invalidation=none returns the old answer after the update",
+      "ok": true,
+      "detail": [
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "check": "3.5 invalidation=version: marker mismatch -> miss, fresh answer, then a fresh hit",
+      "ok": true,
+      "detail": [
+        "high",
+        "high"
+      ]
+    },
+    {
+      "check": "stale-demo record restored to the reference value",
+      "ok": true,
+      "detail": "medium"
+    },
+    {
+      "check": "input datasets hold only id + question (no expected answers)",
+      "ok": true,
+      "detail": {
+        "training": 10,
+        "validation": 10,
+        "test": 12
+      }
+    },
+    {
+      "check": "test questions are held out from training and validation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "reference dataset has the ground-truth fields",
+      "ok": true,
+      "detail": "23 packages"
+    },
+    {
+      "check": "lessons.json entries have lesson_id, failure_pattern, correction, created_at, use_count",
+      "ok": true,
+      "detail": [
+        "lesson_001",
+        "lesson_002"
+      ]
+    },
+    {
+      "check": "no lesson was created from a test question",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "4.1 controlled case: faulty initial answer REVISE -> revised PASS in 2 attempts",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "4.2 lesson created in training and loaded for a later related question",
+      "ok": true,
+      "detail": [
+        "train_08",
+        "train_09"
+      ]
+    },
+    {
+      "check": "4.2 reuse demo: kept lesson loaded and its use_count increased",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "4.3 every candidate lesson has a keep/reject decision from validation_data.json",
+      "ok": true,
+      "detail": {
+        "kept": [
+          "lesson_001",
+          "lesson_002"
+        ],
+        "rejected": []
+      }
+    },
+    {
+      "check": "4.4 four variants each ran the 12 test questions",
+      "ok": true,
+      "detail": {
+        "Baseline": [
+          2,
+          1.0
+        ],
+        "Evaluator Repair": [
+          12,
+          1.83
+        ],
+        "Lesson Memory": [
+          12,
+          1.17
+        ],
+        "Validated Improvement": [
+          12,
+          1.17
+        ]
+      }
+    },
+    {
+      "check": "at most two attempts per question in every run",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "unit tests (tests/test_hw9.py)",
+      "ok": true,
+      "detail": "OK"
+    },
+    {
+      "check": "ruff check on HW9 files",
+      "ok": true,
+      "detail": "All checks passed!"
+    }
+  ]
+}

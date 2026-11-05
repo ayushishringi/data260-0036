@@ -1,0 +1,37 @@
+{
+  "ran_at": "2026-11-05T09:00:59",
+  "table": {
+    "Baseline": {
+      "questions": 12,
+      "correct": 2,
+      "incorrect": 10,
+      "initial_pass": 2,
+      "avg_attempts": 1.0,
+      "avg_latency_ms": 20883.7
+    },
+    "Evaluator Repair": {
+      "questions": 12,
+      "correct": 12,
+      "incorrect": 0,
+      "initial_pass": 2,
+      "avg_attempts": 1.83,
+      "avg_latency_ms": 43375.8
+    },
+    "Lesson Memory": {
+      "questions": 12,
+      "correct": 12,
+      "incorrect": 0,
+      "initial_pass": 10,
+      "avg_attempts": 1.17,
+      "avg_latency_ms": 19297.8
+    },
+    "Validated Improvement": {
+      "questions": 12,
+      "correct": 12,
+      "incorrect": 0,
+      "initial_pass": 10,
+      "avg_attempts": 1.17,
+      "avg_latency_ms": 19212.4
+    }
+  }
+}

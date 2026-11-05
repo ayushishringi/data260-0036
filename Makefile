@@ -2,7 +2,7 @@ PYTHON ?= .venv/bin/python3
 PORT ?= 8036
 IMAGE ?= data260-0036-hw2:latest
 
-.PHONY: run run-api run-web agents client verify-hw01 verify-hw02 verify-hw05 test-hw05 faults-hw05 verify-hw06 test-hw06 experiments-hw06 migrate-hw07 test-hw07 lint verify-hw07 kafka-up kafka-down kafka-topics demo-hw08 test-hw08 experiments-hw08 verify-hw08
+.PHONY: run run-api run-web agents client verify-hw01 verify-hw02 verify-hw05 test-hw05 faults-hw05 verify-hw06 test-hw06 experiments-hw06 migrate-hw07 test-hw07 lint verify-hw07 kafka-up kafka-down kafka-topics demo-hw08 test-hw08 experiments-hw08 verify-hw08 redis-up migrate-hw09 counter-hw09 cache-demo-hw09 sweep-hw09 stale-hw09 part4-hw09 test-hw09 metrics-hw09 verify-hw09 qa-api-hw09 agents-hw09
 
 run: run-api
 
@@ -81,3 +81,44 @@ experiments-hw08:
 
 verify-hw08:
 	PYTHONPATH=. $(PYTHON) scripts/verify_hw8.py
+
+# ---- HW9: Redis view counter, semantic cache in front of the HW8 agents, self-improving agents
+HW9_AGENT_ENV = HW8_GROUNDED=1 HW8_GROUP_SUFFIX=_hw9 HW8_STATE_DIR=.hw8_state/hw9 HW8_LOG_DIR=reports/hw09/logs
+AGENT ?= planner
+
+redis-up:
+	docker compose -f docker-compose.hw9.yml up -d
+
+migrate-hw09:
+	$(PYTHON) scripts/migrate_hw9.py
+
+counter-hw09:
+	$(PYTHON) scripts/run_hw9_counter.py
+
+cache-demo-hw09:
+	$(PYTHON) -u scripts/run_hw9_cache_demo.py
+
+sweep-hw09:
+	$(PYTHON) -u scripts/run_hw9_sweep.py
+
+stale-hw09:
+	$(PYTHON) -u scripts/run_hw9_stale.py
+
+part4-hw09:
+	$(PYTHON) -u scripts/run_hw9_part4.py
+
+test-hw09:
+	$(PYTHON) -m unittest -v tests.test_hw9
+
+metrics-hw09:
+	$(PYTHON) scripts/build_hw9_metrics.py
+
+verify-hw09:
+	PYTHONPATH=. $(PYTHON) scripts/verify_hw9.py
+
+# one grounded agent per terminal (make agents-hw09 AGENT=writer), then run a script with HW9_EXTERNAL_AGENTS=1
+agents-hw09:
+	$(HW9_AGENT_ENV) $(PYTHON) -u $(AGENT).py
+
+qa-api-hw09:
+	$(PYTHON) -m uvicorn backend.qa_cache_api:app --host 127.0.0.1 --port 8037

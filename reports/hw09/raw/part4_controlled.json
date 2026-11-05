@@ -1,0 +1,58 @@
+{
+  "id": "controlled_01",
+  "question": "Which version of lodash fixes CVE-2021-23337?",
+  "attempts": [
+    {
+      "attempt": 1,
+      "answer": "There is a known security issue in lodash; you should upgrade to a newer release.",
+      "lessons_used": [],
+      "looked_up": false,
+      "lookup": null,
+      "fault": "incomplete",
+      "latency_ms": 73.17,
+      "evaluation": {
+        "result": "REVISE",
+        "explanation": "First fixed version is missing.",
+        "feedback": "The reference record for lodash gives the first fixed version as 4.17.21; state it exactly.",
+        "failures": [
+          {
+            "pattern": "fixed_version",
+            "status": "missing"
+          }
+        ],
+        "package": "lodash",
+        "fields": [
+          "fixed_version"
+        ],
+        "latency_ms": 0.12
+      }
+    },
+    {
+      "attempt": 2,
+      "answer": "The first version of lodash that fixes CVE-2021-23337 is 4.17.21.",
+      "lessons_used": [],
+      "looked_up": false,
+      "lookup": null,
+      "fault": null,
+      "latency_ms": 20524.77,
+      "evaluation": {
+        "result": "PASS",
+        "explanation": "Matches the reference for lodash on: first fixed version.",
+        "feedback": null,
+        "failures": [],
+        "package": "lodash",
+        "fields": [
+          "fixed_version"
+        ],
+        "latency_ms": 0.76
+      }
+    }
+  ],
+  "n_attempts": 2,
+  "initial_result": "REVISE",
+  "final_result": "PASS",
+  "final_answer": "The first version of lodash that fixes CVE-2021-23337 is 4.17.21.",
+  "lessons_loaded": [],
+  "lessons_created": [],
+  "latency_ms": 20599.89
+}

@@ -101,6 +101,14 @@ class VulnerabilityReport(Base):
         server_default="1",
     )
 
+    # HW9: last view count synced from Redis (s0036:views:report:<id>) every 10 views.
+    view_count: Mapped[int] = mapped_column(
+        Integer,
+        nullable=False,
+        default=0,
+        server_default="0",
+    )
+
     advisory: Mapped["Advisory | None"] = relationship(
         back_populates="reports",
     )

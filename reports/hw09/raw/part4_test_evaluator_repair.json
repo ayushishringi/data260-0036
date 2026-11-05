@@ -1,0 +1,658 @@
+{
+  "summary": {
+    "questions": 12,
+    "correct": 12,
+    "incorrect": 0,
+    "initial_pass": 2,
+    "avg_attempts": 1.83,
+    "avg_latency_ms": 43375.8
+  },
+  "results": [
+    {
+      "id": "test_01",
+      "question": "Which version of xml2js fixes the __proto__ prototype pollution?",
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": "The version of xml2js that fixes the __proto__ prototype pollution is 0.4.20. This version resolves the vulnerability that could lead to prototype pollution during XML parsing.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 29572.1,
+          "evaluation": {
+            "result": "REVISE",
+            "explanation": "First fixed version is wrong (0.4.20).",
+            "feedback": "The reference record for xml2js gives the first fixed version as 0.5.0; state it exactly.",
+            "failures": [
+              {
+                "pattern": "fixed_version",
+                "status": "wrong"
+              }
+            ],
+            "package": "xml2js",
+            "fields": [
+              "fixed_version"
+            ],
+            "latency_ms": 0.36
+          }
+        },
+        {
+          "attempt": 2,
+          "answer": "The reference record for xml2js specifies that the first version fixing the __proto__ prototype pollution is 0.5.0. This version is the first to resolve the vulnerability.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 38750.9,
+          "evaluation": {
+            "result": "PASS",
+            "explanation": "Matches the reference for xml2js on: first fixed version.",
+            "feedback": null,
+            "failures": [],
+            "package": "xml2js",
+            "fields": [
+              "fixed_version"
+            ],
+            "latency_ms": 0.22
+          }
+        }
+      ],
+      "n_attempts": 2,
+      "initial_result": "REVISE",
+      "final_result": "PASS",
+      "final_answer": "The reference record for xml2js specifies that the first version fixing the __proto__ prototype pollution is 0.5.0. This version is the first to resolve the vulnerability.",
+      "lessons_loaded": [],
+      "lessons_created": [],
+      "latency_ms": 68324.43
+    },
+    {
+      "id": "test_02",
+      "question": "What is the severity of the urllib3 303 redirect body leak?",
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": "The severity of the urllib3 303 redirect body leak vulnerability is Critical. This issue allows attackers to leak sensitive request body data during 303 redirects, potentially exposing credentials or other confidential information. The vulnerability was actively patched in urllib3 version 1.26.0.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 4545.58,
+          "evaluation": {
+            "result": "REVISE",
+            "explanation": "Severity is wrong (critical).",
+            "feedback": "The reference record for urllib3 gives the severity as medium; state it exactly.",
+            "failures": [
+              {
+                "pattern": "severity",
+                "status": "wrong"
+              }
+            ],
+            "package": "urllib3",
+            "fields": [
+              "severity"
+            ],
+            "latency_ms": 0.19
+          }
+        },
+        {
+          "attempt": 2,
+          "answer": "The severity of the urllib3 303 redirect body leak vulnerability is medium. This issue allows attackers to leak sensitive request body data during 303 redirects, potentially exposing credentials or other confidential information.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 30171.94,
+          "evaluation": {
+            "result": "PASS",
+            "explanation": "Matches the reference for urllib3 on: severity.",
+            "feedback": null,
+            "failures": [],
+            "package": "urllib3",
+            "fields": [
+              "severity"
+            ],
+            "latency_ms": 0.13
+          }
+        }
+      ],
+      "n_attempts": 2,
+      "initial_result": "REVISE",
+      "final_result": "PASS",
+      "final_answer": "The severity of the urllib3 303 redirect body leak vulnerability is medium. This issue allows attackers to leak sensitive request body data during 303 redirects, potentially exposing credentials or other confidential information.",
+      "lessons_loaded": [],
+      "lessons_created": [],
+      "latency_ms": 34718.35
+    },
+    {
+      "id": "test_03",
+      "question": "Which golang.org/x/net version fixes the HTTP/2 rapid reset attack?",
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": "The HTTP/2 rapid reset attack vulnerability (CVE-2020-14270) is fixed in the golang.org/x/net/http2 package version 0.0.0-20200325161500-9b1d3d0d0d0a. This version is included in the Go 1.16 release.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 54993.51,
+          "evaluation": {
+            "result": "REVISE",
+            "explanation": "First fixed version is wrong (0.0.0, 1.16).",
+            "feedback": "The reference record for golang.org/x/net gives the first fixed version as 0.17.0; state it exactly.",
+            "failures": [
+              {
+                "pattern": "fixed_version",
+                "status": "wrong"
+              }
+            ],
+            "package": "golang.org/x/net",
+            "fields": [
+              "fixed_version"
+            ],
+            "latency_ms": 1.34
+          }
+        },
+        {
+          "attempt": 2,
+          "answer": "The HTTP/2 rapid reset attack vulnerability (CVE-2020-14270) is fixed in the golang.org/x/net module version 0.17.0. This version is the first to resolve the vulnerability.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 23878.38,
+          "evaluation": {
+            "result": "PASS",
+            "explanation": "Matches the reference for golang.org/x/net on: first fixed version.",
+            "feedback": null,
+            "failures": [],
+            "package": "golang.org/x/net",
+            "fields": [
+              "fixed_version"
+            ],
+            "latency_ms": 0.04
+          }
+        }
+      ],
+      "n_attempts": 2,
+      "initial_result": "REVISE",
+      "final_result": "PASS",
+      "final_answer": "The HTTP/2 rapid reset attack vulnerability (CVE-2020-14270) is fixed in the golang.org/x/net module version 0.17.0. This version is the first to resolve the vulnerability.",
+      "lessons_loaded": [],
+      "lessons_created": [],
+      "latency_ms": 78875.87
+    },
+    {
+      "id": "test_04",
+      "question": "What is the CVE ID for the moment RFC 2822 ReDoS?",
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": "The CVE ID for the moment.js ReDoS vulnerability in RFC 2822 parsing is CVE-2020-10724. This vulnerability allows regular expression denial of service attacks when parsing email addresses following RFC 2822 format. It was disclosed in 2020 and affects versions prior to 2.22.0.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 7131.89,
+          "evaluation": {
+            "result": "REVISE",
+            "explanation": "CVE identifier is wrong (CVE-2020-10724).",
+            "feedback": "The reference record for moment gives the CVE identifier as CVE-2022-31129; state it exactly.",
+            "failures": [
+              {
+                "pattern": "cve",
+                "status": "wrong"
+              }
+            ],
+            "package": "moment",
+            "fields": [
+              "cve"
+            ],
+            "latency_ms": 0.23
+          }
+        },
+        {
+          "attempt": 2,
+          "answer": "The CVE ID for the moment.js ReDoS vulnerability in RFC 2822 parsing is CVE-2022-31129. This vulnerability allows regular expression denial of service attacks when parsing email addresses following RFC 2822 format and was disclosed in 2022.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 15550.37,
+          "evaluation": {
+            "result": "PASS",
+            "explanation": "Matches the reference for moment on: CVE identifier.",
+            "feedback": null,
+            "failures": [],
+            "package": "moment",
+            "fields": [
+              "cve"
+            ],
+            "latency_ms": 0.1
+          }
+        }
+      ],
+      "n_attempts": 2,
+      "initial_result": "REVISE",
+      "final_result": "PASS",
+      "final_answer": "The CVE ID for the moment.js ReDoS vulnerability in RFC 2822 parsing is CVE-2022-31129. This vulnerability allows regular expression denial of service attacks when parsing email addresses following RFC 2822 format and was disclosed in 2022.",
+      "lessons_loaded": [],
+      "lessons_created": [],
+      "latency_ms": 22683.23
+    },
+    {
+      "id": "test_05",
+      "question": "Which version of follow-redirects stops keeping the Proxy-Authorization header across hosts?",
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": "Versions of follow-redirects prior to 1.15.0 stop keeping the Proxy-Authorization header across hosts. This behavior was fixed in version 1.15.0. Therefore, all versions from 1.0.0 to 1.14.9 do not preserve the header when following redirects across different hosts.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 44961.81,
+          "evaluation": {
+            "result": "REVISE",
+            "explanation": "First fixed version is wrong (1.15.0, 1.15.0, 1.0.0, 1.14.9).",
+            "feedback": "The reference record for follow-redirects gives the first fixed version as 1.15.6; state it exactly.",
+            "failures": [
+              {
+                "pattern": "fixed_version",
+                "status": "wrong"
+              }
+            ],
+            "package": "follow-redirects",
+            "fields": [
+              "fixed_version"
+            ],
+            "latency_ms": 0.18
+          }
+        },
+        {
+          "attempt": 2,
+          "answer": "Versions of follow-redirects prior to 1.15.6 stop keeping the Proxy-Authorization header across hosts. This behavior was fixed in version 1.15.6. Therefore, all versions from 1.0.0 to 1.15.5 do not preserve the header when following redirects across different hosts.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 15715.81,
+          "evaluation": {
+            "result": "PASS",
+            "explanation": "Matches the reference for follow-redirects on: first fixed version.",
+            "feedback": null,
+            "failures": [],
+            "package": "follow-redirects",
+            "fields": [
+              "fixed_version"
+            ],
+            "latency_ms": 0.08
+          }
+        }
+      ],
+      "n_attempts": 2,
+      "initial_result": "REVISE",
+      "final_result": "PASS",
+      "final_answer": "Versions of follow-redirects prior to 1.15.6 stop keeping the Proxy-Authorization header across hosts. This behavior was fixed in version 1.15.6. Therefore, all versions from 1.0.0 to 1.15.5 do not preserve the header when following redirects across different hosts.",
+      "lessons_loaded": [],
+      "lessons_created": [],
+      "latency_ms": 60680.55
+    },
+    {
+      "id": "test_06",
+      "question": "How severe is the postcss line-return parsing issue?",
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": "The PostCSS line-return parsing issue is classified as medium severity. It can cause incorrect CSS rule processing due to mishandling of line breaks, potentially leading to broken styles in web applications. While not critical for security, it impacts reliable CSS output and should be addressed for proper functionality.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 3513.69,
+          "evaluation": {
+            "result": "PASS",
+            "explanation": "Matches the reference for postcss on: severity.",
+            "feedback": null,
+            "failures": [],
+            "package": "postcss",
+            "fields": [
+              "severity"
+            ],
+            "latency_ms": 0.1
+          }
+        }
+      ],
+      "n_attempts": 1,
+      "initial_result": "PASS",
+      "final_result": "PASS",
+      "final_answer": "The PostCSS line-return parsing issue is classified as medium severity. It can cause incorrect CSS rule processing due to mishandling of line breaks, potentially leading to broken styles in web applications. While not critical for security, it impacts reliable CSS output and should be addressed for proper functionality.",
+      "lessons_loaded": [],
+      "lessons_created": [],
+      "latency_ms": 3513.84
+    },
+    {
+      "id": "test_07",
+      "question": "Which word-wrap version fixes the ReDoS in wrap?",
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": "The version of the word-wrap package that fixes the ReDoS vulnerability is 1.0.3. This version resolves the regular expression denial of service issue present in earlier releases. The fix addresses the vulnerability reported as CVE-2020-14724.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 16629.92,
+          "evaluation": {
+            "result": "REVISE",
+            "explanation": "First fixed version is wrong (1.0.3).",
+            "feedback": "The reference record for word-wrap gives the first fixed version as 1.2.4; state it exactly.",
+            "failures": [
+              {
+                "pattern": "fixed_version",
+                "status": "wrong"
+              }
+            ],
+            "package": "word-wrap",
+            "fields": [
+              "fixed_version"
+            ],
+            "latency_ms": 0.07
+          }
+        },
+        {
+          "attempt": 2,
+          "answer": "The version of the word-wrap package that fixes the ReDoS vulnerability is 1.2.4. This version resolves the regular expression denial of service issue present in earlier releases. The fix addresses the vulnerability reported as CVE-2020-14724.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 39194.16,
+          "evaluation": {
+            "result": "PASS",
+            "explanation": "Matches the reference for word-wrap on: first fixed version.",
+            "feedback": null,
+            "failures": [],
+            "package": "word-wrap",
+            "fields": [
+              "fixed_version"
+            ],
+            "latency_ms": 0.21
+          }
+        }
+      ],
+      "n_attempts": 2,
+      "initial_result": "REVISE",
+      "final_result": "PASS",
+      "final_answer": "The version of the word-wrap package that fixes the ReDoS vulnerability is 1.2.4. This version resolves the regular expression denial of service issue present in earlier releases. The fix addresses the vulnerability reported as CVE-2020-14724.",
+      "lessons_loaded": [],
+      "lessons_created": [],
+      "latency_ms": 55826.71
+    },
+    {
+      "id": "test_08",
+      "question": "Which versions of moment are affected by the RFC 2822 parsing ReDoS?",
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": "The RFC 2822 parsing ReDoS vulnerability affects moment.js versions 2.22.0 and 2.22.1. This vulnerability was fixed in version 2.22.2 and later.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 38386.08,
+          "evaluation": {
+            "result": "REVISE",
+            "explanation": "Affected version range is wrong (2.22.0, 2.22.1, 2.22.2).",
+            "feedback": "The reference record for moment gives the affected version range as >= 2.18.0, < 2.29.4; state it exactly.",
+            "failures": [
+              {
+                "pattern": "affected_versions",
+                "status": "wrong"
+              }
+            ],
+            "package": "moment",
+            "fields": [
+              "affected_versions"
+            ],
+            "latency_ms": 0.3
+          }
+        },
+        {
+          "attempt": 2,
+          "answer": "The RFC 2822 parsing ReDoS vulnerability affects moment.js versions >= 2.18.0 and < 2.29.4. This range includes all versions starting at 2.18.0 up to, but not including, 2.29.4.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 54674.25,
+          "evaluation": {
+            "result": "PASS",
+            "explanation": "Matches the reference for moment on: affected version range.",
+            "feedback": null,
+            "failures": [],
+            "package": "moment",
+            "fields": [
+              "affected_versions"
+            ],
+            "latency_ms": 0.49
+          }
+        }
+      ],
+      "n_attempts": 2,
+      "initial_result": "REVISE",
+      "final_result": "PASS",
+      "final_answer": "The RFC 2822 parsing ReDoS vulnerability affects moment.js versions >= 2.18.0 and < 2.29.4. This range includes all versions starting at 2.18.0 up to, but not including, 2.29.4.",
+      "lessons_loaded": [],
+      "lessons_created": [],
+      "latency_ms": 93062.66
+    },
+    {
+      "id": "test_09",
+      "question": "What is the severity of the lodash template command injection?",
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": "The term \"lodash template command injection\" does not refer to a recognized vulnerability in the Lodash JavaScript library. Lodash's template functionality (e.g., `_.template`) is designed for string interpolation in JavaScript, not shell command execution, so command injection vulnerabilities do not exist in this context. The actual risk with Lodash templates relates to cross-site scripting (XSS) when user input is improperly sanitized, not command injection. This confusion likely stems from misapplying terminology to JavaScript template engines.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 4736.19,
+          "evaluation": {
+            "result": "REVISE",
+            "explanation": "Severity is missing.",
+            "feedback": "The reference record for lodash gives the severity as high; state it exactly.",
+            "failures": [
+              {
+                "pattern": "severity",
+                "status": "missing"
+              }
+            ],
+            "package": "lodash",
+            "fields": [
+              "severity"
+            ],
+            "latency_ms": 0.15
+          }
+        },
+        {
+          "attempt": 2,
+          "answer": "The reference record for Lodash states the severity as high for the \"lodash template command injection\" vulnerability. However, this is a misclassification; Lodash's template functionality does not support shell command execution, and command injection vulnerabilities do not exist in this context. The actual risk relates to cross-site scripting (XSS) when user input is improperly sanitized.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 20484.69,
+          "evaluation": {
+            "result": "PASS",
+            "explanation": "Matches the reference for lodash on: severity.",
+            "feedback": null,
+            "failures": [],
+            "package": "lodash",
+            "fields": [
+              "severity"
+            ],
+            "latency_ms": 0.37
+          }
+        }
+      ],
+      "n_attempts": 2,
+      "initial_result": "REVISE",
+      "final_result": "PASS",
+      "final_answer": "The reference record for Lodash states the severity as high for the \"lodash template command injection\" vulnerability. However, this is a misclassification; Lodash's template functionality does not support shell command execution, and command injection vulnerabilities do not exist in this context. The actual risk relates to cross-site scripting (XSS) when user input is improperly sanitized.",
+      "lessons_loaded": [],
+      "lessons_created": [],
+      "latency_ms": 25222.29
+    },
+    {
+      "id": "test_10",
+      "question": "Which version of minimist fixes the prototype pollution?",
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": "minimist version 1.4.2 fixes the prototype pollution vulnerability (CVE-2020-10480). This version was released on March 24, 2020 and addresses the issue by preventing prototype pollution in command-line argument parsing.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 15833.12,
+          "evaluation": {
+            "result": "REVISE",
+            "explanation": "First fixed version is wrong (1.4.2).",
+            "feedback": "The reference record for minimist gives the first fixed version as 1.2.6; state it exactly.",
+            "failures": [
+              {
+                "pattern": "fixed_version",
+                "status": "wrong"
+              }
+            ],
+            "package": "minimist",
+            "fields": [
+              "fixed_version"
+            ],
+            "latency_ms": 0.14
+          }
+        },
+        {
+          "attempt": 2,
+          "answer": "The reference record for minimist states that the first version fixing the prototype pollution vulnerability (CVE-2020-10480) is 1.2.6. This version addresses the issue by preventing prototype pollution in command-line argument parsing.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 31625.26,
+          "evaluation": {
+            "result": "PASS",
+            "explanation": "Matches the reference for minimist on: first fixed version.",
+            "feedback": null,
+            "failures": [],
+            "package": "minimist",
+            "fields": [
+              "fixed_version"
+            ],
+            "latency_ms": 0.23
+          }
+        }
+      ],
+      "n_attempts": 2,
+      "initial_result": "REVISE",
+      "final_result": "PASS",
+      "final_answer": "The reference record for minimist states that the first version fixing the prototype pollution vulnerability (CVE-2020-10480) is 1.2.6. This version addresses the issue by preventing prototype pollution in command-line argument parsing.",
+      "lessons_loaded": [],
+      "lessons_created": [],
+      "latency_ms": 47461.47
+    },
+    {
+      "id": "test_11",
+      "question": "Which version of pyquickhash fixes its buffer overflow?",
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": "The version of pyquickhash that fixes the buffer overflow vulnerability is 0.1.0. This version was released on January 15, 2019, and it includes the fix for the buffer overflow issue by using the quickhash library version 1.0.0. Upgrading to pyquickhash 0.1.0 resolves the vulnerability in the underlying implementation.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 23068.61,
+          "evaluation": {
+            "result": "REVISE",
+            "explanation": "The package has no reference record but the answer states 0.1.0, 1.0.0.",
+            "feedback": "There is no advisory record for this package in the reference data. Say that no advisory record was found and do not state versions, CVE IDs or severities.",
+            "failures": [
+              {
+                "pattern": "unknown_package",
+                "status": "unsupported"
+              }
+            ],
+            "package": null,
+            "fields": [
+              "fixed_version"
+            ],
+            "latency_ms": 0.09
+          }
+        },
+        {
+          "attempt": 2,
+          "answer": "No advisory record was found for pyquickhash in the reference data regarding buffer overflow vulnerabilities. Therefore, no specific version is identified as fixing this issue.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 4077.42,
+          "evaluation": {
+            "result": "PASS",
+            "explanation": "Declined correctly: no reference record for this package.",
+            "feedback": null,
+            "failures": [],
+            "package": null,
+            "fields": [
+              "fixed_version"
+            ],
+            "latency_ms": 0.07
+          }
+        }
+      ],
+      "n_attempts": 2,
+      "initial_result": "REVISE",
+      "final_result": "PASS",
+      "final_answer": "No advisory record was found for pyquickhash in the reference data regarding buffer overflow vulnerabilities. Therefore, no specific version is identified as fixing this issue.",
+      "lessons_loaded": [],
+      "lessons_created": [],
+      "latency_ms": 27146.54
+    },
+    {
+      "id": "test_12",
+      "question": "What is the CVE ID for the tiny-xmlrpc deserialization flaw?",
+      "attempts": [
+        {
+          "attempt": 1,
+          "answer": "There is no known CVE ID associated with a deserialization flaw in the tiny-xmlrpc library. This vulnerability does not appear in official CVE databases or security advisories for tiny-xmlrpc. The library itself is not widely used in production systems with critical deserialization issues reported.",
+          "lessons_used": [],
+          "looked_up": false,
+          "lookup": null,
+          "fault": null,
+          "latency_ms": 2993.59,
+          "evaluation": {
+            "result": "PASS",
+            "explanation": "Declined correctly: no reference record for this package.",
+            "feedback": null,
+            "failures": [],
+            "package": null,
+            "fields": [
+              "cve"
+            ],
+            "latency_ms": 0.06
+          }
+        }
+      ],
+      "n_attempts": 1,
+      "initial_result": "PASS",
+      "final_result": "PASS",
+      "final_answer": "There is no known CVE ID associated with a deserialization flaw in the tiny-xmlrpc library. This vulnerability does not appear in official CVE databases or security advisories for tiny-xmlrpc. The library itself is not widely used in production systems with critical deserialization issues reported.",
+      "lessons_loaded": [],
+      "lessons_created": [],
+      "latency_ms": 2993.82
+    }
+  ]
+}
