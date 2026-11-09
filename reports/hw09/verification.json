@@ -2,8 +2,8 @@
   "homework": "HW9",
   "sid4": "0036",
   "prefix": "s0036",
-  "ran_at": "2026-11-05T09:04:47",
-  "commit": "4a95e13",
+  "ran_at": "2026-11-08T17:14:05",
+  "commit": "c6b1ee2",
   "passed": 28,
   "total": 28,
   "checks": [
@@ -69,8 +69,8 @@
         "hits": 6,
         "misses": 6,
         "hit_rate": 0.5,
-        "avg_latency_cached_ms": 16.16,
-        "avg_latency_uncached_ms": 33873.85,
+        "avg_latency_cached_ms": 24.18,
+        "avg_latency_uncached_ms": 32470.37,
         "threshold": 0.85,
         "cache_entries_after": 5
       }

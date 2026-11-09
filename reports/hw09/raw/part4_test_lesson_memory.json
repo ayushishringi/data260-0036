@@ -5,7 +5,7 @@
     "incorrect": 0,
     "initial_pass": 10,
     "avg_attempts": 1.17,
-    "avg_latency_ms": 19297.8
+    "avg_latency_ms": 21108.6
   },
   "results": [
     {
@@ -23,7 +23,7 @@
             "VULN-0036-HW9-17 (s0036_rel id 20090): xml2js affected < 0.5.0, severity medium. CVE-2023-0842: Prototype pollution through the __proto__ key in parsed XML. Fixed in 0.5.0."
           ],
           "fault": null,
-          "latency_ms": 5565.57,
+          "latency_ms": 6436.42,
           "evaluation": {
             "result": "PASS",
             "explanation": "Matches the reference for xml2js on: first fixed version.",
@@ -45,7 +45,7 @@
         "lesson_001"
       ],
       "lessons_created": [],
-      "latency_ms": 5566.48
+      "latency_ms": 6438.07
     },
     {
       "id": "test_02",
@@ -62,7 +62,7 @@
             "VULN-0036-HW9-18 (s0036_rel id 20091): urllib3 affected < 1.26.18, severity medium. CVE-2023-45803: Request body not removed when a 303 redirect changes the method to GET. Fixed in 1.26.18."
           ],
           "fault": null,
-          "latency_ms": 18242.57,
+          "latency_ms": 21352.44,
           "evaluation": {
             "result": "PASS",
             "explanation": "Matches the reference for urllib3 on: severity.",
@@ -72,7 +72,7 @@
             "fields": [
               "severity"
             ],
-            "latency_ms": 0.09
+            "latency_ms": 0.49
           }
         }
       ],
@@ -84,7 +84,7 @@
         "lesson_002"
       ],
       "lessons_created": [],
-      "latency_ms": 18243.3
+      "latency_ms": 21353.91
     },
     {
       "id": "test_03",
@@ -101,7 +101,7 @@
             "VULN-0036-HW9-19 (s0036_rel id 20092): golang.org/x/net affected < 0.17.0, severity high. CVE-2023-44487: HTTP/2 rapid reset denial of service. Fixed in 0.17.0."
           ],
           "fault": null,
-          "latency_ms": 3911.57,
+          "latency_ms": 5448.43,
           "evaluation": {
             "result": "PASS",
             "explanation": "Matches the reference for golang.org/x/net on: first fixed version.",
@@ -111,7 +111,7 @@
             "fields": [
               "fixed_version"
             ],
-            "latency_ms": 0.08
+            "latency_ms": 0.06
           }
         }
       ],
@@ -123,7 +123,7 @@
         "lesson_001"
       ],
       "lessons_created": [],
-      "latency_ms": 3912.24
+      "latency_ms": 5449.74
     },
     {
       "id": "test_04",
@@ -136,7 +136,7 @@
           "looked_up": false,
           "lookup": null,
           "fault": null,
-          "latency_ms": 6221.3,
+          "latency_ms": 7286.16,
           "evaluation": {
             "result": "REVISE",
             "explanation": "CVE identifier is wrong (CVE-2020-10724).",
@@ -151,7 +151,7 @@
             "fields": [
               "cve"
             ],
-            "latency_ms": 0.09
+            "latency_ms": 0.14
           }
         },
         {
@@ -161,7 +161,7 @@
           "looked_up": false,
           "lookup": null,
           "fault": null,
-          "latency_ms": 15717.6,
+          "latency_ms": 17475.31,
           "evaluation": {
             "result": "PASS",
             "explanation": "Matches the reference for moment on: CVE identifier.",
@@ -171,7 +171,7 @@
             "fields": [
               "cve"
             ],
-            "latency_ms": 0.29
+            "latency_ms": 0.09
           }
         }
       ],
@@ -181,7 +181,7 @@
       "final_answer": "The CVE ID for the moment.js ReDoS vulnerability in RFC 2822 parsing is CVE-2022-31129. This vulnerability allows regular expression denial of service attacks when parsing email addresses following RFC 2822 format and was disclosed in 2022.",
       "lessons_loaded": [],
       "lessons_created": [],
-      "latency_ms": 21941.82
+      "latency_ms": 24761.89
     },
     {
       "id": "test_05",
@@ -198,7 +198,7 @@
             "VULN-0036-HW9-21 (s0036_rel id 20094): follow-redirects affected < 1.15.6, severity medium. CVE-2024-28849: Proxy-Authorization header kept across hosts on redirect. Fixed in 1.15.6."
           ],
           "fault": null,
-          "latency_ms": 22291.63,
+          "latency_ms": 24710.19,
           "evaluation": {
             "result": "PASS",
             "explanation": "Matches the reference for follow-redirects on: first fixed version.",
@@ -208,7 +208,7 @@
             "fields": [
               "fixed_version"
             ],
-            "latency_ms": 1.4
+            "latency_ms": 0.05
           }
         }
       ],
@@ -220,7 +220,7 @@
         "lesson_001"
       ],
       "lessons_created": [],
-      "latency_ms": 22295.32
+      "latency_ms": 24711.02
     },
     {
       "id": "test_06",
@@ -237,7 +237,7 @@
             "VULN-0036-HW9-22 (s0036_rel id 20095): postcss affected < 8.4.31, severity medium. CVE-2023-44270: Line-return parsing error that lets crafted CSS inject comments. Fixed in 8.4.31."
           ],
           "fault": null,
-          "latency_ms": 20036.29,
+          "latency_ms": 21724.79,
           "evaluation": {
             "result": "PASS",
             "explanation": "Matches the reference for postcss on: severity.",
@@ -247,7 +247,7 @@
             "fields": [
               "severity"
             ],
-            "latency_ms": 0.29
+            "latency_ms": 0.14
           }
         }
       ],
@@ -259,7 +259,7 @@
         "lesson_002"
       ],
       "lessons_created": [],
-      "latency_ms": 20038.66
+      "latency_ms": 21725.43
     },
     {
       "id": "test_07",
@@ -276,7 +276,7 @@
             "VULN-0036-HW9-23 (s0036_rel id 20096): word-wrap affected < 1.2.4, severity medium. CVE-2023-26115: Regular expression denial of service in the wrap function. Fixed in 1.2.4."
           ],
           "fault": null,
-          "latency_ms": 11170.35,
+          "latency_ms": 12164.07,
           "evaluation": {
             "result": "PASS",
             "explanation": "Matches the reference for word-wrap on: first fixed version.",
@@ -286,7 +286,7 @@
             "fields": [
               "fixed_version"
             ],
-            "latency_ms": 0.29
+            "latency_ms": 0.06
           }
         }
       ],
@@ -298,7 +298,7 @@
         "lesson_001"
       ],
       "lessons_created": [],
-      "latency_ms": 11172.26
+      "latency_ms": 12164.7
     },
     {
       "id": "test_08",
@@ -311,7 +311,7 @@
           "looked_up": false,
           "lookup": null,
           "fault": null,
-          "latency_ms": 38577.01,
+          "latency_ms": 42037.85,
           "evaluation": {
             "result": "REVISE",
             "explanation": "Affected version range is wrong (2.22.0, 2.22.1, 2.22.2).",
@@ -326,7 +326,7 @@
             "fields": [
               "affected_versions"
             ],
-            "latency_ms": 2.41
+            "latency_ms": 0.41
           }
         },
         {
@@ -336,7 +336,7 @@
           "looked_up": false,
           "lookup": null,
           "fault": null,
-          "latency_ms": 44267.5,
+          "latency_ms": 46916.49,
           "evaluation": {
             "result": "PASS",
             "explanation": "Matches the reference for moment on: affected version range.",
@@ -346,7 +346,7 @@
             "fields": [
               "affected_versions"
             ],
-            "latency_ms": 0.29
+            "latency_ms": 0.37
           }
         }
       ],
@@ -356,7 +356,7 @@
       "final_answer": "The RFC 2822 parsing ReDoS vulnerability affects moment.js versions >= 2.18.0 and < 2.29.4. This vulnerability was fixed in version 2.29.4 and later.",
       "lessons_loaded": [],
       "lessons_created": [],
-      "latency_ms": 82849.35
+      "latency_ms": 88955.64
     },
     {
       "id": "test_09",
@@ -373,7 +373,7 @@
             "VULN-0036-HW9-02 (s0036_rel id 20075): lodash affected < 4.17.21, severity high. CVE-2021-23337: Command injection through the template function. Fixed in 4.17.21."
           ],
           "fault": null,
-          "latency_ms": 16675.69,
+          "latency_ms": 17548.93,
           "evaluation": {
             "result": "PASS",
             "explanation": "Matches the reference for lodash on: severity.",
@@ -383,7 +383,7 @@
             "fields": [
               "severity"
             ],
-            "latency_ms": 0.26
+            "latency_ms": 0.68
           }
         }
       ],
@@ -395,7 +395,7 @@
         "lesson_002"
       ],
       "lessons_created": [],
-      "latency_ms": 16679.41
+      "latency_ms": 17553.12
     },
     {
       "id": "test_10",
@@ -412,7 +412,7 @@
             "VULN-0036-HW9-03 (s0036_rel id 20076): minimist affected >= 1.0.0, < 1.2.6, severity critical. CVE-2021-44906: Prototype pollution through crafted command-line arguments. Fixed in 1.2.6."
           ],
           "fault": null,
-          "latency_ms": 22248.42,
+          "latency_ms": 23230.12,
           "evaluation": {
             "result": "PASS",
             "explanation": "Matches the reference for minimist on: first fixed version.",
@@ -422,7 +422,7 @@
             "fields": [
               "fixed_version"
             ],
-            "latency_ms": 1.45
+            "latency_ms": 0.06
           }
         }
       ],
@@ -434,7 +434,7 @@
         "lesson_001"
       ],
       "lessons_created": [],
-      "latency_ms": 22252.34
+      "latency_ms": 23231.98
     },
     {
       "id": "test_11",
@@ -449,7 +449,7 @@
           "looked_up": true,
           "lookup": [],
           "fault": null,
-          "latency_ms": 3635.55,
+          "latency_ms": 3790.07,
           "evaluation": {
             "result": "PASS",
             "explanation": "Declined correctly: no reference record for this package.",
@@ -459,7 +459,7 @@
             "fields": [
               "fixed_version"
             ],
-            "latency_ms": 0.11
+            "latency_ms": 0.33
           }
         }
       ],
@@ -471,7 +471,7 @@
         "lesson_001"
       ],
       "lessons_created": [],
-      "latency_ms": 3637.58
+      "latency_ms": 3791.0
     },
     {
       "id": "test_12",
@@ -484,7 +484,7 @@
           "looked_up": false,
           "lookup": null,
           "fault": null,
-          "latency_ms": 2984.64,
+          "latency_ms": 3166.57,
           "evaluation": {
             "result": "PASS",
             "explanation": "Declined correctly: no reference record for this package.",
@@ -494,7 +494,7 @@
             "fields": [
               "cve"
             ],
-            "latency_ms": 0.08
+            "latency_ms": 0.11
           }
         }
       ],
@@ -504,7 +504,7 @@
       "final_answer": "There is no known CVE ID associated with a deserialization flaw in the tiny-xmlrpc library. This vulnerability does not appear in official CVE databases or security advisories for tiny-xmlrpc. The library itself is not widely used in production systems with critical deserialization issues reported.",
       "lessons_loaded": [],
       "lessons_created": [],
-      "latency_ms": 2985.02
+      "latency_ms": 3166.78
     }
   ]
 }

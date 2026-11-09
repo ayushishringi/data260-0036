@@ -5,7 +5,7 @@
     "incorrect": 0,
     "initial_pass": 4,
     "avg_attempts": 1.6,
-    "avg_latency_ms": 22403.1
+    "avg_latency_ms": 37778.7
   },
   "pattern_counts": {
     "severity": 2,
@@ -18,7 +18,7 @@
       "lesson_id": "lesson_001",
       "failure_pattern": "The answer gives an incorrect first fixed version from memory.",
       "correction": "Before answering a question about the first fixed version, look the package up in the s0036_rel advisory database and state the first fixed version exactly as the record gives it.",
-      "created_at": "2026-11-05",
+      "created_at": "2026-11-07",
       "use_count": 2,
       "pattern_key": "fixed_version",
       "applies_to": [
@@ -31,7 +31,7 @@
       "lesson_id": "lesson_002",
       "failure_pattern": "The answer gives an incorrect severity from memory.",
       "correction": "Before answering a question about the severity, look the package up in the s0036_rel advisory database and state the severity exactly as the record gives it.",
-      "created_at": "2026-11-05",
+      "created_at": "2026-11-07",
       "use_count": 0,
       "pattern_key": "severity",
       "applies_to": [
@@ -53,7 +53,7 @@
           "looked_up": false,
           "lookup": null,
           "fault": null,
-          "latency_ms": 24986.37,
+          "latency_ms": 25963.73,
           "evaluation": {
             "result": "PASS",
             "explanation": "Matches the reference for lodash on: first fixed version.",
@@ -63,7 +63,7 @@
             "fields": [
               "fixed_version"
             ],
-            "latency_ms": 0.2
+            "latency_ms": 0.24
           }
         }
       ],
@@ -73,7 +73,7 @@
       "final_answer": "The version of lodash that fixes CVE-2021-23337 is 4.17.21. This version was released on May 20, 2021 and addresses the critical prototype pollution vulnerability in the `_.cloneDeep` function.",
       "lessons_loaded": [],
       "lessons_created": [],
-      "latency_ms": 24988.96
+      "latency_ms": 25964.17
     },
     {
       "id": "train_02",
@@ -86,7 +86,7 @@
           "looked_up": false,
           "lookup": null,
           "fault": null,
-          "latency_ms": 7101.0,
+          "latency_ms": 5992.5,
           "evaluation": {
             "result": "REVISE",
             "explanation": "Severity is missing.",
@@ -101,7 +101,7 @@
             "fields": [
               "severity"
             ],
-            "latency_ms": 0.27
+            "latency_ms": 0.37
           }
         },
         {
@@ -111,7 +111,7 @@
           "looked_up": false,
           "lookup": null,
           "fault": null,
-          "latency_ms": 7599.8,
+          "latency_ms": 7254.53,
           "evaluation": {
             "result": "PASS",
             "explanation": "Matches the reference for minimist on: severity.",
@@ -121,7 +121,7 @@
             "fields": [
               "severity"
             ],
-            "latency_ms": 0.05
+            "latency_ms": 0.11
           }
         }
       ],
@@ -131,7 +131,7 @@
       "final_answer": "The severity of the minimist prototype pollution vulnerability is critical, as per the reference record.",
       "lessons_loaded": [],
       "lessons_created": [],
-      "latency_ms": 14702.75
+      "latency_ms": 13247.74
     },
     {
       "id": "train_03",
@@ -144,7 +144,7 @@
           "looked_up": false,
           "lookup": null,
           "fault": null,
-          "latency_ms": 6647.82,
+          "latency_ms": 6340.77,
           "evaluation": {
             "result": "REVISE",
             "explanation": "First fixed version is wrong (5.1.2).",
@@ -159,7 +159,7 @@
             "fields": [
               "fixed_version"
             ],
-            "latency_ms": 0.24
+            "latency_ms": 5.75
           }
         },
         {
@@ -169,7 +169,7 @@
           "looked_up": false,
           "lookup": null,
           "fault": null,
-          "latency_ms": 5175.61,
+          "latency_ms": 4966.84,
           "evaluation": {
             "result": "PASS",
             "explanation": "Matches the reference for pyyaml on: first fixed version.",
@@ -179,7 +179,7 @@
             "fields": [
               "fixed_version"
             ],
-            "latency_ms": 0.06
+            "latency_ms": 0.23
           }
         }
       ],
@@ -189,7 +189,7 @@
       "final_answer": "The reference record indicates that pyyaml version 5.4 is the first version that fixed the full_load code execution issue. This version resolved the vulnerability described in CVE-2019-17478, which allowed malicious YAML documents to trigger code execution via the `full_load` function. The fix was officially released on September 12, 2019, and is the earliest version documented as containing this critical patch.",
       "lessons_loaded": [],
       "lessons_created": [],
-      "latency_ms": 11825.98
+      "latency_ms": 11314.32
     },
     {
       "id": "train_04",
@@ -202,7 +202,7 @@
           "looked_up": false,
           "lookup": null,
           "fault": null,
-          "latency_ms": 3792.53,
+          "latency_ms": 3506.5,
           "evaluation": {
             "result": "PASS",
             "explanation": "Matches the reference for spring-beans on: CVE identifier.",
@@ -212,7 +212,7 @@
             "fields": [
               "cve"
             ],
-            "latency_ms": 0.04
+            "latency_ms": 0.06
           }
         }
       ],
@@ -222,7 +222,7 @@
       "final_answer": "The Spring4Shell vulnerability is specifically CVE-2022-22965. This vulnerability affects the Spring Framework's core components (like `spring-core` and `spring-beans`), but it is **not** a standalone vulnerability in the `spring-beans` package itself. The vulnerability arises from improper handling of the `@Autowired` annotation in the Spring Framework's dependency injection mechanism, and the CVE ID applies to the Spring Framework as a whole, not isolated packages.",
       "lessons_loaded": [],
       "lessons_created": [],
-      "latency_ms": 3792.84
+      "latency_ms": 3506.64
     },
     {
       "id": "train_05",
@@ -235,7 +235,7 @@
           "looked_up": false,
           "lookup": null,
           "fault": null,
-          "latency_ms": 4712.99,
+          "latency_ms": 5556.05,
           "evaluation": {
             "result": "REVISE",
             "explanation": "First fixed version is wrong (2.25.1, 2.25.1).",
@@ -250,7 +250,7 @@
             "fields": [
               "fixed_version"
             ],
-            "latency_ms": 0.24
+            "latency_ms": 0.25
           }
         },
         {
@@ -260,7 +260,7 @@
           "looked_up": false,
           "lookup": null,
           "fault": null,
-          "latency_ms": 5105.31,
+          "latency_ms": 7482.88,
           "evaluation": {
             "result": "PASS",
             "explanation": "Matches the reference for requests on: first fixed version.",
@@ -270,7 +270,7 @@
             "fields": [
               "fixed_version"
             ],
-            "latency_ms": 0.11
+            "latency_ms": 0.1
           }
         }
       ],
@@ -282,7 +282,7 @@
       "lessons_created": [
         "lesson_001"
       ],
-      "latency_ms": 9820.23
+      "latency_ms": 13040.65
     },
     {
       "id": "train_06",
@@ -295,7 +295,7 @@
           "looked_up": false,
           "lookup": null,
           "fault": null,
-          "latency_ms": 4481.97,
+          "latency_ms": 9613.09,
           "evaluation": {
             "result": "REVISE",
             "explanation": "Severity is wrong (critical, high).",
@@ -310,7 +310,7 @@
             "fields": [
               "severity"
             ],
-            "latency_ms": 0.31
+            "latency_ms": 0.86
           }
         },
         {
@@ -320,7 +320,7 @@
           "looked_up": false,
           "lookup": null,
           "fault": null,
-          "latency_ms": 14034.42,
+          "latency_ms": 25020.44,
           "evaluation": {
             "result": "PASS",
             "explanation": "Matches the reference for axios on: severity.",
@@ -330,7 +330,7 @@
             "fields": [
               "severity"
             ],
-            "latency_ms": 0.09
+            "latency_ms": 0.07
           }
         }
       ],
@@ -342,7 +342,7 @@
       "lessons_created": [
         "lesson_002"
       ],
-      "latency_ms": 18519.53
+      "latency_ms": 34635.09
     },
     {
       "id": "train_07",
@@ -355,7 +355,7 @@
           "looked_up": false,
           "lookup": null,
           "fault": null,
-          "latency_ms": 26533.41,
+          "latency_ms": 23336.74,
           "evaluation": {
             "result": "REVISE",
             "explanation": "Affected version range is wrong (2.10.0, 2.12.4, 2.12.5).",
@@ -370,7 +370,7 @@
             "fields": [
               "affected_versions"
             ],
-            "latency_ms": 0.59
+            "latency_ms": 0.38
           }
         },
         {
@@ -380,7 +380,7 @@
           "looked_up": false,
           "lookup": null,
           "fault": null,
-          "latency_ms": 35542.83,
+          "latency_ms": 78764.63,
           "evaluation": {
             "result": "PASS",
             "explanation": "Matches the reference for jackson-databind on: affected version range.",
@@ -390,7 +390,7 @@
             "fields": [
               "affected_versions"
             ],
-            "latency_ms": 0.51
+            "latency_ms": 1.06
           }
         }
       ],
@@ -400,7 +400,7 @@
       "final_answer": "The nested JSON denial of service vulnerability (CVE-2021-44228) affects jackson-databind versions 2.13.0 through 2.13.2.0. Versions 2.13.2.1 and newer are not impacted by this issue.",
       "lessons_loaded": [],
       "lessons_created": [],
-      "latency_ms": 62077.99
+      "latency_ms": 102103.38
     },
     {
       "id": "train_08",
@@ -417,7 +417,7 @@
             "VULN-0036-HW9-01 (s0036_rel id 20074): log4j-core affected >= 2.0-beta9, < 2.15.0, severity critical. CVE-2021-44228: Remote code execution through JNDI lookups in logged strings (Log4Shell). Fixed in 2.15.0."
           ],
           "fault": null,
-          "latency_ms": 14267.89,
+          "latency_ms": 31047.52,
           "evaluation": {
             "result": "PASS",
             "explanation": "Matches the reference for log4j-core on: first fixed version.",
@@ -427,7 +427,7 @@
             "fields": [
               "fixed_version"
             ],
-            "latency_ms": 0.17
+            "latency_ms": 0.55
           }
         }
       ],
@@ -439,7 +439,7 @@
         "lesson_001"
       ],
       "lessons_created": [],
-      "latency_ms": 14270.87
+      "latency_ms": 31049.59
     },
     {
       "id": "train_09",
@@ -454,7 +454,7 @@
           "looked_up": true,
           "lookup": [],
           "fault": null,
-          "latency_ms": 3911.01,
+          "latency_ms": 8524.9,
           "evaluation": {
             "result": "PASS",
             "explanation": "Declined correctly: no reference record for this package.",
@@ -464,7 +464,7 @@
             "fields": [
               "fixed_version"
             ],
-            "latency_ms": 0.19
+            "latency_ms": 0.2
           }
         }
       ],
@@ -476,7 +476,7 @@
         "lesson_001"
       ],
       "lessons_created": [],
-      "latency_ms": 3911.82
+      "latency_ms": 8526.35
     },
     {
       "id": "train_10",
@@ -489,7 +489,7 @@
           "looked_up": false,
           "lookup": null,
           "fault": null,
-          "latency_ms": 4265.16,
+          "latency_ms": 8784.22,
           "evaluation": {
             "result": "REVISE",
             "explanation": "The package has no reference record but the answer states CVE-2016-2547.",
@@ -504,7 +504,7 @@
             "fields": [
               "cve"
             ],
-            "latency_ms": 0.13
+            "latency_ms": 0.19
           }
         },
         {
@@ -514,7 +514,7 @@
           "looked_up": false,
           "lookup": null,
           "fault": null,
-          "latency_ms": 55853.69,
+          "latency_ms": 125613.81,
           "evaluation": {
             "result": "PASS",
             "explanation": "Declined correctly: no reference record for this package.",
@@ -524,7 +524,7 @@
             "fields": [
               "cve"
             ],
-            "latency_ms": 0.29
+            "latency_ms": 0.45
           }
         }
       ],
@@ -534,7 +534,7 @@
       "final_answer": "No advisory record was found for the leftpad-plus package in the reference data. This vulnerability has no associated advisory.",
       "lessons_loaded": [],
       "lessons_created": [],
-      "latency_ms": 60120.27
+      "latency_ms": 134399.25
     }
   ]
 }

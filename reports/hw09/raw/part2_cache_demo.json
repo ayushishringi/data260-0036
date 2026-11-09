@@ -1,12 +1,12 @@
 {
-  "ran_at": "2026-11-05T08:22:43",
+  "ran_at": "2026-11-05T17:56:28",
   "summary": {
     "queries": 12,
     "hits": 6,
     "misses": 6,
     "hit_rate": 0.5,
-    "avg_latency_cached_ms": 16.16,
-    "avg_latency_uncached_ms": 33873.85,
+    "avg_latency_cached_ms": 24.18,
+    "avg_latency_uncached_ms": 32470.37,
     "threshold": 0.85,
     "cache_entries_after": 5
   },
@@ -22,17 +22,17 @@
       "answer": "The Log4Shell vulnerability (CVE-2021-44228) in log4j-core is critical (CVSS 10.0). According to the s0036_rel advisory database (id 20074), this vulnerability affects log4j-core versions >= 2.0-beta9 and < 2.15.0. It enables remote code execution via JNDI lookups in logged strings. The fix was released in log4j2 2.15.0. For immediate security, systems must upgrade to log4j2 2.17.0 or later to resolve this critical vulnerability. Patching to 2.17.0+ is essential as it addresses the Log4Shell flaw while maintaining stability and security. Delaying patching exposes systems to remote code execution risks. Always verify the specific log4j2 version in use before applying updates. (148 words)\n\nSource record: VULN-0036-HW9-01 (s0036_rel id 20074): log4j-core affected >= 2.0-beta9, < 2.15.0, severity critical. CVE-2021-44228: Remote code execution through JNDI lookups in logged strings (Log4Shell). Fixed in 2.15.0.",
       "status": "approved",
       "stale_invalidated": false,
-      "correlation_id": "69e65086-2683-4caf-ad6a-216084c7b7a0",
-      "data_version": "v-b85b55d61590653d",
+      "correlation_id": "c34278a3-4588-4808-a916-731c96600a48",
+      "data_version": "v-6e6e15397f673453",
       "record_ids": [
         20074
       ],
-      "latency_ms": 17741.32,
+      "latency_ms": 18041.45,
       "timings": {
-        "embed_ms": 12.07,
-        "search_ms": 1.77,
-        "pipeline_ms": 17531.0,
-        "store_ms": 8.99
+        "embed_ms": 96.35,
+        "search_ms": 2.33,
+        "pipeline_ms": 17841.38,
+        "store_ms": 7.69
       }
     },
     {
@@ -44,15 +44,15 @@
       "matched_query": "What is the severity of the Log4Shell vulnerability in log4j-core?",
       "is_cached": true,
       "answer": "The Log4Shell vulnerability (CVE-2021-44228) in log4j-core is critical (CVSS 10.0). According to the s0036_rel advisory database (id 20074), this vulnerability affects log4j-core versions >= 2.0-beta9 and < 2.15.0. It enables remote code execution via JNDI lookups in logged strings. The fix was released in log4j2 2.15.0. For immediate security, systems must upgrade to log4j2 2.17.0 or later to resolve this critical vulnerability. Patching to 2.17.0+ is essential as it addresses the Log4Shell flaw while maintaining stability and security. Delaying patching exposes systems to remote code execution risks. Always verify the specific log4j2 version in use before applying updates. (148 words)\n\nSource record: VULN-0036-HW9-01 (s0036_rel id 20074): log4j-core affected >= 2.0-beta9, < 2.15.0, severity critical. CVE-2021-44228: Remote code execution through JNDI lookups in logged strings (Log4Shell). Fixed in 2.15.0.",
-      "data_version": "v-b85b55d61590653d",
+      "data_version": "v-6e6e15397f673453",
       "record_ids": [
         20074
       ],
-      "latency_ms": 31.04,
+      "latency_ms": 74.23,
       "timings": {
-        "embed_ms": 26.03,
-        "search_ms": 1.73,
-        "version_check_ms": 3.28
+        "embed_ms": 29.09,
+        "search_ms": 3.06,
+        "version_check_ms": 42.08
       }
     },
     {
@@ -64,15 +64,15 @@
       "matched_query": "What is the severity of the Log4Shell vulnerability in log4j-core?",
       "is_cached": true,
       "answer": "The Log4Shell vulnerability (CVE-2021-44228) in log4j-core is critical (CVSS 10.0). According to the s0036_rel advisory database (id 20074), this vulnerability affects log4j-core versions >= 2.0-beta9 and < 2.15.0. It enables remote code execution via JNDI lookups in logged strings. The fix was released in log4j2 2.15.0. For immediate security, systems must upgrade to log4j2 2.17.0 or later to resolve this critical vulnerability. Patching to 2.17.0+ is essential as it addresses the Log4Shell flaw while maintaining stability and security. Delaying patching exposes systems to remote code execution risks. Always verify the specific log4j2 version in use before applying updates. (148 words)\n\nSource record: VULN-0036-HW9-01 (s0036_rel id 20074): log4j-core affected >= 2.0-beta9, < 2.15.0, severity critical. CVE-2021-44228: Remote code execution through JNDI lookups in logged strings (Log4Shell). Fixed in 2.15.0.",
-      "data_version": "v-b85b55d61590653d",
+      "data_version": "v-6e6e15397f673453",
       "record_ids": [
         20074
       ],
-      "latency_ms": 7.29,
+      "latency_ms": 7.59,
       "timings": {
-        "embed_ms": 5.55,
-        "search_ms": 0.92,
-        "version_check_ms": 0.82
+        "embed_ms": 5.49,
+        "search_ms": 1.42,
+        "version_check_ms": 0.68
       }
     },
     {
@@ -86,17 +86,17 @@
       "answer": "The security advisory (s0036_rel id 20075) explicitly states that the template command injection vulnerability (CVE-2021-23337) in lodash is fixed in version **4.17.21**, not 4.17.11. This high-severity vulnerability affects versions prior to 4.17.21. The advisory confirms the fix was implemented in 4.17.21 to resolve command injection via the template function. Version 4.17.11 does not contain this fix and remains vulnerable. Users must upgrade to 4.17.21 or later to mitigate CVE-2021-23337. The advisory database provides no evidence that 4.17.11 addresses this issue; it specifically lists 4.17.21 as the patched version. Always verify fixes against the exact advisory details to avoid security risks. (149 words)\n\nSource record: VULN-0036-HW9-02 (s0036_rel id 20075): lodash affected < 4.17.21, severity high. CVE-2021-23337: Command injection through the template function. Fixed in 4.17.21.",
       "status": "approved",
       "stale_invalidated": false,
-      "correlation_id": "d62ae76a-f339-412e-aa9a-aed2f983065c",
+      "correlation_id": "a764109b-40d9-4df0-ba85-4c36b9c64742",
       "data_version": "v-13e7d9a1362e47bd",
       "record_ids": [
         20075
       ],
-      "latency_ms": 57398.5,
+      "latency_ms": 55115.17,
       "timings": {
-        "embed_ms": 5.97,
-        "search_ms": 0.87,
-        "pipeline_ms": 57386.25,
-        "store_ms": 3.89
+        "embed_ms": 8.35,
+        "search_ms": 0.89,
+        "pipeline_ms": 55098.95,
+        "store_ms": 5.0
       }
     },
     {
@@ -112,11 +112,11 @@
       "record_ids": [
         20075
       ],
-      "latency_ms": 13.16,
+      "latency_ms": 23.37,
       "timings": {
-        "embed_ms": 9.59,
-        "search_ms": 1.34,
-        "version_check_ms": 2.22
+        "embed_ms": 18.65,
+        "search_ms": 1.48,
+        "version_check_ms": 3.24
       }
     },
     {
@@ -130,15 +130,15 @@
       "answer": "To generate an SPDX SBOM for a Python project, first run `pip freeze` to list all installed packages and versions. Save this output to a file (e.g., `requirements.txt` using `pip freeze > requirements.txt`). Next, generate the SBOM using the `spdx` command-line tool (install via `pip install spdx-tools`): `spdx --input requirements.txt --output sbom.json`. This creates a JSON-formatted SBOM. For enhanced vulnerability data, integrate with Snyk or OWASP Dependency-Track. Save the SBOM file (e.g., `sbom.json`) for security scanning and compliance. Note: The `spdx` tool may require additional configuration for full SPDX compliance. This method strictly follows your plan: capture dependencies via `pip freeze`, generate the SBOM, and save it. Ensure the SBOM is stored in a standard format to facilitate downstream security practices. (148 words)",
       "status": "approved",
       "stale_invalidated": false,
-      "correlation_id": "11b568d7-ad97-4f3c-99f6-fce9fffe5276",
+      "correlation_id": "0bb2da80-c9d5-47f4-9f9e-ed99dd46f72a",
       "data_version": "none",
       "record_ids": [],
-      "latency_ms": 89282.62,
+      "latency_ms": 85572.61,
       "timings": {
-        "embed_ms": 4.54,
-        "search_ms": 1.03,
-        "pipeline_ms": 89272.69,
-        "store_ms": 2.97
+        "embed_ms": 4.77,
+        "search_ms": 0.66,
+        "pipeline_ms": 85560.82,
+        "store_ms": 2.78
       }
     },
     {
@@ -154,11 +154,11 @@
       "record_ids": [
         20075
       ],
-      "latency_ms": 15.85,
+      "latency_ms": 14.97,
       "timings": {
-        "embed_ms": 10.79,
-        "search_ms": 1.62,
-        "version_check_ms": 3.45
+        "embed_ms": 10.21,
+        "search_ms": 1.39,
+        "version_check_ms": 3.37
       }
     },
     {
@@ -172,17 +172,17 @@
       "answer": "The vulnerable version range for requests leaking the Proxy-Authorization header (CVE-2023-32681) is **>= 2.3.0 and < 2.31.0**. This vulnerability allows the header to leak during HTTPS redirects. The fix was implemented in **version 2.31.0**, not 2.13.0. The advisory (s0036_rel id 20078) explicitly states the affected range ends at 2.31.0, meaning **version 2.31.0 or higher** resolves the issue. There is no fix in 2.13.0 for this specific vulnerability; the user's plan incorrectly references 2.13.0. Users must upgrade to **requests 2.31.0+** to prevent the Proxy-Authorization leak. Always verify versions against the advisory's exact affected range to avoid confusion. (148 words)\n\nSource record: VULN-0036-HW9-05 (s0036_rel id 20078): requests affected >= 2.3.0, < 2.31.0, severity medium. CVE-2023-32681: Proxy-Authorization header leaked to the destination server on HTTPS redirects. Fixed in 2.31.0.",
       "status": "approved",
       "stale_invalidated": false,
-      "correlation_id": "b0223df0-8b40-47e9-af6a-c58ac08ffc63",
-      "data_version": "v-09e908a37503fbe4",
+      "correlation_id": "5279c4e4-d6ef-4e1b-97df-63f9ce581d66",
+      "data_version": "v-597dbe73186d9917",
       "record_ids": [
         20078
       ],
-      "latency_ms": 19303.19,
+      "latency_ms": 18200.22,
       "timings": {
-        "embed_ms": 6.96,
-        "search_ms": 1.08,
-        "pipeline_ms": 19291.45,
-        "store_ms": 2.05
+        "embed_ms": 4.4,
+        "search_ms": 0.71,
+        "pipeline_ms": 18190.11,
+        "store_ms": 3.41
       }
     },
     {
@@ -194,15 +194,15 @@
       "matched_query": "Which requests version stops leaking the Proxy-Authorization header?",
       "is_cached": true,
       "answer": "The vulnerable version range for requests leaking the Proxy-Authorization header (CVE-2023-32681) is **>= 2.3.0 and < 2.31.0**. This vulnerability allows the header to leak during HTTPS redirects. The fix was implemented in **version 2.31.0**, not 2.13.0. The advisory (s0036_rel id 20078) explicitly states the affected range ends at 2.31.0, meaning **version 2.31.0 or higher** resolves the issue. There is no fix in 2.13.0 for this specific vulnerability; the user's plan incorrectly references 2.13.0. Users must upgrade to **requests 2.31.0+** to prevent the Proxy-Authorization leak. Always verify versions against the advisory's exact affected range to avoid confusion. (148 words)\n\nSource record: VULN-0036-HW9-05 (s0036_rel id 20078): requests affected >= 2.3.0, < 2.31.0, severity medium. CVE-2023-32681: Proxy-Authorization header leaked to the destination server on HTTPS redirects. Fixed in 2.31.0.",
-      "data_version": "v-09e908a37503fbe4",
+      "data_version": "v-597dbe73186d9917",
       "record_ids": [
         20078
       ],
-      "latency_ms": 12.52,
+      "latency_ms": 17.3,
       "timings": {
-        "embed_ms": 9.81,
-        "search_ms": 1.48,
-        "version_check_ms": 1.23
+        "embed_ms": 13.17,
+        "search_ms": 1.32,
+        "version_check_ms": 2.81
       }
     },
     {
@@ -216,15 +216,15 @@
       "answer": "A CWE identifier represents a specific, standardized security weakness defined in the Common Weakness Enumeration (CWE) list. It is a unique numerical code (e.g., CWE-122 for \"Improper Limitation of a Buffer\") that precisely references a vulnerability type across the official CWE database (cwe.nist.gov). This identifier enables consistent communication about security flaws without ambiguity. In open-source package vulnerability contexts, tools like Snyk or Dependabot report weaknesses using CWE IDs to categorize risks (e.g., \"CWE-797: Improper Handling of Sensitive Data\"). The identifier directly maps to a documented weakness description, ensuring accurate vulnerability classification and mitigation guidance. Always verify the exact code in the official CWE database to avoid misinterpretation, as this standardization is critical for cross-tool compatibility and effective security patching in open-source ecosystems. (158 words)",
       "status": "approved",
       "stale_invalidated": false,
-      "correlation_id": "248c29a5-3dba-434b-b20c-b2ccb6c0e875",
+      "correlation_id": "f40a859d-ea5a-4493-a965-c36ef023ad15",
       "data_version": "none",
       "record_ids": [],
-      "latency_ms": 10068.43,
+      "latency_ms": 9034.1,
       "timings": {
-        "embed_ms": 7.61,
-        "search_ms": 1.44,
-        "pipeline_ms": 10054.75,
-        "store_ms": 2.88
+        "embed_ms": 4.72,
+        "search_ms": 0.73,
+        "pipeline_ms": 9024.24,
+        "store_ms": 3.02
       }
     },
     {
@@ -238,11 +238,11 @@
       "answer": "To generate an SPDX SBOM for a Python project, first run `pip freeze` to list all installed packages and versions. Save this output to a file (e.g., `requirements.txt` using `pip freeze > requirements.txt`). Next, generate the SBOM using the `spdx` command-line tool (install via `pip install spdx-tools`): `spdx --input requirements.txt --output sbom.json`. This creates a JSON-formatted SBOM. For enhanced vulnerability data, integrate with Snyk or OWASP Dependency-Track. Save the SBOM file (e.g., `sbom.json`) for security scanning and compliance. Note: The `spdx` tool may require additional configuration for full SPDX compliance. This method strictly follows your plan: capture dependencies via `pip freeze`, generate the SBOM, and save it. Ensure the SBOM is stored in a standard format to facilitate downstream security practices. (148 words)",
       "data_version": "none",
       "record_ids": [],
-      "latency_ms": 17.11,
+      "latency_ms": 7.62,
       "timings": {
-        "embed_ms": 15.66,
-        "search_ms": 1.44,
-        "version_check_ms": 0.01
+        "embed_ms": 5.88,
+        "search_ms": 1.74,
+        "version_check_ms": 0.0
       }
     },
     {
@@ -256,14 +256,14 @@
       "answer": "A CWE ID (Common Weakness Enumeration ID) is a standardized identifier from the Common Weakness Enumeration (CWE) database that precisely defines a specific type of security vulnerability or weakness in software. It serves three critical functions: First, it uniquely identifies the vulnerability type (e.g., CWE-787 for \"Improper Limitation of a Buffer Size\"), enabling consistent classification across tools and teams. Second, it acts as a reference point in security documentation, reports, and vulnerability databases, ensuring clear communication about the nature of the flaw without ambiguity. Third, it directly links to proven mitigation strategies and remediation guidance within the CWE ecosystem, providing actionable steps for developers and security professionals to address the weakness effectively. This standardization is vital for cross-team collaboration, automated vulnerability scanning, and prioritizing fixes in open-source package security contexts. (148 words)",
       "status": "needs_revision",
       "stale_invalidated": false,
-      "correlation_id": "ab5fc70b-50c9-480f-a819-1cec8d201bf9",
+      "correlation_id": "c7fe0de8-2aa9-47b8-9fb0-eae1c420414b",
       "data_version": "none",
       "record_ids": [],
-      "latency_ms": 9449.01,
+      "latency_ms": 8858.69,
       "timings": {
-        "embed_ms": 4.76,
-        "search_ms": 0.81,
-        "pipeline_ms": 9434.97,
+        "embed_ms": 4.23,
+        "search_ms": 0.76,
+        "pipeline_ms": 8851.95,
         "store_ms": 0.01
       }
     }

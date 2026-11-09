@@ -1,5 +1,5 @@
 {
-  "ran_at": "2026-11-05T08:23:18",
+  "ran_at": "2026-11-08T17:11:43",
   "record": "VULN-0036-HW9-05",
   "query": "What is the severity of the requests Proxy-Authorization header leak?",
   "paraphrase": "How severe is the Proxy-Authorization leak in requests?",
@@ -16,7 +16,7 @@
     "affected_version": ">= 2.3.0, < 2.31.0",
     "severity": "medium",
     "description": "CVE-2023-32681: Proxy-Authorization header leaked to the destination server on HTTPS redirects. Fixed in 2.31.0.",
-    "updated_at": "2026-11-04 20:10:22"
+    "updated_at": "2026-11-06 15:39:37"
   },
   "record_after": {
     "id": 20078,
@@ -25,7 +25,7 @@
     "affected_version": ">= 2.3.0, < 2.31.0",
     "severity": "high",
     "description": "CVE-2023-32681: Proxy-Authorization header leaked to the destination server on HTTPS redirects. Fixed in 2.31.0.",
-    "updated_at": "2026-11-05 08:23:03"
+    "updated_at": "2026-11-08 17:11:29"
   },
   "steps": [
     {
@@ -38,17 +38,17 @@
       "answer": "The severity of the requests Proxy-Authorization header leak (CVE-2023-32681) is **medium**. This vulnerability (VULN-0036-HW9-05, s0036_rel id 20078) affects requests versions >= 2.3.0 but < 2.31.0. It occurs when the Proxy-Authorization header is leaked to the destination server during HTTPS redirects, potentially exposing authentication tokens. While this leak could enable unauthorized access to protected resources, it does not compromise the entire authentication mechanism or cause widespread data exposure across all traffic. The impact is limited to specific HTTPS redirect scenarios where the header is inadvertently transmitted. The fix is to upgrade to requests 2.31.0. This medium severity classification aligns with the advisory, as the vulnerability requires specific conditions to exploit but does not pose critical systemic risks like remote code execution or total data breaches. (149 words)\n\nSource record: VULN-0036-HW9-05 (s0036_rel id 20078): requests affected >= 2.3.0, < 2.31.0, severity medium. CVE-2023-32681: Proxy-Authorization header leaked to the destination server on HTTPS redirects. Fixed in 2.31.0.",
       "status": "approved",
       "stale_invalidated": false,
-      "correlation_id": "9a604333-406d-4f9b-bb74-d6d0810f01cd",
-      "data_version": "v-09e908a37503fbe4",
+      "correlation_id": "f818d627-b988-477a-b32d-4b244aa5f1d9",
+      "data_version": "v-69591878aff271b6",
       "record_ids": [
         20078
       ],
-      "latency_ms": 15619.48,
+      "latency_ms": 14990.71,
       "timings": {
-        "embed_ms": 9.1,
-        "search_ms": 1.73,
-        "pipeline_ms": 15604.93,
-        "store_ms": 2.12
+        "embed_ms": 10.85,
+        "search_ms": 1.26,
+        "pipeline_ms": 14965.01,
+        "store_ms": 12.2
       },
       "answer_severity": "medium",
       "db_severity": "medium",
@@ -62,15 +62,15 @@
       "matched_query": "What is the severity of the requests Proxy-Authorization header leak?",
       "is_cached": true,
       "answer": "The severity of the requests Proxy-Authorization header leak (CVE-2023-32681) is **medium**. This vulnerability (VULN-0036-HW9-05, s0036_rel id 20078) affects requests versions >= 2.3.0 but < 2.31.0. It occurs when the Proxy-Authorization header is leaked to the destination server during HTTPS redirects, potentially exposing authentication tokens. While this leak could enable unauthorized access to protected resources, it does not compromise the entire authentication mechanism or cause widespread data exposure across all traffic. The impact is limited to specific HTTPS redirect scenarios where the header is inadvertently transmitted. The fix is to upgrade to requests 2.31.0. This medium severity classification aligns with the advisory, as the vulnerability requires specific conditions to exploit but does not pose critical systemic risks like remote code execution or total data breaches. (149 words)\n\nSource record: VULN-0036-HW9-05 (s0036_rel id 20078): requests affected >= 2.3.0, < 2.31.0, severity medium. CVE-2023-32681: Proxy-Authorization header leaked to the destination server on HTTPS redirects. Fixed in 2.31.0.",
-      "data_version": "v-09e908a37503fbe4",
+      "data_version": "v-69591878aff271b6",
       "record_ids": [
         20078
       ],
-      "latency_ms": 12.58,
+      "latency_ms": 27.04,
       "timings": {
-        "embed_ms": 9.6,
-        "search_ms": 1.14,
-        "version_check_ms": 1.84
+        "embed_ms": 21.37,
+        "search_ms": 1.49,
+        "version_check_ms": 4.19
       },
       "answer_severity": "medium",
       "db_severity": "medium",
@@ -84,14 +84,14 @@
       "matched_query": "What is the severity of the requests Proxy-Authorization header leak?",
       "is_cached": true,
       "answer": "The severity of the requests Proxy-Authorization header leak (CVE-2023-32681) is **medium**. This vulnerability (VULN-0036-HW9-05, s0036_rel id 20078) affects requests versions >= 2.3.0 but < 2.31.0. It occurs when the Proxy-Authorization header is leaked to the destination server during HTTPS redirects, potentially exposing authentication tokens. While this leak could enable unauthorized access to protected resources, it does not compromise the entire authentication mechanism or cause widespread data exposure across all traffic. The impact is limited to specific HTTPS redirect scenarios where the header is inadvertently transmitted. The fix is to upgrade to requests 2.31.0. This medium severity classification aligns with the advisory, as the vulnerability requires specific conditions to exploit but does not pose critical systemic risks like remote code execution or total data breaches. (149 words)\n\nSource record: VULN-0036-HW9-05 (s0036_rel id 20078): requests affected >= 2.3.0, < 2.31.0, severity medium. CVE-2023-32681: Proxy-Authorization header leaked to the destination server on HTTPS redirects. Fixed in 2.31.0.",
-      "data_version": "v-09e908a37503fbe4",
+      "data_version": "v-69591878aff271b6",
       "record_ids": [
         20078
       ],
-      "latency_ms": 7.37,
+      "latency_ms": 5.66,
       "timings": {
-        "embed_ms": 6.4,
-        "search_ms": 0.97
+        "embed_ms": 4.8,
+        "search_ms": 0.86
       },
       "answer_severity": "medium",
       "db_severity": "high",
@@ -107,18 +107,18 @@
       "answer": "The vulnerability described (CVE-2023-32681) has a **high severity** as confirmed by the s0036_rel advisory (VULN-0036-HW9-05). This issue occurs in the `requests` library for versions >=2.3.0 but <2.31.0. It specifically leaks the `Proxy-Authorization` header during HTTPS redirects, exposing authentication tokens to the destination server. This leak enables potential unauthorized access to sensitive user credentials and session data.  \n\nThe impact is significant: attackers could intercept tokens via intermediate proxies, leading to session hijacking or data breaches. The fix is to upgrade to `requests>=2.31.0`, which securely handles redirects without leaking this header. No additional mitigation steps are required beyond the version update per the advisory. This vulnerability directly compromises authentication security in proxy chains, justifying the high severity rating. (148 words)\n\nSource record: VULN-0036-HW9-05 (s0036_rel id 20078): requests affected >= 2.3.0, < 2.31.0, severity high. CVE-2023-32681: Proxy-Authorization header leaked to the destination server on HTTPS redirects. Fixed in 2.31.0.",
       "status": "approved",
       "stale_invalidated": true,
-      "correlation_id": "1747616e-811a-4a53-8100-70ebe515811b",
-      "data_version": "v-da759bf61ba0f522",
+      "correlation_id": "574cf7c3-2e22-4241-a3aa-7bc2de893b3d",
+      "data_version": "v-4bdee5bf2753d7c2",
       "record_ids": [
         20078
       ],
-      "latency_ms": 12372.78,
+      "latency_ms": 11673.48,
       "timings": {
-        "embed_ms": 4.45,
-        "search_ms": 0.89,
-        "version_check_ms": 0.79,
-        "pipeline_ms": 12363.54,
-        "store_ms": 1.37
+        "embed_ms": 4.07,
+        "search_ms": 0.69,
+        "version_check_ms": 0.6,
+        "pipeline_ms": 11664.37,
+        "store_ms": 1.54
       },
       "answer_severity": "high",
       "db_severity": "high",
@@ -132,15 +132,15 @@
       "matched_query": "What is the severity of the requests Proxy-Authorization header leak?",
       "is_cached": true,
       "answer": "The vulnerability described (CVE-2023-32681) has a **high severity** as confirmed by the s0036_rel advisory (VULN-0036-HW9-05). This issue occurs in the `requests` library for versions >=2.3.0 but <2.31.0. It specifically leaks the `Proxy-Authorization` header during HTTPS redirects, exposing authentication tokens to the destination server. This leak enables potential unauthorized access to sensitive user credentials and session data.  \n\nThe impact is significant: attackers could intercept tokens via intermediate proxies, leading to session hijacking or data breaches. The fix is to upgrade to `requests>=2.31.0`, which securely handles redirects without leaking this header. No additional mitigation steps are required beyond the version update per the advisory. This vulnerability directly compromises authentication security in proxy chains, justifying the high severity rating. (148 words)\n\nSource record: VULN-0036-HW9-05 (s0036_rel id 20078): requests affected >= 2.3.0, < 2.31.0, severity high. CVE-2023-32681: Proxy-Authorization header leaked to the destination server on HTTPS redirects. Fixed in 2.31.0.",
-      "data_version": "v-da759bf61ba0f522",
+      "data_version": "v-4bdee5bf2753d7c2",
       "record_ids": [
         20078
       ],
-      "latency_ms": 8.62,
+      "latency_ms": 5.53,
       "timings": {
-        "embed_ms": 5.08,
-        "search_ms": 0.83,
-        "version_check_ms": 2.7
+        "embed_ms": 3.96,
+        "search_ms": 0.64,
+        "version_check_ms": 0.93
       },
       "answer_severity": "high",
       "db_severity": "high",

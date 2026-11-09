@@ -1,548 +1,549 @@
-user=ayushishringi host=Ayushis-MacBook-Pro.local time=2026-11-05T07:19:25
-cache_cases.yaml sha256=eb413fcb8db3f094 last commit: not committed
-Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 7605.47it/s]
+.venv/bin/python3 -u scripts/run_hw9_sweep.py
+user=ayushishringi host=Ayushis-MacBook-Pro.local time=2026-11-08T16:09:33
+cache_cases.yaml sha256=eb413fcb8db3f094 last commit: de51eaa 2026-11-05T09:03:55-08:00
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 9641.65it/s]
 
 === Seeding cache (cleared 0 entries) ===
-2026-11-05T07:19:29.273-08:00 [sweep-seed] CACHE MISS best_similarity=null threshold=0.999 query="What is the severity of the Log4Shell vulnerability in log4j-core?" reason="empty cache"
-2026-11-05T07:19:45.908-08:00 [sweep-seed] ANSWERED by agent pipeline correlation_id="40a8de94-2bae-420e-830a-294fcb2f8562" status="approved" stored=true latency_ms=16733.13
-  S01 cached=True latency_ms=16733 What is the severity of the Log4Shell vulnerability in log4j-core?
-2026-11-05T07:19:45.945-08:00 [sweep-seed] CACHE MISS best_similarity=0.1636 threshold=0.999 query="Which lodash version fixes the template command injection?" reason="below threshold"
-2026-11-05T07:20:38.384-08:00 [sweep-seed] ANSWERED by agent pipeline correlation_id="04299f0e-653a-4472-81e4-eba4aedec922" status="approved" stored=true latency_ms=52473.86
-  S02 cached=True latency_ms=52474 Which lodash version fixes the template command injection?
-2026-11-05T07:20:38.397-08:00 [sweep-seed] CACHE MISS best_similarity=0.3467 threshold=0.999 query="What versions of minimist are affected by the prototype pollution bug?" reason="below threshold"
-2026-11-05T07:21:04.134-08:00 [sweep-seed] ANSWERED by agent pipeline correlation_id="2017993f-7c67-4ca7-829e-8101163f177f" status="approved" stored=true latency_ms=25748.82
-  S03 cached=True latency_ms=25749 What versions of minimist are affected by the prototype pollution bug?
-2026-11-05T07:21:04.150-08:00 [sweep-seed] CACHE MISS best_similarity=0.27 threshold=0.999 query="How should I fix the PyYAML full_load code execution vulnerability?" reason="below threshold"
-2026-11-05T07:21:48.660-08:00 [sweep-seed] ANSWERED by agent pipeline correlation_id="f39f520e-b655-4122-8114-529abb9a39ad" status="approved" stored=true latency_ms=44524.86
-  S04 cached=True latency_ms=44525 How should I fix the PyYAML full_load code execution vulnerability?
-2026-11-05T07:21:48.673-08:00 [sweep-seed] CACHE MISS best_similarity=0.3022 threshold=0.999 query="Which requests version stops leaking the Proxy-Authorization header?" reason="below threshold"
-2026-11-05T07:22:06.776-08:00 [sweep-seed] ANSWERED by agent pipeline correlation_id="d474d372-bc81-47df-ae45-9e62067cb8a4" status="approved" stored=true latency_ms=18114.89
-  S05 cached=True latency_ms=18115 Which requests version stops leaking the Proxy-Authorization header?
-2026-11-05T07:22:06.784-08:00 [sweep-seed] CACHE MISS best_similarity=0.5502 threshold=0.999 query="Is Spring4Shell in spring-beans a critical vulnerability?" reason="below threshold"
-2026-11-05T07:22:26.646-08:00 [sweep-seed] ANSWERED by agent pipeline correlation_id="122ea433-29be-4d1b-bbdc-625ddf3ee244" status="approved" stored=true latency_ms=19869.33
-  S06 cached=True latency_ms=19869 Is Spring4Shell in spring-beans a critical vulnerability?
-2026-11-05T07:22:26.653-08:00 [sweep-seed] CACHE MISS best_similarity=0.3186 threshold=0.999 query="What is the CVE for the axios XSRF-TOKEN leak?" reason="below threshold"
-2026-11-05T07:22:37.242-08:00 [sweep-seed] ANSWERED by agent pipeline correlation_id="e2f44d78-afc6-4c07-b715-202ebbc48ca0" status="approved" stored=true latency_ms=10595.58
-  S07 cached=True latency_ms=10596 What is the CVE for the axios XSRF-TOKEN leak?
-2026-11-05T07:22:37.251-08:00 [sweep-seed] CACHE MISS best_similarity=0.3169 threshold=0.999 query="Which jackson-databind version fixes the deeply nested JSON denial of service?" reason="below threshold"
-2026-11-05T07:23:09.779-08:00 [sweep-seed] ANSWERED by agent pipeline correlation_id="c7f1e6af-b14f-47aa-bf18-4b1f3bdeb436" status="approved" stored=true latency_ms=32535.87
-  S08 cached=True latency_ms=32536 Which jackson-databind version fixes the deeply nested JSON denial of service?
-2026-11-05T07:23:09.792-08:00 [sweep-seed] CACHE MISS best_similarity=0.4079 threshold=0.999 query="What is the impact of the node-fetch cookie leak on redirect?" reason="below threshold"
-2026-11-05T07:23:20.334-08:00 [sweep-seed] ANSWERED by agent pipeline correlation_id="1aa37991-92bd-43e8-9da6-217f9c1f1e8d" status="approved" stored=true latency_ms=10554.53
-  S09 cached=True latency_ms=10555 What is the impact of the node-fetch cookie leak on redirect?
-2026-11-05T07:23:20.340-08:00 [sweep-seed] CACHE MISS best_similarity=0.4375 threshold=0.999 query="Which ws version fixes the header-count denial of service?" reason="below threshold"
-2026-11-05T07:23:43.760-08:00 [sweep-seed] ANSWERED by agent pipeline correlation_id="718f67f5-2761-4b51-a997-28e2d687edab" status="approved" stored=true latency_ms=23425.05
-  S10 cached=True latency_ms=23425 Which ws version fixes the header-count denial of service?
+2026-11-08T16:09:38.116-08:00 [sweep-seed] CACHE MISS best_similarity=null threshold=0.999 query="What is the severity of the Log4Shell vulnerability in log4j-core?" reason="empty cache"
+2026-11-08T16:09:55.044-08:00 [sweep-seed] ANSWERED by agent pipeline correlation_id="caf62855-c15b-4759-92c0-39be2378535b" status="approved" stored=true latency_ms=17040.81
+  S01 cached=True latency_ms=17041 What is the severity of the Log4Shell vulnerability in log4j-core?
+2026-11-08T16:09:55.075-08:00 [sweep-seed] CACHE MISS best_similarity=0.1636 threshold=0.999 query="Which lodash version fixes the template command injection?" reason="below threshold"
+2026-11-08T16:10:47.334-08:00 [sweep-seed] ANSWERED by agent pipeline correlation_id="d29a4e26-fbc7-4c06-ad0c-5283b8abe612" status="approved" stored=true latency_ms=52287.51
+  S02 cached=True latency_ms=52288 Which lodash version fixes the template command injection?
+2026-11-08T16:10:47.355-08:00 [sweep-seed] CACHE MISS best_similarity=0.3467 threshold=0.999 query="What versions of minimist are affected by the prototype pollution bug?" reason="below threshold"
+2026-11-08T16:11:12.461-08:00 [sweep-seed] ANSWERED by agent pipeline correlation_id="71c849da-76bd-4878-afde-2ea58d716fc7" status="approved" stored=true latency_ms=25125.81
+  S03 cached=True latency_ms=25126 What versions of minimist are affected by the prototype pollution bug?
+2026-11-08T16:11:12.482-08:00 [sweep-seed] CACHE MISS best_similarity=0.27 threshold=0.999 query="How should I fix the PyYAML full_load code execution vulnerability?" reason="below threshold"
+2026-11-08T16:11:58.481-08:00 [sweep-seed] ANSWERED by agent pipeline correlation_id="2922f4f7-4df0-4622-b6d7-a2645751574a" status="approved" stored=true latency_ms=46018.71
+  S04 cached=True latency_ms=46019 How should I fix the PyYAML full_load code execution vulnerability?
+2026-11-08T16:11:58.501-08:00 [sweep-seed] CACHE MISS best_similarity=0.3022 threshold=0.999 query="Which requests version stops leaking the Proxy-Authorization header?" reason="below threshold"
+2026-11-08T16:12:16.990-08:00 [sweep-seed] ANSWERED by agent pipeline correlation_id="84e097ac-1a3b-426b-94b1-b61753330a19" status="approved" stored=true latency_ms=18508.43
+  S05 cached=True latency_ms=18508 Which requests version stops leaking the Proxy-Authorization header?
+2026-11-08T16:12:16.999-08:00 [sweep-seed] CACHE MISS best_similarity=0.5502 threshold=0.999 query="Is Spring4Shell in spring-beans a critical vulnerability?" reason="below threshold"
+2026-11-08T16:12:37.018-08:00 [sweep-seed] ANSWERED by agent pipeline correlation_id="26491cc5-2fc8-4609-afe2-ae1e86a09e0f" status="approved" stored=true latency_ms=20027.12
+  S06 cached=True latency_ms=20027 Is Spring4Shell in spring-beans a critical vulnerability?
+2026-11-08T16:12:37.027-08:00 [sweep-seed] CACHE MISS best_similarity=0.3186 threshold=0.999 query="What is the CVE for the axios XSRF-TOKEN leak?" reason="below threshold"
+2026-11-08T16:12:48.336-08:00 [sweep-seed] ANSWERED by agent pipeline correlation_id="b301fe91-6045-4850-a40b-2078d437ab25" status="approved" stored=true latency_ms=11317.79
+  S07 cached=True latency_ms=11318 What is the CVE for the axios XSRF-TOKEN leak?
+2026-11-08T16:12:48.343-08:00 [sweep-seed] CACHE MISS best_similarity=0.3169 threshold=0.999 query="Which jackson-databind version fixes the deeply nested JSON denial of service?" reason="below threshold"
+2026-11-08T16:13:23.140-08:00 [sweep-seed] ANSWERED by agent pipeline correlation_id="7d8459f2-251a-49e1-b2a9-cdaee0c60332" status="approved" stored=true latency_ms=34803.16
+  S08 cached=True latency_ms=34803 Which jackson-databind version fixes the deeply nested JSON denial of service?
+2026-11-08T16:13:23.157-08:00 [sweep-seed] CACHE MISS best_similarity=0.4079 threshold=0.999 query="What is the impact of the node-fetch cookie leak on redirect?" reason="below threshold"
+2026-11-08T16:13:34.393-08:00 [sweep-seed] ANSWERED by agent pipeline correlation_id="0cb0ac1b-3f69-46d6-b396-33f251cbd543" status="approved" stored=true latency_ms=11251.36
+  S09 cached=True latency_ms=11251 What is the impact of the node-fetch cookie leak on redirect?
+2026-11-08T16:13:34.399-08:00 [sweep-seed] CACHE MISS best_similarity=0.4375 threshold=0.999 query="Which ws version fixes the header-count denial of service?" reason="below threshold"
+2026-11-08T16:13:59.517-08:00 [sweep-seed] ANSWERED by agent pipeline correlation_id="40314c80-c8dc-481b-8359-bb224c1b8301" status="approved" stored=true latency_ms=25123.32
+  S10 cached=True latency_ms=25123 Which ws version fixes the header-count denial of service?
 cache entries: 10
 
 === Threshold 0.75 ===
-2026-11-05T07:23:43.779-08:00 [sweep-0.75] CACHE HIT similarity=1.0 threshold=0.75 cached_query="What is the severity of the Log4Shell vulnerability in log4j-core?" latency_ms=17.6
-  C01 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit       17.6 ms
-2026-11-05T07:23:43.785-08:00 [sweep-0.75] CACHE HIT similarity=1.0 threshold=0.75 cached_query="Which lodash version fixes the template command injection?" latency_ms=5.04
-  C02 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        5.0 ms
-2026-11-05T07:23:43.790-08:00 [sweep-0.75] CACHE HIT similarity=1.0 threshold=0.75 cached_query="What versions of minimist are affected by the prototype pollution bug?" latency_ms=4.37
-  C03 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        4.4 ms
-2026-11-05T07:23:43.795-08:00 [sweep-0.75] CACHE HIT similarity=1.0 threshold=0.75 cached_query="How should I fix the PyYAML full_load code execution vulnerability?" latency_ms=4.97
-  C04 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        5.0 ms
-2026-11-05T07:23:43.799-08:00 [sweep-0.75] CACHE HIT similarity=1.0 threshold=0.75 cached_query="Which requests version stops leaking the Proxy-Authorization header?" latency_ms=4.17
-  C05 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        4.2 ms
-2026-11-05T07:23:43.804-08:00 [sweep-0.75] CACHE HIT similarity=1.0 threshold=0.75 cached_query="Is Spring4Shell in spring-beans a critical vulnerability?" latency_ms=4.37
-  C06 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        4.4 ms
-2026-11-05T07:23:43.808-08:00 [sweep-0.75] CACHE HIT similarity=1.0 threshold=0.75 cached_query="What is the CVE for the axios XSRF-TOKEN leak?" latency_ms=4.02
-  C07 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        4.0 ms
-2026-11-05T07:23:43.812-08:00 [sweep-0.75] CACHE HIT similarity=1.0 threshold=0.75 cached_query="Which jackson-databind version fixes the deeply nested JSON denial of service?" latency_ms=4.13
-  C08 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        4.1 ms
-2026-11-05T07:23:43.816-08:00 [sweep-0.75] CACHE HIT similarity=1.0 threshold=0.75 cached_query="What is the impact of the node-fetch cookie leak on redirect?" latency_ms=4.01
-  C09 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        4.0 ms
-2026-11-05T07:23:43.820-08:00 [sweep-0.75] CACHE HIT similarity=1.0 threshold=0.75 cached_query="Which ws version fixes the header-count denial of service?" latency_ms=4.0
-  C10 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        4.0 ms
-2026-11-05T07:23:43.825-08:00 [sweep-0.75] CACHE HIT similarity=0.885 threshold=0.75 cached_query="What is the severity of the Log4Shell vulnerability in log4j-core?" latency_ms=4.06
-  C11 paraphrase        exp=hit  sim=0.8850 cached=True  correct_hit        4.1 ms
-2026-11-05T07:23:43.829-08:00 [sweep-0.75] CACHE HIT similarity=0.9291 threshold=0.75 cached_query="Which lodash version fixes the template command injection?" latency_ms=4.43
-  C12 paraphrase        exp=hit  sim=0.9291 cached=True  correct_hit        4.4 ms
-2026-11-05T07:23:43.833-08:00 [sweep-0.75] CACHE HIT similarity=0.8705 threshold=0.75 cached_query="What versions of minimist are affected by the prototype pollution bug?" latency_ms=3.86
-  C13 paraphrase        exp=hit  sim=0.8705 cached=True  correct_hit        3.9 ms
-2026-11-05T07:23:43.839-08:00 [sweep-0.75] CACHE HIT similarity=0.9319 threshold=0.75 cached_query="How should I fix the PyYAML full_load code execution vulnerability?" latency_ms=5.91
-  C14 paraphrase        exp=hit  sim=0.9319 cached=True  correct_hit        5.9 ms
-2026-11-05T07:23:43.843-08:00 [sweep-0.75] CACHE HIT similarity=0.949 threshold=0.75 cached_query="Which requests version stops leaking the Proxy-Authorization header?" latency_ms=3.51
-  C15 paraphrase        exp=hit  sim=0.9490 cached=True  correct_hit        3.5 ms
-2026-11-05T07:23:43.847-08:00 [sweep-0.75] CACHE HIT similarity=0.9698 threshold=0.75 cached_query="Is Spring4Shell in spring-beans a critical vulnerability?" latency_ms=3.87
-  C16 paraphrase        exp=hit  sim=0.9698 cached=True  correct_hit        3.9 ms
-2026-11-05T07:23:43.851-08:00 [sweep-0.75] CACHE HIT similarity=0.8297 threshold=0.75 cached_query="What is the CVE for the axios XSRF-TOKEN leak?" latency_ms=3.9
-  C17 paraphrase        exp=hit  sim=0.8297 cached=True  correct_hit        3.9 ms
-2026-11-05T07:23:43.855-08:00 [sweep-0.75] CACHE HIT similarity=0.862 threshold=0.75 cached_query="Which jackson-databind version fixes the deeply nested JSON denial of service?" latency_ms=3.53
-  C18 paraphrase        exp=hit  sim=0.8620 cached=True  correct_hit        3.5 ms
-2026-11-05T07:23:43.858-08:00 [sweep-0.75] CACHE HIT similarity=0.9394 threshold=0.75 cached_query="What is the impact of the node-fetch cookie leak on redirect?" latency_ms=3.48
-  C19 paraphrase        exp=hit  sim=0.9394 cached=True  correct_hit        3.5 ms
-2026-11-05T07:23:43.862-08:00 [sweep-0.75] CACHE HIT similarity=0.9012 threshold=0.75 cached_query="Which ws version fixes the header-count denial of service?" latency_ms=4.04
-  C20 paraphrase        exp=hit  sim=0.9012 cached=True  correct_hit        4.0 ms
-2026-11-05T07:23:43.866-08:00 [sweep-0.75] CACHE HIT similarity=0.8333 threshold=0.75 cached_query="What is the severity of the Log4Shell vulnerability in log4j-core?" latency_ms=3.41
-  C21 similar_different exp=miss sim=0.8333 cached=True  false_hit          3.4 ms
-2026-11-05T07:23:43.870-08:00 [sweep-0.75] CACHE MISS best_similarity=0.2713 threshold=0.75 query="Which pillow version fixes the ImageMath code execution?" reason="below threshold"
-2026-11-05T07:24:09.812-08:00 [sweep-0.75] ANSWERED by agent pipeline correlation_id="c8a06d21-c932-4d95-ad46-4a48ad3d0a89" status="approved" stored=false latency_ms=25945.76
-  C22 similar_different exp=miss sim=0.2713 cached=False correct_miss   25945.8 ms
-2026-11-05T07:24:09.820-08:00 [sweep-0.75] CACHE MISS best_similarity=0.6584 threshold=0.75 query="What versions of protobufjs are affected by the prototype pollution bug?" reason="below threshold"
-2026-11-05T07:25:00.066-08:00 [sweep-0.75] ANSWERED by agent pipeline correlation_id="4fd39a64-5ea3-4cda-a4eb-385d51a946c5" status="approved" stored=false latency_ms=50253.96
-  C23 similar_different exp=miss sim=0.6584 cached=False correct_miss   50254.0 ms
-2026-11-05T07:25:00.086-08:00 [sweep-0.75] CACHE HIT similarity=0.9 threshold=0.75 cached_query="How should I fix the PyYAML full_load code execution vulnerability?" latency_ms=18.25
-  C24 similar_different exp=miss sim=0.9000 cached=True  false_hit         18.2 ms
-2026-11-05T07:25:00.091-08:00 [sweep-0.75] CACHE HIT similarity=0.9267 threshold=0.75 cached_query="Which requests version stops leaking the Proxy-Authorization header?" latency_ms=5.29
-  C25 similar_different exp=miss sim=0.9267 cached=True  false_hit          5.3 ms
-2026-11-05T07:25:00.097-08:00 [sweep-0.75] CACHE HIT similarity=0.9106 threshold=0.75 cached_query="Is Spring4Shell in spring-beans a critical vulnerability?" latency_ms=5.11
-  C26 similar_different exp=miss sim=0.9106 cached=True  false_hit          5.1 ms
-2026-11-05T07:25:00.101-08:00 [sweep-0.75] CACHE MISS best_similarity=0.4156 threshold=0.75 query="What is the CVE for the express open redirect?" reason="below threshold"
-2026-11-05T07:25:14.494-08:00 [sweep-0.75] ANSWERED by agent pipeline correlation_id="38ba339d-1572-4483-b2a7-95ea1d265077" status="approved" stored=false latency_ms=14397.02
-  C27 similar_different exp=miss sim=0.4156 cached=False correct_miss   14397.0 ms
-2026-11-05T07:25:14.502-08:00 [sweep-0.75] CACHE MISS best_similarity=0.3728 threshold=0.75 query="Which django version fixes the regular expression denial of service?" reason="below threshold"
-2026-11-05T07:26:11.310-08:00 [sweep-0.75] ANSWERED by agent pipeline correlation_id="8bfdc55a-79f5-4d24-953c-4d8dadd550fa" status="approved" stored=false latency_ms=56815.92
-  C28 similar_different exp=miss sim=0.3728 cached=False correct_miss   56815.9 ms
-2026-11-05T07:26:11.335-08:00 [sweep-0.75] CACHE HIT similarity=0.797 threshold=0.75 cached_query="What is the CVE for the axios XSRF-TOKEN leak?" latency_ms=23.14
-  C29 similar_different exp=miss sim=0.7970 cached=True  false_hit         23.1 ms
-2026-11-05T07:26:11.340-08:00 [sweep-0.75] CACHE HIT similarity=0.9245 threshold=0.75 cached_query="Which ws version fixes the header-count denial of service?" latency_ms=5.38
-  C30 similar_different exp=miss sim=0.9245 cached=True  false_hit          5.4 ms
-2026-11-05T07:26:11.346-08:00 [sweep-0.75] CACHE MISS best_similarity=0.2332 threshold=0.75 query="How do I generate an SBOM for a Python project?" reason="below threshold"
-2026-11-05T07:27:37.152-08:00 [sweep-0.75] ANSWERED by agent pipeline correlation_id="5aa7d463-2529-4e4b-bd87-03f8572c88d0" status="approved" stored=false latency_ms=85811.43
-  C31 unrelated         exp=miss sim=0.2332 cached=False correct_miss   85811.4 ms
-2026-11-05T07:27:37.179-08:00 [sweep-0.75] CACHE MISS best_similarity=0.1919 threshold=0.75 query="What is the difference between CVSS base and temporal scores?" reason="below threshold"
-2026-11-05T07:27:46.686-08:00 [sweep-0.75] ANSWERED by agent pipeline correlation_id="abda16d1-07a4-427d-9e84-fbc1f7804ef2" status="approved" stored=false latency_ms=9528.06
-  C32 unrelated         exp=miss sim=0.1919 cached=False correct_miss    9528.1 ms
-2026-11-05T07:27:46.700-08:00 [sweep-0.75] CACHE MISS best_similarity=0.1974 threshold=0.75 query="How often should we run npm audit in CI?" reason="below threshold"
-2026-11-05T07:28:47.372-08:00 [sweep-0.75] ANSWERED by agent pipeline correlation_id="80a07e75-2e30-4292-8906-6bd37658c153" status="approved" stored=false latency_ms=60684.45
-  C33 unrelated         exp=miss sim=0.1974 cached=False correct_miss   60684.4 ms
-2026-11-05T07:28:47.386-08:00 [sweep-0.75] CACHE MISS best_similarity=0.199 threshold=0.75 query="What does a CWE identifier represent?" reason="below threshold"
-2026-11-05T07:28:56.767-08:00 [sweep-0.75] ANSWERED by agent pipeline correlation_id="37a8955b-dc0d-44ed-8938-9db8e0c68114" status="approved" stored=false latency_ms=9393.58
-  C34 unrelated         exp=miss sim=0.1990 cached=False correct_miss    9393.6 ms
-2026-11-05T07:28:56.775-08:00 [sweep-0.75] CACHE MISS best_similarity=0.1822 threshold=0.75 query="How do I pin transitive dependencies with pip-tools?" reason="below threshold"
-2026-11-05T07:29:50.438-08:00 [sweep-0.75] ANSWERED by agent pipeline correlation_id="41a874fb-75b7-4775-8f75-61b5cc82236f" status="approved" stored=false latency_ms=53670.95
-  C35 unrelated         exp=miss sim=0.1822 cached=False correct_miss   53670.9 ms
-2026-11-05T07:29:50.451-08:00 [sweep-0.75] CACHE MISS best_similarity=0.2438 threshold=0.75 query="What is a GitHub Security Advisory (GHSA) ID?" reason="below threshold"
-2026-11-05T07:29:59.978-08:00 [sweep-0.75] ANSWERED by agent pipeline correlation_id="13b8290f-05cc-4261-a9e7-14a1847180a3" status="approved" stored=false latency_ms=9538.56
-  C36 unrelated         exp=miss sim=0.2438 cached=False correct_miss    9538.6 ms
-2026-11-05T07:29:59.985-08:00 [sweep-0.75] CACHE MISS best_similarity=0.305 threshold=0.75 query="Should a reporter disclose a vulnerability publicly before a fix exists?" reason="below threshold"
-2026-11-05T07:30:09.254-08:00 [sweep-0.75] ANSWERED by agent pipeline correlation_id="b253404f-e26d-4701-8a12-16e9f8ce48dc" status="approved" stored=false latency_ms=9275.01
-  C37 unrelated         exp=miss sim=0.3050 cached=False correct_miss    9275.0 ms
-2026-11-05T07:30:09.267-08:00 [sweep-0.75] CACHE MISS best_similarity=0.3543 threshold=0.75 query="How does Dependabot decide when to open a pull request?" reason="below threshold"
-2026-11-05T07:30:27.287-08:00 [sweep-0.75] ANSWERED by agent pipeline correlation_id="738c5f6e-b7aa-48b6-872f-eecc8a2a69ff" status="approved" stored=false latency_ms=18032.25
-  C38 unrelated         exp=miss sim=0.3543 cached=False correct_miss   18032.2 ms
-2026-11-05T07:30:27.303-08:00 [sweep-0.75] CACHE MISS best_similarity=0.2987 threshold=0.75 query="What is typosquatting in package registries?" reason="below threshold"
-2026-11-05T07:30:37.418-08:00 [sweep-0.75] ANSWERED by agent pipeline correlation_id="477d33ae-6434-4aac-9771-8a1425ca8984" status="approved" stored=false latency_ms=10129.21
-  C39 unrelated         exp=miss sim=0.2987 cached=False correct_miss   10129.2 ms
-2026-11-05T07:30:37.424-08:00 [sweep-0.75] CACHE MISS best_similarity=0.1688 threshold=0.75 query="How do I verify the signature of a Maven artifact?" reason="below threshold"
-2026-11-05T07:31:36.849-08:00 [sweep-0.75] ANSWERED by agent pipeline correlation_id="7191068b-9e71-4235-be67-360b2763684c" status="approved" stored=false latency_ms=59430.65
-  C40 unrelated         exp=miss sim=0.1688 cached=False correct_miss   59430.7 ms
-  -> hit rate 65.0%, false-hit rate 15.0%, mean latency 11827 ms
+2026-11-08T16:13:59.538-08:00 [sweep-0.75] CACHE HIT similarity=1.0 threshold=0.75 cached_query="What is the severity of the Log4Shell vulnerability in log4j-core?" latency_ms=19.29
+  C01 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit       19.3 ms
+2026-11-08T16:13:59.545-08:00 [sweep-0.75] CACHE HIT similarity=1.0 threshold=0.75 cached_query="Which lodash version fixes the template command injection?" latency_ms=5.98
+  C02 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        6.0 ms
+2026-11-08T16:13:59.551-08:00 [sweep-0.75] CACHE HIT similarity=1.0 threshold=0.75 cached_query="What versions of minimist are affected by the prototype pollution bug?" latency_ms=5.77
+  C03 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        5.8 ms
+2026-11-08T16:13:59.557-08:00 [sweep-0.75] CACHE HIT similarity=1.0 threshold=0.75 cached_query="How should I fix the PyYAML full_load code execution vulnerability?" latency_ms=5.43
+  C04 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        5.4 ms
+2026-11-08T16:13:59.562-08:00 [sweep-0.75] CACHE HIT similarity=1.0 threshold=0.75 cached_query="Which requests version stops leaking the Proxy-Authorization header?" latency_ms=4.94
+  C05 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        4.9 ms
+2026-11-08T16:13:59.567-08:00 [sweep-0.75] CACHE HIT similarity=1.0 threshold=0.75 cached_query="Is Spring4Shell in spring-beans a critical vulnerability?" latency_ms=4.93
+  C06 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        4.9 ms
+2026-11-08T16:13:59.573-08:00 [sweep-0.75] CACHE HIT similarity=1.0 threshold=0.75 cached_query="What is the CVE for the axios XSRF-TOKEN leak?" latency_ms=5.51
+  C07 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        5.5 ms
+2026-11-08T16:13:59.578-08:00 [sweep-0.75] CACHE HIT similarity=1.0 threshold=0.75 cached_query="Which jackson-databind version fixes the deeply nested JSON denial of service?" latency_ms=4.82
+  C08 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        4.8 ms
+2026-11-08T16:13:59.583-08:00 [sweep-0.75] CACHE HIT similarity=1.0 threshold=0.75 cached_query="What is the impact of the node-fetch cookie leak on redirect?" latency_ms=4.99
+  C09 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        5.0 ms
+2026-11-08T16:13:59.589-08:00 [sweep-0.75] CACHE HIT similarity=1.0 threshold=0.75 cached_query="Which ws version fixes the header-count denial of service?" latency_ms=5.32
+  C10 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        5.3 ms
+2026-11-08T16:13:59.595-08:00 [sweep-0.75] CACHE HIT similarity=0.885 threshold=0.75 cached_query="What is the severity of the Log4Shell vulnerability in log4j-core?" latency_ms=5.68
+  C11 paraphrase        exp=hit  sim=0.8850 cached=True  correct_hit        5.7 ms
+2026-11-08T16:13:59.600-08:00 [sweep-0.75] CACHE HIT similarity=0.9291 threshold=0.75 cached_query="Which lodash version fixes the template command injection?" latency_ms=5.41
+  C12 paraphrase        exp=hit  sim=0.9291 cached=True  correct_hit        5.4 ms
+2026-11-08T16:13:59.606-08:00 [sweep-0.75] CACHE HIT similarity=0.8705 threshold=0.75 cached_query="What versions of minimist are affected by the prototype pollution bug?" latency_ms=5.73
+  C13 paraphrase        exp=hit  sim=0.8705 cached=True  correct_hit        5.7 ms
+2026-11-08T16:13:59.613-08:00 [sweep-0.75] CACHE HIT similarity=0.9319 threshold=0.75 cached_query="How should I fix the PyYAML full_load code execution vulnerability?" latency_ms=6.32
+  C14 paraphrase        exp=hit  sim=0.9319 cached=True  correct_hit        6.3 ms
+2026-11-08T16:13:59.618-08:00 [sweep-0.75] CACHE HIT similarity=0.949 threshold=0.75 cached_query="Which requests version stops leaking the Proxy-Authorization header?" latency_ms=5.11
+  C15 paraphrase        exp=hit  sim=0.9490 cached=True  correct_hit        5.1 ms
+2026-11-08T16:13:59.624-08:00 [sweep-0.75] CACHE HIT similarity=0.9698 threshold=0.75 cached_query="Is Spring4Shell in spring-beans a critical vulnerability?" latency_ms=5.57
+  C16 paraphrase        exp=hit  sim=0.9698 cached=True  correct_hit        5.6 ms
+2026-11-08T16:13:59.629-08:00 [sweep-0.75] CACHE HIT similarity=0.8297 threshold=0.75 cached_query="What is the CVE for the axios XSRF-TOKEN leak?" latency_ms=5.31
+  C17 paraphrase        exp=hit  sim=0.8297 cached=True  correct_hit        5.3 ms
+2026-11-08T16:13:59.635-08:00 [sweep-0.75] CACHE HIT similarity=0.862 threshold=0.75 cached_query="Which jackson-databind version fixes the deeply nested JSON denial of service?" latency_ms=5.31
+  C18 paraphrase        exp=hit  sim=0.8620 cached=True  correct_hit        5.3 ms
+2026-11-08T16:13:59.640-08:00 [sweep-0.75] CACHE HIT similarity=0.9394 threshold=0.75 cached_query="What is the impact of the node-fetch cookie leak on redirect?" latency_ms=4.82
+  C19 paraphrase        exp=hit  sim=0.9394 cached=True  correct_hit        4.8 ms
+2026-11-08T16:13:59.645-08:00 [sweep-0.75] CACHE HIT similarity=0.9012 threshold=0.75 cached_query="Which ws version fixes the header-count denial of service?" latency_ms=5.05
+  C20 paraphrase        exp=hit  sim=0.9012 cached=True  correct_hit        5.0 ms
+2026-11-08T16:13:59.649-08:00 [sweep-0.75] CACHE HIT similarity=0.8333 threshold=0.75 cached_query="What is the severity of the Log4Shell vulnerability in log4j-core?" latency_ms=4.05
+  C21 similar_different exp=miss sim=0.8333 cached=True  false_hit          4.0 ms
+2026-11-08T16:13:59.654-08:00 [sweep-0.75] CACHE MISS best_similarity=0.2713 threshold=0.75 query="Which pillow version fixes the ImageMath code execution?" reason="below threshold"
+2026-11-08T16:14:27.735-08:00 [sweep-0.75] ANSWERED by agent pipeline correlation_id="2cb55a6f-b040-4db7-938a-f4bc924b7b0c" status="approved" stored=false latency_ms=28085.55
+  C22 similar_different exp=miss sim=0.2713 cached=False correct_miss   28085.5 ms
+2026-11-08T16:14:27.757-08:00 [sweep-0.75] CACHE MISS best_similarity=0.6584 threshold=0.75 query="What versions of protobufjs are affected by the prototype pollution bug?" reason="below threshold"
+2026-11-08T16:15:24.039-08:00 [sweep-0.75] ANSWERED by agent pipeline correlation_id="f7ee9fcb-1d9e-4e95-8ade-eb0c89c9cef6" status="approved" stored=false latency_ms=56302.73
+  C23 similar_different exp=miss sim=0.6584 cached=False correct_miss   56302.7 ms
+2026-11-08T16:15:24.064-08:00 [sweep-0.75] CACHE HIT similarity=0.9 threshold=0.75 cached_query="How should I fix the PyYAML full_load code execution vulnerability?" latency_ms=23.79
+  C24 similar_different exp=miss sim=0.9000 cached=True  false_hit         23.8 ms
+2026-11-08T16:15:24.072-08:00 [sweep-0.75] CACHE HIT similarity=0.9267 threshold=0.75 cached_query="Which requests version stops leaking the Proxy-Authorization header?" latency_ms=6.9
+  C25 similar_different exp=miss sim=0.9267 cached=True  false_hit          6.9 ms
+2026-11-08T16:15:24.079-08:00 [sweep-0.75] CACHE HIT similarity=0.9106 threshold=0.75 cached_query="Is Spring4Shell in spring-beans a critical vulnerability?" latency_ms=6.81
+  C26 similar_different exp=miss sim=0.9106 cached=True  false_hit          6.8 ms
+2026-11-08T16:15:24.084-08:00 [sweep-0.75] CACHE MISS best_similarity=0.4156 threshold=0.75 query="What is the CVE for the express open redirect?" reason="below threshold"
+2026-11-08T16:15:40.280-08:00 [sweep-0.75] ANSWERED by agent pipeline correlation_id="e445240f-6d0e-4748-b4fa-8e4a0dc65745" status="approved" stored=false latency_ms=16201.01
+  C27 similar_different exp=miss sim=0.4156 cached=False correct_miss   16201.0 ms
+2026-11-08T16:15:40.290-08:00 [sweep-0.75] CACHE MISS best_similarity=0.3728 threshold=0.75 query="Which django version fixes the regular expression denial of service?" reason="below threshold"
+2026-11-08T16:16:50.422-08:00 [sweep-0.75] ANSWERED by agent pipeline correlation_id="a380bd0d-d5a6-4b60-b2c8-0db6089165e2" status="approved" stored=false latency_ms=70141.03
+  C28 similar_different exp=miss sim=0.3728 cached=False correct_miss   70141.0 ms
+2026-11-08T16:16:50.442-08:00 [sweep-0.75] CACHE HIT similarity=0.797 threshold=0.75 cached_query="What is the CVE for the axios XSRF-TOKEN leak?" latency_ms=19.19
+  C29 similar_different exp=miss sim=0.7970 cached=True  false_hit         19.2 ms
+2026-11-08T16:16:50.451-08:00 [sweep-0.75] CACHE HIT similarity=0.9245 threshold=0.75 cached_query="Which ws version fixes the header-count denial of service?" latency_ms=8.01
+  C30 similar_different exp=miss sim=0.9245 cached=True  false_hit          8.0 ms
+2026-11-08T16:16:50.459-08:00 [sweep-0.75] CACHE MISS best_similarity=0.2332 threshold=0.75 query="How do I generate an SBOM for a Python project?" reason="below threshold"
+2026-11-08T16:18:36.105-08:00 [sweep-0.75] ANSWERED by agent pipeline correlation_id="6584f652-a8de-4e41-b0c2-701f66ddeab0" status="approved" stored=false latency_ms=105653.87
+  C31 unrelated         exp=miss sim=0.2332 cached=False correct_miss  105653.9 ms
+2026-11-08T16:18:36.135-08:00 [sweep-0.75] CACHE MISS best_similarity=0.1919 threshold=0.75 query="What is the difference between CVSS base and temporal scores?" reason="below threshold"
+2026-11-08T16:18:47.815-08:00 [sweep-0.75] ANSWERED by agent pipeline correlation_id="c2865afc-8303-4834-9388-e030e0d35650" status="approved" stored=false latency_ms=11707.34
+  C32 unrelated         exp=miss sim=0.1919 cached=False correct_miss   11707.3 ms
+2026-11-08T16:18:47.834-08:00 [sweep-0.75] CACHE MISS best_similarity=0.1974 threshold=0.75 query="How often should we run npm audit in CI?" reason="below threshold"
+2026-11-08T16:20:03.351-08:00 [sweep-0.75] ANSWERED by agent pipeline correlation_id="90cf4479-d6c9-4a82-b4b5-36cb2280a02f" status="approved" stored=false latency_ms=75534.33
+  C33 unrelated         exp=miss sim=0.1974 cached=False correct_miss   75534.3 ms
+2026-11-08T16:20:03.393-08:00 [sweep-0.75] CACHE MISS best_similarity=0.199 threshold=0.75 query="What does a CWE identifier represent?" reason="below threshold"
+2026-11-08T16:20:15.080-08:00 [sweep-0.75] ANSWERED by agent pipeline correlation_id="9715483c-aa4f-458c-b612-4e0962daf376" status="approved" stored=false latency_ms=11725.73
+  C34 unrelated         exp=miss sim=0.1990 cached=False correct_miss   11725.7 ms
+2026-11-08T16:20:15.095-08:00 [sweep-0.75] CACHE MISS best_similarity=0.1822 threshold=0.75 query="How do I pin transitive dependencies with pip-tools?" reason="below threshold"
+2026-11-08T16:21:30.187-08:00 [sweep-0.75] ANSWERED by agent pipeline correlation_id="8aea7e17-c1de-46fa-8b52-a47cc72600f7" status="approved" stored=false latency_ms=75106.33
+  C35 unrelated         exp=miss sim=0.1822 cached=False correct_miss   75106.3 ms
+2026-11-08T16:21:30.261-08:00 [sweep-0.75] CACHE MISS best_similarity=0.2438 threshold=0.75 query="What is a GitHub Security Advisory (GHSA) ID?" reason="below threshold"
+2026-11-08T16:21:42.608-08:00 [sweep-0.75] ANSWERED by agent pipeline correlation_id="7f85dd7a-8ebe-4bee-9e81-5fb851b13165" status="approved" stored=false latency_ms=12416.72
+  C36 unrelated         exp=miss sim=0.2438 cached=False correct_miss   12416.7 ms
+2026-11-08T16:21:42.650-08:00 [sweep-0.75] CACHE MISS best_similarity=0.305 threshold=0.75 query="Should a reporter disclose a vulnerability publicly before a fix exists?" reason="below threshold"
+2026-11-08T16:21:54.804-08:00 [sweep-0.75] ANSWERED by agent pipeline correlation_id="edf089d2-8f40-480d-9e04-fb890cd3a999" status="approved" stored=false latency_ms=12194.27
+  C37 unrelated         exp=miss sim=0.3050 cached=False correct_miss   12194.3 ms
+2026-11-08T16:21:54.824-08:00 [sweep-0.75] CACHE MISS best_similarity=0.3543 threshold=0.75 query="How does Dependabot decide when to open a pull request?" reason="below threshold"
+2026-11-08T16:22:19.355-08:00 [sweep-0.75] ANSWERED by agent pipeline correlation_id="bd4a36d5-d1d2-4d7d-a7d4-116ec597ff77" status="approved" stored=false latency_ms=24549.79
+  C38 unrelated         exp=miss sim=0.3543 cached=False correct_miss   24549.8 ms
+2026-11-08T16:22:19.381-08:00 [sweep-0.75] CACHE MISS best_similarity=0.2987 threshold=0.75 query="What is typosquatting in package registries?" reason="below threshold"
+2026-11-08T16:22:32.823-08:00 [sweep-0.75] ANSWERED by agent pipeline correlation_id="1acf3113-13b6-43a3-bd3c-78c8d9ba4999" status="approved" stored=false latency_ms=13465.67
+  C39 unrelated         exp=miss sim=0.2987 cached=False correct_miss   13465.7 ms
+2026-11-08T16:22:32.837-08:00 [sweep-0.75] CACHE MISS best_similarity=0.1688 threshold=0.75 query="How do I verify the signature of a Maven artifact?" reason="below threshold"
+2026-11-08T16:23:52.599-08:00 [sweep-0.75] ANSWERED by agent pipeline correlation_id="d76e4e2a-1947-4220-8d6e-b53a529edef3" status="approved" stored=false latency_ms=79775.08
+  C40 unrelated         exp=miss sim=0.1688 cached=False correct_miss   79775.1 ms
+  -> hit rate 65.0%, false-hit rate 15.0%, mean latency 14826 ms
 
 === Threshold 0.80 ===
-2026-11-05T07:31:36.876-08:00 [sweep-0.80] CACHE HIT similarity=1.0 threshold=0.8 cached_query="What is the severity of the Log4Shell vulnerability in log4j-core?" latency_ms=14.13
-  C01 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit       14.1 ms
-2026-11-05T07:31:36.882-08:00 [sweep-0.80] CACHE HIT similarity=1.0 threshold=0.8 cached_query="Which lodash version fixes the template command injection?" latency_ms=5.69
-  C02 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        5.7 ms
-2026-11-05T07:31:36.890-08:00 [sweep-0.80] CACHE HIT similarity=1.0 threshold=0.8 cached_query="What versions of minimist are affected by the prototype pollution bug?" latency_ms=5.36
-  C03 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        5.4 ms
-2026-11-05T07:31:36.894-08:00 [sweep-0.80] CACHE HIT similarity=1.0 threshold=0.8 cached_query="How should I fix the PyYAML full_load code execution vulnerability?" latency_ms=4.45
-  C04 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        4.5 ms
-2026-11-05T07:31:36.899-08:00 [sweep-0.80] CACHE HIT similarity=1.0 threshold=0.8 cached_query="Which requests version stops leaking the Proxy-Authorization header?" latency_ms=4.09
-  C05 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        4.1 ms
-2026-11-05T07:31:36.903-08:00 [sweep-0.80] CACHE HIT similarity=1.0 threshold=0.8 cached_query="Is Spring4Shell in spring-beans a critical vulnerability?" latency_ms=4.15
-  C06 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        4.2 ms
-2026-11-05T07:31:36.907-08:00 [sweep-0.80] CACHE HIT similarity=1.0 threshold=0.8 cached_query="What is the CVE for the axios XSRF-TOKEN leak?" latency_ms=3.81
-  C07 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        3.8 ms
-2026-11-05T07:31:36.911-08:00 [sweep-0.80] CACHE HIT similarity=1.0 threshold=0.8 cached_query="Which jackson-databind version fixes the deeply nested JSON denial of service?" latency_ms=3.89
-  C08 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        3.9 ms
-2026-11-05T07:31:36.915-08:00 [sweep-0.80] CACHE HIT similarity=1.0 threshold=0.8 cached_query="What is the impact of the node-fetch cookie leak on redirect?" latency_ms=4.17
-  C09 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        4.2 ms
-2026-11-05T07:31:36.919-08:00 [sweep-0.80] CACHE HIT similarity=1.0 threshold=0.8 cached_query="Which ws version fixes the header-count denial of service?" latency_ms=3.52
-  C10 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        3.5 ms
-2026-11-05T07:31:36.923-08:00 [sweep-0.80] CACHE HIT similarity=0.885 threshold=0.8 cached_query="What is the severity of the Log4Shell vulnerability in log4j-core?" latency_ms=3.59
-  C11 paraphrase        exp=hit  sim=0.8850 cached=True  correct_hit        3.6 ms
-2026-11-05T07:31:36.926-08:00 [sweep-0.80] CACHE HIT similarity=0.9291 threshold=0.8 cached_query="Which lodash version fixes the template command injection?" latency_ms=3.55
-  C12 paraphrase        exp=hit  sim=0.9291 cached=True  correct_hit        3.5 ms
-2026-11-05T07:31:36.930-08:00 [sweep-0.80] CACHE HIT similarity=0.8705 threshold=0.8 cached_query="What versions of minimist are affected by the prototype pollution bug?" latency_ms=3.86
-  C13 paraphrase        exp=hit  sim=0.8705 cached=True  correct_hit        3.9 ms
-2026-11-05T07:31:36.935-08:00 [sweep-0.80] CACHE HIT similarity=0.9319 threshold=0.8 cached_query="How should I fix the PyYAML full_load code execution vulnerability?" latency_ms=4.71
-  C14 paraphrase        exp=hit  sim=0.9319 cached=True  correct_hit        4.7 ms
-2026-11-05T07:31:36.939-08:00 [sweep-0.80] CACHE HIT similarity=0.949 threshold=0.8 cached_query="Which requests version stops leaking the Proxy-Authorization header?" latency_ms=3.62
-  C15 paraphrase        exp=hit  sim=0.9490 cached=True  correct_hit        3.6 ms
-2026-11-05T07:31:36.943-08:00 [sweep-0.80] CACHE HIT similarity=0.9698 threshold=0.8 cached_query="Is Spring4Shell in spring-beans a critical vulnerability?" latency_ms=3.7
-  C16 paraphrase        exp=hit  sim=0.9698 cached=True  correct_hit        3.7 ms
-2026-11-05T07:31:36.947-08:00 [sweep-0.80] CACHE HIT similarity=0.8297 threshold=0.8 cached_query="What is the CVE for the axios XSRF-TOKEN leak?" latency_ms=3.81
-  C17 paraphrase        exp=hit  sim=0.8297 cached=True  correct_hit        3.8 ms
-2026-11-05T07:31:36.951-08:00 [sweep-0.80] CACHE HIT similarity=0.862 threshold=0.8 cached_query="Which jackson-databind version fixes the deeply nested JSON denial of service?" latency_ms=3.79
-  C18 paraphrase        exp=hit  sim=0.8620 cached=True  correct_hit        3.8 ms
-2026-11-05T07:31:36.955-08:00 [sweep-0.80] CACHE HIT similarity=0.9394 threshold=0.8 cached_query="What is the impact of the node-fetch cookie leak on redirect?" latency_ms=3.75
-  C19 paraphrase        exp=hit  sim=0.9394 cached=True  correct_hit        3.8 ms
-2026-11-05T07:31:36.959-08:00 [sweep-0.80] CACHE HIT similarity=0.9012 threshold=0.8 cached_query="Which ws version fixes the header-count denial of service?" latency_ms=4.07
-  C20 paraphrase        exp=hit  sim=0.9012 cached=True  correct_hit        4.1 ms
-2026-11-05T07:31:36.962-08:00 [sweep-0.80] CACHE HIT similarity=0.8333 threshold=0.8 cached_query="What is the severity of the Log4Shell vulnerability in log4j-core?" latency_ms=3.42
-  C21 similar_different exp=miss sim=0.8333 cached=True  false_hit          3.4 ms
-2026-11-05T07:31:36.965-08:00 [sweep-0.80] CACHE MISS best_similarity=0.2713 threshold=0.8 query="Which pillow version fixes the ImageMath code execution?" reason="below threshold"
-2026-11-05T07:32:04.970-08:00 [sweep-0.80] ANSWERED by agent pipeline correlation_id="cddb5dd2-e52b-4ae3-b5f7-d8e7303ccf75" status="approved" stored=false latency_ms=28007.15
-  C22 similar_different exp=miss sim=0.2713 cached=False correct_miss   28007.2 ms
-2026-11-05T07:32:04.980-08:00 [sweep-0.80] CACHE MISS best_similarity=0.6584 threshold=0.8 query="What versions of protobufjs are affected by the prototype pollution bug?" reason="below threshold"
-2026-11-05T07:32:58.483-08:00 [sweep-0.80] ANSWERED by agent pipeline correlation_id="f9c22164-9a56-4114-ad38-4e9d76d2ccf0" status="approved" stored=false latency_ms=53512.11
-  C23 similar_different exp=miss sim=0.6584 cached=False correct_miss   53512.1 ms
-2026-11-05T07:32:58.501-08:00 [sweep-0.80] CACHE HIT similarity=0.9 threshold=0.8 cached_query="How should I fix the PyYAML full_load code execution vulnerability?" latency_ms=17.22
-  C24 similar_different exp=miss sim=0.9000 cached=True  false_hit         17.2 ms
-2026-11-05T07:32:58.507-08:00 [sweep-0.80] CACHE HIT similarity=0.9267 threshold=0.8 cached_query="Which requests version stops leaking the Proxy-Authorization header?" latency_ms=5.47
-  C25 similar_different exp=miss sim=0.9267 cached=True  false_hit          5.5 ms
-2026-11-05T07:32:58.513-08:00 [sweep-0.80] CACHE HIT similarity=0.9106 threshold=0.8 cached_query="Is Spring4Shell in spring-beans a critical vulnerability?" latency_ms=5.6
-  C26 similar_different exp=miss sim=0.9106 cached=True  false_hit          5.6 ms
-2026-11-05T07:32:58.517-08:00 [sweep-0.80] CACHE MISS best_similarity=0.4156 threshold=0.8 query="What is the CVE for the express open redirect?" reason="below threshold"
-2026-11-05T07:33:13.197-08:00 [sweep-0.80] ANSWERED by agent pipeline correlation_id="9bde5aaa-6b7e-4eff-8794-73a38224bd4d" status="approved" stored=false latency_ms=14683.78
-  C27 similar_different exp=miss sim=0.4156 cached=False correct_miss   14683.8 ms
-2026-11-05T07:33:13.203-08:00 [sweep-0.80] CACHE MISS best_similarity=0.3728 threshold=0.8 query="Which django version fixes the regular expression denial of service?" reason="below threshold"
-2026-11-05T07:34:13.260-08:00 [sweep-0.80] ANSWERED by agent pipeline correlation_id="69816512-5c41-4c24-bda5-9f23f8ca8288" status="approved" stored=false latency_ms=60063.41
-  C28 similar_different exp=miss sim=0.3728 cached=False correct_miss   60063.4 ms
-2026-11-05T07:34:13.274-08:00 [sweep-0.80] CACHE MISS best_similarity=0.797 threshold=0.8 query="What is the impact of the axios XSRF-TOKEN leak?" reason="below threshold"
-2026-11-05T07:34:28.429-08:00 [sweep-0.80] ANSWERED by agent pipeline correlation_id="a3cef826-ca1f-48f9-8e22-d1820f808e8d" status="approved" stored=false latency_ms=15167.23
-  C29 similar_different exp=miss sim=0.7970 cached=False correct_miss   15167.2 ms
-2026-11-05T07:34:28.454-08:00 [sweep-0.80] CACHE HIT similarity=0.9245 threshold=0.8 cached_query="Which ws version fixes the header-count denial of service?" latency_ms=23.51
-  C30 similar_different exp=miss sim=0.9245 cached=True  false_hit         23.5 ms
-2026-11-05T07:34:28.463-08:00 [sweep-0.80] CACHE MISS best_similarity=0.2332 threshold=0.8 query="How do I generate an SBOM for a Python project?" reason="below threshold"
-2026-11-05T07:35:57.030-08:00 [sweep-0.80] ANSWERED by agent pipeline correlation_id="1282a7a0-d9bf-43ed-92be-3359eb9e3760" status="approved" stored=false latency_ms=88575.39
-  C31 unrelated         exp=miss sim=0.2332 cached=False correct_miss   88575.4 ms
-2026-11-05T07:35:57.048-08:00 [sweep-0.80] CACHE MISS best_similarity=0.1919 threshold=0.8 query="What is the difference between CVSS base and temporal scores?" reason="below threshold"
-2026-11-05T07:36:06.590-08:00 [sweep-0.80] ANSWERED by agent pipeline correlation_id="2aa98e04-b47f-463e-b8f2-d2bf3e828487" status="approved" stored=false latency_ms=9559.17
-  C32 unrelated         exp=miss sim=0.1919 cached=False correct_miss    9559.2 ms
-2026-11-05T07:36:06.600-08:00 [sweep-0.80] CACHE MISS best_similarity=0.1974 threshold=0.8 query="How often should we run npm audit in CI?" reason="below threshold"
-2026-11-05T07:37:11.629-08:00 [sweep-0.80] ANSWERED by agent pipeline correlation_id="114d7d1f-dc33-455d-bbcd-7ef551fb535c" status="approved" stored=false latency_ms=65036.19
-  C33 unrelated         exp=miss sim=0.1974 cached=False correct_miss   65036.2 ms
-2026-11-05T07:37:11.646-08:00 [sweep-0.80] CACHE MISS best_similarity=0.199 threshold=0.8 query="What does a CWE identifier represent?" reason="below threshold"
-2026-11-05T07:37:20.893-08:00 [sweep-0.80] ANSWERED by agent pipeline correlation_id="b22ea724-c479-4fbf-9147-406a569b60d6" status="approved" stored=false latency_ms=9262.63
-  C34 unrelated         exp=miss sim=0.1990 cached=False correct_miss    9262.6 ms
-2026-11-05T07:37:20.902-08:00 [sweep-0.80] CACHE MISS best_similarity=0.1822 threshold=0.8 query="How do I pin transitive dependencies with pip-tools?" reason="below threshold"
-2026-11-05T07:38:18.333-08:00 [sweep-0.80] ANSWERED by agent pipeline correlation_id="8ce8648e-3683-4a4e-942e-cf60f9009804" status="approved" stored=false latency_ms=57440.15
-  C35 unrelated         exp=miss sim=0.1822 cached=False correct_miss   57440.2 ms
-2026-11-05T07:38:18.351-08:00 [sweep-0.80] CACHE MISS best_similarity=0.2438 threshold=0.8 query="What is a GitHub Security Advisory (GHSA) ID?" reason="below threshold"
-2026-11-05T07:38:28.141-08:00 [sweep-0.80] ANSWERED by agent pipeline correlation_id="19174ccb-9781-442e-b855-dabdb23157ee" status="approved" stored=false latency_ms=9806.34
-  C36 unrelated         exp=miss sim=0.2438 cached=False correct_miss    9806.3 ms
-2026-11-05T07:38:28.153-08:00 [sweep-0.80] CACHE MISS best_similarity=0.305 threshold=0.8 query="Should a reporter disclose a vulnerability publicly before a fix exists?" reason="below threshold"
-2026-11-05T07:38:38.551-08:00 [sweep-0.80] ANSWERED by agent pipeline correlation_id="21cb07fa-6ddc-4efb-9ea2-2db1b5eb7e26" status="approved" stored=false latency_ms=10409.11
-  C37 unrelated         exp=miss sim=0.3050 cached=False correct_miss   10409.1 ms
-2026-11-05T07:38:38.629-08:00 [sweep-0.80] CACHE MISS best_similarity=0.3543 threshold=0.8 query="How does Dependabot decide when to open a pull request?" reason="below threshold"
-2026-11-05T07:38:58.142-08:00 [sweep-0.80] ANSWERED by agent pipeline correlation_id="9d81350d-2e68-4d2d-b80b-bcc83901bd1d" status="approved" stored=false latency_ms=19588.25
-  C38 unrelated         exp=miss sim=0.3543 cached=False correct_miss   19588.2 ms
-2026-11-05T07:38:58.162-08:00 [sweep-0.80] CACHE MISS best_similarity=0.2987 threshold=0.8 query="What is typosquatting in package registries?" reason="below threshold"
-2026-11-05T07:39:08.467-08:00 [sweep-0.80] ANSWERED by agent pipeline correlation_id="11675c2e-cde4-48eb-adae-a2f79cd58499" status="approved" stored=false latency_ms=10323.91
-  C39 unrelated         exp=miss sim=0.2987 cached=False correct_miss   10323.9 ms
-2026-11-05T07:39:08.474-08:00 [sweep-0.80] CACHE MISS best_similarity=0.1688 threshold=0.8 query="How do I verify the signature of a Maven artifact?" reason="below threshold"
-2026-11-05T07:40:09.335-08:00 [sweep-0.80] ANSWERED by agent pipeline correlation_id="0c0e16ed-91bd-4faf-b9fb-acb9f07ab498" status="approved" stored=false latency_ms=60867.64
-  C40 unrelated         exp=miss sim=0.1688 cached=False correct_miss   60867.6 ms
-  -> hit rate 62.5%, false-hit rate 12.5%, mean latency 12811 ms
+2026-11-08T16:23:52.663-08:00 [sweep-0.80] CACHE HIT similarity=1.0 threshold=0.8 cached_query="What is the severity of the Log4Shell vulnerability in log4j-core?" latency_ms=36.91
+  C01 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit       36.9 ms
+2026-11-08T16:23:52.677-08:00 [sweep-0.80] CACHE HIT similarity=1.0 threshold=0.8 cached_query="Which lodash version fixes the template command injection?" latency_ms=13.17
+  C02 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit       13.2 ms
+2026-11-08T16:23:52.688-08:00 [sweep-0.80] CACHE HIT similarity=1.0 threshold=0.8 cached_query="What versions of minimist are affected by the prototype pollution bug?" latency_ms=10.21
+  C03 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit       10.2 ms
+2026-11-08T16:23:52.699-08:00 [sweep-0.80] CACHE HIT similarity=1.0 threshold=0.8 cached_query="How should I fix the PyYAML full_load code execution vulnerability?" latency_ms=10.15
+  C04 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit       10.2 ms
+2026-11-08T16:23:52.708-08:00 [sweep-0.80] CACHE HIT similarity=1.0 threshold=0.8 cached_query="Which requests version stops leaking the Proxy-Authorization header?" latency_ms=8.54
+  C05 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        8.5 ms
+2026-11-08T16:23:52.718-08:00 [sweep-0.80] CACHE HIT similarity=1.0 threshold=0.8 cached_query="Is Spring4Shell in spring-beans a critical vulnerability?" latency_ms=10.14
+  C06 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit       10.1 ms
+2026-11-08T16:23:52.729-08:00 [sweep-0.80] CACHE HIT similarity=1.0 threshold=0.8 cached_query="What is the CVE for the axios XSRF-TOKEN leak?" latency_ms=10.64
+  C07 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit       10.6 ms
+2026-11-08T16:23:52.742-08:00 [sweep-0.80] CACHE HIT similarity=1.0 threshold=0.8 cached_query="Which jackson-databind version fixes the deeply nested JSON denial of service?" latency_ms=12.62
+  C08 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit       12.6 ms
+2026-11-08T16:23:52.753-08:00 [sweep-0.80] CACHE HIT similarity=1.0 threshold=0.8 cached_query="What is the impact of the node-fetch cookie leak on redirect?" latency_ms=10.13
+  C09 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit       10.1 ms
+2026-11-08T16:23:52.764-08:00 [sweep-0.80] CACHE HIT similarity=1.0 threshold=0.8 cached_query="Which ws version fixes the header-count denial of service?" latency_ms=10.29
+  C10 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit       10.3 ms
+2026-11-08T16:23:52.773-08:00 [sweep-0.80] CACHE HIT similarity=0.885 threshold=0.8 cached_query="What is the severity of the Log4Shell vulnerability in log4j-core?" latency_ms=8.79
+  C11 paraphrase        exp=hit  sim=0.8850 cached=True  correct_hit        8.8 ms
+2026-11-08T16:23:52.781-08:00 [sweep-0.80] CACHE HIT similarity=0.9291 threshold=0.8 cached_query="Which lodash version fixes the template command injection?" latency_ms=7.65
+  C12 paraphrase        exp=hit  sim=0.9291 cached=True  correct_hit        7.7 ms
+2026-11-08T16:23:52.788-08:00 [sweep-0.80] CACHE HIT similarity=0.8705 threshold=0.8 cached_query="What versions of minimist are affected by the prototype pollution bug?" latency_ms=7.09
+  C13 paraphrase        exp=hit  sim=0.8705 cached=True  correct_hit        7.1 ms
+2026-11-08T16:23:52.796-08:00 [sweep-0.80] CACHE HIT similarity=0.9319 threshold=0.8 cached_query="How should I fix the PyYAML full_load code execution vulnerability?" latency_ms=7.61
+  C14 paraphrase        exp=hit  sim=0.9319 cached=True  correct_hit        7.6 ms
+2026-11-08T16:23:52.804-08:00 [sweep-0.80] CACHE HIT similarity=0.949 threshold=0.8 cached_query="Which requests version stops leaking the Proxy-Authorization header?" latency_ms=8.1
+  C15 paraphrase        exp=hit  sim=0.9490 cached=True  correct_hit        8.1 ms
+2026-11-08T16:23:52.812-08:00 [sweep-0.80] CACHE HIT similarity=0.9698 threshold=0.8 cached_query="Is Spring4Shell in spring-beans a critical vulnerability?" latency_ms=7.27
+  C16 paraphrase        exp=hit  sim=0.9698 cached=True  correct_hit        7.3 ms
+2026-11-08T16:23:52.820-08:00 [sweep-0.80] CACHE HIT similarity=0.8297 threshold=0.8 cached_query="What is the CVE for the axios XSRF-TOKEN leak?" latency_ms=7.52
+  C17 paraphrase        exp=hit  sim=0.8297 cached=True  correct_hit        7.5 ms
+2026-11-08T16:23:52.828-08:00 [sweep-0.80] CACHE HIT similarity=0.862 threshold=0.8 cached_query="Which jackson-databind version fixes the deeply nested JSON denial of service?" latency_ms=7.55
+  C18 paraphrase        exp=hit  sim=0.8620 cached=True  correct_hit        7.5 ms
+2026-11-08T16:23:52.835-08:00 [sweep-0.80] CACHE HIT similarity=0.9394 threshold=0.8 cached_query="What is the impact of the node-fetch cookie leak on redirect?" latency_ms=7.41
+  C19 paraphrase        exp=hit  sim=0.9394 cached=True  correct_hit        7.4 ms
+2026-11-08T16:23:52.844-08:00 [sweep-0.80] CACHE HIT similarity=0.9012 threshold=0.8 cached_query="Which ws version fixes the header-count denial of service?" latency_ms=9.07
+  C20 paraphrase        exp=hit  sim=0.9012 cached=True  correct_hit        9.1 ms
+2026-11-08T16:23:52.852-08:00 [sweep-0.80] CACHE HIT similarity=0.8333 threshold=0.8 cached_query="What is the severity of the Log4Shell vulnerability in log4j-core?" latency_ms=7.62
+  C21 similar_different exp=miss sim=0.8333 cached=True  false_hit          7.6 ms
+2026-11-08T16:23:52.859-08:00 [sweep-0.80] CACHE MISS best_similarity=0.2713 threshold=0.8 query="Which pillow version fixes the ImageMath code execution?" reason="below threshold"
+2026-11-08T16:24:30.337-08:00 [sweep-0.80] ANSWERED by agent pipeline correlation_id="a8c0219f-93c2-4410-8659-64d43da64767" status="approved" stored=false latency_ms=37483.97
+  C22 similar_different exp=miss sim=0.2713 cached=False correct_miss   37484.0 ms
+2026-11-08T16:24:30.372-08:00 [sweep-0.80] CACHE MISS best_similarity=0.6584 threshold=0.8 query="What versions of protobufjs are affected by the prototype pollution bug?" reason="below threshold"
+2026-11-08T16:25:35.680-08:00 [sweep-0.80] ANSWERED by agent pipeline correlation_id="60bc28dd-e566-4ca7-a7a9-1a3a348f456a" status="approved" stored=false latency_ms=65334.46
+  C23 similar_different exp=miss sim=0.6584 cached=False correct_miss   65334.5 ms
+2026-11-08T16:25:35.726-08:00 [sweep-0.80] CACHE HIT similarity=0.9 threshold=0.8 cached_query="How should I fix the PyYAML full_load code execution vulnerability?" latency_ms=42.91
+  C24 similar_different exp=miss sim=0.9000 cached=True  false_hit         42.9 ms
+2026-11-08T16:25:35.738-08:00 [sweep-0.80] CACHE HIT similarity=0.9267 threshold=0.8 cached_query="Which requests version stops leaking the Proxy-Authorization header?" latency_ms=11.48
+  C25 similar_different exp=miss sim=0.9267 cached=True  false_hit         11.5 ms
+2026-11-08T16:25:35.751-08:00 [sweep-0.80] CACHE HIT similarity=0.9106 threshold=0.8 cached_query="Is Spring4Shell in spring-beans a critical vulnerability?" latency_ms=12.55
+  C26 similar_different exp=miss sim=0.9106 cached=True  false_hit         12.6 ms
+2026-11-08T16:25:35.760-08:00 [sweep-0.80] CACHE MISS best_similarity=0.4156 threshold=0.8 query="What is the CVE for the express open redirect?" reason="below threshold"
+2026-11-08T16:25:51.860-08:00 [sweep-0.80] ANSWERED by agent pipeline correlation_id="98505c71-a055-412e-9af0-5881c25437fe" status="approved" stored=false latency_ms=16108.62
+  C27 similar_different exp=miss sim=0.4156 cached=False correct_miss   16108.6 ms
+2026-11-08T16:25:51.877-08:00 [sweep-0.80] CACHE MISS best_similarity=0.3728 threshold=0.8 query="Which django version fixes the regular expression denial of service?" reason="below threshold"
+2026-11-08T16:26:52.996-08:00 [sweep-0.80] ANSWERED by agent pipeline correlation_id="44deafa4-b6f5-417e-97e9-0fd14bb7ea74" status="approved" stored=false latency_ms=61135.16
+  C28 similar_different exp=miss sim=0.3728 cached=False correct_miss   61135.2 ms
+2026-11-08T16:26:53.010-08:00 [sweep-0.80] CACHE MISS best_similarity=0.797 threshold=0.8 query="What is the impact of the axios XSRF-TOKEN leak?" reason="below threshold"
+2026-11-08T16:27:07.647-08:00 [sweep-0.80] ANSWERED by agent pipeline correlation_id="4f5085ac-44c6-4547-a432-2ce39dcacc5e" status="approved" stored=false latency_ms=14649.76
+  C29 similar_different exp=miss sim=0.7970 cached=False correct_miss   14649.8 ms
+2026-11-08T16:27:07.656-08:00 [sweep-0.80] CACHE HIT similarity=0.9245 threshold=0.8 cached_query="Which ws version fixes the header-count denial of service?" latency_ms=8.64
+  C30 similar_different exp=miss sim=0.9245 cached=True  false_hit          8.6 ms
+2026-11-08T16:27:07.663-08:00 [sweep-0.80] CACHE MISS best_similarity=0.2332 threshold=0.8 query="How do I generate an SBOM for a Python project?" reason="below threshold"
+2026-11-08T16:28:36.355-08:00 [sweep-0.80] ANSWERED by agent pipeline correlation_id="a6e66071-132e-4d4e-ab1e-15569a8fd670" status="approved" stored=false latency_ms=88698.26
+  C31 unrelated         exp=miss sim=0.2332 cached=False correct_miss   88698.3 ms
+2026-11-08T16:28:36.374-08:00 [sweep-0.80] CACHE MISS best_similarity=0.1919 threshold=0.8 query="What is the difference between CVSS base and temporal scores?" reason="below threshold"
+2026-11-08T16:28:46.050-08:00 [sweep-0.80] ANSWERED by agent pipeline correlation_id="b3dc83a9-d26c-4b98-b024-51123e54e0a8" status="approved" stored=false latency_ms=9691.07
+  C32 unrelated         exp=miss sim=0.1919 cached=False correct_miss    9691.1 ms
+2026-11-08T16:28:46.058-08:00 [sweep-0.80] CACHE MISS best_similarity=0.1974 threshold=0.8 query="How often should we run npm audit in CI?" reason="below threshold"
+2026-11-08T16:29:49.206-08:00 [sweep-0.80] ANSWERED by agent pipeline correlation_id="83adf403-2bec-418f-b9d9-7dd028cb6ecf" status="approved" stored=false latency_ms=63156.41
+  C33 unrelated         exp=miss sim=0.1974 cached=False correct_miss   63156.4 ms
+2026-11-08T16:29:49.222-08:00 [sweep-0.80] CACHE MISS best_similarity=0.199 threshold=0.8 query="What does a CWE identifier represent?" reason="below threshold"
+2026-11-08T16:29:58.746-08:00 [sweep-0.80] ANSWERED by agent pipeline correlation_id="c7e48a1b-608f-4288-96e5-9bf0b728b4a2" status="approved" stored=false latency_ms=9538.63
+  C34 unrelated         exp=miss sim=0.1990 cached=False correct_miss    9538.6 ms
+2026-11-08T16:29:58.754-08:00 [sweep-0.80] CACHE MISS best_similarity=0.1822 threshold=0.8 query="How do I pin transitive dependencies with pip-tools?" reason="below threshold"
+2026-11-08T16:30:56.605-08:00 [sweep-0.80] ANSWERED by agent pipeline correlation_id="2fba5122-d73f-4bb1-bc8e-16ce7d9bb727" status="approved" stored=false latency_ms=57858.52
+  C35 unrelated         exp=miss sim=0.1822 cached=False correct_miss   57858.5 ms
+2026-11-08T16:30:56.614-08:00 [sweep-0.80] CACHE MISS best_similarity=0.2438 threshold=0.8 query="What is a GitHub Security Advisory (GHSA) ID?" reason="below threshold"
+2026-11-08T16:31:06.266-08:00 [sweep-0.80] ANSWERED by agent pipeline correlation_id="4a413add-92f8-4583-b6d9-802869d8e1a9" status="approved" stored=false latency_ms=9660.7
+  C36 unrelated         exp=miss sim=0.2438 cached=False correct_miss    9660.7 ms
+2026-11-08T16:31:06.273-08:00 [sweep-0.80] CACHE MISS best_similarity=0.305 threshold=0.8 query="Should a reporter disclose a vulnerability publicly before a fix exists?" reason="below threshold"
+2026-11-08T16:31:15.916-08:00 [sweep-0.80] ANSWERED by agent pipeline correlation_id="f66fffe8-80c0-4e1f-b641-2511f0b11f4b" status="approved" stored=false latency_ms=9649.27
+  C37 unrelated         exp=miss sim=0.3050 cached=False correct_miss    9649.3 ms
+2026-11-08T16:31:15.922-08:00 [sweep-0.80] CACHE MISS best_similarity=0.3543 threshold=0.8 query="How does Dependabot decide when to open a pull request?" reason="below threshold"
+2026-11-08T16:31:34.689-08:00 [sweep-0.80] ANSWERED by agent pipeline correlation_id="988d3ae3-bb96-410a-8970-a91a0a691d01" status="approved" stored=false latency_ms=18773.18
+  C38 unrelated         exp=miss sim=0.3543 cached=False correct_miss   18773.2 ms
+2026-11-08T16:31:34.696-08:00 [sweep-0.80] CACHE MISS best_similarity=0.2987 threshold=0.8 query="What is typosquatting in package registries?" reason="below threshold"
+2026-11-08T16:31:44.869-08:00 [sweep-0.80] ANSWERED by agent pipeline correlation_id="944cfba4-afc9-4256-ab02-602d2a543a17" status="approved" stored=false latency_ms=10179.23
+  C39 unrelated         exp=miss sim=0.2987 cached=False correct_miss   10179.2 ms
+2026-11-08T16:31:44.875-08:00 [sweep-0.80] CACHE MISS best_similarity=0.1688 threshold=0.8 query="How do I verify the signature of a Maven artifact?" reason="below threshold"
+2026-11-08T16:32:44.282-08:00 [sweep-0.80] ANSWERED by agent pipeline correlation_id="4d9d04ea-1f32-4d00-920b-27bbc2abfe3c" status="approved" stored=false latency_ms=59412.23
+  C40 unrelated         exp=miss sim=0.1688 cached=False correct_miss   59412.2 ms
+  -> hit rate 62.5%, false-hit rate 12.5%, mean latency 13291 ms
 
 === Threshold 0.85 ===
-2026-11-05T07:40:09.366-08:00 [sweep-0.85] CACHE HIT similarity=1.0 threshold=0.85 cached_query="What is the severity of the Log4Shell vulnerability in log4j-core?" latency_ms=23.6
-  C01 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit       23.6 ms
-2026-11-05T07:40:09.378-08:00 [sweep-0.85] CACHE HIT similarity=1.0 threshold=0.85 cached_query="Which lodash version fixes the template command injection?" latency_ms=8.79
-  C02 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        8.8 ms
-2026-11-05T07:40:09.390-08:00 [sweep-0.85] CACHE HIT similarity=1.0 threshold=0.85 cached_query="What versions of minimist are affected by the prototype pollution bug?" latency_ms=8.5
-  C03 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        8.5 ms
-2026-11-05T07:40:09.399-08:00 [sweep-0.85] CACHE HIT similarity=1.0 threshold=0.85 cached_query="How should I fix the PyYAML full_load code execution vulnerability?" latency_ms=8.98
-  C04 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        9.0 ms
-2026-11-05T07:40:09.407-08:00 [sweep-0.85] CACHE HIT similarity=1.0 threshold=0.85 cached_query="Which requests version stops leaking the Proxy-Authorization header?" latency_ms=7.16
-  C05 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        7.2 ms
-2026-11-05T07:40:09.417-08:00 [sweep-0.85] CACHE HIT similarity=1.0 threshold=0.85 cached_query="Is Spring4Shell in spring-beans a critical vulnerability?" latency_ms=10.13
-  C06 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit       10.1 ms
-2026-11-05T07:40:09.425-08:00 [sweep-0.85] CACHE HIT similarity=1.0 threshold=0.85 cached_query="What is the CVE for the axios XSRF-TOKEN leak?" latency_ms=7.56
-  C07 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        7.6 ms
-2026-11-05T07:40:09.432-08:00 [sweep-0.85] CACHE HIT similarity=1.0 threshold=0.85 cached_query="Which jackson-databind version fixes the deeply nested JSON denial of service?" latency_ms=6.57
-  C08 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        6.6 ms
-2026-11-05T07:40:09.439-08:00 [sweep-0.85] CACHE HIT similarity=1.0 threshold=0.85 cached_query="What is the impact of the node-fetch cookie leak on redirect?" latency_ms=6.98
-  C09 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        7.0 ms
-2026-11-05T07:40:09.446-08:00 [sweep-0.85] CACHE HIT similarity=1.0 threshold=0.85 cached_query="Which ws version fixes the header-count denial of service?" latency_ms=6.62
-  C10 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        6.6 ms
-2026-11-05T07:40:09.453-08:00 [sweep-0.85] CACHE HIT similarity=0.885 threshold=0.85 cached_query="What is the severity of the Log4Shell vulnerability in log4j-core?" latency_ms=6.86
-  C11 paraphrase        exp=hit  sim=0.8850 cached=True  correct_hit        6.9 ms
-2026-11-05T07:40:09.460-08:00 [sweep-0.85] CACHE HIT similarity=0.9291 threshold=0.85 cached_query="Which lodash version fixes the template command injection?" latency_ms=6.91
-  C12 paraphrase        exp=hit  sim=0.9291 cached=True  correct_hit        6.9 ms
-2026-11-05T07:40:09.493-08:00 [sweep-0.85] CACHE HIT similarity=0.8705 threshold=0.85 cached_query="What versions of minimist are affected by the prototype pollution bug?" latency_ms=32.09
-  C13 paraphrase        exp=hit  sim=0.8705 cached=True  correct_hit       32.1 ms
-2026-11-05T07:40:09.500-08:00 [sweep-0.85] CACHE HIT similarity=0.9319 threshold=0.85 cached_query="How should I fix the PyYAML full_load code execution vulnerability?" latency_ms=7.27
-  C14 paraphrase        exp=hit  sim=0.9319 cached=True  correct_hit        7.3 ms
-2026-11-05T07:40:09.508-08:00 [sweep-0.85] CACHE HIT similarity=0.949 threshold=0.85 cached_query="Which requests version stops leaking the Proxy-Authorization header?" latency_ms=7.39
-  C15 paraphrase        exp=hit  sim=0.9490 cached=True  correct_hit        7.4 ms
-2026-11-05T07:40:09.515-08:00 [sweep-0.85] CACHE HIT similarity=0.9698 threshold=0.85 cached_query="Is Spring4Shell in spring-beans a critical vulnerability?" latency_ms=6.29
-  C16 paraphrase        exp=hit  sim=0.9698 cached=True  correct_hit        6.3 ms
-2026-11-05T07:40:09.520-08:00 [sweep-0.85] CACHE MISS best_similarity=0.8297 threshold=0.85 query="Which CVE ID covers the axios XSRF-TOKEN disclosure?" reason="below threshold"
-2026-11-05T07:41:08.659-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="f1b64c66-1abe-4380-8132-8fe55de92f7f" status="approved" stored=false latency_ms=59144.33
-  C17 paraphrase        exp=hit  sim=0.8297 cached=False missed_hit     59144.3 ms
-2026-11-05T07:41:08.730-08:00 [sweep-0.85] CACHE HIT similarity=0.862 threshold=0.85 cached_query="Which jackson-databind version fixes the deeply nested JSON denial of service?" latency_ms=68.13
-  C18 paraphrase        exp=hit  sim=0.8620 cached=True  correct_hit       68.1 ms
-2026-11-05T07:41:08.745-08:00 [sweep-0.85] CACHE HIT similarity=0.9394 threshold=0.85 cached_query="What is the impact of the node-fetch cookie leak on redirect?" latency_ms=14.17
-  C19 paraphrase        exp=hit  sim=0.9394 cached=True  correct_hit       14.2 ms
-2026-11-05T07:41:08.761-08:00 [sweep-0.85] CACHE HIT similarity=0.9012 threshold=0.85 cached_query="Which ws version fixes the header-count denial of service?" latency_ms=16.22
-  C20 paraphrase        exp=hit  sim=0.9012 cached=True  correct_hit       16.2 ms
-2026-11-05T07:41:08.774-08:00 [sweep-0.85] CACHE MISS best_similarity=0.8333 threshold=0.85 query="What is the CVE for the Log4Shell vulnerability in log4j-core?" reason="below threshold"
-2026-11-05T07:41:21.392-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="bfa0383a-ffc1-40c6-8d7b-d70c274e44c4" status="approved" stored=false latency_ms=12630.01
-  C21 similar_different exp=miss sim=0.8333 cached=False correct_miss   12630.0 ms
-2026-11-05T07:41:21.436-08:00 [sweep-0.85] CACHE MISS best_similarity=0.2713 threshold=0.85 query="Which pillow version fixes the ImageMath code execution?" reason="below threshold"
-2026-11-05T07:41:50.943-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="83793eb9-4c60-40f8-8960-009944f1205e" status="approved" stored=false latency_ms=29544.93
-  C22 similar_different exp=miss sim=0.2713 cached=False correct_miss   29544.9 ms
-2026-11-05T07:41:51.111-08:00 [sweep-0.85] CACHE MISS best_similarity=0.6584 threshold=0.85 query="What versions of protobufjs are affected by the prototype pollution bug?" reason="below threshold"
-2026-11-05T07:42:45.757-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="ef6d32eb-6cfa-465c-a99f-a9f5bbab0de2" status="approved" stored=false latency_ms=54809.02
-  C23 similar_different exp=miss sim=0.6584 cached=False correct_miss   54809.0 ms
-2026-11-05T07:42:45.782-08:00 [sweep-0.85] CACHE HIT similarity=0.9 threshold=0.85 cached_query="How should I fix the PyYAML full_load code execution vulnerability?" latency_ms=23.44
-  C24 similar_different exp=miss sim=0.9000 cached=True  false_hit         23.4 ms
-2026-11-05T07:42:45.792-08:00 [sweep-0.85] CACHE HIT similarity=0.9267 threshold=0.85 cached_query="Which requests version stops leaking the Proxy-Authorization header?" latency_ms=9.65
-  C25 similar_different exp=miss sim=0.9267 cached=True  false_hit          9.7 ms
-2026-11-05T07:42:45.801-08:00 [sweep-0.85] CACHE HIT similarity=0.9106 threshold=0.85 cached_query="Is Spring4Shell in spring-beans a critical vulnerability?" latency_ms=7.94
-  C26 similar_different exp=miss sim=0.9106 cached=True  false_hit          7.9 ms
-2026-11-05T07:42:45.809-08:00 [sweep-0.85] CACHE MISS best_similarity=0.4156 threshold=0.85 query="What is the CVE for the express open redirect?" reason="below threshold"
-2026-11-05T07:43:00.276-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="5cbdbcff-e256-4be7-84bf-95e612b27bb6" status="approved" stored=false latency_ms=14475.17
-  C27 similar_different exp=miss sim=0.4156 cached=False correct_miss   14475.2 ms
-2026-11-05T07:43:00.284-08:00 [sweep-0.85] CACHE MISS best_similarity=0.3728 threshold=0.85 query="Which django version fixes the regular expression denial of service?" reason="below threshold"
-2026-11-05T07:43:59.726-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="9dfffcb0-2cc5-400e-87ee-5043f6f4224e" status="approved" stored=false latency_ms=59449.79
-  C28 similar_different exp=miss sim=0.3728 cached=False correct_miss   59449.8 ms
-2026-11-05T07:43:59.740-08:00 [sweep-0.85] CACHE MISS best_similarity=0.797 threshold=0.85 query="What is the impact of the axios XSRF-TOKEN leak?" reason="below threshold"
-2026-11-05T07:44:14.495-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="85d513f5-267a-41a0-b4ff-b25ecff304fb" status="approved" stored=false latency_ms=14767.52
-  C29 similar_different exp=miss sim=0.7970 cached=False correct_miss   14767.5 ms
-2026-11-05T07:44:14.502-08:00 [sweep-0.85] CACHE HIT similarity=0.9245 threshold=0.85 cached_query="Which ws version fixes the header-count denial of service?" latency_ms=6.83
-  C30 similar_different exp=miss sim=0.9245 cached=True  false_hit          6.8 ms
-2026-11-05T07:44:14.507-08:00 [sweep-0.85] CACHE MISS best_similarity=0.2332 threshold=0.85 query="How do I generate an SBOM for a Python project?" reason="below threshold"
-2026-11-05T07:45:41.523-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="7455ccae-77fd-474f-b445-76673951140d" status="approved" stored=false latency_ms=87020.74
-  C31 unrelated         exp=miss sim=0.2332 cached=False correct_miss   87020.7 ms
-2026-11-05T07:45:41.540-08:00 [sweep-0.85] CACHE MISS best_similarity=0.1919 threshold=0.85 query="What is the difference between CVSS base and temporal scores?" reason="below threshold"
-2026-11-05T07:45:51.131-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="063c5689-341a-4246-b4b7-734711045382" status="approved" stored=false latency_ms=9606.44
-  C32 unrelated         exp=miss sim=0.1919 cached=False correct_miss    9606.4 ms
-2026-11-05T07:45:51.143-08:00 [sweep-0.85] CACHE MISS best_similarity=0.1974 threshold=0.85 query="How often should we run npm audit in CI?" reason="below threshold"
-2026-11-05T07:46:52.554-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="4c7c197b-ddfc-4072-a61f-a97229f47ac7" status="approved" stored=false latency_ms=61422.57
-  C33 unrelated         exp=miss sim=0.1974 cached=False correct_miss   61422.6 ms
-2026-11-05T07:46:52.576-08:00 [sweep-0.85] CACHE MISS best_similarity=0.199 threshold=0.85 query="What does a CWE identifier represent?" reason="below threshold"
-2026-11-05T07:47:01.842-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="5635c9c5-fbc0-46fa-94d1-d57ee0338e79" status="approved" stored=false latency_ms=9286.18
-  C34 unrelated         exp=miss sim=0.1990 cached=False correct_miss    9286.2 ms
-2026-11-05T07:47:01.850-08:00 [sweep-0.85] CACHE MISS best_similarity=0.1822 threshold=0.85 query="How do I pin transitive dependencies with pip-tools?" reason="below threshold"
-2026-11-05T07:47:59.360-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="a4764fdb-decd-490c-8000-4dfb9353534c" status="approved" stored=false latency_ms=57516.97
-  C35 unrelated         exp=miss sim=0.1822 cached=False correct_miss   57517.0 ms
-2026-11-05T07:47:59.384-08:00 [sweep-0.85] CACHE MISS best_similarity=0.2438 threshold=0.85 query="What is a GitHub Security Advisory (GHSA) ID?" reason="below threshold"
-2026-11-05T07:48:09.058-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="2f344f9a-56e7-4aa9-8f59-7b0cc6be1e20" status="approved" stored=false latency_ms=9696.07
-  C36 unrelated         exp=miss sim=0.2438 cached=False correct_miss    9696.1 ms
-2026-11-05T07:48:09.065-08:00 [sweep-0.85] CACHE MISS best_similarity=0.305 threshold=0.85 query="Should a reporter disclose a vulnerability publicly before a fix exists?" reason="below threshold"
-2026-11-05T07:48:18.751-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="143bb40f-70ec-42e7-bea1-2eb67d328d1c" status="approved" stored=false latency_ms=9691.75
-  C37 unrelated         exp=miss sim=0.3050 cached=False correct_miss    9691.8 ms
-2026-11-05T07:48:18.766-08:00 [sweep-0.85] CACHE MISS best_similarity=0.3543 threshold=0.85 query="How does Dependabot decide when to open a pull request?" reason="below threshold"
-2026-11-05T07:48:37.778-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="e61e23e9-8106-42b9-ba14-61971edc322e" status="approved" stored=false latency_ms=19026.03
-  C38 unrelated         exp=miss sim=0.3543 cached=False correct_miss   19026.0 ms
-2026-11-05T07:48:37.784-08:00 [sweep-0.85] CACHE MISS best_similarity=0.2987 threshold=0.85 query="What is typosquatting in package registries?" reason="below threshold"
-2026-11-05T07:48:48.025-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="9f08f27e-b918-41dc-a25f-06d64317e24d" status="approved" stored=false latency_ms=10246.11
-  C39 unrelated         exp=miss sim=0.2987 cached=False correct_miss   10246.1 ms
-2026-11-05T07:48:48.039-08:00 [sweep-0.85] CACHE MISS best_similarity=0.1688 threshold=0.85 query="How do I verify the signature of a Maven artifact?" reason="below threshold"
-2026-11-05T07:49:47.991-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="503a85da-811c-4d84-a369-9cbae30d7ea8" status="approved" stored=false latency_ms=59965.07
-  C40 unrelated         exp=miss sim=0.1688 cached=False correct_miss   59965.1 ms
-  -> hit rate 57.5%, false-hit rate 10.0%, mean latency 14465 ms
+2026-11-08T16:32:44.301-08:00 [sweep-0.85] CACHE HIT similarity=1.0 threshold=0.85 cached_query="What is the severity of the Log4Shell vulnerability in log4j-core?" latency_ms=13.61
+  C01 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit       13.6 ms
+2026-11-08T16:32:44.308-08:00 [sweep-0.85] CACHE HIT similarity=1.0 threshold=0.85 cached_query="Which lodash version fixes the template command injection?" latency_ms=4.73
+  C02 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        4.7 ms
+2026-11-08T16:32:44.314-08:00 [sweep-0.85] CACHE HIT similarity=1.0 threshold=0.85 cached_query="What versions of minimist are affected by the prototype pollution bug?" latency_ms=4.72
+  C03 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        4.7 ms
+2026-11-08T16:32:44.319-08:00 [sweep-0.85] CACHE HIT similarity=1.0 threshold=0.85 cached_query="How should I fix the PyYAML full_load code execution vulnerability?" latency_ms=4.11
+  C04 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        4.1 ms
+2026-11-08T16:32:44.323-08:00 [sweep-0.85] CACHE HIT similarity=1.0 threshold=0.85 cached_query="Which requests version stops leaking the Proxy-Authorization header?" latency_ms=3.8
+  C05 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        3.8 ms
+2026-11-08T16:32:44.327-08:00 [sweep-0.85] CACHE HIT similarity=1.0 threshold=0.85 cached_query="Is Spring4Shell in spring-beans a critical vulnerability?" latency_ms=4.2
+  C06 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        4.2 ms
+2026-11-08T16:32:44.332-08:00 [sweep-0.85] CACHE HIT similarity=1.0 threshold=0.85 cached_query="What is the CVE for the axios XSRF-TOKEN leak?" latency_ms=4.21
+  C07 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        4.2 ms
+2026-11-08T16:32:44.336-08:00 [sweep-0.85] CACHE HIT similarity=1.0 threshold=0.85 cached_query="Which jackson-databind version fixes the deeply nested JSON denial of service?" latency_ms=3.75
+  C08 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        3.8 ms
+2026-11-08T16:32:44.340-08:00 [sweep-0.85] CACHE HIT similarity=1.0 threshold=0.85 cached_query="What is the impact of the node-fetch cookie leak on redirect?" latency_ms=4.18
+  C09 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        4.2 ms
+2026-11-08T16:32:44.345-08:00 [sweep-0.85] CACHE HIT similarity=1.0 threshold=0.85 cached_query="Which ws version fixes the header-count denial of service?" latency_ms=4.64
+  C10 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        4.6 ms
+2026-11-08T16:32:44.349-08:00 [sweep-0.85] CACHE HIT similarity=0.885 threshold=0.85 cached_query="What is the severity of the Log4Shell vulnerability in log4j-core?" latency_ms=4.37
+  C11 paraphrase        exp=hit  sim=0.8850 cached=True  correct_hit        4.4 ms
+2026-11-08T16:32:44.354-08:00 [sweep-0.85] CACHE HIT similarity=0.9291 threshold=0.85 cached_query="Which lodash version fixes the template command injection?" latency_ms=4.29
+  C12 paraphrase        exp=hit  sim=0.9291 cached=True  correct_hit        4.3 ms
+2026-11-08T16:32:44.358-08:00 [sweep-0.85] CACHE HIT similarity=0.8705 threshold=0.85 cached_query="What versions of minimist are affected by the prototype pollution bug?" latency_ms=4.07
+  C13 paraphrase        exp=hit  sim=0.8705 cached=True  correct_hit        4.1 ms
+2026-11-08T16:32:44.363-08:00 [sweep-0.85] CACHE HIT similarity=0.9319 threshold=0.85 cached_query="How should I fix the PyYAML full_load code execution vulnerability?" latency_ms=5.11
+  C14 paraphrase        exp=hit  sim=0.9319 cached=True  correct_hit        5.1 ms
+2026-11-08T16:32:44.367-08:00 [sweep-0.85] CACHE HIT similarity=0.949 threshold=0.85 cached_query="Which requests version stops leaking the Proxy-Authorization header?" latency_ms=4.03
+  C15 paraphrase        exp=hit  sim=0.9490 cached=True  correct_hit        4.0 ms
+2026-11-08T16:32:44.372-08:00 [sweep-0.85] CACHE HIT similarity=0.9698 threshold=0.85 cached_query="Is Spring4Shell in spring-beans a critical vulnerability?" latency_ms=4.33
+  C16 paraphrase        exp=hit  sim=0.9698 cached=True  correct_hit        4.3 ms
+2026-11-08T16:32:44.376-08:00 [sweep-0.85] CACHE MISS best_similarity=0.8297 threshold=0.85 query="Which CVE ID covers the axios XSRF-TOKEN disclosure?" reason="below threshold"
+2026-11-08T16:33:42.465-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="b1a6e348-1bdc-4c82-9459-ac1afcfb545b" status="approved" stored=false latency_ms=58092.88
+  C17 paraphrase        exp=hit  sim=0.8297 cached=False missed_hit     58092.9 ms
+2026-11-08T16:33:42.480-08:00 [sweep-0.85] CACHE HIT similarity=0.862 threshold=0.85 cached_query="Which jackson-databind version fixes the deeply nested JSON denial of service?" latency_ms=13.66
+  C18 paraphrase        exp=hit  sim=0.8620 cached=True  correct_hit       13.7 ms
+2026-11-08T16:33:42.485-08:00 [sweep-0.85] CACHE HIT similarity=0.9394 threshold=0.85 cached_query="What is the impact of the node-fetch cookie leak on redirect?" latency_ms=4.91
+  C19 paraphrase        exp=hit  sim=0.9394 cached=True  correct_hit        4.9 ms
+2026-11-08T16:33:42.490-08:00 [sweep-0.85] CACHE HIT similarity=0.9012 threshold=0.85 cached_query="Which ws version fixes the header-count denial of service?" latency_ms=4.72
+  C20 paraphrase        exp=hit  sim=0.9012 cached=True  correct_hit        4.7 ms
+2026-11-08T16:33:42.494-08:00 [sweep-0.85] CACHE MISS best_similarity=0.8333 threshold=0.85 query="What is the CVE for the Log4Shell vulnerability in log4j-core?" reason="below threshold"
+2026-11-08T16:33:54.471-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="ff128e5a-5f44-4788-95ac-fb50acfb67a1" status="approved" stored=false latency_ms=11981.13
+  C21 similar_different exp=miss sim=0.8333 cached=False correct_miss   11981.1 ms
+2026-11-08T16:33:54.477-08:00 [sweep-0.85] CACHE MISS best_similarity=0.2713 threshold=0.85 query="Which pillow version fixes the ImageMath code execution?" reason="below threshold"
+2026-11-08T16:34:22.543-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="150ee472-6bc9-46eb-b552-fd05094689aa" status="approved" stored=false latency_ms=28070.95
+  C22 similar_different exp=miss sim=0.2713 cached=False correct_miss   28071.0 ms
+2026-11-08T16:34:22.556-08:00 [sweep-0.85] CACHE MISS best_similarity=0.6584 threshold=0.85 query="What versions of protobufjs are affected by the prototype pollution bug?" reason="below threshold"
+2026-11-08T16:35:16.158-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="f26732f2-6aaf-4d93-be29-f8ba80809a7e" status="approved" stored=false latency_ms=53614.17
+  C23 similar_different exp=miss sim=0.6584 cached=False correct_miss   53614.2 ms
+2026-11-08T16:35:16.173-08:00 [sweep-0.85] CACHE HIT similarity=0.9 threshold=0.85 cached_query="How should I fix the PyYAML full_load code execution vulnerability?" latency_ms=14.39
+  C24 similar_different exp=miss sim=0.9000 cached=True  false_hit         14.4 ms
+2026-11-08T16:35:16.179-08:00 [sweep-0.85] CACHE HIT similarity=0.9267 threshold=0.85 cached_query="Which requests version stops leaking the Proxy-Authorization header?" latency_ms=5.12
+  C25 similar_different exp=miss sim=0.9267 cached=True  false_hit          5.1 ms
+2026-11-08T16:35:16.184-08:00 [sweep-0.85] CACHE HIT similarity=0.9106 threshold=0.85 cached_query="Is Spring4Shell in spring-beans a critical vulnerability?" latency_ms=5.04
+  C26 similar_different exp=miss sim=0.9106 cached=True  false_hit          5.0 ms
+2026-11-08T16:35:16.188-08:00 [sweep-0.85] CACHE MISS best_similarity=0.4156 threshold=0.85 query="What is the CVE for the express open redirect?" reason="below threshold"
+2026-11-08T16:35:30.737-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="28b9ea34-bec6-4c53-9f24-b70cfde97e99" status="approved" stored=false latency_ms=14553.26
+  C27 similar_different exp=miss sim=0.4156 cached=False correct_miss   14553.3 ms
+2026-11-08T16:35:30.744-08:00 [sweep-0.85] CACHE MISS best_similarity=0.3728 threshold=0.85 query="Which django version fixes the regular expression denial of service?" reason="below threshold"
+2026-11-08T16:36:30.542-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="e2fdb096-92dc-43f9-9a9d-6a9f2becaea2" status="approved" stored=false latency_ms=59803.46
+  C28 similar_different exp=miss sim=0.3728 cached=False correct_miss   59803.5 ms
+2026-11-08T16:36:30.567-08:00 [sweep-0.85] CACHE MISS best_similarity=0.797 threshold=0.85 query="What is the impact of the axios XSRF-TOKEN leak?" reason="below threshold"
+2026-11-08T16:36:45.403-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="9fdbff37-d33d-4f44-857f-1cbe5b42d39f" status="approved" stored=false latency_ms=14859.36
+  C29 similar_different exp=miss sim=0.7970 cached=False correct_miss   14859.4 ms
+2026-11-08T16:36:45.411-08:00 [sweep-0.85] CACHE HIT similarity=0.9245 threshold=0.85 cached_query="Which ws version fixes the header-count denial of service?" latency_ms=7.52
+  C30 similar_different exp=miss sim=0.9245 cached=True  false_hit          7.5 ms
+2026-11-08T16:36:45.416-08:00 [sweep-0.85] CACHE MISS best_similarity=0.2332 threshold=0.85 query="How do I generate an SBOM for a Python project?" reason="below threshold"
+2026-11-08T16:38:12.729-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="fb81ef02-56fe-48dd-94c3-002e2718ce2f" status="approved" stored=false latency_ms=87318.59
+  C31 unrelated         exp=miss sim=0.2332 cached=False correct_miss   87318.6 ms
+2026-11-08T16:38:12.749-08:00 [sweep-0.85] CACHE MISS best_similarity=0.1919 threshold=0.85 query="What is the difference between CVSS base and temporal scores?" reason="below threshold"
+2026-11-08T16:38:22.242-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="8e432aee-473e-4e7e-8c44-087ad20b9495" status="approved" stored=false latency_ms=9511.48
+  C32 unrelated         exp=miss sim=0.1919 cached=False correct_miss    9511.5 ms
+2026-11-08T16:38:22.249-08:00 [sweep-0.85] CACHE MISS best_similarity=0.1974 threshold=0.85 query="How often should we run npm audit in CI?" reason="below threshold"
+2026-11-08T16:39:23.610-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="19599fb9-f89c-4dfb-b3b6-d52a555ac1ac" status="approved" stored=false latency_ms=61366.85
+  C33 unrelated         exp=miss sim=0.1974 cached=False correct_miss   61366.8 ms
+2026-11-08T16:39:23.624-08:00 [sweep-0.85] CACHE MISS best_similarity=0.199 threshold=0.85 query="What does a CWE identifier represent?" reason="below threshold"
+2026-11-08T16:39:32.928-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="3edef7c0-c41d-489a-a58d-3a2ba5607371" status="approved" stored=false latency_ms=9317.12
+  C34 unrelated         exp=miss sim=0.1990 cached=False correct_miss    9317.1 ms
+2026-11-08T16:39:32.934-08:00 [sweep-0.85] CACHE MISS best_similarity=0.1822 threshold=0.85 query="How do I pin transitive dependencies with pip-tools?" reason="below threshold"
+2026-11-08T16:40:30.438-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="7c0a508f-642f-4e2e-bc6a-f500760717d1" status="approved" stored=false latency_ms=57509.44
+  C35 unrelated         exp=miss sim=0.1822 cached=False correct_miss   57509.4 ms
+2026-11-08T16:40:30.455-08:00 [sweep-0.85] CACHE MISS best_similarity=0.2438 threshold=0.85 query="What is a GitHub Security Advisory (GHSA) ID?" reason="below threshold"
+2026-11-08T16:40:40.179-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="6ef75aa5-50da-47e5-a41b-9da2dc9d36ab" status="approved" stored=false latency_ms=9740.13
+  C36 unrelated         exp=miss sim=0.2438 cached=False correct_miss    9740.1 ms
+2026-11-08T16:40:40.186-08:00 [sweep-0.85] CACHE MISS best_similarity=0.305 threshold=0.85 query="Should a reporter disclose a vulnerability publicly before a fix exists?" reason="below threshold"
+2026-11-08T16:40:49.861-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="fdf54064-dd4c-441e-8c0e-218c6c084b55" status="approved" stored=false latency_ms=9681.62
+  C37 unrelated         exp=miss sim=0.3050 cached=False correct_miss    9681.6 ms
+2026-11-08T16:40:49.867-08:00 [sweep-0.85] CACHE MISS best_similarity=0.3543 threshold=0.85 query="How does Dependabot decide when to open a pull request?" reason="below threshold"
+2026-11-08T16:41:08.786-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="12e174fe-9a0f-467b-a448-9f41b328cdf4" status="approved" stored=false latency_ms=18923.89
+  C38 unrelated         exp=miss sim=0.3543 cached=False correct_miss   18923.9 ms
+2026-11-08T16:41:08.794-08:00 [sweep-0.85] CACHE MISS best_similarity=0.2987 threshold=0.85 query="What is typosquatting in package registries?" reason="below threshold"
+2026-11-08T16:41:19.039-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="79f14d7b-8caa-4b97-bc89-67e43c10a56b" status="approved" stored=false latency_ms=10252.56
+  C39 unrelated         exp=miss sim=0.2987 cached=False correct_miss   10252.6 ms
+2026-11-08T16:41:19.045-08:00 [sweep-0.85] CACHE MISS best_similarity=0.1688 threshold=0.85 query="How do I verify the signature of a Maven artifact?" reason="below threshold"
+2026-11-08T16:42:18.895-08:00 [sweep-0.85] ANSWERED by agent pipeline correlation_id="694561f9-7155-4984-a5eb-4aba20e8a718" status="approved" stored=false latency_ms=59855.73
+  C40 unrelated         exp=miss sim=0.1688 cached=False correct_miss   59855.7 ms
+  -> hit rate 57.5%, false-hit rate 10.0%, mean latency 14365 ms
 
 === Threshold 0.90 ===
-2026-11-05T07:49:48.017-08:00 [sweep-0.90] CACHE HIT similarity=1.0 threshold=0.9 cached_query="What is the severity of the Log4Shell vulnerability in log4j-core?" latency_ms=18.91
-  C01 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit       18.9 ms
-2026-11-05T07:49:48.027-08:00 [sweep-0.90] CACHE HIT similarity=1.0 threshold=0.9 cached_query="Which lodash version fixes the template command injection?" latency_ms=7.59
-  C02 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        7.6 ms
-2026-11-05T07:49:48.036-08:00 [sweep-0.90] CACHE HIT similarity=1.0 threshold=0.9 cached_query="What versions of minimist are affected by the prototype pollution bug?" latency_ms=7.19
-  C03 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        7.2 ms
-2026-11-05T07:49:48.044-08:00 [sweep-0.90] CACHE HIT similarity=1.0 threshold=0.9 cached_query="How should I fix the PyYAML full_load code execution vulnerability?" latency_ms=7.2
-  C04 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        7.2 ms
-2026-11-05T07:49:48.051-08:00 [sweep-0.90] CACHE HIT similarity=1.0 threshold=0.9 cached_query="Which requests version stops leaking the Proxy-Authorization header?" latency_ms=6.99
-  C05 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        7.0 ms
-2026-11-05T07:49:48.057-08:00 [sweep-0.90] CACHE HIT similarity=1.0 threshold=0.9 cached_query="Is Spring4Shell in spring-beans a critical vulnerability?" latency_ms=6.32
-  C06 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        6.3 ms
-2026-11-05T07:49:48.065-08:00 [sweep-0.90] CACHE HIT similarity=1.0 threshold=0.9 cached_query="What is the CVE for the axios XSRF-TOKEN leak?" latency_ms=6.98
-  C07 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        7.0 ms
-2026-11-05T07:49:48.071-08:00 [sweep-0.90] CACHE HIT similarity=1.0 threshold=0.9 cached_query="Which jackson-databind version fixes the deeply nested JSON denial of service?" latency_ms=6.45
-  C08 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        6.5 ms
-2026-11-05T07:49:48.078-08:00 [sweep-0.90] CACHE HIT similarity=1.0 threshold=0.9 cached_query="What is the impact of the node-fetch cookie leak on redirect?" latency_ms=6.14
-  C09 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        6.1 ms
-2026-11-05T07:49:48.084-08:00 [sweep-0.90] CACHE HIT similarity=1.0 threshold=0.9 cached_query="Which ws version fixes the header-count denial of service?" latency_ms=5.9
-  C10 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        5.9 ms
-2026-11-05T07:49:48.090-08:00 [sweep-0.90] CACHE MISS best_similarity=0.885 threshold=0.9 query="How severe is the log4j-core Log4Shell issue?" reason="below threshold"
-2026-11-05T07:49:58.539-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="6d4a3ee2-9a47-43be-aed4-29011c390432" status="approved" stored=false latency_ms=10455.14
-  C11 paraphrase        exp=hit  sim=0.8850 cached=False missed_hit     10455.1 ms
-2026-11-05T07:49:58.553-08:00 [sweep-0.90] CACHE HIT similarity=0.9291 threshold=0.9 cached_query="Which lodash version fixes the template command injection?" latency_ms=12.7
-  C12 paraphrase        exp=hit  sim=0.9291 cached=True  correct_hit       12.7 ms
-2026-11-05T07:49:58.559-08:00 [sweep-0.90] CACHE MISS best_similarity=0.8705 threshold=0.9 query="Which minimist versions are vulnerable to prototype pollution?" reason="below threshold"
-2026-11-05T07:50:57.928-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="f6d98e8b-d38f-4e2f-bd83-c4428a0fe72b" status="approved" stored=false latency_ms=59367.53
-  C13 paraphrase        exp=hit  sim=0.8705 cached=False missed_hit     59367.5 ms
-2026-11-05T07:50:57.968-08:00 [sweep-0.90] CACHE HIT similarity=0.9319 threshold=0.9 cached_query="How should I fix the PyYAML full_load code execution vulnerability?" latency_ms=39.21
-  C14 paraphrase        exp=hit  sim=0.9319 cached=True  correct_hit       39.2 ms
-2026-11-05T07:50:57.977-08:00 [sweep-0.90] CACHE HIT similarity=0.949 threshold=0.9 cached_query="Which requests version stops leaking the Proxy-Authorization header?" latency_ms=7.47
-  C15 paraphrase        exp=hit  sim=0.9490 cached=True  correct_hit        7.5 ms
-2026-11-05T07:50:57.982-08:00 [sweep-0.90] CACHE HIT similarity=0.9698 threshold=0.9 cached_query="Is Spring4Shell in spring-beans a critical vulnerability?" latency_ms=5.32
-  C16 paraphrase        exp=hit  sim=0.9698 cached=True  correct_hit        5.3 ms
-2026-11-05T07:50:57.987-08:00 [sweep-0.90] CACHE MISS best_similarity=0.8297 threshold=0.9 query="Which CVE ID covers the axios XSRF-TOKEN disclosure?" reason="below threshold"
-2026-11-05T07:51:56.348-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="f14f4c66-d384-4446-9ab1-6cf04c00155e" status="approved" stored=false latency_ms=58365.16
-  C17 paraphrase        exp=hit  sim=0.8297 cached=False missed_hit     58365.2 ms
-2026-11-05T07:51:56.383-08:00 [sweep-0.90] CACHE MISS best_similarity=0.862 threshold=0.9 query="What jackson-databind release patches the DoS from deeply nested JSON?" reason="below threshold"
-2026-11-05T07:52:56.508-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="03c52554-302b-4aa7-b52e-7020c531955a" status="approved" stored=false latency_ms=60156.24
-  C18 paraphrase        exp=hit  sim=0.8620 cached=False missed_hit     60156.2 ms
-2026-11-05T07:52:56.524-08:00 [sweep-0.90] CACHE HIT similarity=0.9394 threshold=0.9 cached_query="What is the impact of the node-fetch cookie leak on redirect?" latency_ms=14.27
-  C19 paraphrase        exp=hit  sim=0.9394 cached=True  correct_hit       14.3 ms
-2026-11-05T07:52:56.529-08:00 [sweep-0.90] CACHE HIT similarity=0.9012 threshold=0.9 cached_query="Which ws version fixes the header-count denial of service?" latency_ms=5.19
-  C20 paraphrase        exp=hit  sim=0.9012 cached=True  correct_hit        5.2 ms
-2026-11-05T07:52:56.534-08:00 [sweep-0.90] CACHE MISS best_similarity=0.8333 threshold=0.9 query="What is the CVE for the Log4Shell vulnerability in log4j-core?" reason="below threshold"
-2026-11-05T07:53:08.196-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="608cf6c4-27a5-406f-8ac3-ebd52ae70c3c" status="approved" stored=false latency_ms=11667.11
-  C21 similar_different exp=miss sim=0.8333 cached=False correct_miss   11667.1 ms
-2026-11-05T07:53:08.208-08:00 [sweep-0.90] CACHE MISS best_similarity=0.2713 threshold=0.9 query="Which pillow version fixes the ImageMath code execution?" reason="below threshold"
-2026-11-05T07:53:36.927-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="8e3904df-00fd-49a8-9d01-d2272e457fd7" status="approved" stored=false latency_ms=28728.82
-  C22 similar_different exp=miss sim=0.2713 cached=False correct_miss   28728.8 ms
-2026-11-05T07:53:36.965-08:00 [sweep-0.90] CACHE MISS best_similarity=0.6584 threshold=0.9 query="What versions of protobufjs are affected by the prototype pollution bug?" reason="below threshold"
-2026-11-05T07:54:32.765-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="19b3e41d-c168-42b4-a829-76a84e5b0ee0" status="approved" stored=false latency_ms=55831.91
-  C23 similar_different exp=miss sim=0.6584 cached=False correct_miss   55831.9 ms
-2026-11-05T07:54:32.780-08:00 [sweep-0.90] CACHE HIT similarity=0.9 threshold=0.9 cached_query="How should I fix the PyYAML full_load code execution vulnerability?" latency_ms=14.38
-  C24 similar_different exp=miss sim=0.9000 cached=True  false_hit         14.4 ms
-2026-11-05T07:54:32.786-08:00 [sweep-0.90] CACHE HIT similarity=0.9267 threshold=0.9 cached_query="Which requests version stops leaking the Proxy-Authorization header?" latency_ms=5.16
+2026-11-08T16:42:18.924-08:00 [sweep-0.90] CACHE HIT similarity=1.0 threshold=0.9 cached_query="What is the severity of the Log4Shell vulnerability in log4j-core?" latency_ms=18.8
+  C01 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit       18.8 ms
+2026-11-08T16:42:18.931-08:00 [sweep-0.90] CACHE HIT similarity=1.0 threshold=0.9 cached_query="Which lodash version fixes the template command injection?" latency_ms=6.15
+  C02 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        6.2 ms
+2026-11-08T16:42:18.937-08:00 [sweep-0.90] CACHE HIT similarity=1.0 threshold=0.9 cached_query="What versions of minimist are affected by the prototype pollution bug?" latency_ms=5.4
+  C03 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        5.4 ms
+2026-11-08T16:42:18.942-08:00 [sweep-0.90] CACHE HIT similarity=1.0 threshold=0.9 cached_query="How should I fix the PyYAML full_load code execution vulnerability?" latency_ms=5.22
+  C04 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        5.2 ms
+2026-11-08T16:42:18.948-08:00 [sweep-0.90] CACHE HIT similarity=1.0 threshold=0.9 cached_query="Which requests version stops leaking the Proxy-Authorization header?" latency_ms=5.72
+  C05 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        5.7 ms
+2026-11-08T16:42:18.953-08:00 [sweep-0.90] CACHE HIT similarity=1.0 threshold=0.9 cached_query="Is Spring4Shell in spring-beans a critical vulnerability?" latency_ms=4.59
+  C06 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        4.6 ms
+2026-11-08T16:42:18.959-08:00 [sweep-0.90] CACHE HIT similarity=1.0 threshold=0.9 cached_query="What is the CVE for the axios XSRF-TOKEN leak?" latency_ms=5.12
+  C07 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        5.1 ms
+2026-11-08T16:42:18.964-08:00 [sweep-0.90] CACHE HIT similarity=1.0 threshold=0.9 cached_query="Which jackson-databind version fixes the deeply nested JSON denial of service?" latency_ms=4.65
+  C08 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        4.7 ms
+2026-11-08T16:42:18.969-08:00 [sweep-0.90] CACHE HIT similarity=1.0 threshold=0.9 cached_query="What is the impact of the node-fetch cookie leak on redirect?" latency_ms=4.86
+  C09 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        4.9 ms
+2026-11-08T16:42:18.974-08:00 [sweep-0.90] CACHE HIT similarity=1.0 threshold=0.9 cached_query="Which ws version fixes the header-count denial of service?" latency_ms=4.83
+  C10 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        4.8 ms
+2026-11-08T16:42:18.978-08:00 [sweep-0.90] CACHE MISS best_similarity=0.885 threshold=0.9 query="How severe is the log4j-core Log4Shell issue?" reason="below threshold"
+2026-11-08T16:42:29.441-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="d91871af-3f8d-42fe-add9-f281463c36c5" status="approved" stored=false latency_ms=10467.0
+  C11 paraphrase        exp=hit  sim=0.8850 cached=False missed_hit     10467.0 ms
+2026-11-08T16:42:29.448-08:00 [sweep-0.90] CACHE HIT similarity=0.9291 threshold=0.9 cached_query="Which lodash version fixes the template command injection?" latency_ms=6.88
+  C12 paraphrase        exp=hit  sim=0.9291 cached=True  correct_hit        6.9 ms
+2026-11-08T16:42:29.453-08:00 [sweep-0.90] CACHE MISS best_similarity=0.8705 threshold=0.9 query="Which minimist versions are vulnerable to prototype pollution?" reason="below threshold"
+2026-11-08T16:43:29.383-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="f23117c3-c97b-4356-90d6-5f74157a5388" status="approved" stored=false latency_ms=59929.32
+  C13 paraphrase        exp=hit  sim=0.8705 cached=False missed_hit     59929.3 ms
+2026-11-08T16:43:29.400-08:00 [sweep-0.90] CACHE HIT similarity=0.9319 threshold=0.9 cached_query="How should I fix the PyYAML full_load code execution vulnerability?" latency_ms=15.46
+  C14 paraphrase        exp=hit  sim=0.9319 cached=True  correct_hit       15.5 ms
+2026-11-08T16:43:29.406-08:00 [sweep-0.90] CACHE HIT similarity=0.949 threshold=0.9 cached_query="Which requests version stops leaking the Proxy-Authorization header?" latency_ms=6.17
+  C15 paraphrase        exp=hit  sim=0.9490 cached=True  correct_hit        6.2 ms
+2026-11-08T16:43:29.411-08:00 [sweep-0.90] CACHE HIT similarity=0.9698 threshold=0.9 cached_query="Is Spring4Shell in spring-beans a critical vulnerability?" latency_ms=5.17
+  C16 paraphrase        exp=hit  sim=0.9698 cached=True  correct_hit        5.2 ms
+2026-11-08T16:43:29.416-08:00 [sweep-0.90] CACHE MISS best_similarity=0.8297 threshold=0.9 query="Which CVE ID covers the axios XSRF-TOKEN disclosure?" reason="below threshold"
+2026-11-08T16:44:27.828-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="0d4472be-40a7-4573-afd7-270d7cd12d50" status="approved" stored=false latency_ms=58416.45
+  C17 paraphrase        exp=hit  sim=0.8297 cached=False missed_hit     58416.4 ms
+2026-11-08T16:44:27.844-08:00 [sweep-0.90] CACHE MISS best_similarity=0.862 threshold=0.9 query="What jackson-databind release patches the DoS from deeply nested JSON?" reason="below threshold"
+2026-11-08T16:45:28.301-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="e9d493e3-c21c-4ab5-b9a1-e245da4b740d" status="approved" stored=false latency_ms=60471.65
+  C18 paraphrase        exp=hit  sim=0.8620 cached=False missed_hit     60471.7 ms
+2026-11-08T16:45:28.318-08:00 [sweep-0.90] CACHE HIT similarity=0.9394 threshold=0.9 cached_query="What is the impact of the node-fetch cookie leak on redirect?" latency_ms=15.86
+  C19 paraphrase        exp=hit  sim=0.9394 cached=True  correct_hit       15.9 ms
+2026-11-08T16:45:28.324-08:00 [sweep-0.90] CACHE HIT similarity=0.9012 threshold=0.9 cached_query="Which ws version fixes the header-count denial of service?" latency_ms=5.29
+  C20 paraphrase        exp=hit  sim=0.9012 cached=True  correct_hit        5.3 ms
+2026-11-08T16:45:28.329-08:00 [sweep-0.90] CACHE MISS best_similarity=0.8333 threshold=0.9 query="What is the CVE for the Log4Shell vulnerability in log4j-core?" reason="below threshold"
+2026-11-08T16:45:39.920-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="9ddd412c-749c-430d-813c-21fb3f2f245b" status="approved" stored=false latency_ms=11596.24
+  C21 similar_different exp=miss sim=0.8333 cached=False correct_miss   11596.2 ms
+2026-11-08T16:45:39.926-08:00 [sweep-0.90] CACHE MISS best_similarity=0.2713 threshold=0.9 query="Which pillow version fixes the ImageMath code execution?" reason="below threshold"
+2026-11-08T16:46:07.555-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="fa8b43f9-c26c-483c-ad72-7059500c5daa" status="approved" stored=false latency_ms=27634.57
+  C22 similar_different exp=miss sim=0.2713 cached=False correct_miss   27634.6 ms
+2026-11-08T16:46:07.570-08:00 [sweep-0.90] CACHE MISS best_similarity=0.6584 threshold=0.9 query="What versions of protobufjs are affected by the prototype pollution bug?" reason="below threshold"
+2026-11-08T16:47:02.810-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="133df2d8-cd9d-4a34-b065-9d270d6a9d84" status="approved" stored=false latency_ms=55253.32
+  C23 similar_different exp=miss sim=0.6584 cached=False correct_miss   55253.3 ms
+2026-11-08T16:47:02.827-08:00 [sweep-0.90] CACHE HIT similarity=0.9 threshold=0.9 cached_query="How should I fix the PyYAML full_load code execution vulnerability?" latency_ms=15.74
+  C24 similar_different exp=miss sim=0.9000 cached=True  false_hit         15.7 ms
+2026-11-08T16:47:02.832-08:00 [sweep-0.90] CACHE HIT similarity=0.9267 threshold=0.9 cached_query="Which requests version stops leaking the Proxy-Authorization header?" latency_ms=5.18
   C25 similar_different exp=miss sim=0.9267 cached=True  false_hit          5.2 ms
-2026-11-05T07:54:32.791-08:00 [sweep-0.90] CACHE HIT similarity=0.9106 threshold=0.9 cached_query="Is Spring4Shell in spring-beans a critical vulnerability?" latency_ms=5.42
-  C26 similar_different exp=miss sim=0.9106 cached=True  false_hit          5.4 ms
-2026-11-05T07:54:32.796-08:00 [sweep-0.90] CACHE MISS best_similarity=0.4156 threshold=0.9 query="What is the CVE for the express open redirect?" reason="below threshold"
-2026-11-05T07:54:47.693-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="12a59017-13ee-4b03-b7a8-0b1d9ee9dbe8" status="approved" stored=false latency_ms=14901.1
-  C27 similar_different exp=miss sim=0.4156 cached=False correct_miss   14901.1 ms
-2026-11-05T07:54:47.701-08:00 [sweep-0.90] CACHE MISS best_similarity=0.3728 threshold=0.9 query="Which django version fixes the regular expression denial of service?" reason="below threshold"
-2026-11-05T07:55:48.534-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="3ea98f5e-e0ef-4a89-beb3-5694b1e3db3a" status="approved" stored=false latency_ms=60840.7
-  C28 similar_different exp=miss sim=0.3728 cached=False correct_miss   60840.7 ms
-2026-11-05T07:55:48.550-08:00 [sweep-0.90] CACHE MISS best_similarity=0.797 threshold=0.9 query="What is the impact of the axios XSRF-TOKEN leak?" reason="below threshold"
-2026-11-05T07:56:04.798-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="416cbb53-d3a4-4e69-943b-104c5ae3fb12" status="approved" stored=false latency_ms=16262.1
-  C29 similar_different exp=miss sim=0.7970 cached=False correct_miss   16262.1 ms
-2026-11-05T07:56:04.832-08:00 [sweep-0.90] CACHE HIT similarity=0.9245 threshold=0.9 cached_query="Which ws version fixes the header-count denial of service?" latency_ms=31.01
-  C30 similar_different exp=miss sim=0.9245 cached=True  false_hit         31.0 ms
-2026-11-05T07:56:04.847-08:00 [sweep-0.90] CACHE MISS best_similarity=0.2332 threshold=0.9 query="How do I generate an SBOM for a Python project?" reason="below threshold"
-2026-11-05T07:57:34.188-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="8c8c11d7-4b1d-4b59-9fb1-852e88e0a2c2" status="approved" stored=false latency_ms=89354.43
-  C31 unrelated         exp=miss sim=0.2332 cached=False correct_miss   89354.4 ms
-2026-11-05T07:57:34.202-08:00 [sweep-0.90] CACHE MISS best_similarity=0.1919 threshold=0.9 query="What is the difference between CVSS base and temporal scores?" reason="below threshold"
-2026-11-05T07:57:45.617-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="0081903c-39fc-420b-9939-be39147694a3" status="approved" stored=false latency_ms=11427.73
-  C32 unrelated         exp=miss sim=0.1919 cached=False correct_miss   11427.7 ms
-2026-11-05T07:57:45.637-08:00 [sweep-0.90] CACHE MISS best_similarity=0.1974 threshold=0.9 query="How often should we run npm audit in CI?" reason="below threshold"
-2026-11-05T07:58:48.503-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="5625c89d-d08d-4fda-a77f-110e535a6212" status="approved" stored=false latency_ms=62883.91
-  C33 unrelated         exp=miss sim=0.1974 cached=False correct_miss   62883.9 ms
-2026-11-05T07:58:48.528-08:00 [sweep-0.90] CACHE MISS best_similarity=0.199 threshold=0.9 query="What does a CWE identifier represent?" reason="below threshold"
-2026-11-05T07:58:58.885-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="2f2249a8-4ed7-466b-9418-20575b64ef2d" status="approved" stored=false latency_ms=10380.1
-  C34 unrelated         exp=miss sim=0.1990 cached=False correct_miss   10380.1 ms
-2026-11-05T07:58:58.899-08:00 [sweep-0.90] CACHE MISS best_similarity=0.1822 threshold=0.9 query="How do I pin transitive dependencies with pip-tools?" reason="below threshold"
-2026-11-05T07:59:58.619-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="118cdc4f-fc57-4d8e-87ca-877978ce1565" status="approved" stored=false latency_ms=59732.68
-  C35 unrelated         exp=miss sim=0.1822 cached=False correct_miss   59732.7 ms
-2026-11-05T07:59:58.641-08:00 [sweep-0.90] CACHE MISS best_similarity=0.2438 threshold=0.9 query="What is a GitHub Security Advisory (GHSA) ID?" reason="below threshold"
-2026-11-05T08:00:08.854-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="b07852f8-c21a-498b-86c9-b2047a40882a" status="approved" stored=false latency_ms=10233.38
-  C36 unrelated         exp=miss sim=0.2438 cached=False correct_miss   10233.4 ms
-2026-11-05T08:00:08.865-08:00 [sweep-0.90] CACHE MISS best_similarity=0.305 threshold=0.9 query="Should a reporter disclose a vulnerability publicly before a fix exists?" reason="below threshold"
-2026-11-05T08:00:19.500-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="8ec01ec2-0556-480b-a3dc-9ca7906d548e" status="approved" stored=false latency_ms=10645.86
-  C37 unrelated         exp=miss sim=0.3050 cached=False correct_miss   10645.9 ms
-2026-11-05T08:00:19.512-08:00 [sweep-0.90] CACHE MISS best_similarity=0.3543 threshold=0.9 query="How does Dependabot decide when to open a pull request?" reason="below threshold"
-2026-11-05T08:00:39.139-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="4e703a9e-f9a2-4b02-a66e-873248f16edc" status="approved" stored=false latency_ms=19637.87
-  C38 unrelated         exp=miss sim=0.3543 cached=False correct_miss   19637.9 ms
-2026-11-05T08:00:39.171-08:00 [sweep-0.90] CACHE MISS best_similarity=0.2987 threshold=0.9 query="What is typosquatting in package registries?" reason="below threshold"
-2026-11-05T08:00:50.103-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="0b774aff-f947-4cc5-8a06-83844a9eb8de" status="approved" stored=false latency_ms=10961.15
-  C39 unrelated         exp=miss sim=0.2987 cached=False correct_miss   10961.1 ms
-2026-11-05T08:00:50.114-08:00 [sweep-0.90] CACHE MISS best_similarity=0.1688 threshold=0.9 query="How do I verify the signature of a Maven artifact?" reason="below threshold"
-2026-11-05T08:01:51.903-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="6e941aba-e9c7-4175-a356-d088820b30e4" status="approved" stored=false latency_ms=61798.25
-  C40 unrelated         exp=miss sim=0.1688 cached=False correct_miss   61798.2 ms
-  -> hit rate 50.0%, false-hit rate 10.0%, mean latency 18096 ms
+2026-11-08T16:47:02.837-08:00 [sweep-0.90] CACHE HIT similarity=0.9106 threshold=0.9 cached_query="Is Spring4Shell in spring-beans a critical vulnerability?" latency_ms=5.01
+  C26 similar_different exp=miss sim=0.9106 cached=True  false_hit          5.0 ms
+2026-11-08T16:47:02.841-08:00 [sweep-0.90] CACHE MISS best_similarity=0.4156 threshold=0.9 query="What is the CVE for the express open redirect?" reason="below threshold"
+2026-11-08T16:47:17.785-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="6b0556ce-8bf7-45d7-8d20-2774c0fb0072" status="approved" stored=false latency_ms=14947.68
+  C27 similar_different exp=miss sim=0.4156 cached=False correct_miss   14947.7 ms
+2026-11-08T16:47:17.792-08:00 [sweep-0.90] CACHE MISS best_similarity=0.3728 threshold=0.9 query="Which django version fixes the regular expression denial of service?" reason="below threshold"
+2026-11-08T16:48:17.795-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="35e5ec4d-6eb1-4392-9002-d5fd2227b326" status="approved" stored=false latency_ms=60009.2
+  C28 similar_different exp=miss sim=0.3728 cached=False correct_miss   60009.2 ms
+2026-11-08T16:48:17.808-08:00 [sweep-0.90] CACHE MISS best_similarity=0.797 threshold=0.9 query="What is the impact of the axios XSRF-TOKEN leak?" reason="below threshold"
+2026-11-08T16:48:32.565-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="f07da15c-f6c3-4e85-8abf-36d3aa683298" status="approved" stored=false latency_ms=14768.7
+  C29 similar_different exp=miss sim=0.7970 cached=False correct_miss   14768.7 ms
+2026-11-08T16:48:32.575-08:00 [sweep-0.90] CACHE HIT similarity=0.9245 threshold=0.9 cached_query="Which ws version fixes the header-count denial of service?" latency_ms=9.41
+  C30 similar_different exp=miss sim=0.9245 cached=True  false_hit          9.4 ms
+2026-11-08T16:48:32.580-08:00 [sweep-0.90] CACHE MISS best_similarity=0.2332 threshold=0.9 query="How do I generate an SBOM for a Python project?" reason="below threshold"
+2026-11-08T16:50:01.489-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="e569764a-8ce1-4719-bf59-5adc48720def" status="approved" stored=false latency_ms=88913.91
+  C31 unrelated         exp=miss sim=0.2332 cached=False correct_miss   88913.9 ms
+2026-11-08T16:50:01.504-08:00 [sweep-0.90] CACHE MISS best_similarity=0.1919 threshold=0.9 query="What is the difference between CVSS base and temporal scores?" reason="below threshold"
+2026-11-08T16:50:12.661-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="23580c39-f4a6-4dcf-b99f-6f13c6ed8e95" status="approved" stored=false latency_ms=11169.56
+  C32 unrelated         exp=miss sim=0.1919 cached=False correct_miss   11169.6 ms
+2026-11-08T16:50:12.668-08:00 [sweep-0.90] CACHE MISS best_similarity=0.1974 threshold=0.9 query="How often should we run npm audit in CI?" reason="below threshold"
+2026-11-08T16:51:14.673-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="99369baf-a932-42a7-a2d5-499a80127e0e" status="approved" stored=false latency_ms=62011.71
+  C33 unrelated         exp=miss sim=0.1974 cached=False correct_miss   62011.7 ms
+2026-11-08T16:51:14.686-08:00 [sweep-0.90] CACHE MISS best_similarity=0.199 threshold=0.9 query="What does a CWE identifier represent?" reason="below threshold"
+2026-11-08T16:51:24.569-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="e91d3083-4324-4278-ba93-a37e3024b8a0" status="approved" stored=false latency_ms=9894.54
+  C34 unrelated         exp=miss sim=0.1990 cached=False correct_miss    9894.5 ms
+2026-11-08T16:51:24.576-08:00 [sweep-0.90] CACHE MISS best_similarity=0.1822 threshold=0.9 query="How do I pin transitive dependencies with pip-tools?" reason="below threshold"
+2026-11-08T16:52:24.249-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="b20a3796-be23-4599-a5ec-4a6b35c3569f" status="approved" stored=false latency_ms=59679.4
+  C35 unrelated         exp=miss sim=0.1822 cached=False correct_miss   59679.4 ms
+2026-11-08T16:52:24.263-08:00 [sweep-0.90] CACHE MISS best_similarity=0.2438 threshold=0.9 query="What is a GitHub Security Advisory (GHSA) ID?" reason="below threshold"
+2026-11-08T16:52:34.584-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="25af7f3a-a0a7-49c8-b031-7522c2d03eb9" status="approved" stored=false latency_ms=10334.0
+  C36 unrelated         exp=miss sim=0.2438 cached=False correct_miss   10334.0 ms
+2026-11-08T16:52:34.590-08:00 [sweep-0.90] CACHE MISS best_similarity=0.305 threshold=0.9 query="Should a reporter disclose a vulnerability publicly before a fix exists?" reason="below threshold"
+2026-11-08T16:52:44.686-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="a36f51cc-3925-4701-9241-94ebfbb3622f" status="approved" stored=false latency_ms=10101.63
+  C37 unrelated         exp=miss sim=0.3050 cached=False correct_miss   10101.6 ms
+2026-11-08T16:52:44.692-08:00 [sweep-0.90] CACHE MISS best_similarity=0.3543 threshold=0.9 query="How does Dependabot decide when to open a pull request?" reason="below threshold"
+2026-11-08T16:53:03.769-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="90dcb979-defb-4d4c-9ab7-9cc389a80561" status="approved" stored=false latency_ms=19082.57
+  C38 unrelated         exp=miss sim=0.3543 cached=False correct_miss   19082.6 ms
+2026-11-08T16:53:03.781-08:00 [sweep-0.90] CACHE MISS best_similarity=0.2987 threshold=0.9 query="What is typosquatting in package registries?" reason="below threshold"
+2026-11-08T16:53:14.586-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="39a33ddf-3d31-4416-86e9-19b33a703606" status="approved" stored=false latency_ms=10815.91
+  C39 unrelated         exp=miss sim=0.2987 cached=False correct_miss   10815.9 ms
+2026-11-08T16:53:14.593-08:00 [sweep-0.90] CACHE MISS best_similarity=0.1688 threshold=0.9 query="How do I verify the signature of a Maven artifact?" reason="below threshold"
+2026-11-08T16:54:14.705-08:00 [sweep-0.90] ANSWERED by agent pipeline correlation_id="5bc5102f-ce9f-4382-9112-3a39dd4a2fc8" status="approved" stored=false latency_ms=60118.41
+  C40 unrelated         exp=miss sim=0.1688 cached=False correct_miss   60118.4 ms
+  -> hit rate 50.0%, false-hit rate 10.0%, mean latency 17894 ms
 
 === Threshold 0.95 ===
-2026-11-05T08:01:51.952-08:00 [sweep-0.95] CACHE HIT similarity=1.0 threshold=0.95 cached_query="What is the severity of the Log4Shell vulnerability in log4j-core?" latency_ms=26.85
-  C01 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit       26.9 ms
-2026-11-05T08:01:51.976-08:00 [sweep-0.95] CACHE HIT similarity=1.0 threshold=0.95 cached_query="Which lodash version fixes the template command injection?" latency_ms=11.14
-  C02 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit       11.1 ms
-2026-11-05T08:01:51.989-08:00 [sweep-0.95] CACHE HIT similarity=1.0 threshold=0.95 cached_query="What versions of minimist are affected by the prototype pollution bug?" latency_ms=11.49
-  C03 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit       11.5 ms
-2026-11-05T08:01:52.002-08:00 [sweep-0.95] CACHE HIT similarity=1.0 threshold=0.95 cached_query="How should I fix the PyYAML full_load code execution vulnerability?" latency_ms=13.29
-  C04 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit       13.3 ms
-2026-11-05T08:01:52.024-08:00 [sweep-0.95] CACHE HIT similarity=1.0 threshold=0.95 cached_query="Which requests version stops leaking the Proxy-Authorization header?" latency_ms=21.03
-  C05 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit       21.0 ms
-2026-11-05T08:01:52.035-08:00 [sweep-0.95] CACHE HIT similarity=1.0 threshold=0.95 cached_query="Is Spring4Shell in spring-beans a critical vulnerability?" latency_ms=10.84
-  C06 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit       10.8 ms
-2026-11-05T08:01:52.047-08:00 [sweep-0.95] CACHE HIT similarity=1.0 threshold=0.95 cached_query="What is the CVE for the axios XSRF-TOKEN leak?" latency_ms=10.82
-  C07 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit       10.8 ms
-2026-11-05T08:01:52.059-08:00 [sweep-0.95] CACHE HIT similarity=1.0 threshold=0.95 cached_query="Which jackson-databind version fixes the deeply nested JSON denial of service?" latency_ms=11.46
-  C08 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit       11.5 ms
-2026-11-05T08:01:52.068-08:00 [sweep-0.95] CACHE HIT similarity=1.0 threshold=0.95 cached_query="What is the impact of the node-fetch cookie leak on redirect?" latency_ms=8.69
-  C09 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        8.7 ms
-2026-11-05T08:01:52.075-08:00 [sweep-0.95] CACHE HIT similarity=1.0 threshold=0.95 cached_query="Which ws version fixes the header-count denial of service?" latency_ms=7.4
-  C10 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        7.4 ms
-2026-11-05T08:01:52.082-08:00 [sweep-0.95] CACHE MISS best_similarity=0.885 threshold=0.95 query="How severe is the log4j-core Log4Shell issue?" reason="below threshold"
-2026-11-05T08:02:03.952-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="5b73d3c9-4929-467f-af94-ede6b0d036e2" status="approved" stored=false latency_ms=11875.71
-  C11 paraphrase        exp=hit  sim=0.8850 cached=False missed_hit     11875.7 ms
-2026-11-05T08:02:03.973-08:00 [sweep-0.95] CACHE MISS best_similarity=0.9291 threshold=0.95 query="What lodash release patches the command injection in template?" reason="below threshold"
-2026-11-05T08:02:58.097-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="89a129e2-26fd-48c0-9cf3-d88cb1f79b74" status="approved" stored=false latency_ms=54143.97
-  C12 paraphrase        exp=hit  sim=0.9291 cached=False missed_hit     54144.0 ms
-2026-11-05T08:02:58.115-08:00 [sweep-0.95] CACHE MISS best_similarity=0.8705 threshold=0.95 query="Which minimist versions are vulnerable to prototype pollution?" reason="below threshold"
-2026-11-05T08:03:58.939-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="1dc180ef-ed52-4f40-8769-566385178b4f" status="approved" stored=false latency_ms=60839.63
-  C13 paraphrase        exp=hit  sim=0.8705 cached=False missed_hit     60839.6 ms
-2026-11-05T08:03:58.957-08:00 [sweep-0.95] CACHE MISS best_similarity=0.9319 threshold=0.95 query="How do I remediate the code execution flaw in PyYAML's full_load?" reason="below threshold"
-2026-11-05T08:04:18.988-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="61810031-f072-49e9-a43e-aca24f2cc22b" status="approved" stored=false latency_ms=20047.22
-  C14 paraphrase        exp=hit  sim=0.9319 cached=False missed_hit     20047.2 ms
-2026-11-05T08:04:18.996-08:00 [sweep-0.95] CACHE MISS best_similarity=0.949 threshold=0.95 query="What version of requests fixes the Proxy-Authorization header leak?" reason="below threshold"
-2026-11-05T08:05:03.634-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="7247b8a4-2c05-473d-b3a7-1c500b87620a" status="approved" stored=false latency_ms=44645.95
-  C15 paraphrase        exp=hit  sim=0.9490 cached=False missed_hit     44645.9 ms
-2026-11-05T08:05:03.656-08:00 [sweep-0.95] CACHE HIT similarity=0.9698 threshold=0.95 cached_query="Is Spring4Shell in spring-beans a critical vulnerability?" latency_ms=19.71
-  C16 paraphrase        exp=hit  sim=0.9698 cached=True  correct_hit       19.7 ms
-2026-11-05T08:05:03.663-08:00 [sweep-0.95] CACHE MISS best_similarity=0.8297 threshold=0.95 query="Which CVE ID covers the axios XSRF-TOKEN disclosure?" reason="below threshold"
-2026-11-05T08:06:05.625-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="9b51c3f1-3792-47a9-ad5d-d691c5c17351" status="approved" stored=false latency_ms=61969.5
-  C17 paraphrase        exp=hit  sim=0.8297 cached=False missed_hit     61969.5 ms
-2026-11-05T08:06:05.639-08:00 [sweep-0.95] CACHE MISS best_similarity=0.862 threshold=0.95 query="What jackson-databind release patches the DoS from deeply nested JSON?" reason="below threshold"
-2026-11-05T08:07:07.582-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="cc7b6ab1-b4e6-4e38-957c-c3591381660d" status="approved" stored=false latency_ms=61955.48
-  C18 paraphrase        exp=hit  sim=0.8620 cached=False missed_hit     61955.5 ms
-2026-11-05T08:07:07.600-08:00 [sweep-0.95] CACHE MISS best_similarity=0.9394 threshold=0.95 query="What can an attacker do with the node-fetch redirect cookie leak?" reason="below threshold"
-2026-11-05T08:07:18.605-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="1a4948d1-0417-41d7-ad73-86b2bb65e1e8" status="approved" stored=false latency_ms=11020.85
-  C19 paraphrase        exp=hit  sim=0.9394 cached=False missed_hit     11020.9 ms
-2026-11-05T08:07:18.631-08:00 [sweep-0.95] CACHE MISS best_similarity=0.9012 threshold=0.95 query="What version of ws patches the denial of service from too many headers?" reason="below threshold"
-2026-11-05T08:08:13.087-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="23c5027d-3866-41df-b0f9-92a98bb69626" status="approved" stored=false latency_ms=54479.48
-  C20 paraphrase        exp=hit  sim=0.9012 cached=False missed_hit     54479.5 ms
-2026-11-05T08:08:13.103-08:00 [sweep-0.95] CACHE MISS best_similarity=0.8333 threshold=0.95 query="What is the CVE for the Log4Shell vulnerability in log4j-core?" reason="below threshold"
-2026-11-05T08:08:25.238-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="9c4a920a-f536-4b5c-ae61-f3a18304c61c" status="approved" stored=false latency_ms=12149.93
-  C21 similar_different exp=miss sim=0.8333 cached=False correct_miss   12149.9 ms
-2026-11-05T08:08:25.248-08:00 [sweep-0.95] CACHE MISS best_similarity=0.2713 threshold=0.95 query="Which pillow version fixes the ImageMath code execution?" reason="below threshold"
-2026-11-05T08:08:52.852-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="93016409-056c-4f2c-8777-d3d2f8187fe2" status="approved" stored=false latency_ms=27613.1
-  C22 similar_different exp=miss sim=0.2713 cached=False correct_miss   27613.1 ms
-2026-11-05T08:08:52.870-08:00 [sweep-0.95] CACHE MISS best_similarity=0.6584 threshold=0.95 query="What versions of protobufjs are affected by the prototype pollution bug?" reason="below threshold"
-2026-11-05T08:09:47.762-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="09102c06-3e89-4bb8-b494-d21ec4916d49" status="approved" stored=false latency_ms=54908.41
-  C23 similar_different exp=miss sim=0.6584 cached=False correct_miss   54908.4 ms
-2026-11-05T08:09:47.779-08:00 [sweep-0.95] CACHE MISS best_similarity=0.9 threshold=0.95 query="What is the severity of the PyYAML full_load code execution vulnerability?" reason="below threshold"
-2026-11-05T08:10:01.796-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="f89c8c19-4e36-46ef-a3d5-f80911a1e840" status="approved" stored=false latency_ms=14032.6
-  C24 similar_different exp=miss sim=0.9000 cached=False correct_miss   14032.6 ms
-2026-11-05T08:10:01.809-08:00 [sweep-0.95] CACHE MISS best_similarity=0.9267 threshold=0.95 query="Which requests version first introduced the Proxy-Authorization header leak?" reason="below threshold"
-2026-11-05T08:10:46.674-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="31323b4d-a000-400f-8129-475cb54758ee" status="approved" stored=false latency_ms=44877.24
-  C25 similar_different exp=miss sim=0.9267 cached=False correct_miss   44877.2 ms
-2026-11-05T08:10:46.703-08:00 [sweep-0.95] CACHE MISS best_similarity=0.9106 threshold=0.95 query="Is the Spring4Shell vulnerability in spring-beans 5.3.18 still exploitable?" reason="below threshold"
-2026-11-05T08:11:10.772-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="c6ab0c1a-58cf-4642-ac49-19cb0c09bf17" status="approved" stored=false latency_ms=24095.21
-  C26 similar_different exp=miss sim=0.9106 cached=False correct_miss   24095.2 ms
-2026-11-05T08:11:10.788-08:00 [sweep-0.95] CACHE MISS best_similarity=0.4156 threshold=0.95 query="What is the CVE for the express open redirect?" reason="below threshold"
-2026-11-05T08:11:25.733-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="006e6cc2-24ba-446e-8b1b-6992cfcd449d" status="approved" stored=false latency_ms=14960.23
-  C27 similar_different exp=miss sim=0.4156 cached=False correct_miss   14960.2 ms
-2026-11-05T08:11:25.743-08:00 [sweep-0.95] CACHE MISS best_similarity=0.3728 threshold=0.95 query="Which django version fixes the regular expression denial of service?" reason="below threshold"
-2026-11-05T08:12:26.882-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="64e97e81-4901-4691-9bff-aed41dd72e3c" status="approved" stored=false latency_ms=61148.22
-  C28 similar_different exp=miss sim=0.3728 cached=False correct_miss   61148.2 ms
-2026-11-05T08:12:26.903-08:00 [sweep-0.95] CACHE MISS best_similarity=0.797 threshold=0.95 query="What is the impact of the axios XSRF-TOKEN leak?" reason="below threshold"
-2026-11-05T08:12:41.723-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="caa1813b-7e1b-4b4f-ae9f-e648a8ca9821" status="approved" stored=false latency_ms=14839.49
-  C29 similar_different exp=miss sim=0.7970 cached=False correct_miss   14839.5 ms
-2026-11-05T08:12:41.735-08:00 [sweep-0.95] CACHE MISS best_similarity=0.9245 threshold=0.95 query="Which ws version introduced the header-count denial of service?" reason="below threshold"
-2026-11-05T08:13:17.912-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="49459373-8c6c-45a1-b8dd-08865feaa78f" status="approved" stored=false latency_ms=36187.72
-  C30 similar_different exp=miss sim=0.9245 cached=False correct_miss   36187.7 ms
-2026-11-05T08:13:17.932-08:00 [sweep-0.95] CACHE MISS best_similarity=0.2332 threshold=0.95 query="How do I generate an SBOM for a Python project?" reason="below threshold"
-2026-11-05T08:14:48.560-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="c9d0e570-ee27-493f-92f5-314a028d8177" status="approved" stored=false latency_ms=90646.23
-  C31 unrelated         exp=miss sim=0.2332 cached=False correct_miss   90646.2 ms
-2026-11-05T08:14:48.582-08:00 [sweep-0.95] CACHE MISS best_similarity=0.1919 threshold=0.95 query="What is the difference between CVSS base and temporal scores?" reason="below threshold"
-2026-11-05T08:15:00.285-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="13efd145-976c-4e4c-9326-edbf7188333c" status="approved" stored=false latency_ms=11721.93
-  C32 unrelated         exp=miss sim=0.1919 cached=False correct_miss   11721.9 ms
-2026-11-05T08:15:00.305-08:00 [sweep-0.95] CACHE MISS best_similarity=0.1974 threshold=0.95 query="How often should we run npm audit in CI?" reason="below threshold"
-2026-11-05T08:16:03.317-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="412ab7bf-7002-40f8-b402-87f07421857e" status="approved" stored=false latency_ms=63032.15
-  C33 unrelated         exp=miss sim=0.1974 cached=False correct_miss   63032.2 ms
-2026-11-05T08:16:03.343-08:00 [sweep-0.95] CACHE MISS best_similarity=0.199 threshold=0.95 query="What does a CWE identifier represent?" reason="below threshold"
-2026-11-05T08:16:13.430-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="17a1c8f9-9bbc-4844-b734-1595e73d3c01" status="approved" stored=false latency_ms=10111.42
-  C34 unrelated         exp=miss sim=0.1990 cached=False correct_miss   10111.4 ms
-2026-11-05T08:16:13.440-08:00 [sweep-0.95] CACHE MISS best_similarity=0.1822 threshold=0.95 query="How do I pin transitive dependencies with pip-tools?" reason="below threshold"
-2026-11-05T08:17:14.472-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="f01b2eb4-4ae0-4ccb-b5c1-0118a25f3537" status="approved" stored=false latency_ms=61041.49
-  C35 unrelated         exp=miss sim=0.1822 cached=False correct_miss   61041.5 ms
-2026-11-05T08:17:14.496-08:00 [sweep-0.95] CACHE MISS best_similarity=0.2438 threshold=0.95 query="What is a GitHub Security Advisory (GHSA) ID?" reason="below threshold"
-2026-11-05T08:17:25.195-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="d80c8dfc-9911-4f29-803e-5331442067de" status="approved" stored=false latency_ms=10720.84
-  C36 unrelated         exp=miss sim=0.2438 cached=False correct_miss   10720.8 ms
-2026-11-05T08:17:25.209-08:00 [sweep-0.95] CACHE MISS best_similarity=0.305 threshold=0.95 query="Should a reporter disclose a vulnerability publicly before a fix exists?" reason="below threshold"
-2026-11-05T08:17:35.263-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="3504d868-e552-45b9-ae3e-23e54f44182b" status="approved" stored=false latency_ms=10067.05
-  C37 unrelated         exp=miss sim=0.3050 cached=False correct_miss   10067.0 ms
-2026-11-05T08:17:35.271-08:00 [sweep-0.95] CACHE MISS best_similarity=0.3543 threshold=0.95 query="How does Dependabot decide when to open a pull request?" reason="below threshold"
-2026-11-05T08:17:54.904-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="d111e117-77e8-4b1e-8988-b470e6f1880d" status="approved" stored=false latency_ms=19640.65
-  C38 unrelated         exp=miss sim=0.3543 cached=False correct_miss   19640.7 ms
-2026-11-05T08:17:54.924-08:00 [sweep-0.95] CACHE MISS best_similarity=0.2987 threshold=0.95 query="What is typosquatting in package registries?" reason="below threshold"
-2026-11-05T08:18:05.874-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="45a3841c-1f9c-413c-b077-c5ccd1f5d0e0" status="approved" stored=false latency_ms=10969.06
-  C39 unrelated         exp=miss sim=0.2987 cached=False correct_miss   10969.1 ms
-2026-11-05T08:18:05.883-08:00 [sweep-0.95] CACHE MISS best_similarity=0.1688 threshold=0.95 query="How do I verify the signature of a Maven artifact?" reason="below threshold"
-2026-11-05T08:19:07.782-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="d7e45b85-5593-4612-8e2f-23c70718ddd6" status="approved" stored=false latency_ms=61907.31
-  C40 unrelated         exp=miss sim=0.1688 cached=False correct_miss   61907.3 ms
-  -> hit rate 27.5%, false-hit rate 0.0%, mean latency 25895 ms
+2026-11-08T16:54:14.736-08:00 [sweep-0.95] CACHE HIT similarity=1.0 threshold=0.95 cached_query="What is the severity of the Log4Shell vulnerability in log4j-core?" latency_ms=18.61
+  C01 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit       18.6 ms
+2026-11-08T16:54:14.745-08:00 [sweep-0.95] CACHE HIT similarity=1.0 threshold=0.95 cached_query="Which lodash version fixes the template command injection?" latency_ms=5.82
+  C02 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        5.8 ms
+2026-11-08T16:54:14.752-08:00 [sweep-0.95] CACHE HIT similarity=1.0 threshold=0.95 cached_query="What versions of minimist are affected by the prototype pollution bug?" latency_ms=5.51
+  C03 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        5.5 ms
+2026-11-08T16:54:14.757-08:00 [sweep-0.95] CACHE HIT similarity=1.0 threshold=0.95 cached_query="How should I fix the PyYAML full_load code execution vulnerability?" latency_ms=5.15
+  C04 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        5.2 ms
+2026-11-08T16:54:14.762-08:00 [sweep-0.95] CACHE HIT similarity=1.0 threshold=0.95 cached_query="Which requests version stops leaking the Proxy-Authorization header?" latency_ms=4.84
+  C05 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        4.8 ms
+2026-11-08T16:54:14.768-08:00 [sweep-0.95] CACHE HIT similarity=1.0 threshold=0.95 cached_query="Is Spring4Shell in spring-beans a critical vulnerability?" latency_ms=5.06
+  C06 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        5.1 ms
+2026-11-08T16:54:14.773-08:00 [sweep-0.95] CACHE HIT similarity=1.0 threshold=0.95 cached_query="What is the CVE for the axios XSRF-TOKEN leak?" latency_ms=5.23
+  C07 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        5.2 ms
+2026-11-08T16:54:14.779-08:00 [sweep-0.95] CACHE HIT similarity=1.0 threshold=0.95 cached_query="Which jackson-databind version fixes the deeply nested JSON denial of service?" latency_ms=5.93
+  C08 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        5.9 ms
+2026-11-08T16:54:14.784-08:00 [sweep-0.95] CACHE HIT similarity=1.0 threshold=0.95 cached_query="What is the impact of the node-fetch cookie leak on redirect?" latency_ms=4.89
+  C09 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        4.9 ms
+2026-11-08T16:54:14.789-08:00 [sweep-0.95] CACHE HIT similarity=1.0 threshold=0.95 cached_query="Which ws version fixes the header-count denial of service?" latency_ms=4.73
+  C10 exact_duplicate   exp=hit  sim=1.0000 cached=True  correct_hit        4.7 ms
+2026-11-08T16:54:14.794-08:00 [sweep-0.95] CACHE MISS best_similarity=0.885 threshold=0.95 query="How severe is the log4j-core Log4Shell issue?" reason="below threshold"
+2026-11-08T16:54:25.922-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="1f7c366a-7db9-4938-ad00-618cb27ab2b4" status="approved" stored=false latency_ms=11132.99
+  C11 paraphrase        exp=hit  sim=0.8850 cached=False missed_hit     11133.0 ms
+2026-11-08T16:54:25.929-08:00 [sweep-0.95] CACHE MISS best_similarity=0.9291 threshold=0.95 query="What lodash release patches the command injection in template?" reason="below threshold"
+2026-11-08T16:55:18.853-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="01698f14-e48e-4eca-b44e-29a5990cf70b" status="approved" stored=false latency_ms=52929.96
+  C12 paraphrase        exp=hit  sim=0.9291 cached=False missed_hit     52930.0 ms
+2026-11-08T16:55:18.879-08:00 [sweep-0.95] CACHE MISS best_similarity=0.8705 threshold=0.95 query="Which minimist versions are vulnerable to prototype pollution?" reason="below threshold"
+2026-11-08T16:56:18.592-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="1ad226c3-3e75-479e-ab28-983d23aaee47" status="approved" stored=false latency_ms=59731.64
+  C13 paraphrase        exp=hit  sim=0.8705 cached=False missed_hit     59731.6 ms
+2026-11-08T16:56:18.606-08:00 [sweep-0.95] CACHE MISS best_similarity=0.9319 threshold=0.95 query="How do I remediate the code execution flaw in PyYAML's full_load?" reason="below threshold"
+2026-11-08T16:56:38.177-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="43c482cd-0f31-4d76-ac04-044843f1b841" status="approved" stored=false latency_ms=19583.85
+  C14 paraphrase        exp=hit  sim=0.9319 cached=False missed_hit     19583.8 ms
+2026-11-08T16:56:38.184-08:00 [sweep-0.95] CACHE MISS best_similarity=0.949 threshold=0.95 query="What version of requests fixes the Proxy-Authorization header leak?" reason="below threshold"
+2026-11-08T16:57:21.398-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="c6e5b11b-6216-446f-bbbf-ab20f4ff4329" status="approved" stored=false latency_ms=43220.41
+  C15 paraphrase        exp=hit  sim=0.9490 cached=False missed_hit     43220.4 ms
+2026-11-08T16:57:21.418-08:00 [sweep-0.95] CACHE HIT similarity=0.9698 threshold=0.95 cached_query="Is Spring4Shell in spring-beans a critical vulnerability?" latency_ms=18.5
+  C16 paraphrase        exp=hit  sim=0.9698 cached=True  correct_hit       18.5 ms
+2026-11-08T16:57:21.423-08:00 [sweep-0.95] CACHE MISS best_similarity=0.8297 threshold=0.95 query="Which CVE ID covers the axios XSRF-TOKEN disclosure?" reason="below threshold"
+2026-11-08T16:58:21.303-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="60d88d48-f4c4-42b2-ae71-39c1bf9e98cf" status="approved" stored=false latency_ms=59885.32
+  C17 paraphrase        exp=hit  sim=0.8297 cached=False missed_hit     59885.3 ms
+2026-11-08T16:58:21.317-08:00 [sweep-0.95] CACHE MISS best_similarity=0.862 threshold=0.95 query="What jackson-databind release patches the DoS from deeply nested JSON?" reason="below threshold"
+2026-11-08T16:59:22.025-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="af229055-f52c-4e86-91a4-9d041d6d45d9" status="approved" stored=false latency_ms=60720.0
+  C18 paraphrase        exp=hit  sim=0.8620 cached=False missed_hit     60720.0 ms
+2026-11-08T16:59:22.041-08:00 [sweep-0.95] CACHE MISS best_similarity=0.9394 threshold=0.95 query="What can an attacker do with the node-fetch redirect cookie leak?" reason="below threshold"
+2026-11-08T16:59:32.790-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="a91f9a89-de90-47d7-8176-b450101c2461" status="approved" stored=false latency_ms=10764.51
+  C19 paraphrase        exp=hit  sim=0.9394 cached=False missed_hit     10764.5 ms
+2026-11-08T16:59:32.799-08:00 [sweep-0.95] CACHE MISS best_similarity=0.9012 threshold=0.95 query="What version of ws patches the denial of service from too many headers?" reason="below threshold"
+2026-11-08T17:00:26.993-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="394e655a-5c94-4690-950b-b922b8663685" status="approved" stored=false latency_ms=54202.01
+  C20 paraphrase        exp=hit  sim=0.9012 cached=False missed_hit     54202.0 ms
+2026-11-08T17:00:27.005-08:00 [sweep-0.95] CACHE MISS best_similarity=0.8333 threshold=0.95 query="What is the CVE for the Log4Shell vulnerability in log4j-core?" reason="below threshold"
+2026-11-08T17:00:39.013-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="9a8a5983-0436-48e3-bc58-ddcbc8bafcc3" status="approved" stored=false latency_ms=12019.02
+  C21 similar_different exp=miss sim=0.8333 cached=False correct_miss   12019.0 ms
+2026-11-08T17:00:39.020-08:00 [sweep-0.95] CACHE MISS best_similarity=0.2713 threshold=0.95 query="Which pillow version fixes the ImageMath code execution?" reason="below threshold"
+2026-11-08T17:01:06.860-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="884631c9-e0ad-4753-9f2f-cc42be4074eb" status="approved" stored=false latency_ms=27846.29
+  C22 similar_different exp=miss sim=0.2713 cached=False correct_miss   27846.3 ms
+2026-11-08T17:01:06.874-08:00 [sweep-0.95] CACHE MISS best_similarity=0.6584 threshold=0.95 query="What versions of protobufjs are affected by the prototype pollution bug?" reason="below threshold"
+2026-11-08T17:02:00.306-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="44c12c8f-07c5-44d0-8f3d-4f9ca3c2adcc" status="approved" stored=false latency_ms=53444.56
+  C23 similar_different exp=miss sim=0.6584 cached=False correct_miss   53444.6 ms
+2026-11-08T17:02:00.318-08:00 [sweep-0.95] CACHE MISS best_similarity=0.9 threshold=0.95 query="What is the severity of the PyYAML full_load code execution vulnerability?" reason="below threshold"
+2026-11-08T17:02:13.597-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="f05ac155-dc1b-4f84-8362-0f738729e0f6" status="approved" stored=false latency_ms=13289.67
+  C24 similar_different exp=miss sim=0.9000 cached=False correct_miss   13289.7 ms
+2026-11-08T17:02:13.604-08:00 [sweep-0.95] CACHE MISS best_similarity=0.9267 threshold=0.95 query="Which requests version first introduced the Proxy-Authorization header leak?" reason="below threshold"
+2026-11-08T17:02:57.247-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="67d20a29-2281-449c-923e-3ee5ea7ee259" status="approved" stored=false latency_ms=43650.48
+  C25 similar_different exp=miss sim=0.9267 cached=False correct_miss   43650.5 ms
+2026-11-08T17:02:57.261-08:00 [sweep-0.95] CACHE MISS best_similarity=0.9106 threshold=0.95 query="Is the Spring4Shell vulnerability in spring-beans 5.3.18 still exploitable?" reason="below threshold"
+2026-11-08T17:03:20.736-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="4a57d453-9e3f-4fb4-b215-982c23e6386e" status="approved" stored=false latency_ms=23487.28
+  C26 similar_different exp=miss sim=0.9106 cached=False correct_miss   23487.3 ms
+2026-11-08T17:03:20.748-08:00 [sweep-0.95] CACHE MISS best_similarity=0.4156 threshold=0.95 query="What is the CVE for the express open redirect?" reason="below threshold"
+2026-11-08T17:03:35.361-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="65bd9ba3-c756-41af-bcae-f84ca758e286" status="approved" stored=false latency_ms=14624.71
+  C27 similar_different exp=miss sim=0.4156 cached=False correct_miss   14624.7 ms
+2026-11-08T17:03:35.369-08:00 [sweep-0.95] CACHE MISS best_similarity=0.3728 threshold=0.95 query="Which django version fixes the regular expression denial of service?" reason="below threshold"
+2026-11-08T17:04:35.546-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="c23e28e7-d589-4840-90b3-c939c9bb152e" status="approved" stored=false latency_ms=60184.21
+  C28 similar_different exp=miss sim=0.3728 cached=False correct_miss   60184.2 ms
+2026-11-08T17:04:35.561-08:00 [sweep-0.95] CACHE MISS best_similarity=0.797 threshold=0.95 query="What is the impact of the axios XSRF-TOKEN leak?" reason="below threshold"
+2026-11-08T17:04:50.064-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="15899b1a-e4d1-4e17-b219-b578f49f4e10" status="approved" stored=false latency_ms=14517.16
+  C29 similar_different exp=miss sim=0.7970 cached=False correct_miss   14517.2 ms
+2026-11-08T17:04:50.071-08:00 [sweep-0.95] CACHE MISS best_similarity=0.9245 threshold=0.95 query="Which ws version introduced the header-count denial of service?" reason="below threshold"
+2026-11-08T17:05:25.474-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="e2db37ce-d761-449d-a67f-1063ba68176f" status="approved" stored=false latency_ms=35408.84
+  C30 similar_different exp=miss sim=0.9245 cached=False correct_miss   35408.8 ms
+2026-11-08T17:05:25.488-08:00 [sweep-0.95] CACHE MISS best_similarity=0.2332 threshold=0.95 query="How do I generate an SBOM for a Python project?" reason="below threshold"
+2026-11-08T17:06:54.800-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="a7c70ac5-4f18-4ce5-b05b-107f41ec74d3" status="approved" stored=false latency_ms=89325.19
+  C31 unrelated         exp=miss sim=0.2332 cached=False correct_miss   89325.2 ms
+2026-11-08T17:06:54.816-08:00 [sweep-0.95] CACHE MISS best_similarity=0.1919 threshold=0.95 query="What is the difference between CVSS base and temporal scores?" reason="below threshold"
+2026-11-08T17:07:05.989-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="9349e998-c7aa-460b-a8eb-aba7304a9cb6" status="approved" stored=false latency_ms=11187.79
+  C32 unrelated         exp=miss sim=0.1919 cached=False correct_miss   11187.8 ms
+2026-11-08T17:07:06.008-08:00 [sweep-0.95] CACHE MISS best_similarity=0.1974 threshold=0.95 query="How often should we run npm audit in CI?" reason="below threshold"
+2026-11-08T17:08:07.465-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="b52b0bec-be53-48aa-9785-c91c0e34ea89" status="approved" stored=false latency_ms=61470.75
+  C33 unrelated         exp=miss sim=0.1974 cached=False correct_miss   61470.8 ms
+2026-11-08T17:08:07.483-08:00 [sweep-0.95] CACHE MISS best_similarity=0.199 threshold=0.95 query="What does a CWE identifier represent?" reason="below threshold"
+2026-11-08T17:08:17.231-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="a3f88c15-25ac-4c0d-b9fa-c80b190478b3" status="approved" stored=false latency_ms=9763.76
+  C34 unrelated         exp=miss sim=0.1990 cached=False correct_miss    9763.8 ms
+2026-11-08T17:08:17.240-08:00 [sweep-0.95] CACHE MISS best_similarity=0.1822 threshold=0.95 query="How do I pin transitive dependencies with pip-tools?" reason="below threshold"
+2026-11-08T17:09:16.958-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="604b2b56-67cf-4134-bd01-85574606dfde" status="approved" stored=false latency_ms=59726.28
+  C35 unrelated         exp=miss sim=0.1822 cached=False correct_miss   59726.3 ms
+2026-11-08T17:09:16.973-08:00 [sweep-0.95] CACHE MISS best_similarity=0.2438 threshold=0.95 query="What is a GitHub Security Advisory (GHSA) ID?" reason="below threshold"
+2026-11-08T17:09:27.067-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="3aac0bf0-c07d-4e9b-a53c-6a301589b1c3" status="approved" stored=false latency_ms=10108.11
+  C36 unrelated         exp=miss sim=0.2438 cached=False correct_miss   10108.1 ms
+2026-11-08T17:09:27.074-08:00 [sweep-0.95] CACHE MISS best_similarity=0.305 threshold=0.95 query="Should a reporter disclose a vulnerability publicly before a fix exists?" reason="below threshold"
+2026-11-08T17:09:36.866-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="7e0f6b35-2dc6-4559-ab32-7222662c6149" status="approved" stored=false latency_ms=9798.45
+  C37 unrelated         exp=miss sim=0.3050 cached=False correct_miss    9798.5 ms
+2026-11-08T17:09:36.876-08:00 [sweep-0.95] CACHE MISS best_similarity=0.3543 threshold=0.95 query="How does Dependabot decide when to open a pull request?" reason="below threshold"
+2026-11-08T17:09:55.946-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="0ba1962f-2bc7-435e-ae87-5fdf2c2125e6" status="approved" stored=false latency_ms=19080.19
+  C38 unrelated         exp=miss sim=0.3543 cached=False correct_miss   19080.2 ms
+2026-11-08T17:09:55.954-08:00 [sweep-0.95] CACHE MISS best_similarity=0.2987 threshold=0.95 query="What is typosquatting in package registries?" reason="below threshold"
+2026-11-08T17:10:06.606-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="cf113987-7c23-475c-bc34-ce533a2293af" status="approved" stored=false latency_ms=10658.69
+  C39 unrelated         exp=miss sim=0.2987 cached=False correct_miss   10658.7 ms
+2026-11-08T17:10:06.615-08:00 [sweep-0.95] CACHE MISS best_similarity=0.1688 threshold=0.95 query="How do I verify the signature of a Maven artifact?" reason="below threshold"
+2026-11-08T17:11:06.736-08:00 [sweep-0.95] ANSWERED by agent pipeline correlation_id="61f73572-ad89-4fd8-8ee1-ad03f62e5817" status="approved" stored=false latency_ms=60129.32
+  C40 unrelated         exp=miss sim=0.1688 cached=False correct_miss   60129.3 ms
+  -> hit rate 27.5%, false-hit rate 0.0%, mean latency 25299 ms
 
 wrote reports/hw09/raw/sweep_results.json

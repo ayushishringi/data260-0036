@@ -9,7 +9,7 @@
       "looked_up": false,
       "lookup": null,
       "fault": "incomplete",
-      "latency_ms": 73.17,
+      "latency_ms": 139.74,
       "evaluation": {
         "result": "REVISE",
         "explanation": "First fixed version is missing.",
@@ -34,7 +34,7 @@
       "looked_up": false,
       "lookup": null,
       "fault": null,
-      "latency_ms": 20524.77,
+      "latency_ms": 29940.24,
       "evaluation": {
         "result": "PASS",
         "explanation": "Matches the reference for lodash on: first fixed version.",
@@ -44,7 +44,7 @@
         "fields": [
           "fixed_version"
         ],
-        "latency_ms": 0.76
+        "latency_ms": 0.24
       }
     }
   ],
@@ -54,5 +54,5 @@
   "final_answer": "The first version of lodash that fixes CVE-2021-23337 is 4.17.21.",
   "lessons_loaded": [],
   "lessons_created": [],
-  "latency_ms": 20599.89
+  "latency_ms": 30080.59
 }

@@ -10,21 +10,21 @@ Report `VULN-0036-HW9-01` (id 20074), key `s0036:views:report:20074`. 25 accesse
 
 | # | Query type | is_cached | Similarity | Latency (ms) | Query |
 |---:|---|---|---:|---:|---|
-| 1 | new | False | - | 17,741.3 | What is the severity of the Log4Shell vulnerability in log4j-core? |
-| 2 | exact duplicate | True | 1.0000 | 31.0 | What is the severity of the Log4Shell vulnerability in log4j-core? |
-| 3 | paraphrase | True | 0.8850 | 7.3 | How severe is the log4j-core Log4Shell issue? |
-| 4 | new | False | 0.1636 | 57,398.5 | Which lodash version fixes the template command injection? |
-| 5 | paraphrase | True | 0.9291 | 13.2 | What lodash release patches the command injection in template? |
-| 6 | new | False | 0.1568 | 89,282.6 | How do I generate an SBOM for a Python project? |
-| 7 | exact duplicate | True | 1.0000 | 15.8 | Which lodash version fixes the template command injection? |
-| 8 | new | False | 0.2083 | 19,303.2 | Which requests version stops leaking the Proxy-Authorization header? |
-| 9 | paraphrase | True | 0.9490 | 12.5 | What version of requests fixes the Proxy-Authorization header leak? |
-| 10 | new | False | 0.1990 | 10,068.4 | What does a CWE identifier represent? |
-| 11 | exact duplicate | True | 1.0000 | 17.1 | How do I generate an SBOM for a Python project? |
-| 12 | paraphrase | False | 0.8366 | 9,449.0 | What is a CWE ID used for? |
+| 1 | new | False | - | 18,041.5 | What is the severity of the Log4Shell vulnerability in log4j-core? |
+| 2 | exact duplicate | True | 1.0000 | 74.2 | What is the severity of the Log4Shell vulnerability in log4j-core? |
+| 3 | paraphrase | True | 0.8850 | 7.6 | How severe is the log4j-core Log4Shell issue? |
+| 4 | new | False | 0.1636 | 55,115.2 | Which lodash version fixes the template command injection? |
+| 5 | paraphrase | True | 0.9291 | 23.4 | What lodash release patches the command injection in template? |
+| 6 | new | False | 0.1568 | 85,572.6 | How do I generate an SBOM for a Python project? |
+| 7 | exact duplicate | True | 1.0000 | 15.0 | Which lodash version fixes the template command injection? |
+| 8 | new | False | 0.2083 | 18,200.2 | Which requests version stops leaking the Proxy-Authorization header? |
+| 9 | paraphrase | True | 0.9490 | 17.3 | What version of requests fixes the Proxy-Authorization header leak? |
+| 10 | new | False | 0.1990 | 9,034.1 | What does a CWE identifier represent? |
+| 11 | exact duplicate | True | 1.0000 | 7.6 | How do I generate an SBOM for a Python project? |
+| 12 | paraphrase | False | 0.8366 | 8,858.7 | What is a CWE ID used for? |
 
 - Cache hit rate: **6/12 = 50.0%**
-- Average latency, cached: **16.2 ms**; non-cached (agent pipeline): **33,873.8 ms** (measured, not targeted).
+- Average latency, cached: **24.2 ms**; non-cached (agent pipeline): **32,470.4 ms** (measured, not targeted).
 
 - Miss worth noting: "What is a CWE ID used for?" scored 0.8366 against "What does a CWE identifier represent?" - below 0.85, so the agents ran.
 
@@ -34,19 +34,19 @@ Report `VULN-0036-HW9-01` (id 20074), key `s0036:views:report:20074`. 25 accesse
 
 | Threshold | Hit rate | False-hit rate | Mean latency (ms) | Total cost |
 |---|---:|---:|---:|---:|
-| 0.75 | 65.0% (26/40) | 15.0% (6/40) | 11,826.6 | $90.14 |
-| 0.80 | 62.5% (25/40) | 12.5% (5/40) | 12,811.2 | $75.15 |
-| 0.85 | 57.5% (23/40) | 10.0% (4/40) | 14,465.2 | $60.17 |
-| 0.90 | 50.0% (20/40) | 10.0% (4/40) | 18,096.3 | $60.19 |
-| 0.95 | 27.5% (11/40) | 0.0% (0/40) | 25,895.0 | $0.28 |
+| 0.75 | 65.0% (26/40) | 15.0% (6/40) | 14,826.2 | $90.14 |
+| 0.80 | 62.5% (25/40) | 12.5% (5/40) | 13,290.6 | $75.15 |
+| 0.85 | 57.5% (23/40) | 10.0% (4/40) | 14,364.6 | $60.17 |
+| 0.90 | 50.0% (20/40) | 10.0% (4/40) | 17,894.3 | $60.20 |
+| 0.95 | 27.5% (11/40) | 0.0% (0/40) | 25,299.4 | $0.29 |
 
 | Threshold | Correct hits | False hits | Missed hits (should hit) | Correct misses | Mean hit latency (ms) | Mean miss latency (ms) |
 |---|---:|---:|---:|---:|---:|---:|
-| 0.75 | 20 | 6 | 0 | 14 | 6.1 | 33,779.1 |
-| 0.80 | 20 | 5 | 0 | 15 | 5.9 | 34,153.5 |
-| 0.85 | 19 | 4 | 1 | 16 | 13.4 | 34,017.6 |
-| 0.90 | 16 | 4 | 4 | 16 | 11.0 | 36,181.6 |
-| 0.95 | 11 | 0 | 9 | 20 | 13.9 | 35,712.0 |
+| 0.75 | 20 | 6 | 0 | 14 | 7.3 | 42,347.1 |
+| 0.80 | 20 | 5 | 0 | 15 | 11.8 | 35,422.0 |
+| 0.85 | 19 | 4 | 1 | 16 | 5.8 | 33,791.3 |
+| 0.90 | 16 | 4 | 4 | 16 | 7.8 | 35,780.8 |
+| 0.95 | 11 | 0 | 9 | 20 | 7.7 | 34,892.8 |
 
 Nearest cached query per case (similarity does not depend on the threshold):
 
@@ -118,9 +118,9 @@ All false hits seen in the sweep: C25 (0.9267), C30 (0.9245), C26 (0.9106), C24 
 
 ## Part 3.4 - Cost model and threshold choice
 
-- **Cache-miss cost C_miss = $0.0097.** A miss runs the full agent pipeline (two qwen3:4b calls plus the Reviewer). Measured mean pipeline time over the 95 sweep misses = 35.0 s of GPU time; priced at $1.00/hour for a comparable single cloud GPU. (The user also waits that long, which the dollar figure does not include.)
+- **Cache-miss cost C_miss = $0.0100.** A miss runs the full agent pipeline (two qwen3:4b calls plus the Reviewer). Measured mean pipeline time over the 95 sweep misses = 36.1 s of GPU time; priced at $1.00/hour for a comparable single cloud GPU. (The user also waits that long, which the dollar figure does not include.)
 - **False-hit / support cost C_false = $15.00.** A false hit returns a wrong fact about a vulnerability (wrong CVE, severity or version). Someone acts on it or files a ticket; we assume 15 minutes of engineer time at $60/hour to notice, triage and correct it. This is a floor: shipping a still-vulnerable version could cost far more.
-- C_false / C_miss = 1,545: one false hit costs as much as that many pipeline runs. Correct hits cost ~0 (a few ms of CPU).
+- C_false / C_miss = 1,498: one false hit costs as much as that many pipeline runs. Correct hits cost ~0 (a few ms of CPU).
 
 Total cost = misses x C_miss + false hits x C_false:
 
@@ -129,12 +129,12 @@ Total cost = misses x C_miss + false hits x C_false:
 | 0.75 | 14 | 6 | $0.14 | $90.00 | $90.14 |
 | 0.80 | 15 | 5 | $0.15 | $75.00 | $75.15 |
 | 0.85 | 17 | 4 | $0.17 | $60.00 | $60.17 |
-| 0.90 | 20 | 4 | $0.19 | $60.00 | $60.19 |
-| 0.95 **(ship)** | 29 | 0 | $0.28 | $0.00 | $0.28 |
+| 0.90 | 20 | 4 | $0.20 | $60.00 | $60.20 |
+| 0.95 **(ship)** | 29 | 0 | $0.29 | $0.00 | $0.29 |
 
 **Threshold to ship: 0.95.** It has the lowest total cost: 0 false hits and a 27.5% hit rate (11 of the 20 should-hit cases served). Because one false hit costs as much as over a thousand misses, the choice is driven by false hits: the cheapest threshold is the lowest one that removes them, and any lower threshold buys a few more hits at a much higher support cost. The price is latency: at this threshold 9 paraphrases that should have hit go to the agents.
 
-Sensitivity: 0.85 would only beat 0.95 if a false hit cost less than 12/4 = 3.0 misses ($0.029), i.e. if a wrong vulnerability answer were almost free.
+Sensitivity: 0.85 would only beat 0.95 if a false hit cost less than 12/4 = 3.0 misses ($0.030), i.e. if a wrong vulnerability answer were almost free.
 
 ## Part 3.5 - Stale answer and data-version invalidation
 
@@ -142,11 +142,11 @@ Query: "What is the severity of the requests Proxy-Authorization header leak?" d
 
 | Step | is_cached | Similarity | Latency (ms) | data_version | Answer says | Database says | Result |
 |---|---|---:|---:|---|---|---|---|
-| 1. first ask (miss -> agents -> cached) | False | - | 15,619.5 | `v-09e908a37503fbe4` | medium | medium | fresh |
-| 2. paraphrase before the update (hit) | True | 0.9079 | 12.6 | `v-09e908a37503fbe4` | medium | medium | fresh |
-| 3. invalidation=none -> STALE HIT (old answer returned) | True | 1.0000 | 7.4 | `v-09e908a37503fbe4` | medium | high | **STALE** |
-| 4. invalidation=version -> marker mismatch, entry deleted, agents rerun | False | 1.0000 | 12,372.8 | `v-da759bf61ba0f522` | high | high | fresh |
-| 5. invalidation=version, ask again -> fresh hit | True | 1.0000 | 8.6 | `v-da759bf61ba0f522` | high | high | fresh |
+| 1. first ask (miss -> agents -> cached) | False | - | 14,990.7 | `v-69591878aff271b6` | medium | medium | fresh |
+| 2. paraphrase before the update (hit) | True | 0.9079 | 27.0 | `v-69591878aff271b6` | medium | medium | fresh |
+| 3. invalidation=none -> STALE HIT (old answer returned) | True | 1.0000 | 5.7 | `v-69591878aff271b6` | medium | high | **STALE** |
+| 4. invalidation=version -> marker mismatch, entry deleted, agents rerun | False | 1.0000 | 11,673.5 | `v-4bdee5bf2753d7c2` | high | high | fresh |
+| 5. invalidation=version, ask again -> fresh hit | True | 1.0000 | 5.5 | `v-4bdee5bf2753d7c2` | high | high | fresh |
 
 **Strategy (version check on read):** every entry stores `data_version` = hash of the content and `updated_at` of the record(s) the answer used, plus their ids. On a hit the cache re-reads those rows by primary key, recomputes the marker and, if it differs, deletes the entry and treats the query as a miss, so the agents answer from the new data.
 
@@ -158,10 +158,10 @@ Final test (`data/hw9/test_data.json`, 12 questions, identical for every variant
 
 | Variant | Correct answers | Incorrect answers | Average attempts | Average latency (ms) | Initial answer correct |
 |---|---:|---:|---:|---:|---:|
-| Baseline | 2 | 10 | 1.0 | 20,883.7 | 2/12 |
-| Evaluator Repair | 12 | 0 | 1.83 | 43,375.8 | 2/12 |
-| Lesson Memory | 12 | 0 | 1.17 | 19,297.8 | 10/12 |
-| Validated Improvement | 12 | 0 | 1.17 | 19,212.4 | 10/12 |
+| Baseline | 2 | 10 | 1.0 | 21,160.4 | 2/12 |
+| Evaluator Repair | 12 | 0 | 1.83 | 48,639.1 | 2/12 |
+| Lesson Memory | 12 | 0 | 1.17 | 21,108.6 | 10/12 |
+| Validated Improvement | 12 | 0 | 1.17 | 19,933.9 | 10/12 |
 
 Training (`training_data.json`): 4/10 initial answers correct, 10 after repair. Failure patterns seen in initial answers: {'severity': 2, 'fixed_version': 2, 'affected_versions': 1, 'unknown_package': 1}.
 

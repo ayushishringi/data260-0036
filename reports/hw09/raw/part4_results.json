@@ -1,5 +1,5 @@
 {
-  "ran_at": "2026-11-05T09:00:59",
+  "ran_at": "2026-11-07T13:15:05",
   "table": {
     "Baseline": {
       "questions": 12,
@@ -7,7 +7,7 @@
       "incorrect": 10,
       "initial_pass": 2,
       "avg_attempts": 1.0,
-      "avg_latency_ms": 20883.7
+      "avg_latency_ms": 21160.4
     },
     "Evaluator Repair": {
       "questions": 12,
@@ -15,7 +15,7 @@
       "incorrect": 0,
       "initial_pass": 2,
       "avg_attempts": 1.83,
-      "avg_latency_ms": 43375.8
+      "avg_latency_ms": 48639.1
     },
     "Lesson Memory": {
       "questions": 12,
@@ -23,7 +23,7 @@
       "incorrect": 0,
       "initial_pass": 10,
       "avg_attempts": 1.17,
-      "avg_latency_ms": 19297.8
+      "avg_latency_ms": 21108.6
     },
     "Validated Improvement": {
       "questions": 12,
@@ -31,7 +31,7 @@
       "incorrect": 0,
       "initial_pass": 10,
       "avg_attempts": 1.17,
-      "avg_latency_ms": 19212.4
+      "avg_latency_ms": 19933.9
     }
   }
 }

@@ -4,7 +4,7 @@
       "lesson_id": "lesson_001",
       "failure_pattern": "The answer gives an incorrect first fixed version from memory.",
       "correction": "Before answering a question about the first fixed version, look the package up in the s0036_rel advisory database and state the first fixed version exactly as the record gives it.",
-      "created_at": "2026-11-05",
+      "created_at": "2026-11-07",
       "use_count": 3,
       "pattern_key": "fixed_version",
       "applies_to": [
@@ -37,7 +37,7 @@
           "VULN-0036-HW9-10 (s0036_rel id 20083): ws affected >= 8.0.0, < 8.17.1, severity high. CVE-2024-37890: Denial of service from a request whose header count exceeds server.maxHeadersCount. Fixed in 8.17.1."
         ],
         "fault": null,
-        "latency_ms": 12589.17,
+        "latency_ms": 12084.24,
         "evaluation": {
           "result": "PASS",
           "explanation": "Matches the reference for ws on: first fixed version.",
@@ -47,7 +47,7 @@
           "fields": [
             "fixed_version"
           ],
-          "latency_ms": 1.51
+          "latency_ms": 2.49
         }
       }
     ],
@@ -59,6 +59,6 @@
       "lesson_001"
     ],
     "lessons_created": [],
-    "latency_ms": 12591.1
+    "latency_ms": 12086.97
   }
 }
