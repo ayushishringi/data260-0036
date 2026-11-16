@@ -1,6 +1,27 @@
 # data260-0036
 
-DATA-260 Homework 1. Personal configuration is derived from SJSU SID4 `0036`.
+DATA-260 homework repository for Ayushi Shringi (SID4 `0036`, PREFIX `s0036`, DOMAIN_ID 4: open-source package vulnerabilities). The same codebase is extended every homework, so shared code lives in `src/` and `scripts/`, and each homework's report and evidence live in its own `reports/hwNN/` folder.
+
+## Homework index
+
+| Homework | Topic | Report | Evidence folder | Submitted version | Verify |
+| --- | --- | --- | --- | --- | --- |
+| HW1 | Vulnerability report form (HTML/JS, Docker, AWS ECS), Planner/Reviewer agents on Ollama, non-determinism, token accounting | [report.pdf](reports/hw01/report.pdf) | [reports/hw01/](reports/hw01/) | [`hw1`](https://github.com/ayushishringi/data260-0036/tree/hw1) | `make verify-hw01` |
+| HW2 | Agent graph: schema validation, turn ceiling, adversarial inputs | [report.pdf](reports/hw02/report.pdf) | [reports/hw02/](reports/hw02/) | branch [`hw2`](https://github.com/ayushishringi/data260-0036/tree/hw2) | `make verify-hw02` |
+| HW3 | Retrieval: embeddings and retrieval-quality comparison | [report.pdf](reports/hw03/report.pdf) | [reports/hw03/](reports/hw03/) | [`hw3`](https://github.com/ayushishringi/data260-0036/tree/hw3) | `python scripts/verify_hw03.py` |
+| HW4 | RAG, the N+1 query experiment, database index and EXPLAIN | [report.pdf](reports/hw04/report.pdf) | [reports/hw04/](reports/hw04/) | [`hw4`](https://github.com/ayushishringi/data260-0036/tree/hw4) | `python scripts/verify_hw4.py` |
+| HW5 | Vulnerability reports in MySQL, MCP tools, fault injection | [report.pdf](reports/hw05/report.pdf) | [reports/hw05/](reports/hw05/) | tag [`hw5`](https://github.com/ayushishringi/data260-0036/tree/0108bb70377d70f451df943aed727b3320440ef2) | `make verify-hw05` |
+| HW6 | Conversation memory: short-term window, compression, memory cost | [report.pdf](reports/hw06/report.pdf) | [reports/hw06/](reports/hw06/) | [`hw6`](https://github.com/ayushishringi/data260-0036/tree/hw6) | `make verify-hw06` |
+| HW7 | Tool-calling agents: reliability, Reflexion, bike-share ReAct agent, prompt injection, safety gate | [Shringi_HW7.pdf](reports/hw07/Shringi_HW7.pdf) | [reports/hw07/](reports/hw07/) | [`hw7`](https://github.com/ayushishringi/data260-0036/tree/hw7) | `make verify-hw07` |
+| HW8 | Planner / Writer / Reviewer pipeline over Kafka, failure handling | [Shringi_HW8.pdf](reports/hw08/Shringi_HW8.pdf) | [reports/hw08/](reports/hw08/) | [`hw8`](https://github.com/ayushishringi/data260-0036/tree/hw8) | `make verify-hw08` |
+| HW9 | Redis view counter, semantic cache, threshold sweep, stale answers | [Shringi_HW9.pdf](reports/hw09/Shringi_HW9.pdf) | [reports/hw09/](reports/hw09/) | [`hw9`](https://github.com/ayushishringi/data260-0036/tree/hw9) | `make verify-hw09` |
+| HW10 | Streamlit dashboard, GEval evaluator, judge validation, tracing and latency | [Shringi_HW10.pdf](reports/hw10/Shringi_HW10.pdf) | [reports/hw10/](reports/hw10/) | [`hw10`](https://github.com/ayushishringi/data260-0036/tree/hw10) | `make verify-hw10` |
+
+Each `reports/hwNN/` folder holds that homework's report PDF, `METRICS.md`, `AI_USE.md`, `RUN_LOG.txt` (where kept), `raw/` results and `verification.json`. The submitted state of each homework is its tag (HW2: the `hw2` branch); the run commands for HW10 are in the HW10 section at the end of this file.
+
+## HW1 details
+
+Personal configuration is derived from SJSU SID4 `0036`.
 
 | Value | Result |
 | --- | --- |
