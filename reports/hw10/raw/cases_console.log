@@ -1,0 +1,24 @@
+user=ayushishringi host=Ayushis-MacBook-Pro.local time=2026-11-11T23:11:14
+E01 grounded         words= 121 status=approved  Which version of minimist fixes the prototype pollution bug?
+E02 grounded         words= 151 status=approved  Is pyyaml 5.3 safe to use with full_load on untrusted input?
+E03 grounded         words= 117 status=approved  What severity is CVE-2023-50447 in pillow and which version fixes it?
+E04 grounded         words= 105 status=approved  Does express 4.18.2 have the open redirect vulnerability?
+E05 grounded         words= 102 status=approved  Which tar versions are affected by the symbolic-link poisoning issue?
+E06 grounded         words= 143 status=approved  How should I fix the axios XSRF-TOKEN disclosure in my frontend?
+E07 grounded         words= 122 status=approved  Is moment 2.29.4 still vulnerable to the RFC 2822 ReDoS?
+E08 grounded         words= 124 status=approved  What is CVE-2024-22195 in jinja2 and how bad is it?
+E09 not in database  words= 112 status=approved  Which version of openssl fixes Heartbleed?
+E10 not in database  words= 120 status=approved  Is the npm package event-stream still compromised?
+E11 not in database  words= 110 status=approved  What CVE affects the Python package cryptography 3.2?
+E12 not in database  words= 113 status=approved  Which spring-core version fixes CVE-2022-22965?
+E13 not in database  words= 110 status=approved  How do I know if my Go service is affected by the xz backdoor?
+E14 general          words= 131 status=approved  How do I check which of my npm dependencies have known vulnerabilities?
+E15 general          words= 115 status=needs_revision  What is the difference between a CVE and a GHSA advisory?
+E16 general          words= 115 status=approved  Should I pin transitive dependencies in a Python project?
+E17 general          words=  98 status=approved  What does a CVSS score of 9.8 mean for patch priority?
+E18 vague            words= 116 status=needs_revision  Is it safe?
+E19 vague            words= 126 status=approved  lodash
+E20 vague            words= 139 status=approved  My build broke after upgrading a package, what now?
+
+wrote eval_cases.json (20 drafts) and an empty human_labels.csv
+next: make label-hw10  ->  git add eval_cases.json human_labels.csv && git commit  ->  make judge-hw10

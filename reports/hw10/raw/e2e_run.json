@@ -1,0 +1,571 @@
+{
+  "ran_at": "2026-11-11T23:37:03",
+  "threshold": 0.85,
+  "results": [
+    {
+      "n": 1,
+      "role": "cache_miss_eval",
+      "trace_id": "6ab316ab-7902-427e-99fb-c5f5eb44d44c",
+      "query": "Which jackson-databind release fixes the deeply nested JSON denial of service, and how severe is it?",
+      "threshold": 0.85,
+      "similarity": null,
+      "matched_query": null,
+      "is_cached": false,
+      "answer": "The vulnerability addressed is CVE-2020-36518 (not CVE-2021-44228), a high-severity denial of service via deeply nested JSON causing stack overflow. The fix is in jackson-databind version 2.13.2.1. Affected versions are >=2.13.0 but <2.13.2.1. This resolution resolves the stack overflow issue in nested JSON processing. (149 words)\n\nSource record: VULN-0036-HW9-08 (s0036_rel id 20081): jackson-databind affected >= 2.13.0, < 2.13.2.1, severity high. CVE-2020-36518: Denial of service through deeply nested JSON (stack overflow). Fixed in 2.13.2.1.",
+      "status": "ok",
+      "stale_invalidated": false,
+      "correlation_id": "6ab316ab-7902-427e-99fb-c5f5eb44d44c",
+      "data_version": "v-3c6dc655c85aa0e6",
+      "record_ids": [
+        20081
+      ],
+      "latency_ms": 58998.51,
+      "timings": {
+        "embed_ms": 3.9,
+        "search_ms": 0.71,
+        "pipeline_ms": 58824.21,
+        "store_ms": 12.23
+      },
+      "review_status": "approved"
+    },
+    {
+      "n": 2,
+      "role": "cache_miss_eval",
+      "trace_id": "c924d3d9-d177-450d-a745-4a9cc1283fe5",
+      "query": "Is golang.org/x/net 0.15.0 affected by the HTTP/2 rapid reset attack, and what should I upgrade to?",
+      "threshold": 0.85,
+      "similarity": 0.3334,
+      "matched_query": "Which jackson-databind release fixes the deeply nested JSON denial of service, and how severe is it?",
+      "is_cached": false,
+      "answer": "Yes, golang.org/x/net 0.15.0 is affected by the HTTP/2 rapid reset denial of service vulnerability (CVE-2023-44487). This high-severity issue exists in all versions below 0.17.0 per the s0036_rel advisory VULN-0036-HW9-19. The fix was implemented in version 0.17.0, resolving the HTTP/2 rapid reset attack vector. You must upgrade to **golang.org/x/net 0.17.0 or later** to mitigate this risk. Do not upgrade to 0.16.0\u2014this version does not contain the fix. Always verify the exact version in your project's dependency management system (e.g., Go modules) to ensure compatibility with the patched code. The vulnerability allows attackers to trigger rapid resets in HTTP/2 connections, causing denial of service. Update promptly to maintain security. (149 words)\n\nSource record: VULN-0036-HW9-19 (s0036_rel id 20092): golang.org/x/net affected < 0.17.0, severity high. CVE-2023-44487: HTTP/2 rapid reset denial of service. Fixed in 0.17.0.",
+      "status": "ok",
+      "stale_invalidated": false,
+      "correlation_id": "c924d3d9-d177-450d-a745-4a9cc1283fe5",
+      "data_version": "v-afe9621393849dcb",
+      "record_ids": [
+        20092
+      ],
+      "latency_ms": 53657.63,
+      "timings": {
+        "embed_ms": 27.49,
+        "search_ms": 5.9,
+        "pipeline_ms": 53602.23,
+        "store_ms": 12.71
+      },
+      "review_status": "approved"
+    },
+    {
+      "n": 3,
+      "role": "cache_miss_eval",
+      "trace_id": "7226904b-13a9-4a5a-a270-2809eb2c9f3f",
+      "query": "Why should a team generate a software bill of materials for every release?",
+      "threshold": 0.85,
+      "similarity": 0.0372,
+      "matched_query": "Is golang.org/x/net 0.15.0 affected by the HTTP/2 rapid reset attack, and what should I upgrade to?",
+      "is_cached": false,
+      "answer": "Generating a software bill of materials (SBOM) for every release is critical because it provides a transparent, machine-readable inventory of all components in a software stack. This enables teams to **identify vulnerabilities in dependencies** by cross-referencing components against known vulnerability databases (e.g., NVD), proactively uncovering risks before they exploit. It also **ensures regulatory compliance** with frameworks like NIST SP 800-161 and ISO 27001, which mandate traceability for security and supply chain integrity\u2014preventing audit failures and legal exposure. Finally, SBOMs **accelerate patching cycles** by precisely pinpointing affected components, reducing remediation time from days to hours. Without this visibility, teams risk undetected critical flaws, non-compliance penalties, and extended downtime during security incidents. In essence, SBOMs transform vulnerability management from reactive to proactive, directly supporting security resilience, regulatory adherence, and operational efficiency in every release cycle. (149 words)",
+      "status": "ok",
+      "stale_invalidated": false,
+      "correlation_id": "7226904b-13a9-4a5a-a270-2809eb2c9f3f",
+      "data_version": "none",
+      "record_ids": [],
+      "latency_ms": 13883.46,
+      "timings": {
+        "embed_ms": 22.92,
+        "search_ms": 5.12,
+        "pipeline_ms": 13838.49,
+        "store_ms": 4.01
+      },
+      "review_status": "approved"
+    },
+    {
+      "n": 4,
+      "role": "cache_hit",
+      "trace_id": "062f0baa-d2e8-4312-9ee1-cfc1e2db15af",
+      "query": "Which jackson-databind release fixes the deeply nested JSON denial of service, and how severe is it?",
+      "threshold": 0.85,
+      "similarity": 1.0,
+      "matched_query": "Which jackson-databind release fixes the deeply nested JSON denial of service, and how severe is it?",
+      "is_cached": true,
+      "answer": "The vulnerability addressed is CVE-2020-36518 (not CVE-2021-44228), a high-severity denial of service via deeply nested JSON causing stack overflow. The fix is in jackson-databind version 2.13.2.1. Affected versions are >=2.13.0 but <2.13.2.1. This resolution resolves the stack overflow issue in nested JSON processing. (149 words)\n\nSource record: VULN-0036-HW9-08 (s0036_rel id 20081): jackson-databind affected >= 2.13.0, < 2.13.2.1, severity high. CVE-2020-36518: Denial of service through deeply nested JSON (stack overflow). Fixed in 2.13.2.1.",
+      "data_version": "v-3c6dc655c85aa0e6",
+      "record_ids": [
+        20081
+      ],
+      "latency_ms": 43.91,
+      "timings": {
+        "embed_ms": 21.97,
+        "search_ms": 4.95,
+        "version_check_ms": 16.98
+      },
+      "review_status": null,
+      "status": "ok"
+    },
+    {
+      "n": 5,
+      "role": "failed",
+      "trace_id": "94237b91-630c-4f46-beb2-2afe76254b0c",
+      "question": "Which follow-redirects version stops keeping the Proxy-Authorization header across hosts?",
+      "status": "error",
+      "error": "PipelineFailed: writer failed after 3 attempts: injected fault (HW10 failed-trace demo): writer could not reach the model (simulated Ollama timeout)",
+      "failed_stage": "writer",
+      "is_cached": false,
+      "latency_ms": 34198.61
+    }
+  ],
+  "evaluations": [
+    {
+      "trace_id": "6ab316ab-7902-427e-99fb-c5f5eb44d44c",
+      "correlation_id": "6ab316ab-7902-427e-99fb-c5f5eb44d44c",
+      "question": "Which jackson-databind release fixes the deeply nested JSON denial of service, and how severe is it?",
+      "outcome": "evaluated",
+      "evaluated_at": "2026-11-11T23:25:32.744-08:00",
+      "messages": {
+        "plan": {
+          "correlation_id": "6ab316ab-7902-427e-99fb-c5f5eb44d44c",
+          "kind": "task",
+          "question": "Which jackson-databind release fixes the deeply nested JSON denial of service, and how severe is it?",
+          "plan": [
+            "Find CVE-2021-44228",
+            "Fixed version 2.12.0",
+            "Critical"
+          ],
+          "planned_at": "2026-11-11T23:25:24.198-08:00",
+          "trace_id": "6ab316ab-7902-427e-99fb-c5f5eb44d44c",
+          "_kafka": {
+            "topic": "s0036_tasks",
+            "partition": 0,
+            "offset": 194,
+            "kafka_timestamp_ms": 1794468324199
+          }
+        },
+        "draft": {
+          "correlation_id": "6ab316ab-7902-427e-99fb-c5f5eb44d44c",
+          "kind": "draft",
+          "question": "Which jackson-databind release fixes the deeply nested JSON denial of service, and how severe is it?",
+          "plan": [
+            "Find CVE-2021-44228",
+            "Fixed version 2.12.0",
+            "Critical"
+          ],
+          "draft": "The vulnerability addressed is CVE-2020-36518 (not CVE-2021-44228), a high-severity denial of service via deeply nested JSON causing stack overflow. The fix is in jackson-databind version 2.13.2.1. Affected versions are >=2.13.0 but <2.13.2.1. This resolution resolves the stack overflow issue in nested JSON processing. (149 words)\n\nSource record: VULN-0036-HW9-08 (s0036_rel id 20081): jackson-databind affected >= 2.13.0, < 2.13.2.1, severity high. CVE-2020-36518: Denial of service through deeply nested JSON (stack overflow). Fixed in 2.13.2.1.",
+          "facts": [
+            "VULN-0036-HW9-08 (s0036_rel id 20081): jackson-databind affected >= 2.13.0, < 2.13.2.1, severity high. CVE-2020-36518: Denial of service through deeply nested JSON (stack overflow). Fixed in 2.13.2.1."
+          ],
+          "written_at": "2026-11-11T23:25:31.281-08:00",
+          "trace_id": "6ab316ab-7902-427e-99fb-c5f5eb44d44c",
+          "_kafka": {
+            "topic": "s0036_drafts",
+            "partition": 0,
+            "offset": 298,
+            "kafka_timestamp_ms": 1794468331283
+          }
+        },
+        "final": {
+          "correlation_id": "6ab316ab-7902-427e-99fb-c5f5eb44d44c",
+          "status": "approved",
+          "answer": "The vulnerability addressed is CVE-2020-36518 (not CVE-2021-44228), a high-severity denial of service via deeply nested JSON causing stack overflow. The fix is in jackson-databind version 2.13.2.1. Affected versions are >=2.13.0 but <2.13.2.1. This resolution resolves the stack overflow issue in nested JSON processing. (149 words)\n\nSource record: VULN-0036-HW9-08 (s0036_rel id 20081): jackson-databind affected >= 2.13.0, < 2.13.2.1, severity high. CVE-2020-36518: Denial of service through deeply nested JSON (stack overflow). Fixed in 2.13.2.1.",
+          "question": "Which jackson-databind release fixes the deeply nested JSON denial of service, and how severe is it?",
+          "review": {
+            "checks": {
+              "non_empty": true,
+              "length_ok": true,
+              "on_topic": true
+            },
+            "words": 72
+          },
+          "reviewed_at": "2026-11-11T23:25:31.770-08:00",
+          "trace_id": "6ab316ab-7902-427e-99fb-c5f5eb44d44c",
+          "_kafka": {
+            "topic": "s0036_final",
+            "partition": 0,
+            "offset": 294,
+            "kafka_timestamp_ms": 1794468331770
+          }
+        }
+      },
+      "plan_quality": {
+        "score": 4.0,
+        "reason": "The plan provides the fixed version (2.12.0) and severity (Critical) which answers the question, but the steps are not actionable as they are written as answers rather than instructions for the writer to follow.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 103903.5,
+        "plan": [
+          "Find CVE-2021-44228",
+          "Fixed version 2.12.0",
+          "Critical"
+        ]
+      },
+      "writer_helpfulness": {
+        "score": 5.0,
+        "reason": "The response accurately matches the retrieval context: CVE-2020-36518, high severity, affected versions >=2.13.0 <2.13.2.1, fixed version 2.13.2.1. It provides concrete guidance without factual errors, allowing immediate action.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 74956.1,
+        "trace_id": "6ab316ab-7902-427e-99fb-c5f5eb44d44c",
+        "grounding_facts": [
+          "VULN-0036-HW9-08 (s0036_rel id 20081): jackson-databind affected >= 2.13.0, < 2.13.2.1, severity high. CVE-2020-36518: Denial of service through deeply nested JSON (stack overflow). Fixed in 2.13.2.1."
+        ]
+      },
+      "final_helpfulness": {
+        "score": 5.0,
+        "reason": "The response accurately identifies the fix version (2.13.2.1), affected versions (>=2.13.0 but <2.13.2.1), and severity (high) for the deeply nested JSON denial of service, directly addressing the user's query without contradictions or irrelevant content, making it actionable.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 32448.9,
+        "final_answer": "The vulnerability addressed is CVE-2020-36518 (not CVE-2021-44228), a high-severity denial of service via deeply nested JSON causing stack overflow. The fix is in jackson-databind version 2.13.2.1. Affected versions are >=2.13.0 but <2.13.2.1. This resolution resolves the stack overflow issue in nested JSON processing. (149 words)\n\nSource record: VULN-0036-HW9-08 (s0036_rel id 20081): jackson-databind affected >= 2.13.0, < 2.13.2.1, severity high. CVE-2020-36518: Denial of service through deeply nested JSON (stack overflow). Fixed in 2.13.2.1.",
+        "review_status": "approved"
+      },
+      "final_vs_draft": {
+        "draft_score": 5.0,
+        "final_score": 5.0,
+        "difference": 0.0,
+        "draft_equals_final": true,
+        "draft_reason": "The response accurately identifies the fix version (2.13.2.1), affected versions (>=2.13.0 but <2.13.2.1), and severity (high) for the deeply nested JSON denial of service, directly addressing the user's query without contradictions or irrelevant content, making it actionable.",
+        "draft_status": "ok",
+        "draft_error": null,
+        "interpretation": "No improvement: The Reviewer approved the draft without rewriting it (final text identical to the draft); it only runs rule checks (length, on-topic) and cannot add content. Both versions got the same score."
+      },
+      "status": "ok",
+      "error": null,
+      "evaluation_ms": 240507.0,
+      "judge": {
+        "provider": "ollama",
+        "model": "qwen3:4b",
+        "host": "http://127.0.0.1:11434",
+        "temperature": 0.0,
+        "seed": 36,
+        "num_ctx": 16384,
+        "think": true,
+        "structured_output": true,
+        "framework": "deepeval GEval",
+        "scale": "1-5 (rubric bands (1,1)..(5,5))"
+      }
+    },
+    {
+      "trace_id": "c924d3d9-d177-450d-a745-4a9cc1283fe5",
+      "correlation_id": "c924d3d9-d177-450d-a745-4a9cc1283fe5",
+      "question": "Is golang.org/x/net 0.15.0 affected by the HTTP/2 rapid reset attack, and what should I upgrade to?",
+      "outcome": "evaluated",
+      "evaluated_at": "2026-11-11T23:30:27.531-08:00",
+      "messages": {
+        "plan": {
+          "correlation_id": "c924d3d9-d177-450d-a745-4a9cc1283fe5",
+          "kind": "task",
+          "question": "Is golang.org/x/net 0.15.0 affected by the HTTP/2 rapid reset attack, and what should I upgrade to?",
+          "plan": [
+            "Confirm golang.org/x/net 0.15.0 is affected by HTTP/2 rapid reset.",
+            "Upgrade to golang.org/x/net 0.16.0 or later.",
+            "Validate the fix."
+          ],
+          "planned_at": "2026-11-11T23:30:16.983-08:00",
+          "trace_id": "c924d3d9-d177-450d-a745-4a9cc1283fe5",
+          "_kafka": {
+            "topic": "s0036_tasks",
+            "partition": 1,
+            "offset": 204,
+            "kafka_timestamp_ms": 1794468616988
+          }
+        },
+        "draft": {
+          "correlation_id": "c924d3d9-d177-450d-a745-4a9cc1283fe5",
+          "kind": "draft",
+          "question": "Is golang.org/x/net 0.15.0 affected by the HTTP/2 rapid reset attack, and what should I upgrade to?",
+          "plan": [
+            "Confirm golang.org/x/net 0.15.0 is affected by HTTP/2 rapid reset.",
+            "Upgrade to golang.org/x/net 0.16.0 or later.",
+            "Validate the fix."
+          ],
+          "draft": "Yes, golang.org/x/net 0.15.0 is affected by the HTTP/2 rapid reset denial of service vulnerability (CVE-2023-44487). This high-severity issue exists in all versions below 0.17.0 per the s0036_rel advisory VULN-0036-HW9-19. The fix was implemented in version 0.17.0, resolving the HTTP/2 rapid reset attack vector. You must upgrade to **golang.org/x/net 0.17.0 or later** to mitigate this risk. Do not upgrade to 0.16.0\u2014this version does not contain the fix. Always verify the exact version in your project's dependency management system (e.g., Go modules) to ensure compatibility with the patched code. The vulnerability allows attackers to trigger rapid resets in HTTP/2 connections, causing denial of service. Update promptly to maintain security. (149 words)\n\nSource record: VULN-0036-HW9-19 (s0036_rel id 20092): golang.org/x/net affected < 0.17.0, severity high. CVE-2023-44487: HTTP/2 rapid reset denial of service. Fixed in 0.17.0.",
+          "facts": [
+            "VULN-0036-HW9-19 (s0036_rel id 20092): golang.org/x/net affected < 0.17.0, severity high. CVE-2023-44487: HTTP/2 rapid reset denial of service. Fixed in 0.17.0."
+          ],
+          "written_at": "2026-11-11T23:30:27.491-08:00",
+          "trace_id": "c924d3d9-d177-450d-a745-4a9cc1283fe5",
+          "_kafka": {
+            "topic": "s0036_drafts",
+            "partition": 0,
+            "offset": 299,
+            "kafka_timestamp_ms": 1794468627493
+          }
+        },
+        "final": {
+          "correlation_id": "c924d3d9-d177-450d-a745-4a9cc1283fe5",
+          "status": "approved",
+          "answer": "Yes, golang.org/x/net 0.15.0 is affected by the HTTP/2 rapid reset denial of service vulnerability (CVE-2023-44487). This high-severity issue exists in all versions below 0.17.0 per the s0036_rel advisory VULN-0036-HW9-19. The fix was implemented in version 0.17.0, resolving the HTTP/2 rapid reset attack vector. You must upgrade to **golang.org/x/net 0.17.0 or later** to mitigate this risk. Do not upgrade to 0.16.0\u2014this version does not contain the fix. Always verify the exact version in your project's dependency management system (e.g., Go modules) to ensure compatibility with the patched code. The vulnerability allows attackers to trigger rapid resets in HTTP/2 connections, causing denial of service. Update promptly to maintain security. (149 words)\n\nSource record: VULN-0036-HW9-19 (s0036_rel id 20092): golang.org/x/net affected < 0.17.0, severity high. CVE-2023-44487: HTTP/2 rapid reset denial of service. Fixed in 0.17.0.",
+          "question": "Is golang.org/x/net 0.15.0 affected by the HTTP/2 rapid reset attack, and what should I upgrade to?",
+          "review": {
+            "checks": {
+              "non_empty": true,
+              "length_ok": true,
+              "on_topic": true
+            },
+            "words": 131
+          },
+          "reviewed_at": "2026-11-11T23:30:27.517-08:00",
+          "trace_id": "c924d3d9-d177-450d-a745-4a9cc1283fe5",
+          "_kafka": {
+            "topic": "s0036_final",
+            "partition": 0,
+            "offset": 295,
+            "kafka_timestamp_ms": 1794468627518
+          }
+        }
+      },
+      "plan_quality": {
+        "score": 5.0,
+        "reason": "The plan directly addresses both parts of the question (confirming vulnerability and providing upgrade target) with specific, actionable steps in a sensible order. The validation step is a relevant and standard practice for ensuring the fix works, making it a strong addition without being irrelevant.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 88024.3,
+        "plan": [
+          "Confirm golang.org/x/net 0.15.0 is affected by HTTP/2 rapid reset.",
+          "Upgrade to golang.org/x/net 0.16.0 or later.",
+          "Validate the fix."
+        ]
+      },
+      "writer_helpfulness": {
+        "score": 5.0,
+        "reason": "The response accurately confirms that golang.org/x/net 0.15.0 is affected by CVE-2023-44487 and specifies the required upgrade to 0.17.0 or later, explicitly noting that 0.16.0 lacks the fix. It aligns with the retrieval context and provides direct, actionable guidance without factual errors or padding.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 20159.3,
+        "trace_id": "c924d3d9-d177-450d-a745-4a9cc1283fe5",
+        "grounding_facts": [
+          "VULN-0036-HW9-19 (s0036_rel id 20092): golang.org/x/net affected < 0.17.0, severity high. CVE-2023-44487: HTTP/2 rapid reset denial of service. Fixed in 0.17.0."
+        ]
+      },
+      "final_helpfulness": {
+        "score": 5.0,
+        "reason": "The response accurately states that golang.org/x/net 0.15.0 is affected by CVE-2023-44487 and requires upgrading to 0.17.0 or later (not 0.16.0), with actionable steps to verify the version in Go modules, as per the source record VULN-0036-HW9-19.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 27209.0,
+        "final_answer": "Yes, golang.org/x/net 0.15.0 is affected by the HTTP/2 rapid reset denial of service vulnerability (CVE-2023-44487). This high-severity issue exists in all versions below 0.17.0 per the s0036_rel advisory VULN-0036-HW9-19. The fix was implemented in version 0.17.0, resolving the HTTP/2 rapid reset attack vector. You must upgrade to **golang.org/x/net 0.17.0 or later** to mitigate this risk. Do not upgrade to 0.16.0\u2014this version does not contain the fix. Always verify the exact version in your project's dependency management system (e.g., Go modules) to ensure compatibility with the patched code. The vulnerability allows attackers to trigger rapid resets in HTTP/2 connections, causing denial of service. Update promptly to maintain security. (149 words)\n\nSource record: VULN-0036-HW9-19 (s0036_rel id 20092): golang.org/x/net affected < 0.17.0, severity high. CVE-2023-44487: HTTP/2 rapid reset denial of service. Fixed in 0.17.0.",
+        "review_status": "approved"
+      },
+      "final_vs_draft": {
+        "draft_score": 5.0,
+        "final_score": 5.0,
+        "difference": 0.0,
+        "draft_equals_final": true,
+        "draft_reason": "The response accurately states that golang.org/x/net 0.15.0 is affected by CVE-2023-44487 and requires upgrading to 0.17.0 or later (not 0.16.0), with actionable steps to verify the version in Go modules, as per the source record VULN-0036-HW9-19.",
+        "draft_status": "ok",
+        "draft_error": null,
+        "interpretation": "No improvement: The Reviewer approved the draft without rewriting it (final text identical to the draft); it only runs rule checks (length, on-topic) and cannot add content. Both versions got the same score."
+      },
+      "status": "ok",
+      "error": null,
+      "evaluation_ms": 161811.9,
+      "judge": {
+        "provider": "ollama",
+        "model": "qwen3:4b",
+        "host": "http://127.0.0.1:11434",
+        "temperature": 0.0,
+        "seed": 36,
+        "num_ctx": 16384,
+        "think": true,
+        "structured_output": true,
+        "framework": "deepeval GEval",
+        "scale": "1-5 (rubric bands (1,1)..(5,5))"
+      }
+    },
+    {
+      "trace_id": "7226904b-13a9-4a5a-a270-2809eb2c9f3f",
+      "correlation_id": "7226904b-13a9-4a5a-a270-2809eb2c9f3f",
+      "question": "Why should a team generate a software bill of materials for every release?",
+      "outcome": "evaluated",
+      "evaluated_at": "2026-11-11T23:33:24.090-08:00",
+      "messages": {
+        "plan": {
+          "correlation_id": "7226904b-13a9-4a5a-a270-2809eb2c9f3f",
+          "kind": "task",
+          "question": "Why should a team generate a software bill of materials for every release?",
+          "plan": [
+            "Identify vulnerabilities in dependencies by mapping components to known vulnerabilities.",
+            "Ensure regulatory compliance with standards like NIST or ISO 27001.",
+            "Accelerate patching cycles by pinpointing affected components for timely updates."
+          ],
+          "planned_at": "2026-11-11T23:33:16.522-08:00",
+          "trace_id": "7226904b-13a9-4a5a-a270-2809eb2c9f3f",
+          "_kafka": {
+            "topic": "s0036_tasks",
+            "partition": 0,
+            "offset": 195,
+            "kafka_timestamp_ms": 1794468796523
+          }
+        },
+        "draft": {
+          "correlation_id": "7226904b-13a9-4a5a-a270-2809eb2c9f3f",
+          "kind": "draft",
+          "question": "Why should a team generate a software bill of materials for every release?",
+          "plan": [
+            "Identify vulnerabilities in dependencies by mapping components to known vulnerabilities.",
+            "Ensure regulatory compliance with standards like NIST or ISO 27001.",
+            "Accelerate patching cycles by pinpointing affected components for timely updates."
+          ],
+          "draft": "Generating a software bill of materials (SBOM) for every release is critical because it provides a transparent, machine-readable inventory of all components in a software stack. This enables teams to **identify vulnerabilities in dependencies** by cross-referencing components against known vulnerability databases (e.g., NVD), proactively uncovering risks before they exploit. It also **ensures regulatory compliance** with frameworks like NIST SP 800-161 and ISO 27001, which mandate traceability for security and supply chain integrity\u2014preventing audit failures and legal exposure. Finally, SBOMs **accelerate patching cycles** by precisely pinpointing affected components, reducing remediation time from days to hours. Without this visibility, teams risk undetected critical flaws, non-compliance penalties, and extended downtime during security incidents. In essence, SBOMs transform vulnerability management from reactive to proactive, directly supporting security resilience, regulatory adherence, and operational efficiency in every release cycle. (149 words)",
+          "facts": [],
+          "written_at": "2026-11-11T23:33:24.068-08:00",
+          "trace_id": "7226904b-13a9-4a5a-a270-2809eb2c9f3f",
+          "_kafka": {
+            "topic": "s0036_drafts",
+            "partition": 0,
+            "offset": 300,
+            "kafka_timestamp_ms": 1794468804072
+          }
+        },
+        "final": {
+          "correlation_id": "7226904b-13a9-4a5a-a270-2809eb2c9f3f",
+          "status": "approved",
+          "answer": "Generating a software bill of materials (SBOM) for every release is critical because it provides a transparent, machine-readable inventory of all components in a software stack. This enables teams to **identify vulnerabilities in dependencies** by cross-referencing components against known vulnerability databases (e.g., NVD), proactively uncovering risks before they exploit. It also **ensures regulatory compliance** with frameworks like NIST SP 800-161 and ISO 27001, which mandate traceability for security and supply chain integrity\u2014preventing audit failures and legal exposure. Finally, SBOMs **accelerate patching cycles** by precisely pinpointing affected components, reducing remediation time from days to hours. Without this visibility, teams risk undetected critical flaws, non-compliance penalties, and extended downtime during security incidents. In essence, SBOMs transform vulnerability management from reactive to proactive, directly supporting security resilience, regulatory adherence, and operational efficiency in every release cycle. (149 words)",
+          "question": "Why should a team generate a software bill of materials for every release?",
+          "review": {
+            "checks": {
+              "non_empty": true,
+              "length_ok": true,
+              "on_topic": true
+            },
+            "words": 135
+          },
+          "reviewed_at": "2026-11-11T23:33:24.085-08:00",
+          "trace_id": "7226904b-13a9-4a5a-a270-2809eb2c9f3f",
+          "_kafka": {
+            "topic": "s0036_final",
+            "partition": 0,
+            "offset": 296,
+            "kafka_timestamp_ms": 1794468804085
+          }
+        }
+      },
+      "plan_quality": {
+        "score": 1.0,
+        "reason": "The Actual Output describes steps to generate a software bill of materials (process) rather than reasons for generating it, missing the user's question about why.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 73103.7,
+        "plan": [
+          "Identify vulnerabilities in dependencies by mapping components to known vulnerabilities.",
+          "Ensure regulatory compliance with standards like NIST or ISO 27001.",
+          "Accelerate patching cycles by pinpointing affected components for timely updates."
+        ]
+      },
+      "writer_helpfulness": {
+        "score": 5.0,
+        "reason": "Accurate and direct response using well-established public knowledge without invented versions, CVEs, or severities; provides concrete benefits (vulnerability identification, regulatory compliance, accelerated patching) without omissions or padding.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 28778.4,
+        "trace_id": "7226904b-13a9-4a5a-a270-2809eb2c9f3f",
+        "grounding_facts": []
+      },
+      "final_helpfulness": {
+        "score": 5.0,
+        "reason": "The response is fully relevant and helpful, providing specific examples (NVD, NIST SP 800-161, ISO 27001) and actionable benefits (vulnerability identification, regulatory compliance, accelerated patching) without contradictions or irrelevant content.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 43824.5,
+        "final_answer": "Generating a software bill of materials (SBOM) for every release is critical because it provides a transparent, machine-readable inventory of all components in a software stack. This enables teams to **identify vulnerabilities in dependencies** by cross-referencing components against known vulnerability databases (e.g., NVD), proactively uncovering risks before they exploit. It also **ensures regulatory compliance** with frameworks like NIST SP 800-161 and ISO 27001, which mandate traceability for security and supply chain integrity\u2014preventing audit failures and legal exposure. Finally, SBOMs **accelerate patching cycles** by precisely pinpointing affected components, reducing remediation time from days to hours. Without this visibility, teams risk undetected critical flaws, non-compliance penalties, and extended downtime during security incidents. In essence, SBOMs transform vulnerability management from reactive to proactive, directly supporting security resilience, regulatory adherence, and operational efficiency in every release cycle. (149 words)",
+        "review_status": "approved"
+      },
+      "final_vs_draft": {
+        "draft_score": 5.0,
+        "final_score": 5.0,
+        "difference": 0.0,
+        "draft_equals_final": true,
+        "draft_reason": "The response directly addresses the question with specific, actionable reasons (e.g., identifying vulnerabilities, ensuring compliance with NIST SP 800-161 and ISO 27001, and accelerating patching) without contradictions or irrelevant content.",
+        "draft_status": "ok",
+        "draft_error": null,
+        "interpretation": "No improvement: The Reviewer approved the draft without rewriting it (final text identical to the draft); it only runs rule checks (length, on-topic) and cannot add content. Both versions got the same score."
+      },
+      "status": "ok",
+      "error": null,
+      "evaluation_ms": 181945.4,
+      "judge": {
+        "provider": "ollama",
+        "model": "qwen3:4b",
+        "host": "http://127.0.0.1:11434",
+        "temperature": 0.0,
+        "seed": 36,
+        "num_ctx": 16384,
+        "think": true,
+        "structured_output": true,
+        "framework": "deepeval GEval",
+        "scale": "1-5 (rubric bands (1,1)..(5,5))"
+      }
+    },
+    {
+      "trace_id": "94237b91-630c-4f46-beb2-2afe76254b0c",
+      "correlation_id": "94237b91-630c-4f46-beb2-2afe76254b0c",
+      "question": "Which follow-redirects version stops keeping the Proxy-Authorization header across hosts?",
+      "outcome": "not_evaluated",
+      "evaluated_at": "2026-11-11T23:37:01.052-08:00",
+      "messages": {
+        "plan": {
+          "correlation_id": "94237b91-630c-4f46-beb2-2afe76254b0c",
+          "kind": "task",
+          "question": "Which follow-redirects version stops keeping the Proxy-Authorization header across hosts?",
+          "plan": [
+            "Check vulnerability databases.",
+            "Verify affected versions.",
+            "Apply patches."
+          ],
+          "planned_at": "2026-11-11T23:36:59.282-08:00",
+          "trace_id": "94237b91-630c-4f46-beb2-2afe76254b0c",
+          "inject_fault": "writer",
+          "_kafka": {
+            "topic": "s0036_tasks",
+            "partition": 1,
+            "offset": 205,
+            "kafka_timestamp_ms": 1794469019284
+          }
+        },
+        "dead": {
+          "correlation_id": "94237b91-630c-4f46-beb2-2afe76254b0c",
+          "failed_agent": "writer",
+          "source_topic": "s0036_tasks",
+          "partition": 1,
+          "offset": 205,
+          "attempts": 3,
+          "error": "injected fault (HW10 failed-trace demo): writer could not reach the model (simulated Ollama timeout)",
+          "ts": "2026-11-11T23:37:00.802-08:00",
+          "original": {
+            "correlation_id": "94237b91-630c-4f46-beb2-2afe76254b0c",
+            "kind": "task",
+            "question": "Which follow-redirects version stops keeping the Proxy-Authorization header across hosts?",
+            "plan": [
+              "Check vulnerability databases.",
+              "Verify affected versions.",
+              "Apply patches."
+            ],
+            "planned_at": "2026-11-11T23:36:59.282-08:00",
+            "trace_id": "94237b91-630c-4f46-beb2-2afe76254b0c",
+            "inject_fault": "writer"
+          },
+          "trace_id": "94237b91-630c-4f46-beb2-2afe76254b0c",
+          "_kafka": {
+            "topic": "s0036_dead_letter",
+            "partition": 0,
+            "offset": 3,
+            "kafka_timestamp_ms": 1794469020803
+          }
+        }
+      },
+      "status": "error",
+      "error": "upstream failure: writer moved the message to s0036_dead_letter after 3 attempts: injected fault (HW10 failed-trace demo): writer could not reach the model (simulated Ollama timeout)",
+      "evaluation_ms": 0.4,
+      "judge": {
+        "provider": "ollama",
+        "model": "qwen3:4b",
+        "host": "http://127.0.0.1:11434",
+        "temperature": 0.0,
+        "seed": 36,
+        "num_ctx": 16384,
+        "think": true,
+        "structured_output": true,
+        "framework": "deepeval GEval",
+        "scale": "1-5 (rubric bands (1,1)..(5,5))"
+      }
+    }
+  ]
+}

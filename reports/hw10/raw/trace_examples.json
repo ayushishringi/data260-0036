@@ -1,0 +1,19 @@
+{
+  "cache_hit": {
+    "trace_id": "062f0baa-d2e8-4312-9ee1-cfc1e2db15af",
+    "question": "Which jackson-databind release fixes the deeply nested JSON denial of service, and how severe is it?",
+    "description": "repeat of question 1, answered from the Redis semantic cache"
+  },
+  "cache_miss": {
+    "trace_id": "6ab316ab-7902-427e-99fb-c5f5eb44d44c",
+    "question": "Which jackson-databind release fixes the deeply nested JSON denial of service, and how severe is it?",
+    "description": "new question: cache miss -> planner -> writer -> reviewer -> evaluator"
+  },
+  "failed": {
+    "trace_id": "94237b91-630c-4f46-beb2-2afe76254b0c",
+    "question": "Which follow-redirects version stops keeping the Proxy-Authorization header across hosts?",
+    "failed_stage": "writer",
+    "error": "PipelineFailed: writer failed after 3 attempts: injected fault (HW10 failed-trace demo): writer could not reach the model (simulated Ollama timeout)",
+    "description": "inject_fault=writer: Writer fails 3 attempts, message goes to s0036_dead_letter"
+  }
+}

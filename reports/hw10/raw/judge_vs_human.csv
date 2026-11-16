@@ -1,0 +1,21 @@
+case_id,category,trace_id,human_label,judge_run1,judge_run2,judge_run3,judge_mean,abs_diff_run1,changed_across_runs
+E01,grounded,7aa63fe4-ca3c-4fdb-8a61-8011b22e7c4a,5.0,5.0,5.0,5.0,5.0,0.0,False
+E02,grounded,c12e1115-1246-4210-a651-e8405d1bacd5,4.0,5.0,5.0,5.0,5.0,1.0,False
+E03,grounded,6df2781a-2a88-4c4f-ad94-614e41f8b445,5.0,5.0,5.0,5.0,5.0,0.0,False
+E04,grounded,a14f5406-5d86-4a55-a4ff-54b4dd92a68e,5.0,5.0,5.0,5.0,5.0,0.0,False
+E05,grounded,7801732c-96a8-4ce1-b4d5-b2ce3c27ef8e,3.0,5.0,5.0,5.0,5.0,2.0,False
+E06,grounded,b247c48d-33c8-459e-9e46-a0e01b0f9f31,5.0,5.0,5.0,5.0,5.0,0.0,False
+E07,grounded,1ace7a0d-abc4-41e9-a84d-0b666c9d5447,5.0,5.0,5.0,5.0,5.0,0.0,False
+E08,grounded,a5308d0a-0bbf-4174-b36c-73f153e33ea7,5.0,5.0,5.0,5.0,5.0,0.0,False
+E09,not in database,170ee5a4-117d-403b-b01b-211b4ee46b91,5.0,5.0,5.0,5.0,5.0,0.0,False
+E10,not in database,ac2a3fdb-509a-4d2c-9d8c-8bd767ad8077,3.0,5.0,5.0,5.0,5.0,2.0,False
+E11,not in database,895cb2f9-70d9-4d4e-a6ce-633709580803,3.0,5.0,5.0,5.0,5.0,2.0,False
+E12,not in database,87453aac-021e-4687-ae25-84957bdd5137,1.0,5.0,5.0,5.0,5.0,4.0,False
+E13,not in database,3f730733-4748-457d-9691-70db29670d1c,2.0,5.0,5.0,5.0,5.0,3.0,False
+E14,general,9110b38a-b2fa-4b72-bf8b-0395200d838b,2.0,5.0,5.0,5.0,5.0,3.0,False
+E15,general,3aea3d34-b332-4faa-8f64-b9c1538b2ea3,4.0,5.0,5.0,5.0,5.0,1.0,False
+E16,general,2405d487-b0de-40ca-b051-b4dc43a192df,3.0,5.0,5.0,5.0,5.0,2.0,False
+E17,general,e734a55f-243d-4a1c-80d6-ecbd37f84eeb,4.0,5.0,5.0,5.0,5.0,1.0,False
+E18,vague,ad3e7170-01f0-4be3-93a0-992da99a4e62,3.0,5.0,5.0,5.0,5.0,2.0,False
+E19,vague,708956ee-9f6a-48fd-ba88-30e1e419502f,3.0,5.0,5.0,5.0,5.0,2.0,False
+E20,vague,f42efbf3-18da-4365-b435-5ef1d9881c6e,4.0,5.0,5.0,5.0,5.0,1.0,False

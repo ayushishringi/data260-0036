@@ -1,0 +1,34 @@
+user=ayushishringi host=Ayushis-MacBook-Pro.local time=2026-11-11T22:59:02
+spans -> reports/hw10/traces/spans.jsonl
+2026-11-11T22:59:07.908-08:00 [hw10-e2e] CACHE MISS best_similarity=null threshold=0.85 query="Which jackson-databind release fixes the deeply nested JSON denial of service, and how severe is it?" reason="empty cache"
+2026-11-11T22:59:58.016-08:00 [hw10-e2e] ANSWERED by agent pipeline correlation_id="a7cfcf8f-a225-4122-8c4c-9ba6a82cfc5e" status="approved" stored=true latency_ms=50111.54
+#1 cache miss + evaluate  trace_id=a7cfcf8f-a225-4122-8c4c-9ba6a82cfc5e status=ok    is_cached=False similarity=-      latency_ms=  50111.5
+   evaluation span: ok 225254.36 ms scores={'plan_quality': 4.0, 'writer_helpfulness': 5.0, 'final_helpfulness': 5.0}
+2026-11-11T23:03:43.981-08:00 [hw10-e2e] CACHE MISS best_similarity=0.3334 threshold=0.85 query="Is golang.org/x/net 0.15.0 affected by the HTTP/2 rapid reset attack, and what should I upgrade to?" reason="below threshold"
+2026-11-11T23:04:43.086-08:00 [hw10-e2e] ANSWERED by agent pipeline correlation_id="e1a931b0-8a15-45a4-990b-5cd29d35d5bc" status="approved" stored=true latency_ms=59293.86
+#2 cache miss + evaluate  trace_id=e1a931b0-8a15-45a4-990b-5cd29d35d5bc status=ok    is_cached=False similarity=0.3334 latency_ms=  59293.9
+   evaluation span: ok 175798.84 ms scores={'plan_quality': 5.0, 'writer_helpfulness': 5.0, 'final_helpfulness': 5.0}
+2026-11-11T23:07:39.742-08:00 [hw10-e2e] CACHE MISS best_similarity=0.0372 threshold=0.85 query="Why should a team generate a software bill of materials for every release?" reason="below threshold"
+2026-11-11T23:07:53.801-08:00 [hw10-e2e] ANSWERED by agent pipeline correlation_id="2b58fed7-649f-453d-bff4-1d5b53eb3aff" status="approved" stored=true latency_ms=14109.69
+#3 cache miss + evaluate  trace_id=2b58fed7-649f-453d-bff4-1d5b53eb3aff status=ok    is_cached=False similarity=0.0372 latency_ms=  14109.7
+   evaluation span: error 153447.34 ms scores={'plan_quality': 1.0, 'writer_helpfulness': None, 'final_helpfulness': 5.0}
+2026-11-11T23:10:27.368-08:00 [hw10-e2e] CACHE HIT similarity=1.0 threshold=0.85 cached_query="Which jackson-databind release fixes the deeply nested JSON denial of service, and how severe is it?" latency_ms=45.14
+#4 repeat -> cache hit    trace_id=6b93cfcb-1eda-478b-a98a-9a4aa73ab2aa status=ok    is_cached=True  similarity=1.0000 latency_ms=     45.1
+2026-11-11T23:10:27.387-08:00 [hw10-e2e] CACHE MISS best_similarity=0.2869 threshold=0.85 query="Which follow-redirects version stops keeping the Proxy-Authorization header across hosts?" reason="below threshold"
+#5 injected writer fault  trace_id=655bd9f4-1f7a-400f-bea2-ec498d8e637d status=error is_cached=False similarity=-      latency_ms=  34467.4
+   error: PipelineFailed: writer failed after 3 attempts: injected fault (HW10 failed-trace demo): writer could not reach the model (simulated Ollama timeout)
+   evaluator saw the failure: upstream failure: writer moved the message to s0036_dead_letter after 3 attempts: injected fault (HW10 failed-trace demo): writer could not reach the model (simulated Ollama timeout)
+
+=== Evaluation results (1-5) ===
+a7cfcf8f-a225-4122-8c4c-9ba6a82cfc5e  plan=4.0 writer=5.0 final=5.0 draft=5.0 diff=0.0
+   No improvement: The Reviewer approved the draft without rewriting it (final text identical to the draft); it only runs rule checks (length, on-topic) and cannot add content. Both versions got the same score.
+e1a931b0-8a15-45a4-990b-5cd29d35d5bc  plan=5.0 writer=5.0 final=5.0 draft=5.0 diff=0.0
+   No improvement: The Reviewer approved the draft without rewriting it (final text identical to the draft); it only runs rule checks (length, on-topic) and cannot add content. Both versions got the same score.
+2b58fed7-649f-453d-bff4-1d5b53eb3aff  plan=1.0 writer=None final=5.0 draft=5.0 diff=0.0
+   No improvement: The Reviewer approved the draft without rewriting it (final text identical to the draft); it only runs rule checks (length, on-topic) and cannot add content. Both versions got the same score.
+655bd9f4-1f7a-400f-bea2-ec498d8e637d  not_evaluated: upstream failure: writer moved the message to s0036_dead_letter after 3 attempts: injected fault (HW10 failed-trace demo): writer could not reach the model (simulated Ollama timeout)
+
+=== Trace examples ===
+cache_hit  6b93cfcb-1eda-478b-a98a-9a4aa73ab2aa
+cache_miss a7cfcf8f-a225-4122-8c4c-9ba6a82cfc5e
+failed     655bd9f4-1f7a-400f-bea2-ec498d8e637d

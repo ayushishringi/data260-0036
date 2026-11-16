@@ -1,0 +1,186 @@
+{
+  "verified_at": "2026-11-15T19:41:45",
+  "passed": 21,
+  "total": 21,
+  "checks": [
+    {
+      "check": "spans: every span has trace_id, stage, start/end time, status, error",
+      "ok": true,
+      "detail": "660 spans in reports/hw10/traces/spans.jsonl"
+    },
+    {
+      "check": "spans cover cache lookup, inbox, tasks, drafts, final and the evaluator",
+      "ok": true,
+      "detail": [
+        "cache_lookup",
+        "cache_store",
+        "dead_letter",
+        "evaluation",
+        "planner",
+        "queue_drafts",
+        "queue_final",
+        "queue_inbox",
+        "queue_tasks",
+        "request",
+        "reviewer",
+        "writer"
+      ]
+    },
+    {
+      "check": "one identifier: plan/draft/final messages carry correlation_id == trace_id",
+      "ok": true,
+      "detail": "4 evaluator records"
+    },
+    {
+      "check": "Part 2: >=1 end-to-end question scored on all four criteria (1-5)",
+      "ok": true,
+      "detail": "3 fully scored"
+    },
+    {
+      "check": "Part 2: saved fields (plan reason, writer trace_id, final answer, both scores + interpretation)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "4.2 cache-hit trace: cache_lookup=hit, no agent spans",
+      "ok": true,
+      "detail": [
+        "request",
+        "cache_lookup"
+      ]
+    },
+    {
+      "check": "4.2 cache-miss trace: miss -> planner -> writer -> reviewer -> evaluation, all ok",
+      "ok": true,
+      "detail": [
+        "request",
+        "cache_lookup",
+        "queue_inbox",
+        "planner",
+        "queue_tasks",
+        "writer",
+        "queue_drafts",
+        "reviewer",
+        "queue_final",
+        "cache_store",
+        "evaluation"
+      ]
+    },
+    {
+      "check": "4.2 failed trace: failing stage and error recorded",
+      "ok": true,
+      "detail": "injected fault (HW10 failed-trace demo): writer could not reach the model (simulated Ollama timeout)"
+    },
+    {
+      "check": "4.3: 50 requests, all cache_lookup=miss, none served from cache",
+      "ok": true,
+      "detail": {
+        "requests": 50,
+        "cache_lookup_miss": 50,
+        "served_from_cache": 0,
+        "failed": 0
+      }
+    },
+    {
+      "check": "4.3: stage table recomputes from spans (p50/p95/share for 6 stages)",
+      "ok": true,
+      "detail": {
+        "Cache lookup": 28.49,
+        "Planner": 32057.12,
+        "Writer": 7425.3,
+        "Reviewer": 5.93,
+        "Queue wait (total)": 34.58,
+        "Evaluation": 152454.71,
+        "Other (client, store)": -9.48
+      }
+    },
+    {
+      "check": "4.3: cache-hit latency kept as a separate metric",
+      "ok": true,
+      "detail": {
+        "n": 10,
+        "p50_ms": 4.58,
+        "p95_ms": 31.27
+      }
+    },
+    {
+      "check": "3.1: eval_cases.json has 20 Writer drafts with trace ids",
+      "ok": true,
+      "detail": 20
+    },
+    {
+      "check": "3.1: human_labels.csv has a 1-5 label for every draft",
+      "ok": true,
+      "detail": "20/20 labeled"
+    },
+    {
+      "check": "3.1: cases and labels committed and unchanged",
+      "ok": true,
+      "detail": "5f378d3 2026-11-12T12:25:15-08:00"
+    },
+    {
+      "check": "3.2: Spearman and mean |diff| recompute from judge_vs_human.csv",
+      "ok": true,
+      "detail": {
+        "n": 20,
+        "spearman_rho": null,
+        "spearman_p": null,
+        "mean_abs_diff": 1.3,
+        "exact_agreement": 0.35,
+        "within_1": 0.55,
+        "judge_mean": 5.0,
+        "human_mean": 3.7
+      }
+    },
+    {
+      "check": "3.3: three runs, repeatability recomputes",
+      "ok": true,
+      "detail": {
+        "runs": 3,
+        "cases": 20,
+        "cases_scored_every_run": 20,
+        "cases_changed": 0,
+        "change_rate": 0.0,
+        "pairwise_changes": 0,
+        "pairwise_comparisons": 60,
+        "pairwise_change_rate": 0.0,
+        "mean_abs_change": 0.0,
+        "mean_abs_change_when_changed": 0.0,
+        "max_abs_change": 0.0,
+        "failed_scores": 0
+      }
+    },
+    {
+      "check": "3.1: labels committed before the judge ran",
+      "ok": true,
+      "detail": [
+        "2026-11-12T12:25:15-08:00",
+        "2026-11-12T12:59:04"
+      ]
+    },
+    {
+      "check": "dashboard: Summary, Evaluation and Trace lookup pages render without exceptions",
+      "ok": true,
+      "detail": {
+        "summary": [],
+        "evaluation": [],
+        "trace": []
+      }
+    },
+    {
+      "check": "dashboard uses @st.cache_data and @st.cache_resource",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "unit tests (tests/test_hw10.py)",
+      "ok": true,
+      "detail": "OK"
+    },
+    {
+      "check": "ruff on HW10 files",
+      "ok": true,
+      "detail": "All checks passed!"
+    }
+  ]
+}

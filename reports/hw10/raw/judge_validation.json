@@ -1,0 +1,107 @@
+{
+  "ran_at": "2026-11-12T12:59:04",
+  "frozen": {
+    "commit": "5f378d3e32658665bdb791c9f586c7a887041873",
+    "committed_at": "2026-11-12T12:25:15-08:00",
+    "eval_cases.json_sha256": "7e117ca31fc4cb6e39e9db93ef3643e5f9ca1dabd109f62cc70242723eb97a00",
+    "human_labels.csv_sha256": "915b6f5e2fd8a81c183147a7875492a68e55e3706ee1ab58b45800ed4ab10054"
+  },
+  "judge": {
+    "provider": "ollama",
+    "model": "qwen3:4b",
+    "host": "http://127.0.0.1:11434",
+    "temperature": 0.0,
+    "seed": 36,
+    "num_ctx": 16384,
+    "think": true,
+    "structured_output": true,
+    "framework": "deepeval GEval",
+    "scale": "1-5 (rubric bands (1,1)..(5,5))"
+  },
+  "metric": {
+    "name": "Writer Helpfulness",
+    "evaluation_steps": [
+      "Read the question (input) and the Writer's draft (actual output). Retrieval context, when present, holds the advisory database facts the draft must agree with.",
+      "Check accuracy: package, affected versions, fixed version, severity and CVE must match the retrieval context when it is given, and must not be invented or contradictory.",
+      "Check usefulness: the draft answers the question directly and gives concrete, correct guidance (such as which version to upgrade to).",
+      "Lower the score for factual errors, hedging that avoids the answer, or padding that hides it."
+    ],
+    "rubric": [
+      "Wrong, off-topic or harmful; does not answer the question.",
+      "Answers partly but contains a major factual error or misses the main point.",
+      "Answers the question with minor errors or significant omissions or padding.",
+      "Accurate and useful with small issues (verbosity, one missing detail).",
+      "Accurate, direct and complete; a practitioner could act on it immediately."
+    ]
+  },
+  "primary": {
+    "run": 1,
+    "n": 20,
+    "spearman_rho": null,
+    "spearman_p": null,
+    "mean_abs_diff": 1.3,
+    "exact_agreement": 0.35,
+    "within_1": 0.55,
+    "judge_mean": 5.0,
+    "human_mean": 3.7
+  },
+  "per_run": [
+    {
+      "run": 1,
+      "n": 20,
+      "spearman_rho": null,
+      "spearman_p": null,
+      "mean_abs_diff": 1.3,
+      "exact_agreement": 0.35,
+      "within_1": 0.55,
+      "judge_mean": 5.0,
+      "human_mean": 3.7
+    },
+    {
+      "run": 2,
+      "n": 20,
+      "spearman_rho": null,
+      "spearman_p": null,
+      "mean_abs_diff": 1.3,
+      "exact_agreement": 0.35,
+      "within_1": 0.55,
+      "judge_mean": 5.0,
+      "human_mean": 3.7
+    },
+    {
+      "run": 3,
+      "n": 20,
+      "spearman_rho": null,
+      "spearman_p": null,
+      "mean_abs_diff": 1.3,
+      "exact_agreement": 0.35,
+      "within_1": 0.55,
+      "judge_mean": 5.0,
+      "human_mean": 3.7
+    }
+  ],
+  "mean_of_runs": {
+    "n": 20,
+    "spearman_rho": null,
+    "spearman_p": null,
+    "mean_abs_diff": 1.3,
+    "exact_agreement": 0.35,
+    "within_1": 0.55,
+    "judge_mean": 5.0,
+    "human_mean": 3.7
+  },
+  "repeatability": {
+    "runs": 3,
+    "cases": 20,
+    "cases_scored_every_run": 20,
+    "cases_changed": 0,
+    "change_rate": 0.0,
+    "pairwise_changes": 0,
+    "pairwise_comparisons": 60,
+    "pairwise_change_rate": 0.0,
+    "mean_abs_change": 0.0,
+    "mean_abs_change_when_changed": 0.0,
+    "max_abs_change": 0.0,
+    "failed_scores": 0
+  }
+}

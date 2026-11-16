@@ -1,0 +1,568 @@
+{
+  "frozen": {
+    "commit": "5f378d3e32658665bdb791c9f586c7a887041873",
+    "committed_at": "2026-11-12T12:25:15-08:00",
+    "eval_cases.json_sha256": "7e117ca31fc4cb6e39e9db93ef3643e5f9ca1dabd109f62cc70242723eb97a00",
+    "human_labels.csv_sha256": "915b6f5e2fd8a81c183147a7875492a68e55e3706ee1ab58b45800ed4ab10054"
+  },
+  "judge": {
+    "provider": "ollama",
+    "model": "qwen3:4b",
+    "host": "http://127.0.0.1:11434",
+    "temperature": 0.0,
+    "seed": 36,
+    "num_ctx": 16384,
+    "think": true,
+    "structured_output": true,
+    "framework": "deepeval GEval",
+    "scale": "1-5 (rubric bands (1,1)..(5,5))"
+  },
+  "runs": [
+    [
+      {
+        "case_id": "E01",
+        "trace_id": "7aa63fe4-ca3c-4fdb-8a61-8011b22e7c4a",
+        "score": 5.0,
+        "reason": "The response accurately identifies version 1.2.6 as the fix for the prototype pollution bug in minimist, matching the retrieval context (minimist affected >=1.0.0, <1.2.6; fixed in 1.2.6) without factual errors or hedging, providing direct actionable guidance.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 20340.8
+      },
+      {
+        "case_id": "E02",
+        "trace_id": "c12e1115-1246-4210-a651-e8405d1bacd5",
+        "score": 5.0,
+        "reason": "The response accurately answers the question with no factual errors, provides concrete actionable guidance (use `yaml.safe_load` and upgrade to 5.4+), and is direct without hedging or padding.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 36222.6
+      },
+      {
+        "case_id": "E03",
+        "trace_id": "6df2781a-2a88-4c4f-ad94-614e41f8b445",
+        "score": 5.0,
+        "reason": "The response accurately states high severity and fixed version 10.2.0, matching the retrieval context without factual errors or padding.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 55952.5
+      },
+      {
+        "case_id": "E04",
+        "trace_id": "a14f5406-5d86-4a55-a4ff-54b4dd92a68e",
+        "score": 5.0,
+        "reason": "The output accurately confirms Express 4.18.2 is vulnerable per the advisory (affected versions < 4.19.2) and specifies the fixed version (4.19.2) without hedging or padding, matching the retrieval context exactly and providing actionable guidance.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 26668.4
+      },
+      {
+        "case_id": "E05",
+        "trace_id": "7801732c-96a8-4ce1-b4d5-b2ce3c27ef8e",
+        "score": 5.0,
+        "reason": "Accurate match to retrieval context for affected versions (>=6.0.0 and <6.1.2), fixed version (6.1.2), severity (high), and CVE (CVE-2021-32803). Direct answer with actionable guidance and no hedging.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 22091.0
+      },
+      {
+        "case_id": "E06",
+        "trace_id": "b247c48d-33c8-459e-9e46-a0e01b0f9f31",
+        "score": 5.0,
+        "reason": "Accurately matches retrieval context on affected versions (>=0.8.1, <1.6.0), fixed version (1.6.0), and CVE (CVE-2023-45857). Provides concrete, actionable frontend steps without hedging or padding; practitioner can act immediately.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 32568.4
+      },
+      {
+        "case_id": "E07",
+        "trace_id": "1ace7a0d-abc4-41e9-a84d-0b666c9d5447",
+        "score": 5.0,
+        "reason": "The response accurately states moment.js 2.29.4 is not vulnerable, matches the retrieval context's affected range (>=2.18.0 and <2.29.4), fixed version (2.29.4), severity (high), and CVE (CVE-2022-31129) without factual errors or hedging, enabling immediate action.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 44853.7
+      },
+      {
+        "case_id": "E08",
+        "trace_id": "a5308d0a-0bbf-4174-b36c-73f153e33ea7",
+        "score": 5.0,
+        "reason": "Accurately matches retrieval context (Jinja2 < 3.1.3, medium severity, fixed in 3.1.3) with direct, actionable guidance (upgrade to 3.1.3) and no factual errors or padding.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 28069.8
+      },
+      {
+        "case_id": "E09",
+        "trace_id": "170ee5a4-117d-403b-b01b-211b4ee46b91",
+        "score": 5.0,
+        "reason": "The output accurately identifies the fixed version (1.0.1g) and affected versions (1.0.1e and earlier), with explicit clarification that 1.0.1f is vulnerable, matching well-established public knowledge and providing actionable guidance without hedging or padding.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 56261.1
+      },
+      {
+        "case_id": "E10",
+        "trace_id": "ac2a3fdb-509a-4d2c-9d8c-8bd767ad8077",
+        "score": 5.0,
+        "reason": "The response accurately confirms `event-stream` is no longer compromised (removed in 2018) with correct version (v3.2.0), CVE (CVE-2017-12000), and actionable guidance, using well-established public knowledge without invented details.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 38635.6
+      },
+      {
+        "case_id": "E11",
+        "trace_id": "895cb2f9-70d9-4d4e-a6ce-633709580803",
+        "score": 5.0,
+        "reason": "The output accurately states that cryptography 3.2.0 and 3.2.1 are affected by CVE-2021-43575 with the fix in 3.2.2, matching well-established public knowledge without invented details. It provides direct, actionable guidance without hedging or padding.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 33347.4
+      },
+      {
+        "case_id": "E12",
+        "trace_id": "87453aac-021e-4687-ae25-84957bdd5137",
+        "score": 5.0,
+        "reason": "The response accurately identifies the fixed spring-core version as 5.3.20, matches the affected versions (5.3.0-5.3.19), and provides clear upgrade guidance without factual errors or hedging, meeting the criteria for immediate practitioner action.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 40052.5
+      },
+      {
+        "case_id": "E13",
+        "trace_id": "3f730733-4748-457d-9691-70db29670d1c",
+        "score": 5.0,
+        "reason": "The response accurately identifies the real CVE-2023-3231 and vulnerable version range (<5.2.5) without invention, provides concrete steps to check vulnerability, and actionable guidance (update to 5.2.5+). It is direct, complete, and immediately actionable.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 29797.8
+      },
+      {
+        "case_id": "E14",
+        "trace_id": "9110b38a-b2fa-4b72-bf8b-0395200d838b",
+        "score": 5.0,
+        "reason": "The output accurately describes standard npm vulnerability checking commands without inventing versions, CVEs, or severities, providing concrete steps for immediate action.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 38641.1
+      },
+      {
+        "case_id": "E15",
+        "trace_id": "3aea3d34-b332-4faa-8f64-b9c1538b2ea3",
+        "score": 5.0,
+        "reason": "The response accurately explains the difference without inventing versions, CVEs, or severities (as per retrieval context), provides concrete guidance, and is direct and complete for immediate practitioner action.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 27704.4
+      },
+      {
+        "case_id": "E16",
+        "trace_id": "2405d487-b0de-40ca-b051-b4dc43a192df",
+        "score": 5.0,
+        "reason": "The response directly answers the question with concrete steps (using `pipdeptree -p`, pinning in `requirements.txt`, and `pip check`) without inventing versions, CVEs, or severities, and provides clear benefits without hedging or padding. It is accurate and complete for immediate practitioner action.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 21158.6
+      },
+      {
+        "case_id": "E17",
+        "trace_id": "e734a55f-243d-4a1c-80d6-ecbd37f84eeb",
+        "score": 5.0,
+        "reason": "The output accurately explains that a CVSS 9.8 score indicates critical severity requiring immediate patching (within hours/days) without inventing versions, CVEs, or severities, and provides concrete, actionable guidance that a practitioner could implement immediately.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 21132.9
+      },
+      {
+        "case_id": "E18",
+        "trace_id": "ad3e7170-01f0-4be3-93a0-992da99a4e62",
+        "score": 5.0,
+        "reason": "The output accurately addresses the question by explaining context-dependency and providing concrete steps without inventing versions or CVEs; the example `express@4.18.2` is a real version that fixes critical issues per public knowledge, and the guidance is actionable immediately.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 29293.5
+      },
+      {
+        "case_id": "E19",
+        "trace_id": "708956ee-9f6a-48fd-ba88-30e1e419502f",
+        "score": 5.0,
+        "reason": "The response accurately matches the retrieval context on affected versions (<4.17.21), fixed version (4.17.21), severity (high), and CVE (CVE-2021-23337), and provides concrete, actionable guidance for immediate patching without hedging or padding.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 16266.2
+      },
+      {
+        "case_id": "E20",
+        "trace_id": "f42efbf3-18da-4365-b435-5ef1d9881c6e",
+        "score": 5.0,
+        "reason": "The response provides concrete steps without inventing versions, CVEs, or severities (as required by the retrieval context), directly answers the question, and is immediately actionable.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 30487.1
+      }
+    ],
+    [
+      {
+        "case_id": "E01",
+        "trace_id": "7aa63fe4-ca3c-4fdb-8a61-8011b22e7c4a",
+        "score": 5.0,
+        "reason": "The response accurately identifies version 1.2.6 as the fix for the prototype pollution bug in minimist, matching the retrieval context (minimist affected >=1.0.0, <1.2.6; fixed in 1.2.6) without factual errors or hedging, providing direct actionable guidance.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 19890.1
+      },
+      {
+        "case_id": "E02",
+        "trace_id": "c12e1115-1246-4210-a651-e8405d1bacd5",
+        "score": 5.0,
+        "reason": "The response accurately answers the question with no factual errors, provides concrete actionable guidance (use `yaml.safe_load` and upgrade to 5.4+), and is direct without hedging or padding.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 38983.9
+      },
+      {
+        "case_id": "E03",
+        "trace_id": "6df2781a-2a88-4c4f-ad94-614e41f8b445",
+        "score": 5.0,
+        "reason": "The response accurately states high severity and fixed version 10.2.0, matching the retrieval context without factual errors or padding.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 55569.9
+      },
+      {
+        "case_id": "E04",
+        "trace_id": "a14f5406-5d86-4a55-a4ff-54b4dd92a68e",
+        "score": 5.0,
+        "reason": "The output accurately confirms Express 4.18.2 is vulnerable per the advisory (affected versions < 4.19.2) and specifies the fixed version (4.19.2) without hedging or padding, matching the retrieval context exactly and providing actionable guidance.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 28038.7
+      },
+      {
+        "case_id": "E05",
+        "trace_id": "7801732c-96a8-4ce1-b4d5-b2ce3c27ef8e",
+        "score": 5.0,
+        "reason": "Accurate match to retrieval context for affected versions (>=6.0.0 and <6.1.2), fixed version (6.1.2), severity (high), and CVE (CVE-2021-32803). Direct answer with actionable guidance and no hedging.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 23985.9
+      },
+      {
+        "case_id": "E06",
+        "trace_id": "b247c48d-33c8-459e-9e46-a0e01b0f9f31",
+        "score": 5.0,
+        "reason": "Accurately matches retrieval context on affected versions (>=0.8.1, <1.6.0), fixed version (1.6.0), and CVE (CVE-2023-45857). Provides concrete, actionable frontend steps without hedging or padding; practitioner can act immediately.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 35850.6
+      },
+      {
+        "case_id": "E07",
+        "trace_id": "1ace7a0d-abc4-41e9-a84d-0b666c9d5447",
+        "score": 5.0,
+        "reason": "The response accurately states moment.js 2.29.4 is not vulnerable, matches the retrieval context's affected range (>=2.18.0 and <2.29.4), fixed version (2.29.4), severity (high), and CVE (CVE-2022-31129) without factual errors or hedging, enabling immediate action.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 48236.7
+      },
+      {
+        "case_id": "E08",
+        "trace_id": "a5308d0a-0bbf-4174-b36c-73f153e33ea7",
+        "score": 5.0,
+        "reason": "Accurately matches retrieval context (Jinja2 < 3.1.3, medium severity, fixed in 3.1.3) with direct, actionable guidance (upgrade to 3.1.3) and no factual errors or padding.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 32574.9
+      },
+      {
+        "case_id": "E09",
+        "trace_id": "170ee5a4-117d-403b-b01b-211b4ee46b91",
+        "score": 5.0,
+        "reason": "The output accurately identifies the fixed version (1.0.1g) and affected versions (1.0.1e and earlier), with explicit clarification that 1.0.1f is vulnerable, matching well-established public knowledge and providing actionable guidance without hedging or padding.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 62161.6
+      },
+      {
+        "case_id": "E10",
+        "trace_id": "ac2a3fdb-509a-4d2c-9d8c-8bd767ad8077",
+        "score": 5.0,
+        "reason": "The response accurately confirms `event-stream` is no longer compromised (removed in 2018) with correct version (v3.2.0), CVE (CVE-2017-12000), and actionable guidance, using well-established public knowledge without invented details.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 41588.7
+      },
+      {
+        "case_id": "E11",
+        "trace_id": "895cb2f9-70d9-4d4e-a6ce-633709580803",
+        "score": 5.0,
+        "reason": "The output accurately states that cryptography 3.2.0 and 3.2.1 are affected by CVE-2021-43575 with the fix in 3.2.2, matching well-established public knowledge without invented details. It provides direct, actionable guidance without hedging or padding.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 34743.0
+      },
+      {
+        "case_id": "E12",
+        "trace_id": "87453aac-021e-4687-ae25-84957bdd5137",
+        "score": 5.0,
+        "reason": "The response accurately identifies the fixed spring-core version as 5.3.20, matches the affected versions (5.3.0-5.3.19), and provides clear upgrade guidance without factual errors or hedging, meeting the criteria for immediate practitioner action.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 40860.7
+      },
+      {
+        "case_id": "E13",
+        "trace_id": "3f730733-4748-457d-9691-70db29670d1c",
+        "score": 5.0,
+        "reason": "The response accurately identifies the real CVE-2023-3231 and vulnerable version range (<5.2.5) without invention, provides concrete steps to check vulnerability, and actionable guidance (update to 5.2.5+). It is direct, complete, and immediately actionable.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 29077.3
+      },
+      {
+        "case_id": "E14",
+        "trace_id": "9110b38a-b2fa-4b72-bf8b-0395200d838b",
+        "score": 5.0,
+        "reason": "The output accurately describes standard npm vulnerability checking commands without inventing versions, CVEs, or severities, providing concrete steps for immediate action.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 40676.6
+      },
+      {
+        "case_id": "E15",
+        "trace_id": "3aea3d34-b332-4faa-8f64-b9c1538b2ea3",
+        "score": 5.0,
+        "reason": "The response accurately explains the difference without inventing versions, CVEs, or severities (as per retrieval context), provides concrete guidance, and is direct and complete for immediate practitioner action.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 30289.9
+      },
+      {
+        "case_id": "E16",
+        "trace_id": "2405d487-b0de-40ca-b051-b4dc43a192df",
+        "score": 5.0,
+        "reason": "The response directly answers the question with concrete steps (using `pipdeptree -p`, pinning in `requirements.txt`, and `pip check`) without inventing versions, CVEs, or severities, and provides clear benefits without hedging or padding. It is accurate and complete for immediate practitioner action.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 23152.2
+      },
+      {
+        "case_id": "E17",
+        "trace_id": "e734a55f-243d-4a1c-80d6-ecbd37f84eeb",
+        "score": 5.0,
+        "reason": "The output accurately explains that a CVSS 9.8 score indicates critical severity requiring immediate patching (within hours/days) without inventing versions, CVEs, or severities, and provides concrete, actionable guidance that a practitioner could implement immediately.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 22605.2
+      },
+      {
+        "case_id": "E18",
+        "trace_id": "ad3e7170-01f0-4be3-93a0-992da99a4e62",
+        "score": 5.0,
+        "reason": "The output accurately addresses the question by explaining context-dependency and providing concrete steps without inventing versions or CVEs; the example `express@4.18.2` is a real version that fixes critical issues per public knowledge, and the guidance is actionable immediately.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 30824.2
+      },
+      {
+        "case_id": "E19",
+        "trace_id": "708956ee-9f6a-48fd-ba88-30e1e419502f",
+        "score": 5.0,
+        "reason": "The response accurately matches the retrieval context on affected versions (<4.17.21), fixed version (4.17.21), severity (high), and CVE (CVE-2021-23337), and provides concrete, actionable guidance for immediate patching without hedging or padding.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 17950.3
+      },
+      {
+        "case_id": "E20",
+        "trace_id": "f42efbf3-18da-4365-b435-5ef1d9881c6e",
+        "score": 5.0,
+        "reason": "The response provides concrete steps without inventing versions, CVEs, or severities (as required by the retrieval context), directly answers the question, and is immediately actionable.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 30213.2
+      }
+    ],
+    [
+      {
+        "case_id": "E01",
+        "trace_id": "7aa63fe4-ca3c-4fdb-8a61-8011b22e7c4a",
+        "score": 5.0,
+        "reason": "The response accurately identifies version 1.2.6 as the fix for the prototype pollution bug in minimist, matching the retrieval context (minimist affected >=1.0.0, <1.2.6; fixed in 1.2.6) without factual errors or hedging, providing direct actionable guidance.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 20474.1
+      },
+      {
+        "case_id": "E02",
+        "trace_id": "c12e1115-1246-4210-a651-e8405d1bacd5",
+        "score": 5.0,
+        "reason": "The response accurately answers the question with no factual errors, provides concrete actionable guidance (use `yaml.safe_load` and upgrade to 5.4+), and is direct without hedging or padding.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 38407.6
+      },
+      {
+        "case_id": "E03",
+        "trace_id": "6df2781a-2a88-4c4f-ad94-614e41f8b445",
+        "score": 5.0,
+        "reason": "The response accurately states high severity and fixed version 10.2.0, matching the retrieval context without factual errors or padding.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 55585.3
+      },
+      {
+        "case_id": "E04",
+        "trace_id": "a14f5406-5d86-4a55-a4ff-54b4dd92a68e",
+        "score": 5.0,
+        "reason": "The output accurately confirms Express 4.18.2 is vulnerable per the advisory (affected versions < 4.19.2) and specifies the fixed version (4.19.2) without hedging or padding, matching the retrieval context exactly and providing actionable guidance.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 29459.6
+      },
+      {
+        "case_id": "E05",
+        "trace_id": "7801732c-96a8-4ce1-b4d5-b2ce3c27ef8e",
+        "score": 5.0,
+        "reason": "Accurate match to retrieval context for affected versions (>=6.0.0 and <6.1.2), fixed version (6.1.2), severity (high), and CVE (CVE-2021-32803). Direct answer with actionable guidance and no hedging.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 24916.2
+      },
+      {
+        "case_id": "E06",
+        "trace_id": "b247c48d-33c8-459e-9e46-a0e01b0f9f31",
+        "score": 5.0,
+        "reason": "Accurately matches retrieval context on affected versions (>=0.8.1, <1.6.0), fixed version (1.6.0), and CVE (CVE-2023-45857). Provides concrete, actionable frontend steps without hedging or padding; practitioner can act immediately.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 36762.3
+      },
+      {
+        "case_id": "E07",
+        "trace_id": "1ace7a0d-abc4-41e9-a84d-0b666c9d5447",
+        "score": 5.0,
+        "reason": "The response accurately states moment.js 2.29.4 is not vulnerable, matches the retrieval context's affected range (>=2.18.0 and <2.29.4), fixed version (2.29.4), severity (high), and CVE (CVE-2022-31129) without factual errors or hedging, enabling immediate action.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 47604.8
+      },
+      {
+        "case_id": "E08",
+        "trace_id": "a5308d0a-0bbf-4174-b36c-73f153e33ea7",
+        "score": 5.0,
+        "reason": "Accurately matches retrieval context (Jinja2 < 3.1.3, medium severity, fixed in 3.1.3) with direct, actionable guidance (upgrade to 3.1.3) and no factual errors or padding.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 30488.2
+      },
+      {
+        "case_id": "E09",
+        "trace_id": "170ee5a4-117d-403b-b01b-211b4ee46b91",
+        "score": 5.0,
+        "reason": "The output accurately identifies the fixed version (1.0.1g) and affected versions (1.0.1e and earlier), with explicit clarification that 1.0.1f is vulnerable, matching well-established public knowledge and providing actionable guidance without hedging or padding.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 58816.3
+      },
+      {
+        "case_id": "E10",
+        "trace_id": "ac2a3fdb-509a-4d2c-9d8c-8bd767ad8077",
+        "score": 5.0,
+        "reason": "The response accurately confirms `event-stream` is no longer compromised (removed in 2018) with correct version (v3.2.0), CVE (CVE-2017-12000), and actionable guidance, using well-established public knowledge without invented details.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 38786.5
+      },
+      {
+        "case_id": "E11",
+        "trace_id": "895cb2f9-70d9-4d4e-a6ce-633709580803",
+        "score": 5.0,
+        "reason": "The output accurately states that cryptography 3.2.0 and 3.2.1 are affected by CVE-2021-43575 with the fix in 3.2.2, matching well-established public knowledge without invented details. It provides direct, actionable guidance without hedging or padding.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 34189.6
+      },
+      {
+        "case_id": "E12",
+        "trace_id": "87453aac-021e-4687-ae25-84957bdd5137",
+        "score": 5.0,
+        "reason": "The response accurately identifies the fixed spring-core version as 5.3.20, matches the affected versions (5.3.0-5.3.19), and provides clear upgrade guidance without factual errors or hedging, meeting the criteria for immediate practitioner action.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 39917.8
+      },
+      {
+        "case_id": "E13",
+        "trace_id": "3f730733-4748-457d-9691-70db29670d1c",
+        "score": 5.0,
+        "reason": "The response accurately identifies the real CVE-2023-3231 and vulnerable version range (<5.2.5) without invention, provides concrete steps to check vulnerability, and actionable guidance (update to 5.2.5+). It is direct, complete, and immediately actionable.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 29285.7
+      },
+      {
+        "case_id": "E14",
+        "trace_id": "9110b38a-b2fa-4b72-bf8b-0395200d838b",
+        "score": 5.0,
+        "reason": "The output accurately describes standard npm vulnerability checking commands without inventing versions, CVEs, or severities, providing concrete steps for immediate action.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 39444.4
+      },
+      {
+        "case_id": "E15",
+        "trace_id": "3aea3d34-b332-4faa-8f64-b9c1538b2ea3",
+        "score": 5.0,
+        "reason": "The response accurately explains the difference without inventing versions, CVEs, or severities (as per retrieval context), provides concrete guidance, and is direct and complete for immediate practitioner action.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 30027.1
+      },
+      {
+        "case_id": "E16",
+        "trace_id": "2405d487-b0de-40ca-b051-b4dc43a192df",
+        "score": 5.0,
+        "reason": "The response directly answers the question with concrete steps (using `pipdeptree -p`, pinning in `requirements.txt`, and `pip check`) without inventing versions, CVEs, or severities, and provides clear benefits without hedging or padding. It is accurate and complete for immediate practitioner action.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 21391.3
+      },
+      {
+        "case_id": "E17",
+        "trace_id": "e734a55f-243d-4a1c-80d6-ecbd37f84eeb",
+        "score": 5.0,
+        "reason": "The output accurately explains that a CVSS 9.8 score indicates critical severity requiring immediate patching (within hours/days) without inventing versions, CVEs, or severities, and provides concrete, actionable guidance that a practitioner could implement immediately.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 21021.0
+      },
+      {
+        "case_id": "E18",
+        "trace_id": "ad3e7170-01f0-4be3-93a0-992da99a4e62",
+        "score": 5.0,
+        "reason": "The output accurately addresses the question by explaining context-dependency and providing concrete steps without inventing versions or CVEs; the example `express@4.18.2` is a real version that fixes critical issues per public knowledge, and the guidance is actionable immediately.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 30149.2
+      },
+      {
+        "case_id": "E19",
+        "trace_id": "708956ee-9f6a-48fd-ba88-30e1e419502f",
+        "score": 5.0,
+        "reason": "The response accurately matches the retrieval context on affected versions (<4.17.21), fixed version (4.17.21), severity (high), and CVE (CVE-2021-23337), and provides concrete, actionable guidance for immediate patching without hedging or padding.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 16283.4
+      },
+      {
+        "case_id": "E20",
+        "trace_id": "f42efbf3-18da-4365-b435-5ef1d9881c6e",
+        "score": 5.0,
+        "reason": "The response provides concrete steps without inventing versions, CVEs, or severities (as required by the retrieval context), directly answers the question, and is immediately actionable.",
+        "status": "ok",
+        "error": null,
+        "judge_ms": 29719.6
+      }
+    ]
+  ]
+}
