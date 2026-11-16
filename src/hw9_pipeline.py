@@ -64,8 +64,10 @@ class PipelineClient:
 class AgentStack:
     """Context manager running the three HW8 agents for a HW9 script."""
 
-    def __init__(self, log_dir: Path) -> None:
+    def __init__(self, log_dir: Path, agents: tuple[str, ...] = ("planner", "writer", "reviewer"),
+                 extra_env: dict[str, str] | None = None) -> None:
         self.log_dir = log_dir
+        self.agents, self.extra_env = agents, extra_env or {}
         self.external = os.getenv("HW9_EXTERNAL_AGENTS", "0") == "1"
         self.procs: list[tuple[subprocess.Popen, Path]] = []
         # New consumer groups per run: a new group starts at the end of each topic, so messages left
@@ -76,11 +78,11 @@ class AgentStack:
         if self.external:
             return self
         self.log_dir.mkdir(parents=True, exist_ok=True)
-        for agent in ("planner", "writer", "reviewer"):
+        for agent in self.agents:
             path = self.log_dir / f"{agent}.log"
             stream = path.open("a", encoding="utf-8")
             env = {**os.environ, **AGENT_ENV, "HW8_GROUP_SUFFIX": self.group_suffix, "HW8_INSTANCE": agent,
-                   "HW8_LOG_DIR": str(self.log_dir / "jsonl")}
+                   "HW8_LOG_DIR": str(self.log_dir / "jsonl"), **self.extra_env}
             proc = subprocess.Popen([sys.executable, "-u", f"{agent}.py"], cwd=ROOT, env=env,
                                     stdout=stream, stderr=subprocess.STDOUT)
             self.procs.append((proc, path))

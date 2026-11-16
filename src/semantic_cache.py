@@ -10,6 +10,8 @@ CachedQA.ask():
   miss -> HW8 agent path (s0036_inbox -> ... -> s0036_final), store the answer, is_cached=False
 Invalidation (Part 3.5): "version" re-reads the record(s) behind a hit and treats a changed
 data_version as a miss (the stale entry is deleted); "none" returns whatever is cached.
+HW10: ask(..., trace_id=...) writes a cache_lookup span (result hit / miss / stale) and, on a miss,
+sends the same id to the agents as the correlation_id, so one trace covers cache, Kafka and evaluator.
 """
 
 from __future__ import annotations
@@ -25,7 +27,7 @@ from redis.commands.search.field import NumericField, TagField, TextField, Vecto
 from redis.commands.search.indexDefinition import IndexDefinition, IndexType
 from redis.commands.search.query import Query
 
-from src import advisory_lookup
+from src import advisory_lookup, tracing
 from src.kafka_common import PREFIX, log
 
 INDEX_NAME = f"{PREFIX}:idx:qcache"
@@ -129,11 +131,12 @@ class CachedQA:
         self.threshold, self.invalidation, self.store_on_miss = threshold, invalidation, store_on_miss
         self.component = component
 
-    def ask(self, query: str, threshold: float | None = None) -> dict[str, Any]:
+    def ask(self, query: str, threshold: float | None = None, trace_id: str | None = None) -> dict[str, Any]:
         """Answer one query; the result carries is_cached, similarity and latency_ms."""
 
         threshold = self.threshold if threshold is None else threshold
         timings: dict[str, float] = {}
+        lookup_start = time.time()
         t0 = time.perf_counter()
         vector = self.embedder.embed(query)
         t1 = time.perf_counter()
@@ -157,19 +160,27 @@ class CachedQA:
                     cached_query=best["query"], stored_version=best["data_version"], current_version=current)
             else:
                 latency = ms(t0, time.perf_counter())
+                tracing.write_span(trace_id, "cache_lookup", lookup_start, time.time(), component=self.component,
+                                   result="hit", similarity=similarity, threshold=threshold,
+                                   matched_query=best["query"], cache_key=best["key"])
                 log(self.component, "CACHE HIT", similarity=similarity, threshold=threshold,
                     cached_query=best["query"], latency_ms=latency)
                 return {**result, "is_cached": True, "answer": best["answer"], "data_version": best["data_version"],
                         "record_ids": best["record_ids"], "latency_ms": latency, "timings": timings}
 
+        reason = "stale" if stale else ("empty cache" if best is None else "below threshold")
+        tracing.write_span(trace_id, "cache_lookup", lookup_start, time.time(), component=self.component,
+                           result="stale" if stale else "miss", reason=reason, similarity=similarity,
+                           threshold=threshold, matched_query=best["query"] if best else None)
         log(self.component, "CACHE MISS", best_similarity=similarity, threshold=threshold, query=query,
-            reason="stale" if stale else ("empty cache" if best is None else "below threshold"))
+            reason=reason)
         # The data version is read BEFORE the agents run, so an update during the run makes the entry stale.
         records = advisory_lookup.find_records(query)
         version = advisory_lookup.data_version(records)
         t3 = time.perf_counter()
-        final = self.pipeline.ask(query)
+        final = self.pipeline.ask(query, correlation_id=trace_id) if trace_id else self.pipeline.ask(query)
         t4 = time.perf_counter()
+        store_start = time.time()
         timings["pipeline_ms"] = ms(t3, t4)
         answer, status = final.get("answer", ""), final.get("status")
         stored_key = None
@@ -177,6 +188,8 @@ class CachedQA:
             stored_key = self.cache.store(query, vector, answer, version, [r["id"] for r in records],
                                           correlation_id=final.get("correlation_id", ""))
         timings["store_ms"] = ms(t4, time.perf_counter())
+        tracing.write_span(trace_id, "cache_store", store_start, time.time(), component=self.component,
+                           stored=bool(stored_key), reason=None if stored_key else f"status={status}")
         latency = ms(t0, time.perf_counter())
         log(self.component, "ANSWERED by agent pipeline", correlation_id=final.get("correlation_id"),
             status=status, stored=bool(stored_key), latency_ms=latency)

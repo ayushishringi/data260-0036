@@ -8,3 +8,7 @@ reports/hw01/raw/*.tmp
 reports/hw08/logs/
 reports/hw09/logs/
 reports/hw09/raw/runs/*/jsonl/
+reports/hw10/logs/
+reports/hw10/raw/runs/*/jsonl/
+.deepeval/
+*.docx

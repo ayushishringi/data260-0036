@@ -2,7 +2,7 @@ PYTHON ?= .venv/bin/python3
 PORT ?= 8036
 IMAGE ?= data260-0036-hw2:latest
 
-.PHONY: run run-api run-web agents client verify-hw01 verify-hw02 verify-hw05 test-hw05 faults-hw05 verify-hw06 test-hw06 experiments-hw06 migrate-hw07 test-hw07 lint verify-hw07 kafka-up kafka-down kafka-topics demo-hw08 test-hw08 experiments-hw08 verify-hw08 redis-up migrate-hw09 counter-hw09 cache-demo-hw09 sweep-hw09 stale-hw09 part4-hw09 test-hw09 metrics-hw09 verify-hw09 qa-api-hw09 agents-hw09
+.PHONY: run run-api run-web agents client verify-hw01 verify-hw02 verify-hw05 test-hw05 faults-hw05 verify-hw06 test-hw06 experiments-hw06 migrate-hw07 test-hw07 lint verify-hw07 kafka-up kafka-down kafka-topics demo-hw08 test-hw08 experiments-hw08 verify-hw08 redis-up migrate-hw09 counter-hw09 cache-demo-hw09 sweep-hw09 stale-hw09 part4-hw09 test-hw09 metrics-hw09 verify-hw09 qa-api-hw09 agents-hw09 e2e-hw10 cases-hw10 label-hw10 judge-hw10 latency-hw10 dashboard-hw10 test-hw10 metrics-hw10 verify-hw10 report-hw10
 
 run: run-api
 
@@ -122,3 +122,36 @@ agents-hw09:
 
 qa-api-hw09:
 	$(PYTHON) -m uvicorn backend.qa_cache_api:app --host 127.0.0.1 --port 8037
+
+# ---- HW10: evaluator agent (DeepEval GEval, local judge), judge validation, tracing, Streamlit dashboard
+# Needs Kafka (make kafka-up), Redis (make redis-up), MySQL and `ollama serve`.
+e2e-hw10:
+	$(PYTHON) -u scripts/run_hw10_e2e.py
+
+# Part 3 order: cases-hw10 -> label-hw10 (by hand) -> git commit eval_cases.json human_labels.csv -> judge-hw10
+cases-hw10:
+	$(PYTHON) -u scripts/build_hw10_eval_cases.py
+
+label-hw10:
+	$(PYTHON) scripts/label_hw10.py
+
+judge-hw10:
+	$(PYTHON) -u scripts/run_hw10_judge.py
+
+latency-hw10:
+	$(PYTHON) -u scripts/run_hw10_latency.py
+
+dashboard-hw10:
+	$(PYTHON) -m streamlit run dashboard/hw10_app.py --server.port 8038 --server.headless true
+
+test-hw10:
+	$(PYTHON) -m unittest -v tests.test_hw10
+
+metrics-hw10:
+	$(PYTHON) scripts/build_hw10_metrics.py
+
+verify-hw10:
+	PYTHONPATH=. $(PYTHON) scripts/verify_hw10.py
+
+report-hw10:
+	PYTHONPATH=. $(PYTHON) scripts/build_hw10_report.py

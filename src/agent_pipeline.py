@@ -10,6 +10,9 @@ Failure handling (each switch reproduces the "before fix" behavior for Part 3):
 Other knobs: HW8_LLM (1 = use the local model, 0 = deterministic template), HW8_SLOW_SECONDS (simulated long work),
 HW8_GROUP_SUFFIX (separate consumer groups per experiment), HW8_INSTANCE (name of this process in the logs),
 HW8_GROUNDED (HW9: 1 = the Writer reads the s0036_rel advisory rows for the packages in the question).
+HW10: HW10_TRACE=1 writes a queue-wait span and one span per processing attempt (src/tracing.py), keyed by the
+correlation_id; trace_id and inject_fault are copied from each input message to its output.
+HW10_FAULTS=1 lets a message's inject_fault field name the agent that must fail (failed-trace demo).
 """
 
 from __future__ import annotations
@@ -27,6 +30,7 @@ from typing import Any
 
 from confluent_kafka import KafkaException, TopicPartition
 
+from src import tracing
 from src.kafka_common import (
     DEAD_LETTER_TOPIC,
     DRAFTS_TOPIC,
@@ -128,6 +132,7 @@ def run_agent(name: str, in_topic: str, out_topic: str | None,
         if msg is None or msg.error():
             continue
         where = {"partition": msg.partition(), "offset": msg.offset()}
+        received_at = time.time()
         if commit_mode == "before":  # BEFORE FIX: offset committed as soon as the message is read
             consumer.commit(message=msg, asynchronous=False)
             log(component, "COMMITTED offset on receipt (before processing)", **where)
@@ -135,6 +140,7 @@ def run_agent(name: str, in_topic: str, out_topic: str | None,
         attempt = 0
         while True:
             attempt += 1
+            stage_start = time.time()
             try:
                 message = decode(msg)
             except (ValueError, UnicodeDecodeError) as exc:
@@ -148,6 +154,7 @@ def run_agent(name: str, in_topic: str, out_topic: str | None,
                 if attempt == 1:
                     log(component, "RECEIVED", topic=in_topic, correlation_id=cid, **where,
                         kind=message.get("kind", "question"))
+                    trace_queue_wait(cid, in_topic, msg, received_at, component)
                 if store is not None and cid and store.seen(cid):
                     log(component, "DUPLICATE skipped (already processed)", correlation_id=cid, **where)
                     output = None
@@ -155,16 +162,26 @@ def run_agent(name: str, in_topic: str, out_topic: str | None,
                 if slow_seconds:
                     log(component, "STARTED long processing", correlation_id=cid, seconds=slow_seconds, **where)
                     time.sleep(slow_seconds)
+                if env("HW10_FAULTS", "0") == "1" and message.get("inject_fault") == name:
+                    raise RuntimeError(f"injected fault (HW10 failed-trace demo): {name} could not reach the "
+                                       "model (simulated Ollama timeout)")
                 output = handle(message)
                 if output is not None and out_topic:
+                    for field in ("trace_id", "inject_fault"):  # HW10: trace context travels with the message
+                        if field in message:
+                            output.setdefault(field, message[field])
                     log(component, "SENT", topic=out_topic, correlation_id=cid,
                         **{k: v for k, v in output.items() if k in ("plan", "draft", "status", "answer")})
                     produce_json(producer, out_topic, output, key=output.get("correlation_id"))
+                tracing.write_span(cid, name, stage_start, time.time(), component=component, attempt=attempt,
+                                   in_topic=in_topic, out_topic=out_topic, **where)
                 if store is not None and cid:
                     store.mark(cid)
                 break
             except Exception as exc:  # poison or transient failure
                 log(component, "PROCESSING FAILED", correlation_id=cid, attempt=attempt, error=str(exc), **where)
+                tracing.write_span(cid, name, stage_start, time.time(), "error", str(exc), component,
+                                   attempt=attempt, in_topic=in_topic, **where)
                 if retry_mode == "unbounded":  # BEFORE FIX: retry forever, blocking the partition
                     time.sleep(1.0)
                     continue
@@ -174,9 +191,15 @@ def run_agent(name: str, in_topic: str, out_topic: str | None,
                 dead = {"correlation_id": cid, "failed_agent": name, "source_topic": in_topic, **where,
                         "attempts": attempt, "error": str(exc), "ts": now_iso(),
                         "original": message if message is not None else msg.value().decode("utf-8", "replace")}
+                if isinstance(message, dict) and "trace_id" in message:
+                    dead["trace_id"] = message["trace_id"]
+                dead_start = time.time()
                 produce_json(producer, DEAD_LETTER_TOPIC, dead, key=cid)
                 log(component, "MOVED to dead-letter topic", topic=DEAD_LETTER_TOPIC, correlation_id=cid,
                     attempts=attempt, **where)
+                tracing.write_span(cid, "dead_letter", dead_start, time.time(), "error",
+                                   f"{name} failed {attempt} attempts: {exc}", component, failed_stage=name,
+                                   attempts=attempt, topic=DEAD_LETTER_TOPIC)
                 break
         if commit_mode == "after":  # AFTER FIX: commit only once the output is safely in Kafka
             try:
@@ -188,6 +211,17 @@ def run_agent(name: str, in_topic: str, out_topic: str | None,
                 log(component, "COMMIT FAILED (group rebalanced); message will be redelivered",
                     correlation_id=cid, error=str(exc), **where)
     consumer.close()
+
+
+def trace_queue_wait(cid: str | None, topic: str, msg: Any, received_at: float, component: str) -> None:
+    """HW10: span from the producer's create time of the message to the moment this consumer read it."""
+
+    ts_type, ts_ms = msg.timestamp()
+    if ts_type == 0 or ts_ms <= 0:  # no timestamp on the message
+        return
+    tracing.write_span(cid, tracing.QUEUE_STAGE.get(topic, f"queue_{topic}"), min(ts_ms / 1000, received_at),
+                       received_at, component=component, topic=topic, partition=msg.partition(),
+                       offset=msg.offset())
 
 
 # ----------------------------------------------------------------------------- the three agents
