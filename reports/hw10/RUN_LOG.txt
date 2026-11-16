@@ -1,0 +1,352 @@
+HW10 RUN_LOG: real console output of the runs behind the report, in run order.
+Each section is copied unchanged from the file named in its header.
+
+===== reports/hw10/raw/cases_console.log =====
+user=ayushishringi host=Ayushis-MacBook-Pro.local time=2026-11-11T23:11:14
+E01 grounded         words= 121 status=approved  Which version of minimist fixes the prototype pollution bug?
+E02 grounded         words= 151 status=approved  Is pyyaml 5.3 safe to use with full_load on untrusted input?
+E03 grounded         words= 117 status=approved  What severity is CVE-2023-50447 in pillow and which version fixes it?
+E04 grounded         words= 105 status=approved  Does express 4.18.2 have the open redirect vulnerability?
+E05 grounded         words= 102 status=approved  Which tar versions are affected by the symbolic-link poisoning issue?
+E06 grounded         words= 143 status=approved  How should I fix the axios XSRF-TOKEN disclosure in my frontend?
+E07 grounded         words= 122 status=approved  Is moment 2.29.4 still vulnerable to the RFC 2822 ReDoS?
+E08 grounded         words= 124 status=approved  What is CVE-2024-22195 in jinja2 and how bad is it?
+E09 not in database  words= 112 status=approved  Which version of openssl fixes Heartbleed?
+E10 not in database  words= 120 status=approved  Is the npm package event-stream still compromised?
+E11 not in database  words= 110 status=approved  What CVE affects the Python package cryptography 3.2?
+E12 not in database  words= 113 status=approved  Which spring-core version fixes CVE-2022-22965?
+E13 not in database  words= 110 status=approved  How do I know if my Go service is affected by the xz backdoor?
+E14 general          words= 131 status=approved  How do I check which of my npm dependencies have known vulnerabilities?
+E15 general          words= 115 status=needs_revision  What is the difference between a CVE and a GHSA advisory?
+E16 general          words= 115 status=approved  Should I pin transitive dependencies in a Python project?
+E17 general          words=  98 status=approved  What does a CVSS score of 9.8 mean for patch priority?
+E18 vague            words= 116 status=needs_revision  Is it safe?
+E19 vague            words= 126 status=approved  lodash
+E20 vague            words= 139 status=approved  My build broke after upgrading a package, what now?
+
+wrote eval_cases.json (20 drafts) and an empty human_labels.csv
+next: make label-hw10  ->  git add eval_cases.json human_labels.csv && git commit  ->  make judge-hw10
+
+===== reports/hw10/raw/e2e_console.log =====
+user=ayushishringi host=Ayushis-MacBook-Pro.local time=2026-11-11T23:24:29
+spans -> reports/hw10/traces/spans.jsonl
+2026-11-11T23:24:33.761-08:00 [hw10-e2e] CACHE MISS best_similarity=null threshold=0.85 query="Which jackson-databind release fixes the deeply nested JSON denial of service, and how severe is it?" reason="empty cache"
+2026-11-11T23:25:32.754-08:00 [hw10-e2e] ANSWERED by agent pipeline correlation_id="6ab316ab-7902-427e-99fb-c5f5eb44d44c" status="approved" stored=true latency_ms=58998.51
+#1 cache miss + evaluate  trace_id=6ab316ab-7902-427e-99fb-c5f5eb44d44c status=ok    is_cached=False similarity=-      latency_ms=  58998.5
+   evaluation span: ok 240506.95 ms scores={'plan_quality': 4.0, 'writer_helpfulness': 5.0, 'final_helpfulness': 5.0}
+2026-11-11T23:29:33.918-08:00 [hw10-e2e] CACHE MISS best_similarity=0.3334 threshold=0.85 query="Is golang.org/x/net 0.15.0 affected by the HTTP/2 rapid reset attack, and what should I upgrade to?" reason="below threshold"
+2026-11-11T23:30:27.543-08:00 [hw10-e2e] ANSWERED by agent pipeline correlation_id="c924d3d9-d177-450d-a745-4a9cc1283fe5" status="approved" stored=true latency_ms=53657.63
+#2 cache miss + evaluate  trace_id=c924d3d9-d177-450d-a745-4a9cc1283fe5 status=ok    is_cached=False similarity=0.3334 latency_ms=  53657.6
+   evaluation span: ok 161811.91 ms scores={'plan_quality': 5.0, 'writer_helpfulness': 5.0, 'final_helpfulness': 5.0}
+2026-11-11T23:33:10.238-08:00 [hw10-e2e] CACHE MISS best_similarity=0.0372 threshold=0.85 query="Why should a team generate a software bill of materials for every release?" reason="below threshold"
+2026-11-11T23:33:24.093-08:00 [hw10-e2e] ANSWERED by agent pipeline correlation_id="7226904b-13a9-4a5a-a270-2809eb2c9f3f" status="approved" stored=true latency_ms=13883.46
+#3 cache miss + evaluate  trace_id=7226904b-13a9-4a5a-a270-2809eb2c9f3f status=ok    is_cached=False similarity=0.0372 latency_ms=  13883.5
+   evaluation span: ok 181945.37 ms scores={'plan_quality': 1.0, 'writer_helpfulness': 5.0, 'final_helpfulness': 5.0}
+2026-11-11T23:36:26.858-08:00 [hw10-e2e] CACHE HIT similarity=1.0 threshold=0.85 cached_query="Which jackson-databind release fixes the deeply nested JSON denial of service, and how severe is it?" latency_ms=43.91
+#4 repeat -> cache hit    trace_id=062f0baa-d2e8-4312-9ee1-cfc1e2db15af status=ok    is_cached=True  similarity=1.0000 latency_ms=     43.9
+2026-11-11T23:36:26.873-08:00 [hw10-e2e] CACHE MISS best_similarity=0.2869 threshold=0.85 query="Which follow-redirects version stops keeping the Proxy-Authorization header across hosts?" reason="below threshold"
+#5 injected writer fault  trace_id=94237b91-630c-4f46-beb2-2afe76254b0c status=error is_cached=False similarity=-      latency_ms=  34198.6
+   error: PipelineFailed: writer failed after 3 attempts: injected fault (HW10 failed-trace demo): writer could not reach the model (simulated Ollama timeout)
+   evaluator saw the failure: upstream failure: writer moved the message to s0036_dead_letter after 3 attempts: injected fault (HW10 failed-trace demo): writer could not reach the model (simulated Ollama timeout)
+
+=== Evaluation results (1-5) ===
+6ab316ab-7902-427e-99fb-c5f5eb44d44c  plan=4.0 writer=5.0 final=5.0 draft=5.0 diff=0.0
+   No improvement: The Reviewer approved the draft without rewriting it (final text identical to the draft); it only runs rule checks (length, on-topic) and cannot add content. Both versions got the same score.
+c924d3d9-d177-450d-a745-4a9cc1283fe5  plan=5.0 writer=5.0 final=5.0 draft=5.0 diff=0.0
+   No improvement: The Reviewer approved the draft without rewriting it (final text identical to the draft); it only runs rule checks (length, on-topic) and cannot add content. Both versions got the same score.
+7226904b-13a9-4a5a-a270-2809eb2c9f3f  plan=1.0 writer=5.0 final=5.0 draft=5.0 diff=0.0
+   No improvement: The Reviewer approved the draft without rewriting it (final text identical to the draft); it only runs rule checks (length, on-topic) and cannot add content. Both versions got the same score.
+94237b91-630c-4f46-beb2-2afe76254b0c  not_evaluated: upstream failure: writer moved the message to s0036_dead_letter after 3 attempts: injected fault (HW10 failed-trace demo): writer could not reach the model (simulated Ollama timeout)
+
+=== Trace examples ===
+cache_hit  062f0baa-d2e8-4312-9ee1-cfc1e2db15af
+cache_miss 6ab316ab-7902-427e-99fb-c5f5eb44d44c
+failed     94237b91-630c-4f46-beb2-2afe76254b0c
+
+===== reports/hw10/raw/latency_console.log =====
+user=ayushishringi host=Ayushis-MacBook-Pro.local time=2026-11-11T23:37:04
+115 of 115 candidate questions are below the 0.85 threshold; using the first 50
+2026-11-11T23:37:10.111-08:00 [hw10-latency] CACHE MISS best_similarity=0.2042 threshold=0.85 query="How would a CI pipeline detect that a project still depends on a vulnerable pillow?" reason="below threshold"
+2026-11-11T23:37:27.677-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="74a419e9-8f2c-4eec-b73b-665a176400a0" status="approved" stored=false latency_ms=17570.22
+miss  1/50 is_cached=False sim=0.2042 answer=  17.6s eval= 145.7s ok  How would a CI pipeline detect that a project still depends on a vulne
+2026-11-11T23:39:53.576-08:00 [hw10-latency] CACHE MISS best_similarity=0.1943 threshold=0.85 query="Explain to a junior developer what the CVE-2023-26115 issue in word-wrap lets an attacker do." reason="below threshold"
+2026-11-11T23:40:34.551-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="1589f06c-d664-475b-84c3-933700d1d6c1" status="approved" stored=false latency_ms=41000.08
+miss  2/50 is_cached=False sim=0.1943 answer=  41.0s eval= 198.1s ok  Explain to a junior developer what the CVE-2023-26115 issue in word-wr
+2026-11-11T23:43:53.451-08:00 [hw10-latency] CACHE MISS best_similarity=0.174 threshold=0.85 query="How would a CI pipeline detect that a project still depends on a vulnerable moment?" reason="below threshold"
+2026-11-11T23:44:23.033-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="c49653a0-cbd7-4cd7-931e-8f0c1c8c27ac" status="approved" stored=false latency_ms=29612.51
+miss  3/50 is_cached=False sim=0.174 answer=  29.6s eval= 176.5s ok  How would a CI pipeline detect that a project still depends on a vulne
+2026-11-11T23:47:19.867-08:00 [hw10-latency] CACHE MISS best_similarity=0.2323 threshold=0.85 query="Explain to a junior developer what the CVE-2021-32803 issue in tar lets an attacker do." reason="below threshold"
+2026-11-11T23:48:14.218-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="b7e1d9c2-4a74-497c-b33b-167065681ff1" status="approved" stored=false latency_ms=54383.42
+miss  4/50 is_cached=False sim=0.2323 answer=  54.4s eval= 181.2s ok  Explain to a junior developer what the CVE-2021-32803 issue in tar let
+2026-11-11T23:51:16.482-08:00 [hw10-latency] CACHE MISS best_similarity=0.2642 threshold=0.85 query="What compensating controls can we use until urllib3 can be upgraded past the CVE-2023-45803 fix?" reason="below threshold"
+2026-11-11T23:51:59.821-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="93dc24af-5a06-48f5-b092-ae8f606a62b1" status="approved" stored=false latency_ms=43374.27
+miss  5/50 is_cached=False sim=0.2642 answer=  43.4s eval= 169.9s ok  What compensating controls can we use until urllib3 can be upgraded pa
+2026-11-11T23:54:50.095-08:00 [hw10-latency] CACHE MISS best_similarity=0.2807 threshold=0.85 query="Explain to a junior developer what the CVE-2024-37890 issue in ws lets an attacker do." reason="below threshold"
+2026-11-11T23:55:33.276-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="77918195-ff26-45d7-aaf3-16854e5c6cb0" status="approved" stored=false latency_ms=43216.29
+miss  6/50 is_cached=False sim=0.2807 answer=  43.2s eval= 169.2s ok  Explain to a junior developer what the CVE-2024-37890 issue in ws lets
+2026-11-11T23:58:22.599-08:00 [hw10-latency] CACHE MISS best_similarity=0.5747 threshold=0.85 query="Write a short risk note for management about CVE-2020-36518 in jackson-databind." reason="below threshold"
+2026-11-11T23:59:16.613-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="28f0df56-7650-4fd5-9bd6-3da8d72a4dbc" status="approved" stored=false latency_ms=54052.08
+miss  7/50 is_cached=False sim=0.5747 answer=  54.1s eval= 114.0s ok  Write a short risk note for management about CVE-2020-36518 in jackson
+2026-11-12T00:01:11.476-08:00 [hw10-latency] CACHE MISS best_similarity=0.2292 threshold=0.85 query="Which of our services should we patch first if they all use express, given CVE-2024-29041?" reason="below threshold"
+2026-11-12T00:02:07.810-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="f9de85e7-53e2-4b3b-b4d4-7f0c8df381b9" status="approved" stored=false latency_ms=56361.53
+miss  8/50 is_cached=False sim=0.2292 answer=  56.4s eval= 212.9s ok  Which of our services should we patch first if they all use express, g
+2026-11-12T00:05:41.438-08:00 [hw10-latency] CACHE MISS best_similarity=0.1549 threshold=0.85 query="How would a CI pipeline detect that a project still depends on a vulnerable follow-redirects?" reason="below threshold"
+2026-11-12T00:06:23.383-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="2ac35522-b65e-4fbf-8b93-d46e1069be1c" status="approved" stored=false latency_ms=41984.8
+miss  9/50 is_cached=False sim=0.1549 answer=  42.0s eval= 131.2s ok  How would a CI pipeline detect that a project still depends on a vulne
+2026-11-12T00:08:35.416-08:00 [hw10-latency] CACHE MISS best_similarity=0.1724 threshold=0.85 query="How would a CI pipeline detect that a project still depends on a vulnerable urllib3?" reason="below threshold"
+2026-11-12T00:09:28.247-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="fcdc663d-904a-4330-b8a9-8d6c280be708" status="approved" stored=false latency_ms=52854.51
+miss 10/50 is_cached=False sim=0.1724 answer=  52.9s eval= 112.6s ok  How would a CI pipeline detect that a project still depends on a vulne
+2026-11-12T00:11:21.210-08:00 [hw10-latency] CACHE MISS best_similarity=0.2155 threshold=0.85 query="Write a short risk note for management about CVE-2023-32681 in requests." reason="below threshold"
+2026-11-12T00:11:58.414-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="d336b7ef-74a0-496b-b003-1f49ae5776ab" status="approved" stored=false latency_ms=37222.1
+miss 11/50 is_cached=False sim=0.2155 answer=  37.2s eval= 148.2s ok  Write a short risk note for management about CVE-2023-32681 in request
+2026-11-12T00:14:27.542-08:00 [hw10-latency] CACHE MISS best_similarity=0.2087 threshold=0.85 query="Write a short risk note for management about CVE-2023-26115 in word-wrap." reason="below threshold"
+2026-11-12T00:15:14.247-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="45954d9d-b565-462e-805d-6e2aec7bf7ad" status="approved" stored=false latency_ms=46767.1
+miss 12/50 is_cached=False sim=0.2087 answer=  46.8s eval=  93.5s ok  Write a short risk note for management about CVE-2023-26115 in word-wr
+2026-11-12T00:16:47.984-08:00 [hw10-latency] CACHE MISS best_similarity=0.3085 threshold=0.85 query="Explain to a junior developer what the CVE-2023-45857 issue in axios lets an attacker do." reason="below threshold"
+2026-11-12T00:17:53.334-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="e03b91e5-69d6-4b27-a548-4e51886cd483" status="approved" stored=false latency_ms=65378.04
+miss 13/50 is_cached=False sim=0.3085 answer=  65.4s eval= 187.6s ok  Explain to a junior developer what the CVE-2023-45857 issue in axios l
+2026-11-12T00:21:01.913-08:00 [hw10-latency] CACHE MISS best_similarity=0.195 threshold=0.85 query="Write a short risk note for management about CVE-2023-36665 in protobufjs." reason="below threshold"
+2026-11-12T00:21:44.759-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="ab71c0bf-cb9e-4452-8532-ca31798e5b3c" status="approved" stored=false latency_ms=42883.52
+miss 14/50 is_cached=False sim=0.195 answer=  42.9s eval= 169.7s ok  Write a short risk note for management about CVE-2023-36665 in protobu
+2026-11-12T00:24:35.066-08:00 [hw10-latency] CACHE MISS best_similarity=0.1788 threshold=0.85 query="How would a CI pipeline detect that a project still depends on a vulnerable pyyaml?" reason="below threshold"
+2026-11-12T00:25:35.261-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="525107e5-fd90-4b39-81f6-503822000347" status="approved" stored=false latency_ms=60238.5
+miss 15/50 is_cached=False sim=0.1788 answer=  60.2s eval= 167.2s ok  How would a CI pipeline detect that a project still depends on a vulne
+2026-11-12T00:28:22.624-08:00 [hw10-latency] CACHE MISS best_similarity=0.3125 threshold=0.85 query="Which of our services should we patch first if they all use xml2js, given CVE-2023-0842?" reason="below threshold"
+2026-11-12T00:29:05.932-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="aa9835ee-6fc5-4ea4-accc-06477a53dcab" status="approved" stored=false latency_ms=43311.66
+miss 16/50 is_cached=False sim=0.3125 answer=  43.3s eval= 174.4s ok  Which of our services should we patch first if they all use xml2js, gi
+2026-11-12T00:32:00.347-08:00 [hw10-latency] CACHE MISS best_similarity=0.2534 threshold=0.85 query="Explain to a junior developer what the CVE-2023-36665 issue in protobufjs lets an attacker do." reason="below threshold"
+2026-11-12T00:32:41.386-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="07a888ca-276e-4d35-ac03-52426a526a26" status="approved" stored=false latency_ms=41052.94
+miss 17/50 is_cached=False sim=0.2534 answer=  41.1s eval= 106.2s ok  Explain to a junior developer what the CVE-2023-36665 issue in protobu
+2026-11-12T00:34:28.306-08:00 [hw10-latency] CACHE MISS best_similarity=0.4567 threshold=0.85 query="Write a short risk note for management about CVE-2023-44487 in golang.org/x/net." reason="below threshold"
+2026-11-12T00:35:07.422-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="b71241ff-6496-4512-95eb-048b54de9e57" status="approved" stored=false latency_ms=39175.84
+miss 18/50 is_cached=False sim=0.4567 answer=  39.2s eval=  87.9s ok  Write a short risk note for management about CVE-2023-44487 in golang.
+2026-11-12T00:36:36.148-08:00 [hw10-latency] CACHE MISS best_similarity=0.2046 threshold=0.85 query="Write a short risk note for management about CVE-2021-44906 in minimist." reason="below threshold"
+2026-11-12T00:37:13.963-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="359dddf6-7450-4934-bb0c-a09e61df7315" status="approved" stored=false latency_ms=37851.64
+miss 19/50 is_cached=False sim=0.2046 answer=  37.9s eval= 149.0s ok  Write a short risk note for management about CVE-2021-44906 in minimis
+2026-11-12T00:39:43.247-08:00 [hw10-latency] CACHE MISS best_similarity=0.1847 threshold=0.85 query="What compensating controls can we use until postcss can be upgraded past the CVE-2023-44270 fix?" reason="below threshold"
+2026-11-12T00:40:01.947-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="efe4f024-7970-4421-9626-997d757bbe7c" status="approved" stored=false latency_ms=18737.53
+miss 20/50 is_cached=False sim=0.1847 answer=  18.7s eval= 144.5s ok  What compensating controls can we use until postcss can be upgraded pa
+2026-11-12T00:42:27.209-08:00 [hw10-latency] CACHE MISS best_similarity=0.27 threshold=0.85 query="Explain to a junior developer what the CVE-2022-31129 issue in moment lets an attacker do." reason="below threshold"
+2026-11-12T00:43:32.130-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="e45db55d-5c09-44fb-8e9d-bf7111ef9d26" status="approved" stored=false latency_ms=64944.6
+miss 21/50 is_cached=False sim=0.27 answer=  64.9s eval= 152.6s ok  Explain to a junior developer what the CVE-2022-31129 issue in moment 
+2026-11-12T00:46:04.901-08:00 [hw10-latency] CACHE MISS best_similarity=0.2484 threshold=0.85 query="Which of our services should we patch first if they all use moment, given CVE-2022-31129?" reason="below threshold"
+2026-11-12T00:46:29.379-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="fa38a3b6-fbe8-4426-9454-76e626b2ad24" status="approved" stored=false latency_ms=24499.28
+miss 22/50 is_cached=False sim=0.2484 answer=  24.5s eval= 198.0s ok  Which of our services should we patch first if they all use moment, gi
+2026-11-12T00:49:48.026-08:00 [hw10-latency] CACHE MISS best_similarity=0.3284 threshold=0.85 query="Explain to a junior developer what the CVE-2022-0235 issue in node-fetch lets an attacker do." reason="below threshold"
+2026-11-12T00:50:29.927-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="24abbfa5-df6a-47ec-9ca5-334e60032d9b" status="approved" stored=false latency_ms=41916.61
+miss 23/50 is_cached=False sim=0.3284 answer=  41.9s eval=  93.3s ok  Explain to a junior developer what the CVE-2022-0235 issue in node-fet
+2026-11-12T00:52:03.724-08:00 [hw10-latency] CACHE MISS best_similarity=0.2653 threshold=0.85 query="Which of our services should we patch first if they all use jinja2, given CVE-2024-22195?" reason="below threshold"
+2026-11-12T00:52:46.750-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="658bfa3b-aede-49ef-9308-ecbc670c0ab1" status="approved" stored=false latency_ms=43044.61
+miss 24/50 is_cached=False sim=0.2653 answer=  43.0s eval= 126.4s ok  Which of our services should we patch first if they all use jinja2, gi
+2026-11-12T00:54:53.837-08:00 [hw10-latency] CACHE MISS best_similarity=0.2924 threshold=0.85 query="Explain to a junior developer what the CVE-2023-32681 issue in requests lets an attacker do." reason="below threshold"
+2026-11-12T00:55:43.322-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="c0f53128-179c-42c6-a867-6993f923df45" status="approved" stored=false latency_ms=49520.09
+miss 25/50 is_cached=False sim=0.2924 answer=  49.5s eval= 223.1s ok  Explain to a junior developer what the CVE-2023-32681 issue in request
+2026-11-12T00:59:27.278-08:00 [hw10-latency] CACHE MISS best_similarity=0.2344 threshold=0.85 query="Which of our services should we patch first if they all use ws, given CVE-2024-37890?" reason="below threshold"
+2026-11-12T01:00:04.614-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="0bae3903-bb34-4c45-b56e-4781575db7ea" status="approved" stored=false latency_ms=37360.46
+miss 26/50 is_cached=False sim=0.2344 answer=  37.4s eval= 161.1s ok  Which of our services should we patch first if they all use ws, given 
+2026-11-12T01:02:46.022-08:00 [hw10-latency] CACHE MISS best_similarity=0.2447 threshold=0.85 query="Which of our services should we patch first if they all use pillow, given CVE-2023-50447?" reason="below threshold"
+2026-11-12T01:03:26.582-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="ddaf3b51-1bec-4fbc-999e-fa6bc284b534" status="approved" stored=false latency_ms=40583.57
+miss 27/50 is_cached=False sim=0.2447 answer=  40.6s eval= 146.4s ok  Which of our services should we patch first if they all use pillow, gi
+2026-11-12T01:05:53.893-08:00 [hw10-latency] CACHE MISS best_similarity=0.1829 threshold=0.85 query="Write a short risk note for management about CVE-2024-37890 in ws." reason="below threshold"
+2026-11-12T01:06:19.152-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="7b97a6b2-af2a-4550-b254-82a5e3f61a49" status="approved" stored=false latency_ms=25289.56
+miss 28/50 is_cached=False sim=0.1829 answer=  25.3s eval= 108.4s ok  Write a short risk note for management about CVE-2024-37890 in ws.
+2026-11-12T01:08:08.138-08:00 [hw10-latency] CACHE MISS best_similarity=0.2473 threshold=0.85 query="What compensating controls can we use until lodash can be upgraded past the CVE-2021-23337 fix?" reason="below threshold"
+2026-11-12T01:08:34.002-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="101d3b6b-7685-4f62-9787-34e1ddedd9e2" status="approved" stored=false latency_ms=25891.22
+miss 29/50 is_cached=False sim=0.2473 answer=  25.9s eval=  98.1s ok  What compensating controls can we use until lodash can be upgraded pas
+2026-11-12T01:10:12.923-08:00 [hw10-latency] CACHE MISS best_similarity=0.2789 threshold=0.85 query="Which of our services should we patch first if they all use follow-redirects, given CVE-2024-28849?" reason="below threshold"
+2026-11-12T01:10:42.771-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="78e273a0-393c-4b5d-9fa9-84d19c2ae3cc" status="approved" stored=false latency_ms=29886.6
+miss 30/50 is_cached=False sim=0.2789 answer=  29.9s eval= 160.6s ok  Which of our services should we patch first if they all use follow-red
+2026-11-12T01:13:24.244-08:00 [hw10-latency] CACHE MISS best_similarity=0.3207 threshold=0.85 query="Explain to a junior developer what the CVE-2021-44228 issue in log4j-core lets an attacker do." reason="below threshold"
+2026-11-12T01:14:23.618-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="8ff03c50-d347-47d9-9627-6244e9014ed0" status="approved" stored=false latency_ms=59404.24
+miss 31/50 is_cached=False sim=0.3207 answer=  59.4s eval= 138.8s ok  Explain to a junior developer what the CVE-2021-44228 issue in log4j-c
+2026-11-12T01:16:42.889-08:00 [hw10-latency] CACHE MISS best_similarity=0.5982 threshold=0.85 query="What compensating controls can we use until golang.org/x/net can be upgraded past the CVE-2023-44487 fix?" reason="below threshold"
+2026-11-12T01:17:21.935-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="fd76d8b8-44f2-459b-91c7-3d943e6fd747" status="approved" stored=false latency_ms=39069.08
+miss 32/50 is_cached=False sim=0.5982 answer=  39.1s eval= 108.8s ok  What compensating controls can we use until golang.org/x/net can be up
+2026-11-12T01:19:11.026-08:00 [hw10-latency] CACHE MISS best_similarity=0.2114 threshold=0.85 query="What compensating controls can we use until express can be upgraded past the CVE-2024-29041 fix?" reason="below threshold"
+2026-11-12T01:19:39.692-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="6f362872-a475-4b88-ad05-327d5db95115" status="approved" stored=false latency_ms=28696.81
+miss 33/50 is_cached=False sim=0.2114 answer=  28.7s eval= 174.0s ok  What compensating controls can we use until express can be upgraded pa
+2026-11-12T01:22:34.279-08:00 [hw10-latency] CACHE MISS best_similarity=0.2476 threshold=0.85 query="What compensating controls can we use until spring-beans can be upgraded past the CVE-2022-22965 fix?" reason="below threshold"
+2026-11-12T01:23:15.845-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="364d6d92-9b60-4809-9ba9-b73880e8281d" status="approved" stored=false latency_ms=41597.96
+miss 34/50 is_cached=False sim=0.2476 answer=  41.6s eval= 151.1s ok  What compensating controls can we use until spring-beans can be upgrad
+2026-11-12T01:25:47.272-08:00 [hw10-latency] CACHE MISS best_similarity=0.2948 threshold=0.85 query="Which of our services should we patch first if they all use urllib3, given CVE-2023-45803?" reason="below threshold"
+2026-11-12T01:26:39.093-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="2e848410-cd9f-412f-a953-b3c7a4a717fb" status="approved" stored=false latency_ms=51850.48
+miss 35/50 is_cached=False sim=0.2948 answer=  51.9s eval= 152.3s ok  Which of our services should we patch first if they all use urllib3, g
+2026-11-12T01:29:11.453-08:00 [hw10-latency] CACHE MISS best_similarity=0.2201 threshold=0.85 query="How would a CI pipeline detect that a project still depends on a vulnerable xml2js?" reason="below threshold"
+2026-11-12T01:29:44.959-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="85d71253-c6e8-4d9d-8347-08335720befe" status="approved" stored=false latency_ms=33529.94
+miss 36/50 is_cached=False sim=0.2201 answer=  33.5s eval= 137.0s ok  How would a CI pipeline detect that a project still depends on a vulne
+2026-11-12T01:32:02.223-08:00 [hw10-latency] CACHE MISS best_similarity=0.1521 threshold=0.85 query="How would a CI pipeline detect that a project still depends on a vulnerable jinja2?" reason="below threshold"
+2026-11-12T01:32:33.367-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="34270bd6-f35b-4dc8-9ad7-cec37c03cb39" status="approved" stored=false latency_ms=31163.55
+miss 37/50 is_cached=False sim=0.1521 answer=  31.2s eval= 189.0s ok  How would a CI pipeline detect that a project still depends on a vulne
+2026-11-12T01:35:43.184-08:00 [hw10-latency] CACHE MISS best_similarity=0.2662 threshold=0.85 query="Which of our services should we patch first if they all use axios, given CVE-2023-45857?" reason="below threshold"
+2026-11-12T01:36:12.075-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="eca5262e-cc97-4a2b-89ec-09f4ccd6a522" status="approved" stored=false latency_ms=28916.21
+miss 38/50 is_cached=False sim=0.2662 answer=  28.9s eval= 191.6s ok  Which of our services should we patch first if they all use axios, giv
+2026-11-12T01:39:23.884-08:00 [hw10-latency] CACHE MISS best_similarity=0.3203 threshold=0.85 query="Which of our services should we patch first if they all use log4j-core, given CVE-2021-44228?" reason="below threshold"
+2026-11-12T01:39:55.785-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="c47959a8-a585-41b3-a54f-ffef74782b7a" status="approved" stored=false latency_ms=31935.99
+miss 39/50 is_cached=False sim=0.3203 answer=  31.9s eval= 179.6s ok  Which of our services should we patch first if they all use log4j-core
+2026-11-12T01:42:55.477-08:00 [hw10-latency] CACHE MISS best_similarity=0.6524 threshold=0.85 query="What compensating controls can we use until jackson-databind can be upgraded past the CVE-2020-36518 fix?" reason="below threshold"
+2026-11-12T01:43:42.960-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="1974734a-b4b8-4072-9b5e-9052b13d5638" status="approved" stored=false latency_ms=47499.65
+miss 40/50 is_cached=False sim=0.6524 answer=  47.5s eval= 129.1s ok  What compensating controls can we use until jackson-databind can be up
+2026-11-12T01:45:52.167-08:00 [hw10-latency] CACHE MISS best_similarity=0.1773 threshold=0.85 query="What compensating controls can we use until moment can be upgraded past the CVE-2022-31129 fix?" reason="below threshold"
+2026-11-12T01:46:20.628-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="9463eade-a957-453a-8507-d5f4bc5729b1" status="approved" stored=false latency_ms=28482.57
+miss 41/50 is_cached=False sim=0.1773 answer=  28.5s eval= 153.1s ok  What compensating controls can we use until moment can be upgraded pas
+2026-11-12T01:48:54.123-08:00 [hw10-latency] CACHE MISS best_similarity=0.1984 threshold=0.85 query="Write a short risk note for management about CVE-2021-23337 in lodash." reason="below threshold"
+2026-11-12T01:49:43.927-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="40baa9c0-9bdb-4e94-ba45-525652447080" status="approved" stored=false latency_ms=49838.11
+miss 42/50 is_cached=False sim=0.1984 answer=  49.8s eval= 153.8s ok  Write a short risk note for management about CVE-2021-23337 in lodash.
+2026-11-12T01:52:18.420-08:00 [hw10-latency] CACHE MISS best_similarity=0.1491 threshold=0.85 query="Write a short risk note for management about CVE-2023-50447 in pillow." reason="below threshold"
+2026-11-12T01:53:09.379-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="ffbb40ef-c1e7-4ee8-873d-be55e82127f1" status="approved" stored=false latency_ms=50992.4
+miss 43/50 is_cached=False sim=0.1491 answer=  51.0s eval= 162.3s ok  Write a short risk note for management about CVE-2023-50447 in pillow.
+2026-11-12T01:55:51.907-08:00 [hw10-latency] CACHE MISS best_similarity=0.2325 threshold=0.85 query="What compensating controls can we use until jinja2 can be upgraded past the CVE-2024-22195 fix?" reason="below threshold"
+2026-11-12T01:56:28.771-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="1e50aee5-fa9f-4f77-852d-06d533f6cd5e" status="approved" stored=false latency_ms=36889.26
+miss 44/50 is_cached=False sim=0.2325 answer=  36.9s eval= 165.2s ok  What compensating controls can we use until jinja2 can be upgraded pas
+2026-11-12T01:59:14.331-08:00 [hw10-latency] CACHE MISS best_similarity=0.6562 threshold=0.85 query="Which of our services should we patch first if they all use jackson-databind, given CVE-2020-36518?" reason="below threshold"
+2026-11-12T01:59:48.415-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="0ac430fc-3fed-405f-b503-df02ce59c157" status="approved" stored=false latency_ms=34105.0
+miss 45/50 is_cached=False sim=0.6562 answer=  34.1s eval= 122.7s ok  Which of our services should we patch first if they all use jackson-da
+2026-11-12T02:01:51.618-08:00 [hw10-latency] CACHE MISS best_similarity=0.2861 threshold=0.85 query="What compensating controls can we use until follow-redirects can be upgraded past the CVE-2024-28849 fix?" reason="below threshold"
+2026-11-12T02:02:12.396-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="77eb89c5-91bf-465c-a2f8-14206b964053" status="approved" stored=false latency_ms=20809.06
+miss 46/50 is_cached=False sim=0.2861 answer=  20.8s eval= 103.8s ok  What compensating controls can we use until follow-redirects can be up
+2026-11-12T02:03:56.426-08:00 [hw10-latency] CACHE MISS best_similarity=0.2573 threshold=0.85 query="Write a short risk note for management about CVE-2021-32803 in tar." reason="below threshold"
+2026-11-12T02:04:41.512-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="0e285a39-fa09-4c98-b61a-6ae9db1f6f05" status="approved" stored=false latency_ms=45122.3
+miss 47/50 is_cached=False sim=0.2573 answer=  45.1s eval= 116.9s ok  Write a short risk note for management about CVE-2021-32803 in tar.
+2026-11-12T02:06:38.648-08:00 [hw10-latency] CACHE MISS best_similarity=0.3007 threshold=0.85 query="Which of our services should we patch first if they all use tar, given CVE-2021-32803?" reason="below threshold"
+2026-11-12T02:07:07.008-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="9f727de6-52f8-4adf-ad94-14f7ae288b14" status="approved" stored=false latency_ms=28389.18
+miss 48/50 is_cached=False sim=0.3007 answer=  28.4s eval= 160.7s ok  Which of our services should we patch first if they all use tar, given
+2026-11-12T02:09:48.592-08:00 [hw10-latency] CACHE MISS best_similarity=0.1764 threshold=0.85 query="Write a short risk note for management about CVE-2024-28849 in follow-redirects." reason="below threshold"
+2026-11-12T02:10:13.066-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="5eddd809-45d4-4ecd-a6e3-35c18741e6c1" status="approved" stored=false latency_ms=24493.49
+miss 49/50 is_cached=False sim=0.1764 answer=  24.5s eval= 152.8s ok  Write a short risk note for management about CVE-2024-28849 in follow-
+2026-11-12T02:12:46.600-08:00 [hw10-latency] CACHE MISS best_similarity=0.2429 threshold=0.85 query="Which of our services should we patch first if they all use spring-beans, given CVE-2022-22965?" reason="below threshold"
+2026-11-12T02:13:25.996-08:00 [hw10-latency] ANSWERED by agent pipeline correlation_id="a322b8ac-c8d6-430e-9aa2-1bb11e96db35" status="approved" stored=false latency_ms=39409.63
+miss 50/50 is_cached=False sim=0.2429 answer=  39.4s eval= 123.3s ok  Which of our services should we patch first if they all use spring-bea
+2026-11-12T02:15:30.233-08:00 [hw10-latency] CACHE HIT similarity=1.0 threshold=0.85 cached_query="Is golang.org/x/net 0.15.0 affected by the HTTP/2 rapid reset attack, and what should I upgrade to?" latency_ms=49.6
+hit  1/10 is_cached=True latency=49.6 ms
+2026-11-12T02:15:30.242-08:00 [hw10-latency] CACHE HIT similarity=1.0 threshold=0.85 cached_query="Which jackson-databind release fixes the deeply nested JSON denial of service, and how severe is it?" latency_ms=8.86
+hit  2/10 is_cached=True latency=8.9 ms
+2026-11-12T02:15:30.251-08:00 [hw10-latency] CACHE HIT similarity=1.0 threshold=0.85 cached_query="Why should a team generate a software bill of materials for every release?" latency_ms=8.36
+hit  3/10 is_cached=True latency=8.4 ms
+2026-11-12T02:15:30.257-08:00 [hw10-latency] CACHE HIT similarity=1.0 threshold=0.85 cached_query="Is golang.org/x/net 0.15.0 affected by the HTTP/2 rapid reset attack, and what should I upgrade to?" latency_ms=5.28
+hit  4/10 is_cached=True latency=5.3 ms
+2026-11-12T02:15:30.261-08:00 [hw10-latency] CACHE HIT similarity=1.0 threshold=0.85 cached_query="Which jackson-databind release fixes the deeply nested JSON denial of service, and how severe is it?" latency_ms=4.19
+hit  5/10 is_cached=True latency=4.2 ms
+2026-11-12T02:15:30.265-08:00 [hw10-latency] CACHE HIT similarity=1.0 threshold=0.85 cached_query="Why should a team generate a software bill of materials for every release?" latency_ms=3.65
+hit  6/10 is_cached=True latency=3.6 ms
+2026-11-12T02:15:30.270-08:00 [hw10-latency] CACHE HIT similarity=1.0 threshold=0.85 cached_query="Is golang.org/x/net 0.15.0 affected by the HTTP/2 rapid reset attack, and what should I upgrade to?" latency_ms=4.77
+hit  7/10 is_cached=True latency=4.8 ms
+2026-11-12T02:15:30.274-08:00 [hw10-latency] CACHE HIT similarity=1.0 threshold=0.85 cached_query="Which jackson-databind release fixes the deeply nested JSON denial of service, and how severe is it?" latency_ms=3.88
+hit  8/10 is_cached=True latency=3.9 ms
+2026-11-12T02:15:30.278-08:00 [hw10-latency] CACHE HIT similarity=1.0 threshold=0.85 cached_query="Why should a team generate a software bill of materials for every release?" latency_ms=3.41
+hit  9/10 is_cached=True latency=3.4 ms
+2026-11-12T02:15:30.282-08:00 [hw10-latency] CACHE HIT similarity=1.0 threshold=0.85 cached_query="Is golang.org/x/net 0.15.0 affected by the HTTP/2 rapid reset attack, and what should I upgrade to?" latency_ms=4.39
+hit 10/10 is_cached=True latency=4.4 ms
+
+verified: {'requests': 50, 'cache_lookup_miss': 50, 'served_from_cache': 0, 'failed': 0}
+
+Stage                     p50 (ms)    p95 (ms)  % of e2e
+Cache lookup                  28.5        41.3      0.0%
+Planner                   32,057.1    52,717.2     17.1%
+Writer                     7,425.3     9,638.2      4.0%
+Reviewer                       5.9        13.3      0.0%
+Queue wait (total)            34.6        81.8      0.0%
+Evaluation               152,454.7   198,055.0     78.9%
+Other (client, store)         -9.5        -1.6     -0.0%
+End-to-end               189,756.5   246,725.2
+dominant stage: Evaluation   cache-hit latency: {'n': 10, 'p50_ms': 4.58, 'p95_ms': 31.27}
+
+===== reports/hw10/raw/judge_console.log =====
+.venv/bin/python3 -u scripts/run_hw10_judge.py
+user=ayushishringi host=Ayushis-MacBook-Pro.local time=2026-11-12T12:25:34
+cases+labels frozen in commit 5f378d3 (2026-11-12T12:25:15-08:00)
+judge: {'provider': 'ollama', 'model': 'qwen3:4b', 'host': 'http://127.0.0.1:11434', 'temperature': 0.0, 'seed': 36, 'num_ctx': 16384, 'think': True, 'structured_output': True, 'framework': 'deepeval GEval', 'scale': '1-5 (rubric bands (1,1)..(5,5))'}
+run 1 E01 human=5 judge=5.0 (20.3s) 
+run 1 E02 human=4 judge=5.0 (36.2s) 
+run 1 E03 human=5 judge=5.0 (56.0s) 
+run 1 E04 human=5 judge=5.0 (26.7s) 
+run 1 E05 human=3 judge=5.0 (22.1s) 
+run 1 E06 human=5 judge=5.0 (32.6s) 
+run 1 E07 human=5 judge=5.0 (44.9s) 
+run 1 E08 human=5 judge=5.0 (28.1s) 
+run 1 E09 human=5 judge=5.0 (56.3s) 
+run 1 E10 human=3 judge=5.0 (38.6s) 
+run 1 E11 human=3 judge=5.0 (33.3s) 
+run 1 E12 human=1 judge=5.0 (40.1s) 
+run 1 E13 human=2 judge=5.0 (29.8s) 
+run 1 E14 human=2 judge=5.0 (38.6s) 
+run 1 E15 human=4 judge=5.0 (27.7s) 
+run 1 E16 human=3 judge=5.0 (21.2s) 
+run 1 E17 human=4 judge=5.0 (21.1s) 
+run 1 E18 human=3 judge=5.0 (29.3s) 
+run 1 E19 human=3 judge=5.0 (16.3s) 
+run 1 E20 human=4 judge=5.0 (30.5s) 
+run 1 done in 650s
+run 2 E01 human=5 judge=5.0 (19.9s) 
+run 2 E02 human=4 judge=5.0 (39.0s) 
+run 2 E03 human=5 judge=5.0 (55.6s) 
+run 2 E04 human=5 judge=5.0 (28.0s) 
+run 2 E05 human=3 judge=5.0 (24.0s) 
+run 2 E06 human=5 judge=5.0 (35.9s) 
+run 2 E07 human=5 judge=5.0 (48.2s) 
+run 2 E08 human=5 judge=5.0 (32.6s) 
+run 2 E09 human=5 judge=5.0 (62.2s) 
+run 2 E10 human=3 judge=5.0 (41.6s) 
+run 2 E11 human=3 judge=5.0 (34.7s) 
+run 2 E12 human=1 judge=5.0 (40.9s) 
+run 2 E13 human=2 judge=5.0 (29.1s) 
+run 2 E14 human=2 judge=5.0 (40.7s) 
+run 2 E15 human=4 judge=5.0 (30.3s) 
+run 2 E16 human=3 judge=5.0 (23.2s) 
+run 2 E17 human=4 judge=5.0 (22.6s) 
+run 2 E18 human=3 judge=5.0 (30.8s) 
+run 2 E19 human=3 judge=5.0 (18.0s) 
+run 2 E20 human=4 judge=5.0 (30.2s) 
+run 2 done in 687s
+run 3 E01 human=5 judge=5.0 (20.5s) 
+run 3 E02 human=4 judge=5.0 (38.4s) 
+run 3 E03 human=5 judge=5.0 (55.6s) 
+run 3 E04 human=5 judge=5.0 (29.5s) 
+run 3 E05 human=3 judge=5.0 (24.9s) 
+run 3 E06 human=5 judge=5.0 (36.8s) 
+run 3 E07 human=5 judge=5.0 (47.6s) 
+run 3 E08 human=5 judge=5.0 (30.5s) 
+run 3 E09 human=5 judge=5.0 (58.8s) 
+run 3 E10 human=3 judge=5.0 (38.8s) 
+run 3 E11 human=3 judge=5.0 (34.2s) 
+run 3 E12 human=1 judge=5.0 (39.9s) 
+run 3 E13 human=2 judge=5.0 (29.3s) 
+run 3 E14 human=2 judge=5.0 (39.4s) 
+run 3 E15 human=4 judge=5.0 (30.0s) 
+run 3 E16 human=3 judge=5.0 (21.4s) 
+run 3 E17 human=4 judge=5.0 (21.0s) 
+run 3 E18 human=3 judge=5.0 (30.1s) 
+run 3 E19 human=3 judge=5.0 (16.3s) 
+run 3 E20 human=4 judge=5.0 (29.7s) 
+run 3 done in 673s
+/Users/ayushishringi/Desktop/DATA 260/HW1/data260-0036/src/hw10_stats.py:36: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  rho, p_value = spearmanr(hs, js) if len(pairs) > 2 else (float("nan"), float("nan"))
+
+=== Judge vs human (run 1) ===
+Spearman rho = None (p = None), mean |judge - human| = 1.3, exact = 0.35, within 1 = 0.55
+=== Repeatability (3 runs) ===
+cases whose score changed: 0/20 (0.0); mean |change| = 0.0, max = 0.0
+
+===== reports/hw10/verify_console.log =====
+[PASS] spans: every span has trace_id, stage, start/end time, status, error  660 spans in reports/hw10/traces/spans.jsonl
+[PASS] spans cover cache lookup, inbox, tasks, drafts, final and the evaluator  ['cache_lookup', 'cache_store', 'dead_letter', 'evaluation', 'planner', 'queue_drafts', 'queue_final', 'queue_inbox', 'queue_tasks', 'request', 'reviewer', 'writer']
+[PASS] one identifier: plan/draft/final messages carry correlation_id == trace_id  4 evaluator records
+[PASS] Part 2: >=1 end-to-end question scored on all four criteria (1-5)  3 fully scored
+[PASS] Part 2: saved fields (plan reason, writer trace_id, final answer, both scores + interpretation)  
+[PASS] 4.2 cache-hit trace: cache_lookup=hit, no agent spans  ['request', 'cache_lookup']
+[PASS] 4.2 cache-miss trace: miss -> planner -> writer -> reviewer -> evaluation, all ok  ['request', 'cache_lookup', 'queue_inbox', 'planner', 'queue_tasks', 'writer', 'queue_drafts', 'reviewer', 'queue_final', 'cache_store', 'evaluation']
+[PASS] 4.2 failed trace: failing stage and error recorded  injected fault (HW10 failed-trace demo): writer could not reach the model (simulated Ollama timeout)
+[PASS] 4.3: 50 requests, all cache_lookup=miss, none served from cache  {'requests': 50, 'cache_lookup_miss': 50, 'served_from_cache': 0, 'failed': 0}
+[PASS] 4.3: stage table recomputes from spans (p50/p95/share for 6 stages)  {'Cache lookup': 28.49, 'Planner': 32057.12, 'Writer': 7425.3, 'Reviewer': 5.93, 'Queue wait (total)': 34.58, 'Evaluation': 152454.71, 'Other (client, store)': -9.48}
+[PASS] 4.3: cache-hit latency kept as a separate metric  {'n': 10, 'p50_ms': 4.58, 'p95_ms': 31.27}
+[PASS] 3.1: eval_cases.json has 20 Writer drafts with trace ids  20
+[PASS] 3.1: human_labels.csv has a 1-5 label for every draft  20/20 labeled
+[PASS] 3.1: cases and labels committed and unchanged  5f378d3 2026-11-12T12:25:15-08:00
+[PASS] 3.2: Spearman and mean |diff| recompute from judge_vs_human.csv  {'n': 20, 'spearman_rho': None, 'spearman_p': None, 'mean_abs_diff': 1.3, 'exact_agreement': 0.35, 'within_1': 0.55, 'judge_mean': 5.0, 'human_mean': 3.7}
+[PASS] 3.3: three runs, repeatability recomputes  {'runs': 3, 'cases': 20, 'cases_scored_every_run': 20, 'cases_changed': 0, 'change_rate': 0.0, 'pairwise_changes': 0, 'pairwise_comparisons': 60, 'pairwise_change_rate': 0.0, 'mean_abs_change': 0.0, 'mean_abs_change_when_changed': 0.0, 'max_abs_change': 0.0, 'failed_scores': 0}
+[PASS] 3.1: labels committed before the judge ran  ('2026-11-12T12:25:15-08:00', '2026-11-12T12:59:04')
+[PASS] dashboard: Summary, Evaluation and Trace lookup pages render without exceptions  {'summary': [], 'evaluation': [], 'trace': []}
+[PASS] dashboard uses @st.cache_data and @st.cache_resource  
+[PASS] unit tests (tests/test_hw10.py)  OK
+[PASS] ruff on HW10 files  All checks passed!
+
+21/21 checks passed -> reports/hw10/verification.json

@@ -219,12 +219,13 @@ def content(f: dict[str, Path]) -> list[tuple]:
     a(("table", ["Setting", "Value"], [
         ["Name", "Ayushi Shringi"],
         ["GitHub repository", "https://github.com/ayushishringi/data260-0036/tree/hw5"],
-        ["SID4", "0036"], ["PORT_BASE", "8036 (dashboard on 8038)"], ["PREFIX", "s0036"], ["SEED", "36"],
+        ["SID4", "0036"], ["PORT_BASE", "8036 (8000 + 36 mod 900); dashboard on 8038"], ["PREFIX", "s0036"], ["SEED", "36"],
+        ["VERIFY_SEED", "260036"],
         ["DOMAIN_ID", "4 (36 mod 8): open-source package vulnerability tracking"],
         ["Kafka topics", "s0036_inbox, s0036_tasks (2 partitions), s0036_drafts, s0036_final, s0036_dead_letter"],
         ["Redis", "Redis Stack (container s0036-redis), semantic cache s0036:qcache:*, threshold 0.85"],
         ["Hardware", "MacBook Pro, Apple M5 Pro, 24 GB"],
-        ["Agents and judge", "Ollama qwen3:4b (num_ctx 16384), no paid APIs"],
+        ["Local model", "Ollama qwen3:4b (num_ctx 16384) for the agents and the judge, no paid APIs"],
         ["Judge framework", "DeepEval 4.3.4 GEval, temperature 0, seed 36, 1-5 rubric"],
         ["Dashboard", "Streamlit 1.67.0 (make dashboard-hw10)"],
         ["Branch", "hw5"], ["Tag", "hw10"],
@@ -541,15 +542,16 @@ def content(f: dict[str, Path]) -> list[tuple]:
             f"{v['served_from_cache']} served from cache, {v['failed']} failed. Then 10 repeated questions "
             f"measured the cache-hit path separately."))
     order = ["Cache lookup", "Planner", "Writer", "Reviewer", "Queue wait (total)", "Evaluation"]
-    lrows = [[k, f"{tab[k]['p50_ms']:,.1f}", f"{tab[k]['p95_ms']:,.1f}", f"{tab[k]['share_of_e2e']:.1%}"]
+    lrows = [[k, f"{tab[k]['p50_ms']:,.1f}", f"{tab[k]['p95_ms']:,.1f}", pct_share(tab[k]['share_of_e2e'])]
              for k in order]
     lrows.append(["End-to-end (cache miss)", f"{st['end_to_end']['p50_ms']:,.1f}",
                   f"{st['end_to_end']['p95_ms']:,.1f}", "100%"])
     a(("table", ["Stage", "p50 (ms)", "p95 (ms)", "% of cache-miss end-to-end"], lrows, [5]))
     a(("p", f"End-to-end runs from the start of the cache lookup to the end of the evaluation. % of end-to-end "
             f"is the stage's total time over all 50 traces divided by the total end-to-end time. The remaining "
-            f"time (client work, cache store and span overlap) is −0.0%: the evaluation span starts a few ms "
-            f"before cache_store ends, because both run right after the final message. "
+            f"time (client work and cache store) is effectively zero: the evaluation span starts a few ms "
+            f"before cache_store ends, because both run right after the final message, so the six shares "
+            f"add up to 100%. "
             f"Queue waits: inbox p50 {st['queues'][0]['p50_ms']} ms, tasks {st['queues'][1]['p50_ms']} ms, "
             f"drafts {st['queues'][2]['p50_ms']} ms, final {st['queues'][3]['p50_ms']} ms. User-facing latency "
             f"(request span) is p50 {st['user_facing']['p50_ms'] / 1000:.1f} s, p95 "
@@ -589,6 +591,10 @@ def content(f: dict[str, Path]) -> list[tuple]:
 
 
 # ----------------------------------------------------------------------------- PDF (reportlab)
+
+
+def pct_share(x: float) -> str:
+    return f"{x:.2%}" if x < 0.001 else f"{x:.1%}"
 
 
 def md_xml(text: str) -> str:
