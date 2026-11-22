@@ -12,3 +12,5 @@ reports/hw10/logs/
 reports/hw10/raw/runs/*/jsonl/
 .deepeval/
 *.docx
+stock-watch/state/
+stock-watch/digests/

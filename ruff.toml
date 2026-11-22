@@ -1,4 +1,6 @@
 # Ruff configuration (HW7 Part 1). Default rule set (pycodestyle E4/E7/E9 + pyflakes F).
+# stock-watch/ is the HW11 instructor kit (watch.py etc.), kept in its original style.
 target-version = "py312"
 line-length = 120
-extend-exclude = ["frontend", "outputs", "corpus", "rag_docs", "reports", "templates"]
+force-exclude = true
+extend-exclude = ["frontend", "outputs", "corpus", "rag_docs", "reports", "templates", "stock-watch"]

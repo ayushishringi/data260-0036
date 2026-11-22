@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- HW11 TEST FIXTURE (SID4 0036), day 2 = Tuesday 2026-12-01. All companies and filings are fictional. The feed still lists day 1's SNTL filing (as EDGAR does), which must not alert again. -->
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>EDGAR 8-K filings (HW11 fixture, day 2)</title>
+  <entry>
+    <id>urn:tag:sec.gov,2008:accession-number=0009999913-26-000160</id>
+    <updated>2026-12-01T16:05:00-05:00</updated>
+    <title>PRMX: 8-K - Current report</title>
+    <summary>(Fictional test item.) Perimeter Matrix Inc. Item 2.02 Results of Operations and Financial Condition: fiscal Q1 revenue $2.31B, up 15% year over year; next-generation security billings up 31%.</summary>
+    <link href="https://www.sec.gov/Archives/edgar/data/9999913/000999991326000160/0009999913-26-000160-index.htm" rel="alternate"/>
+  </entry>
+  <entry>
+    <id>urn:tag:sec.gov,2008:accession-number=0009999912-26-000091</id>
+    <updated>2026-12-01T08:30:00-05:00</updated>
+    <title>KSTL: 8-K - Current report</title>
+    <summary>(Fictional test item.) Keystone Ledger Corp. Item 8.01 Other Events: the board authorized a new $2.0B share repurchase program, about 3% of the company's market value, with no expiration date.</summary>
+    <link href="https://www.sec.gov/Archives/edgar/data/9999912/000999991226000091/0009999912-26-000091-index.htm" rel="alternate"/>
+  </entry>
+  <entry>
+    <id>urn:tag:sec.gov,2008:accession-number=0009999911-26-000205</id>
+    <updated>2026-12-01T09:15:00-05:00</updated>
+    <title>SNTL: 8-K/A - Current report, amendment</title>
+    <summary>(Fictional test item.) Sentinel Cloud Inc. Amendment No. 1 to the 8-K filed November 30, 2026, filed only to correct the exhibit number of the earnings press release (Exhibit 99.1, previously listed as 99.2). No change to the reported results.</summary>
+    <link href="https://www.sec.gov/Archives/edgar/data/9999911/000999991126000205/0009999911-26-000205-index.htm" rel="alternate"/>
+  </entry>
+  <entry>
+    <id>urn:tag:sec.gov,2008:accession-number=0009999911-26-000201</id>
+    <updated>2026-11-30T16:10:00-05:00</updated>
+    <title>SNTL: 8-K - Current report</title>
+    <summary>(Fictional test item.) Sentinel Cloud Inc. Item 2.02 Results of Operations and Financial Condition; Item 9.01 Financial Statements and Exhibits. Q3 revenue $1.04B, up 27% year over year; annual recurring revenue $4.3B.</summary>
+    <link href="https://www.sec.gov/Archives/edgar/data/9999911/000999991126000201/0009999911-26-000201-index.htm" rel="alternate"/>
+  </entry>
+</feed>

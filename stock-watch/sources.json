@@ -1,0 +1,51 @@
+{
+  "topic": "Material changes for a cybersecurity watchlist (DATA 260 HW11, SID4 0036, DOMAIN_ID 4: open-source package vulnerabilities): large daily price moves and new SEC 8-K filings",
+  "user_agent": "DATA260-stock-watch/1.0 your-name@sjsu.edu",
+  "note": "Approved-source allowlist. watch.py refuses any URL whose host is not listed here. SEC asks automated clients to send a User-Agent with a contact email: put yours in user_agent above. HW11: threshold_pct is each ticker's digest floor (moves below it never become candidates); notify_pct is its notify threshold. Both are justified in policy.md.",
+  "sources": [
+    {
+      "id": "prices_live",
+      "type": "stooq",
+      "modes": ["live"],
+      "url": "https://stooq.com/q/d/l/",
+      "tickers": ["msft.us", "panw.us", "crwd.us", "frog.us"],
+      "threshold_pct": {"msft.us": 2.0, "panw.us": 2.5, "crwd.us": 3.5, "frog.us": 3.5},
+      "notify_pct": {"msft.us": 3.5, "panw.us": 5.0, "crwd.us": 7.0, "frog.us": 7.0},
+      "lookback_days": 3
+    },
+    {
+      "id": "edgar_live",
+      "type": "edgar",
+      "modes": ["live"],
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar",
+      "form": "8-K",
+      "per_company": 5,
+      "ciks": {"MSFT": "0000789019", "PANW": "0001327567", "CRWD": "0001535527", "FROG": "0001800667"}
+    },
+    {
+      "id": "prices_demo",
+      "type": "stooq",
+      "modes": ["fixtures"],
+      "url": "https://stooq.com/q/d/l/",
+      "tickers": ["nbrx.us", "cbds.us", "lksp.us", "kstl.us", "prmx.us", "odra.us", "sntl.us"],
+      "threshold_pct": {"kstl.us": 2.0, "prmx.us": 2.5, "odra.us": 2.5, "sntl.us": 3.5, "default": 2.0},
+      "notify_pct": {"kstl.us": 3.5, "prmx.us": 5.0, "odra.us": 5.0, "sntl.us": 7.0},
+      "lookback_days": 3
+    },
+    {
+      "id": "edgar_demo",
+      "type": "edgar",
+      "modes": ["fixtures"],
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar",
+      "fixture": "edgar_8k.xml",
+      "ciks": {}
+    },
+    {
+      "id": "newswire_demo",
+      "type": "rss",
+      "modes": ["fixtures"],
+      "url": "https://example-newswire.example/markets/feed.xml",
+      "fixture": "newswire.xml"
+    }
+  ]
+}
