@@ -2,7 +2,7 @@ PYTHON ?= .venv/bin/python3
 PORT ?= 8036
 IMAGE ?= data260-0036-hw2:latest
 
-.PHONY: run run-api run-web agents client verify-hw01 verify-hw02 verify-hw05 test-hw05 faults-hw05 verify-hw06 test-hw06 experiments-hw06 migrate-hw07 test-hw07 lint verify-hw07 kafka-up kafka-down kafka-topics demo-hw08 test-hw08 experiments-hw08 verify-hw08 redis-up migrate-hw09 counter-hw09 cache-demo-hw09 sweep-hw09 stale-hw09 part4-hw09 test-hw09 metrics-hw09 verify-hw09 qa-api-hw09 agents-hw09 e2e-hw10 cases-hw10 label-hw10 judge-hw10 latency-hw10 dashboard-hw10 test-hw10 metrics-hw10 verify-hw10 report-hw10 test-hw11 kit-hw11
+.PHONY: run run-api run-web agents client verify-hw01 verify-hw02 verify-hw05 test-hw05 faults-hw05 verify-hw06 test-hw06 experiments-hw06 migrate-hw07 test-hw07 lint verify-hw07 kafka-up kafka-down kafka-topics demo-hw08 test-hw08 experiments-hw08 verify-hw08 redis-up migrate-hw09 counter-hw09 cache-demo-hw09 sweep-hw09 stale-hw09 part4-hw09 test-hw09 metrics-hw09 verify-hw09 qa-api-hw09 agents-hw09 e2e-hw10 cases-hw10 label-hw10 judge-hw10 latency-hw10 dashboard-hw10 test-hw10 metrics-hw10 verify-hw10 report-hw10 test-hw11 kit-hw11 report-hw11
 
 run: run-api
 
@@ -166,3 +166,6 @@ kit-hw11:
 	rm -f reports/hw11/stock-watch-kit-0036.zip
 	zip -qr reports/hw11/stock-watch-kit-0036.zip stock-watch -x 'stock-watch/state/*' 'stock-watch/digests/*' '*/__pycache__/*' '*.DS_Store' 'stock-watch/golden/gold_0036.json'
 	unzip -l reports/hw11/stock-watch-kit-0036.zip | tail -1
+
+report-hw11:
+	$(PYTHON) scripts/build_hw11_report.py
