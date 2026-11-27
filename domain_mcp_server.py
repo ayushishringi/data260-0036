@@ -1,7 +1,7 @@
 """STDIO MCP server for the three s0036_rel domain tools."""
 import logging
 
-from hw5_tools.domain import DomainStore, envelope
+from hw5_tools.domain import DomainStore
 
 logging.basicConfig(level=logging.INFO)
 LOGGER = logging.getLogger("s0036_domain_mcp")

@@ -12,8 +12,8 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "src"))
 
-from agents_graph import build_graph
-from model_client import ModelClient
+from agents_graph import build_graph  # noqa: E402 - needs the sys.path entries above
+from model_client import ModelClient  # noqa: E402
 
 
 RAW_DIR = ROOT / "reports" / "hw02" / "raw"

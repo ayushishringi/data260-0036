@@ -16,7 +16,8 @@ def main() -> None:
     rows = [fault_injection_call(rate, call, VERIFY_SEED) for rate in (0.0, 0.2, 0.5) for call in range(1, 51)]
     with (RAW / "fault_injection.csv").open("w", newline="", encoding="utf-8") as stream:
         writer = csv.DictWriter(stream, fieldnames=rows[0].keys())
-        writer.writeheader(); writer.writerows(rows)
+        writer.writeheader()
+        writer.writerows(rows)
     (RAW / "fault_injection.json").write_text(json.dumps(rows, indent=2) + "\n", encoding="utf-8")
     summaries = []
     for rate in (0.0, 0.2, 0.5):
