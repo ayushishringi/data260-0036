@@ -1,4 +1,4 @@
-from backend import models
+from backend import models  # noqa: F401 - registers the ORM models on Base.metadata
 from backend.database import Base, engine
 
 

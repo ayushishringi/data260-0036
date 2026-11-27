@@ -12,7 +12,6 @@ from pathlib import Path
 from typing import Any
 
 import numpy as np
-from pymongo.collection import Collection
 
 from backend.hw6_mongo_database import (
     get_episodes_collection,
@@ -406,7 +405,6 @@ def make_chat_turn(
     save_message(user_id, session_id, "assistant", result.text)
     extract_episodes(user_id, session_id, user_message)
     maybe_summarize(user_id, session_id, model_client)
-    system_text = prompt[0]["content"]
     summary_text = "\n".join(
         item["text"]
         for item in (summaries.get("user"), summaries.get("session"))

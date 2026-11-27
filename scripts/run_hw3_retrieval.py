@@ -10,7 +10,7 @@ import yaml
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from src.retrieval import build_indexes, query_indexes
+from src.retrieval import build_indexes, query_indexes  # noqa: E402 - needs the sys.path entry above
 
 
 RAW_DIR = ROOT / "reports" / "hw03" / "raw"

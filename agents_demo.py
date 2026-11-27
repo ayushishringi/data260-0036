@@ -169,7 +169,6 @@ def run_pipeline(title: str, content: str, temperature: float, client: ModelClie
         }
     planner_tags = planner_json.get("tags", [])
     planner_summary = str(planner_json.get("summary", ""))
-    reviewer_summary = str(reviewer_json.get("summary", ""))
 
     # Preserve a valid Planner summary exactly when it is already within
     # the assignment's 25-word limit.

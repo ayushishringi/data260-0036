@@ -1,5 +1,9 @@
 # data260-0036
 
+[![CI](https://github.com/ayushishringi/data260-0036/actions/workflows/ci.yml/badge.svg)](https://github.com/ayushishringi/data260-0036/actions/workflows/ci.yml)
+
+One codebase grown across eleven DATA 260 homeworks into an LLM-agent system for open-source package vulnerability reports: a FastAPI backend on MySQL and MongoDB, Planner/Writer/Reviewer agents on a local Ollama model, RAG retrieval, MCP tools, a Kafka pipeline, a Redis semantic cache, an LLM-as-judge evaluator checked against human labels, tracing, and a Streamlit dashboard. Every homework is tagged, and each one has a `verify` target that rebuilds its evidence.
+
 DATA-260 homework repository for Ayushi Shringi (SID4 `0036`, PREFIX `s0036`, DOMAIN_ID 4: open-source package vulnerabilities). The same codebase is extended every homework, so shared code lives in `src/` and `scripts/`, and each homework's report and evidence live in its own `reports/hwNN/` folder.
 
 ## Homework index
@@ -16,6 +20,16 @@ DATA-260 homework repository for Ayushi Shringi (SID4 `0036`, PREFIX `s0036`, DO
 | HW8 | Planner / Writer / Reviewer pipeline over Kafka, failure handling | [Shringi_HW8.pdf](reports/hw08/Shringi_HW8.pdf) | [reports/hw08/](reports/hw08/) | [`hw8`](https://github.com/ayushishringi/data260-0036/tree/hw8) | `make verify-hw08` |
 | HW9 | Redis view counter, semantic cache, threshold sweep, stale answers | [Shringi_HW9.pdf](reports/hw09/Shringi_HW9.pdf) | [reports/hw09/](reports/hw09/) | [`hw9`](https://github.com/ayushishringi/data260-0036/tree/hw9) | `make verify-hw09` |
 | HW10 | Streamlit dashboard, GEval evaluator, judge validation, tracing and latency | [Shringi_HW10.pdf](reports/hw10/Shringi_HW10.pdf) | [reports/hw10/](reports/hw10/) | [`hw10`](https://github.com/ayushishringi/data260-0036/tree/hw10) | `make verify-hw10` |
+| HW11 | Stock-watch agent kit run on Muse: notify / digest / ask decisions, allowlisted URLs, prompt-injection items, restart recovery | [Shringi_HW11.pdf](reports/hw11/Shringi_HW11.pdf) | [reports/hw11/](reports/hw11/) | [`hw11`](https://github.com/ayushishringi/data260-0036/tree/hw11) | `make test-hw11` |
+
+## Tests and lint
+
+```bash
+make test   # all unit tests; the ones that need MySQL/Ollama/Redis/Kafka skip when those are not running
+make lint   # ruff 0.8.4, same as the pre-commit hook
+```
+
+CI ([.github/workflows/ci.yml](.github/workflows/ci.yml)) runs both on every push and pull request. Copy [.env.example](.env.example) to `.env` to override service URLs or the HW7 auth secrets; the defaults in the code are for localhost only.
 
 Each `reports/hwNN/` folder holds that homework's report PDF, `METRICS.md`, `AI_USE.md`, `RUN_LOG.txt` (where kept), `raw/` results and `verification.json`. The submitted state of each homework is its tag (HW2: the `hw2` branch); the run commands for HW10 are in the HW10 section at the end of this file.
 

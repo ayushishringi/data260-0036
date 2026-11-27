@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      # Same Ruff version as .pre-commit-config.yaml, so CI and the commit hook agree.
+      - run: pip install ruff==0.8.4
+      - run: ruff check .
+
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install uv
+      # CPU-only torch first so the requirements install does not pull the CUDA wheels.
+      - run: uv pip install --system torch --index-url https://download.pytorch.org/whl/cpu
+      - run: uv pip install --system -r requirements.txt
+      # No MySQL, Ollama, Redis or Kafka in CI: tests that need them skip themselves
+      # (e.g. tests/test_hw7_auth.py checks MySQL first). Everything else must pass.
+      - run: python -m unittest discover -s tests -t . -v
