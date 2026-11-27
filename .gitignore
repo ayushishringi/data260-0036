@@ -14,3 +14,11 @@ reports/hw10/raw/runs/*/jsonl/
 *.docx
 stock-watch/state/
 stock-watch/digests/
+
+# Local secrets and tool caches
+.env
+.env.*
+!.env.example
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
